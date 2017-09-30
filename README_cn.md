@@ -90,7 +90,7 @@ import WxcComponent2 from "weex-ui/packages/wxc-component2"
 |:--|:--|:--|
 |[wxc-button](./packages/wxc-button/README.md)|布局|基础按钮组件|
 |[wxc-cell](./packages/wxc-cell/README.md)|布局|单元格组件 展示表单、列表|
-|[wxc-ep-slider](./packages/wxc-ep-slider/README.md) * |布局|表达式绑定效果的 slider |
+|[wxc-ep-slider](./packages/wxc-ep-slider/README.md) * |布局|表达式绑定效果的 slider |
 |[wxc-lightbox](./packages/wxc-lightbox/README.md)|布局|图片全屏预览|
 |[wxc-overlay](./packages/wxc-overlay/README.md)|布局|基础蒙层|
 |[wxc-popup](./packages/wxc-popup/README.md)|布局|支持上下左右出现的滑板|

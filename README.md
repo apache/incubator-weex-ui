@@ -97,7 +97,7 @@ You can find more examples [here](https://github.com/alibaba/weex-ui/tree/master
 |:--|:--|:--|
 |[wxc-button](./packages/wxc-button/README.md)|Layout|Basic button|
 |[wxc-cell](./packages/wxc-cell/README.md)|Layout|Form layout element|
-|[wxc-ep-slider](./packages/wxc-ep-slider/README.md) * |Layout|Cool slider neighbor|
+|[wxc-ep-slider](./packages/wxc-ep-slider/README.md) * |Layout|Cool slider neighbor|
 |[wxc-lightbox](./packages/wxc-lightbox/README.md)|Layout|Picture list full screen display|
 |[wxc-overlay](./packages/wxc-overlay/README.md)|Layout|Basic monlayer element|
 |[wxc-popup](./packages/wxc-popup/README.md)|Layout|Popup box|
