@@ -8,8 +8,12 @@ const webpack = require('webpack');
 const pkg = require('./package.json');
 const glob = require("glob");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const plugins = [
+  new CleanWebpackPlugin(['build'], {
+    verbose: true
+  }),
   new webpack.DefinePlugin({
     "process.env": {
       NODE_ENV: JSON.stringify("production")
