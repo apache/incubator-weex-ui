@@ -1,0 +1,25 @@
+{
+  "name": "wxc-loading",
+  "version": "0.1.0",
+  "description": "Weex版本的loading组件，支持设置loading类型",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-loading",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "Loading",
+    "WeexUi",
+    "Feedback"
+  ],
+  "weex": {
+    "plugins": {},
+    "market": {
+      "thumbnail": "http://gtms03.alicdn.com/tfs/TB1yu1CSpXXXXbxXVXXXXXXXXXX-750-1334.png"
+    }
+  },
+  "author": "Tw93",
+  "license": "MIT",
+  "dependencies": {}
+}

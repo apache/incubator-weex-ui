@@ -1,0 +1,25 @@
+{
+  "name": "wxc-result",
+  "version": "0.1.0",
+  "description": "Weex通用的错误结果页面，包括通用错误、无商品、无网络的错误情况，可配置覆盖原有",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-result",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "Feedback",
+    "Result",
+    "WeexUi"
+  ],
+  "weex": {
+    "plugins": {},
+    "market": {
+      "thumbnail": "http://gtms02.alicdn.com/tfs/TB1X71ySpXXXXbDaXXXXXXXXXXX-750-1334.png"
+    }
+  },
+  "author": "Tw93",
+  "license": "MIT",
+  "dependencies": {}
+}

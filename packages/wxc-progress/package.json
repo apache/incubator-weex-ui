@@ -1,0 +1,25 @@
+{
+  "name": "wxc-progress",
+  "version": "0.1.0",
+  "description": "一个weex进度条组件，表明某个任务的当前进度",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-progress",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "Feedback",
+    "Progress",
+    "WeexUi"
+  ],
+  "weex": {
+    "plugins": {},
+    "market": {
+      "thumbnail": "http://gtms04.alicdn.com/tfs/TB1xVD7SpXXXXaoXpXXXXXXXXXX-750-1334.png"
+    }
+  },
+  "author": "Tw93",
+  "license": "MIT",
+  "dependencies": {}
+}

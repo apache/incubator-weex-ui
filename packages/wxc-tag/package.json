@@ -1,0 +1,25 @@
+{
+  "name": "wxc-tag",
+  "version": "0.1.0",
+  "description": "Weex通用标签组件，支持实心标签、空心标签、特殊标签、图片标签",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-tag",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "Tag",
+    "DataDisplay",
+    "WeexUi"
+  ],
+  "weex": {
+    "plugins": {},
+    "market": {
+      "thumbnail": "http://gtms02.alicdn.com/tfs/TB1aquRSpXXXXbRXFXXXXXXXXXX-738-363.png"
+    }
+  },
+  "author": "Tw93",
+  "license": "MIT",
+  "dependencies": {}
+}

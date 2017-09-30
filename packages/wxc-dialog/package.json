@@ -1,0 +1,25 @@
+{
+  "name": "wxc-dialog",
+  "version": "0.1.0",
+  "description": "Weex二次确认弹窗组件，支持按钮定制（一个或者两个），可以设置标题和内容。",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-dialog",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "Feedback",
+    "Dialog",
+    "WeexUi"
+  ],
+  "weex": {
+    "plugins": {},
+    "market": {
+      "thumbnail": "http://gtms03.alicdn.com/tfs/TB1EgnXSFXXXXX6aXXXXXXXXXXX-750-1334.png"
+    }
+  },
+  "author": "Tw93",
+  "license": "MIT",
+  "dependencies": {}
+}

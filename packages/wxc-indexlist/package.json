@@ -1,0 +1,25 @@
+{
+  "name": "wxc-indexlist",
+  "version": "0.1.0",
+  "description": " 一个Weex版本索引列表组件,可以通过索引快速定位,常用于联系人列表、城市列表的基础组件",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-indexlist",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "DataDisplay",
+    "Indexlist",
+    "WeexUi"
+  ],
+  "weex": {
+    "plugins": {},
+    "market": {
+      "thumbnail": "http://gtms02.alicdn.com/tfs/TB1ANntSpXXXXXzapXXXXXXXXXX-750-1334.png"
+    }
+  },
+  "author": "Tw93",
+  "license": "MIT",
+  "dependencies": {}
+}

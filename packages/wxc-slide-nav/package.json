@@ -1,0 +1,14 @@
+{
+  "name": "wxc-slide-nav",
+  "version": "0.1.0",
+  "description": "导航滑动组件",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-slide-nav",
+  "keywords": [
+    "wxc-slide-nav"
+  ],
+  "author": "虎牙",
+  "license": "MIT",
+  "dependencies": {}
+}

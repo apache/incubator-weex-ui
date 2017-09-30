@@ -1,0 +1,17 @@
+.DS_Store
+node_modules
+.cachefile
+*/node_modules
+npm-debug.log
+*.swp
+.sw*
+.idea/*
+.jshintrc
+.travis.yml
+.sass-cache/
+.project
+mods/.sass-cache/
+!.gitignore
+!.editorconfig
+lerna-debug.log
+build/example

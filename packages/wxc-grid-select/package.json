@@ -1,0 +1,78 @@
+{
+  "name": "wxc-grid-select",
+  "version": "0.1.0",
+  "description": "网格形选择组件，支持单选、多选",
+  "main": "index.vue",
+  "clamVersion": "1.5.3",
+  "lib": "vue",
+  "type": "weex",
+  "group": "vpi",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:vpi/wxc-grid-select.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [
+    "weex",
+    "vue",
+    "weex-component",
+    "Combination",
+    "weex-ui",
+    "HummingBird",
+    "wxc-grid-select",
+    "grid-select",
+    "select",
+    "single",
+    "multiple"
+  ],
+  "author": {
+    "name": "南麓",
+    "email": "haonan.whn@alibaba-inc.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@ali/deps-json-webpack-plugin": "0.1.4",
+    "@ali/grunt-check-pub": "^0.1.5",
+    "@ali/grunt-devserver": "^0.5.3",
+    "@ali/grunt-sync-upx": "^0.1.11",
+    "@ali/grunt-tnpm-addowner": "~0.1.6",
+    "@ali/img-upload-loader": "~0.2.0",
+    "@ali/weex-vue-render": "^0.11.8",
+    "babel-core": "~6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-runtime": "^6.23.0",
+    "clam-util": "~0.1.5",
+    "css-loader": "^0.26.2",
+    "eslint": "^3.8.1",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-plugin-vue": "^2.0.1",
+    "file-loader": "^0.10.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-domman": "^0.3.16",
+    "grunt-eslint": "^19.0.0",
+    "grunt-exec": "^2.0.0",
+    "grunt-replace": "~1.0.1",
+    "grunt-webpack": "^1.0.18",
+    "img-compress-loader": "^0.1.5-rc.1",
+    "jit-grunt": "~0.10.0",
+    "lodash": "^4.17.4",
+    "time-grunt": "^1.4.0",
+    "url-loader": "~0.5.7",
+    "vue": "^2.2.1",
+    "vue-loader": "^11.3.4",
+    "vue-template-compiler": "^2.3.3",
+    "webpack": "~1.13.0",
+    "webpack-dev-server": "~1.14.1",
+    "weex-loader": "^0.4.1",
+    "weex-vue-loader": "^0.2.11"
+  },
+  "dependencies": {
+  }
+}

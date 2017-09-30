@@ -1,0 +1,25 @@
+{
+  "name": "wxc-minibar",
+  "version": "0.1.0",
+  "description": "Weex版本的顶部导航栏,建议优先使用native自带的navigator",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-minibar",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "Minibar",
+    "Navigator",
+    "WeexUi"
+  ],
+  "weex": {
+    "plugins": {},
+    "market": {
+      "thumbnail": "https://img.alicdn.com/tfs/TB1t0rRSpXXXXa0XXXXXXXXXXXX-750-1334.png"
+    }
+  },
+  "author": "Tw93",
+  "license": "MIT",
+  "dependencies": {}
+}

@@ -1,0 +1,25 @@
+{
+  "name": "wxc-searchbar",
+  "version": "0.1.0",
+  "description": "Weex搜索栏组件，一般可位于 NavBar 下方，通过『取消按钮』退出激活状态, 允许设置点击跳转，支持带出发地形式的搜索。",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-searchbar",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "DataEntry",
+    "Searchbar",
+    "WeexUi"
+  ],
+  "weex": {
+    "plugins": {},
+    "market": {
+      "thumbnail": "https://img.alicdn.com/tfs/TB13Y_fSpXXXXXrapXXXXXXXXXX-750-1334.png"
+    }
+  },
+  "author": "Tw93",
+  "license": "MIT",
+  "dependencies": {}
+}

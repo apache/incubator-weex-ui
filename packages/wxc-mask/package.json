@@ -1,0 +1,26 @@
+{
+  "name": "wxc-mask",
+  "version": "0.1.0",
+  "description": "一个提供关闭按钮的Weex Mask弹窗组件，可以定制content里面的内容。",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-mask",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "Feedback",
+    "Mask",
+    "WeexUi",
+    "HummingBird"
+  ],
+  "weex": {
+    "plugins": {},
+    "market": {
+      "thumbnail": "https://img.alicdn.com/tfs/TB12LjkSpXXXXa9aXXXXXXXXXXX-750-1334.png"
+    }
+  },
+  "author": "Tw93",
+  "license": "MIT",
+  "dependencies": {}
+}

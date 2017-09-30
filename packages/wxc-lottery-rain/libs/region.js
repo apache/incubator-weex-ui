@@ -1,0 +1,73 @@
+/**
+ * Created by Tw93 on 2017/09/06.
+ * 红包雨区域检测类
+ */
+
+const Util = require('./util');
+
+const Region = {
+  regions: [],
+  isCross (region) {
+    const { regions } = this;
+
+    region.right = region.left + region.width;
+    region.bottom = region.top + region.height;
+
+    for (var i = 0; i < regions.length; i++) {
+      const curRegion = regions[i];
+      // 两区域相交
+      curRegion.right = curRegion.left + curRegion.width;
+      curRegion.bottom = curRegion.top + curRegion.height;
+      if (!(region.left > curRegion.right || region.right < curRegion.left || region.bottom < curRegion.top || region.top > curRegion.bottom )) {
+        return true;
+      }
+    }
+    return false;
+  },
+  get (width, height) {
+    if (!width || !height) {
+      return;
+    }
+    let i = 1000;
+    const viewWidth = 750;
+    const viewHeight = Util.getPageHeight();
+    let wrapWidth = viewWidth - width;
+    let wrapHeight = viewHeight - height - 140;
+    wrapHeight = wrapHeight < 0 ? 0 : wrapHeight;
+    wrapWidth = wrapWidth < 0 ? 0 : wrapWidth;
+
+    const region = {
+      left: -9999,
+      top: -9999,
+      width: width,
+      height: height
+    };
+    while (i--) {
+      region.left = Math.round(Math.random() * wrapWidth);
+      region.top = Math.round(Math.random() * wrapHeight + height);
+      if (!this.isCross(region)) {
+        this.add(region);
+        return region;
+      }
+    }
+  },
+  buildRandom () {
+    const random = new Date().getTime() + '_' + parseInt(Math.random() * 1000000);
+    return random;
+  },
+  add (region) {
+    const { regions } = this;
+    region.id = this.buildRandom();
+    regions.push(region);
+  },
+  remove (region) {
+    const { regions } = this;
+    if (!region) return;
+    for (let i = 0; i < regions.length; i++) {
+      if (region.id === regions[i].id) {
+        regions.splice(i, 1);
+      }
+    }
+  }
+}
+module.exports = Region;

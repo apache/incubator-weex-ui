@@ -1,0 +1,82 @@
+<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!-- Created by Tw93 on 17/07/28. -->
+
+<template>
+  <wxc-cell :has-top-border="hasTopBorder"
+            :cell-style="{backgroundColor:backgroundColor}"
+            v-on:wxcCellDivClick="wxcCellDivClick">
+    <text :style="{color:color}"
+          class="title-text"
+          slot="title">{{title}}</text>
+    <image :src="radioIcon"
+           v-if="radioIcon"
+           slot="value"
+           class="radio"></image>
+  </wxc-cell>
+</template>
+
+<style scoped>
+  .radio {
+    width: 48px;
+    height: 48px;
+  }
+
+  .title-text {
+    font-size: 30px;
+  }
+</style>
+
+<script>
+  import WxcCell from '../wxc-cell';
+  import { CHECKED, UNCHECKED } from './icon.base64.js'
+  export default {
+    components: { WxcCell },
+    props: {
+      hasTopBorder: {
+        type: Boolean,
+        default: false
+      },
+      title: {
+        type: String,
+        require: true
+      },
+      value: {
+        type: [String, Number, Object],
+        require: true
+      },
+      disabled: {
+        type: Boolean,
+        default: false
+      },
+      checked: {
+        type: Boolean,
+        default: false
+      }
+    },
+    data: () => ({
+      icon: [CHECKED, UNCHECKED]
+    }),
+    computed: {
+      radioIcon () {
+        const { icon, disabled, checked } = this;
+        return checked ? icon[disabled ? 1 : 0] : '';
+      },
+      backgroundColor () {
+        const { disabled } = this;
+        return disabled ? '#F2F3F4' : '#FFFFFF';
+      },
+      color () {
+        const { disabled, checked } = this;
+        return checked && !disabled ? '#EE9900' : '#3D3D3D';
+      }
+    },
+    methods: {
+      wxcCellDivClick () {
+        const { disabled, value } = this;
+        if (!disabled) {
+          this.$emit('wxcRadioItemChecked', { value, disabled })
+        }
+      }
+    }
+  }
+</script>
