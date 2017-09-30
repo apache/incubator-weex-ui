@@ -1,6 +1,8 @@
 # Weex Ui
 
 [![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600)](https://www.npmjs.com/package/weex-ui)
+[![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://badges.gitter.im/alibaba-weex-ui/chat.svg)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+
 
 > A rich interaction, lightweight, high performance UI library based on [Weex](https://github.com/apache/incubator-weex).
 
