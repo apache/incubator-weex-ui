@@ -81,6 +81,27 @@ npm i babel-plugin-component -D
 import WxcComponent1 from "weex-ui/packages/wxc-component1"
 import WxcComponent2 from "weex-ui/packages/wxc-component2"
 ```
+### Weex-toolkit
+如果你使用[weex-toolkit](https://github.com/weexteam/weex-toolkit)来开发你的Weex项目，你需要向 .babelrc 文件中加入 'state-0' 和 'babel-plugin-component'
+
+```shell
+npm i babel-preset-stage-0 babel-plugin-component  -D
+```
+
+```json
+{
+  "presets": ["es2015", "stage-0"],
+  "plugins": [
+    [
+      "component",
+      {
+        "libraryName": "weex-ui",
+        "libDir": "packages"
+      }
+    ]
+  ]
+}
+```
 
 ### 更多
 你可以从[这里](https://github.com/alibaba/weex-ui/tree/master/example)找到更多地例子，一次编写，同时支持iOS / Android / Html5。

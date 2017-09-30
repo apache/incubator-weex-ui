@@ -88,8 +88,30 @@ import WxcComponent1 from "weex-ui/packages/wxc-component1"
 import WxcComponent2 from "weex-ui/packages/wxc-component2"
 ```
 
-### more
+### Weex-toolkit
 
+If you use [weex-toolkit](https://github.com/weexteam/weex-toolkit) to develop a Weex project, Please add 'state-0' and 'babel-plugin-component' to .babelrc.
+
+```shell
+npm i babel-preset-stage-0 babel-plugin-component  -D
+```
+
+```json
+{
+  "presets": ["es2015", "stage-0"],
+  "plugins": [
+    [
+      "component",
+      {
+        "libraryName": "weex-ui",
+        "libDir": "packages"
+      }
+    ]
+  ]
+}
+```
+
+### More
 You can find more examples [here](https://github.com/alibaba/weex-ui/tree/master/example). Write once and support iOS / Android / Html5 right now!
 
 ## Document
