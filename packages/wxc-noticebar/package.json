@@ -22,6 +22,5 @@
   "author": "Tw93",
   "license": "MIT",
   "dependencies": {
-    "url-parse": "^1.1.9"
   }
 }

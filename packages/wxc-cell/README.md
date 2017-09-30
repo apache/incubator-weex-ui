@@ -123,5 +123,3 @@ npm install weex-ui --save
 ```
 //点击事件回调  `v-on:wxcCellDivClick="wxcCellDivClick"`
 ```
-
-## 版本历史
