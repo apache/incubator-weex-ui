@@ -9,7 +9,7 @@
 ## 安装
 
 ```
-tnpm i weex-ui --save
+npm i weex-ui --save
 ```
 
 
