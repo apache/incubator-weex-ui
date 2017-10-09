@@ -7,7 +7,7 @@
      
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-minibar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-minibar%2Fdemo%2Findex.native-min.js)
-<img src="https://img.alicdn.com/tfs/TB1bhPySpXXXXa4XFXXXXXXXXXX-750-1334.png" width="200"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms03.alicdn.com/tfs/TB1EJY_SpXXXXcmXpXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://img.alicdn.com/tfs/TB1bhPySpXXXXa4XFXXXXXXXXXX-750-1334.png" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms03.alicdn.com/tfs/TB1EJY_SpXXXXcmXpXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 安装
 

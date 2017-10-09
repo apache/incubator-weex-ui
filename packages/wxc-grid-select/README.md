@@ -4,8 +4,7 @@
   
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-grid-select/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-grid-select%2Fdemo%2Findex.native-min.js)
 
-<img src="https://gw.alipayobjects.com/zos/rmsportal/obKOHhRZBxhHPEAEvVsY.gif" width="240">
-<img src="https://gw.alipayobjects.com/zos/rmsportal/yJfbMufZVRJzKicHPQrn.png" width="180">
+<img src="https://gw.alipayobjects.com/zos/rmsportal/KVPhzMhbGodSqBiRCEVQ.gif" width="240"><img src="https://gw.alipayobjects.com/zos/rmsportal/yJfbMufZVRJzKicHPQrn.png" width="180">
 
 ## 安装
 
