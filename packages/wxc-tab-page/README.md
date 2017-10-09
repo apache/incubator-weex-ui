@@ -7,12 +7,11 @@
 - 规则
    - 常用于导购业务线Tab页面，目前支持**icon和文字**形式的顶栏,详细见配置文件[config];
   - **Android由于[此约束](http://weex-project.io/cn/references/gesture.html#约束)，目前需要在子元素里面绑定对应事件，可以参考[wxc-item]当中实现;**
-  - **沉浸式全屏的FullTabPage**请使用`@ali/wxc-tab-page/full-page.vue`,详细使用可以参考[详细]
+  - **沉浸式全屏的FullTabPage**请使用`@ali/wxc-tab-page/full-page.vue`
  
------
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-tab-page/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-tab-page%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/wpnCtQENZlPXDLYFdGuf.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://gw.alipayobjects.com/zos/rmsportal/WWwmdByyfODYLycoDmZP.gif" width="240"/>;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1M7ywSpXXXXXuXXXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/ZXmxcrOOXxqWBrpxbMeP.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1M7ywSpXXXXXuXXXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 安装
 
@@ -116,6 +115,8 @@ npm install weex-ui --save
   };
 </script>
 ```
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/index.vue)
+
 
 ### 可配置参数
 

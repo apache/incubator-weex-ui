@@ -7,7 +7,6 @@
   - 支持使用者主动关闭popup,譬如this.$refs.wxcPopup.hide();
   - 常用于筛选面板组件的包裹组件
 
------
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-popup/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-popup%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/dVwxpFNdSYkNlkkzKzsD.gif" width="240"/>&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1_9v9SpXXXXcuXXXXXXXXXXXX-200-200.png" width="160"/>
@@ -61,6 +60,8 @@ tnpm i weex-ui --save
 </script>
 ```
 
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/popup/index.vue)
+
 ### 可配置参数
 
 | 名称      | 类型     | 默认值   | 备注  |
@@ -72,7 +73,7 @@ tnpm i weex-ui --save
 | popup-color | `String` | `#FFFFFF` | 弹出层的颜色 |
 | stand-out | `Number` | `0` | 底部突发高度，默认为0 |
 | animation | `Object` | `{imingFunction: 'ease-in'}` | 可以自定义面板动画 |
-| overlay-cfg | `Object` | '{ hasAnimation: true, timingFunction: ['ease-in', 'ease-out'], duration: 300, opacity: 0.6 }' |  蒙层配置参数，参考[wxc-overlay]组件|
+| overlay-cfg | `Object` | '{ hasAnimation: true, timingFunction: ['ease-in', 'ease-out'], duration: 300, opacity: 0.6 }' |  蒙层配置参数，参考[wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md)组件|
 
 ### 事件回调
 

@@ -4,10 +4,8 @@
 
 - 飞猪的同学使用2.0以上版本务必设置`theme='yellow'`
 
------
-
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-searchbar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-searchbar%2Fdemo%2Findex.native-min.js)
-<img src="https://img.alicdn.com/tfs/LB1SKzhSpXXXXclaXXXXXXXXXXX-750-1334.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms01.alicdn.com/tfs/TB10KfVSpXXXXaRXVXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/oyVaSVvaMDPAtDXXaqvP.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms01.alicdn.com/tfs/TB10KfVSpXXXXaRXVXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 安装
 
@@ -79,6 +77,9 @@ npm install weex-ui --save
 
 ```
 
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/searchbar/index.vue)
+
+
 ### 可配置参数
 
 | 名称      | 类型     | 默认值   | 备注  |
@@ -101,6 +102,6 @@ npm install weex-ui --save
 ```
 
 ### Api
-- 支持外部Api形式设置value，通过调用setValue，传入对应值即可,详细可见[Demo]
+- 支持外部Api形式设置value，通过调用setValue，传入对应值即可,详细可见 [demo](https://github.com/alibaba/weex-ui/blob/master/example/searchbar/index.vue#L109)
 - 通过调用autoBlur可以主动blur输入框
 

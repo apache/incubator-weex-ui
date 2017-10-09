@@ -99,7 +99,9 @@ npm i weex-ui --save
 </script>
 
 ```
-更详细代码可以参考[组件demo代码]
+
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/page-calendar/index.vue)
+
 
 ### 可配置参数
 

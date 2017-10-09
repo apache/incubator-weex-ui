@@ -6,7 +6,6 @@
     - 需要引起用户关注时使用，重要级别低于 Modal ，高于 Toast。
     - 文案应该简洁明了，过长将会... , 同时特殊情况也可以设置lines为2行
 
------
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-noticebar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-noticebar%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/wDFEetwcmbtRzEUPqxum.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms01.alicdn.com/tfs/TB18V3aSpXXXXboXpXXXXXXXXXX-200-200.png" width="160"/>
@@ -63,7 +62,9 @@ npm i weex-ui --save
 </script>
 
 ```
-更详细代码可以参考[组件demo代码]
+
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/noticebar/index.vue)
+
 
 ### 可配置参数
 
@@ -74,7 +75,6 @@ npm i weex-ui --save
 | mode | `String` | '' | 提示类型（右侧图标）：link(链接)，closable（关闭按钮） |
 | type | `String` | '' | 图标类型（左侧图标）`success`、`error`、`info`、`question`、`time` 、`redbag` |
 |  lines | `Number` | '1' | 文案行数，取最大的行数截取 |
-| spm | `String` | '' |跳转时候的spm值，需要传入类似`181.8417680.1231212.d01`|
 
 
 ### 事件回调

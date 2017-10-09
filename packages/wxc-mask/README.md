@@ -2,10 +2,9 @@
 
 > 一个提供关闭按钮的Weex Mask弹窗组件，可以定制content里面的内容。
 
------
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-mask/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-mask%2Fdemo%2Findex.native-min.js)
-<img src="https://img.alicdn.com/tfs/TB1i4vhSpXXXXcAaXXXXXXXXXXX-750-1334.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms03.alicdn.com/tfs/TB1CgYJSpXXXXc5aXXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/dApVfOZRCEWnBXDlXBVl.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms03.alicdn.com/tfs/TB1CgYJSpXXXXc5aXXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 安装
 
@@ -79,6 +78,9 @@ npm i weex-ui --save
 </script>
 ```
 
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/mask/index.vue)
+
+
 ### 可配置参数
 
 | 名称      | 类型     | 默认值   | 备注  |
@@ -94,7 +96,7 @@ npm i weex-ui --save
 | mask-bg-color | `String` | '#ffffff' |  mask的背景颜色 |
 | duration | `String` | '300' |  弹层出现时间 |
 | timing-function | `String` | 'ease-in' |  弹层出现动画方式 |
-| overlay-cfg | `Object` | '{ hasAnimation: true, timingFunction: ['ease-in', 'ease-out'], duration: 300, opacity: 0.6 }' |  蒙层配置参数，参考[wxc-overlay]组件 |
+| overlay-cfg | `Object` | '{ hasAnimation: true, timingFunction: ['ease-in', 'ease-out'], duration: 300, opacity: 0.6 }' |  蒙层配置参数，参考 [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md) 组件 |
 
 
 ### 事件回调

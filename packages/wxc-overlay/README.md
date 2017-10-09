@@ -5,7 +5,6 @@
 - 规则：
     - 常用于wxc-mask、wxc-dialog、wxc-popup等weex组件的基础组件。
 
------
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-overlay/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-overlay%2Fdemo%2Findex.native-min.js)
 <img src="https://img.alicdn.com/tfs/TB1DtfASpXXXXcsXpXXXXXXXXXX-750-1334.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1rXrwSpXXXXb3aFXXXXXXXXXX-200-200.png" width="160"/>
@@ -48,6 +47,8 @@ npm i weex-ui --save
   };
 </script>
 ```
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/overlay/index.vue)
+
 
 ### 可配置参数
 

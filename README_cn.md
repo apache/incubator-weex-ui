@@ -1,6 +1,7 @@
 # Weex Ui 
 
 [![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600)](https://www.npmjs.com/package/weex-ui)
+[![NPM downloads](http://img.shields.io/npm/dm/weex-ui.svg)](https://npmjs.org/package/weex-ui)
 [![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://badges.gitter.im/alibaba-weex-ui/chat.svg)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 > 一个基于 [Weex](https://github.com/apache/incubator-weex) 的富交互、轻量级、高性能的 UI 组件库。
@@ -138,7 +139,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 |[wxc-progress](./packages/wxc-progress/README.md)|反馈|进度条|
 |[wxc-lottery-rain](./packages/wxc-lottery-rain/README.md)|游戏|红包雨 抓猫猫游戏|
 
-`*` 这些富交互体验组件依赖于 Weex [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定这个模块已经引入。
+`*` 这些富交互体验组件依赖于 Weex [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)。
 
 ## 调试
 

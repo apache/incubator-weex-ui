@@ -9,7 +9,7 @@
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-simple-flow/index.html?_wx_tpl=http%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-simple-flow%2Fdemo%2Findex.native-min.js)
  
-<img src="http://gtms04.alicdn.com/tfs/TB1TIfCSpXXXXbTaXXXXXXXXXXX-750-1334.gif" width="240">
+<img src="https://gw.alipayobjects.com/zos/rmsportal/kWMIxNIGvEejMXxjyEOi.gif" width="240">
 <img src="http://gtms02.alicdn.com/tfs/TB1jejBSpXXXXXsaXXXXXXXXXXX-200-200.png" width="180">
 
 ## 安装
@@ -65,6 +65,8 @@ npm i weex-ui --save
   }
 </script>
 ```
+
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/simple-flow/index.vue)
 
 
 ### 可配置参数

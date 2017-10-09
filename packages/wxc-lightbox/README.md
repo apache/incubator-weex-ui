@@ -7,10 +7,8 @@
     - 需要设置图片的显示高度，也可以设置宽度（默认750px）
     - 可以传入一组图片，滑动显示
     
------
-
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-lightbox/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-lightbox%2Fdemo%2Findex.native-min.js)
-<img src="http://gtms03.alicdn.com/tfs/TB1PRfDSpXXXXX2aXXXXXXXXXXX-750-1334.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1BGPdSpXXXXajaVXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/hIuWGAJPqMZTiqnPZSRf.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1BGPdSpXXXXajaVXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 安装
 
@@ -66,6 +64,8 @@ tnpm install weex-ui --save
   };
 </script>
 ```
+
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/lightbox/index.vue)
 
 ### 可配置参数
 

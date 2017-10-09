@@ -10,10 +10,9 @@
     - `飞猪同学使用，请设置type为trip`，默认是灰色loading
     - 局部Loading不建议设置太大(gif放大有毛边)
 
------
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-loading/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-loading%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/WBXnLEOPWFvlbrCIZmLO.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms03.alicdn.com/tfs/TB195ehSpXXXXc4XpXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/mtWpejSeCddTDZmbYBtV.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms03.alicdn.com/tfs/TB195ehSpXXXXc4XpXXXXXXXXXX-200-200.png" width="160"/>
 
 * 注： 由于Weex版本不支持svg，故这边使用gif的Loading，不建议修改原有大小
 
@@ -42,7 +41,8 @@ tnpm install weex-ui --save
     };
 </script>
 ```
-更详细代码可以参考[组件demo代码]
+
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/loading/index.vue)
 
 ### 可配置参数
 

@@ -7,10 +7,8 @@
     - 用于丰富slide，包括商品橱窗，图片列表等 
     - 注意: 目前已经支持Ios、Android、H5的展示，但还是一个`beta版本`，需要优化。
 
------
-
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-ep-slider/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-ep-slider%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/xVDvpOyKcLKnqwZZxnjV.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1Ky4QSpXXXXbRapXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/jaOxfvtZroFWnZezjcou.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1Ky4QSpXXXXbRapXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 安装
 
@@ -99,6 +97,8 @@ npm install weex-ui --save
 
 
 ```
+
+更多详细情况可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/ep-slider/index.vue)
 
 ### 可配置参数
 

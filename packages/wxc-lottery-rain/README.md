@@ -5,11 +5,9 @@
 - 规则
   - 一般在营销活动中使用，类似于捉猫猫、打地鼠这种场景
   - 元素图片、容器样式可以配置中成当前活动氛围一致，记得处理config中的图片高宽
-   
------
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-lottery-rain/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-lottery-rain%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/vYUYcbOmIaxTEvRWcOis.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1MciTdwMPMeJjy1XbXXcwxVXa-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/LhUMuYgbZmUSAOezSTEV.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1MciTdwMPMeJjy1XbXXcwxVXa-200-200.png" width="160"/>
 
 ## 安装
 
@@ -66,6 +64,9 @@ tnpm install weex-ui --save
 </script>
 
 ```
+
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/lottery-rain/index.vue)
+
 
 ### 可配置参数
 

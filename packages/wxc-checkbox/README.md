@@ -2,7 +2,6 @@
 
 > Weex复选框组件，支持单个和列表checkbox的设置
 
------
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-checkbox/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-checkbox%2Fdemo%2Findex.native-min.js)
 
@@ -60,7 +59,8 @@ npm i weex-ui --save
 </script>
 
 ```
-- 更多详细情况可以参考[demo]
+
+更多详细情况可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/checkbox/index.vue)
 
 
 ### 可配置参数

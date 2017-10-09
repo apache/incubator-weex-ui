@@ -6,10 +6,8 @@
     - 可以通过索引快速定位
     - 常用于联系人列表、城市列表的基础组件
     
------
-
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-indexlist/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-indexlist%2Fdemo%2Findex.native-min.js)【group、list】
-<img src="https://gw.alipayobjects.com/zos/rmsportal/MjUoWOHmJflDEiMnXPxd.gif" width="240"/>&nbsp;&nbsp;<img src="https://gw.alipayobjects.com/zos/rmsportal/ZMQmFSLbisewXqqDfYiy.gif" width="240"/>&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1qK2USpXXXXbSXpXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/NUuNuWYjGqjnNnQKBBpw.gif" width="240"/>&nbsp;&nbsp;<img src="https://gw.alipayobjects.com/zos/rmsportal/USnVdDeDTNIkrMomOOpO.gif" width="240"/>&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1qK2USpXXXXbSXpXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 安装
 
@@ -58,8 +56,8 @@ npm install weex-ui --save
   };
 </script>
 ```
-- 原始数据请见[demo/data.js]
-- 更详细代码可以参考[组件demo代码]
+
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/index.vue)
 
 ### 可配置参数
 
@@ -72,8 +70,8 @@ npm install weex-ui --save
 | only-show-list | `Boolean` | `false` |  是否只显示列表，注4 |
 | nav-style | `Object` | `{}` |  索引侧边栏样式自定义 |
 
-- 注1：正常列表的配置项目，采用list的形式展示，详细可见[demo/data.js#L16]
-- 注2：有些索引列表需要在正常列表前面展示一个`热门`列表，同时支持`group`、`list`形式，数据格式详细可见[demo/data.js#L2]，整体配置为
+- 注1：正常列表的配置项目，采用list的形式展示，详细可见 [demo/data.js#L16](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L16)
+- 注2：有些索引列表需要在正常列表前面展示一个`热门`列表，同时支持`group`、`list`形式，数据格式详细可见[demo/data.js#L2](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L2)，整体配置为
 
    ```
    hotListConfig: {

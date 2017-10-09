@@ -2,7 +2,6 @@
 
 > Weex 单选组组件，支持单个和一组的形式
 
------
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-radio/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-radio%2Fdemo%2Findex.native-min.js)
 
@@ -54,6 +53,8 @@ npm install weex-ui --save
   }
 </script>
 ```
+
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/radio/index.vue)
 
 ### 可配置参数
 

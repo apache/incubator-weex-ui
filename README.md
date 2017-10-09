@@ -1,6 +1,7 @@
 # Weex Ui
 
 [![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600)](https://www.npmjs.com/package/weex-ui)
+[![NPM downloads](http://img.shields.io/npm/dm/weex-ui.svg)](https://npmjs.org/package/weex-ui)
 [![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://badges.gitter.im/alibaba-weex-ui/chat.svg)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 
@@ -146,7 +147,7 @@ You can find more examples [here](https://github.com/alibaba/weex-ui/tree/master
 |[wxc-progress](./packages/wxc-progress/README.md)|Feedback|Progress bar|
 |[wxc-lottery-rain](./packages/wxc-lottery-rain/README.md)|Game|Cat-cat game|
 
-`*` These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure you have imported the module before using it.
+`*` These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).
 
 ## Development
 

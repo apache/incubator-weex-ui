@@ -6,7 +6,6 @@
   - 表明某个任务的当前进度
   - 需要准确告知当前进度，否则应该使用wxc-loading
 
------
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-progress/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-progress%2Fdemo%2Findex.native-min.js)
 <img src="http://gtms02.alicdn.com/tfs/TB1RWnVSpXXXXaZXFXXXXXXXXXX-750-1334.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms03.alicdn.com/tfs/TB1pSZaSpXXXXaXXXXXXXXXXXXX-200-200.png" width="160"/>
@@ -86,7 +85,8 @@ npm install weex-ui --save
 </script>
 
 ```
-更详细代码可以参考[组件demo代码]
+
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/progress/index.vue)
 
 
 ### 可配置参数

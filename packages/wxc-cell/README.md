@@ -7,10 +7,9 @@
   - 可以设置label、标题、描述、跳转、箭头显示和点击事件回调功能
   - 可以设置子元素传入
   
------
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-cell/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-cell%2Fdemo%2Findex.native-min.js)
-<img src="https://img.alicdn.com/tfs/TB1Y_m5SpXXXXa3aFXXXXXXXXXX-750-1334.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB15ta_SpXXXXcFaVXXXXXXXXXX-191-197.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/QnEkMAXjuLlcoEcpeXdC.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB15ta_SpXXXXcFaVXXXXXXXXXX-191-197.png" width="160"/>
 
 ## 安装
 
@@ -94,7 +93,7 @@ npm install weex-ui --save
   };
 </script>
 ```
-更详细代码可以参考组件demo代码
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/cell/index.vue)
 
 
 ### 可配置参数
@@ -117,7 +116,7 @@ npm install weex-ui --save
 1. `<slot name="label"></slot>`：label卡槽，不传入使用文案
 2. `<slot name="title"></slot>`：title卡槽， 不传入使用文案
 3. `<slot name="value"></slot>`：有时候可以需要传入输入框、checkbox情况
-详细可见demo代码
+
 
 ### 事件回调
 ```

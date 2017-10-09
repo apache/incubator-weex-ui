@@ -1,13 +1,11 @@
 # wxc-grid-select 
 
-> 网格形选择组件，支持单选、多选
+> Weex 网格形选择组件，支持单选、多选
   
------
-
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-grid-select/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-grid-select%2Fdemo%2Findex.native-min.js)
 
-<img src="https://gw.alipayobjects.com/zos/rmsportal/PRaslXXuPozOscnnbdic.gif" width="240">
-<img src="http://img02.daily.taobaocdn.net/tps/TB168iAXow7LKJjyzdKXXaShXXa-200-200.png" width="180">
+<img src="https://gw.alipayobjects.com/zos/rmsportal/obKOHhRZBxhHPEAEvVsY.gif" width="240">
+<img src="https://gw.alipayobjects.com/zos/rmsportal/yJfbMufZVRJzKicHPQrn.png" width="180">
 
 ## 安装
 
@@ -111,7 +109,7 @@ tnpm i weex-ui --save
   }
 </script>
 ```
-
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/grid-select/index.vue)
 
 ### Props
 
