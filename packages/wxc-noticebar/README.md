@@ -8,7 +8,7 @@
 
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-noticebar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-noticebar%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/wDFEetwcmbtRzEUPqxum.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms01.alicdn.com/tfs/TB18V3aSpXXXXboXpXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/AnxWKgMALzboBnOZwIDj.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms01.alicdn.com/tfs/TB18V3aSpXXXXboXpXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 安装
 
