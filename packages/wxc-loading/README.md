@@ -20,7 +20,7 @@
 ## 安装
 
 ```
-tnpm install weex-ui --save
+npm install weex-ui --save
 ```
 
 ## 使用方法

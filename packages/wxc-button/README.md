@@ -10,7 +10,7 @@
 ## 安装
 
 ```
-tnpm i @ali/wxc-button --save
+npm i @ali/wxc-button --save
 ```
 
 ## 使用方法
