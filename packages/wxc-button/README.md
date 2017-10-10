@@ -17,7 +17,7 @@ tnpm i @ali/wxc-button --save
 
 ```
 <template>
-  <wxc-button title="确定"
+  <wxc-button text="确定"
               type="fliggy"
               @wxcButtonClicked="wxcButtonClicked"></wxc-button>
 </template>
