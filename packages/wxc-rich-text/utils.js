@@ -78,7 +78,7 @@ const Utils = {
   goToH5Page (jumpUrl, animated = false, callback = null) {
     const Navigator = weex.requireModule('navigator');
     const jumpUrlObj = new Utils.UrlParser(jumpUrl, true);
-    const url = appendProtocol(jumpUrlObj.toString());
+    const url = Utils.appendProtocol(jumpUrlObj.toString());
     Navigator.push({
       url: Utils.encodeURLParams(url),
       animated: animated,
