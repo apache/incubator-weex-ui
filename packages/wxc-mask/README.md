@@ -14,7 +14,7 @@ npm i weex-ui --save
 
 ## 使用方法
 
-```
+```vue
 <template>
   <div class="wrapper">
     <div class="btn" @click="openMask">
