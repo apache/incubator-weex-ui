@@ -25,11 +25,13 @@ npm i weex-ui -S
 <template>
   <div>
     <wxc-button text="Open Popup"
-                @wxcButtonClicked="buttonClicked"></wxc-button>
+                @wxcButtonClicked="buttonClicked">
+    </wxc-button>
     <wxc-popup width="500"
                pos="left"
                :show="isShow"
-               @wxcPopupOverlayClicked="overlayClicked"></wxc-popup>
+               @wxcPopupOverlayClicked="overlayClicked">
+    </wxc-popup>
   </div>
 </template>
 
