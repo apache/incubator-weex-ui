@@ -133,7 +133,7 @@ You can find more examples [here](https://github.com/alibaba/weex-ui/tree/master
 |[wxc-checkbox](./packages/wxc-checkbox/README.md)|Data Entry|Checkbox list|
 |[wxc-countdown](./packages/wxc-countdown/README.md)|Data Entry|Countdown component|
 |[wxc-radio](./packages/wxc-radio/README.md)|Data Entry|Radio list|
-|[wxc-slider-bar](./packages/wxc-slider-bar/README.md)|Data Entry|Sliding select data|
+|[wxc-slider-bar](./packages/wxc-slider-bar/README.md) * |Data Entry|Sliding select data|
 |[wxc-stepper](./packages/wxc-stepper/README.md)|Data Entry|Quantity changer|
 |[wxc-searchbar](./packages/wxc-searchbar/README.md)|Data Entry|Search bar component|
 |[wxc-grid-select](./packages/wxc-grid-select/README.md)|Data Display|Grid selection component|

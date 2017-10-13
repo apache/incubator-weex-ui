@@ -123,7 +123,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 |[wxc-checkbox](./packages/wxc-checkbox/README.md)|数据输入|复选列表|
 |[wxc-countdown](./packages/wxc-countdown/README.md)|数据输入|倒计时|
 |[wxc-radio](./packages/wxc-radio/README.md)|数据输入|单选列表|
-|[wxc-slider-bar](./packages/wxc-slider-bar/README.md)|数据输入|滑动选择数据|
+|[wxc-slider-bar](./packages/wxc-slider-bar/README.md) * |数据输入|滑动选择数据|
 |[wxc-stepper](./packages/wxc-stepper/README.md)|数据输入|计数器|
 |[wxc-searchbar](./packages/wxc-searchbar/README.md)|数据输入|搜索栏|
 |[wxc-grid-select](./packages/wxc-grid-select/README.md)|数据展示|网格选择|
