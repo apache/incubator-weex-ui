@@ -6133,12 +6133,12 @@ module.exports = {
       if (self.useDefaultReturn) {
         Navigator.pop({}, function (e) {});
       }
-      self.$emit('minibarLeftButtonClick', {});
+      self.$emit('wxcMinibarLeftButtonClicked', {});
     },
     rightButtonClicked: function rightButtonClicked() {
       var self = this;
       if (self.rightText || self.rightButton) {
-        self.$emit('minibarRightButtonClick', {});
+        self.$emit('wxcMinibarRightButtonClicked', {});
       }
     }
   }
@@ -7989,7 +7989,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "useDefaultReturn": _vm.useDefaultReturn
     },
     on: {
-      "minibarLeftButtonClick": _vm.minibarLeftButtonClick
+      "wxcMinibarLeftButtonClicked": _vm.minibarLeftButtonClick
     }
   }, 'wxc-minibar', _vm.minibarCfg, false)), (_vm.isShow) ? _c('div', {
     staticClass: ["calendar-weekday"]

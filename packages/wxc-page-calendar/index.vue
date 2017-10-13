@@ -8,7 +8,7 @@
     <wxc-minibar :show="showHeader"
                  v-bind="minibarCfg"
                  :use-default-return="useDefaultReturn"
-                 v-on:minibarLeftButtonClick="minibarLeftButtonClick"></wxc-minibar>
+                 v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"></wxc-minibar>
 
     <div class="calendar-weekday"
          v-if="isShow">

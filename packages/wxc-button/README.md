@@ -9,13 +9,13 @@
 
 ## 安装
 
-```
+```shell
 npm i @ali/wxc-button --save
 ```
 
 ## 使用方法
 
-```
+```vue
 <template>
   <wxc-button text="确定"
               type="fliggy"

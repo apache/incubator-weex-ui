@@ -12,29 +12,29 @@
         </div>
 
         <div class="demo">
-          <wxc-minibar v-on:minibarLeftButtonClick="minibarLeftButtonClick"
-                       v-on:minibarRightButtonClick="minibarRightButtonClick"></wxc-minibar>
+          <wxc-minibar v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
+                       v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"></wxc-minibar>
         </div>
 
         <div class="demo">
           <wxc-minibar title="阿里旅行购物车"
                        right-text="更多"
-                       v-on:minibarLeftButtonClick="minibarLeftButtonClick"
-                       v-on:minibarRightButtonClick="minibarRightButtonClick"></wxc-minibar>
+                       v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
+                       v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"></wxc-minibar>
         </div>
         <div class="demo">
           <wxc-minibar title="阿里旅行购物车"
                        background-color="#009ff0"
                        text-color="#FFFFFF"
                        :left-button="leftButton"
-                       v-on:minibarLeftButtonClick="minibarLeftButtonClick"
-                       v-on:minibarRightButtonClick="minibarRightButtonClick"
+                       v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
+                       v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"
                        right-text="更多"></wxc-minibar>
         </div>
         <div class="demo">
           <wxc-minibar title="阿里旅行购物车"
-                       v-on:minibarLeftButtonClick="minibarLeftButtonClick"
-                       v-on:minibarRightButtonClick="minibarRightButtonClick"
+                       v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
+                       v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"
                        :right-button="rightButton"></wxc-minibar>
         </div>
       </div>
@@ -56,20 +56,11 @@
     flex: 1;
   }
 
-  .category {
-    margin-top: 70px;
-  }
-
   .demo {
     width: 750px;
     height: 180px;
     align-items: flex-start;
     padding-top: 60px;
-  }
-
-  .text {
-    margin-left: 40px;
-    margin-bottom: 30px;
   }
 </style>
 
