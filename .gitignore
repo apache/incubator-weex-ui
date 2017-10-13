@@ -15,3 +15,4 @@ mods/.sass-cache/
 !.editorconfig
 lerna-debug.log
 build/example
+build/*.map

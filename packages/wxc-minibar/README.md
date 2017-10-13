@@ -11,13 +11,13 @@
 
 ## 安装
 
-```
+```shell
 npm install weex-ui --save
 ```
 
 ## 使用方法
 
-```
+```vue
 <template>
   <div class="container" :style="{ height: height }">
     <div class="demo">
@@ -25,8 +25,8 @@ npm install weex-ui --save
       <wxc-minibar title="阿里旅行购物车"
                    background-color="#009ff0"
                    text-color="#FFFFFF"
-                   v-on:minibarLeftButtonClick="minibarLeftButtonClick"
-                   v-on:minibarRightButtonClick="minibarRightButtonClick"
+                   v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
+                   v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"
                    right-text="更多"></wxc-minibar>
     </div>
   </div>
@@ -69,7 +69,7 @@ npm install weex-ui --save
 ### 事件回调
 
 ```
-左侧按钮点击：`v-on:minibarLeftButtonClick="minibarLeftButtonClick"`
-右侧点击：`v-on:minibarRightButtonClick="minibarRightButtonClick"`
+左侧按钮点击：`v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"`
+右侧点击：`v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"`
 ```
 

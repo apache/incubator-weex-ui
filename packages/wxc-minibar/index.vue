@@ -107,12 +107,12 @@
           Navigator.pop({}, e => {
           });
         }
-        self.$emit('minibarLeftButtonClick', {});
+        self.$emit('wxcMinibarLeftButtonClicked', {});
       },
       rightButtonClicked () {
         const self = this;
         if (self.rightText || self.rightButton) {
-          self.$emit('minibarRightButtonClick', {});
+          self.$emit('wxcMinibarRightButtonClicked', {});
         }
       }
     }

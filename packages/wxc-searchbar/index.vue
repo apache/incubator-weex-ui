@@ -251,7 +251,7 @@
         setTimeout(() => {
           self.showCancel = false;
           self.detectShowClose();
-          self.$emit('searchbarInputOnblur', { value: self.value });
+          self.$emit('wxcSearchbarInputOnBlur', { value: self.value });
         }, 10);
       },
       autoBlur () {
@@ -260,41 +260,41 @@
       onFocus () {
         this.showCancel = true;
         this.detectShowClose();
-        this.$emit('searchbarInputOnfocus', { value: this.value });
+        this.$emit('wxcSearchbarInputOnFocus', { value: this.value });
       },
       closeClicked () {
         this.value = '';
         this.showCancel && (this.showCancel = false);
         this.showClose && (this.showClose = false);
-        this.$emit('searchbarCloseClick', { value: this.value });
-        this.$emit('searchbarInputOninput', { value: this.value });
+        this.$emit('wxcSearchbarCloseClicked', { value: this.value });
+        this.$emit('wxcSearchbarInputOnInput', { value: this.value });
       },
       onInput (e) {
         this.value = e.value;
         this.showCancel = true;
         this.detectShowClose();
-        this.$emit('searchbarInputOninput', { value: this.value });
+        this.$emit('wxcSearchbarInputOnInput', { value: this.value });
       },
       onSubmit (e) {
         this.onBlur();
         this.value = e.value;
         this.showCancel = true;
         this.detectShowClose();
-        this.$emit('searchbarInputOnReturn', { value: this.value });
+        this.$emit('wxcSearchbarInputReturned', { value: this.value });
       },
       cancelClicked () {
         this.showCancel && (this.showCancel = false);
         this.showClose && (this.showClose = false);
-        this.$emit('searchbarCancelClick', { value: this.value });
+        this.$emit('wxcSearchbarCancelClicked', { value: this.value });
       },
       detectShowClose () {
         this.showClose = (this.value.length > 0) && this.showCancel;
       },
       depClicked () {
-        this.$emit('searchbarDepChooseClick', {});
+        this.$emit('wxcSearchbarDepChooseClicked', {});
       },
       inputDisabledClicked () {
-        this.$emit('searchbarInputDisabledOnclick', {});
+        this.$emit('wxcSearchbarInputDisabledClicked', {});
       },
       setValue (value) {
         this.value = value;

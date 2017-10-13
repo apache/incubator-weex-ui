@@ -8,14 +8,14 @@
 
 ## 安装
 
-```
+```shell
 npm i weex-ui --save
 ```
 
 
 ## 使用方法
 
-```
+```vue
 <template>
   <wxc-grid-select
     :single="true"

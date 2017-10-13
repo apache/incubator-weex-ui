@@ -12,13 +12,13 @@
 
 ## 安装
 
-```
+```shell
 npm install weex-ui --save
 ```
 
 ## 使用方法
 
-```
+```vue
 <template>
   <div class="wrapper">
     <div class="demo">

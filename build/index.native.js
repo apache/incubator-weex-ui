@@ -4230,18 +4230,20 @@ module.exports = {
     "position": "fixed",
     "top": 550,
     "left": 316,
-    "width": 118,
-    "height": 118,
+    "width": 120,
+    "height": 120,
     "textAlign": "center",
     "justifyContent": "center",
     "backgroundColor": "rgba(32,35,37,0.6)",
-    "borderRadius": 59,
+    "borderBottomLeftRadius": 60,
+    "borderBottomRightRadius": 60,
+    "borderTopLeftRadius": 60,
+    "borderTopRightRadius": 60,
     "paddingLeft": 0,
     "paddingRight": 0,
     "paddingTop": 35,
     "paddingBottom": 35,
-    "color": "#ffffff",
-    "opacity": 1
+    "color": "#ffffff"
   },
   "list-pop-text": {
     "fontSize": 40,
@@ -4358,6 +4360,7 @@ module.exports = {
 //
 //
 //
+//
 
 var dom = weex.requireModule('dom');
 var Util = __webpack_require__(67);
@@ -4414,26 +4417,28 @@ module.exports = {
     return {
       popKeyShow: false,
       popKey: '',
-      navOffsetY: 0
+      navOffsetY: 0,
+      timer: null
     };
   },
   methods: {
     itemClicked: function itemClicked(item) {
-      var self = this;
-      self.$emit('wxcIndexlistItemClicked', {
+      this.$emit('wxcIndexlistItemClicked', {
         item: item
       });
     },
     go2Key: function go2Key(key) {
-      var self = this;
-      var keyEl = self.$refs['index-item-title-' + key][0];
+      var _this = this;
+
+      var keyEl = this.$refs['index-item-title-' + key][0];
       dom.scrollToElement(keyEl, {
         offset: 0
       });
-      self.popKey = key;
-      self.popKeyShow = true;
-      setTimeout(function () {
-        self.popKeyShow = false;
+      this.popKey = key;
+      this.popKeyShow = true;
+      this.timer && clearTimeout(this.timer);
+      this.timer = setTimeout(function () {
+        _this.popKeyShow = false;
       }, 600);
     }
   }
@@ -4597,8 +4602,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           staticClass: ["item-desc"]
         }, [_vm._v(_vm._s(item.desc))]) : _vm._e()])])
       }))
-    })) : _vm._e(), _vm._l((v.data), function(item, index) {
-      return (v.type == 'list') ? _c('div', {
+    })) : _vm._e(), (v.type === 'list') ? _c('div', _vm._l((v.data), function(item, index) {
+      return _c('div', {
         key: index,
         staticClass: ["index-list-item"],
         on: {
@@ -4610,8 +4615,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         staticClass: ["title"]
       }, [_vm._v(_vm._s(item.name))]), _c('text', {
         staticClass: ["desc"]
-      }, [_vm._v(_vm._s(item.desc))])]) : _vm._e()
-    })], 2)
+      }, [_vm._v(_vm._s(item.desc))])])
+    })) : _vm._e()])
   })), (_vm.showIndex && !_vm.onlyShowList) ? _c('div', {
     staticClass: ["index-list-nav"],
     style: _vm.navStyle
@@ -6128,12 +6133,12 @@ module.exports = {
       if (self.useDefaultReturn) {
         Navigator.pop({}, function (e) {});
       }
-      self.$emit('minibarLeftButtonClick', {});
+      self.$emit('wxcMinibarLeftButtonClicked', {});
     },
     rightButtonClicked: function rightButtonClicked() {
       var self = this;
       if (self.rightText || self.rightButton) {
-        self.$emit('minibarRightButtonClick', {});
+        self.$emit('wxcMinibarRightButtonClicked', {});
       }
     }
   }
@@ -7128,7 +7133,7 @@ var Utils = {
 
     var Navigator = weex.requireModule('navigator');
     var jumpUrlObj = new Utils.UrlParser(jumpUrl, true);
-    var url = appendProtocol(jumpUrlObj.toString());
+    var url = Utils.appendProtocol(jumpUrlObj.toString());
     Navigator.push({
       url: Utils.encodeURLParams(url),
       animated: animated
@@ -7984,7 +7989,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "useDefaultReturn": _vm.useDefaultReturn
     },
     on: {
-      "minibarLeftButtonClick": _vm.minibarLeftButtonClick
+      "wxcMinibarLeftButtonClicked": _vm.minibarLeftButtonClick
     }
   }, 'wxc-minibar', _vm.minibarCfg, false)), (_vm.isShow) ? _c('div', {
     staticClass: ["calendar-weekday"]
@@ -10875,7 +10880,7 @@ module.exports = {
       setTimeout(function () {
         self.showCancel = false;
         self.detectShowClose();
-        self.$emit('searchbarInputOnblur', { value: self.value });
+        self.$emit('wxcSearchbarInputOnBlur', { value: self.value });
       }, 10);
     },
     autoBlur: function autoBlur() {
@@ -10884,41 +10889,41 @@ module.exports = {
     onFocus: function onFocus() {
       this.showCancel = true;
       this.detectShowClose();
-      this.$emit('searchbarInputOnfocus', { value: this.value });
+      this.$emit('wxcSearchbarInputOnFocus', { value: this.value });
     },
     closeClicked: function closeClicked() {
       this.value = '';
       this.showCancel && (this.showCancel = false);
       this.showClose && (this.showClose = false);
-      this.$emit('searchbarCloseClick', { value: this.value });
-      this.$emit('searchbarInputOninput', { value: this.value });
+      this.$emit('wxcSearchbarCloseClicked', { value: this.value });
+      this.$emit('wxcSearchbarInputOnInput', { value: this.value });
     },
     onInput: function onInput(e) {
       this.value = e.value;
       this.showCancel = true;
       this.detectShowClose();
-      this.$emit('searchbarInputOninput', { value: this.value });
+      this.$emit('wxcSearchbarInputOnInput', { value: this.value });
     },
     onSubmit: function onSubmit(e) {
       this.onBlur();
       this.value = e.value;
       this.showCancel = true;
       this.detectShowClose();
-      this.$emit('searchbarInputOnReturn', { value: this.value });
+      this.$emit('wxcSearchbarInputReturned', { value: this.value });
     },
     cancelClicked: function cancelClicked() {
       this.showCancel && (this.showCancel = false);
       this.showClose && (this.showClose = false);
-      this.$emit('searchbarCancelClick', { value: this.value });
+      this.$emit('wxcSearchbarCancelClicked', { value: this.value });
     },
     detectShowClose: function detectShowClose() {
       this.showClose = this.value.length > 0 && this.showCancel;
     },
     depClicked: function depClicked() {
-      this.$emit('searchbarDepChooseClick', {});
+      this.$emit('wxcSearchbarDepChooseClicked', {});
     },
     inputDisabledClicked: function inputDisabledClicked() {
-      this.$emit('searchbarInputDisabledOnclick', {});
+      this.$emit('wxcSearchbarInputDisabledClicked', {});
     },
     setValue: function setValue(value) {
       this.value = value;
@@ -13423,7 +13428,7 @@ var Utils = {
 
     var Navigator = weex.requireModule('navigator');
     var jumpUrlObj = new Utils.UrlParser(jumpUrl, true);
-    var url = appendProtocol(jumpUrlObj.toString());
+    var url = Utils.appendProtocol(jumpUrlObj.toString());
     Navigator.push({
       url: Utils.encodeURLParams(url),
       animated: animated

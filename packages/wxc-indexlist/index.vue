@@ -1,6 +1,6 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
 <!-- Created by Tw93 on 16/11/02. -->
-<!-- Update by Tw93 on 17/06/20. -->
+<!-- Update by Tw93 on 17/10/13. -->
 <!--A index list. -->
 
 <template>
@@ -32,13 +32,14 @@
             </div>
           </div>
         </div>
-        <div class="index-list-item"
-             v-if="v.type=='list'"
-             v-for="(item,index) in v.data"
-             @click="itemClicked(item)"
-             :key="index">
-          <text class="title">{{item.name}}</text>
-          <text class="desc">{{item.desc}}</text>
+        <div v-if="v.type ==='list'">
+          <div class="index-list-item"
+               v-for="(item,index) in v.data"
+               :key="index"
+               @click="itemClicked(item)">
+            <text class="title">{{item.name}}</text>
+            <text class="desc">{{item.desc}}</text>
+          </div>
         </div>
       </cell>
     </list>
@@ -102,25 +103,25 @@
     data: () => ({
       popKeyShow: false,
       popKey: '',
-      navOffsetY: 0
+      navOffsetY: 0,
+      timer: null
     }),
     methods: {
       itemClicked (item) {
-        const self = this;
-        self.$emit('wxcIndexlistItemClicked', {
+        this.$emit('wxcIndexlistItemClicked', {
           item
         });
       },
       go2Key (key) {
-        const self = this;
-        const keyEl = self.$refs['index-item-title-' + key][0];
+        const keyEl = this.$refs['index-item-title-' + key][0];
         dom.scrollToElement(keyEl, {
           offset: 0
         });
-        self.popKey = key;
-        self.popKeyShow = true;
-        setTimeout(function () {
-          self.popKeyShow = false;
+        this.popKey = key;
+        this.popKeyShow = true;
+        this.timer && clearTimeout(this.timer);
+        this.timer = setTimeout(() => {
+          this.popKeyShow = false;
         }, 600);
       }
     }
@@ -200,18 +201,20 @@
     position: fixed;
     top: 550px;
     left: 316px;
-    width: 118px;
-    height: 118px;
+    width: 120px;
+    height: 120px;
     text-align: center;
     justify-content: center;
     background-color: rgba(32, 35, 37, .6);
-    border-radius: 59px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
     padding-left: 0;
     padding-right: 0;
     padding-top: 35px;
     padding-bottom: 35px;
     color: #ffffff;
-    opacity: 1;
   }
 
   .list-pop-text {

@@ -8,7 +8,7 @@
 
 ## 安装
 
-```
+```shell
 npm i weex-ui --save
 ```
 

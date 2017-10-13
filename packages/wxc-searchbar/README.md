@@ -9,30 +9,30 @@
 
 ## 安装
 
-```
+```shell
 npm install weex-ui --save
 ```
 
 ## 使用方法
 
-```
+```vue
 <template>
   <div class="container">
     <div class="demo">
       <text class="value-text">基础输入框</text>
       <wxc-searchbar ref="wxc-searchbar"
-                     v-on:searchbarCancelClick="searchbarCancelClick"
-                     v-on:searchbarInputOnReturn="searchbarInputOnReturn"
-                     v-on:searchbarInputOninput="searchbarInputOninput"
-                     v-on:searchbarCloseClick="searchbarCloseClick"
-                     v-on:searchbarInputOnfocus="searchbarInputOnfocus"
-                     v-on:searchbarInputOnblur="searchbarInputOnblur"></wxc-searchbar>
+                     v-on:wxcSearchbarCancelClicked="wxcSearchbarCancelClicked"
+                     v-on:wxcSearchbarInputReturned="wxcSearchbarInputReturned"
+                     v-on:wxcSearchbarInputOnInput="wxcSearchbarInputOnInput"
+                     v-on:wxcSearchbarCloseClicked="wxcSearchbarCloseClicked"
+                     v-on:wxcSearchbarInputOnFocus="wxcSearchbarInputOnFocus"
+                     v-on:wxcSearchbarInputOnBlur="wxcSearchbarInputOnBlur"></wxc-searchbar>
       <text class="value-text">{{value}}</text>
     </div>
     <div class="demo demo1">
       <text class="value-text">输入框禁用</text>
       <wxc-searchbar disabled="true"
-                     v-on:searchbarInputDisabledOnclick="searchbarInputDisabledOnclick"></wxc-searchbar>
+                     v-on:wxcSearchbarInputDisabledClicked="searchbarInputDisabledOnclick"></wxc-searchbar>
     </div>
     <div class="demo demo1">
       <text class="value-text">带有目的地模式的输入框</text>
@@ -40,8 +40,8 @@ npm install weex-ui --save
                      placeholder="搜索目的地"
                      mod="hasDep"
                      dep-name="杭州出发"
-                     v-on:searchbarDepChooseClick="searchbarDepChooseClick"
-                     v-on:searchbarInputDisabledOnclick="searchbarInputDisabledOnclick"></wxc-searchbar>
+                     v-on:wxcSearchbarDepChooseClicked="wxcSearchbarDepChooseClicked"
+                     v-on:wxcSearchbarInputDisabledClicked="wxcSearchbarInputDisabledClicked"></wxc-searchbar>
     </div>
   </div>
 </template>
@@ -54,22 +54,22 @@ npm install weex-ui --save
       value: ''
     }),
     methods: {
-      searchbarInputOnfocus () {
+      wxcSearchbarInputOnFocus () {
       },
-      searchbarInputOnblur () {
+      wxcSearchbarInputOnBlur () {
       },
-      searchbarInputOnReturn(){
+      wxcSearchbarInputReturned (){
       },
-      searchbarCloseClick () {
+      wxcSearchbarCloseClicked () {
       },
-      searchbarInputOninput (e) {
+      wxcSearchbarInputOnInput (e) {
         this.value = e.value;
       },
-      searchbarCancelClick () {
+      wxcSearchbarCancelClicked () {
       },
-      searchbarInputDisabledOnclick () {
+      wxcSearchbarInputDisabledClicked () {
       },
-      searchbarDepChooseClick () {
+      wxcSearchbarDepChooseClicked () {
       }
     }
   };

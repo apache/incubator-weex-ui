@@ -9,13 +9,13 @@
 
 ## 安装
 
-```
+```shell
 npm i weex-ui -S
 ```
 
 ## 使用方法
 
-```
+```vue
 <template>
   <wxc-slider-bar v-bind="sliderBarCfg"></wxc-slider-bar>
 </template>
