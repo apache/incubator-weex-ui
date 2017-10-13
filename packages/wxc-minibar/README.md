@@ -11,13 +11,13 @@
 
 ## 安装
 
-```
+```shell
 npm install weex-ui --save
 ```
 
 ## 使用方法
 
-```
+```vue
 <template>
   <div class="container" :style="{ height: height }">
     <div class="demo">

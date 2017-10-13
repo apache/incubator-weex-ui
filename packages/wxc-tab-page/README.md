@@ -15,13 +15,13 @@
 
 ## 安装
 
-```
+```shell
 npm install weex-ui --save
 ```
 
 ## 使用方法
 
-```
+```vue
 <template>
   <wxc-tab-page :tab-titles="tabTitles"
                 :tab-styles="tabStyles"

@@ -19,13 +19,13 @@
 
 ## 安装
 
-```
+```shell
 npm install weex-ui --save
 ```
 
 ## 使用方法
 
-```
+```vue
 <template>
    <wxc-loading :show="isShow" type="trip"></wxc-loading>
    <wxc-part-loading :show="isShow"></wxc-part-loading>

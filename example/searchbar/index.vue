@@ -12,11 +12,12 @@
             @click="setValue">点我可设置输入框内容</text>
       <div class="demo">
         <wxc-searchbar ref="wxc-searchbar"
-                       v-on:searchbarCancelClick="searchbarCancelClick"
-                       v-on:searchbarInputOninput="searchbarInputOninput"
-                       v-on:searchbarCloseClick="searchbarCloseClick"
-                       v-on:searchbarInputOnfocus="searchbarInputOnfocus"
-                       v-on:searchbarInputOnblur="searchbarInputOnblur"></wxc-searchbar>
+                       v-on:wxcSearchbarCancelClicked="wxcSearchbarCancelClicked"
+                       v-on:wxcSearchbarInputReturned="wxcSearchbarInputReturned"
+                       v-on:wxcSearchbarInputOnInput="wxcSearchbarInputOnInput"
+                       v-on:wxcSearchbarCloseClicked="wxcSearchbarCloseClicked"
+                       v-on:wxcSearchbarInputOnFocus="wxcSearchbarInputOnFocus"
+                       v-on:wxcSearchbarInputOnBlur="wxcSearchbarInputOnBlur"></wxc-searchbar>
         <text class="value-text">{{value}}</text>
 
       </div>
@@ -25,7 +26,7 @@
       <div class="demo demo1">
         <wxc-searchbar :disabled="isDisabled"
                        placeholder="无法输入"
-                       v-on:searchbarInputDisabledOnclick="searchbarInputDisabledOnclick"></wxc-searchbar>
+                       v-on:wxcSearchbarInputDisabledClicked="wxcSearchbarInputDisabledClicked"></wxc-searchbar>
       </div>
 
       <text class="hint">一直显示取消按钮,同时theme="yellow"</text>
@@ -42,8 +43,8 @@
                        theme="yellow"
                        mod="hasDep"
                        dep-name="杭州出发"
-                       v-on:searchbarDepChooseClick="searchbarDepChooseClick"
-                       v-on:searchbarInputDisabledOnclick="searchbarInputDisabledOnclick"></wxc-searchbar>
+                       v-on:wxcSearchbarDepChooseClicked="wxcSearchbarDepChooseClicked"
+                       v-on:wxcSearchbarInputDisabledClicked="wxcSearchbarInputDisabledClicked"></wxc-searchbar>
       </div>
     </scroller>
   </div>
@@ -109,25 +110,26 @@
       setValue () {
         this.$refs['wxc-searchbar'].setValue('点击了手动设置输入框内容的开关');
       },
-      searchbarInputOnfocus () {
+
+      wxcSearchbarInputOnFocus () {
         modal.toast({ 'message': 'onfocus', 'duration': 1 });
       },
-      searchbarInputOnblur () {
+      wxcSearchbarInputOnBlur () {
         modal.toast({ 'message': 'onbulr', 'duration': 1 });
       },
-      searchbarCloseClick () {
+      wxcSearchbarCloseClicked () {
         modal.toast({ 'message': 'close.click', 'duration': 1 });
       },
-      searchbarInputOninput (e) {
+      wxcSearchbarInputOnInput (e) {
         this.value = e.value;
       },
-      searchbarCancelClick () {
+      wxcSearchbarCancelClicked () {
         modal.toast({ 'message': 'cancel.click', 'duration': 1 });
       },
-      searchbarInputDisabledOnclick () {
+      wxcSearchbarInputDisabledClicked () {
         modal.toast({ 'message': 'input.onclick', 'duration': 1 });
       },
-      searchbarDepChooseClick () {
+      wxcSearchbarDepChooseClicked () {
         modal.toast({ 'message': 'dep.choose.click', 'duration': 1 });
       }
     }

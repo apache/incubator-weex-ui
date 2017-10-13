@@ -12,13 +12,13 @@
 
 ## 安装
 
-```
+```shell
 npm install weex-ui --save
 ```
 
 ## 使用方法
 
-```
+```vue
 <template>
   <div class="demo-container">
     <text class="image-text">点击图片弹出全屏图片</text>
