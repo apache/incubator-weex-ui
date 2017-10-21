@@ -21,10 +21,10 @@ const Utils = {
     const  Navigator= weex.requireModule('navigator')
     const jumpUrlObj = new Utils.UrlParser(jumpUrl, true);
     const url = Utils.appendProtocol(jumpUrlObj.toString());
-    Navigator.push({
+    Navigator && Navigator.push({
       url: Utils.encodeURLParams(url),
       animated: animated,
     }, callback);
   }
 }
-module.exports = Utils;
+export default Utils;

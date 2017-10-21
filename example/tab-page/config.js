@@ -1,7 +1,7 @@
 /**
  * Created by 侑夕 on 2016/11/4.
  */
-module.exports = {
+export default {
 
   //考虑到其他bu的使用不会处理本地图片，我这边将图片上传到tps
   tabTitles: [

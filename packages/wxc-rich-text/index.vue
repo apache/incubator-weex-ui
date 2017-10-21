@@ -29,7 +29,6 @@
       </div>
     </div>
     <text class="default-text" v-if="isString">{{configList}}</text>
-
   </div>
 </template>
 
@@ -50,8 +49,8 @@
 </style>
 
 <script>
-  const Utils = require('./utils');
-  module.exports = {
+  import Utils from './utils';
+  export default {
     components: {
       WxcRichTextText: require('./wxc-rich-text-text.vue'),
       WxcRichTextLink: require('./wxc-rich-text-link.vue'),

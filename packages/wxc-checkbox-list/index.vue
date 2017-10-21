@@ -5,7 +5,7 @@
   <div>
     <wxc-checkbox v-for="(item,i) in list"
                   v-bind="item"
-                  v-on:wxcCheckBoxItemChecked="wxcCheckBoxItemChecked"
+                  @wxcCheckBoxItemChecked="wxcCheckBoxItemChecked"
                   :key="i"></wxc-checkbox>
   </div>
 </template>

@@ -23,7 +23,7 @@ npm install weex-ui --save
     <wxc-indexlist :normal-list="list.normalList"
                    :hot-list-config="hotListConfig"
                    :city-location-config="cityLocationConfig"
-                   v-on:wxcIndexlistItemClicked="wxcIndexlistItemClicked"
+                   @wxcIndexlistItemClicked="wxcIndexlistItemClicked"
                    :show-index="showIndex"></wxc-indexlist>
   </div>
 </template>
@@ -31,8 +31,8 @@ npm install weex-ui --save
 <script>
   const modal = weex.requireModule('modal');
   import { WxcIndexlist } from 'weex-ui';
-  const dataList = require('./data');
-  module.exports = {
+  import {datelist} from 'data.js'
+  export default {
     components: { WxcIndexlist },
     data: () => ({
       list: dataList,
@@ -71,9 +71,9 @@ npm install weex-ui --save
 | nav-style | `Object` | `{}` |  索引侧边栏样式自定义 |
 
 - 注1：正常列表的配置项目，采用list的形式展示，详细可见 [demo/data.js#L16](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L16)
-- 注2：有些索引列表需要在正常列表前面展示一个`热门`列表，同时支持`group`、`list`形式，数据格式详细可见[demo/data.js#L2](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L2)，整体配置为
+- 注2：有些索引列表需要在正常列表前面展示一个`热门`列表，同时支持`group`、`list`形式，格式可见[demo/data.js#L2](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L2)，整体配置为
 
-   ```
+   ```json
    hotListConfig: {
            type: 'group',
            title: '热门',
@@ -82,7 +82,7 @@ npm install weex-ui --save
    ```
 - 注3：特殊的城市列表需要展示定位逻辑，此处新增city-location-config配置，其他列表不需要配置，数据格式为，如果需要显示定位icon，传入isLocation
 
-   ```
+   ```json
    cityLocationConfig: {
            type: 'group',
            title: '定位',
@@ -95,6 +95,6 @@ npm install weex-ui --save
 ### 事件回调
 
 ```
-点击item事件回调`v-on:wxcIndexlistItemClicked="wxcIndexlistItemClicked"`
+点击item事件回调`@wxcIndexlistItemClicked="wxcIndexlistItemClicked"`
 ```
 

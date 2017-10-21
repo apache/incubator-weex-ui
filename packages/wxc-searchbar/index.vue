@@ -21,7 +21,7 @@
       <div v-if="disabled"
            @click="inputDisabledClicked"
            class="disabled-input"></div>
-      <image class="search-bar-icon"
+      <image class="search-bar-ICON"
              :src="inputIcon"></image>
       <image class="search-bar-close"
              v-if="showClose"
@@ -52,7 +52,7 @@
         <image :src="arrowIcon"
                class="dep-arrow"></image>
       </div>
-      <image class="search-bar-icon icon-has-dep"
+      <image class="search-bar-ICON ICON-has-dep"
              :src="inputIcon"></image>
     </div>
   </div>
@@ -93,7 +93,7 @@
     placeholder-color: #666666;
   }
 
-  .search-bar-icon {
+  .search-bar-ICON {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -166,7 +166,7 @@
     height: 24px;
   }
 
-  .icon-has-dep {
+  .ICON-has-dep {
     left: 214px;
   }
 
@@ -185,8 +185,9 @@
 </style>
 
 <script>
-  const icon = require('./icon.base64.js');
-  module.exports = {
+  import { INPUT_ICON, ARROW_ICON, CLOSE_ICON } from './type';
+
+  export default {
     props: {
       disabled: {
         type: Boolean,
@@ -231,9 +232,9 @@
       }
     },
     data: () => ({
-      inputIcon: icon.inputIcon,
-      closeIcon: icon.closeIcon,
-      arrowIcon: icon.arrowIcon,
+      inputIcon: INPUT_ICON,
+      closeIcon: CLOSE_ICON,
+      arrowIcon: ARROW_ICON,
       showCancel: false,
       showClose: false,
       value: ''

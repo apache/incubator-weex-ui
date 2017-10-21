@@ -68,19 +68,19 @@
            @click="openDialog">
         <text class="btn-txt">打开Dialog试一试</text>
       </div>
-      <wxc-dialog :title="title"
-                  :content="content"
-                  :confirm-text="confirmText"
-                  :cancel-text="cancelText"
-                  :show="show"
-                  :single="single"
-                  :is-checked="isChecked"
-                  :no-prompt-text="noPromptText"
-                  :show-no-prompt="showNoPrompt"
-                  v-on:wxcDialogCancelBtnClicked="dialogCancelBtnClick"
-                  v-on:wxcDialogConfirmBtnClicked="dialogConfirmBtnClick"
-                  v-on:wxcDialogNoPromptClicked="dialogNoPromptClick"></wxc-dialog>
     </scroller>
+    <wxc-dialog :title="title"
+                :content="content"
+                :confirm-text="confirmText"
+                :cancel-text="cancelText"
+                :show="show"
+                :single="single"
+                :is-checked="isChecked"
+                :no-prompt-text="noPromptText"
+                :show-no-prompt="showNoPrompt"
+                @wxcDialogCancelBtnClicked="dialogCancelBtnClick"
+                @wxcDialogConfirmBtnClicked="dialogConfirmBtnClick"
+                @wxcDialogNoPromptClicked="dialogNoPromptClick"></wxc-dialog>
   </div>
 </template>
 
@@ -133,7 +133,7 @@
   const modal = weex.requireModule('modal');
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcDialog, WxcCell },
     data: function () {
       return {

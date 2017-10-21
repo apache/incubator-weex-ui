@@ -33,7 +33,7 @@ npm i weex-ui --save
               :has-animation="hasAnimation"
               :has-overlay="hasOverlay"
               :show-close="showClose"
-              v-on:wxcMaskSetHidden="wxcMaskSetHidden"
+              @wxcMaskSetHidden="wxcMaskSetHidden"
               :show="show">
       <div class="content">
         <div class="demo-title">
@@ -51,7 +51,7 @@ npm i weex-ui --save
 <script>
   import { WxcMask } from 'weex-ui';
   const navigationBar = weex.requireModule('navigationBar');
-  module.exports = {
+  export default {
     components: { WxcMask },
     data: () => ({
       show: false,
@@ -102,7 +102,7 @@ npm i weex-ui --save
 ### 事件回调
 
 ```
-//有一个关闭相关的回调逻辑` v-on:wxcMaskSetHidden="wxcMaskSetHidden"`，需要设置`show=false`
+//有一个关闭相关的回调逻辑` @wxcMaskSetHidden="wxcMaskSetHidden"`，需要设置`show=false`
 //详细可见demo
-//此外还有`v-on:wxcMaskCloseClick="wxcMaskCloseClick"`、` v-on:wxcOverlayBodyClicked="wxcOverlayBodyClicked"`需要时候可以使用
+//此外还有`@wxcMaskCloseClick="wxcMaskCloseClick"`、` @wxcOverlayBodyClicked="wxcOverlayBodyClicked"`需要时候可以使用
 ```

@@ -5,7 +5,7 @@
       <title title="wxc-radio"></title>
       <category title="Radio可选"></category>
       <wxc-radio :list="list"
-                 v-on:wxcRadioListChecked="wxcRadioListChecked"></wxc-radio>
+                 @wxcRadioListChecked="wxcRadioListChecked"></wxc-radio>
       <text class="radio-text">checkedItem: {{checkedInfo}}</text>
       <category title="Radio不可选"></category>
       <wxc-radio :list="list2"></wxc-radio>

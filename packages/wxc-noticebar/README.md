@@ -26,7 +26,7 @@ npm i weex-ui --save
         mode="link"
         notice="飞猪测试通告,可跳转"
         type="info"
-        v-on:wxcNoticebarLinkClicked="wxcNoticebarLinkClicked"
+        @wxcNoticebarLinkClicked="wxcNoticebarLinkClicked"
         notice-url="//h5.m.taobao.com/trip/home/index.html">
       </wxc-noticebar>
     </div>
@@ -43,7 +43,7 @@ npm i weex-ui --save
 <script>
   const modal = weex.requireModule('modal');
   import { WxcNoticebar } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcNoticebar },
     data: () => ({
       show: true
@@ -80,7 +80,7 @@ npm i weex-ui --save
 ### 事件回调
 
 ```
-//点击链接后的回调 `v-on:wxcNoticebarLinkClicked="wxcNoticebarLinkClicked"`
-//点击关闭按钮后的回调`v-on:wxcNoticebarCloseClicked="wxcNoticebarCloseClicked"`
+//点击链接后的回调 `@wxcNoticebarLinkClicked="wxcNoticebarLinkClicked"`
+//点击关闭按钮后的回调`@wxcNoticebarCloseClicked="wxcNoticebarCloseClicked"`
 ```
 

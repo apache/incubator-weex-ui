@@ -25,7 +25,6 @@ npm install weex-ui --save
                    :card-length='cardLength'
                    :card-s="cardSize"
                    :select-index="2"
-                   :current-index="currentIndex"
                    @wxcEpSliderCurrentIndexSelected="wxcEpSliderCurrentIndexSelected">
 
       <!--自动生成demo-->
@@ -78,7 +77,6 @@ npm install weex-ui --save
     data: () => ({
       sliderId: 1,
       cardLength: 5,
-      currentIndex: 1,
       cardSize: {
         width: 400,
         height: 300,
@@ -115,6 +113,6 @@ npm install weex-ui --save
 
 ```
 //当前滑块被选中的回调
-`v-on:wxcEpSliderCurrentIndexSelected="wxcEpSliderCurrentIndexSelected"`
+`@wxcEpSliderCurrentIndexSelected="wxcEpSliderCurrentIndexSelected"`
 ```
 

@@ -28,7 +28,7 @@ npm install weex-ui --save
                 title-type="icon"
                 ref="wxc-tab-page"
                 :tab-page-height="tabPageHeight"
-                v-on:wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
+                @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
     <list v-for="(v,index) in tabList"
           :key="index"
           class="item-container"
@@ -50,7 +50,7 @@ npm install weex-ui --save
                   :ext-id="'1-' + (demo) + '-' + (key)"
                   :ext-index="key"
                   :ext-total="demoList.length"
-                  v-on:wxcItemGoodPan="wxcItemGoodPan"></wxc-item>
+                  @wxcItemGoodPan="wxcItemGoodPan"></wxc-item>
       </cell>
     </list>
   </wxc-tab-page>
@@ -70,7 +70,7 @@ npm install weex-ui --save
   const Utils = require('./utils');
   import { WxcTabPage} from 'weex-ui';
   import WxcItem from './wxc-item';
-  module.exports = {
+  export default {
     components: { WxcTabPage, WxcItem },
     data: () => ({
       tabTitles: config.tabTitles,
@@ -142,5 +142,5 @@ this.$refs['wxc-tab-page'].setPage(2)
 
 ### 事件回调
 ```
-//当前页面被选中的回调`v-on:wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected"`
+//当前页面被选中的回调`@wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected"`
 ```

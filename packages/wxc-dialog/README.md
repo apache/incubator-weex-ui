@@ -30,9 +30,9 @@ npm install weex-ui --save
     </div>
     <wxc-dialog title="阿里旅行协议"
                 :show="show"
-                v-on:wxcDialogCancelBtnClicked="wxcDialogCancelBtnClicked"
-                v-on:wxcDialogConfirmBtnClicked="wxcDialogConfirmBtnClicked"
-                v-on:wxcDialogNoPromptClicked="wxcDialogNoPromptClicked"
+                @wxcDialogCancelBtnClicked="wxcDialogCancelBtnClicked"
+                @wxcDialogConfirmBtnClicked="wxcDialogConfirmBtnClicked"
+                @wxcDialogNoPromptClicked="wxcDialogNoPromptClicked"
                 content="为保障消费者权益，阿里旅行·去啊服务保障全面升级，凡在阿里旅行·去啊购买机票、酒店、客栈、门票、度假产品全面享有成行保障和如实描述"
                 :single="single"
                 :is-checked="isChecked"
@@ -43,7 +43,7 @@ npm install weex-ui --save
 
 <script>
   import { WxcDialog } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcDialog },
     data: function () {
       return {
@@ -101,9 +101,9 @@ npm install weex-ui --save
 
 ```
 //请参考上述demo，需要设置
-v-on:wxcDialogCancelBtnClicked="wxcDialogCancelBtnClicked"、
-v-on:wxcDialogConfirmBtnClicked="wxcDialogConfirmBtnClicked"、
-v-on:wxcDialogNoPromptClicked="wxcDialogNoPromptClicked"的回调（假如有使用的话~）
+@wxcDialogCancelBtnClicked="wxcDialogCancelBtnClicked"、
+@wxcDialogConfirmBtnClicked="wxcDialogConfirmBtnClicked"、
+@wxcDialogNoPromptClicked="wxcDialogNoPromptClicked"的回调（假如有使用的话~）
 ```
 
 ### slot卡槽

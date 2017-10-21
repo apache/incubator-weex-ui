@@ -9,7 +9,7 @@
                    v-if="show"
                    ref="overlay"
                    v-bind="overlayCfg"
-                   v-on:wxcOverlayBodyClicking="wxcOverlayBodyClicking"></wxc-overlay>
+                   @wxcOverlayBodyClicking="wxcOverlayBodyClicking"></wxc-overlay>
     </div>
     <div ref="wxc-popup"
          v-if="show"
@@ -56,7 +56,7 @@
   const { platform } = weex.config.env;
   const isWeb = typeof (window) === 'object' && platform.toLowerCase() === 'web';
   import WxcOverlay from '../wxc-overlay';
-  module.exports = {
+  export default {
     components: { WxcOverlay },
     props: {
       show: {

@@ -61,12 +61,12 @@
 
 <script>
   const dom = weex.requireModule('dom');
-  const Util = require('./util');
-  module.exports = {
+  import * as Utils from './utils'
+  export default {
     props: {
       height: {
         type: [Number, String],
-        default: Util.getPageHeight()
+        default: Utils.getPageHeight()
       },
       normalList: {
         type: Array,
@@ -97,7 +97,7 @@
     computed: {
       formatList () {
         const { normalList, hotListConfig, cityLocationConfig } = this;
-        return Util.formatTotalList(normalList, hotListConfig, cityLocationConfig);
+        return Utils.formatTotalList(normalList, hotListConfig, cityLocationConfig);
       }
     },
     data: () => ({
@@ -114,7 +114,7 @@
       },
       go2Key (key) {
         const keyEl = this.$refs['index-item-title-' + key][0];
-        dom.scrollToElement(keyEl, {
+        keyEl && dom.scrollToElement(keyEl, {
           offset: 0
         });
         this.popKey = key;

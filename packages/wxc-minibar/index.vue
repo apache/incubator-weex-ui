@@ -62,10 +62,8 @@
 </style>
 
 <script>
-  const icon = require('./icon.base64.js');
   const Navigator = weex.requireModule('navigator');
-
-  module.exports = {
+  export default {
     props: {
       backgroundColor: {
         type: String,
@@ -73,7 +71,7 @@
       },
       leftButton: {
         type: String,
-        default: icon.iconArrow
+        default: '//gw.alicdn.com/tfs/TB1x18VpwMPMeJjy1XdXXasrXXa-21-36.png'
       },
       textColor: {
         type: String,

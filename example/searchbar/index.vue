@@ -12,12 +12,12 @@
             @click="setValue">点我可设置输入框内容</text>
       <div class="demo">
         <wxc-searchbar ref="wxc-searchbar"
-                       v-on:wxcSearchbarCancelClicked="wxcSearchbarCancelClicked"
-                       v-on:wxcSearchbarInputReturned="wxcSearchbarInputReturned"
-                       v-on:wxcSearchbarInputOnInput="wxcSearchbarInputOnInput"
-                       v-on:wxcSearchbarCloseClicked="wxcSearchbarCloseClicked"
-                       v-on:wxcSearchbarInputOnFocus="wxcSearchbarInputOnFocus"
-                       v-on:wxcSearchbarInputOnBlur="wxcSearchbarInputOnBlur"></wxc-searchbar>
+                       @wxcSearchbarCancelClicked="wxcSearchbarCancelClicked"
+                       @wxcSearchbarInputReturned="wxcSearchbarInputReturned"
+                       @wxcSearchbarInputOnInput="wxcSearchbarInputOnInput"
+                       @wxcSearchbarCloseClicked="wxcSearchbarCloseClicked"
+                       @wxcSearchbarInputOnFocus="wxcSearchbarInputOnFocus"
+                       @wxcSearchbarInputOnBlur="wxcSearchbarInputOnBlur"></wxc-searchbar>
         <text class="value-text">{{value}}</text>
 
       </div>
@@ -26,14 +26,14 @@
       <div class="demo demo1">
         <wxc-searchbar :disabled="isDisabled"
                        placeholder="无法输入"
-                       v-on:wxcSearchbarInputDisabledClicked="wxcSearchbarInputDisabledClicked"></wxc-searchbar>
+                       @wxcSearchbarInputDisabledClicked="wxcSearchbarInputDisabledClicked"></wxc-searchbar>
       </div>
 
       <text class="hint">一直显示取消按钮,同时theme="yellow"</text>
       <div class="demo demo1">
         <wxc-searchbar :always-show-cancel="showCancel"
                        theme="yellow"
-                       v-on:searchbarCancelClick="searchbarCancelClick"></wxc-searchbar>
+                       @searchbarCancelClick="searchbarCancelClick"></wxc-searchbar>
       </div>
 
       <text class="hint">带有目的地模式的输入框、theme="yellow"</text>
@@ -43,8 +43,8 @@
                        theme="yellow"
                        mod="hasDep"
                        dep-name="杭州出发"
-                       v-on:wxcSearchbarDepChooseClicked="wxcSearchbarDepChooseClicked"
-                       v-on:wxcSearchbarInputDisabledClicked="wxcSearchbarInputDisabledClicked"></wxc-searchbar>
+                       @wxcSearchbarDepChooseClicked="wxcSearchbarDepChooseClicked"
+                       @wxcSearchbarInputDisabledClicked="wxcSearchbarInputDisabledClicked"></wxc-searchbar>
       </div>
     </scroller>
   </div>
@@ -96,7 +96,7 @@
   import { WxcSearchbar } from '../../index'
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcSearchbar },
     data: () => ({
       value: '',

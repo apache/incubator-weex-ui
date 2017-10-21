@@ -49,7 +49,7 @@
       </wxc-cell>
       <wxc-cell :has-top-border="false"
                 :has-arrow="true"
-                @wxcCellDivClick="openIntervalLoading"
+                @wxcCellClicked="openIntervalLoading"
                 title="延迟加载"></wxc-cell>
 
       <wxc-cell :has-top-border="false"
@@ -75,7 +75,7 @@
 
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcLoading, WxcCell, WxcPartLoading },
     data () {
       return {

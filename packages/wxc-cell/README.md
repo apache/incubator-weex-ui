@@ -28,21 +28,21 @@ npm install weex-ui --save
       <wxc-cell label="标题"
                 title="阿里旅行飞猪"
                 :has-arrow="true"
-                v-on:wxcCellDivClick="wxcCellDivClick"
+                @wxcCellClicked="wxcCellClicked"
                 :has-margin="true"></wxc-cell>
 
       <wxc-cell label="标题"
                 title="带链接"
                 :has-arrow="true"
                 link="//h5.m.taobao.com/trip/home/index.html"
-                v-on:wxcCellDivClick="wxcCellDivClick"
+                @wxcCellClicked="wxcCellClicked"
                 spm="181.12312312.12312.d01"
                 :has-top-border="false"></wxc-cell>
 
       <wxc-cell label="标题"
                 title="阿里旅行飞猪"
                 :has-arrow="true"
-                v-on:wxcCellDivClick="wxcCellDivClick"
+                @wxcCellClicked="wxcCellClicked"
                 :has-top-border="false"></wxc-cell>
 
     </div>
@@ -50,7 +50,7 @@ npm install weex-ui --save
       <text class="demo-title">不配置label</text>
       <wxc-cell title="阿里旅行飞猪"
                 :has-arrow="true"
-                v-on:wxcCellDivClick="wxcCellDivClick"
+                @wxcCellClicked="wxcCellClicked"
                 :has-top-border="true"></wxc-cell>
     </div>
 
@@ -59,7 +59,7 @@ npm install weex-ui --save
       <wxc-cell title="阿里旅行飞猪"
                 desc="这里是附加信息"
                 :has-arrow="true"
-                v-on:wxcCellDivClick="wxcCellDivClick"
+                @wxcCellClicked="wxcCellClicked"
                 :has-top-border="true"></wxc-cell>
     </div>
 
@@ -67,7 +67,7 @@ npm install weex-ui --save
       <text class="demo-title">不显示箭头</text>
       <wxc-cell title="阿里旅行飞猪"
                 :has-arrow="false"
-                v-on:wxcCellDivClick="wxcCellDivClick"
+                @wxcCellClicked="wxcCellClicked"
                 :has-top-border="true"></wxc-cell>
     </div>
     <div class="demo">
@@ -83,10 +83,10 @@ npm install weex-ui --save
 
 <script>
   import {WxcCell} from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcCell },
     methods: {
-      wxcCellDivClick (e) {
+      wxcCellClicked (e) {
         console.log(e)
       }
     }
@@ -104,6 +104,7 @@ npm install weex-ui --save
 | title | `String` | '' | 标题 |
 | desc | `String` | '' | 描述字段，展示说明信息 |
 | link | `String` | '' |  跳转链接，无链接不跳转 |
+| arrow-icon | `String` | `箭头` |  覆盖右向箭头 |
 | has-arrow | `Bool` | `false` |  是否显示箭头 |
 | has-top-border | `Bool` | `false` |  是否有上边框 |
 | has-bottom-border | `Bool` | `true` |  是否有下边框 |
@@ -120,5 +121,5 @@ npm install weex-ui --save
 
 ### 事件回调
 ```
-//点击事件回调  `v-on:wxcCellDivClick="wxcCellDivClick"`
+//点击事件回调  `@wxcCellClicked="wxcCellClicked"`
 ```

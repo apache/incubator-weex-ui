@@ -5,7 +5,7 @@
   <div>
     <wxc-radio v-for="(item,i) in updateList"
                v-bind="item"
-               v-on:wxcRadioItemChecked="wxcRadioItemChecked(i,$event)"
+               @wxcRadioItemChecked="wxcRadioItemChecked(i,$event)"
                :key="i"></wxc-radio>
   </div>
 </template>

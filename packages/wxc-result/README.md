@@ -23,12 +23,12 @@ npm install weex-ui --save
 <template>
   <wxc-result type="errorPage"
               padding-top="232"
-              v-on:wxcResultButtonClicked="wxcResultButtonClicked"
+              @wxcResultButtonClicked="wxcResultButtonClicked"
               :show="show"></wxc-result>
 </template>
 <script>
   import { WxcResult } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcResult },
     data () {
       return {
@@ -70,5 +70,5 @@ this.customSet={errorPage: { button: null, desc: '可以减少筛选内容试试
 ### 事件回调
 
 ```
-//.vue版本的事件回调请参考demo中的`v-on:wxcResultButtonClicked="wxcResultButtonClicked"`写法
+//.vue版本的事件回调请参考demo中的`@wxcResultButtonClicked="wxcResultButtonClicked"`写法
 ```

@@ -70,7 +70,7 @@
 </style>
 
 <script>
-  module.exports = {
+  export default {
     props: {
       tagValue: {
         type: [String, Number],

@@ -8,27 +8,26 @@
       <category title="列表list展示"></category>
       <div class="demo">
         <wxc-cell label="标题"
-                  title="阿里旅行飞猪"
-                  v-on:wxcCellDivClick="wxcCellDivClick"
+                  title="Weex Ui"
+                  @wxcCellClicked="wxcCellClicked"
                   :has-margin="false"></wxc-cell>
 
         <wxc-cell label="标题"
                   title="带链接"
                   :has-arrow="true"
                   :link="link"
-                  v-on:wxcCellDivClick="wxcCellDivClick"
-                  spm="181.12312312.12312.d01"
+                  @wxcCellClicked="wxcCellClicked"
                   :has-top-border="false"></wxc-cell>
 
         <wxc-cell label="标题"
-                  title="阿里旅行飞猪"
+                  title="Weex Ui"
                   :has-arrow="true"
-                  v-on:wxcCellDivClick="wxcCellDivClick"
+                  @wxcCellClicked="wxcCellClicked"
                   :has-top-border="false"></wxc-cell>
 
-        <wxc-cell title="阿里旅行飞猪"
+        <wxc-cell title="Weex Ui"
                   :has-arrow="true"
-                  v-on:wxcCellDivClick="wxcCellDivClick"
+                  @wxcCellClicked="wxcCellClicked"
                   :has-top-border="false"></wxc-cell>
       </div>
       <category title="高级使用" class="category"></category>
@@ -36,7 +35,7 @@
         <wxc-cell title="阿里旅行飞猪"
                   desc="这里是附加信息"
                   :has-arrow="true"
-                  v-on:wxcCellDivClick="wxcCellDivClick"
+                  @wxcCellClicked="wxcCellClicked"
                   :has-top-border="true"></wxc-cell>
       </div>
 
@@ -120,7 +119,7 @@
   import Category from '../_mods/category.vue';
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { WxcCell, Title, Category },
     created () {
       setTitle('Cell')
@@ -130,12 +129,12 @@
       cellStyle: {
         backgroundColor: '#f2f3f4'
       },
-      link: 'https://h5.m.taobao.com/trip/wx-travel-home/home/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-travel-home%2Fhome%2Findex.weex.js'
+      link: 'https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js'
     }),
     methods: {
-      wxcCellDivClick (e) {
+      wxcCellClicked (e) {
         modal.toast({
-          'message': 'wxcCellDivClick',
+          'message': 'wxcCellClicked',
           'duration': 1
         })
       }

@@ -25,7 +25,7 @@ const tag4 = {
   img: '//gtms04.alicdn.com/tfs/TB1ZfodRVXXXXciXFXXXXXXXXXX-92-24.png'
 };
 
-module.exports = {
+export default {
   tag1,
   tag2,
   tag3,

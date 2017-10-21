@@ -4,7 +4,7 @@
 <template>
   <wxc-cell :has-top-border="hasTopBorder"
             :cell-style="{backgroundColor:backgroundColor}"
-            v-on:wxcCellDivClick="wxcCellDivClick">
+            @wxcCellClicked="wxcCellClicked">
     <text :style="{color:color}"
           class="title-text"
           slot="title">{{title}}</text>
@@ -28,7 +28,8 @@
 
 <script>
   import WxcCell from '../wxc-cell';
-  import { CHECKED, UNCHECKED } from './icon.base64.js'
+  import { CHECKED, UNCHECKED } from './type.js'
+
   export default {
     components: { WxcCell },
     props: {
@@ -71,7 +72,7 @@
       }
     },
     methods: {
-      wxcCellDivClick () {
+      wxcCellClicked () {
         const { disabled, value } = this;
         if (!disabled) {
           this.$emit('wxcRadioItemChecked', { value, disabled })

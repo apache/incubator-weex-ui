@@ -23,7 +23,7 @@
                 :has-animation="hasAnimation"
                 :has-overlay="hasOverlay"
                 :show-close="showClose"
-                v-on:wxcMaskSetHidden="wxcMaskSetHidden"
+                @wxcMaskSetHidden="wxcMaskSetHidden"
                 :show="show">
         <div class="content">
           <div class="demo-title">
@@ -112,7 +112,7 @@
 
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcMask },
     data: () => ({
       show: false,

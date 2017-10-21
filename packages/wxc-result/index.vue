@@ -11,8 +11,9 @@
              :src="resultType.pic"></image>
       <div class="result-content"
            v-if="resultType.content">
-        <text class="content-text">{{resultType.content}}</text> <text class="content-text content-desc"
-                                                                       v-if="resultType.desc">{{resultType.desc}}</text>
+        <text class="content-text">{{resultType.content}}</text>
+        <text class="content-text content-desc"
+              v-if="resultType.desc">{{resultType.desc}}</text>
       </div>
       <div class="result-button"
            v-if="resultType.button"
@@ -82,8 +83,8 @@
 </style>
 
 <script>
-  const TYPES = require('./type');
-  module.exports = {
+  import * as TYPES from './type'
+  export default {
     props: {
       type: {
         type: String,

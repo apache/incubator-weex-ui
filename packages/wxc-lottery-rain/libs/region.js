@@ -3,7 +3,7 @@
  * 红包雨区域检测类
  */
 
-const Util = require('./util');
+import * as Utils from './utils';
 
 const Region = {
   regions: [],
@@ -30,7 +30,7 @@ const Region = {
     }
     let i = 1000;
     const viewWidth = 750;
-    const viewHeight = Util.getPageHeight();
+    const viewHeight = Utils.getPageHeight();
     let wrapWidth = viewWidth - width;
     let wrapHeight = viewHeight - height - 140;
     wrapHeight = wrapHeight < 0 ? 0 : wrapHeight;
@@ -70,4 +70,4 @@ const Region = {
     }
   }
 }
-module.exports = Region;
+export default Region;

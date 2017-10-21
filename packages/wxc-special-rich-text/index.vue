@@ -68,12 +68,17 @@
 </style>
 
 <script>
-  const Utils = require('../wxc-rich-text/utils');
-  module.exports = {
+  import Utils from '../wxc-rich-text/utils';
+
+  import WxcRichTextText from '../wxc-rich-text/wxc-rich-text-text.vue';
+  import WxcRichTextIcon from '../wxc-rich-text/wxc-rich-text-icon.vue';
+  import WxcRichTextTag from '../wxc-rich-text/wxc-rich-text-tag.vue'
+
+  export default {
     components: {
-      WxcRichTextText: require('../wxc-rich-text/wxc-rich-text-text.vue'),
-      WxcRichTextIcon: require('../wxc-rich-text/wxc-rich-text-icon.vue'),
-      WxcRichTextTag: require('../wxc-rich-text/wxc-rich-text-tag.vue')
+      WxcRichTextText,
+      WxcRichTextIcon,
+      WxcRichTextTag
     },
     props: {
       configList: {

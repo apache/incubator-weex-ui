@@ -13,7 +13,7 @@
                resize="contain"
                quality="original"></image>
         <text v-if="showText"
-              class="loading-text">{{hackText}} </text>
+              class="loading-text">{{hackText}}</text>
       </div>
     </div>
   </div>
@@ -58,11 +58,11 @@
 </style>
 
 <script>
-  import { PNG, GIF, BLACK_GIF } from './icon.base64';
-  const Util = require('./util');
+  import { PNG, GIF, BLACK_GIF } from './type';
+  import * as Utils from './utils';
   const appVersion = weex.config.env.appVersion || '0';
-  const needShowPng = Util.compareVersion('8.2.4', appVersion) && Util.isTrip() && Util.isAndroid();
-  module.exports = {
+  const needShowPng = Utils.compareVersion('8.2.4', appVersion) && Utils.isTrip() && Utils.isAndroid();
+  export default {
     props: {
       show: {
         type: Boolean,
@@ -110,7 +110,7 @@
         return loading;
       },
       topPosition () {
-        return (Util.getPageHeight() - 200) / 2;
+        return (Utils.getPageHeight() - 200) / 2;
       },
       needShow () {
         this.setShow();

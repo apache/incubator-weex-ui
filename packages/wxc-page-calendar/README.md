@@ -43,14 +43,14 @@ npm i weex-ui --save
                        :is-range="isRange"
                        :minibar-cfg="minibarCfg"
                        :desc-list="descList"
-                       v-on:wxcPageCalendarBackClicked="wxcPageCalendarBackClicked"
-                       v-on:wxcPageCalendarDateSelected="wxcPageCalendarDateSelected"
+                       @wxcPageCalendarBackClicked="wxcPageCalendarBackClicked"
+                       @wxcPageCalendarDateSelected="wxcPageCalendarDateSelected"
                        ref="wxcPageCalendar"></wxc-page-calendar>
   </div>
 </template>
 <script>
   import { wxcPageCalendar } from 'weex-ui';
-  module.exports = {
+  export default {
     components: {
       wxcPageCalendar
     },
@@ -120,10 +120,10 @@ npm i weex-ui --save
 
 ```
 // 日期选择
- v-on:wxcPageCalendarDateSelected="calendarDateSelect"  
+@wxcPageCalendarDateSelected="calendarDateSelect"  
 // 返回按钮点击
-v-on:wxcPageCalendarBackClicked="wxcPageCalendarBackClicked"  
+@wxcPageCalendarBackClicked="wxcPageCalendarBackClicked"  
 // 隐藏日历事件
-v-on:wxcPageCalendarHide="wxcPageCalendarHide"
+@wxcPageCalendarHide="wxcPageCalendarHide"
 ```
 

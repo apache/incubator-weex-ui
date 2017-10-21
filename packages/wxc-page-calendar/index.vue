@@ -8,7 +8,7 @@
     <wxc-minibar :show="showHeader"
                  v-bind="minibarCfg"
                  :use-default-return="useDefaultReturn"
-                 v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"></wxc-minibar>
+                 @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"></wxc-minibar>
 
     <div class="calendar-weekday"
          v-if="isShow">
@@ -47,12 +47,12 @@
 </template>
 
 <script>
-  import * as Util from './util';
-  const animation = weex.requireModule('animation');
+  import * as Utils from './utils';
   const dom = weex.requireModule('dom');
+  const animation = weex.requireModule('animation');
 
   import WxcMinibar from '../wxc-minibar'
-  module.exports = {
+  export default {
     components: { WxcMinibar },
     props: {
       selectedDate: Array,
@@ -90,8 +90,8 @@
       isShow: false,
       reSelect: true,
       useDefaultReturn: false,
-      showHeader: Util.isWeb(),
-      today: Util.getToDay(),
+      showHeader: Utils.isWeb(),
+      today: Utils.getToDay(),
       calendarHeight: 1040,
       pageHeight: 1334,
       departDate: '',
@@ -101,7 +101,7 @@
       monthsArray () {
         const { dateRange: range, today, departDate, arriveDate, selectedNote, descList } = this;
         const param = { range, today, departDate, arriveDate, selectedNote, descList }
-        return Util.generateDateCell(param);
+        return Utils.generateDateCell(param);
       }
     },
     created () {

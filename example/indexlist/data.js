@@ -1,4 +1,4 @@
-module.exports = {
+export const dataList = {
   hotList: [
     { name: '北京', pinYin: 'beijing', py: 'bj', desc: 'BJS' },
     { name: '上海', pinYin: 'shanghai', py: 'sh', desc: 'BJS' },

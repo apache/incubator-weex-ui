@@ -1,12 +1,6 @@
 
-const UrlParser = require('url-parse');
+import UrlParser from 'url-parse';
 
-/**
- * 工具方法库
- * @namespace Utils
- * @example
- *
- */
 const Utils = {
   UrlParser: UrlParser,
   isNonEmptyArray(obj = []) {
@@ -209,4 +203,4 @@ const Utils = {
   }
 };
 
-module.exports = Utils;
+export  default  Utils;

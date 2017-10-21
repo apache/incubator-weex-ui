@@ -29,7 +29,7 @@
 
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { WxcResult },
     data: () => ({
       show: true,

@@ -1,8 +1,6 @@
 /**
  * 工具方法库
  * @namespace Utils
- * @example
- *
  */
 const Utils = {
 
@@ -172,4 +170,4 @@ const Utils = {
   }
 };
 
-module.exports = Utils;
+export default Utils;

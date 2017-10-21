@@ -19,9 +19,9 @@
 </style>
 
 <script>
-  const Ani = require('./libs/animate.js');
-  const Region = require('./libs/region.js');
-  const CFG = require('./libs/config');
+  import * as Ani from './libs/animate.js';
+  import * as  CFG from './libs/config.js';
+  import Region from './libs/region.js';
 
   export default {
     props: {

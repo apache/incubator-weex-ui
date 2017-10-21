@@ -37,7 +37,7 @@
 </style>
 
 <script>
-  module.exports = {
+  export default {
     props: {
       textValue: {
         type: String,

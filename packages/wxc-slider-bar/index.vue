@@ -43,11 +43,10 @@
 </template>
 
 <script>
-  const Utils = require('./utils');
   const EB = weex.requireModule('expressionBinding');
   const animation = weex.requireModule('animation');
   const dom = weex.requireModule('dom');
-
+  import Utils from './utils';
   export default {
     data: () => ({
       env: 'weex',

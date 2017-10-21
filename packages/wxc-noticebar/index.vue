@@ -3,22 +3,20 @@
 <!--A notice bar.-->
 
 <template>
-  <div>
-    <div class="wxc-noticebar"
-         v-if="show"
-         @click="noticeBarClicked">
-      <image class="type-icon"
-             v-if="typeIcon"
-             :src="typeIcon"></image>
-      <text class="noticebar-content"
-            :style="{ width: contentWidth + 'px',lines:lines}">{{notice}}</text>
-      <div class="more-click-content"
-           @click="noticeIconClicked"
-           v-if="modeIcon"
-           :mode="mode">
-        <image class="mode-icon"
-               :src="modeIcon"></image>
-      </div>
+  <div class="wxc-noticebar"
+       v-if="show"
+       @click="noticeBarClicked">
+    <image class="type-ICON"
+           v-if="typeIcon"
+           :src="typeIcon"></image>
+    <text class="noticebar-content"
+          :style="{ width: contentWidth + 'px',lines:lines}">{{notice}}</text>
+    <div class="more-click-content"
+         @click="noticeIconClicked"
+         v-if="modeIcon"
+         :mode="mode">
+      <image class="mode-ICON"
+             :src="modeIcon"></image>
     </div>
   </div>
 </template>
@@ -53,18 +51,18 @@
     justify-content: center;
   }
 
-  .mode-icon,
-  .type-icon {
+  .mode-ICON,
+  .type-ICON {
     width: 32px;
     height: 32px;
   }
 </style>
 
 <script>
-  const icon = require('./icon.base64.js');
-  const Utils = require('./utils');
+  import ICON from './type';
+  import Utils from './utils';
 
-  module.exports = {
+  export default {
     props: {
       notice: {
         type: String,
@@ -99,10 +97,10 @@
         let modeIcon;
         switch (this.mode) {
           case 'link':
-            modeIcon = icon.linkIcon;
+            modeIcon = ICON.linkIcon;
             break;
           case 'closable':
-            modeIcon = icon.closeIcon;
+            modeIcon = ICON.closeIcon;
             break;
           default:
             modeIcon = '';
@@ -113,25 +111,25 @@
         let typeIcon;
         switch (this.type) {
           case 'success':
-            typeIcon = icon.successIcon;
+            typeIcon = ICON.successIcon;
             break;
           case 'error':
-            typeIcon = icon.errorIcon;
+            typeIcon = ICON.errorIcon;
             break;
           case 'info':
-            typeIcon = icon.infoIcon;
+            typeIcon = ICON.infoIcon;
             break;
           case 'question':
-            typeIcon = icon.questionIcon;
+            typeIcon = ICON.questionIcon;
             break;
           case 'warn':
-            typeIcon = icon.warnIcon;
+            typeIcon = ICON.warnIcon;
             break;
           case 'time':
-            typeIcon = icon.timeIcon;
+            typeIcon = ICON.timeIcon;
             break;
           case 'redbag':
-            typeIcon = icon.redbag;
+            typeIcon = ICON.redbag;
             break;
           default:
             typeIcon = '';

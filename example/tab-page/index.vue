@@ -8,7 +8,7 @@
                 :is-tab-view="isTabView"
                 :tab-page-height="tabPageHeight"
                 :spm-c="4307989"
-                v-on:wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
+                @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
     <list v-for="(v,index) in tabList"
           :key="index"
           class="item-container"
@@ -31,7 +31,7 @@
                   :ext-id="'1-' + (demo) + '-' + (key)"
                   :ext-index="key"
                   :ext-total="demoList.length"
-                  v-on:wxcItemGoodPan="wxcItemGoodPan"></wxc-item>
+                  @wxcItemGoodPan="wxcItemGoodPan"></wxc-item>
       </cell>
     </list>
   </wxc-tab-page>
@@ -67,15 +67,15 @@
   import { WxcTabPage } from '../../index';
   import WxcItem from './wxc-item.vue';
 
-  const config = require('./config');
-  const Utils = require('./utils');
+  import Utils from './utils';
+  import Config from './config'
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { WxcTabPage, WxcItem },
     data: () => ({
-      tabTitles: config.tabTitles,
-      tabStyles: config.tabStyles,
+      tabTitles: Config.tabTitles,
+      tabStyles: Config.tabStyles,
       tabList: [],
       needSlider: true,
       demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],

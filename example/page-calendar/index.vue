@@ -28,8 +28,8 @@
                          :needDestroy="false"
                          :minibar-cfg="minibarCfg"
                          :desc-list="descList"
-                         v-on:wxcPageCalendarBackClicked="wxcPageCalendarBackClicked"
-                         v-on:wxcPageCalendarDateSelected="wxcPageCalendarDateSelected"
+                         @wxcPageCalendarBackClicked="wxcPageCalendarBackClicked"
+                         @wxcPageCalendarDateSelected="wxcPageCalendarDateSelected"
                          ref="wxcPageCalendar"></wxc-page-calendar>
     </scroller>
   </div>
@@ -99,7 +99,7 @@
 
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcPageCalendar },
     data: () => ({
       currentDate: '',

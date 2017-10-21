@@ -34,12 +34,12 @@
       <wxc-popup :show="isTopShow"
                  pos="top"
                  :animation="{timingFunction:'ease-out'}"
-                 v-on:wxcPopupOverlayClicked="popupOverlayTopClick"></wxc-popup>
+                 @wxcPopupOverlayClicked="popupOverlayTopClick"></wxc-popup>
 
       <wxc-popup :have-overlay="isTrue"
                  popup-color="rgb(92, 184, 92)"
                  :show="isBottomShow"
-                 v-on:wxcPopupOverlayClicked="popupOverlayBottomClick"
+                 @wxcPopupOverlayClicked="popupOverlayBottomClick"
                  pos="bottom"
                  height="400">
         <div class="demo-content">
@@ -51,14 +51,14 @@
 
       <wxc-popup width="500"
                  :show="isLeftShow"
-                 v-on:wxcPopupOverlayClicked="popupOverlayLeftClick"
+                 @wxcPopupOverlayClicked="popupOverlayLeftClick"
                  pos="left"></wxc-popup>
 
       <wxc-popup width="400"
                  :show="isRightShow"
                  pos="right"
                  ref="wxcPopup"
-                 v-on:wxcPopupOverlayClicked="popupOverlayRightClick">
+                 @wxcPopupOverlayClicked="popupOverlayRightClick">
         <div @click="onHideClick"
              class="btn blue hide-auto">
           <text class="btn-txt">主动隐藏试试</text>
@@ -69,7 +69,7 @@
       <wxc-popup :height="height"
                  :show="isAutoShow"
                  pos="bottom"
-                 v-on:wxcPopupOverlayClicked="popupOverlayAutoClick"></wxc-popup>
+                 @wxcPopupOverlayClicked="popupOverlayAutoClick"></wxc-popup>
     </scroller>
   </div>
 </template>
@@ -157,7 +157,7 @@
   import Category from '../_mods/category.vue';
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcPopup },
     data: () => ({
       isBottomShow: false,

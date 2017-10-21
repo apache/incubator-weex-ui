@@ -2,8 +2,7 @@
 
 > 顶部导航栏
 
-- 规则
-  - 建议优先使用native自带的navigator
+- 规则: 建议优先使用native自带的navigator
      
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-minibar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-minibar%2Fdemo%2Findex.native-min.js)
@@ -25,8 +24,8 @@ npm install weex-ui --save
       <wxc-minibar title="阿里旅行购物车"
                    background-color="#009ff0"
                    text-color="#FFFFFF"
-                   v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
-                   v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"
+                   @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
+                   @wxcMinibarRightButtonClicked="minibarRightButtonClick"
                    right-text="更多"></wxc-minibar>
     </div>
   </div>
@@ -37,7 +36,7 @@ npm install weex-ui --save
   import { WxcMinibar } from 'weex-ui';
   const modal = weex.requireModule('modal');
 
-  module.exports = {
+  export default {
     components: { WxcMinibar },
     methods: {
       minibarLeftButtonClick () {
@@ -49,6 +48,7 @@ npm install weex-ui --save
   };
 </script>
 ```
+
 更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/minibar/index.vue)
 
 
@@ -69,7 +69,7 @@ npm install weex-ui --save
 ### 事件回调
 
 ```
-左侧按钮点击：`v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"`
-右侧点击：`v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"`
+左侧按钮点击：`@wxcMinibarLeftButtonClicked="minibarLeftButtonClick"`
+右侧点击：`@wxcMinibarRightButtonClicked="minibarRightButtonClick"`
 ```
 

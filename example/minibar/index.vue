@@ -12,29 +12,29 @@
         </div>
 
         <div class="demo">
-          <wxc-minibar v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
-                       v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"></wxc-minibar>
+          <wxc-minibar @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
+                       @wxcMinibarRightButtonClicked="minibarRightButtonClick"></wxc-minibar>
         </div>
 
         <div class="demo">
           <wxc-minibar title="阿里旅行购物车"
                        right-text="更多"
-                       v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
-                       v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"></wxc-minibar>
+                       @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
+                       @wxcMinibarRightButtonClicked="minibarRightButtonClick"></wxc-minibar>
         </div>
         <div class="demo">
           <wxc-minibar title="阿里旅行购物车"
                        background-color="#009ff0"
                        text-color="#FFFFFF"
                        :left-button="leftButton"
-                       v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
-                       v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"
+                       @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
+                       @wxcMinibarRightButtonClicked="minibarRightButtonClick"
                        right-text="更多"></wxc-minibar>
         </div>
         <div class="demo">
           <wxc-minibar title="阿里旅行购物车"
-                       v-on:wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
-                       v-on:wxcMinibarRightButtonClicked="minibarRightButtonClick"
+                       @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
+                       @wxcMinibarRightButtonClicked="minibarRightButtonClick"
                        :right-button="rightButton"></wxc-minibar>
         </div>
       </div>
@@ -70,14 +70,14 @@
   import { WxcMinibar } from '../../index';
 
   const modal = weex.requireModule('modal');
-  const icon = require('./icon.base64.js');
   import { setTitle } from '../_mods/set-nav';
+  import { CART_ICON, RETURN_ICON } from './type';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcMinibar },
     data: () => ({
-      rightButton: icon.cartIcon,
-      leftButton: icon.returnIcon
+      rightButton: CART_ICON,
+      leftButton: RETURN_ICON
     }),
     created () {
       setTitle('Minibar')

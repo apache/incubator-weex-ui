@@ -6,14 +6,14 @@
       class="list"
       :style="customStyle"
       @scroll="onScroll"
-      v-on:touchstart="onTouchStart"
-      v-on:touchmove="onTouchMove"
-      v-on:touchend="onTouchEnd"
-      v-on:touchcancel="onTouchEnd"
-      v-on:touchstart.native="onTouchStart"
-      v-on:touchmove.native="onTouchMove"
-      v-on:touchend.native="onTouchEnd"
-      v-on:touchcancel.native="onTouchEnd"
+      @touchstart="onTouchStart"
+      @touchmove="onTouchMove"
+      @touchend="onTouchEnd"
+      @touchcancel="onTouchEnd"
+      @touchstart.native="onTouchStart"
+      @touchmove.native="onTouchMove"
+      @touchend.native="onTouchEnd"
+      @touchcancel.native="onTouchEnd"
     >
       <cell>
         <div class="padding"></div>

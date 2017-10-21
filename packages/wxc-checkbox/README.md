@@ -30,7 +30,7 @@ npm i weex-ui --save
                     :checked="true"></wxc-checkbox>
       <div class="margin">
         <wxc-checkbox-list :list="list"
-                           v-on:wxcCheckBoxListChecked="wxcCheckBoxListChecked"></wxc-checkbox-list>
+                           @wxcCheckBoxListChecked="wxcCheckBoxListChecked"></wxc-checkbox-list>
         <text class="checked-text">选中项 {{checkedList.toString()}}</text>
       </div>
     </scroller>
@@ -74,7 +74,7 @@ npm i weex-ui --save
 
 ### 事件回调
 ```
-//点击事件回调  `v-on:wxcCheckBoxItemChecked="wxcCheckBoxItemChecked"`
+//点击事件回调  `@wxcCheckBoxItemChecked="wxcCheckBoxItemChecked"`
 将会返回e.value、e.checked
 ```
 
@@ -95,6 +95,6 @@ const list=[
 
 ### 事件回调
 ```
-//点击事件回调  `v-on:wxcCheckBoxListChecked="wxcCheckBoxListChecked"`
+//点击事件回调  `@wxcCheckBoxListChecked="wxcCheckBoxListChecked"`
 将会返回已经选中的e.checkedList
 ```

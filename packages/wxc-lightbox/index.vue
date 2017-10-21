@@ -2,29 +2,27 @@
 <!-- Created by Tw93 on 17/07/28. -->
 
 <template>
-  <div>
-    <wxc-mask :width="width"
-              :height="height"
-              mask-bg-color="transparent"
-              overlay-opacity="0.8"
-              v-on:wxcMaskSetHidden="maskOverlayClick"
-              :show="show"
-              :show-close="showClose">
-      <slider auto-play="false"
-              v-if="show"
-              :style="{ height: height  + 'px'}">
-        <div v-for="(v,index) in imageList"
-             :style="{ height: height  + 'px'}"
-             :key="index">
-          <image resize="cover"
-                 :src="v.src"
-                 :style="{ height: height + 'px', width: width  + 'px'}"></image>
-        </div>
-        <indicator class="indicator"
-                   :style="indicatorStyle"></indicator>
-      </slider>
-    </wxc-mask>
-  </div>
+  <wxc-mask :width="width"
+            :height="height"
+            mask-bg-color="transparent"
+            overlay-opacity="0.8"
+            :show="show"
+            :show-close="false"
+            @wxcMaskSetHidden="maskOverlayClick">
+    <slider auto-play="false"
+            v-if="show"
+            :style="{ height: height  + 'px'}">
+      <div v-for="(v,index) in imageList"
+           :style="{ height: height  + 'px'}"
+           :key="index">
+        <image resize="cover"
+               :src="v.src"
+               :style="{ height: height + 'px', width: width  + 'px'}"></image>
+      </div>
+      <indicator class="indicator"
+                 :style="indicatorStyle"></indicator>
+    </slider>
+  </wxc-mask>
 </template>
 
 <style scoped>
@@ -40,7 +38,8 @@
 
 <script>
   import WxcMask from '../wxc-mask';
-  module.exports = {
+
+  export default {
     components: {
       WxcMask
     },
@@ -75,9 +74,6 @@
         }
       }
     },
-    data: () => ({
-      showClose: false
-    }),
     methods: {
       maskOverlayClick () {
         this.$emit('wxcLightboxOverlayClicked', {});

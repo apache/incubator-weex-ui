@@ -15,7 +15,7 @@
       <div class="margin">
         <category title="CheckboxList"></category>
         <wxc-checkbox-list :list="list"
-                           v-on:wxcCheckBoxListChecked="wxcCheckBoxListChecked"></wxc-checkbox-list>
+                           @wxcCheckBoxListChecked="wxcCheckBoxListChecked"></wxc-checkbox-list>
         <text class="checked-text">选中项 {{checkedList.toString()}}</text>
       </div>
     </scroller>

@@ -97,9 +97,8 @@
 </style>
 
 <script>
-  const icon = require('./icon.base64.js');
-  const Utils = require('./utils');
-  module.exports = {
+  import Utils from './utils';
+  export default {
     props: {
       label: {
         type: String,
@@ -133,6 +132,10 @@
         type: Boolean,
         default: false
       },
+      arrowIcon:{
+        type:String,
+        default:'//gw.alicdn.com/tfs/TB11zBUpwMPMeJjy1XbXXcwxVXa-22-22.png'
+      },
       hasVerticalIndent: {
         type: Boolean,
         default: true
@@ -142,13 +145,10 @@
         default: () => ({})
       }
     },
-    data: () => ({
-      arrowIcon: icon.arrowIcon
-    }),
     methods: {
       cellClicked (e) {
         const link = this.link;
-        this.$emit('wxcCellDivClick', { e });
+        this.$emit('wxcCellClicked', { e });
         link && Utils.goToH5Page(link, true);
       }
     }

@@ -1,7 +1,8 @@
 /**
  * Created by Tw93 on 2017/6/26.
  */
-const UrlParser = require('url-parse');
+
+import UrlParser from 'url-parse';
 const Utils = {
   UrlParser: UrlParser,
   appendProtocol (url) {
@@ -27,4 +28,4 @@ const Utils = {
     }, callback);
   }
 }
-module.exports = Utils;
+export default Utils;

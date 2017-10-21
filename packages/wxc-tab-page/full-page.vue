@@ -93,11 +93,11 @@
   const swipeBack = weex.requireModule('swipeBack');
   const expressionBinding = weex.requireModule('expressionBinding');
 
-  const Utils = require('./utils');
+  import Utils from './utils';
   const supportsEBForIos = Utils.env.supportsEBForIos();
   const isIos = Utils.env.isIOS();
 
-  module.exports = {
+  export default {
     props: {
       tabTitles: {
         type: Array,

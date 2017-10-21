@@ -27,7 +27,7 @@ npm i weex-ui --save
     </div>
     <wxc-popup popup-color="rgb(92, 184, 92)"
                :show="isBottomShow"
-               v-on:wxcPopupOverlayClicked="popupOverlayBottomClick"
+               @wxcPopupOverlayClicked="popupOverlayBottomClick"
                pos="bottom"
                height="400">
       <div class="demo-content">
@@ -41,7 +41,7 @@ npm i weex-ui --save
 
 <script>
   import { WxcPopup } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcPopup },
     data: () => ({
       isBottomShow: false,
@@ -78,7 +78,7 @@ npm i weex-ui --save
 ### 事件回调
 
 ```
-// 具体使用请参考demo，需要在`v-on:wxcPopupOverlayClicked`中设置面板关闭。
+// 具体使用请参考demo，需要在`@wxcPopupOverlayClicked`中设置面板关闭。
 ```
 
 ### 调用关闭

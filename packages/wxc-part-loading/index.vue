@@ -14,8 +14,8 @@
 </template>
 
 <script>
-  import { PART } from '../wxc-loading/icon.base64';
-  module.exports = {
+  import { PART } from '../wxc-loading/type';
+  export default {
     props: {
       show: {
         type: Boolean,

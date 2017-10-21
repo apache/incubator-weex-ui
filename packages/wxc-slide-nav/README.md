@@ -20,15 +20,15 @@ npm i weex-ui --save
   <div class="wrapper">
       <list
         ref="scroller"
-        v-on:scroll="onScroll"
-        v-on:touchstart="onTouchStart"
-        v-on:touchmove="onTouchMove"
-        v-on:touchend="onTouchEnd"
-        v-on:touchcancel="onTouchEnd"
-        v-on:touchstart.native="onTouchStart"
-        v-on:touchmove.native="onTouchMove"
-        v-on:touchend.native="onTouchEnd"
-        v-on:touchcancel.native="onTouchEnd"
+        @scroll="onScroll"
+        @touchstart="onTouchStart"
+        @touchmove="onTouchMove"
+        @touchend="onTouchEnd"
+        @touchcancel="onTouchEnd"
+        @touchstart.native="onTouchStart"
+        @touchmove.native="onTouchMove"
+        @touchend.native="onTouchEnd"
+        @touchcancel.native="onTouchEnd"
       >
         <cell>
           <div class="padding"></div>
@@ -79,17 +79,17 @@ npm i weex-ui --save
 ```
 <list
   ref="scroller"
-  v-on:scroll="onScroll"
+  @scroll="onScroll"
   <!-- 针对Native -->
-  v-on:touchstart="onTouchStart"
-  v-on:touchmove="onTouchMove"
-  v-on:touchend="onTouchEnd"
-  v-on:touchcancel="onTouchEnd"
+  @touchstart="onTouchStart"
+  @touchmove="onTouchMove"
+  @touchend="onTouchEnd"
+  @touchcancel="onTouchEnd"
   <!-- 针对H5 -->
-  v-on:touchstart.native="onTouchStart"
-  v-on:touchmove.native="onTouchMove"
-  v-on:touchend.native="onTouchEnd"
-  v-on:touchcancel.native="onTouchEnd"
+  @touchstart.native="onTouchStart"
+  @touchmove.native="onTouchMove"
+  @touchend.native="onTouchEnd"
+  @touchcancel.native="onTouchEnd"
 >
   <cell>
     <div class="padding"></div>

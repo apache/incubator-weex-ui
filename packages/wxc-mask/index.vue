@@ -6,8 +6,8 @@
     <wxc-overlay :show="show && hasOverlay"
                  v-if="show"
                  v-bind="mergeOverlayCfg"
-                 v-on:wxcOverlayBodyClicking="wxcOverlayBodyClicking"
-                 v-on:wxcOverlayBodyClicked="wxcOverlayBodyClicked"></wxc-overlay>
+                 @wxcOverlayBodyClicking="wxcOverlayBodyClicking"
+                 @wxcOverlayBodyClicked="wxcOverlayBodyClicked"></wxc-overlay>
     <div ref="wxc-mask"
          class="wxc-mask"
          v-if="show"
@@ -59,9 +59,9 @@
 
 <script>
   const animation = weex.requireModule('animation');
-  const icon = require('./icon.base64.js');
   import WxcOverlay from '../wxc-overlay';
-  module.exports = {
+
+  export default {
     components: { WxcOverlay },
     props: {
       height: {
@@ -119,7 +119,7 @@
       }
     },
     data: () => ({
-      closeIcon: icon.closeIcon,
+      closeIcon: '//gw.alicdn.com/tfs/TB1qDJUpwMPMeJjy1XdXXasrXXa-64-64.png',
       maskTop: 264,
       opacity: 0
     }),

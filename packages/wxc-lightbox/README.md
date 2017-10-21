@@ -29,7 +29,7 @@ npm install weex-ui --save
       ref="wxc-lightbox"
       height="800"
       :image-list="imageList"
-      v-on:wxcLightboxOverlayClicked="wxcLightboxOverlayClicked"
+      @wxcLightboxOverlayClicked="wxcLightboxOverlayClicked"
       :show="show">
     </wxc-lightbox>
   </div>
@@ -37,7 +37,7 @@ npm install weex-ui --save
 
 <script>
   import { WxcLightbox } from 'weex-ui';
-  module.exports = {
+  export default {
     components: {
       WxcLightbox
     },
@@ -81,6 +81,6 @@ npm install weex-ui --save
 ### 事件回调
 
 ```
-// 点击蒙层关闭预览 `v-on:wxcLightboxOverlayClicked="wxcLightboxOverlayClicked"`
+// 点击蒙层关闭预览 `@wxcLightboxOverlayClicked="wxcLightboxOverlayClicked"`
 ```
 

@@ -3,7 +3,7 @@
 
 <template>
   <wxc-cell :has-top-border="hasTopBorder"
-            v-on:wxcCellDivClick="wxcCellDivClick">
+            @wxcCellClicked="wxcCellClicked">
     <text :style="{color:color}"
           class="title-text"
           slot="title">{{title}}</text>
@@ -25,7 +25,7 @@
 
 <script>
   import WxcCell from '../wxc-cell';
-  import { CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED } from './icon.base64.js'
+  import { CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED } from './type'
   export default {
     components: { WxcCell },
     props: {
@@ -71,7 +71,7 @@
       this.color = checked && !disabled ? '#EE9900' : '#3D3D3D';
     },
     methods: {
-      wxcCellDivClick () {
+      wxcCellClicked () {
         const { disabled, innerChecked, value } = this;
         if (!disabled) {
           this.innerChecked = !innerChecked;

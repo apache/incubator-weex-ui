@@ -31,13 +31,13 @@
         <wxc-noticebar mode="link"
                        notice="一条测试通告,可跳转"
                        type="info"
-                       v-on:wxcNoticebarLinkClicked="wxcNoticebarLinkClicked"
+                       @wxcNoticebarLinkClicked="wxcNoticebarLinkClicked"
                        :notice-url="url"></wxc-noticebar>
       </div>
       <div class="demo">
         <wxc-noticebar mode="closable"
                        notice="一条测试通告,关闭"
-                       v-on:wxcNoticebarCloseClicked="wxcNoticebarCloseClicked"
+                       @wxcNoticebarCloseClicked="wxcNoticebarCloseClicked"
                        type="success"></wxc-noticebar>
       </div>
       <div class="demo">
@@ -89,10 +89,10 @@
 
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcNoticebar },
     data: () => ({
-      url: 'https://h5.m.taobao.com/trip/wx-travel-home/home/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-travel-home%2Fhome%2Findex.weex.js'
+      url: 'https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js'
     }),
     created () {
       setTitle('Noticebar');

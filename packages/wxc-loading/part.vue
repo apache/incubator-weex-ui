@@ -13,8 +13,8 @@
 </template>
 
 <script>
-  import { PART } from './icon.base64';
-  module.exports = {
+  import { PART } from './type';
+  export default {
     props: {
       show: {
         type: Boolean,

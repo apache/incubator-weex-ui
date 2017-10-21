@@ -53,7 +53,7 @@
 </style>
 
 <script>
-  module.exports = {
+  export default {
     props: {
       min: {
         type: [String, Number],

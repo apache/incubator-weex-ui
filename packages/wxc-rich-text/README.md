@@ -24,7 +24,7 @@ npm install weex-ui --save
 <template>
   <div class="container">
     <wxc-rich-text :config-list="configList"
-                   v-on:wxcRichTextLinkClick="wxcRichTextLinkClick"></wxc-rich-text>
+                   @wxcRichTextLinkClick="wxcRichTextLinkClick"></wxc-rich-text>
      <div class="special-rich">
        <wxc-special-rich-text :config-list="specialConfigList"></wxc-special-rich-text>
      </div>
@@ -32,10 +32,10 @@ npm install weex-ui --save
   
 </template>
 <script>
-  const icon = require('./icon.base64.js');
+  import icon from './type.js';
   import { WxcRichText,wxcSpecialRichText } from 'weex-ui';
 
-  module.exports = {
+  export default {
     components: { WxcRichText },
     data: () => ({
       configList: [{
@@ -124,7 +124,7 @@ npm install weex-ui --save
 ### 事件回调
 
 ```
-请参考demo中的` v-on:wxcRichTextLinkClick`，如不需要，可以不使用。
+请参考demo中的` @wxcRichTextLinkClick`，如不需要，可以不使用。
 ```
 
 

@@ -20,7 +20,7 @@ npm install weex-ui --save
   <div class="wxc-demo">
     <scroller class="scroller">
       <wxc-radio :list="list"
-                 v-on:wxcRadioListChecked="wxcRadioListChecked"></wxc-radio>
+                 @wxcRadioListChecked="wxcRadioListChecked"></wxc-radio>
       <text class="radio-text">checkedItem: {{checkedInfo}}</text>
       <category title="Radio不可选"></category>
       <wxc-radio :list="list2"></wxc-radio>
@@ -84,6 +84,6 @@ const list=[
 ### 事件回调
 
 ```
-//点击事件回调  `v-on:wxcRadioListChecked="wxcRadioListChecked"`
+//点击事件回调 `@wxcRadioListChecked="wxcRadioListChecked"`
 将会返回e.value、e.title、e.oldIndex、e.index
 ```

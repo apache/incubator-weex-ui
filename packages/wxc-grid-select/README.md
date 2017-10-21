@@ -141,25 +141,25 @@ npm i weex-ui --save
 `select`
 - 描述: 监听选择事件
 - 参数: 
-```
-{
-  selectIndex:本次选择的index
-  checked:是否选中
-  checkedList:选中列表
-}
-```
+    ```json
+    {
+      selectIndex:本次选择的index
+      checked:是否选中
+      checkedList:选中列表
+    }
+    ```
 - 示例:
-```
-<wxc-grid-select @select="onSelect"></wxc-grid-select>
-```
+    ```vue
+    <wxc-grid-select @select="onSelect"></wxc-grid-select>
+    ```
   
 `overLimit`
 - 描述: 监听选择数量溢出事件
 - 参数: 
-```
-arg1: 限制的选择数量
-```
+    ```
+    arg1: 限制的选择数量
+    ```
 - 示例:
-```
-<wxc-grid-select @overLimit="onOverLimit"></wxc-grid-select>
-```
+    ```
+    <wxc-grid-select @overLimit="onOverLimit"></wxc-grid-select>
+    ```

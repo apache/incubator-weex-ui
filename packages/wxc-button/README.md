@@ -10,7 +10,7 @@
 ## 安装
 
 ```shell
-npm i @ali/wxc-button --save
+npm i weex-ui --save
 ```
 
 ## 使用方法
@@ -25,7 +25,7 @@ npm i @ali/wxc-button --save
 <script>
   import { wxcButton } from 'weex-ui'
   export default {
-    components: { wxcButton},
+    components: { wxcButton },
     methods: {
       wxcButtonClicked (e) {
         console.log(e)
@@ -33,6 +33,7 @@ npm i @ali/wxc-button --save
     }
   }
 </script>
+
 ```
 更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/button/loading/index.vue)
 
@@ -51,6 +52,6 @@ npm i @ali/wxc-button --save
 
 ### 事件回调
 ```
-//点击事件回调  `v-on:wxcButtonClicked="wxcButtonClicked"`
+//点击事件回调  `@wxcButtonClicked="wxcButtonClicked"`
 将会返回 e, type, disabled
 ```

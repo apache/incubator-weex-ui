@@ -16,7 +16,7 @@
         ref="wxc-lightbox"
         height="800"
         :image-list="imageList"
-        v-on:wxcLightboxOverlayClicked="lightboxOverlayClick"
+        @wxcLightboxOverlayClicked="lightboxOverlayClick"
         :show="show">
       </wxc-lightbox>
     </scroller>
@@ -83,7 +83,7 @@
 
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcLightbox },
     data: function () {
       return {

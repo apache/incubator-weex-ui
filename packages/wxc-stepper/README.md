@@ -2,7 +2,7 @@
 
 > 步进器：用作增加或者减少当前数值。
 
-规则：常用于商品数量的小幅度修改。
+- 规则：常用于商品数量的小幅度修改。
 
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-stepper/index.html?_wx_tpl=http%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-stepper%2Fdemo%2Findex.native-min.js)
@@ -29,7 +29,7 @@ npm install weex-ui --save
                    step="2"
                    max="10"
                    min="2"
-                   v-on:stepperValueChange="stepperValueChange"></wxc-stepper>
+                   @stepperValueChange="stepperValueChange"></wxc-stepper>
     </div>
     <div class="demo">
       <text class="text">禁用</text>
@@ -49,7 +49,7 @@ npm install weex-ui --save
 
 <script>
   import { WxcStepper } from 'weex-ui';
-  module.exports = {
+  export default {
     components: { WxcStepper },
     data: () => ({
       value: 4,
@@ -83,7 +83,7 @@ npm install weex-ui --save
 ### 事件回调
 
 ```
-// 可以通过`v-on:wxcStepperValueChanged="wxcStepperValueChanged"`对计数器的值进行获取
+// 可以通过`@wxcStepperValueChanged="wxcStepperValueChanged"`对计数器的值进行获取
 // `wxcStepperValueIsMinOver`超过最小值的回调
 // `wxcStepperValueIsMaxOver` 超过最大值的回调
 ```

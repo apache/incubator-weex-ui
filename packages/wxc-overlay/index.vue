@@ -27,7 +27,7 @@
 
 <script>
   const animation = weex.requireModule('animation');
-  module.exports = {
+  export default {
     props: {
       show: {
         type: Boolean,

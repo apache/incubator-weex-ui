@@ -14,7 +14,7 @@
 <script>
   const Utils = require('./utils');
   import WxcRichTextText from './wxc-rich-text-text.vue'
-  module.exports = {
+  export default {
     components: { WxcRichTextText },
     props: {
       linkValue: {

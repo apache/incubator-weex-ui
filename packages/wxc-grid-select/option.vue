@@ -1,10 +1,9 @@
-<!-- Created by 南麓<haonan.whn@alibaba-inc.com> on 2017/8/10. -->
+<!-- Created by 南麓 on 2017/8/10. -->
 
 <template>
-  <div
-    class="grid-option"
-    :style="cWrapperStyle"
-    @click="onClick">
+  <div class="grid-option"
+       :style="cWrapperStyle"
+       @click="onClick">
     <text v-if="title" class="text-title" :style="cTitleStyle">{{title}}</text>
 
     <image v-if="checked && icon" class="image-checked" :src="icon"></image>

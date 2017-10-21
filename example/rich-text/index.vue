@@ -9,7 +9,7 @@
           <text class="type-text">Weex富文本混排方案：</text>
           <wxc-rich-text class="special-rich"
                          :config-list="configList"
-                         v-on:wxcRichTextLinkClick="wxcRichTextLinkClick"></wxc-rich-text>
+                         @wxcRichTextLinkClick="wxcRichTextLinkClick"></wxc-rich-text>
         </div>
 
         <div class="type-container">
@@ -73,7 +73,7 @@
   import { WxcRichText, WxcSpecialRichText } from '../../index';
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcRichText, WxcSpecialRichText },
     data: () => ({
       configList: [{

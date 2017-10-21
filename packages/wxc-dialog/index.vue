@@ -3,51 +3,44 @@
 <!--A dialog. -->
 
 <template>
-  <div class="container">
-    <mask class="mask"
-          v-if="show"
-          :style="{backgroundColor: maskBgColor,height:pageHeight+'px'}">
-      <div class="dialog-box">
-        <div class="dialog-content">
-          <slot name="title">
-            <text class="content-title">{{title}}</text>
-          </slot>
-          <slot name="content">
-            <text class="content-subtext">{{content}}</text>
-          </slot>
-          <div class="no-prompt"
-               v-if="showNoPrompt"
-               @click="noPromptClicked">
-            <image :src="noPromptIcon"
-                   class="no-prompt-icon"></image>
-            <text class="no-prompt-text">{{noPromptText}}</text>
-          </div>
-        </div>
-        <div class="dialog-footer">
-          <div class="footer-btn cancel"
-               v-if="!single"
-               @click="secondaryClicked">
-            <text class="btn-text"
-                  :style="{ color: secondBtnColor }">{{cancelText}}</text>
-          </div>
-          <div class="footer-btn confirm"
-               @click="primaryClicked">
-            <text class="btn-text"
-                  :style="{ color: mainBtnColor }">{{confirmText}}</text>
-          </div>
+  <mask class="mask"
+        v-if="show"
+        :style="{backgroundColor: maskBgColor,height:pageHeight+'px'}">
+    <div class="dialog-box">
+      <div class="dialog-content">
+        <slot name="title">
+          <text class="content-title">{{title}}</text>
+        </slot>
+        <slot name="content">
+          <text class="content-subtext">{{content}}</text>
+        </slot>
+        <div class="no-prompt"
+             v-if="showNoPrompt"
+             @click="noPromptClicked">
+          <image :src="noPromptIcon"
+                 class="no-prompt-icon"></image>
+          <text class="no-prompt-text">{{noPromptText}}</text>
         </div>
       </div>
-    </mask>
-  </div>
+      <div class="dialog-footer">
+        <div class="footer-btn cancel"
+             v-if="!single"
+             @click="secondaryClicked">
+          <text class="btn-text"
+                :style="{ color: secondBtnColor }">{{cancelText}}</text>
+        </div>
+        <div class="footer-btn confirm"
+             @click="primaryClicked">
+          <text class="btn-text"
+                :style="{ color: mainBtnColor }">{{confirmText}}</text>
+        </div>
+      </div>
+    </div>
+  </mask>
 </template>
 
 <style scoped>
-  .container {
-    width: 750px;
-  }
-
   .mask {
-    top: 0;
     width: 750px;
     height: 1344px;
     justify-content: center;
@@ -130,8 +123,8 @@
 </style>
 
 <script>
-  const icon = require('./icon.base64.js');
-  module.exports = {
+  import { CHECKED, UN_CHECKED } from './type';
+  export default {
     props: {
       show: {
         type: Boolean,
@@ -183,13 +176,12 @@
       }
     },
     data: () => ({
-      noPromptIcon: icon.unChecked,
-      ref: 'viewport',
+      noPromptIcon: UN_CHECKED,
       pageHeight: 1334
     }),
     created () {
-      const { env } = weex.config;
-      this.pageHeight = env.deviceHeight / env.deviceWidth * 750;
+      const { env: { deviceHeight, deviceWidth } } = weex.config;
+      this.pageHeight = deviceHeight / deviceWidth * 750;
     },
     methods: {
       secondaryClicked () {
@@ -204,7 +196,7 @@
       },
       noPromptClicked (e) {
         const isChecked = !this.isChecked;
-        this.noPromptIcon = isChecked ? icon.checked : icon.unChecked;
+        this.noPromptIcon = isChecked ? CHECKED : UN_CHECKED;
         this.$emit('wxcDialogNoPromptClicked', { isChecked });
       }
     }

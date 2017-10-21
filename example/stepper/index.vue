@@ -16,9 +16,9 @@
                      step="2"
                      max="10"
                      min="2"
-                     v-on:wxcStepperValueIsMinOver="wxcStepperValueIsMinOver"
-                     v-on:wxcStepperValueIsMaxOver="wxcStepperValueIsMaxOver"
-                     v-on:wxcStepperValueChanged="wxcStepperValueChanged"></wxc-stepper>
+                     @wxcStepperValueIsMinOver="wxcStepperValueIsMinOver"
+                     @wxcStepperValueIsMaxOver="wxcStepperValueIsMaxOver"
+                     @wxcStepperValueChanged="wxcStepperValueChanged"></wxc-stepper>
       </div>
       <div class="demo">
         <text class="text">禁用</text>
@@ -72,7 +72,7 @@
   const modal = weex.requireModule('modal');
   import { setTitle } from '../_mods/set-nav';
 
-  module.exports = {
+  export default {
     components: { Title, Category, WxcStepper },
     data: () => ({
       value: 4,

@@ -25,13 +25,13 @@ npm i weex-ui --save
     </div>
     <wxc-overlay
       :show="show"
-      v-on:wxcOverlayBodyClicked="wxcOverlayBodyClicked"
+      @wxcOverlayBodyClicked="wxcOverlayBodyClicked"
       opacity="0.6"></wxc-overlay>
   </div>
 </template>
 <script>
   import wxcOverlay from '@ali/wxc-overlay';
-  module.exports = {
+  export default {
     components: { wxcOverlay },
     data: () => ({
       show: false
@@ -67,7 +67,7 @@ npm i weex-ui --save
 ```
  //请参考demo中的具体用法
  //消失后
- `v-on:wxcOverlayBodyClicked="wxcOverlayBodyClicked"`;
+ `@wxcOverlayBodyClicked="wxcOverlayBodyClicked"`;
  //点击立即
- `v-on:wxcOverlayBodyClicking="wxcOverlayBodyClicking"`;
+ `@wxcOverlayBodyClicking="wxcOverlayBodyClicking"`;
 ```
