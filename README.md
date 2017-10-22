@@ -115,7 +115,8 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 ```
 
 ### More
-You can find more examples [here](https://github.com/alibaba/weex-ui/tree/master/example). Write once and support iOS / Android / Html5 right now!
+- If `webpack.config.js`  babel-loader has a exclude for node_modules, Please turn on for week-ui `  exclude: /node_modules(?!\/.*(weex).*)/`.
+- You can find more examples [here](https://github.com/alibaba/weex-ui/tree/master/example). Write once and support iOS / Android / Html5 right now!
 
 ## Document
 |Name|Category|Description|

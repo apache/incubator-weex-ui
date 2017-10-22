@@ -105,7 +105,8 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 ```
 
 ### 更多
-你可以从[这里](https://github.com/alibaba/weex-ui/tree/master/example)找到更多地例子，一次编写，同时支持iOS / Android / Html5。
+- 如果你的`webpack.config.js`中 babel-loader 配置有对 node_modules 进行 exclude 处理，需要排除掉 weex-ui 包才可以使用 `exclude: /node_modules(?!\/.*(weex).*)/`。
+- 你可以从[这里](https://github.com/alibaba/weex-ui/tree/master/example)找到更多地例子，一次编写，同时支持iOS / Android / Html5。
 
 ## 文档
 |组件名称|分类|描述|
