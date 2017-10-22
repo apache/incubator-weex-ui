@@ -1,4 +1,11 @@
 # Change Log
+
+## 0.2.0
+- [!] Update reference mode.
+- [!] Normalized structure.
+- [!] Fixed part of the component in some environments that cannot be used.
+
+
 ## 0.1.3
 - [+] Fix syntax highlighting
 - [!] Fixed wxc-indexlist bug from [issues/16](https://github.com/alibaba/weex-ui/issues/16).
