@@ -16,6 +16,7 @@
 
 <script>
   import wxcRadio from './item.vue';
+
   export default {
     components: { wxcRadio },
     props: {

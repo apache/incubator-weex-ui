@@ -22,8 +22,9 @@
         <image :src="currentPage == index ? v.activeIcon : v.icon"
                v-if="titleType == 'icon'"
                :style="{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}"></image>
-        <text :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
-              class="tab-text">{{v.title}}</text>
+        <text
+          :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
+          class="tab-text">{{v.title}}</text>
         <div class="border-bottom"
              v-if="tabStyles.hasActiveBottom"
              :style="{ width: tabStyles.activeBottomWidth+'px', left: (tabStyles.width-tabStyles.activeBottomWidth)/2+'px', height: tabStyles.activeBottomHeight+'px', backgroundColor: currentPage == index ? tabStyles.activeBottomColor : 'transparent' }"></div>
@@ -94,6 +95,7 @@
   const expressionBinding = weex.requireModule('expressionBinding');
 
   import Utils from './utils';
+
   const supportsEB = Utils.env.supportsEB();
   const supportsEBForIos = Utils.env.supportsEBForIos();
   const isIos = Utils.env.isIOS();

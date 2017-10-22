@@ -8,7 +8,8 @@
 
         <div class="point" :class="item.__pointClass__" :style="item.__pointStyle__"></div>
 
-        <text class="text-title full-rest" :class="item.__titleTextClass__" :style="item.__titleStyle__">{{item.title}}</text>
+        <text class="text-title full-rest" :class="item.__titleTextClass__"
+              :style="item.__titleStyle__">{{item.title}}</text>
       </div>
 
       <div class="content flex-row" :class="item.__contentClass__">

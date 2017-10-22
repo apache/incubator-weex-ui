@@ -60,6 +60,7 @@
 <script>
   import { PNG, GIF, BLACK_GIF } from './type';
   import * as Utils from './utils';
+
   const appVersion = weex.config.env.appVersion || '0';
   const needShowPng = Utils.compareVersion('8.2.4', appVersion) && Utils.isTrip() && Utils.isAndroid();
   export default {

@@ -13,7 +13,9 @@
         <div
           ref="value-bar"
           class="value-bar"
-          :style="valueBarStyle"><div></div></div>
+          :style="valueBarStyle">
+          <div></div>
+        </div>
       </div>
       <div
         ref="slide-block-1"
@@ -24,7 +26,8 @@
         @touchend="_weexEndHandler"
         @horizontalpan="dispatchPan"
         :prevent-move-event="preventMoveEvent"
-        :style="blockStyle1"><div></div>
+        :style="blockStyle1">
+        <div></div>
       </div>
       <div
         v-if="range"
@@ -36,7 +39,8 @@
         @touchend="_weexEndHandler"
         @horizontalpan="dispatchPan"
         :prevent-move-event="preventMoveEvent"
-        :style="blockStyle2"><div></div>
+        :style="blockStyle2">
+        <div></div>
       </div>
     </div>
   </div>
@@ -47,6 +51,7 @@
   const animation = weex.requireModule('animation');
   const dom = weex.requireModule('dom');
   import Utils from './utils';
+
   export default {
     data: () => ({
       env: 'weex',
@@ -301,7 +306,9 @@
         const self = this;
 
         // 如果禁用，不行进行表达式绑定
-        if (self.disabled) { return; }
+        if (self.disabled) {
+          return;
+        }
 
         // 初始化按钮&条的大小范围
         let blockMax1 = 0;
@@ -435,15 +442,18 @@
   .wxc-slider-bar {
     user-select: none;
   }
+
   .slider-bar-container {
     height: 56px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .value-bar {
     height: 4px;
   }
+
   .slide-block {
     width: 56px;
     height: 56px;

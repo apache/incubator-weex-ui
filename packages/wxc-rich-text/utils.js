@@ -2,6 +2,7 @@
  * Created by Tw93 on 2017/6/26.
  */
 import UrlParser from 'url-parse';
+
 const Utils = {
   UrlParser: UrlParser,
   /**

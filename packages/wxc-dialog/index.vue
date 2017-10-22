@@ -124,6 +124,7 @@
 
 <script>
   import { CHECKED, UN_CHECKED } from './type';
+
   export default {
     props: {
       show: {

@@ -14,6 +14,7 @@
 
 <script>
   import { PART } from './type';
+
   export default {
     props: {
       show: {

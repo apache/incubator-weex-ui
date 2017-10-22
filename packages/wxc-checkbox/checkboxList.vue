@@ -10,6 +10,7 @@
 
 <script>
   import WxcCheckbox from './index.vue';
+
   export default {
     components: { WxcCheckbox },
     props: {

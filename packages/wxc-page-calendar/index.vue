@@ -48,10 +48,12 @@
 
 <script>
   import * as Utils from './utils';
+
   const dom = weex.requireModule('dom');
   const animation = weex.requireModule('animation');
 
   import WxcMinibar from '../wxc-minibar'
+
   export default {
     components: { WxcMinibar },
     props: {

@@ -50,6 +50,7 @@
 
 <script>
   import Utils from './utils';
+
   export default {
     components: {
       WxcRichTextText: require('./wxc-rich-text-text.vue'),

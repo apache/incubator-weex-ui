@@ -11,6 +11,7 @@
 
 <script>
   import { STYLE_MAP, TEXT_STYLE_MAP } from './type'
+
   export default {
     props: {
       text: {

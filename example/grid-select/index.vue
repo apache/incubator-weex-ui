@@ -82,6 +82,7 @@
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
   import { setTitle } from '../_mods/set-nav';
+
   const modal = weex.requireModule('modal');
 
   export default {

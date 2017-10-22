@@ -84,6 +84,7 @@
 
 <script>
   import * as TYPES from './type'
+
   export default {
     props: {
       type: {

@@ -62,6 +62,7 @@
 <script>
   const dom = weex.requireModule('dom');
   import * as Utils from './utils'
+
   export default {
     props: {
       height: {

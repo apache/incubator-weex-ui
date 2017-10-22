@@ -21,12 +21,14 @@
   const OFFSET_ACCURACY = 10;
   const SCALE = weex.config.env.platform.toLowerCase() === 'web' ? 2 : 1;
 
-  function _toNum(str) {
+  function _toNum (str) {
     return typeof str === 'number' ? str : parseFloat((str || '').replace(/px$/i, ''));
   }
 
-  function _getHeight(element, callback) {
-    if (!element) { return; }
+  function _getHeight (element, callback) {
+    if (!element) {
+      return;
+    }
     if (element.__cacheHeight) {
       element.__cacheHeight && callback && callback(element.__cacheHeight);
     } else {
@@ -48,19 +50,19 @@
       height: [String, Number]
     },
 
-    data() {
+    data () {
       return {
         visible: true
       }
     },
 
     watch: {
-      visible(newVal) {
+      visible (newVal) {
         newVal ? this._slideIn() : this._slideOut();
       }
     },
 
-    created() {
+    created () {
       this._height = _toNum(this.height) || 0;
       this._isBottom = this.position === 'bottom';
       this._direction = this._isBottom ? 1 : -1;
@@ -68,7 +70,7 @@
 
     methods: {
 
-      _slideOut() {
+      _slideOut () {
         this.getHeight((height) => {
           this.$emit('slideOut');
           this.slideY(height * this._direction * SCALE, () => {
@@ -77,7 +79,7 @@
         });
       },
 
-      _slideIn() {
+      _slideIn () {
         this.getHeight((height) => {
           this.$emit('slideIn');
           this.slideY(0, () => {
@@ -86,21 +88,21 @@
         });
       },
 
-      getHeight(callback) {
+      getHeight (callback) {
         return _getHeight(this.$refs.wrapper, callback);
       },
 
-      slideOut() {
+      slideOut () {
         this.visible = false;
       },
 
-      slideIn() {
+      slideIn () {
         this.visible = true;
       },
 
-      slideY(y, callback) {
+      slideY (y, callback) {
         Animation.transition(this.$refs.wrapper, {
-          styles: { transform: 'translateY(' + y  + 'px)' },
+          styles: { transform: 'translateY(' + y + 'px)' },
           duration: 150, //ms
           timingFunction: 'ease',
           delay: 0 //ms
@@ -108,7 +110,7 @@
       }
     },
 
-    handleTouchStart(e) {
+    handleTouchStart (e) {
       let touch = e.changedTouches[0];
       this._touchParams = {
         pageY: touch.screenY,
@@ -119,7 +121,7 @@
       };
     },
 
-    handleTouchMove(e, bottomNav) {
+    handleTouchMove (e, bottomNav) {
       let tp = this._touchParams;
       let touch = e.changedTouches[0];
       let offsetY;
@@ -157,26 +159,30 @@
       }
     },
 
-    handleTouchEnd() {
+    handleTouchEnd () {
       let tp = this._touchParams;
       tp && (tp.hasEnd = true);
     },
 
-    handleScroll(e, scroller, topNav, bottomNav, startThreshold, moveThreshold = 5) {
+    handleScroll (e, scroller, topNav, bottomNav, startThreshold, moveThreshold = 5) {
       let scrollY = e.contentOffset.y;
       let nav = topNav || bottomNav;
       let scrollFn = (maxScrollY) => {
-        if (-scrollY > maxScrollY) { return; }
+        if (-scrollY > maxScrollY) {
+          return;
+        }
         maxScrollY = Math.abs(maxScrollY);
         if (Math.abs(scrollY) < startThreshold) {
           if (Math.abs(scrollY) >= maxScrollY - OFFSET_ACCURACY) {
             let tp = this._touchParams;
-            if (!tp) { return; }
+            if (!tp) {
+              return;
+            }
             let offsetY = tp.offsetY;
-             if (offsetY < -OFFSET_ACCURACY) {
-               bottomNav && bottomNav.slideOut();
-             } else if (offsetY > OFFSET_ACCURACY) {
-               bottomNav && bottomNav.slideIn();
+            if (offsetY < -OFFSET_ACCURACY) {
+              bottomNav && bottomNav.slideOut();
+            } else if (offsetY > OFFSET_ACCURACY) {
+              bottomNav && bottomNav.slideIn();
             }
           } else {
             topNav && topNav.slideIn();
@@ -184,7 +190,9 @@
           }
         } else {
           let tp = this._touchParams;
-          if (!tp) { return; }
+          if (!tp) {
+            return;
+          }
           let offsetY = tp.offsetY;
           if (Math.abs(offsetY) >= moveThreshold) {
             if (offsetY > 0) {
@@ -199,7 +207,9 @@
       };
 
       let maxScrollYCheck = (maxScrollY) => {
-        if (!this.__scrollable) { return; }
+        if (!this.__scrollable) {
+          return;
+        }
         if (startThreshold) {
           scrollFn(maxScrollY);
         } else {
@@ -210,7 +220,9 @@
         }
       };
 
-      if (!nav) { return; }
+      if (!nav) {
+        return;
+      }
 
       _getHeight(scroller, (scrollerHeight) => {
         let maxScrollY = e.contentSize.height - scrollerHeight;

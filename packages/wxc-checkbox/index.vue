@@ -18,7 +18,8 @@
     width: 48px;
     height: 48px;
   }
-  .title-text{
+
+  .title-text {
     font-size: 30px;
   }
 </style>
@@ -26,6 +27,7 @@
 <script>
   import WxcCell from '../wxc-cell';
   import { CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED } from './type'
+
   export default {
     components: { WxcCell },
     props: {

@@ -1,9 +1,8 @@
-
 import UrlParser from 'url-parse';
 
 const Utils = {
   UrlParser: UrlParser,
-  isNonEmptyArray(obj = []) {
+  isNonEmptyArray (obj = []) {
     return obj && obj.length > 0 && Array.isArray(obj) && typeof obj !== 'undefined';
   },
   appendProtocol (url) {
@@ -203,4 +202,4 @@ const Utils = {
   }
 };
 
-export  default  Utils;
+export default Utils;

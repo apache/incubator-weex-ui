@@ -5,6 +5,7 @@
 
 const animation = weex.requireModule('animation');
 import * as Utils from './utils';
+
 const isIos = Utils.isIOS();
 
 export function showPig (ref, duration, callback) {

@@ -15,6 +15,7 @@
 
 <script>
   import { PART } from '../wxc-loading/type';
+
   export default {
     props: {
       show: {
