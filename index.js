@@ -10,6 +10,7 @@ import WxcCheckboxList from './packages/wxc-checkbox-list';
 import WxcCountdown from './packages/wxc-countdown';
 import WxcDialog from './packages/wxc-dialog';
 import WxcEpSlider from './packages/wxc-ep-slider';
+import WxcPanItem from './packages/wxc-pan-item';
 import WxcGridSelect from './packages/wxc-grid-select';
 import WxcIndexlist from './packages/wxc-indexlist';
 import WxcLightbox from './packages/wxc-lightbox';
@@ -43,6 +44,7 @@ export {
   WxcCountdown,
   WxcDialog,
   WxcEpSlider,
+  WxcPanItem,
   WxcGridSelect,
   WxcIndexlist,
   WxcLightbox,

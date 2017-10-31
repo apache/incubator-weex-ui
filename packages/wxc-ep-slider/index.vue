@@ -5,8 +5,8 @@
   <div :style="containerS">
     <div :ref="`sliderCtn_${sliderId}`"
          class="slider-content"
-         :prevent-move-event="preventMove"
-         :style="{width:cardWidth,height:cardS.height+'px',transform: `translateX(-${currentIndex * (cardS.width + cardS.spacing)}px)`}"
+         :prevent-move-event="true"
+         :style="{width:cardWidth+'px',height:cardS.height+'px',transform: `translateX(-${currentIndex * (cardS.width + cardS.spacing)}px)`}"
          @panstart="onTouchStart"
          @panmove="onTouchMove"
          @panend="onTouchEnd"
@@ -14,7 +14,7 @@
       <div class="slider"
            v-for="(v,index) in cardList"
            :ref="`card${index}_${sliderId}`"
-           :style="{transform: `scale(${index===currentIndex ? 1 : cardS.scale})`,left: `${index * cardS.width}px`,marginLeft:`${(containerS.width - cardS.width) / 2}px`,width: cardS.width+'px', height: cardS.height+'px'}">
+           :style="{transform: `scale(${index===currentIndex ? 1 : cardS.scale})`,left: `${index * (cardS.width+cardS.spacing)}px`,marginLeft:`${(containerS.width - cardS.width) / 2}px`,width: cardS.width+'px', height: cardS.height+'px'}">
         <slot :name="`card${index}_${sliderId}`"></slot>
       </div>
     </div>
@@ -34,11 +34,10 @@
 </style>
 
 <script>
+  const swipeBack = weex.requireModule('swipeBack');
   const expressionBinding = weex.requireModule('expressionBinding');
   const animation = weex.requireModule('animation');
-
   import Utils from './utils';
-
   export default {
     props: {
       sliderId: {
@@ -78,15 +77,22 @@
           spacing: 0,
           scale: 0.75
         })
+      },
+      autoPlay: {
+        type: Boolean,
+        default: false
+      },
+      interval: {
+        type: [Number, String],
+        default: 1200
       }
     },
     data: () => ({
-      preventMove: true,
       moving: false,
-      firstTouch: true,
       startX: 0,
       startTime: 0,
-      currentIndex: 0
+      currentIndex: 0,
+      autoPlayTimer: null
     }),
     computed: {
       cardList () {
@@ -100,18 +106,25 @@
       this.currentIndex = this.selectIndex;
     },
     mounted () {
+      // ios和页面返回冲突，组件里面将ios系统横滑返回禁止
+      if (swipeBack && swipeBack.forbidSwipeBack) {
+        swipeBack.forbidSwipeBack(true);
+      }
       setTimeout(() => {
         const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
         if (Utils.env.supportsEB() && sliderCtn && sliderCtn.ref) {
           expressionBinding.enableBinding(sliderCtn.ref, 'pan');
+          this.bindExp(sliderCtn);
         }
-      }, 10);
+      }, 20);
+      this.checkNeedAutoPlay();
     },
     methods: {
       onTouchStart (e) {
         if (Utils.env.supportsEB()) {
           return;
         }
+        this.clearAutoPlay();
         this.startX = e.changedTouches[0].clientX;
         this.startTime = Date.now();
       },
@@ -123,8 +136,9 @@
         const index = this.loopedIndex(this.currentIndex, this.cardLength);
         const cardLength = this.cardLength;
         const currentCardLeft = this.currentIndex * (this.cardS.width + this.cardS.spacing);
+
         const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
-        animation.transition(sliderCtn, {
+        sliderCtn && animation.transition(sliderCtn, {
           styles: {
             transform: `translateX(${moveX - currentCardLeft}px)`
           },
@@ -133,9 +147,10 @@
           duration: 0
         }, () => {
         });
+
         if (this.cardS.scale !== 1) {
           const currentCard = this.$refs[`card${this.loopedIndex(index, cardLength)}_${this.sliderId}`][0];
-          animation.transition(currentCard, {
+          currentCard && animation.transition(currentCard, {
             styles: {
               transform: `scale(${1 - Math.abs(moveX) / (this.cardS.width) * (1 - this.cardS.scale)})`
             },
@@ -160,17 +175,15 @@
           }
           // 右边卡片
           const rightCard = this.$refs[`card${this.loopedIndex(index + 1, cardLength)}_${this.sliderId}`][0];
-          if (rightCard) {
-            animation.transition(rightCard, {
-              styles: {
-                transform: `scale(${1 - Math.abs(this.cardS.width + moveX) / (this.cardS.width) * (1 - this.cardS.scale)})`
-              },
-              timingFunction: 'ease',
-              delay: 0,
-              duration: 0
-            }, () => {
-            });
-          }
+          rightCard && animation.transition(rightCard, {
+            styles: {
+              transform: `scale(${1 - Math.abs(this.cardS.width + moveX) / (this.cardS.width) * (1 - this.cardS.scale)})`
+            },
+            timingFunction: 'ease',
+            delay: 0,
+            duration: 0
+          }, () => {
+          });
         }
       },
       onTouchEnd (e) {
@@ -194,17 +207,19 @@
           }
         }
         this.slideTo(originIndex, selectIndex);
+        setTimeout(() => { this.checkNeedAutoPlay() }, 3000);
       },
       onEpTouchStart (e) {
-        if (Utils.env.supportsEB() && e.state === 'start' || (e.state === 'move' && this.firstTouch)) {
-          this.firstTouch = false;
-          const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
-          this.bindExp(sliderCtn);
+        if (Utils.env.supportsEB() && e.state === 'start') {
+          this.clearAutoPlay();
+          setTimeout(() => {
+            const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
+            this.bindExp(sliderCtn);
+          }, 0)
         }
       },
       panEnd (e) {
         if (e.state === 'end' || e.state === 'cancel' || e.state === 'exit') {
-          this.firstTouch = true;
           this.moving = true;
           const moveX = e.deltaX;
           const originIndex = this.currentIndex;
@@ -221,12 +236,14 @@
             }
           }
           this.slideTo(originIndex, selectIndex);
+          setTimeout(() => { this.checkNeedAutoPlay() }, 3000);
         }
       },
       slideTo (originIndex, selectIndex) {
         let currentCardScale = 1;
         let rightCardScale = this.cardS.scale;
         let leftCardScale = this.cardS.scale;
+        const duration = (selectIndex === 0 && originIndex === this.cardLength - 1) ? 0.00001 : 300;
         this.$emit('wxcEpSliderCurrentIndexSelected', { currentIndex: selectIndex });
         if (originIndex < selectIndex) {
           currentCardScale = this.cardS.scale;
@@ -236,24 +253,23 @@
           leftCardScale = 1;
         }
         const currentCard = this.$refs[`card${this.loopedIndex(originIndex, this.cardLength)}_${this.sliderId}`][0];
-        animation.transition(currentCard, {
+        currentCard && animation.transition(currentCard, {
           styles: {
             transform: `scale(${currentCardScale})`
           },
           timingFunction: 'ease',
-          delay: 0,
-          duration: 300
+          duration
         }, () => {
         });
+
         const leftCard = this.$refs[`card${this.loopedIndex(originIndex - 1, this.cardLength)}_${this.sliderId}`][0];
-        if (leftCard && originIndex !== 0) {
+        if (this.moving && leftCard && originIndex !== 0) {
           animation.transition(leftCard, {
             styles: {
               transform: `scale(${leftCardScale})`
             },
             timingFunction: 'ease',
-            delay: 0,
-            duration: 300
+            duration
           }, () => {
           });
         }
@@ -264,19 +280,18 @@
               transform: `scale(${rightCardScale})`
             },
             timingFunction: 'ease',
-            delay: 0,
-            duration: 300
+            duration
           }, () => {
           });
         }
+
         const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
-        animation.transition(sliderCtn, {
+        sliderCtn && animation.transition(sliderCtn, {
           styles: {
             transform: `translateX(-${selectIndex * (this.cardS.width + this.cardS.spacing)}px)`
           },
           timingFunction: 'ease',
-          delay: 0,
-          duration: 300
+          duration
         }, () => {
           this.moving = false;
           if (originIndex !== selectIndex) {
@@ -325,7 +340,7 @@
               'ori_expression': currentCardExpOri
             });
 
-            if (index === 0) {
+            if (index === 0 && this.$refs[`card${index + 1}_${this.sliderId}`]) {
               // 右边卡片
               rightCard = this.$refs[`card${index + 1}_${this.sliderId}`][0];
               // 1-abs(588+x)/588*${1-this.cardS.scale}
@@ -337,7 +352,7 @@
                 expression: rightCardExp,
                 'ori_expression': rightCardExpOri
               });
-            } else if (index === this.cardLength - 1) {
+            } else if (index === this.cardLength - 1 && this.$refs[`card${index - 1}_${this.sliderId}`]) {
               // 左边的卡片
               leftCard = this.$refs[`card${index - 1}_${this.sliderId}`][0];
               // 1-abs(x-${this.cardS.width})/${this.cardS.width}*${1-this.cardS.scale}
@@ -349,7 +364,7 @@
                 expression: leftCardExp,
                 'ori_expression': leftCardExpOri
               });
-            } else {
+            } else if (this.$refs[`card${index - 1}_${this.sliderId}`]) {
               // 左边卡片
               leftCard = this.$refs[`card${index - 1}_${this.sliderId}`][0];
               // 1-abs(x-${this.cardS.width})/${this.cardS.width}*${1-this.cardS.scale}
@@ -382,7 +397,35 @@
             }
           });
         }
+      },
+      checkNeedAutoPlay () {
+        if (this.autoPlay) {
+          this.clearAutoPlay();
+          this.autoPlayTimer = setInterval(() => {
+            this.slideTo(this.currentIndex, this.loopedIndex(this.currentIndex + 1, this.cardLength));
+          }, parseInt(this.interval));
+        }
+      },
+      clearAutoPlay () {
+        this.autoPlayTimer && clearInterval(this.autoPlayTimer);
+      },
+      // ios下当放在list中，cell被回收后，再次出现的时候需要重新为容器绑定下pan事情
+      rebind () {
+        const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
+        if (sliderCtn && sliderCtn.ref) {
+          expressionBinding.disableBinding(sliderCtn.ref, 'pan');
+          expressionBinding.enableBinding(sliderCtn.ref, 'pan');
+        }
+      },
+      manualSetPage (selectIndex) {
+        this.clearAutoPlay();
+        const step = this.currentIndex < selectIndex ? 1 : -1;
+        this.slideTo(this.loopedIndex(selectIndex - step, this.cardLength), selectIndex);
+        setTimeout(() => {
+          this.checkNeedAutoPlay()
+        }, 3000);
       }
     }
   }
 </script>
+

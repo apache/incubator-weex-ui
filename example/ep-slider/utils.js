@@ -157,6 +157,7 @@ const Utils = {
    * @param promoteVer {string}
    * @returns {boolean}
    * @example
+   *
    * const { compareVersion } = Utils;
    * console.log(compareVersion('0.1.100', '0.1.11')); // 'true'
    */

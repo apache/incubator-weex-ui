@@ -5,7 +5,8 @@
  - 背景：由于官方原生slider-neighbor体验和效果不是很好，但是此场景对于品质感交互又很有必要，所以通过expressionBinding尝试写一个ep-slider，欢迎提PR
  - 规则：
     - 用于丰富slide，包括商品橱窗，图片列表等 
-    - 注意: 目前已经支持Ios、Android、H5的展示，但还是一个`beta版本`，需要优化。
+    - 目前已经支持Ios、Android、H5的展示，同时支持自动播放。
+    - **假如子组件有点击事件，在Android由于[此约束](http://weex-project.io/cn/references/gesture.html#约束)，目前需要在子元素里面绑定对应事件，我这边提供了一个[wxc-pan-cell](https://github.com/alibaba/weex-ui/tree/master/packages/wxc-pan-item)包裹器来解决此情况，具体使用可以参考[demo](https://github.com/alibaba/weex-ui/tree/master/demo/ep-slider)**
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-ep-slider/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-ep-slider%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/lWWUuRBxjMdLCaJGVHsp.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1Ky4QSpXXXXbRapXXXXXXXXXX-200-200.png" width="160"/>
@@ -108,11 +109,28 @@ npm install weex-ui --save
 | enable-swipe | `Boolean` | `true` | 是否需要滑动效果|
 | container-s | `Object` | {position: 'relative',width: 750,height: 352,overflow: 'hidden'} |  包裹容器的样式|
 | card-s | `Object` | {width: 360,height: 300,spacing: 0,scale: 0.75}} | item容器的样式|
+| auto-play | `Boolean` | `false` |是否需要自动播放|
+| interval | `Number` | 1200 |自动播放时候的间隔|
+
+### API说明
+
+```
+//ios下当放在list中，cell被回收后，导致下次appear的时候，手势失效了，需要再手动调用api，重新绑定下pan事件
+// 直接在wxc-ep-slider组件上面绑定ref="wxc-ep-slider"
+this.$refs['wxc-ep-slider'].rebind();
+```
+
+### 主动触发设置
+
+```
+// 直接在wxc-ep-slider组件上面绑定ref="wxc-ep-slider",然后调用即可
+// 譬如设置第二张
+this.$refs['wxc-ep-slider'].manualSetPage(1); 
+```
 
 ### 事件回调
 
 ```
 //当前滑块被选中的回调
-`@wxcEpSliderCurrentIndexSelected="wxcEpSliderCurrentIndexSelected"`
+`v-on:wxcEpSliderCurrentIndexSelected="wxcEpSliderCurrentIndexSelected"`
 ```
-
