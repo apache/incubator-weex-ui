@@ -5,3 +5,4 @@ build/example
 /*.json
 !package.json
 !lerna.json
+npm-debug.log
