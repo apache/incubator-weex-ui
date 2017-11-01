@@ -76,253 +76,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; /**
-                                                                                                                                                                                                                                                                                * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
-                                                                                                                                                                                                                                                                                * Created by Tw93 on 17/11/01
-                                                                                                                                                                                                                                                                                */
-
-var _urlParse = __webpack_require__(11);
-
-var _urlParse2 = _interopRequireDefault(_urlParse);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var Utils = {
-  UrlParser: _urlParse2.default,
-  _typeof: function _typeof(obj) {
-    return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
-  },
-  isPlainObject: function isPlainObject(obj) {
-    return Utils._typeof(obj) === 'object';
-  },
-  isString: function isString(obj) {
-    return typeof obj === 'string';
-  },
-  isNonEmptyArray: function isNonEmptyArray() {
-    var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-
-    return obj && obj.length > 0 && Array.isArray(obj) && typeof obj !== 'undefined';
-  },
-  isObject: function isObject(item) {
-    return item && (typeof item === 'undefined' ? 'undefined' : _typeof2(item)) === 'object' && !Array.isArray(item);
-  },
-  isEmptyObject: function isEmptyObject(obj) {
-    return Object.keys(obj).length === 0 && obj.constructor === Object;
-  },
-  mergeDeep: function mergeDeep(target) {
-    for (var _len = arguments.length, sources = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-      sources[_key - 1] = arguments[_key];
-    }
-
-    if (!sources.length) return target;
-    var source = sources.shift();
-    if (Utils.isObject(target) && Utils.isObject(source)) {
-      for (var key in source) {
-        if (Utils.isObject(source[key])) {
-          if (!target[key]) {
-            Object.assign(target, _defineProperty({}, key, {}));
-          }
-          Utils.mergeDeep(target[key], source[key]);
-        } else {
-          Object.assign(target, _defineProperty({}, key, source[key]));
-        }
-      }
-    }
-    return Utils.mergeDeep.apply(Utils, [target].concat(sources));
-  },
-  appendProtocol: function appendProtocol(url) {
-    if (/^\/\//.test(url)) {
-      var bundleUrl = weex.config.bundleUrl;
-
-      return 'http' + (/^https:/.test(bundleUrl) ? 's' : '') + ':' + url;
-    }
-    return url;
-  },
-  encodeURLParams: function encodeURLParams(url) {
-    var parsedUrl = new _urlParse2.default(url, true);
-    return parsedUrl.toString();
-  },
-  goToH5Page: function goToH5Page(jumpUrl) {
-    var animated = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-    var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-
-    var Navigator = weex.requireModule('navigator');
-    var jumpUrlObj = new Utils.UrlParser(jumpUrl, true);
-    var url = Utils.appendProtocol(jumpUrlObj.toString());
-    Navigator.push({
-      url: Utils.encodeURLParams(url),
-      animated: animated
-    }, callback);
-  },
-
-  env: {
-    isTaobao: function isTaobao() {
-      var appName = weex.config.env.appName;
-
-      return (/(tb|taobao|淘宝)/i.test(appName)
-      );
-    },
-    isTrip: function isTrip() {
-      var appName = weex.config.env.appName;
-
-      return appName === 'LX';
-    },
-    isWeb: function isWeb() {
-      var platform = weex.config.env.platform;
-
-      return (typeof window === 'undefined' ? 'undefined' : _typeof2(window)) === 'object' && platform.toLowerCase() === 'web';
-    },
-    isIOS: function isIOS() {
-      var platform = weex.config.env.platform;
-
-      return platform.toLowerCase() === 'ios';
-    },
-    isAndroid: function isAndroid() {
-      var platform = weex.config.env.platform;
-
-      return platform.toLowerCase() === 'android';
-    },
-    isAlipay: function isAlipay() {
-      var appName = weex.config.env.appName;
-
-      return appName === 'AP';
-    },
-    isAlipayWeb: function isAlipayWeb() {
-      return Utils.env.isAlipay() && Utils.env.isWeb();
-    },
-    supportsEB: function supportsEB() {
-      var weexVersion = weex.config.env.weexVersion || '0';
-      var isHighWeex = Utils.compareVersion(weexVersion, '0.10.1.4') && (Utils.env.isIOS() || Utils.env.isAndroid());
-      var expressionBinding = weex.requireModule('expressionBinding');
-      return expressionBinding && expressionBinding.enableBinding && isHighWeex;
-    },
-
-
-    /**
-     * 判断Android容器是否支持是否支持expressionBinding(处理方式很不一致)
-     * @returns {boolean}
-     */
-    supportsEBForAndroid: function supportsEBForAndroid() {
-      return Utils.env.isAndroid() && Utils.env.supportsEB();
-    },
-
-
-    /**
-     * 判断IOS容器是否支持是否支持expressionBinding
-     * @returns {boolean}
-     */
-    supportsEBForIos: function supportsEBForIos() {
-      return Utils.env.isIOS() && Utils.env.supportsEB();
-    },
-
-
-    /**
-     * 获取weex屏幕真实的设置高度，需要减去导航栏高度
-     * @returns {Number}
-     */
-    getPageHeight: function getPageHeight() {
-      var env = weex.config.env;
-
-      var navHeight = Utils.env.isWeb() ? 0 : 130;
-      return env.deviceHeight / env.deviceWidth * 750 - navHeight;
-    }
-  },
-
-  /**
-   * 版本号比较
-   * @memberOf Utils
-   * @param currVer {string}
-   * @param promoteVer {string}
-   * @returns {boolean}
-   * @example
-   *
-   * const { Utils } = require('@ali/wx-bridge');
-   * const { compareVersion } = Utils;
-   * console.log(compareVersion('0.1.100', '0.1.11')); // 'true'
-   */
-  compareVersion: function compareVersion() {
-    var currVer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "0.0.0";
-    var promoteVer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0.0.0";
-
-    if (currVer === promoteVer) return true;
-    var currVerArr = currVer.split(".");
-    var promoteVerArr = promoteVer.split(".");
-    var len = Math.max(currVerArr.length, promoteVerArr.length);
-    for (var i = 0; i < len; i++) {
-      var proVal = ~~promoteVerArr[i];
-      var curVal = ~~currVerArr[i];
-      if (proVal < curVal) {
-        return true;
-      } else if (proVal > curVal) {
-        return false;
-      }
-    }
-    return false;
-  },
-
-  /**
-   * 分割数组
-   * @param arr 被分割数组
-   * @param size 分割数组的长度
-   * @returns {Array}
-   */
-  arrayChunk: function arrayChunk() {
-    var arr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-    var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
-
-    var groups = [];
-    if (arr && arr.length > 0) {
-      groups = arr.map(function (e, i) {
-        return i % size === 0 ? arr.slice(i, i + size) : null;
-      }).filter(function (e) {
-        return e;
-      });
-    }
-    return groups;
-  },
-  truncateString: function truncateString(str, len) {
-    var hasDot = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-
-    var newLength = 0;
-    var newStr = "";
-    var singleChar = '';
-    var chineseRegex = /[^\x00-\xff]/g;
-    var strLength = str.replace(chineseRegex, '**').length;
-    for (var i = 0; i < strLength; i++) {
-      singleChar = str.charAt(i).toString();
-      if (singleChar.match(chineseRegex) !== null) {
-        newLength += 2;
-      } else {
-        newLength++;
-      }
-      if (newLength > len) {
-        break;
-      }
-      newStr += singleChar;
-    }
-
-    if (hasDot && strLength > len) {
-      newStr += '...';
-    }
-    return newStr;
-  }
-};
-
-exports.default = Utils;
-
-/***/ }),
+/* 0 */,
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -615,11 +369,7 @@ module.exports = __vue_exports__
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.WxcTag = exports.WxcTabPage = exports.WxcStepper = exports.WxcSliderBar = exports.WxcSlideNav = exports.WxcSimpleFlow = exports.WxcSearchbar = exports.WxcSpecialRichText = exports.WxcRichText = exports.WxcResult = exports.WxcRadio = exports.WxcProgress = exports.WxcPopup = exports.WxcPageCalendar = exports.WxcOverlay = exports.WxcNoticebar = exports.WxcLotteryRain = exports.WxcMinibar = exports.WxcMask = exports.WxcPartLoading = exports.WxcLoading = exports.WxcLightbox = exports.WxcIndexlist = exports.WxcGridSelect = exports.WxcPanItem = exports.WxcEpSlider = exports.WxcDialog = exports.WxcCountdown = exports.WxcCheckboxList = exports.WxcCheckbox = exports.WxcCell = exports.WxcButton = exports.Utils = undefined;
-
-var _utils = __webpack_require__(0);
-
-var _utils2 = _interopRequireDefault(_utils);
+exports.WxcTag = exports.WxcTabPage = exports.WxcStepper = exports.WxcSliderBar = exports.WxcSlideNav = exports.WxcSimpleFlow = exports.WxcSearchbar = exports.WxcSpecialRichText = exports.WxcRichText = exports.WxcResult = exports.WxcRadio = exports.WxcProgress = exports.WxcPopup = exports.WxcPageCalendar = exports.WxcOverlay = exports.WxcNoticebar = exports.WxcLotteryRain = exports.WxcMinibar = exports.WxcMask = exports.WxcPartLoading = exports.WxcLoading = exports.WxcLightbox = exports.WxcIndexlist = exports.WxcGridSelect = exports.WxcEpSlider = exports.WxcDialog = exports.WxcCountdown = exports.WxcCheckboxList = exports.WxcCheckbox = exports.WxcCell = exports.WxcButton = undefined;
 
 var _wxcButton = __webpack_require__(14);
 
@@ -648,10 +398,6 @@ var _wxcDialog2 = _interopRequireDefault(_wxcDialog);
 var _wxcEpSlider = __webpack_require__(45);
 
 var _wxcEpSlider2 = _interopRequireDefault(_wxcEpSlider);
-
-var _wxcPanItem = __webpack_require__(50);
-
-var _wxcPanItem2 = _interopRequireDefault(_wxcPanItem);
 
 var _wxcGridSelect = __webpack_require__(54);
 
@@ -751,7 +497,6 @@ var _wxcTag2 = _interopRequireDefault(_wxcTag);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.Utils = _utils2.default;
 exports.WxcButton = _wxcButton2.default;
 exports.WxcCell = _wxcCell2.default;
 exports.WxcCheckbox = _wxcCheckbox2.default;
@@ -759,7 +504,6 @@ exports.WxcCheckboxList = _wxcCheckboxList2.default;
 exports.WxcCountdown = _wxcCountdown2.default;
 exports.WxcDialog = _wxcDialog2.default;
 exports.WxcEpSlider = _wxcEpSlider2.default;
-exports.WxcPanItem = _wxcPanItem2.default;
 exports.WxcGridSelect = _wxcGridSelect2.default;
 exports.WxcIndexlist = _wxcIndexlist2.default;
 exports.WxcLightbox = _wxcLightbox2.default;
@@ -1656,7 +1400,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(379);
 
 var _utils2 = _interopRequireDefault(_utils);
 
@@ -3011,7 +2755,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(380);
 
 var _utils2 = _interopRequireDefault(_utils);
 
@@ -3053,9 +2797,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 
-var swipeBack = weex.requireModule('swipeBack');
 var expressionBinding = weex.requireModule('expressionBinding');
 var animation = weex.requireModule('animation');
+
 exports.default = {
   props: {
     sliderId: {
@@ -3099,23 +2843,16 @@ exports.default = {
           scale: 0.75
         };
       }
-    },
-    autoPlay: {
-      type: Boolean,
-      default: false
-    },
-    interval: {
-      type: [Number, String],
-      default: 1200
     }
   },
   data: function data() {
     return {
+      preventMove: true,
       moving: false,
+      firstTouch: true,
       startX: 0,
       startTime: 0,
-      currentIndex: 0,
-      autoPlayTimer: null
+      currentIndex: 0
     };
   },
   computed: {
@@ -3132,18 +2869,12 @@ exports.default = {
   mounted: function mounted() {
     var _this = this;
 
-    // ios和页面返回冲突，组件里面将ios系统横滑返回禁止
-    if (swipeBack && swipeBack.forbidSwipeBack) {
-      swipeBack.forbidSwipeBack(true);
-    }
     setTimeout(function () {
       var sliderCtn = _this.$refs['sliderCtn_' + _this.sliderId];
       if (_utils2.default.env.supportsEB() && sliderCtn && sliderCtn.ref) {
         expressionBinding.enableBinding(sliderCtn.ref, 'pan');
-        _this.bindExp(sliderCtn);
       }
-    }, 20);
-    this.checkNeedAutoPlay();
+    }, 10);
   },
 
   methods: {
@@ -3151,7 +2882,6 @@ exports.default = {
       if (_utils2.default.env.supportsEB()) {
         return;
       }
-      this.clearAutoPlay();
       this.startX = e.changedTouches[0].clientX;
       this.startTime = Date.now();
     },
@@ -3163,9 +2893,8 @@ exports.default = {
       var index = this.loopedIndex(this.currentIndex, this.cardLength);
       var cardLength = this.cardLength;
       var currentCardLeft = this.currentIndex * (this.cardS.width + this.cardS.spacing);
-
       var sliderCtn = this.$refs['sliderCtn_' + this.sliderId];
-      sliderCtn && animation.transition(sliderCtn, {
+      animation.transition(sliderCtn, {
         styles: {
           transform: 'translateX(' + (moveX - currentCardLeft) + 'px)'
         },
@@ -3173,10 +2902,9 @@ exports.default = {
         delay: 0,
         duration: 0
       }, function () {});
-
       if (this.cardS.scale !== 1) {
         var currentCard = this.$refs['card' + this.loopedIndex(index, cardLength) + '_' + this.sliderId][0];
-        currentCard && animation.transition(currentCard, {
+        animation.transition(currentCard, {
           styles: {
             transform: 'scale(' + (1 - Math.abs(moveX) / this.cardS.width * (1 - this.cardS.scale)) + ')'
           },
@@ -3199,19 +2927,19 @@ exports.default = {
         }
         // 右边卡片
         var rightCard = this.$refs['card' + this.loopedIndex(index + 1, cardLength) + '_' + this.sliderId][0];
-        rightCard && animation.transition(rightCard, {
-          styles: {
-            transform: 'scale(' + (1 - Math.abs(this.cardS.width + moveX) / this.cardS.width * (1 - this.cardS.scale)) + ')'
-          },
-          timingFunction: 'ease',
-          delay: 0,
-          duration: 0
-        }, function () {});
+        if (rightCard) {
+          animation.transition(rightCard, {
+            styles: {
+              transform: 'scale(' + (1 - Math.abs(this.cardS.width + moveX) / this.cardS.width * (1 - this.cardS.scale)) + ')'
+            },
+            timingFunction: 'ease',
+            delay: 0,
+            duration: 0
+          }, function () {});
+        }
       }
     },
     onTouchEnd: function onTouchEnd(e) {
-      var _this2 = this;
-
       if (_utils2.default.env.supportsEB()) {
         return;
       }
@@ -3232,25 +2960,17 @@ exports.default = {
         }
       }
       this.slideTo(originIndex, selectIndex);
-      setTimeout(function () {
-        _this2.checkNeedAutoPlay();
-      }, 3000);
     },
     onEpTouchStart: function onEpTouchStart(e) {
-      var _this3 = this;
-
-      if (_utils2.default.env.supportsEB() && e.state === 'start') {
-        this.clearAutoPlay();
-        setTimeout(function () {
-          var sliderCtn = _this3.$refs['sliderCtn_' + _this3.sliderId];
-          _this3.bindExp(sliderCtn);
-        }, 0);
+      if (_utils2.default.env.supportsEB() && e.state === 'start' || e.state === 'move' && this.firstTouch) {
+        this.firstTouch = false;
+        var sliderCtn = this.$refs['sliderCtn_' + this.sliderId];
+        this.bindExp(sliderCtn);
       }
     },
     panEnd: function panEnd(e) {
-      var _this4 = this;
-
       if (e.state === 'end' || e.state === 'cancel' || e.state === 'exit') {
+        this.firstTouch = true;
         this.moving = true;
         var moveX = e.deltaX;
         var originIndex = this.currentIndex;
@@ -3267,18 +2987,14 @@ exports.default = {
           }
         }
         this.slideTo(originIndex, selectIndex);
-        setTimeout(function () {
-          _this4.checkNeedAutoPlay();
-        }, 3000);
       }
     },
     slideTo: function slideTo(originIndex, selectIndex) {
-      var _this5 = this;
+      var _this2 = this;
 
       var currentCardScale = 1;
       var rightCardScale = this.cardS.scale;
       var leftCardScale = this.cardS.scale;
-      var duration = selectIndex === 0 && originIndex === this.cardLength - 1 ? 0.00001 : 300;
       this.$emit('wxcEpSliderCurrentIndexSelected', { currentIndex: selectIndex });
       if (originIndex < selectIndex) {
         currentCardScale = this.cardS.scale;
@@ -3288,22 +3004,23 @@ exports.default = {
         leftCardScale = 1;
       }
       var currentCard = this.$refs['card' + this.loopedIndex(originIndex, this.cardLength) + '_' + this.sliderId][0];
-      currentCard && animation.transition(currentCard, {
+      animation.transition(currentCard, {
         styles: {
           transform: 'scale(' + currentCardScale + ')'
         },
         timingFunction: 'ease',
-        duration: duration
+        delay: 0,
+        duration: 300
       }, function () {});
-
       var leftCard = this.$refs['card' + this.loopedIndex(originIndex - 1, this.cardLength) + '_' + this.sliderId][0];
-      if (this.moving && leftCard && originIndex !== 0) {
+      if (leftCard && originIndex !== 0) {
         animation.transition(leftCard, {
           styles: {
             transform: 'scale(' + leftCardScale + ')'
           },
           timingFunction: 'ease',
-          duration: duration
+          delay: 0,
+          duration: 300
         }, function () {});
       }
       var rightCard = this.$refs['card' + this.loopedIndex(originIndex + 1, this.cardLength) + '_' + this.sliderId][0];
@@ -3313,21 +3030,22 @@ exports.default = {
             transform: 'scale(' + rightCardScale + ')'
           },
           timingFunction: 'ease',
-          duration: duration
+          delay: 0,
+          duration: 300
         }, function () {});
       }
-
       var sliderCtn = this.$refs['sliderCtn_' + this.sliderId];
-      sliderCtn && animation.transition(sliderCtn, {
+      animation.transition(sliderCtn, {
         styles: {
           transform: 'translateX(-' + selectIndex * (this.cardS.width + this.cardS.spacing) + 'px)'
         },
         timingFunction: 'ease',
-        duration: duration
+        delay: 0,
+        duration: 300
       }, function () {
-        _this5.moving = false;
+        _this2.moving = false;
         if (originIndex !== selectIndex) {
-          _this5.currentIndex = selectIndex;
+          _this2.currentIndex = selectIndex;
         }
       });
     },
@@ -3340,7 +3058,7 @@ exports.default = {
       return index % total;
     },
     bindExp: function bindExp(element) {
-      var _this6 = this;
+      var _this3 = this;
 
       if (element && element.ref && !this.moving) {
         this.startTime = Date.now();
@@ -3373,7 +3091,7 @@ exports.default = {
             'ori_expression': currentCardExpOri
           });
 
-          if (index === 0 && this.$refs['card' + (index + 1) + '_' + this.sliderId]) {
+          if (index === 0) {
             // 右边卡片
             rightCard = this.$refs['card' + (index + 1) + '_' + this.sliderId][0];
             // 1-abs(588+x)/588*${1-this.cardS.scale}
@@ -3385,7 +3103,7 @@ exports.default = {
               expression: rightCardExp,
               'ori_expression': rightCardExpOri
             });
-          } else if (index === this.cardLength - 1 && this.$refs['card' + (index - 1) + '_' + this.sliderId]) {
+          } else if (index === this.cardLength - 1) {
             // 左边的卡片
             leftCard = this.$refs['card' + (index - 1) + '_' + this.sliderId][0];
             // 1-abs(x-${this.cardS.width})/${this.cardS.width}*${1-this.cardS.scale}
@@ -3397,7 +3115,7 @@ exports.default = {
               expression: leftCardExp,
               'ori_expression': leftCardExpOri
             });
-          } else if (this.$refs['card' + (index - 1) + '_' + this.sliderId]) {
+          } else {
             // 左边卡片
             leftCard = this.$refs['card' + (index - 1) + '_' + this.sliderId][0];
             // 1-abs(x-${this.cardS.width})/${this.cardS.width}*${1-this.cardS.scale}
@@ -3425,43 +3143,11 @@ exports.default = {
           }
         }
         expressionBinding.createBinding(element.ref, 'pan', '', args, function (e) {
-          if (!_this6.moving) {
-            _this6.panEnd(e);
+          if (!_this3.moving) {
+            _this3.panEnd(e);
           }
         });
       }
-    },
-    checkNeedAutoPlay: function checkNeedAutoPlay() {
-      var _this7 = this;
-
-      if (this.autoPlay) {
-        this.clearAutoPlay();
-        this.autoPlayTimer = setInterval(function () {
-          _this7.slideTo(_this7.currentIndex, _this7.loopedIndex(_this7.currentIndex + 1, _this7.cardLength));
-        }, parseInt(this.interval));
-      }
-    },
-    clearAutoPlay: function clearAutoPlay() {
-      this.autoPlayTimer && clearInterval(this.autoPlayTimer);
-    },
-
-    // ios下当放在list中，cell被回收后，再次出现的时候需要重新为容器绑定下pan事情
-    rebind: function rebind() {
-      var sliderCtn = this.$refs['sliderCtn_' + this.sliderId];
-      if (sliderCtn && sliderCtn.ref) {
-        expressionBinding.disableBinding(sliderCtn.ref, 'pan');
-        expressionBinding.enableBinding(sliderCtn.ref, 'pan');
-      }
-    },
-    manualSetPage: function manualSetPage(selectIndex) {
-      var _this8 = this;
-
-      this.clearAutoPlay();
-      var step = this.currentIndex < selectIndex ? 1 : -1;
-      this.slideTo(this.loopedIndex(selectIndex - step, this.cardLength), selectIndex);
-      setTimeout(function () {
-        _this8.checkNeedAutoPlay();
-      }, 3000);
     }
   }
 };
@@ -3477,12 +3163,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     ref: ("sliderCtn_" + _vm.sliderId),
     staticClass: ["slider-content"],
     style: {
-      width: _vm.cardWidth + 'px',
+      width: _vm.cardWidth,
       height: _vm.cardS.height + 'px',
       transform: ("translateX(-" + (_vm.currentIndex * (_vm.cardS.width + _vm.cardS.spacing)) + "px)")
     },
     attrs: {
-      "preventMoveEvent": true
+      "preventMoveEvent": _vm.preventMove
     },
     on: {
       "panstart": _vm.onTouchStart,
@@ -3497,7 +3183,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: ["slider"],
       style: {
         transform: ("scale(" + (index===_vm.currentIndex ? 1 : _vm.cardS.scale) + ")"),
-        left: ((index * (_vm.cardS.width+_vm.cardS.spacing)) + "px"),
+        left: ((index * _vm.cardS.width) + "px"),
         marginLeft: (((_vm.containerS.width - _vm.cardS.width) / 2) + "px"),
         width: _vm.cardS.width + 'px',
         height: _vm.cardS.height + 'px'
@@ -3508,164 +3194,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _index = __webpack_require__(51);
-
-Object.defineProperty(exports, 'default', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_index).default;
-  }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* script */
-__vue_exports__ = __webpack_require__(52)
-
-/* template */
-var __vue_template__ = __webpack_require__(53)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-pan-item/index.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _utils = __webpack_require__(0);
-
-var _utils2 = _interopRequireDefault(_utils);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-var expressionBinding = weex.requireModule('expressionBinding');
-
-module.exports = {
-  props: {
-    extId: {
-      type: [String, Number],
-      default: 0
-    }
-  },
-  data: function data() {
-    return {
-      isPanning: false,
-      appearMap: []
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    setTimeout(function () {
-      if (_utils2.default.env.supportsEBForAndroid()) {
-        var element = _this.$refs['wxc-pan-item'];
-        element && expressionBinding.enableBinding(element.ref, 'pan');
-      }
-    }, 300);
-  },
-
-  methods: {
-    itemClicked: function itemClicked() {
-      if (this.isPanning) {
-        return;
-      }
-      this.$emit('wxcPanItemClick', { extId: this.extId });
-    },
-    dispatchPan: function dispatchPan(e) {
-      var _this2 = this;
-
-      if (_utils2.default.env.supportsEBForAndroid()) {
-        if (e.state === 'start') {
-          this.isPanning = true;
-          var element = this.$refs['wxc-pan-item'];
-          element && this.$emit('wxcPanItemPan', { element: element });
-        } else if (e.state === 'end') {
-          setTimeout(function () {
-            _this2.isPanning = false;
-          }, 50);
-        }
-      }
-    }
-  }
-};
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    ref: "wxc-pan-item",
-    attrs: {
-      "preventMoveEvent": true
-    },
-    on: {
-      "horizontalpan": _vm.dispatchPan,
-      "click": _vm.itemClicked
-    }
-  }, [_vm._t("default")], 2)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
 /* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4375,15 +3907,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _format = __webpack_require__(67);
+var _utils = __webpack_require__(381);
 
-var Format = _interopRequireWildcard(_format);
-
-var _utils = __webpack_require__(0);
-
-var _utils2 = _interopRequireDefault(_utils);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var Utils = _interopRequireWildcard(_utils);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -4454,7 +3980,7 @@ exports.default = {
   props: {
     height: {
       type: [Number, String],
-      default: _utils2.default.env.getPageHeight()
+      default: Utils.getPageHeight()
     },
     normalList: {
       type: Array,
@@ -4496,7 +4022,7 @@ exports.default = {
           hotListConfig = this.hotListConfig,
           cityLocationConfig = this.cityLocationConfig;
 
-      return Format.totalList(normalList, hotListConfig, cityLocationConfig);
+      return Utils.formatTotalList(normalList, hotListConfig, cityLocationConfig);
     }
   },
   data: function data() {
@@ -4531,83 +4057,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.totalList = totalList;
-exports.getSpecialData = getSpecialData;
-
-var _utils = __webpack_require__(0);
-
-var _utils2 = _interopRequireDefault(_utils);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/**
- * 根据26个字母取每一项首字母对数据进行排序,处理数据变换
- * @param  {object}
- * @return {[array]}
- */
-function totalList(source, hotListConfig, cityLocationConfig) {
-  var LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var res = [];
-  LETTERS.split('').forEach(function (letter) {
-    var _data = source.filter(function (item) {
-      if (item.pinYin) {
-        return item.pinYin.slice(0, 1).toLowerCase() === letter.toLowerCase();
-      } else if (item.py) {
-        return item.py.slice(0, 1).toLowerCase() === letter.toLowerCase();
-      } else {
-        return false;
-      }
-    });
-    if (_data.length) {
-      res.push({
-        title: letter,
-        data: _data,
-        type: 'list'
-      });
-    }
-  });
-
-  // 处理热门数据
-  var hotList = getSpecialData(hotListConfig);
-  hotList && res.unshift(hotList);
-
-  // 处理特殊定位数据
-  var cityLocation = getSpecialData(cityLocationConfig);
-  cityLocation && res.unshift(cityLocation);
-
-  return res;
-} /**
-   * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
-   * Created by Tw93 on 17/11/01
-   */
-
-function getSpecialData(data) {
-  if (data && data.type && data.list && data.list.length > 0) {
-    var type = data.type,
-        title = data.title,
-        list = data.list;
-
-    var res = {
-      title: title,
-      type: type,
-      data: type === 'group' ? _utils2.default.arrayChunk(list) : list
-    };
-    return res;
-  } else {
-    return null;
-  }
-}
-
-/***/ }),
+/* 67 */,
 /* 68 */
 /***/ (function(module, exports) {
 
@@ -5602,11 +5052,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _type = __webpack_require__(6);
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(382);
 
-var _utils2 = _interopRequireDefault(_utils);
+var Utils = _interopRequireWildcard(_utils);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 //
 //
@@ -5669,7 +5119,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 
 var appVersion = weex.config.env.appVersion || '0';
-var needShowPng = _utils2.default.compareVersion('8.2.4', appVersion) && _utils2.default.env.isTrip() && _utils2.default.env.isAndroid();
+var needShowPng = Utils.compareVersion('8.2.4', appVersion) && Utils.isTrip() && Utils.isAndroid();
 exports.default = {
   props: {
     show: {
@@ -5720,7 +5170,7 @@ exports.default = {
       return loading;
     },
     topPosition: function topPosition() {
-      return (_utils2.default.env.getPageHeight() - 200) / 2;
+      return (Utils.getPageHeight() - 200) / 2;
     },
     needShow: function needShow() {
       this.setShow();
@@ -6555,11 +6005,11 @@ exports.showPig = showPig;
 exports.hidePig = hidePig;
 exports.shakePig = shakePig;
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(378);
 
-var _utils2 = _interopRequireDefault(_utils);
+var Utils = _interopRequireWildcard(_utils);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 /**
  * Created by Tw93 on 2017/09/06.
@@ -6569,7 +6019,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var animation = weex.requireModule('animation');
 
 
-var isIos = _utils2.default.env.isIOS();
+var isIos = Utils.isIOS();
 
 function showPig(ref, duration, callback) {
   ref && animation.transition(ref, {
@@ -6665,11 +6115,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(378);
 
-var _utils2 = _interopRequireDefault(_utils);
+var Utils = _interopRequireWildcard(_utils);
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 var Region = {
   regions: [],
@@ -6697,7 +6147,7 @@ var Region = {
     }
     var i = 1000;
     var viewWidth = 750;
-    var viewHeight = _utils2.default.env.getPageHeight();
+    var viewHeight = Utils.getPageHeight();
     var wrapWidth = viewWidth - width;
     var wrapHeight = viewHeight - height - 140;
     wrapHeight = wrapHeight < 0 ? 0 : wrapHeight;
@@ -6911,7 +6361,7 @@ var _type = __webpack_require__(111);
 
 var _type2 = _interopRequireDefault(_type);
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(383);
 
 var _utils2 = _interopRequireDefault(_utils);
 
@@ -7348,13 +6798,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _format = __webpack_require__(117);
+var _utils = __webpack_require__(384);
 
-var Format = _interopRequireWildcard(_format);
-
-var _utils = __webpack_require__(0);
-
-var _utils2 = _interopRequireDefault(_utils);
+var Utils = _interopRequireWildcard(_utils);
 
 var _wxcMinibar = __webpack_require__(7);
 
@@ -7364,7 +6810,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-//
+var dom = weex.requireModule('dom'); //
 //
 //
 //
@@ -7413,7 +6859,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 //
 //
 
-var dom = weex.requireModule('dom');
 var animation = weex.requireModule('animation');
 
 exports.default = {
@@ -7463,8 +6908,8 @@ exports.default = {
       isShow: false,
       reSelect: true,
       useDefaultReturn: false,
-      showHeader: _utils2.default.env.isWeb(),
-      today: Format.getToDay(),
+      showHeader: Utils.isWeb(),
+      today: Utils.getToDay(),
       calendarHeight: 1040,
       pageHeight: 1334,
       departDate: '',
@@ -7481,7 +6926,7 @@ exports.default = {
           descList = this.descList;
 
       var param = { range: range, today: today, departDate: departDate, arriveDate: arriveDate, selectedNote: selectedNote, descList: descList };
-      return Format.generateDateCell(param);
+      return Utils.generateDateCell(param);
     }
   },
   created: function created() {
@@ -7595,359 +7040,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 117 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports._getTraditionalHoliday = _getTraditionalHoliday;
-exports._isDate = _isDate;
-exports._checkHash = _checkHash;
-exports.getTime = getTime;
-exports._isInRange = _isInRange;
-exports._isInSelectRange = _isInSelectRange;
-exports._fixNum = _fixNum;
-exports._isWeekend = _isWeekend;
-exports._isToday = _isToday;
-exports._getMonthDays = _getMonthDays;
-exports._getPadding = _getPadding;
-exports._unique = _unique;
-exports.getToDay = getToDay;
-exports.getWeekRows = getWeekRows;
-exports.generateDateCell = generateDateCell;
-//国际节日
-var GLOBAL_HOLIDAY = exports.GLOBAL_HOLIDAY = {
-  '01-01': '元旦',
-  '02-14': '情人',
-  '05-01': '劳动',
-  '06-01': '儿童',
-  '10-01': '国庆',
-  '12-25': '圣诞'
-};
-
-//传统节日
-var TRADITIONAL_HOLIDAY = {
-  '除夕': ['2015-02-18', '2016-02-07', '2017-01-27', '2018-02-15', '2019-02-04', '2020-01-24'],
-  '春节': ['2015-02-19', '2016-02-08', '2017-01-28', '2018-02-16', '2019-02-05', '2020-01-25'],
-  '元宵': ['2015-03-05', '2016-02-22', '2017-02-11', '2018-03-02', '2019-02-19', '2020-02-08'],
-  '清明': ['2015-04-05', '2016-04-04', '2017-04-04', '2018-04-05', '2019-04-05', '2020-04-04'],
-  '端午': ['2015-06-20', '2016-06-09', '2017-05-30', '2018-06-18', '2019-06-07', '2020-06-25'],
-  '中秋': ['2015-09-27', '2016-09-15', '2017-10-04', '2018-09-24', '2019-09-13', '2020-10-01'],
-  '重阳': ['2015-10-21', '2016-10-09', '2017-10-28', '2018-10-17', '2019-10-07', '2020-10-25']
-};
-
-// 放假日
-var REST_DAYS = ['2017-10-01', '2017-10-02', '2017-10-03', '2017-10-04', '2017-10-05', '2017-10-06', '2017-10-07', '2017-10-08'];
-
-// 工作日
-var WORK_DAYS = ['2017-09-30'];
-
-function _getTraditionalHoliday() {
-  var HOLIDAY_TEMP = {};
-
-  var keys = Object.keys(TRADITIONAL_HOLIDAY);
-  keys.forEach(function (k, index) {
-    var arr = TRADITIONAL_HOLIDAY[k];
-    arr.forEach(function (i) {
-      HOLIDAY_TEMP[i] = k;
-    });
-  });
-
-  return HOLIDAY_TEMP;
-}
-
-function _isDate(obj) {
-  var type = obj == null ? String(obj) : {}.toString.call(obj) || 'object';
-  return type == '[object date]';
-}
-
-/**
- * 检测Hash
- *
- * @method _checkHash
- * @private
- */
-function _checkHash(url, hash) {
-  return url && url.match(/#/) && url.replace(/^.*#/, '') === hash;
-}
-/**
- * 获取当前日期的毫秒数
- * @method getTime
- * @param {String} date
- * @return {Number}
- */
-function getTime(date) {
-  if (_isDate(date)) {
-    return new Date(date).getTime();
-  } else {
-    try {
-      return new Date(date.replace(/-/g, '/')).getTime();
-    } catch (e) {
-      return 0;
-    }
-  }
-}
-
-function _isInRange(range, date) {
-  var start = getTime(range[0]),
-      end = getTime(range[1]),
-      date = getTime(date);
-  return start <= date && end >= date;
-}
-function _isInSelectRange(range, date) {
-  var start = getTime(range[0]),
-      end = getTime(range[1]),
-      date = getTime(date);
-  return start < date && end > date;
-}
-
-function _fixNum(num) {
-  return (num < 10 ? '0' : '') + num;
-}
-/**
- * 是否是周末
- * @method isWeekend
- * @param {String} date
- * @return {Boolean}
- */
-function _isWeekend(date) {
-  var day = new Date(date.replace(/-/g, '/')).getDay();
-  return day === 0 || day === 6;
-}
-
-/**
- * 是否是今天
- * @method isToday
- * @param {String} date
- * @return {Boolean}
- */
-function _isToday(_today, date) {
-  return getTime(_today) === getTime(date);
-}
-
-/**
- * 检查是否是闰年
- * @method _checkLeapYear
- * @param {Number} y 年份
- * @param {Date} t today
- * @protected
- */
-function _getMonthDays(y, t) {
-  var MONTH_DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-  var y = y || t.getFullYear(),
-      isLeapYear = false;
-
-  if (y % 100) {
-    isLeapYear = !(y % 4);
-  } else {
-    isLeapYear = !(y % 400);
-  }
-
-  if (isLeapYear) {
-    MONTH_DAYS[1] = 29;
-  } else {
-    MONTH_DAYS[1] = 28;
-  }
-  return MONTH_DAYS;
-}
-/**
- * 当月1号前面有多少空格
- * @method _getPadding
- * @protected
- */
-function _getPadding(year, month) {
-  var date = new Date(year + '/' + month + '/1'),
-      day = date.getDay();
-  return day;
-}
-
-function _unique(array) {
-  return Array.prototype.filter.call(array, function (item, index) {
-    return array.indexOf(item) == index;
-  });
-}
-
-function getToDay() {
-  return new Date().getFullYear() + '-' + _fixNum(new Date().getMonth() + 1) + '-' + _fixNum(new Date().getDate());
-}
-
-function getWeekRows(y, m, today, dateRange, departDate, arriveDate, selectedNote, descList) {
-  var monthDays = _getMonthDays(y, today);
-  var padding = _getPadding(y, m, 7);
-  var num = monthDays[m - 1] + padding;
-  var rows = Math.ceil(num / 7);
-  var remain = num % 7;
-  var rowsData = [];
-
-  for (var i = 1; i <= rows; i++) {
-    var row = {
-      index: i,
-      cells: []
-    };
-
-    for (var j = 1; j <= 7; j++) {
-      var cell = {};
-      // 前后空格
-      if (i === 1 && j <= padding || remain && i === rows && j > remain) {
-        cell.isEmpty = true;
-      } else {
-        (function () {
-          var d = (i - 1) * 7 + j - padding;
-          var date = y + '-' + _fixNum(m) + '-' + _fixNum(d);
-          var cls = [];
-          var ref = '';
-          var cellClass = [];
-          var isInRange = _isInRange(dateRange, date);
-          var disabled = false;
-          var global = _fixNum(m) + '-' + _fixNum(d);
-          var note = '';
-          var ext = '';
-
-          if (descList && descList.length > 0) {
-            var nowDesc = descList.filter(function (item) {
-              return item.date == date;
-            });
-            if (nowDesc && nowDesc.length > 0) {
-              ext = nowDesc[0].value;
-              if (nowDesc[0].emphasize) {
-                cls.push('calendar-holiday');
-              }
-            }
-          }
-
-          // 国际节日
-          if (GLOBAL_HOLIDAY[global]) {
-            note = GLOBAL_HOLIDAY[global];
-            cls.push('calendar-holiday');
-          }
-
-          var tHolidy = _getTraditionalHoliday()[date];
-
-          // 传统节日
-          if (tHolidy) {
-            note = tHolidy;
-            cls.push('calendar-holiday');
-          }
-          // 放假日
-          if (REST_DAYS.indexOf(date) > -1) {
-            cls.push('calendar-holiday');
-          }
-
-          // 工作日
-          if (WORK_DAYS.indexOf(date) > -1) {
-            cls.push('calendar-work');
-          }
-
-          // 周末
-          if (_isWeekend(date)) {
-            cls.push('calendar-holiday');
-          }
-
-          // 今天
-          if (_isToday(today, date)) {
-            cls.push('calendar-today');
-            note = '今天';
-          }
-
-          // 不在日期范围内
-          if (!isInRange) {
-            disabled = true;
-          }
-
-          if (disabled) {
-            cls = [];
-            cls.push('calendar-disabled');
-            cellClass.push('cell-disabled');
-          }
-
-          if (!ext && disabled && isInRange) {
-            ext = '不可选';
-          }
-
-          if (departDate === date || arriveDate === date) {
-            note = departDate === date ? selectedNote[0] : selectedNote[1];
-            ref = departDate === date ? 'departDate' : 'arriveDate';
-            if (departDate === arriveDate && selectedNote.length >= 3) {
-              note = selectedNote[2];
-            }
-            cls.push('item-text-selected');
-            cellClass.push('item-row-selected');
-          }
-
-          if (departDate && arriveDate && _isInSelectRange([departDate, arriveDate], date)) {
-            cellClass.push('calendar-day-include');
-          }
-
-          cell = {
-            isEmpty: false,
-            ref: ref,
-            cls: _unique(cls).join(' '),
-            cellClass: _unique(cellClass).join(' '),
-            note: note,
-            date: date,
-            ext: ext,
-            disabled: disabled,
-            year: y,
-            month: m,
-            day: d,
-            text: d
-          };
-        })();
-      }
-      row.cells.push(cell);
-    }
-
-    rowsData.push(row);
-  }
-
-  return rowsData;
-}
-
-function generateDateCell(_ref) {
-  var range = _ref.range,
-      today = _ref.today,
-      departDate = _ref.departDate,
-      arriveDate = _ref.arriveDate,
-      selectedNote = _ref.selectedNote,
-      descList = _ref.descList;
-
-  var start = new Date(range[0].replace(/-/g, '/'));
-  var end = new Date(range[1].replace(/-/g, '/'));
-  var startYear = start.getFullYear();
-  var startMonth = start.getMonth() + 1;
-  var startDate = start.getDate();
-  var endYear = end.getFullYear();
-  var endMonth = end.getMonth() + 1;
-  var endDate = end.getDate();
-  var i = 0;
-  var l = (endYear - startYear) * 12 + endMonth - startMonth + 1;
-  var y = startYear;
-  var n = startMonth;
-  var months = [];
-
-  for (; i < l; i++) {
-    if (n > 12) {
-      n = 1;
-      y++;
-    }
-    months.push({
-      title: y + '-' + _fixNum(n),
-      year: y,
-      month: n,
-      startDate: i === 0 ? startDate : false,
-      endDate: i === l - 1 ? endDate : false,
-      rowsData: getWeekRows(y, n, today, range, departDate, arriveDate, selectedNote, descList)
-    });
-    n++;
-  }
-  return months;
-}
-
-/***/ }),
+/* 117 */,
 /* 118 */
 /***/ (function(module, exports) {
 
@@ -9073,100 +8166,98 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 var _type = __webpack_require__(143);
 
-var _type2 = _interopRequireDefault(_type);
+var TYPES = _interopRequireWildcard(_type);
 
-var _utils = __webpack_require__(0);
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-var _utils2 = _interopRequireDefault(_utils);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 exports.default = {
   props: {
@@ -9195,7 +8286,7 @@ exports.default = {
       var type = this.type,
           customSet = this.customSet;
 
-      var allTypes = _utils2.default.isEmptyObject(customSet) ? _type2.default : _utils2.default.mergeDeep(_type2.default, customSet);
+      var allTypes = this.isEmptyObject(customSet) ? TYPES : this.mergeDeep(TYPES, customSet);
       var types = allTypes['errorPage'];
       if (['errorPage', 'noGoods', 'noNetwork', 'errorLocation'].indexOf(type) > -1) {
         types = allTypes[type];
@@ -9217,6 +8308,33 @@ exports.default = {
     onClick: function onClick() {
       var type = this.type;
       this.$emit('wxcResultButtonClicked', { type: type });
+    },
+    isObject: function isObject(item) {
+      return item && (typeof item === 'undefined' ? 'undefined' : _typeof(item)) === 'object' && !Array.isArray(item);
+    },
+    isEmptyObject: function isEmptyObject(obj) {
+      return Object.keys(obj).length === 0 && obj.constructor === Object;
+    },
+    mergeDeep: function mergeDeep(target) {
+      for (var _len = arguments.length, sources = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+        sources[_key - 1] = arguments[_key];
+      }
+
+      if (!sources.length) return target;
+      var source = sources.shift();
+      if (this.isObject(target) && this.isObject(source)) {
+        for (var key in source) {
+          if (this.isObject(source[key])) {
+            if (!target[key]) {
+              Object.assign(target, _defineProperty({}, key, {}));
+            }
+            this.mergeDeep(target[key], source[key]);
+          } else {
+            Object.assign(target, _defineProperty({}, key, source[key]));
+          }
+        }
+      }
+      return this.mergeDeep.apply(this, [target].concat(sources));
     }
   }
 };
@@ -9234,7 +8352,7 @@ Object.defineProperty(exports, "__esModule", {
 /**
  * Created by Tw93 on 2016/11/4.
  */
-exports.default = {
+var TYPE = exports.TYPE = {
   errorPage: {
     pic: '//gtms01.alicdn.com/tfs/TB1HH4TSpXXXXauXVXXXXXXXXXX-320-320.png',
     content: '抱歉出错了，飞猪正在全力解决中',
@@ -9393,7 +8511,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(377);
 
 var _utils2 = _interopRequireDefault(_utils);
 
@@ -9661,10 +8779,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(0);
-
-var _utils2 = _interopRequireDefault(_utils);
-
 var _wxcRichTextText = __webpack_require__(3);
 
 var _wxcRichTextText2 = _interopRequireDefault(_wxcRichTextText);
@@ -9685,6 +8799,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 
+var Utils = __webpack_require__(377);
 exports.default = {
   components: { WxcRichTextText: _wxcRichTextText2.default },
   props: {
@@ -9719,7 +8834,7 @@ exports.default = {
   methods: {
     onLinkClick: function onLinkClick(e) {
       var self = this;
-      _utils2.default.goToH5Page(self.linkHref);
+      Utils.goToH5Page(self.linkHref);
       self.$emit('wxcRichTextLinkClick', { element: e, href: self.linkHref });
     }
   }
@@ -10320,7 +9435,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(377);
 
 var _utils2 = _interopRequireDefault(_utils);
 
@@ -11902,13 +11017,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(385);
 
 var _utils2 = _interopRequireDefault(_utils);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var EB = weex.requireModule('expressionBinding'); //
+//
 //
 //
 //
@@ -11957,9 +11072,9 @@ var EB = weex.requireModule('expressionBinding'); //
 //
 //
 
+var EB = weex.requireModule('expressionBinding');
 var animation = weex.requireModule('animation');
 var dom = weex.requireModule('dom');
-
 exports.default = {
   data: function data() {
     return {
@@ -12858,7 +11973,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _utils = __webpack_require__(0);
+var _utils = __webpack_require__(386);
 
 var _utils2 = _interopRequireDefault(_utils);
 
@@ -13628,6 +12743,1628 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v(_vm._s(_vm.value))])]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
+
+/***/ }),
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _urlParse = __webpack_require__(11);
+
+var _urlParse2 = _interopRequireDefault(_urlParse);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Utils = {
+  UrlParser: _urlParse2.default,
+  /**
+   * 对象类型
+   * @memberOf Utils
+   * @param obj
+   * @returns {string}
+   * @private
+   */
+  _typeof: function _typeof(obj) {
+    return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
+  },
+
+
+  /**
+   * 判断 obj 是否为 `object`
+   * @memberOf Utils
+   * @param obj
+   * @returns {boolean}
+   * @example
+   *
+   * const { Utils } = require('@ali/wxv-bridge');
+   * const { isPlainObject } = Utils;
+   * console.log(isPlainObject({})); // true
+   * console.log(isPlainObject('')); // false
+   */
+  isPlainObject: function isPlainObject(obj) {
+    return Utils._typeof(obj) === 'object';
+  },
+
+
+  /**
+   * 判断 obj 是否为 `string`
+   * @memberOf Utils
+   * @param obj
+   * @returns {boolean}
+   * @example
+   *
+   * const { Utils } = require('@ali/wxv-bridge');
+   * const { isString } = Utils;
+   * console.log(isString({})); // false
+   * console.log(isString('')); // true
+   */
+  isString: function isString(obj) {
+    return typeof obj === 'string';
+  },
+
+
+  /**
+   * 判断 obj 是否为 `非空数组`
+   * @memberOf Utils
+   * @param obj
+   * @returns {boolean}
+   * @example
+   *
+   * const { Utils } = require('@ali/wxv-bridge');
+   * const { isNonEmptyArray } = Utils;
+   * console.log(isNonEmptyArray([])); // false
+   * console.log(isNonEmptyArray([1,1,1,1])); // true
+   */
+  isNonEmptyArray: function isNonEmptyArray() {
+    var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
+    return obj && obj.length > 0 && Array.isArray(obj) && typeof obj !== 'undefined';
+  },
+  appendProtocol: function appendProtocol(url) {
+    if (/^\/\//.test(url)) {
+      var bundleUrl = weex.config.bundleUrl;
+
+      return 'http' + (/^https:/.test(bundleUrl) ? 's' : '') + ':' + url;
+    }
+    return url;
+  },
+  encodeURLParams: function encodeURLParams(url) {
+    var parsedUrl = new _urlParse2.default(url, true);
+    return parsedUrl.toString();
+  },
+  goToH5Page: function goToH5Page(jumpUrl) {
+    var animated = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+    var Navigator = weex.requireModule('navigator');
+    var jumpUrlObj = new Utils.UrlParser(jumpUrl, true);
+    var url = Utils.appendProtocol(jumpUrlObj.toString());
+    Navigator.push({
+      url: Utils.encodeURLParams(url),
+      animated: animated
+    }, callback);
+  }
+}; /**
+    * Created by Tw93 on 2017/6/26.
+    */
+exports.default = Utils;
+
+/***/ }),
+/* 378 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.isIOS = isIOS;
+exports.isWeb = isWeb;
+exports.getPageHeight = getPageHeight;
+/**
+ * Created by Tw93 on 2017/6/26.
+ */
+
+function isIOS() {
+  var platform = weex.config.env.platform;
+
+  return platform.toLowerCase() === 'ios';
+}
+
+function isWeb() {
+  var platform = weex.config.env.platform;
+
+  return (typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object' && platform.toLowerCase() === 'web';
+}
+
+function getPageHeight() {
+  var env = weex.config.env;
+
+  var navHeight = isWeb() ? 0 : 130;
+  return env.deviceHeight / env.deviceWidth * 750 - navHeight;
+}
+
+/***/ }),
+/* 379 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Created by Tw93 on 2017/6/26.
+ */
+var UrlParser = __webpack_require__(11);
+var Utils = {
+  UrlParser: UrlParser,
+  appendProtocol: function appendProtocol(url) {
+    if (/^\/\//.test(url)) {
+      var bundleUrl = weex.config.bundleUrl;
+
+      return 'http' + (/^https:/.test(bundleUrl) ? 's' : '') + ':' + url;
+    }
+    return url;
+  },
+  encodeURLParams: function encodeURLParams(url) {
+    var parsedUrl = new UrlParser(url, true);
+    return parsedUrl.toString();
+  },
+  goToH5Page: function goToH5Page(jumpUrl) {
+    var animated = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+    var Navigator = weex.requireModule('navigator');
+    var jumpUrlObj = new Utils.UrlParser(jumpUrl, true);
+    var url = Utils.appendProtocol(jumpUrlObj.toString());
+    Navigator && Navigator.push({
+      url: Utils.encodeURLParams(url),
+      animated: animated
+    }, callback);
+  }
+};
+exports.default = Utils;
+
+/***/ }),
+/* 380 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/**
+ * 工具方法库
+ * @namespace Utils
+ * @example
+ */
+var Utils = {
+
+  /**
+   * 环境判断辅助 API
+   * @namespace Utils.env
+   * @example
+   *
+   *
+   * const { env } = Utils;
+   */
+  env: {
+
+    /**
+     * 是否是手淘容器
+     * @method
+     * @memberOf Utils.env
+     * @returns {boolean}
+     * @example
+     *
+     * const isTaobao = env.isTaobao();
+     */
+    isTaobao: function isTaobao() {
+      var appName = weex.config.env.appName;
+
+      return (/(tb|taobao|淘宝)/i.test(appName)
+      );
+    },
+
+
+    /**
+     * 是否是旅客容器
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isTrip = env.isTrip();
+     */
+    isTrip: function isTrip() {
+      var appName = weex.config.env.appName;
+
+      return appName === 'LX';
+    },
+
+    /**
+     * 是否是 web 环境
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isWeb = env.isWeb();
+     */
+    isWeb: function isWeb() {
+      var platform = weex.config.env.platform;
+
+      return (typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object' && platform.toLowerCase() === 'web';
+    },
+
+    /**
+     * 是否是 iOS 系统
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isIOS = env.isIOS();
+     */
+    isIOS: function isIOS() {
+      var platform = weex.config.env.platform;
+
+      return platform.toLowerCase() === 'ios';
+    },
+
+    /**
+     * 是否是 Android 系统
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isAndroid = env.isAndroid();
+     */
+    isAndroid: function isAndroid() {
+      var platform = weex.config.env.platform;
+
+      return platform.toLowerCase() === 'android';
+    },
+
+
+    /**
+     * 是否是支付宝容器
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isAlipay = env.isAlipay();
+     */
+    isAlipay: function isAlipay() {
+      var appName = weex.config.env.appName;
+
+      return appName === 'AP';
+    },
+
+
+    /**
+     * 是否是支付宝H5容器(防止以后支付宝接入weex)
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isAlipayWeb = env.isAlipayWeb();
+     */
+    isAlipayWeb: function isAlipayWeb() {
+      return Utils.env.isAlipay() && Utils.env.isWeb();
+    },
+
+
+    /**
+     * 判断是否支持expressionBinding
+     * 当weex版本大于0.10.1.6，为客户端即可以支持expressionBinding
+     * @returns {Boolean}
+     */
+    supportsEB: function supportsEB() {
+      var weexVersion = weex.config.env.weexVersion || '0';
+      var isHighWeex = Utils.compareVersion(weexVersion, '0.10.1.4') && (Utils.env.isIOS() || Utils.env.isAndroid());
+      var expressionBinding = weex.requireModule('expressionBinding');
+      return expressionBinding && expressionBinding.enableBinding && isHighWeex;
+    },
+
+
+    /**
+     * 判断Android容器是否支持是否支持expressionBinding(处理方式很不一致)
+     * @returns {boolean}
+     */
+    supportsEBForAndroid: function supportsEBForAndroid() {
+      return Utils.env.isAndroid() && Utils.env.supportsEB();
+    },
+
+
+    /**
+     * 判断IOS容器是否支持是否支持expressionBinding
+     * @returns {boolean}
+     */
+    supportsEBForIos: function supportsEBForIos() {
+      return Utils.env.isIOS() && Utils.env.supportsEB();
+    },
+
+
+    /**
+     * 获取weex屏幕真实的设置高度，需要减去导航栏高度
+     * @returns {Number}
+     */
+    getPageHeight: function getPageHeight() {
+      var env = weex.config.env;
+
+      var navHeight = Utils.env.isWeb() ? 0 : 130;
+      return env.deviceHeight / env.deviceWidth * 750 - navHeight;
+    }
+  },
+
+  /**
+   * 版本号比较
+   * @memberOf Utils
+   * @param currVer {string}
+   * @param promoteVer {string}
+   * @returns {boolean}
+   * @example
+   *
+   * const { Utils } = require('@ali/wx-bridge');
+   * const { compareVersion } = Utils;
+   * console.log(compareVersion('0.1.100', '0.1.11')); // 'true'
+   */
+  compareVersion: function compareVersion() {
+    var currVer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "0.0.0";
+    var promoteVer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0.0.0";
+
+    if (currVer === promoteVer) return true;
+    var currVerArr = currVer.split(".");
+    var promoteVerArr = promoteVer.split(".");
+    var len = Math.max(currVerArr.length, promoteVerArr.length);
+    for (var i = 0; i < len; i++) {
+      var proVal = ~~promoteVerArr[i];
+      var curVal = ~~currVerArr[i];
+      if (proVal < curVal) {
+        return true;
+      } else if (proVal > curVal) {
+        return false;
+      }
+    }
+    return false;
+  }
+};
+
+exports.default = Utils;
+
+/***/ }),
+/* 381 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.formatTotalList = formatTotalList;
+exports.arrayChunk = arrayChunk;
+exports.getSpecialData = getSpecialData;
+exports.getPageHeight = getPageHeight;
+exports.isWeb = isWeb;
+/**
+ * 根据26个字母取每一项首字母对数据进行排序,处理数据变换
+ * @param  {object}
+ * @return {[array]}
+ */
+function formatTotalList(source, hotListConfig, cityLocationConfig) {
+  var LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var res = [];
+  LETTERS.split('').forEach(function (letter) {
+    var _data = source.filter(function (item) {
+      if (item.pinYin) {
+        return item.pinYin.slice(0, 1).toLowerCase() === letter.toLowerCase();
+      } else if (item.py) {
+        return item.py.slice(0, 1).toLowerCase() === letter.toLowerCase();
+      } else {
+        return false;
+      }
+    });
+    if (_data.length) {
+      res.push({
+        title: letter,
+        data: _data,
+        type: 'list'
+      });
+    }
+  });
+
+  // 处理热门数据
+  var hotList = getSpecialData(hotListConfig);
+  hotList && res.unshift(hotList);
+
+  // 处理特殊定位数据
+  var cityLocation = getSpecialData(cityLocationConfig);
+  cityLocation && res.unshift(cityLocation);
+
+  return res;
+}
+
+/**
+ * 分割数组
+ * @param arr 被分割数组
+ * @param size 分割数组的长度
+ * @returns {Array}
+ */
+function arrayChunk() {
+  var arr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var size = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
+
+  var groups = [];
+  if (arr && arr.length > 0) {
+    groups = arr.map(function (e, i) {
+      return i % size === 0 ? arr.slice(i, i + size) : null;
+    }).filter(function (e) {
+      return e;
+    });
+  }
+  return groups;
+}
+
+function getSpecialData(data) {
+  if (data && data.type && data.list && data.list.length > 0) {
+    var type = data.type,
+        title = data.title,
+        list = data.list;
+
+    var res = {
+      title: title,
+      type: type,
+      data: type === 'group' ? arrayChunk(list) : list
+    };
+    return res;
+  } else {
+    return null;
+  }
+}
+
+function getPageHeight() {
+  var env = weex.config.env;
+
+  var navHeight = isWeb() ? 0 : 130;
+  return env.deviceHeight / env.deviceWidth * 750 - navHeight;
+}
+
+function isWeb() {
+  var platform = weex.config.env.platform;
+
+  return (typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object' && platform.toLowerCase() === 'web';
+}
+
+/***/ }),
+/* 382 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports.compareVersion = compareVersion;
+exports.isTrip = isTrip;
+exports.isAndroid = isAndroid;
+exports.isWeb = isWeb;
+exports.getPageHeight = getPageHeight;
+/**
+ * Created by Tw93 on 2017/6/26.
+ */
+
+function compareVersion() {
+  var currVer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "0.0.0";
+  var promoteVer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0.0.0";
+
+  if (currVer === promoteVer) return true;
+  var currVerArr = currVer.split(".");
+  var promoteVerArr = promoteVer.split(".");
+  var len = Math.max(currVerArr.length, promoteVerArr.length);
+  for (var i = 0; i < len; i++) {
+    var proVal = ~~promoteVerArr[i];
+    var curVal = ~~currVerArr[i];
+    if (proVal < curVal) {
+      return true;
+    } else if (proVal > curVal) {
+      return false;
+    }
+  }
+  return false;
+}
+
+function isTrip() {
+  var appName = weex.config.env.appName;
+
+  return appName === 'LX';
+}
+
+function isAndroid() {
+  var platform = weex.config.env.platform;
+
+  return platform.toLowerCase() === 'android';
+}
+
+function isWeb() {
+  var platform = weex.config.env.platform;
+
+  return (typeof window === "undefined" ? "undefined" : _typeof(window)) === 'object' && platform.toLowerCase() === 'web';
+}
+
+function getPageHeight() {
+  var env = weex.config.env;
+
+  var navHeight = isWeb() ? 0 : 130;
+  return env.deviceHeight / env.deviceWidth * 750 - navHeight;
+}
+
+/***/ }),
+/* 383 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _urlParse = __webpack_require__(11);
+
+var _urlParse2 = _interopRequireDefault(_urlParse);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Utils = {
+  UrlParser: _urlParse2.default,
+  appendProtocol: function appendProtocol(url) {
+    if (/^\/\//.test(url)) {
+      var bundleUrl = weex.config.bundleUrl;
+
+      return 'http' + (/^https:/.test(bundleUrl) ? 's' : '') + ':' + url;
+    }
+    return url;
+  },
+  encodeURLParams: function encodeURLParams(url) {
+    var parsedUrl = new _urlParse2.default(url, true);
+    return parsedUrl.toString();
+  },
+  goToH5Page: function goToH5Page(jumpUrl) {
+    var animated = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+    var Navigator = weex.requireModule('navigator');
+    var jumpUrlObj = new Utils.UrlParser(jumpUrl, true);
+    var url = Utils.appendProtocol(jumpUrlObj.toString());
+    Navigator.push({
+      url: Utils.encodeURLParams(url),
+      animated: animated
+    }, callback);
+  }
+}; /**
+    * Created by Tw93 on 2017/6/26.
+    */
+
+exports.default = Utils;
+
+/***/ }),
+/* 384 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+exports._getTraditionalHoliday = _getTraditionalHoliday;
+exports._isDate = _isDate;
+exports._checkHash = _checkHash;
+exports.getTime = getTime;
+exports._isInRange = _isInRange;
+exports._isInSelectRange = _isInSelectRange;
+exports._fixNum = _fixNum;
+exports._isWeekend = _isWeekend;
+exports._isToday = _isToday;
+exports._getMonthDays = _getMonthDays;
+exports._getPadding = _getPadding;
+exports._unique = _unique;
+exports.getToDay = getToDay;
+exports.getWeekRows = getWeekRows;
+exports.generateDateCell = generateDateCell;
+exports.isWeb = isWeb;
+//国际节日
+var GLOBAL_HOLIDAY = exports.GLOBAL_HOLIDAY = {
+  '01-01': '元旦',
+  '02-14': '情人',
+  '05-01': '劳动',
+  '06-01': '儿童',
+  '10-01': '国庆',
+  '12-25': '圣诞'
+};
+
+//传统节日
+var TRADITIONAL_HOLIDAY = {
+  '除夕': ['2015-02-18', '2016-02-07', '2017-01-27', '2018-02-15', '2019-02-04', '2020-01-24'],
+  '春节': ['2015-02-19', '2016-02-08', '2017-01-28', '2018-02-16', '2019-02-05', '2020-01-25'],
+  '元宵': ['2015-03-05', '2016-02-22', '2017-02-11', '2018-03-02', '2019-02-19', '2020-02-08'],
+  '清明': ['2015-04-05', '2016-04-04', '2017-04-04', '2018-04-05', '2019-04-05', '2020-04-04'],
+  '端午': ['2015-06-20', '2016-06-09', '2017-05-30', '2018-06-18', '2019-06-07', '2020-06-25'],
+  '中秋': ['2015-09-27', '2016-09-15', '2017-10-04', '2018-09-24', '2019-09-13', '2020-10-01'],
+  '重阳': ['2015-10-21', '2016-10-09', '2017-10-28', '2018-10-17', '2019-10-07', '2020-10-25']
+};
+
+// 放假日
+var REST_DAYS = ['2017-10-01', '2017-10-02', '2017-10-03', '2017-10-04', '2017-10-05', '2017-10-06', '2017-10-07', '2017-10-08'];
+
+// 工作日
+var WORK_DAYS = ['2017-09-30'];
+
+function _getTraditionalHoliday() {
+  var HOLIDAY_TEMP = {};
+
+  var keys = Object.keys(TRADITIONAL_HOLIDAY);
+  keys.forEach(function (k, index) {
+    var arr = TRADITIONAL_HOLIDAY[k];
+    arr.forEach(function (i) {
+      HOLIDAY_TEMP[i] = k;
+    });
+  });
+
+  return HOLIDAY_TEMP;
+}
+
+function _isDate(obj) {
+  var type = obj == null ? String(obj) : {}.toString.call(obj) || 'object';
+  return type == '[object date]';
+}
+
+/**
+ * 检测Hash
+ *
+ * @method _checkHash
+ * @private
+ */
+function _checkHash(url, hash) {
+  return url && url.match(/#/) && url.replace(/^.*#/, '') === hash;
+}
+/**
+ * 获取当前日期的毫秒数
+ * @method getTime
+ * @param {String} date
+ * @return {Number}
+ */
+function getTime(date) {
+  if (_isDate(date)) {
+    return new Date(date).getTime();
+  } else {
+    try {
+      return new Date(date.replace(/-/g, '/')).getTime();
+    } catch (e) {
+      return 0;
+    }
+  }
+}
+
+function _isInRange(range, date) {
+  var start = getTime(range[0]),
+      end = getTime(range[1]),
+      date = getTime(date);
+  return start <= date && end >= date;
+}
+function _isInSelectRange(range, date) {
+  var start = getTime(range[0]),
+      end = getTime(range[1]),
+      date = getTime(date);
+  return start < date && end > date;
+}
+
+function _fixNum(num) {
+  return (num < 10 ? '0' : '') + num;
+}
+/**
+ * 是否是周末
+ * @method isWeekend
+ * @param {String} date
+ * @return {Boolean}
+ */
+function _isWeekend(date) {
+  var day = new Date(date.replace(/-/g, '/')).getDay();
+  return day === 0 || day === 6;
+}
+
+/**
+ * 是否是今天
+ * @method isToday
+ * @param {String} date
+ * @return {Boolean}
+ */
+function _isToday(_today, date) {
+  return getTime(_today) === getTime(date);
+}
+
+/**
+ * 检查是否是闰年
+ * @method _checkLeapYear
+ * @param {Number} y 年份
+ * @param {Date} t today
+ * @protected
+ */
+function _getMonthDays(y, t) {
+  var MONTH_DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  var y = y || t.getFullYear(),
+      isLeapYear = false;
+
+  if (y % 100) {
+    isLeapYear = !(y % 4);
+  } else {
+    isLeapYear = !(y % 400);
+  }
+
+  if (isLeapYear) {
+    MONTH_DAYS[1] = 29;
+  } else {
+    MONTH_DAYS[1] = 28;
+  }
+  return MONTH_DAYS;
+}
+/**
+ * 当月1号前面有多少空格
+ * @method _getPadding
+ * @protected
+ */
+function _getPadding(year, month) {
+  var date = new Date(year + '/' + month + '/1'),
+      day = date.getDay();
+  return day;
+}
+
+function _unique(array) {
+  return Array.prototype.filter.call(array, function (item, index) {
+    return array.indexOf(item) == index;
+  });
+}
+
+function getToDay() {
+  return new Date().getFullYear() + '-' + _fixNum(new Date().getMonth() + 1) + '-' + _fixNum(new Date().getDate());
+}
+
+function getWeekRows(y, m, today, dateRange, departDate, arriveDate, selectedNote, descList) {
+  var monthDays = _getMonthDays(y, today);
+  var padding = _getPadding(y, m, 7);
+  var num = monthDays[m - 1] + padding;
+  var rows = Math.ceil(num / 7);
+  var remain = num % 7;
+  var rowsData = [];
+
+  for (var i = 1; i <= rows; i++) {
+    var row = {
+      index: i,
+      cells: []
+    };
+
+    for (var j = 1; j <= 7; j++) {
+      var cell = {};
+      // 前后空格
+      if (i === 1 && j <= padding || remain && i === rows && j > remain) {
+        cell.isEmpty = true;
+      } else {
+        (function () {
+          var d = (i - 1) * 7 + j - padding;
+          var date = y + '-' + _fixNum(m) + '-' + _fixNum(d);
+          var cls = [];
+          var ref = '';
+          var cellClass = [];
+          var isInRange = _isInRange(dateRange, date);
+          var disabled = false;
+          var global = _fixNum(m) + '-' + _fixNum(d);
+          var note = '';
+          var ext = '';
+
+          if (descList && descList.length > 0) {
+            var nowDesc = descList.filter(function (item) {
+              return item.date == date;
+            });
+            if (nowDesc && nowDesc.length > 0) {
+              ext = nowDesc[0].value;
+              if (nowDesc[0].emphasize) {
+                cls.push('calendar-holiday');
+              }
+            }
+          }
+
+          // 国际节日
+          if (GLOBAL_HOLIDAY[global]) {
+            note = GLOBAL_HOLIDAY[global];
+            cls.push('calendar-holiday');
+          }
+
+          var tHolidy = _getTraditionalHoliday()[date];
+
+          // 传统节日
+          if (tHolidy) {
+            note = tHolidy;
+            cls.push('calendar-holiday');
+          }
+          // 放假日
+          if (REST_DAYS.indexOf(date) > -1) {
+            cls.push('calendar-holiday');
+          }
+
+          // 工作日
+          if (WORK_DAYS.indexOf(date) > -1) {
+            cls.push('calendar-work');
+          }
+
+          // 周末
+          if (_isWeekend(date)) {
+            cls.push('calendar-holiday');
+          }
+
+          // 今天
+          if (_isToday(today, date)) {
+            cls.push('calendar-today');
+            note = '今天';
+          }
+
+          // 不在日期范围内
+          if (!isInRange) {
+            disabled = true;
+          }
+
+          if (disabled) {
+            cls = [];
+            cls.push('calendar-disabled');
+            cellClass.push('cell-disabled');
+          }
+
+          if (!ext && disabled && isInRange) {
+            ext = '不可选';
+          }
+
+          if (departDate === date || arriveDate === date) {
+            note = departDate === date ? selectedNote[0] : selectedNote[1];
+            ref = departDate === date ? 'departDate' : 'arriveDate';
+            if (departDate === arriveDate && selectedNote.length >= 3) {
+              note = selectedNote[2];
+            }
+            cls.push('item-text-selected');
+            cellClass.push('item-row-selected');
+          }
+
+          if (departDate && arriveDate && _isInSelectRange([departDate, arriveDate], date)) {
+            cellClass.push('calendar-day-include');
+          }
+
+          cell = {
+            isEmpty: false,
+            ref: ref,
+            cls: _unique(cls).join(' '),
+            cellClass: _unique(cellClass).join(' '),
+            note: note,
+            date: date,
+            ext: ext,
+            disabled: disabled,
+            year: y,
+            month: m,
+            day: d,
+            text: d
+          };
+        })();
+      }
+      row.cells.push(cell);
+    }
+
+    rowsData.push(row);
+  }
+
+  return rowsData;
+}
+
+function generateDateCell(_ref) {
+  var range = _ref.range,
+      today = _ref.today,
+      departDate = _ref.departDate,
+      arriveDate = _ref.arriveDate,
+      selectedNote = _ref.selectedNote,
+      descList = _ref.descList;
+
+  var start = new Date(range[0].replace(/-/g, '/'));
+  var end = new Date(range[1].replace(/-/g, '/'));
+  var startYear = start.getFullYear();
+  var startMonth = start.getMonth() + 1;
+  var startDate = start.getDate();
+  var endYear = end.getFullYear();
+  var endMonth = end.getMonth() + 1;
+  var endDate = end.getDate();
+  var i = 0;
+  var l = (endYear - startYear) * 12 + endMonth - startMonth + 1;
+  var y = startYear;
+  var n = startMonth;
+  var months = [];
+
+  for (; i < l; i++) {
+    if (n > 12) {
+      n = 1;
+      y++;
+    }
+    months.push({
+      title: y + '-' + _fixNum(n),
+      year: y,
+      month: n,
+      startDate: i === 0 ? startDate : false,
+      endDate: i === l - 1 ? endDate : false,
+      rowsData: getWeekRows(y, n, today, range, departDate, arriveDate, selectedNote, descList)
+    });
+    n++;
+  }
+  return months;
+}
+
+function isWeb() {
+  var platform = weex.config.env.platform;
+
+  return (typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object' && platform.toLowerCase() === 'web';
+}
+
+/***/ }),
+/* 385 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/**
+ * 工具方法库
+ * @namespace Utils
+ */
+var Utils = {
+
+  env: {
+
+    /**
+     * 是否是手淘容器
+     * @method
+     * @memberOf Utils.env
+     * @returns {boolean}
+     * @example
+     *
+     * const isTaobao = env.isTaobao();
+     */
+    isTaobao: function isTaobao() {
+      var appName = weex.config.env.appName;
+
+      return (/(tb|taobao|淘宝)/i.test(appName)
+      );
+    },
+
+
+    /**
+     * 是否是旅客容器
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isTrip = env.isTrip();
+     */
+    isTrip: function isTrip() {
+      var appName = weex.config.env.appName;
+
+      return appName === 'LX';
+    },
+
+    /**
+     * 是否是 web 环境
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isWeb = env.isWeb();
+     */
+    isWeb: function isWeb() {
+      var platform = weex.config.env.platform;
+
+      return (typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object' && platform.toLowerCase() === 'web';
+    },
+
+    /**
+     * 是否是 iOS 系统
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isIOS = env.isIOS();
+     */
+    isIOS: function isIOS() {
+      var platform = weex.config.env.platform;
+
+      return platform.toLowerCase() === 'ios';
+    },
+
+    /**
+     * 是否是 Android 系统
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isAndroid = env.isAndroid();
+     */
+    isAndroid: function isAndroid() {
+      var platform = weex.config.env.platform;
+
+      return platform.toLowerCase() === 'android';
+    },
+
+
+    /**
+     * 是否是支付宝容器
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isAlipay = env.isAlipay();
+     */
+    isAlipay: function isAlipay() {
+      var appName = weex.config.env.appName;
+
+      return appName === 'AP';
+    },
+
+
+    /**
+     * 是否是支付宝H5容器(防止以后支付宝接入weex)
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isAlipayWeb = env.isAlipayWeb();
+     */
+    isAlipayWeb: function isAlipayWeb() {
+      return Utils.env.isAlipay() && Utils.env.isWeb();
+    },
+
+
+    /**
+     * 判断是否支持expressionBinding
+     * 当weex版本大于0.10.1.6，为客户端即可以支持expressionBinding
+     * @returns {Boolean}
+     */
+    supportsEB: function supportsEB() {
+      var weexVersion = weex.config.env.weexVersion || '0';
+      var isHighWeex = Utils.compareVersion(weexVersion, '0.10.1.4') && (Utils.env.isIOS() || Utils.env.isAndroid());
+      var expressionBinding = weex.requireModule('expressionBinding');
+      return expressionBinding && expressionBinding.enableBinding && isHighWeex;
+    },
+
+
+    /**
+     * 判断Android容器是否支持是否支持expressionBinding(处理方式很不一致)
+     * @returns {boolean}
+     */
+    supportsEBForAndroid: function supportsEBForAndroid() {
+      return Utils.env.isAndroid() && Utils.env.supportsEB();
+    },
+
+
+    /**
+     * 判断IOS容器是否支持是否支持expressionBinding
+     * @returns {boolean}
+     */
+    supportsEBForIos: function supportsEBForIos() {
+      return Utils.env.isIOS() && Utils.env.supportsEB();
+    },
+
+
+    /**
+     * 获取weex屏幕真实的设置高度，需要减去导航栏高度
+     * @returns {Number}
+     */
+    getPageHeight: function getPageHeight() {
+      var env = weex.config.env;
+
+      var navHeight = Utils.env.isWeb() ? 0 : 130;
+      return env.deviceHeight / env.deviceWidth * 750 - navHeight;
+    }
+  },
+
+  /**
+   * 版本号比较
+   * @memberOf Utils
+   * @param currVer {string}
+   * @param promoteVer {string}
+   * @returns {boolean}
+   * @example
+   *
+   * const { compareVersion } = Utils;
+   * console.log(compareVersion('0.1.100', '0.1.11')); // 'true'
+   */
+  compareVersion: function compareVersion() {
+    var currVer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "0.0.0";
+    var promoteVer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0.0.0";
+
+    if (currVer === promoteVer) return true;
+    var currVerArr = currVer.split(".");
+    var promoteVerArr = promoteVer.split(".");
+    var len = Math.max(currVerArr.length, promoteVerArr.length);
+    for (var i = 0; i < len; i++) {
+      var proVal = ~~promoteVerArr[i];
+      var curVal = ~~currVerArr[i];
+      if (proVal < curVal) {
+        return true;
+      } else if (proVal > curVal) {
+        return false;
+      }
+    }
+    return false;
+  }
+};
+
+exports.default = Utils;
+
+/***/ }),
+/* 386 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _urlParse = __webpack_require__(11);
+
+var _urlParse2 = _interopRequireDefault(_urlParse);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Utils = {
+  UrlParser: _urlParse2.default,
+  isNonEmptyArray: function isNonEmptyArray() {
+    var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+
+    return obj && obj.length > 0 && Array.isArray(obj) && typeof obj !== 'undefined';
+  },
+  appendProtocol: function appendProtocol(url) {
+    if (/^\/\//.test(url)) {
+      var bundleUrl = weex.config.bundleUrl;
+
+      return 'http' + (/^https:/.test(bundleUrl) ? 's' : '') + ':' + url;
+    }
+    return url;
+  },
+  encodeURLParams: function encodeURLParams(url) {
+    var parsedUrl = new _urlParse2.default(url, true);
+    return parsedUrl.toString();
+  },
+  goToH5Page: function goToH5Page(jumpUrl) {
+    var animated = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+    var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+    var Navigator = weex.requireModule('navigator');
+    var jumpUrlObj = new Utils.UrlParser(jumpUrl, true);
+    var url = Utils.appendProtocol(jumpUrlObj.toString());
+    Navigator.push({
+      url: Utils.encodeURLParams(url),
+      animated: animated
+    }, callback);
+  },
+
+  /**
+   * 环境判断辅助 API
+   * @namespace Utils.env
+   * @example
+   *
+   * const { Utils } = require('@ali/wxv-bridge');
+   * const { env } = Utils;
+   */
+  env: {
+
+    /**
+     * 是否是手淘容器
+     * @method
+     * @memberOf Utils.env
+     * @returns {boolean}
+     * @example
+     *
+     * const isTaobao = env.isTaobao();
+     */
+    isTaobao: function isTaobao() {
+      var appName = weex.config.env.appName;
+
+      return (/(tb|taobao|淘宝)/i.test(appName)
+      );
+    },
+
+
+    /**
+     * 是否是旅客容器
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isTrip = env.isTrip();
+     */
+    isTrip: function isTrip() {
+      var appName = weex.config.env.appName;
+
+      return appName === 'LX';
+    },
+
+    /**
+     * 是否是 web 环境
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isWeb = env.isWeb();
+     */
+    isWeb: function isWeb() {
+      var platform = weex.config.env.platform;
+
+      return (typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object' && platform.toLowerCase() === 'web';
+    },
+
+    /**
+     * 是否是 iOS 系统
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isIOS = env.isIOS();
+     */
+    isIOS: function isIOS() {
+      var platform = weex.config.env.platform;
+
+      return platform.toLowerCase() === 'ios';
+    },
+
+    /**
+     * 是否是 Android 系统
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isAndroid = env.isAndroid();
+     */
+    isAndroid: function isAndroid() {
+      var platform = weex.config.env.platform;
+
+      return platform.toLowerCase() === 'android';
+    },
+
+
+    /**
+     * 是否是支付宝容器
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isAlipay = env.isAlipay();
+     */
+    isAlipay: function isAlipay() {
+      var appName = weex.config.env.appName;
+
+      return appName === 'AP';
+    },
+
+
+    /**
+     * 是否是支付宝H5容器(防止以后支付宝接入weex)
+     * @memberOf Utils.env
+     * @method
+     * @returns {boolean}
+     * @example
+     *
+     * const isAlipayWeb = env.isAlipayWeb();
+     */
+    isAlipayWeb: function isAlipayWeb() {
+      return Utils.env.isAlipay() && Utils.env.isWeb();
+    },
+
+
+    /**
+     * 判断是否支持expressionBinding
+     * 当weex版本大于0.10.1.6，为客户端即可以支持expressionBinding
+     * @returns {Boolean}
+     */
+    supportsEB: function supportsEB() {
+      var weexVersion = weex.config.env.weexVersion || '0';
+      var isHighWeex = Utils.compareVersion(weexVersion, '0.10.1.4') && (Utils.env.isIOS() || Utils.env.isAndroid());
+      var expressionBinding = weex.requireModule('expressionBinding');
+      return expressionBinding && expressionBinding.enableBinding && isHighWeex;
+    },
+
+
+    /**
+     * 判断Android容器是否支持是否支持expressionBinding(处理方式很不一致)
+     * @returns {boolean}
+     */
+    supportsEBForAndroid: function supportsEBForAndroid() {
+      return Utils.env.isAndroid() && Utils.env.supportsEB();
+    },
+
+
+    /**
+     * 判断IOS容器是否支持是否支持expressionBinding
+     * @returns {boolean}
+     */
+    supportsEBForIos: function supportsEBForIos() {
+      return Utils.env.isIOS() && Utils.env.supportsEB();
+    },
+
+
+    /**
+     * 获取weex屏幕真实的设置高度，需要减去导航栏高度
+     * @returns {Number}
+     */
+    getPageHeight: function getPageHeight() {
+      var env = weex.config.env;
+
+      var navHeight = Utils.env.isWeb() ? 0 : 130;
+      return env.deviceHeight / env.deviceWidth * 750 - navHeight;
+    }
+  },
+
+  /**
+   * 版本号比较
+   * @memberOf Utils
+   * @param currVer {string}
+   * @param promoteVer {string}
+   * @returns {boolean}
+   * @example
+   *
+   * const { Utils } = require('@ali/wx-bridge');
+   * const { compareVersion } = Utils;
+   * console.log(compareVersion('0.1.100', '0.1.11')); // 'true'
+   */
+  compareVersion: function compareVersion() {
+    var currVer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "0.0.0";
+    var promoteVer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0.0.0";
+
+    if (currVer === promoteVer) return true;
+    var currVerArr = currVer.split(".");
+    var promoteVerArr = promoteVer.split(".");
+    var len = Math.max(currVerArr.length, promoteVerArr.length);
+    for (var i = 0; i < len; i++) {
+      var proVal = ~~promoteVerArr[i];
+      var curVal = ~~currVerArr[i];
+      if (proVal < curVal) {
+        return true;
+      } else if (proVal > curVal) {
+        return false;
+      }
+    }
+    return false;
+  }
+};
+
+exports.default = Utils;
 
 /***/ })
 /******/ ]);
