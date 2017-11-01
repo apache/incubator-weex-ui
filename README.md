@@ -149,7 +149,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 |[wxc-noticebar](./packages/wxc-noticebar/README.md)|Feedback|Message prompt bar component|
 |[wxc-progress](./packages/wxc-progress/README.md)|Feedback|Progress bar|
 |[wxc-lottery-rain](./packages/wxc-lottery-rain/README.md)|Game|Cat-cat game|
-|[utils](./packages/packages/utils/README.md)|Service|Common function|
+|[utils](./packages/utils/README.md)|Service|Common function|
 
 `*` These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).
 
