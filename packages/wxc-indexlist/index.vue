@@ -61,13 +61,14 @@
 
 <script>
   const dom = weex.requireModule('dom');
-  import * as Utils from './utils'
+  import * as Format from './format';
+  import Utils from '../utils';
 
   export default {
     props: {
       height: {
         type: [Number, String],
-        default: Utils.getPageHeight()
+        default: Utils.env.getPageHeight()
       },
       normalList: {
         type: Array,
@@ -98,7 +99,7 @@
     computed: {
       formatList () {
         const { normalList, hotListConfig, cityLocationConfig } = this;
-        return Utils.formatTotalList(normalList, hotListConfig, cityLocationConfig);
+        return Format.totalList(normalList, hotListConfig, cityLocationConfig);
       }
     },
     data: () => ({

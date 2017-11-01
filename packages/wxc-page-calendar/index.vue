@@ -47,7 +47,8 @@
 </template>
 
 <script>
-  import * as Utils from './utils';
+  import * as Format from './format';
+  import Utils from '../utils';
 
   const dom = weex.requireModule('dom');
   const animation = weex.requireModule('animation');
@@ -92,8 +93,8 @@
       isShow: false,
       reSelect: true,
       useDefaultReturn: false,
-      showHeader: Utils.isWeb(),
-      today: Utils.getToDay(),
+      showHeader: Utils.env.isWeb(),
+      today: Format.getToDay(),
       calendarHeight: 1040,
       pageHeight: 1334,
       departDate: '',
@@ -103,7 +104,7 @@
       monthsArray () {
         const { dateRange: range, today, departDate, arriveDate, selectedNote, descList } = this;
         const param = { range, today, departDate, arriveDate, selectedNote, descList }
-        return Utils.generateDateCell(param);
+        return Format.generateDateCell(param);
       }
     },
     created () {

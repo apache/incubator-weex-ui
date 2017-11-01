@@ -59,10 +59,10 @@
 
 <script>
   import { PNG, GIF, BLACK_GIF } from './type';
-  import * as Utils from './utils';
+  import Utils from '../utils';
 
   const appVersion = weex.config.env.appVersion || '0';
-  const needShowPng = Utils.compareVersion('8.2.4', appVersion) && Utils.isTrip() && Utils.isAndroid();
+  const needShowPng = Utils.compareVersion('8.2.4', appVersion) && Utils.env.isTrip() && Utils.env.isAndroid();
   export default {
     props: {
       show: {
@@ -111,7 +111,7 @@
         return loading;
       },
       topPosition () {
-        return (Utils.getPageHeight() - 200) / 2;
+        return (Utils.env.getPageHeight() - 200) / 2;
       },
       needShow () {
         this.setShow();

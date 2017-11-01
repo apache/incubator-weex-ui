@@ -2,7 +2,7 @@
  * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 17/09/25
  */
-
+import Utils from './packages/utils'
 import WxcButton from './packages/wxc-button';
 import WxcCell from './packages/wxc-cell';
 import WxcCheckbox from './packages/wxc-checkbox';
@@ -37,6 +37,7 @@ import WxcTabPage from './packages/wxc-tab-page';
 import WxcTag from './packages/wxc-tag';
 
 export {
+  Utils,
   WxcButton,
   WxcCell,
   WxcCheckbox,

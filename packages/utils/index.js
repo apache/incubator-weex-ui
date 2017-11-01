@@ -1,9 +1,48 @@
+/**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
+ * Created by Tw93 on 17/11/01
+ */
+
 import UrlParser from 'url-parse';
 
 const Utils = {
   UrlParser: UrlParser,
+  _typeof (obj) {
+    return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
+  },
+  isPlainObject (obj) {
+    return Utils._typeof(obj) === 'object';
+  },
+  isString (obj) {
+    return typeof(obj) === 'string';
+  },
   isNonEmptyArray (obj = []) {
     return obj && obj.length > 0 && Array.isArray(obj) && typeof obj !== 'undefined';
+  },
+  isObject (item) {
+    return (item && typeof item === 'object' && !Array.isArray(item));
+  },
+  isEmptyObject (obj) {
+    return Object.keys(obj).length === 0 && obj.constructor === Object;
+  },
+  mergeDeep (target, ...sources) {
+    if (!sources.length) return target;
+    const source = sources.shift();
+    if (Utils.isObject(target) && Utils.isObject(source)) {
+      for (const key in source) {
+        if (Utils.isObject(source[key])) {
+          if (!target[key]) {
+            Object.assign(target, {
+              [key]: {}
+            });
+          }
+          Utils.mergeDeep(target[key], source[key]);
+        } else {
+          Object.assign(target, { [key]: source[key] });
+        }
+      }
+    }
+    return Utils.mergeDeep(target, ...sources);
   },
   appendProtocol (url) {
     if (/^\/\//.test(url)) {
@@ -27,117 +66,34 @@ const Utils = {
       animated: animated,
     }, callback);
   },
-  /**
-   * 环境判断辅助 API
-   * @namespace Utils.env
-   * @example
-   *
-   * const { Utils } = require('@ali/wxv-bridge');
-   * const { env } = Utils;
-   */
   env: {
-
-    /**
-     * 是否是手淘容器
-     * @method
-     * @memberOf Utils.env
-     * @returns {boolean}
-     * @example
-     *
-     * const isTaobao = env.isTaobao();
-     */
     isTaobao () {
       let { appName } = weex.config.env;
       return /(tb|taobao|淘宝)/i.test(appName);
     },
-
-
-    /**
-     * 是否是旅客容器
-     * @memberOf Utils.env
-     * @method
-     * @returns {boolean}
-     * @example
-     *
-     * const isTrip = env.isTrip();
-     */
     isTrip () {
       let { appName } = weex.config.env;
       return appName === 'LX';
     },
-    /**
-     * 是否是 web 环境
-     * @memberOf Utils.env
-     * @method
-     * @returns {boolean}
-     * @example
-     *
-     * const isWeb = env.isWeb();
-     */
     isWeb () {
       let { platform } = weex.config.env;
       return typeof(window) === 'object' && platform.toLowerCase() === 'web';
     },
-    /**
-     * 是否是 iOS 系统
-     * @memberOf Utils.env
-     * @method
-     * @returns {boolean}
-     * @example
-     *
-     * const isIOS = env.isIOS();
-     */
     isIOS () {
       let { platform } = weex.config.env;
       return platform.toLowerCase() === 'ios';
     },
-    /**
-     * 是否是 Android 系统
-     * @memberOf Utils.env
-     * @method
-     * @returns {boolean}
-     * @example
-     *
-     * const isAndroid = env.isAndroid();
-     */
     isAndroid () {
       let { platform } = weex.config.env;
       return platform.toLowerCase() === 'android';
     },
-
-    /**
-     * 是否是支付宝容器
-     * @memberOf Utils.env
-     * @method
-     * @returns {boolean}
-     * @example
-     *
-     * const isAlipay = env.isAlipay();
-     */
     isAlipay () {
       let { appName } = weex.config.env;
       return appName === 'AP';
     },
-
-    /**
-     * 是否是支付宝H5容器(防止以后支付宝接入weex)
-     * @memberOf Utils.env
-     * @method
-     * @returns {boolean}
-     * @example
-     *
-     * const isAlipayWeb = env.isAlipayWeb();
-     */
     isAlipayWeb () {
       return Utils.env.isAlipay() && Utils.env.isWeb();
     },
-
-
-    /**
-     * 判断是否支持expressionBinding
-     * 当weex版本大于0.10.1.6，为客户端即可以支持expressionBinding
-     * @returns {Boolean}
-     */
     supportsEB () {
       const weexVersion = weex.config.env.weexVersion || '0';
       const isHighWeex = Utils.compareVersion(weexVersion, '0.10.1.4') && (Utils.env.isIOS() || Utils.env.isAndroid());
@@ -199,6 +155,47 @@ const Utils = {
       }
     }
     return false;
+  },
+  /**
+   * 分割数组
+   * @param arr 被分割数组
+   * @param size 分割数组的长度
+   * @returns {Array}
+   */
+   arrayChunk (arr = [], size = 4) {
+    let groups = [];
+    if (arr && arr.length > 0) {
+      groups = arr.map((e, i) => {
+        return i % size === 0 ? arr.slice(i, i + size) : null;
+      }).filter(e => {
+        return e;
+      });
+    }
+    return groups;
+  },
+  truncateString (str, len, hasDot = true) {
+    let newLength = 0;
+    let newStr = "";
+    let singleChar = '';
+    const chineseRegex = /[^\x00-\xff]/g;
+    const strLength = str.replace(chineseRegex, '**').length;
+    for (let i = 0; i < strLength; i++) {
+      singleChar = str.charAt(i).toString();
+      if (singleChar.match(chineseRegex) !== null) {
+        newLength += 2;
+      } else {
+        newLength++;
+      }
+      if (newLength > len) {
+        break;
+      }
+      newStr += singleChar;
+    }
+
+    if (hasDot && strLength > len) {
+      newStr += '...';
+    }
+    return newStr;
   }
 };
 

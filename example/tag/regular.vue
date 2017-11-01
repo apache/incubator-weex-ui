@@ -22,12 +22,11 @@
 
 <script>
   import { WxcTag } from '../../index';
-
-  const demoData = require('./demo.data.js');
+  import Data from './data'
   export default {
     components: { WxcTag },
     data: () => ({
-      demoData
+      demoData:Data
     })
   }
 </script>

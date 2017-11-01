@@ -37,7 +37,7 @@
   const swipeBack = weex.requireModule('swipeBack');
   const expressionBinding = weex.requireModule('expressionBinding');
   const animation = weex.requireModule('animation');
-  import Utils from './utils';
+  import Utils from '../utils';
   export default {
     props: {
       sliderId: {

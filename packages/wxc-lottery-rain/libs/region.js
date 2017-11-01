@@ -3,7 +3,7 @@
  * 红包雨区域检测类
  */
 
-import * as Utils from './utils';
+import  Utils from '../../utils';
 
 const Region = {
   regions: [],
@@ -30,7 +30,7 @@ const Region = {
     }
     let i = 1000;
     const viewWidth = 750;
-    const viewHeight = Utils.getPageHeight();
+    const viewHeight = Utils.env.getPageHeight();
     let wrapWidth = viewWidth - width;
     let wrapHeight = viewHeight - height - 140;
     wrapHeight = wrapHeight < 0 ? 0 : wrapHeight;

@@ -114,13 +114,12 @@
 </style>
 
 <script>
-  import { WxcEpSlider, WxcPanItem } from '../../index';
+  const modal = weex.requireModule('modal');
+
+  import { WxcEpSlider, WxcPanItem, Utils } from '../../index';
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
   import { setTitle } from '../_mods/set-nav';
-
-  import Utils from './utils';
-  const modal = weex.requireModule('modal');
 
   export default {
     components: { Title, Category, WxcEpSlider, WxcPanItem },

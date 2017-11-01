@@ -325,10 +325,4 @@ export function generateDateCell({
   return months
 }
 
-export function isWeb() {
-  let {
-    platform
-  } = weex.config.env;
-  return typeof (window) === 'object' && platform.toLowerCase() === 'web';
-}
 

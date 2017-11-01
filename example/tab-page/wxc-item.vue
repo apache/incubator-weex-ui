@@ -225,10 +225,9 @@
 </style>
 
 <script>
-  import Utils from './utils';
-
   const expressionBinding = weex.requireModule('expressionBinding');
-  import { WxcRichText, WxcSpecialRichText } from '../../index';
+
+  import { WxcRichText, WxcSpecialRichText, Utils } from '../../index';
 
   export default {
     components: { WxcRichText, WxcSpecialRichText },

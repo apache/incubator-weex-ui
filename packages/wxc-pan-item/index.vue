@@ -14,7 +14,7 @@
 
 <script>
   const expressionBinding = weex.requireModule('expressionBinding');
-  import Utils from './utils.js';
+  import Utils from '../utils';
   module.exports = {
     props: {
       extId: {

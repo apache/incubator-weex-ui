@@ -4,9 +4,9 @@
  */
 
 const animation = weex.requireModule('animation');
-import * as Utils from './utils';
+import Utils from '../../utils';
 
-const isIos = Utils.isIOS();
+const isIos = Utils.env.isIOS();
 
 export function showPig (ref, duration, callback) {
   ref && animation.transition(ref, {

@@ -64,10 +64,9 @@
 <script>
   const dom = weex.requireModule('dom');
 
-  import { WxcTabPage } from '../../index';
+  import { WxcTabPage, Utils } from '../../index';
   import WxcItem from './wxc-item.vue';
 
-  import Utils from './utils';
   import Config from './config'
   import { setTitle } from '../_mods/set-nav';
 

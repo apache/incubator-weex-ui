@@ -105,7 +105,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 ```
 
 ### 更多
-- 如果你的`webpack.config.js`中 babel-loader 配置有对 node_modules 进行 exclude 处理，需要排除掉 weex-ui 包才可以使用 `exclude: /node_modules(?!\/.*(weex).*)/`。
+- 如果你的`webpack.config.js`中 babel-loader 配置有对 node_modules 进行 exclude 处理，需要将 weex-ui 包过滤才可以使用 `exclude: /node_modules(?!\/.*(weex).*)/`。
 - 你可以从[这里](https://github.com/alibaba/weex-ui/tree/master/example)找到更多地例子，一次编写，同时支持iOS / Android / Html5。
 
 ## 文档
@@ -139,6 +139,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 |[wxc-noticebar](./packages/wxc-noticebar/README.md)|反馈|信息通知栏|
 |[wxc-progress](./packages/wxc-progress/README.md)|反馈|进度条|
 |[wxc-lottery-rain](./packages/wxc-lottery-rain/README.md)|游戏|红包雨 抓猫猫游戏|
+|[utils](./packages/packages/utils/README.md)|服务|公共函数|
 
 `*` 这些富交互体验组件依赖于 Weex [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)。
 

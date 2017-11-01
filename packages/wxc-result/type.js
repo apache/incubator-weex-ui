@@ -1,7 +1,7 @@
 /**
  * Created by Tw93 on 2016/11/4.
  */
-export const TYPE = {
+export default {
   errorPage: {
     pic: '//gtms01.alicdn.com/tfs/TB1HH4TSpXXXXauXVXXXXXXXXXX-320-320.png',
     content: '抱歉出错了，飞猪正在全力解决中',

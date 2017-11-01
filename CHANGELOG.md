@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.2.1
+- [+] Stronger about wxc-ep-slider.
+- [!] Extraction of common functions.
+
 ## 0.2.0
 - [!] Update reference mode.
 - [!] Normalized structure.

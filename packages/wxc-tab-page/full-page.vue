@@ -94,7 +94,7 @@
   const swipeBack = weex.requireModule('swipeBack');
   const expressionBinding = weex.requireModule('expressionBinding');
 
-  import Utils from './utils';
+  import Utils from '../utils';
 
   const supportsEBForIos = Utils.env.supportsEBForIos();
   const isIos = Utils.env.isIOS();

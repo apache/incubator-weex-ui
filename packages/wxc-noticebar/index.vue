@@ -60,7 +60,7 @@
 
 <script>
   import ICON from './type';
-  import Utils from './utils';
+  import Utils from '../utils';
 
   export default {
     props: {

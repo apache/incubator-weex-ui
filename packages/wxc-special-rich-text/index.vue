@@ -68,7 +68,7 @@
 </style>
 
 <script>
-  import Utils from '../wxc-rich-text/utils';
+  import Utils from '../utils';
 
   import WxcRichTextText from '../wxc-rich-text/wxc-rich-text-text.vue';
   import WxcRichTextIcon from '../wxc-rich-text/wxc-rich-text-icon.vue';
