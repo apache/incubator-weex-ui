@@ -78,7 +78,7 @@
     data: () => ({
       configList: [{
         type: 'icon',
-        src: '//gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
+        src: 'https://gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
         style: {
           width: 24,
           height: 22
@@ -90,13 +90,13 @@
       }, {
         type: 'link',
         value: '自定义颜色link',
-        href: '//h5.m.taobao.com',
+        href: 'https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js',
         style: {
           color: '#546E7A'
         }
       }, {
         type: 'icon',
-        src: '//gw.alicdn.com/tfs/TB1qygJRXXXXXX2XFXXXXXXXXXX-117-37.png'
+        src: 'https://gw.alicdn.com/tfs/TB1qygJRXXXXXX2XFXXXXXXXXXX-117-37.png'
       }, {
         type: 'tag',
         value: '满100减20',
@@ -139,7 +139,7 @@
       specialConfigList1: [
         {
           type: 'icon',
-          src: '//gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
+          src: 'https://gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
           style: {
             width: 24,
             height: 22

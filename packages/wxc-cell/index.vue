@@ -135,7 +135,7 @@
       },
       arrowIcon: {
         type: String,
-        default: '//gw.alicdn.com/tfs/TB11zBUpwMPMeJjy1XbXXcwxVXa-22-22.png'
+        default: 'https://gw.alicdn.com/tfs/TB11zBUpwMPMeJjy1XbXXcwxVXa-22-22.png'
       },
       hasVerticalIndent: {
         type: Boolean,

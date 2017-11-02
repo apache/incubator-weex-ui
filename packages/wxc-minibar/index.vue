@@ -71,7 +71,7 @@
       },
       leftButton: {
         type: String,
-        default: '//gw.alicdn.com/tfs/TB1x18VpwMPMeJjy1XdXXasrXXa-21-36.png'
+        default: 'https://gw.alicdn.com/tfs/TB1x18VpwMPMeJjy1XdXXasrXXa-21-36.png'
       },
       textColor: {
         type: String,

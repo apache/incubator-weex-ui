@@ -43,7 +43,7 @@
       // 默认 x
       icon: {
         type: String,
-        default: '//gw.alicdn.com/tfs/TB1IAByhgMPMeJjy1XdXXasrXXa-38-34.png'
+        default: 'https://gw.alicdn.com/tfs/TB1IAByhgMPMeJjy1XdXXasrXXa-38-34.png'
       },
       // 正常状态文字色值
       color: {

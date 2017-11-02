@@ -34,7 +34,7 @@ npm install weex-ui --save
       <wxc-cell label="标题"
                 title="带链接"
                 :has-arrow="true"
-                link="//h5.m.taobao.com/trip/home/index.html"
+                link="https://h5.m.taobao.com/trip/home/index.html"
                 @wxcCellClicked="wxcCellClicked"
                 spm="181.12312312.12312.d01"
                 :has-top-border="false"></wxc-cell>

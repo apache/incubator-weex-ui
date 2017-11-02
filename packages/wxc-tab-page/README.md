@@ -36,7 +36,7 @@ npm install weex-ui --save
       <cell class="border-cell"></cell>
       <cell v-for="(demo,key) in v" class="cell" :key="key">
         <wxc-item url="//h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
-                  image="//gtd.alicdn.com/imgextra/TB12yGaNVXXXXX7aXXXSutbFXXX.jpg"
+                  image="https://gtd.alicdn.com/imgextra/TB12yGaNVXXXXX7aXXXSutbFXXX.jpg"
                   image-text="长沙出发"
                   title-line-count="2"
                   desc-line-count="1"

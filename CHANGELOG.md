@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.2.2
+- [!] Fix image link problem.
+
 ## 0.2.1
 - [+] Stronger about wxc-ep-slider.
 - [!] Extraction of common functions.

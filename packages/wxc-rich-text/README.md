@@ -40,7 +40,7 @@ npm install weex-ui --save
     data: () => ({
       configList: [{
         type: 'icon',
-        src: '//gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
+        src: 'https//gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
         style: {
           width: 24,
           height: 22

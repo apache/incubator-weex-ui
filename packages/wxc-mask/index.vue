@@ -119,7 +119,7 @@
       }
     },
     data: () => ({
-      closeIcon: '//gw.alicdn.com/tfs/TB1qDJUpwMPMeJjy1XdXXasrXXa-64-64.png',
+      closeIcon: 'https://gw.alicdn.com/tfs/TB1qDJUpwMPMeJjy1XdXXasrXXa-64-64.png',
       maskTop: 264,
       opacity: 0
     }),

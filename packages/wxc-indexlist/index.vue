@@ -23,7 +23,7 @@
                  class="group-item">
               <image v-if="item.isLocation"
                      class="location-icon"
-                     src="//gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png"></image>
+                     src="https://gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png"></image>
               <div class="item-content">
                 <text class="item-name">{{item.name}}</text>
                 <text class="item-desc"

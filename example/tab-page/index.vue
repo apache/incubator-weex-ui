@@ -17,8 +17,8 @@
       <cell v-for="(demo,key) in v"
             class="cell"
             :key="key">
-        <wxc-item url="//h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
-                  image="//gtd.alicdn.com/imgextra/TB12yGaNVXXXXX7aXXXSutbFXXX.jpg"
+        <wxc-item url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
+                  image="https://gtd.alicdn.com/imgextra/TB12yGaNVXXXXX7aXXXSutbFXXX.jpg"
                   :image-text="tabTitles[index].title"
                   title-line-count="2"
                   desc-line-count="1"
