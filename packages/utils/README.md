@@ -15,4 +15,4 @@ npm i weex-ui --save
   import { Utils } from 'weex-ui'
 </script>
 ```
-更详细代码可以参考 [utils](https://github.com/alibaba/weex-ui/blob/master/package/utils/index.js)
+更详细代码可以参考 [utils](https://github.com/alibaba/weex-ui/blob/master/packages/utils/index.js)
