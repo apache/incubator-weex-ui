@@ -7,7 +7,6 @@ npm-debug.log
 .sw*
 .idea/*
 .jshintrc
-.travis.yml
 .sass-cache/
 .project
 mods/.sass-cache/
