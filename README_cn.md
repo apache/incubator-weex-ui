@@ -1,8 +1,8 @@
 # Weex Ui 
 
-[![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600)](https://www.npmjs.com/package/weex-ui)
-[![NPM downloads](http://img.shields.io/npm/dm/weex-ui.svg)](https://npmjs.org/package/weex-ui)
-[![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://badges.gitter.im/alibaba-weex-ui/chat.svg)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+[![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/weex-ui)
+[![NPM downloads](http://img.shields.io/npm/dm/weex-ui.svg?style=flat-square)](https://npmjs.org/package/weex-ui)
+[![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://img.shields.io/gitter/room/alibaba/weex-ui.svg?style=flat-square)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 > 一个基于 [Weex](https://github.com/apache/incubator-weex) 的富交互、轻量级、高性能的 UI 组件库。
 
