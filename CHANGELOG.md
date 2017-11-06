@@ -3,6 +3,7 @@
 ## 0.2.3
 - [-] [#44](https://github.com/alibaba/weex-ui/issues/44) Remove the `overlay-can-close` prop in `wxc-mask`.
 - [-] [#45](https://github.com/alibaba/weex-ui/issues/45) Remove the useless style in `wxc-cell`.
+- [!] Fixed the `npm run start`
 
 ## 0.2.2
 - [!] Fix image link problem.
