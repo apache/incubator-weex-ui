@@ -161,7 +161,7 @@
       },
       showNoPrompt: {
         type: Boolean,
-        default: true
+        default: false
       },
       noPromptText: {
         type: String,

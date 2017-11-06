@@ -2003,6 +2003,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 /**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2017/10/21.
  */
 
@@ -2852,6 +2853,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 /**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2016/10/29.
  */
 
@@ -3769,6 +3771,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
+//
 
 var _option = __webpack_require__(58);
 
@@ -3971,6 +3974,7 @@ module.exports = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
 //
 //
 //
@@ -6559,6 +6563,7 @@ var _utils2 = _interopRequireDefault(_utils);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2017/09/06.
  * 红包雨动画类
  */
@@ -6736,6 +6741,7 @@ var Region = {
     }
   }
 }; /**
+    * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
     * Created by Tw93 on 2017/09/06.
     * 红包雨区域检测类
     */
@@ -7616,6 +7622,11 @@ exports._unique = _unique;
 exports.getToDay = getToDay;
 exports.getWeekRows = getWeekRows;
 exports.generateDateCell = generateDateCell;
+/**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
+ * Created by Tw93 on 2017/07/29.
+ */
+
 //国际节日
 var GLOBAL_HOLIDAY = exports.GLOBAL_HOLIDAY = {
   '01-01': '元旦',
@@ -9164,6 +9175,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 
 exports.default = {
   props: {
@@ -9229,8 +9241,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 /**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2016/11/4.
  */
+
 exports.default = {
   errorPage: {
     pic: 'https://gtms01.alicdn.com/tfs/TB1HH4TSpXXXXauXVXXXXXXXXXX-320-320.png',
@@ -10949,6 +10963,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 /**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2016/10/31.
  */
 
@@ -11211,6 +11226,7 @@ module.exports = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
 //
 //
 //
@@ -13425,6 +13441,8 @@ module.exports = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+//
+//
 //
 //
 //
