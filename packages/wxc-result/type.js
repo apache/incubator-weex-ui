@@ -1,6 +1,8 @@
 /**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2016/11/4.
  */
+
 export default {
   errorPage: {
     pic: 'https://gtms01.alicdn.com/tfs/TB1HH4TSpXXXXauXVXXXXXXXXXX-320-320.png',

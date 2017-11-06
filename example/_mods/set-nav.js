@@ -1,7 +1,9 @@
 /**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2017/7/26.
  * demo设置标题和右上角按钮
  */
+
 const navigationBar = weex.requireModule('navigationBar');
 const navigator = weex.requireModule('navigator')
 

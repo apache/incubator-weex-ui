@@ -1,3 +1,8 @@
+/**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
+ * Created by Tw93 on 2017/07/29.
+ */
+
 //国际节日
 export const GLOBAL_HOLIDAY = {
   '01-01': '元旦',

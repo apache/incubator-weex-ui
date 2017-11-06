@@ -1,4 +1,5 @@
 /**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2017/09/06.
  * 红包雨区域检测类
  */
