@@ -25,16 +25,14 @@ npm i weex-ui --save
     </div>
     <wxc-mask height="800"
               width="702"
-              overlay-opacity="0.6"
               border-radius="0"
               duration="200"
               mask-bg-color="#FFFFFF"
-              :overlay-can-close="overlayCanClose"
               :has-animation="hasAnimation"
-              :has-overlay="hasOverlay"
-              :show-close="showClose"
-              @wxcMaskSetHidden="wxcMaskSetHidden"
-              :show="show">
+              :has-overlay="true"
+              :show-close="true"
+              :show="show"
+              @wxcMaskSetHidden="wxcMaskSetHidden">
       <div class="content">
         <div class="demo-title">
           <text class="title">Weex帮助你构建原生应用</text>
@@ -55,8 +53,6 @@ npm i weex-ui --save
     components: { WxcMask },
     data: () => ({
       show: false,
-      showClose: true,
-      hasOverlay: true,
       overlayCanClose: true,
       isFalse: false,
       hasAnimation: true
@@ -96,7 +92,7 @@ npm i weex-ui --save
 | mask-bg-color | `String` | '#ffffff' |  mask的背景颜色 |
 | duration | `String` | '300' |  弹层出现时间 |
 | timing-function | `String` | 'ease-in' |  弹层出现动画方式 |
-| overlay-cfg | `Object` | '{ hasAnimation: true, timingFunction: ['ease-in', 'ease-out'], duration: 300, opacity: 0.6 }' |  蒙层配置参数，参考 [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md) 组件 |
+| overlay-cfg | `Object` | '{ hasAnimation: true, timingFunction: ['ease-in', 'ease-out'], duration: 300, opacity: 0.6,canAutoClose:true }' |  蒙层配置参数，参考 [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md) 组件 |
 
 
 ### 事件回调

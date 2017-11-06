@@ -1,6 +1,7 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
 <!-- Created by Tw93 on 16/10/25. -->
 <!--A Mask.-->
+
 <template>
   <div class="container">
     <wxc-overlay :show="show && hasOverlay"
@@ -101,6 +102,7 @@
         default: () => ({
           hasAnimation: true,
           timingFunction: ['ease-in', 'ease-out'],
+          canAutoClose: true,
           duration: 300,
           opacity: 0.6
         })

@@ -77,9 +77,6 @@
   .cell-arrow-icon {
     width: 22px;
     height: 22px;
-    position: absolute;
-    top: 41px;
-    right: 24px;
   }
 
   .cell-content {

@@ -1,4 +1,5 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+
 <template>
   <div class="wxc-demo">
     <scroller class="scroller">
@@ -15,16 +16,14 @@
       </div>
       <wxc-mask height="800"
                 width="702"
-                overlay-opacity="0.6"
                 border-radius="0"
                 duration="300"
                 mask-bg-color="#FFFFFF"
-                :overlay-can-close="overlayCanClose"
+                :has-overlay="true"
+                :show-close="true"
+                :show="show"
                 :has-animation="hasAnimation"
-                :has-overlay="hasOverlay"
-                :show-close="showClose"
-                @wxcMaskSetHidden="wxcMaskSetHidden"
-                :show="show">
+                @wxcMaskSetHidden="wxcMaskSetHidden">
         <div class="content">
           <div class="demo-title">
             <text class="title">Weex帮助你构建原生应用</text>
@@ -116,10 +115,6 @@
     components: { Title, Category, WxcMask },
     data: () => ({
       show: false,
-      showClose: true,
-      hasOverlay: true,
-      overlayCanClose: true,
-      isFalse: false,
       hasAnimation: true
     }),
     created () {

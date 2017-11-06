@@ -1627,10 +1627,7 @@ module.exports = {
   },
   "cell-arrow-icon": {
     "width": 22,
-    "height": 22,
-    "position": "absolute",
-    "top": 41,
-    "right": 24
+    "height": 22
   },
   "cell-content": {
     "color": "#333333",
@@ -5031,6 +5028,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 
 var animation = weex.requireModule('animation');
 exports.default = {
@@ -5076,6 +5074,7 @@ exports.default = {
         return {
           hasAnimation: true,
           timingFunction: ['ease-in', 'ease-out'],
+          canAutoClose: true,
           duration: 300,
           opacity: 0.6
         };
