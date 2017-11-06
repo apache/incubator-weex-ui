@@ -10,8 +10,7 @@
     "build": "webpack --progress",
     "watch": "webpack --progress --watch",
     "serve": "anywhere -d build/example/ -p 8080",
-    "start": "npm run build; npm run serve",
-    "dev": "npm run start; npm run serve & npm run watch"
+    "start": "npm run build; npm run serve & npm run watch"
   },
   "keywords": [
     "Weex Ui",

@@ -27,8 +27,11 @@ const plugins = [
   }),
   new CopyWebpackPlugin([
     { from: 'example/*/index.html' }
-  ]),
+  ])
 ];
+
+const needClean = process.argv.indexOf("--watch") > -1;
+needClean && plugins.shift();
 
 console.log('Building..., Please wait a moment.');
 
