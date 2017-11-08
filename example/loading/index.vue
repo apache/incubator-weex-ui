@@ -23,7 +23,7 @@
                slot="value"
                placeholder="局部Loading长度，默认36"
                :value="width"
-               @input="width=$event.value"></input>
+               @input="width=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
                 title="高度">
@@ -31,7 +31,7 @@
                slot="value"
                placeholder="局部Loading高度，默认36"
                :value="height"
-               @input="height=$event.value"></input>
+               @input="height=$event.value"/>
       </wxc-cell>
       <div class="blank"></div>
       <category title="页面Loading配置"></category>
@@ -58,7 +58,7 @@
                slot="value"
                placeholder="配置文案，默认无"
                :value="loadingText"
-               @input="loadingText=$event.value"></input>
+               @input="loadingText=$event.value"/>
       </wxc-cell>
     </scroller>
     <wxc-loading :show="isShow"
