@@ -34,7 +34,7 @@
                slot="value"
                placeholder="文字"
                :value="text"
-               @input="text=$event.value"></input>
+               @input="text=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
                 title="是否禁用">
@@ -49,7 +49,7 @@
                slot="value"
                placeholder="自定义样式实现, 默认宽度702px"
                :value="width"
-               @input="width=$event.value"></input>
+               @input="width=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
                 title="按钮高度">
@@ -57,7 +57,7 @@
                slot="value"
                placeholder="自定义样式实现, 默认高度88px"
                :value="height"
-               @input="height=$event.value"></input>
+               @input="height=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
                 title="背景颜色">
@@ -65,7 +65,7 @@
                slot="value"
                placeholder="自定义样式实现"
                :value="backgroundColor"
-               @input="backgroundColor=$event.value"></input>
+               @input="backgroundColor=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
                 title="边框颜色">
@@ -73,7 +73,7 @@
                slot="value"
                placeholder="自定义样式实现"
                :value="borderColor"
-               @input="borderColor=$event.value"></input>
+               @input="borderColor=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
                 title="边框圆角">
@@ -81,7 +81,7 @@
                slot="value"
                placeholder="自定义样式实现,默认12px"
                :value="borderRadius"
-               @input="borderRadius=$event.value"></input>
+               @input="borderRadius=$event.value"/>
       </wxc-cell>
       <div class="demo">
         <wxc-button :text="text"
