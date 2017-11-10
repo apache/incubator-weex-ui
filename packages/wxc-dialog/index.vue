@@ -8,7 +8,8 @@
                  :show="true"
                  :hasAnimation="false"></wxc-overlay>
     <div class="dialog-box"
-         v-if="show" :style="{top:top+'px'}">
+         v-if="show"
+         :style="{top:top+'px'}">
       <div class="dialog-content">
         <slot name="title">
           <text class="content-title">{{title}}</text>
