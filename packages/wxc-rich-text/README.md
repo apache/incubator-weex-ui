@@ -1,10 +1,11 @@
 # wxc-rich-text 
 
-> 一个Weex富文本的通用解决方案，支持text、icon、link、tag四种形式的混排。
+> 一个Weex富文本的通用解决方案，支持text、icon、link、tag四种形式的混排
 
 - 规则：
-  - 使用统一规范，前后端约定相关字段。
-  - text默认是`gray`、tag默认是`blue`、link默认是`black`主题。
+  - 使用统一规范，前后端约定相关字段
+  - text默认是`gray`、tag默认是`blue`、link默认是`black`主题
+  - wxc-rich-text用于支持一行通用图文混排情况，wxc-special-rich-text用于支持两行特殊情况（一个tag或icon 加 两行文本情况）
   - 具体如下：
   
       <img src="http://gtms04.alicdn.com/tfs/TB1kqcoRXXXXXa3XpXXXXXXXXXX-2102-2320.png" width="700"/>

@@ -86,6 +86,7 @@ npm install weex-ui --save
 |-------------|------------|--------|-----|
 | title | `String` | '' | `required`标题 |
 | content | `String` | '' | 内容说明描述 |
+| top | `Number` | `400` |  弹层距离顶部的高度 |
 | single | `Boolean` | '' |  是否只有一个按钮（显示确认） |
 | cancel-text | `String` | '取消' |  取消按钮文案定制 |
 | confirm-text | `String` | '确定' |  确定按钮文案定制 |
@@ -94,7 +95,6 @@ npm install weex-ui --save
 | show-no-prompt | `Boolean` | `false` |  是否显示不再提示 |
 | no-prompt-text | `String` | `不再提示` |  不再提示的文案 |
 | is-checked | `Boolean` | `false` |  不再提示是否勾选 |
-| mask-bg-color | `String` | `rgba(0,0,0,0.6)` |  蒙层的背景颜色 |
 
 
 ### 事件回调

@@ -3,10 +3,13 @@
 <!--A dialog. -->
 
 <template>
-  <mask class="mask"
-        v-if="show"
-        :style="{backgroundColor: maskBgColor,height:pageHeight+'px'}">
-    <div class="dialog-box">
+  <div class="container">
+    <wxc-overlay v-if="show"
+                 :show="true"
+                 :hasAnimation="false"></wxc-overlay>
+    <div class="dialog-box"
+         v-if="show"
+         :style="{top:top+'px'}">
       <div class="dialog-content">
         <slot name="title">
           <text class="content-title">{{title}}</text>
@@ -36,20 +39,22 @@
         </div>
       </div>
     </div>
-  </mask>
+  </div>
 </template>
 
 <style scoped>
-  .mask {
+  .container {
+    position: fixed;
     width: 750px;
-    height: 1344px;
-    justify-content: center;
-    align-items: center;
+    /*兼容H5异常*/
+    z-index: 99999;
   }
 
   .dialog-box {
-    background-color: #FFFFFF;
+    position: fixed;
+    left: 96px;
     width: 558px;
+    background-color: #FFFFFF;
   }
 
   .dialog-content {
@@ -123,9 +128,11 @@
 </style>
 
 <script>
+  import WxcOverlay from '../wxc-overlay'
   import { CHECKED, UN_CHECKED } from './type';
 
   export default {
+    components: { WxcOverlay },
     props: {
       show: {
         type: Boolean,
@@ -142,6 +149,10 @@
       content: {
         type: String,
         default: ''
+      },
+      top: {
+        type: Number,
+        default: 400
       },
       cancelText: {
         type: String,
@@ -170,10 +181,6 @@
       isChecked: {
         type: Boolean,
         default: false
-      },
-      maskBgColor: {
-        type: String,
-        default: 'rgba(0,0,0,0.6)'
       }
     },
     data: () => ({
