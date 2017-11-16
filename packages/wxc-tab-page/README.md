@@ -15,7 +15,7 @@
 <img src="https://gw.alipayobjects.com/zos/rmsportal/gEfRLhYhoxktoSjPGoZx.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1M7ywSpXXXXXuXXXXXXXXXXXX-200-200.png" width="160"/>
 
 
-## pan-item的使用
+## wxc-pan-item的使用
 
 #### 参数
 
@@ -27,7 +27,7 @@
 #### 使用
 ```
 // 组件使用
-<pan-item 
+<wxc-pan-item 
     :ext-id="1" 
     :url="url" 
     @wxcPanItemClicked="wxcPanItemClicked"
@@ -36,7 +36,7 @@
     </pan-item>
   
 // 引用
-import PanItem from '@ali/wxc-tab-page/pan-item.vue';
+import WxcPanItem from 'weex-ui';
 
 //回调
 wxcPanItemPan (e) {
