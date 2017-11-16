@@ -49,13 +49,14 @@
     "ip": "^1.1.5",
     "lerna": "~2.2.0",
     "url-parse": "~1.1.9",
-    "vue": "^2.4.1",
+    "vue": "^2.5.3",
     "vue-loader": "11.3.3",
-    "vue-template-compiler": "^2.4.1",
+    "vue-template-compiler": "^2.5.3",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4",
     "weex-loader": "~0.5.3",
-    "weex-vue-loader": "~0.4.2"
+    "weex-vue-loader": "~0.4.2",
+    "weex-vue-render": "^0.12.25"
   },
   "dependencies": {
     "url-parse": "^1.1.9"

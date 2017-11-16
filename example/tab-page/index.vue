@@ -19,21 +19,17 @@
       <cell v-for="(demo,key) in v"
             class="cell"
             :key="key">
-        <wxc-item url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
-                  image="https://gtd.alicdn.com/imgextra/TB12yGaNVXXXXX7aXXXSutbFXXX.jpg"
-                  :image-text="tabTitles[index].title"
-                  title-line-count="2"
-                  desc-line-count="1"
-                  title="飞猪专线｜四川成都出发到九寨沟牟尼沟 温泉3天2晚纯玩跟团旅游"
-                  :desc="desc"
-                  :tags="tags"
-                  price="219"
-                  :support-slide="supportSlide"
-                  price-desc="月售58笔｜999+条评论"
-                  :ext-id="'1-' + (demo) + '-' + (key)"
-                  :ext-index="key"
-                  :ext-total="demoList.length"
-                  @wxcItemGoodPan="wxcItemGoodPan"></wxc-item>
+        <wxc-pan-item :ext-id="'1-' + (v) + '-' + (key)"
+                      url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
+                      @wxcPanItemPan="wxcPanItemPan">
+          <wxc-item image="https://gtd.alicdn.com/imgextra/TB12yGaNVXXXXX7aXXXSutbFXXX.jpg"
+                    :image-text="tabTitles[index].title"
+                    title="飞猪专线｜四川成都出发到九寨沟牟尼沟 温泉3天2晚纯玩跟团旅游"
+                    :desc="desc"
+                    :tags="tags"
+                    price="219"
+                    price-desc="月售58笔｜999+条评论"></wxc-item>
+        </wxc-pan-item>
       </cell>
     </list>
   </wxc-tab-page>
@@ -42,9 +38,6 @@
 <style scoped>
   .item-container {
     width: 750px;
-    align-items: center;
-    justify-content: center;
-    height: 1334px;
     background-color: #f2f3f4;
   }
 
@@ -66,14 +59,14 @@
 <script>
   const dom = weex.requireModule('dom');
 
-  import { WxcTabPage, Utils } from '../../index';
+  import { WxcTabPage, WxcPanItem, Utils } from '../../index';
   import WxcItem from './wxc-item.vue';
 
   import Config from './config'
   import { setTitle } from '../_mods/set-nav';
 
   export default {
-    components: { WxcTabPage, WxcItem },
+    components: { WxcTabPage, WxcPanItem, WxcItem },
     data: () => ({
       tabTitles: Config.tabTitles,
       tabStyles: Config.tabStyles,
@@ -83,7 +76,6 @@
       supportSlide: true,
       isTabView: true,
       tabPageHeight: 1334,
-      ref: 'viewport',
       desc: [{
         type: 'text',
         value: '特价机票|班期:清明 3/27-4/2等',
@@ -96,18 +88,10 @@
       }]
     }),
     created () {
-      setTitle('TabPage')
+      setTitle('TabPage');
       this.tabPageHeight = Utils.env.getPageHeight();
       this.tabList = [...Array(this.tabTitles.length).keys()].map(i => []);
       Vue.set(this.tabList, 0, this.demoList);
-    },
-    mounted () {
-      // 适配plus高度问题
-      dom.getComponentRect && dom.getComponentRect(this.ref, option => {
-        if (option && option.result && option.size && option.size.height) {
-          this.tabPageHeight = option.size.height;
-        }
-      });
     },
     methods: {
       wxcTabPageCurrentTabSelected (e) {
@@ -120,7 +104,7 @@
           }, 100);
         }
       },
-      wxcItemGoodPan (e) {
+      wxcPanItemPan (e) {
         if (Utils.env.supportsEBForAndroid()) {
           this.$refs['wxc-tab-page'].bindExp(e.element);
         }

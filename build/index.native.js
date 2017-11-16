@@ -3809,14 +3809,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
 
 var expressionBinding = weex.requireModule('expressionBinding');
+
 
 module.exports = {
   props: {
     extId: {
       type: [String, Number],
       default: 0
+    },
+    url: {
+      type: String,
+      default: ''
     }
   },
   data: function data() {
@@ -3841,15 +3848,31 @@ module.exports = {
       if (this.isPanning) {
         return;
       }
-      this.$emit('wxcPanItemClick', { extId: this.extId });
+      this.url && _utils2.default.goToH5Page(this.url, true);
+      this.$emit('wxcPanItemClicked', { extId: this.extId });
+    },
+    onItemAppear: function onItemAppear() {
+      var extId = this.extId;
+      if (!this.appearMap[extId] && _utils2.default.env.supportsEBForAndroid()) {
+        this.appearMap[extId] = true;
+        expressionBinding.enableBinding(this.$refs['wxc-pan-item-' + extId].ref, 'pan');
+      }
+    },
+    onItemDisAppear: function onItemDisAppear() {
+      var extId = this.extId;
+      if (this.appearMap[extId] && _utils2.default.env.supportsEBForAndroid()) {
+        this.appearMap[extId] = false;
+        expressionBinding.disableBinding(this.$refs['wxc-pan-item-' + extId].ref, 'pan');
+      }
     },
     dispatchPan: function dispatchPan(e) {
       var _this2 = this;
 
+      var extId = this.extId;
       if (_utils2.default.env.supportsEBForAndroid()) {
         if (e.state === 'start') {
           this.isPanning = true;
-          var element = this.$refs['wxc-pan-item'];
+          var element = this.$refs['wxc-pan-item-' + extId];
           element && this.$emit('wxcPanItemPan', { element: element });
         } else if (e.state === 'end') {
           setTimeout(function () {
@@ -3867,12 +3890,14 @@ module.exports = {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    ref: "wxc-pan-item",
+    ref: ("wxc-pan-item-" + _vm.extId),
     attrs: {
       "preventMoveEvent": true
     },
     on: {
       "horizontalpan": _vm.dispatchPan,
+      "appear": _vm.onItemAppear,
+      "disappear": _vm.onItemDisAppear,
       "click": _vm.itemClicked
     }
   }, [_vm._t("default")], 2)
@@ -12846,8 +12871,7 @@ module.exports = __vue_exports__
 module.exports = {
   "wxc-tab-page": {
     "width": 750,
-    "flexDirection": "column",
-    "backgroundColor": "#f2f3f4"
+    "flexDirection": "column"
   },
   "tab-title-list": {
     "flexDirection": "row"
@@ -12886,16 +12910,14 @@ module.exports = {
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _utils = __webpack_require__(0);
 
 var _utils2 = _interopRequireDefault(_utils);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
 //
 //
 //
@@ -12996,7 +13018,7 @@ var supportsEB = _utils2.default.env.supportsEB();
 var supportsEBForIos = _utils2.default.env.supportsEBForIos();
 var isIos = _utils2.default.env.isIOS();
 
-exports.default = {
+module.exports = {
   props: {
     tabTitles: {
       type: Array,
@@ -13011,6 +13033,10 @@ exports.default = {
     spmC: {
       type: [String, Number],
       default: ''
+    },
+    titleUseSlot: {
+      type: Boolean,
+      default: false
     },
     tabStyles: {
       type: Object,
@@ -13031,7 +13057,8 @@ exports.default = {
           activeBottomWidth: 120,
           activeBottomHeight: 6,
           textPaddingLeft: 10,
-          textPaddingRight: 10
+          textPaddingRight: 10,
+          leftOffset: 0
         };
       }
     },
@@ -13058,6 +13085,10 @@ exports.default = {
     timingFunction: {
       type: String,
       default: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+    },
+    wrapBgColor: {
+      type: String,
+      default: '#f2f3f4'
     }
   },
   data: function data() {
@@ -13081,7 +13112,10 @@ exports.default = {
     if (supportsEBForIos && this.needSlider && this.isTabView) {
       setTimeout(function () {
         var tabPageEl = _this.$refs['tab-page-wrap'];
-        tabPageEl && tabPageEl.ref && _this.bindExp(tabPageEl);
+        if (tabPageEl && tabPageEl.ref) {
+          expressionBinding.enableBinding(tabPageEl.ref, 'pan');
+          _this.bindExp(tabPageEl);
+        }
       }, 20);
     }
   },
@@ -13126,7 +13160,6 @@ exports.default = {
           property: 'transform.translateX',
           expression: '{"type":"-","children":[{"type":"Identifier","value":"x"},{"type":"NumericLiteral","value":' + dist + '}]}'
         }];
-        expressionBinding.enableBinding(element.ref, 'pan');
         expressionBinding.createBinding(element.ref, 'pan', '', args, function (e) {
           var deltaX = e.deltaX,
               state = e.state;
@@ -13147,6 +13180,7 @@ exports.default = {
       var _this4 = this;
 
       var url = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      var animated = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
       if (!this.isTabView) {
         this.jumpOut(url);
@@ -13162,44 +13196,48 @@ exports.default = {
 
       var appearNum = parseInt(750 / width);
       var tabsNum = this.tabTitles.length;
-      var computedPage = tabsNum > appearNum ? 2 : page;
-      var offset = page > appearNum ? -(750 - width) / 2 : -width * computedPage;
+      var offset = page > appearNum ? -(750 - width) / 2 : -width * 2;
 
-      (previousPage > appearNum || page > 1) && dom.scrollToElement(currentTabEl, {
-        offset: offset
-      });
+      if (appearNum < tabsNum) {
+        (previousPage > appearNum || page > 1) && dom.scrollToElement(currentTabEl, {
+          offset: offset, animated: animated
+        });
 
-      page <= 1 && previousPage > page && dom.scrollToElement(currentTabEl, {
-        offset: -width * page
-      });
-
-      if (isIos) {
-        // 高版本ios 手淘上面会有不固定情况，hack一下
-        setTimeout(function () {
-          _this4._animateTransformX(page);
-        }, 10);
-      } else {
-        this._animateTransformX(page);
+        page <= 1 && previousPage > page && dom.scrollToElement(currentTabEl, {
+          offset: -width * page,
+          animated: animated
+        });
       }
 
       this.isMoving = false;
       this.currentPage = page;
-      this.$emit('wxcTabPageCurrentTabSelected', { page: page });
+
+      if (isIos) {
+        // 高版本ios 手淘上面会有不固定情况，hack一下
+        setTimeout(function () {
+          _this4._animateTransformX(page, animated);
+          _this4.$emit('wxcTabPageCurrentTabSelected', { page: page });
+        }, 10);
+      } else {
+        this._animateTransformX(page, animated);
+        this.$emit('wxcTabPageCurrentTabSelected', { page: page });
+      }
     },
     jumpOut: function jumpOut(url) {
       url && _utils2.default.goToH5Page(url);
     },
-    _animateTransformX: function _animateTransformX(page) {
+    _animateTransformX: function _animateTransformX(page, animated) {
       var duration = this.duration,
           timingFunction = this.timingFunction;
 
+      var computedDur = animated ? duration : 0.00001;
       var containerEl = this.$refs['tab-container'];
       var dist = page * 750;
       animation.transition(containerEl, {
         styles: {
           transform: 'translateX(' + -dist + 'px)'
         },
-        duration: duration,
+        duration: computedDur,
         timingFunction: timingFunction,
         delay: 0
       }, function () {});
@@ -13253,14 +13291,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', {
     staticClass: ["wxc-tab-page"],
     style: {
-      height: (_vm.tabPageHeight) + 'px'
+      height: (_vm.tabPageHeight) + 'px',
+      backgroundColor: _vm.wrapBgColor
     }
   }, [_c('scroller', {
     ref: "tab-title-list",
     staticClass: ["tab-title-list"],
     style: {
       backgroundColor: _vm.tabStyles.bgColor,
-      height: (_vm.tabStyles.height) + 'px'
+      height: (_vm.tabStyles.height) + 'px',
+      paddingLeft: _vm.tabStyles.leftOffset + 'px'
     },
     attrs: {
       "showScrollbar": false,
@@ -13286,7 +13326,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           _vm.setPage(index, v.url)
         }
       }
-    }, [(_vm.titleType == 'icon') ? _c('image', {
+    }, [(_vm.titleType == 'icon' && !_vm.titleUseSlot) ? _c('image', {
       style: {
         width: _vm.tabStyles.iconWidth + 'px',
         height: _vm.tabStyles.iconHeight + 'px'
@@ -13294,7 +13334,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "src": _vm.currentPage == index ? v.activeIcon : v.icon
       }
-    }) : _vm._e(), _c('text', {
+    }) : _vm._e(), (!_vm.titleUseSlot) ? _c('text', {
       staticClass: ["tab-text"],
       style: {
         fontSize: _vm.tabStyles.fontSize + 'px',
@@ -13303,7 +13343,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         paddingLeft: _vm.tabStyles.textPaddingLeft + 'px',
         paddingRight: _vm.tabStyles.textPaddingRight + 'px'
       }
-    }, [_vm._v(_vm._s(v.title))]), (_vm.tabStyles.hasActiveBottom) ? _c('div', {
+    }, [_vm._v(_vm._s(v.title))]) : _vm._e(), (_vm.tabStyles.hasActiveBottom && !_vm.titleUseSlot) ? _c('div', {
       staticClass: ["border-bottom"],
       style: {
         width: _vm.tabStyles.activeBottomWidth + 'px',
@@ -13311,7 +13351,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         height: _vm.tabStyles.activeBottomHeight + 'px',
         backgroundColor: _vm.currentPage == index ? _vm.tabStyles.activeBottomColor : 'transparent'
       }
-    }) : _vm._e()])
+    }) : _vm._e(), (_vm.titleUseSlot) ? _vm._t(("tab-title-" + index)) : _vm._e()], 2)
   })), _c('div', {
     ref: "tab-page-wrap",
     staticClass: ["tab-page-wrap"],
