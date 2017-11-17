@@ -142,7 +142,8 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 |[wxc-lottery-rain](./packages/wxc-lottery-rain/README.md)|游戏|红包雨 抓猫猫游戏|
 |[utils](./packages/utils/README.md)|服务|公共函数|
 
-`*` 这些富交互体验组件依赖于 Weex [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)。
+- `*` 这些富交互体验组件依赖于 Weex [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)。  
+- 推荐使用 [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en-US) 扩展获得更好的组件文档查找体验。
 
 ## 调试
 

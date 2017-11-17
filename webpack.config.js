@@ -8,7 +8,6 @@ const pkg = require('./package.json');
 
 const webpack = require('webpack');
 const glob = require("glob");
-const ip = require('ip').address();
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -95,22 +94,6 @@ const getBaseConfig = () => ({
 
 const webCfg = getBaseConfig();
 webCfg.output.filename = '[name].web.js';
-
-webCfg.devServer = {
-  inline: true,
-  headers: {
-    "Cache-Control": "no-cache"
-  },
-  hot: true,
-  host: '0.0.0.0',
-  port: '8080',
-  historyApiFallback: true,
-  public: ip + ':8080',
-  watchOptions: {
-    aggregateTimeout: 300,
-    poll: 1000
-  }
-};
 
 webCfg.module.rules[1].use.push({
   loader: 'vue-loader',

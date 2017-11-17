@@ -1,7 +1,12 @@
 # Change Log
 
+## 0.2.7
+- [+] Stronger about [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-page/README.md).
+- [!] Updated the development packages.
+- [!] Supplement the README.
+
 ## 0.2.6
-- [!] Fixed the wxc-dialog bug
+- [!] Fixed the wxc-dialog bug.
 
 ## 0.2.3
 - [-] [#44](https://github.com/alibaba/weex-ui/issues/44) Remove the `overlay-can-close` prop in `wxc-mask`.
@@ -12,8 +17,8 @@
 - [!] Fix image link problem.
 
 ## 0.2.1
-- [+] Stronger about wxc-ep-slider.
-- [!] Extraction of common functions.
+- [+] Stronger about [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md).
+- [!] Extraction of [common functions](https://github.com/alibaba/weex-ui/blob/master/packages/utils/README.md).
 
 ## 0.2.0
 - [!] Update reference mode.
