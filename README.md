@@ -155,7 +155,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 |[utils](./packages/utils/README.md)|Service|Common function|
 
 - `*` These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).   
-- It`s recommended to use the [Octotree extension](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en-US) for better documentation search experience.
+- It's recommended to use the [Octotree extension](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en-US) for better documentation search experience.
 
 ## Development
 
