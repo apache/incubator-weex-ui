@@ -12,12 +12,14 @@
                           :height="height"></wxc-part-loading>
       </div>
       <wxc-cell :has-top-border="true"
+                :auto-accessible="false"
                 title="开启局部Loading">
         <switch :checked="partShow"
                 slot="value"
                 @change="partShow= !partShow"></switch>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="长度">
         <input class="input"
                slot="value"
@@ -26,6 +28,7 @@
                @input="width=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="高度">
         <input class="input"
                slot="value"
@@ -36,12 +39,14 @@
       <div class="blank"></div>
       <category title="页面Loading配置"></category>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="开启Loading">
         <switch :checked="isShow"
                 slot="value"
                 @change="isShow= !isShow"></switch>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="切换飞猪">
         <switch :checked="type === 'trip'"
                 slot="value"
@@ -53,6 +58,7 @@
                 title="延迟加载"></wxc-cell>
 
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="配置文案">
         <input class="input"
                slot="value"

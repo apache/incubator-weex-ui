@@ -7,7 +7,7 @@
     <div class="wxc-loading"
          :style="{ top: topPosition +'px'}"
          v-if="showLoading">
-      <div :class="['loading-box',loading.class]">
+      <div :class="['loading-box',loading.class]" aria-hidden="true">
         <image :src="loading.url"
                class="loading-trip-image"
                resize="contain"

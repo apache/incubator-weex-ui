@@ -3,7 +3,10 @@
 
 <template>
   <div class="root">
-    <div v-for="(item, index) in cItems" :key="item.key">
+    <div v-for="(item, index) in cItems"
+         :key="item.key"
+         :accessible="true"
+         :aria-label="`${item.title},${item.desc?item.desc:''},${item.date?item.date:''},${item.highlight?'已完成':'等待完成'}`">
       <div class="title flex-row">
         <div class="line" :class="item.__titleLineClass__" :style="item.__lineStyle__"></div>
 

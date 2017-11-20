@@ -13,7 +13,7 @@
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`time`** | `Number` | `Y` | `1501200000000` | 倒计时最终时间戳 |
 | **`interval`** | `Number` | `N` | `1000` | 倒计时的间隔,单位为"毫秒" |
-| ** `tpl`** | `String` | `N` | `{h}:{m}:{s}` | 倒计时展示模板 |
+| **`tpl`** | `String` | `N` | `{h}:{m}:{s}` | 倒计时展示模板。支持任意两个相邻的`{d}:{h}:{m}:{s}`，详细见 Demo |
 | **`onComplete`** | `Function` | `N` | `()=>()` | 倒计时完成时调用的方法 |
 | **`timeWrapStyle`** | `Object` | `N` | `-` | 最外层包裹 style |
 | **`timeBoxStyle`** | `Object` | `N` | `-` | 数字盒子 style |
@@ -34,11 +34,12 @@ npm i weex-ui --save
 ```vue
 <template>
   <wxc-countdown
-      :time="TIME"
-    ></wxc-countdown>
+    tpl="{d}天{h}时{m}分{s}秒"
+    :time="TIME"
+  ></wxc-countdown>
 </template>
 <script>
-    import { WxcCountdown } from 'weex-ui'
+    import WxcCountdown from '../index.vue'
     export default {
       components: { WxcCountdown },
       data: () => ({

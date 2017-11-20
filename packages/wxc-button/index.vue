@@ -4,9 +4,10 @@
 <template>
   <div class="wxc-btn"
        :style="mrBtnStyle"
-       @click="onClicked">
-    <text class="btn-text"
-          :style="mrTextStyle">{{text}}</text>
+       @click="onClicked"
+       :accessible="true"
+       :aria-label="text">
+    <text class="btn-text" :style="mrTextStyle">{{text}}</text>
   </div>
 </template>
 

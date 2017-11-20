@@ -22,6 +22,7 @@
            @click="closeIconClicked"
            v-if="showClose">
         <image :src="closeIcon"
+               aria-label="关闭"
                class="mask-close-icon"></image>
       </div>
     </div>

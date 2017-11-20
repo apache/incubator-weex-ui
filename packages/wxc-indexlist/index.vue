@@ -20,7 +20,9 @@
             <div v-for="(item,i) in group"
                  :key="i"
                  @click="itemClicked(item)"
-                 class="group-item">
+                 class="group-item"
+                 :accessible="true"
+                 :aria-label="`${item.name},${item.desc?item.desc:''}`">
               <image v-if="item.isLocation"
                      class="location-icon"
                      src="https://gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png"></image>
@@ -36,7 +38,9 @@
           <div class="index-list-item"
                v-for="(item,index) in v.data"
                :key="index"
-               @click="itemClicked(item)">
+               @click="itemClicked(item)"
+               :accessible="true"
+               :aria-label="`${item.name},${item.desc?item.desc:''}`">
             <text class="title">{{item.name}}</text>
             <text class="desc">{{item.desc}}</text>
           </div>

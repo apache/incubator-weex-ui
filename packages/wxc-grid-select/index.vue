@@ -9,13 +9,13 @@
       :key="index"
       :index="index"
       :style="{marginTop: index >= cols ? lineSpacing : null}"
-      @select="onSelect(index)"/>
+      @select="onSelect(index)"></option>
 
     <option
       v-for="(item, index) in cHackList"
       v-bind="Object.assign({}, customStyles, item)"
       :key="index"
-      :style="{opacity: 0, marginTop: dList.length >= cols ? lineSpacing : null}"/>
+      :style="{opacity: 0, marginTop: dList.length >= cols ? lineSpacing : null}"></option>
   </div>
 </template>
 

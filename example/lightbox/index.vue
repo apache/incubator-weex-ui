@@ -7,10 +7,15 @@
       <title title="wxc-lightbox" class="title"></title>
       <category title="使用案例"></category>
       <div class="wrapper">
-        <image class="demo-image" src="https://gd2.alicdn.com/bao/uploaded/i2/T14H1LFwBcXXXXXXXX_!!0-item_pic.jpg"
-               @click="openLightBox"></image>
-        <text class="image-text">点击图片弹出全屏图片</text>
-        <div class="btn" @click="openLightBox">
+        <image class="demo-image"
+               src="https://gd2.alicdn.com/bao/uploaded/i2/T14H1LFwBcXXXXXXXX_!!0-item_pic.jpg"
+               @click="openLightBox"
+               aria-label="点击按钮弹出全屏图片,这类情况不建议朗读给盲人"></image>
+        <text class="image-text" :aria-hidden="true">点击图片弹出全屏图片</text>
+        <div class="btn"
+             @click="openLightBox"
+             :accessible="true"
+             aria-label="点击按钮弹出全屏图片,这类情况不建议朗读给盲人">
           <text class="btn-txt">点击按钮弹出全屏图片</text>
         </div>
       </div>

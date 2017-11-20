@@ -7,6 +7,7 @@
       <title title="wxc-dialog"></title>
       <category title="Dialog配置"></category>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="标题文案">
         <input class="input"
                slot="value"
@@ -15,6 +16,7 @@
                @input="title=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="说明文案">
         <input class="input"
                slot="value"
@@ -23,6 +25,7 @@
                @input="content=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="主按钮">
         <input class="input"
                slot="value"
@@ -31,6 +34,7 @@
                @input="confirmText=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="副按钮">
         <input class="input"
                slot="value"
@@ -39,24 +43,28 @@
                @input="cancelText=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="取消按钮">
         <switch :checked="!single"
                 slot="value"
                 @change="single= !single"></switch>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="显示不再提示">
         <switch :checked="showNoPrompt"
                 slot="value"
                 @change="showNoPrompt= !showNoPrompt"></switch>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="不再提示是否勾选">
         <switch :checked="isChecked"
                 slot="value"
                 @change="isChecked= !isChecked"></switch>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="不再提示文案">
         <input class="input"
                slot="value"

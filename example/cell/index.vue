@@ -41,7 +41,8 @@
 
       <div class="demo">
         <wxc-cell :has-arrow="false"
-                  :has-top-border="false">
+                  :has-top-border="false"
+                  :auto-accessible="false">
           <text :style="{color:color}"
                 slot="title">自定义标题</text>
           <switch slot="value"
@@ -49,7 +50,8 @@
         </wxc-cell>
         <wxc-cell :has-arrow="false"
                   :cell-style="cellStyle"
-                  :has-top-border="false">
+                  :has-top-border="false"
+                  :auto-accessible="false">
           <image class="image"
                  slot="label"
                  src="http://gtms04.alicdn.com/tfs/TB1eLvjSXXXXXaiXXXXXXXXXXXX-144-166.jpg"></image>

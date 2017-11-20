@@ -5,7 +5,9 @@
 <template>
   <div class="wxc-noticebar"
        v-if="show"
-       @click="noticeBarClicked">
+       @click="noticeBarClicked"
+       :accessible="true"
+       :aria-label="notice">
     <image class="type-ICON"
            v-if="typeIcon"
            :src="typeIcon"></image>

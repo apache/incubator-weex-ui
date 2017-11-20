@@ -17,9 +17,88 @@
 
       <category title="自定义配置"></category>
       <text class="demo-desc">配置样式，设置倒计时频率</text>
+
+      <wxc-countdown
+        :interval="2000"
+        tpl="{h}时"
+        :timeBoxStyle="{backgroundColor: '#C3413D', height: '50px', width: '50px'}"
+        :timeTextStyle="{fontSize: '24px', color: '#FFB706'}"
+        :dotTextStyle="{color: '#C3413D', fontSize: '26px'}"
+        :dotBoxStyle="{width: '30px'}"
+        :style="{marginTop: '10px', justifyContent: 'center'}"
+        :time="TIME">
+      </wxc-countdown>
+
+      <wxc-countdown
+        :interval="2000"
+        tpl="{m}分"
+        :timeBoxStyle="{backgroundColor: '#C3413D', height: '50px', width: '70px'}"
+        :timeTextStyle="{fontSize: '24px', color: '#FFB706'}"
+        :dotTextStyle="{color: '#C3413D', fontSize: '26px'}"
+        :dotBoxStyle="{width: '30px'}"
+        :style="{marginTop: '10px', justifyContent: 'center'}"
+        :time="TIME">
+      </wxc-countdown>
+
+      <wxc-countdown
+        :interval="2000"
+        tpl="{s}秒"
+        :timeBoxStyle="{backgroundColor: '#C3413D', height: '50px', width: '80px'}"
+        :timeTextStyle="{fontSize: '24px', color: '#FFB706'}"
+        :dotTextStyle="{color: '#C3413D', fontSize: '26px'}"
+        :dotBoxStyle="{width: '30px'}"
+        :style="{marginTop: '10px', justifyContent: 'center'}"
+        :time="TIME">
+      </wxc-countdown>
+
+      <wxc-countdown
+        :interval="2000"
+        tpl="{m}分{s}秒"
+        :timeBoxStyle="{backgroundColor: '#C3413D', height: '50px', width: '50px'}"
+        :timeTextStyle="{fontSize: '24px', color: '#FFB706'}"
+        :dotTextStyle="{color: '#C3413D', fontSize: '26px'}"
+        :dotBoxStyle="{width: '30px'}"
+        :style="{marginTop: '10px', justifyContent: 'center'}"
+        :time="TIME">
+      </wxc-countdown>
+
+      <wxc-countdown
+        :interval="2000"
+        tpl="{h}时{m}分"
+        :timeBoxStyle="{backgroundColor: '#C3413D', height: '50px', width: '50px'}"
+        :timeTextStyle="{fontSize: '24px', color: '#FFB706'}"
+        :dotTextStyle="{color: '#C3413D', fontSize: '26px'}"
+        :dotBoxStyle="{width: '30px'}"
+        :style="{marginTop: '10px', justifyContent: 'center'}"
+        :time="TIME">
+      </wxc-countdown>
+
+
       <wxc-countdown
         :interval="2000"
         tpl="{h}时{m}分{s}秒"
+        :timeBoxStyle="{backgroundColor: '#C3413D', height: '50px', width: '50px'}"
+        :timeTextStyle="{fontSize: '24px', color: '#FFB706'}"
+        :dotTextStyle="{color: '#C3413D', fontSize: '26px'}"
+        :dotBoxStyle="{width: '30px'}"
+        :style="{marginTop: '10px', justifyContent: 'center'}"
+        :time="TIME">
+      </wxc-countdown>
+
+      <wxc-countdown
+        :interval="2000"
+        tpl="{d}天{h}时{m}分{s}秒"
+        :timeBoxStyle="{backgroundColor: '#C3413D', height: '50px', width: '50px'}"
+        :timeTextStyle="{fontSize: '24px', color: '#FFB706'}"
+        :dotTextStyle="{color: '#C3413D', fontSize: '26px'}"
+        :dotBoxStyle="{width: '30px'}"
+        :style="{marginTop: '10px', justifyContent: 'center'}"
+        :time="TIME">
+      </wxc-countdown>
+
+      <wxc-countdown
+        :interval="2000"
+        tpl="{d}天{h}:{m}:{s}"
         :timeBoxStyle="{backgroundColor: '#C3413D', height: '50px', width: '50px'}"
         :timeTextStyle="{fontSize: '24px', color: '#FFB706'}"
         :dotTextStyle="{color: '#C3413D', fontSize: '26px'}"
@@ -41,7 +120,6 @@
     bottom: 0;
     background-color: #fff;
   }
-
   .demo-desc {
     font-size: 32px;
     margin-top: 20px;
@@ -51,7 +129,6 @@
     color: rgb(102, 102, 102);
     text-align: center;
   }
-
   .demo-3 {
     margin-top: 30px;
     flex-direction: row;
@@ -77,7 +154,7 @@
     components: { Title, Category, WxcCountdown },
     data: () => ({
       // TIME: new Date().getTime() + 86400000 + ''
-      TIME: new Date().getTime() + 10000,
+      TIME: new Date().getTime() + 100000000,
       demoTime: new Date().getTime() + 5000,
       callbackText: '',
       demoText: '距离开始'
@@ -102,3 +179,4 @@
     }
   }
 </script>
+

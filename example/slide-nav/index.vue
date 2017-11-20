@@ -24,7 +24,8 @@
         class="cell"
         v-for="(item, index) in items"
         :key="index"
-      >
+        :accessible="true"
+        :aria-label="index + 1">
         <a class="div" href="https://h5.m.taobao.com/trip/home/index.html">
           <text class="text">{{index + 1}}</text>
         </a>

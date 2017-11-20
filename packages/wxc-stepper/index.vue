@@ -4,7 +4,10 @@
 
 <template>
   <div class="wxc-stepper">
-    <div class="stepper-minus" @click="minusClicked">
+    <div class="stepper-minus"
+         @click="minusClicked"
+         aria-label="减数"
+         :accessible="true">
       <text class="stepper-icon" :style="{ color: isLess?'#cccccc':'#666666' }">-</text>
     </div>
     <input class="stepper-input"
@@ -14,7 +17,10 @@
            @blur="onBlur"
            :style="disableStyle"
            :disabled="disabled||readOnly"/>
-    <div class="stepper-plus" @click="plusClicked">
+    <div class="stepper-plus"
+         @click="plusClicked"
+         aria-label="加数"
+         :accessible="true">
       <text class="stepper-icon" :style="{ color: isOver ? '#cccccc': '#666666' }">+</text>
     </div>
   </div>

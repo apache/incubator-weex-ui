@@ -14,6 +14,7 @@
          v-if="isShow">
       <text class="flex-item weekday-text"
             :key="k"
+            :aria-label="`周${week}`"
             v-for="(week,k) in ['日','一','二','三','四','五','六']">{{week}}</text>
     </div>
     <list class="calendar-list"
@@ -32,9 +33,11 @@
                :ref="cell.ref"
                :class="['row-item', cell.cellClass]"
                @click="onClickDate(cell)">
-            <div v-if="cell.isEmpty"></div>
+            <div v-if="cell.isEmpty" aria-hidden="true"></div>
             <div v-if="!cell.isEmpty"
-                 class="calendar-item">
+                 class="calendar-item"
+                 :accessible="true"
+                 :aria-label="`${cell.text?cell.text:''},${cell.note?cell.note:''},${cell.ext?cell.ext:''}`">
               <text :class="['calendar-note', cell.cls]">{{cell.note}}</text>
               <text :class="['calendar-day', cell.cls]">{{cell.text}}</text>
               <text :class="['calendar-ext', cell.cls]">{{cell.ext}}</text>

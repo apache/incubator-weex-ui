@@ -4,13 +4,13 @@
 
 <template>
   <div class="wxc-minibar" :style="{ backgroundColor: backgroundColor }" v-if="show">
-    <div class="left" @click="leftButtonClicked">
+    <div class="left" @click="leftButtonClicked" aria-label="返回" :accessible="true">
       <image :src="leftButton" class="left-button"></image>
     </div>
     <text class="middle-title" :style="{ color: textColor }">{{title}}</text>
     <div class="right" @click="rightButtonClicked">
       <text class="right-text" v-if="rightText" :style="{ color: textColor }">{{rightText}}</text>
-      <image :src="rightButton" class="right-button" v-if="rightButton"></image>
+      <image :src="rightButton" class="right-button" v-if="rightButton" :aria-hidden="true"></image>
     </div>
   </div>
 </template>

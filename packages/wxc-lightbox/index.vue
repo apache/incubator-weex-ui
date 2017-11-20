@@ -4,6 +4,7 @@
 <template>
   <wxc-mask :width="width"
             :height="height"
+            aria-hidden="true"
             mask-bg-color="transparent"
             overlay-opacity="0.8"
             :show="show"

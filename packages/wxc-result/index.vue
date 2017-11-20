@@ -9,6 +9,7 @@
     <div class="wxc-result"
          :style="{paddingTop: setPaddingTop }">
       <image class="result-image"
+             :aria-hidden="true"
              :src="resultType.pic"></image>
       <div class="result-content"
            v-if="resultType.content">

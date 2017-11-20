@@ -6,8 +6,9 @@
   <div
     :class="['wxc-cell', hasTopBorder && 'cell-top-border', hasBottomBorder && 'cell-bottom-border', hasMargin && 'cell-margin', hasVerticalIndent && 'cell-indent', desc && 'has-desc']"
     :style="cellStyle"
-    @click="cellClicked"
-    :link="link">
+    :accessible="autoAccessible"
+    :aria-label="`${label},${title},${desc}`"
+    @click="cellClicked">
     <slot name="label">
       <div v-if="label">
         <text class="cell-label-text">{{label}}</text>
@@ -24,6 +25,7 @@
     <slot></slot>
     <image :src="arrowIcon"
            class="cell-arrow-icon"
+           :aria-hidden="true"
            v-if="hasArrow"></image>
   </div>
 </template>
@@ -141,6 +143,10 @@
       cellStyle: {
         type: Object,
         default: () => ({})
+      },
+      autoAccessible: {
+        type: Boolean,
+        default: true
       }
     },
     methods: {

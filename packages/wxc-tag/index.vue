@@ -8,8 +8,17 @@
          :style="tagTextStyle">
       <text class="tag-text" :style="{color:fontColor}">{{value}}</text>
     </div>
-    <image v-if="showImage" :src="img" @load="onLoad" :style="{ width: imgWidth}" class="tag-image"></image>
-    <div class="tag-special tag-border" :style="{borderColor:tagColor}" v-if="showSpecial">
+    <image v-if="showImage"
+           :src="img"
+           @load="onLoad"
+           :aria-hidden="true"
+           :style="{ width: imgWidth}"
+           class="tag-image"></image>
+    <div class="tag-special tag-border"
+         :style="{borderColor:tagColor}"
+         :accessible="true"
+         :aria-label="value"
+         v-if="showSpecial">
       <div class="tag-left" :style="{backgroundColor:tagColor}">
         <image :src="specialIcon" class="left-image"></image>
       </div>

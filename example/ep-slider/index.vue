@@ -17,7 +17,9 @@
           <div v-for="(v,index) in [1,2,3,4,5]"
                :key="index"
                :slot="`card${index}_${sliderId}`"
-               :class="['slider',`slider${index}`]">
+               :class="['slider',`slider${index}`]"
+               :accessible="true"
+               :aria-label="`这里是第${index + 1}个滑块`">
             <text class="text">这里是第{{index + 1}}个滑块</text>
           </div>
         </wxc-ep-slider>
@@ -38,7 +40,9 @@
                         :class="['slider',`slider${index}`]"
                         @wxcPanItemPan="wxcPanItemPan"
                         @wxcPanItemClick="wxcPanItemClick"
-                        :slot="`card${index}_${autoSliderId}`">
+                        :slot="`card${index}_${autoSliderId}`"
+                        :accessible="true"
+                        :aria-label="`这里是第${index + 1}个滑块`">
             <text class="text">这里是第{{index + 1}}个滑块</text>
           </wxc-pan-item>
         </wxc-ep-slider>
