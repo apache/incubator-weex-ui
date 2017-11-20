@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.2.8
+- [+] Accessibility of components 🎉🎉 
+
 ## 0.2.7
 - [+] Stronger about [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-page/README.md).
 - [!] Updated the development packages.

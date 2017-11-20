@@ -18,7 +18,9 @@
       <cell class="border-cell"></cell>
       <cell v-for="(demo,key) in v"
             class="cell"
-            :key="key">
+            :key="key"
+            :accessible="true"
+            aria-label="飞猪专线｜四川成都出发到九寨沟牟尼沟 温泉3天2晚纯玩跟团旅游,价格219元">
         <wxc-pan-item :ext-id="'1-' + (v) + '-' + (key)"
                       url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
                       @wxcPanItemPan="wxcPanItemPan">
