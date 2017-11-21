@@ -90,6 +90,7 @@ import WxcComponent2 from "weex-ui/packages/wxc-component2"
 如果你使用[weex-toolkit](https://github.com/weexteam/weex-toolkit)来开发你的Weex项目，你需要向 .babelrc 文件中加入 'state-0' 和 'babel-plugin-component'
 
 ```shell
+weex update weexpack
 npm i babel-preset-stage-0 babel-plugin-component  -D
 ```
 

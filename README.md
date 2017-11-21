@@ -100,6 +100,7 @@ import WxcComponent2 from "weex-ui/packages/wxc-component2"
 If you use [weex-toolkit](https://github.com/weexteam/weex-toolkit) to develop a Weex project, Please add 'state-0' and 'babel-plugin-component' to .babelrc.
 
 ```shell
+weex update weexpack
 npm i babel-preset-stage-0 babel-plugin-component  -D
 ```
 

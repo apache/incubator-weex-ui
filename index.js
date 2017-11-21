@@ -3,7 +3,7 @@
  * Created by Tw93 on 17/09/25
  */
 
-import Utils from './packages/utils'
+import Utils from './packages/utils';
 import WxcButton from './packages/wxc-button';
 import WxcCell from './packages/wxc-cell';
 import WxcCheckbox from './packages/wxc-checkbox';
@@ -71,4 +71,4 @@ export {
   WxcStepper,
   WxcTabPage,
   WxcTag
-}
+};
