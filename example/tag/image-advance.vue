@@ -3,16 +3,14 @@
 
 <template>
   <div class="sub-demo">
-    <wxc-cell :has-top-border="false"
-              title="标签内容">
+    <wxc-cell :has-top-border="false" title="标签内容">
       <input class="input"
              placeholder="请输入tag图片链接"
              :value="img"
              @input="img=$event.value"/>
     </wxc-cell>
     <div class="demo">
-      <wxc-tag type="image"
-               :img="img"></wxc-tag>
+      <wxc-tag type="image" :img="img"></wxc-tag>
     </div>
   </div>
 </template>

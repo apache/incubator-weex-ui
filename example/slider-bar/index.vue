@@ -50,15 +50,6 @@
     margin-top: 60px;
   }
 
-  .title {
-    font-size: 48px;
-    color: #0072DB;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #0072DB;
-    margin-bottom: 30px;
-  }
-
   .label {
     color: #999;
     font-size: 26px;

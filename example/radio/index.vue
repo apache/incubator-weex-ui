@@ -27,10 +27,6 @@
     flex: 1;
   }
 
-  .margin {
-    margin-top: 60px;
-  }
-
   .radio-text {
     font-size: 30px;
     color: #333;

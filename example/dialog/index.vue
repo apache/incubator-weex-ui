@@ -7,7 +7,6 @@
       <title title="wxc-dialog"></title>
       <category title="Dialog配置"></category>
       <wxc-cell :has-top-border="false"
-                :auto-accessible="false"
                 title="标题文案">
         <input class="input"
                slot="value"
@@ -16,7 +15,6 @@
                @input="title=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
-                :auto-accessible="false"
                 title="说明文案">
         <input class="input"
                slot="value"
@@ -25,7 +23,6 @@
                @input="content=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
-                :auto-accessible="false"
                 title="主按钮">
         <input class="input"
                slot="value"
@@ -34,7 +31,6 @@
                @input="confirmText=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
-                :auto-accessible="false"
                 title="副按钮">
         <input class="input"
                slot="value"

@@ -158,9 +158,7 @@
       setTitle('RichText');
     },
     methods: {
-      wxcRichTextLinkClick () {
-
-      }
+      wxcRichTextLinkClick () {}
     }
   };
 </script>

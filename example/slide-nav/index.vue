@@ -15,8 +15,7 @@
       @touchstart.native="onTouchStart"
       @touchmove.native="onTouchMove"
       @touchend.native="onTouchEnd"
-      @touchcancel.native="onTouchEnd"
-    >
+      @touchcancel.native="onTouchEnd">
       <cell>
         <div class="padding"></div>
       </cell>

@@ -19,7 +19,6 @@
                 @change="partShow= !partShow"></switch>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
-                :auto-accessible="false"
                 title="长度">
         <input class="input"
                slot="value"
@@ -28,7 +27,6 @@
                @input="width=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
-                :auto-accessible="false"
                 title="高度">
         <input class="input"
                slot="value"
@@ -58,7 +56,6 @@
                 title="延迟加载"></wxc-cell>
 
       <wxc-cell :has-top-border="false"
-                :auto-accessible="false"
                 title="配置文案">
         <input class="input"
                slot="value"
