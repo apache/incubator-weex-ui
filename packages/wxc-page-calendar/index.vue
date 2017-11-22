@@ -39,6 +39,7 @@
           <text :class="['calendar-ext', cell.cls]">{{cell.ext}}</text>
         </div>
       </cell>
+      <cell class="iphone-x" v-if="isIPhoneX"></cell>
     </list>
   </div>
 </template>
@@ -46,6 +47,7 @@
 <script>
   import * as Format from './format';
   import Utils from '../utils';
+
   const isWeb = Utils.env.isWeb();
 
   const animation = weex.requireModule('animation');
@@ -105,9 +107,9 @@
       }
     },
     created () {
-      const env = weex.config.env;
-      this.pageHeight = env.deviceHeight / env.deviceWidth * 750;
-      this.calendarHeight = this.pageHeight - (this.showHeader ? 100 : 120) - 60;
+      this.isIPhoneX = Utils.env.isIPhoneX();
+      this.pageHeight = Utils.env.getPageHeight();
+      this.calendarHeight = this.pageHeight - (this.showHeader ? 90 : 0) - 60;
       this.detectShow();
     },
     mounted () {
@@ -286,6 +288,10 @@
     padding-bottom: 10px;
     justify-content: center;
     align-items: center;
+  }
+
+  .iphone-x {
+    height: 68px;
   }
 
   .calendar-note {

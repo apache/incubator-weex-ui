@@ -82,7 +82,7 @@ npm install weex-ui --save
 </template>
 
 <script>
-  import {WxcCell} from 'weex-ui';
+  import { WxcCell } from 'weex-ui';
   export default {
     components: { WxcCell },
     methods: {

@@ -23,9 +23,9 @@ npm i weex-ui --save
 </template>
 
 <script>
-  import { wxcButton } from 'weex-ui'
+  import { WxcButton } from 'weex-ui'
   export default {
-    components: { wxcButton },
+    components: { WxcButton },
     methods: {
       wxcButtonClicked (e) {
         console.log(e)
