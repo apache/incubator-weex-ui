@@ -41,7 +41,7 @@
         if (e.checked) {
           this.checkedList.push(e.value);
         } else {
-          var index = this.checkedList.indexOf(e.value);
+          const index = this.checkedList.indexOf(e.value);
           this.checkedList.splice(index, 1);
         }
         this.$emit('wxcCheckBoxListChecked', { checkedList: this.checkedList })

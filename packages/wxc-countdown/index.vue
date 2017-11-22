@@ -33,7 +33,8 @@
         <text :style="mrDotTextStyle">{{getDot(tplIndexOfMinutes, tplIndexOfSeconds)}}</text>
       </div>
 
-      <div :style="mrTimeBoxStyle"  v-if="tplIndexOfSeconds !== -1"
+      <div :style="mrTimeBoxStyle"
+           v-if="tplIndexOfSeconds !== -1"
            :accessible="true"
            :aria-label="`${countDownData.second}秒`">
         <text :style="mrTimeTextStyle">{{countDownData.second}}</text>

@@ -7,7 +7,6 @@ import Utils from '../utils';
 
 /**
  * 根据26个字母取每一项首字母对数据进行排序,处理数据变换
- * @param  {object}
  * @return {[array]}
  */
 export function totalList (source, hotListConfig, cityLocationConfig) {
@@ -43,16 +42,14 @@ export function totalList (source, hotListConfig, cityLocationConfig) {
   return res;
 }
 
-
 export function getSpecialData (data) {
   if (data && data.type && data.list && data.list.length > 0) {
     const { type, title, list } = data;
-    const res = {
+    return {
       title,
       type,
-      data: type === 'group' ? Utils.arrayChunk(list) : list,
-    }
-    return res;
+      data: type === 'group' ? Utils.arrayChunk(list) : list
+    };
   } else {
     return null;
   }

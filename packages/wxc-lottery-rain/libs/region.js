@@ -4,7 +4,7 @@
  * 红包雨区域检测类
  */
 
-import  Utils from '../../utils';
+import Utils from '../../utils';
 
 const Region = {
   regions: [],
@@ -14,7 +14,7 @@ const Region = {
     region.right = region.left + region.width;
     region.bottom = region.top + region.height;
 
-    for (var i = 0; i < regions.length; i++) {
+    for (let i = 0; i < regions.length; i++) {
       const curRegion = regions[i];
       // 两区域相交
       curRegion.right = curRegion.left + curRegion.width;
@@ -53,8 +53,7 @@ const Region = {
     }
   },
   buildRandom () {
-    const random = new Date().getTime() + '_' + parseInt(Math.random() * 1000000);
-    return random;
+    return new Date().getTime() + '_' + parseInt(Math.random() * 1000000);
   },
   add (region) {
     const { regions } = this;
@@ -70,5 +69,6 @@ const Region = {
       }
     }
   }
-}
+};
+
 export default Region;

@@ -3,7 +3,7 @@
  * Created by Tw93 on 2017/07/29.
  */
 
-//国际节日
+// 国际节日
 export const GLOBAL_HOLIDAY = {
   '01-01': '元旦',
   '02-14': '情人',
@@ -13,8 +13,8 @@ export const GLOBAL_HOLIDAY = {
   '12-25': '圣诞'
 };
 
-//传统节日
-let TRADITIONAL_HOLIDAY = {
+// 传统节日
+const TRADITIONAL_HOLIDAY = {
   '除夕': ['2015-02-18', '2016-02-07', '2017-01-27', '2018-02-15', '2019-02-04', '2020-01-24'],
   '春节': ['2015-02-19', '2016-02-08', '2017-01-28', '2018-02-16', '2019-02-05', '2020-01-25'],
   '元宵': ['2015-03-05', '2016-02-22', '2017-02-11', '2018-03-02', '2019-02-19', '2020-02-08'],
@@ -30,24 +30,22 @@ const REST_DAYS = ['2017-10-01', '2017-10-02', '2017-10-03', '2017-10-04', '2017
 // 工作日
 const WORK_DAYS = ['2017-09-30'];
 
-export function _getTraditionalHoliday() {
-  let HOLIDAY_TEMP = {};
+export function _getTraditionalHoliday () {
+  const HOLIDAY_TEMP = {};
 
-  let keys = Object.keys(TRADITIONAL_HOLIDAY);
-  keys.forEach(function (k, index) {
-    let arr = TRADITIONAL_HOLIDAY[k];
+  const keys = Object.keys(TRADITIONAL_HOLIDAY);
+  keys.forEach((k) => {
+    const arr = TRADITIONAL_HOLIDAY[k];
     arr.forEach((i) => {
       HOLIDAY_TEMP[i] = k;
     })
-  })
-
+  });
   return HOLIDAY_TEMP;
 }
 
-export function _isDate(obj) {
-  var type = obj == null ?
-    String(obj) : {}.toString.call(obj) || 'object';
-  return type == '[object date]';
+export function _isDate (obj) {
+  const type = obj === null ? String(obj) : {}.toString.call(obj) || 'object';
+  return type === '[object date]';
 }
 
 /**
@@ -56,16 +54,17 @@ export function _isDate(obj) {
  * @method _checkHash
  * @private
  */
-export function _checkHash(url, hash) {
+export function _checkHash (url, hash) {
   return url && url.match(/#/) && url.replace(/^.*#/, '') === hash;
 }
+
 /**
  * 获取当前日期的毫秒数
  * @method getTime
  * @param {String} date
  * @return {Number}
  */
-export function getTime(date) {
+export function getTime (date) {
   if (_isDate(date)) {
     return new Date(date).getTime();
   } else {
@@ -77,30 +76,32 @@ export function getTime(date) {
   }
 }
 
-export function _isInRange(range, date) {
-  var start = getTime(range[0]),
-    end = getTime(range[1]),
-    date = getTime(date);
-  return (start <= date && end >= date);
-}
-export function _isInSelectRange(range, date) {
-  var start = getTime(range[0]),
-    end = getTime(range[1]),
-    date = getTime(date);
-  return (start < date && end > date);
+export function _isInRange (range, date) {
+  const start = getTime(range[0]);
+  const end = getTime(range[1]);
+  const d = getTime(date);
+  return (start <= d && end >= d);
 }
 
-export function _fixNum(num) {
+export function _isInSelectRange (range, date) {
+  const start = getTime(range[0]);
+  const end = getTime(range[1]);
+  const d = getTime(date);
+  return (start < d && end > d);
+}
+
+export function _fixNum (num) {
   return (num < 10 ? '0' : '') + num;
 }
+
 /**
  * 是否是周末
  * @method isWeekend
  * @param {String} date
  * @return {Boolean}
  */
-export function _isWeekend(date) {
-  var day = new Date(date.replace(/-/g, '/')).getDay();
+export function _isWeekend (date) {
+  const day = new Date(date.replace(/-/g, '/')).getDay();
   return day === 0 || day === 6;
 }
 
@@ -110,8 +111,8 @@ export function _isWeekend(date) {
  * @param {String} date
  * @return {Boolean}
  */
-export function _isToday(_today, date) {
-  return getTime(_today) === getTime(date);
+export function _isToday (today, date) {
+  return getTime(today) === getTime(date);
 }
 
 /**
@@ -121,15 +122,15 @@ export function _isToday(_today, date) {
  * @param {Date} t today
  * @protected
  */
-export function _getMonthDays(y, t) {
-  var MONTH_DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-  var y = y || t.getFullYear(),
-    isLeapYear = false;
+export function _getMonthDays (y, t) {
+  const MONTH_DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  const year = y || t.getFullYear();
+  let isLeapYear = false;
 
-  if (y % 100) {
-    isLeapYear = !(y % 4);
+  if (year % 100) {
+    isLeapYear = !(year % 4);
   } else {
-    isLeapYear = !(y % 400);
+    isLeapYear = !(year % 400);
   }
 
   if (isLeapYear) {
@@ -139,29 +140,28 @@ export function _getMonthDays(y, t) {
   }
   return MONTH_DAYS;
 }
+
 /**
  * 当月1号前面有多少空格
  * @method _getPadding
  * @protected
  */
-export function _getPadding(year, month) {
-  var date = new Date(year + '/' + month + '/1'),
-    day = date.getDay();
-  return day;
+export function _getPadding (year, month) {
+  const date = new Date(year + '/' + month + '/1');
+  return date.getDay();
 }
 
-export function _unique(array) {
+export function _unique (array) {
   return Array.prototype.filter.call(array, function (item, index) {
-    return array.indexOf(item) == index;
+    return array.indexOf(item) === index;
   });
 }
 
-export function getToDay() {
+export function getToDay () {
   return new Date().getFullYear() + '-' + _fixNum(new Date().getMonth() + 1) + '-' + _fixNum(new Date().getDate());
 }
 
-
-export function getWeekRows(y, m, today, dateRange, departDate, arriveDate, selectedNote, descList) {
+export function getWeekRows (y, m, today, dateRange, departDate, arriveDate, selectedNote, descList) {
   const monthDays = _getMonthDays(y, today);
   const padding = _getPadding(y, m, 7);
   const num = monthDays[m - 1] + padding;
@@ -289,15 +289,7 @@ export function getWeekRows(y, m, today, dateRange, departDate, arriveDate, sele
   return rowsData;
 }
 
-
-export function generateDateCell({
-  range,
-  today,
-  departDate,
-  arriveDate,
-  selectedNote,
-  descList
-}) {
+export function generateDateCell ({ range, today, departDate, arriveDate, selectedNote, descList }) {
   const start = new Date(range[0].replace(/-/g, '/'));
   const end = new Date(range[1].replace(/-/g, '/'));
   const startYear = start.getFullYear();
@@ -329,5 +321,3 @@ export function generateDateCell({
   }
   return months
 }
-
-
