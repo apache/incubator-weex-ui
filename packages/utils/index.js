@@ -83,6 +83,22 @@ const Utils = {
       let { platform } = weex.config.env;
       return platform.toLowerCase() === 'ios';
     },
+    /**
+     * 是否为 iPhone X
+     * @returns {boolean}
+     */
+    isIPhoneX () {
+      const { deviceHeight } = weex.config.env;
+      if (Utils.env.isWeb()) {
+        return typeof window !== undefined
+          && window.screen
+          && window.screen.width
+          && window.screen.height
+          && (parseInt(window.screen.width, 10) == 375)
+          && (parseInt(window.screen.height, 10) == 812);
+      }
+      return Utils.env.isIOS() && deviceHeight === 2436;
+    },
     isAndroid () {
       let { platform } = weex.config.env;
       return platform.toLowerCase() === 'android';
@@ -123,7 +139,7 @@ const Utils = {
      */
     getPageHeight () {
       const { env } = weex.config;
-      const navHeight = Utils.env.isWeb() ? 0 : 130;
+      const navHeight = Utils.env.isWeb() ? 0 : (Utils.env.isIPhoneX() ? 176 : 132);
       return env.deviceHeight / env.deviceWidth * 750 - navHeight;
     }
   },

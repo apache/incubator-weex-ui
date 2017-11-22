@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.2.9
+- [+] Support for IPhoneX.
+
 ## 0.2.8
 - [+] Accessibility of components 🎉🎉 
 

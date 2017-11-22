@@ -46,6 +46,7 @@
           </div>
         </div>
       </cell>
+      <cell class="iphone-x" v-if="isIPhoneX"></cell>
     </list>
     <div class="index-list-nav"
          :style="navStyle"
@@ -99,6 +100,9 @@
         type: Object,
         default: () => ({})
       }
+    },
+    created () {
+      this.isIPhoneX = Utils.env.isIPhoneX();
     },
     computed: {
       formatList () {
@@ -172,6 +176,11 @@
     padding-left: 24px;
     padding-right: 24px;
     background-color: #FFFFFF;
+  }
+
+  .iphone-x {
+    height: 68px;
+    background-color: #ffffff;
   }
 
   .title {
