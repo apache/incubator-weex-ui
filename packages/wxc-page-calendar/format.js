@@ -170,10 +170,7 @@ export function getWeekRows (y, m, today, dateRange, departDate, arriveDate, sel
   const rowsData = [];
 
   for (let i = 1; i <= rows; i++) {
-    const row = {
-      index: i,
-      cells: []
-    };
+    const cells = [];
 
     for (let j = 1; j <= 7; j++) {
       let cell = {};
@@ -208,11 +205,11 @@ export function getWeekRows (y, m, today, dateRange, departDate, arriveDate, sel
           cls.push('calendar-holiday');
         }
 
-        const tHolidy = _getTraditionalHoliday()[date];
+        const tHoliday = _getTraditionalHoliday()[date];
 
         // 传统节日
-        if (tHolidy) {
-          note = tHolidy;
+        if (tHoliday) {
+          note = tHoliday;
           cls.push('calendar-holiday');
         }
         // 放假日
@@ -274,16 +271,13 @@ export function getWeekRows (y, m, today, dateRange, departDate, arriveDate, sel
           date: date,
           ext: ext,
           disabled: disabled,
-          year: y,
-          month: m,
-          day: d,
           text: d
         };
       }
-      row.cells.push(cell);
+      cells.push(cell);
     }
 
-    rowsData.push(row);
+    rowsData.push(cells);
   }
 
   return rowsData;
@@ -294,29 +288,23 @@ export function generateDateCell ({ range, today, departDate, arriveDate, select
   const end = new Date(range[1].replace(/-/g, '/'));
   const startYear = start.getFullYear();
   const startMonth = start.getMonth() + 1;
-  const startDate = start.getDate();
   const endYear = end.getFullYear();
   const endMonth = end.getMonth() + 1;
-  const endDate = end.getDate();
-  let i = 0;
+
   const l = (endYear - startYear) * 12 + endMonth - startMonth + 1;
   let y = startYear;
   let n = startMonth;
   const months = [];
 
-  for (; i < l; i++) {
+  for (let i = 0; i < l; i++) {
     if (n > 12) {
       n = 1;
       y++;
     }
-    months.push({
-      title: `${y}-${_fixNum(n)}`,
-      year: y,
-      month: n,
-      startDate: i === 0 ? startDate : false,
-      endDate: i === l - 1 ? endDate : false,
-      rowsData: getWeekRows(y, n, today, range, departDate, arriveDate, selectedNote, descList)
-    });
+    months.push(
+      { title: `${y}-${_fixNum(n)}` },
+      ...getWeekRows(y, n, today, range, departDate, arriveDate, selectedNote, descList)
+    );
     n++;
   }
   return months

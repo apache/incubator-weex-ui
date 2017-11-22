@@ -34,6 +34,7 @@
     </scroller>
   </div>
 </template>
+
 <style scoped>
   .wxc-demo {
     position: absolute;
@@ -103,7 +104,7 @@
     components: { Title, Category, WxcPageCalendar },
     data: () => ({
       currentDate: '',
-      selectedDate: ['2017-08-10', '2017-08-30'],
+      selectedDate: ['2017-12-20', '2017-12-30'],
       isRange: true,
       calendarTitle: '选择日期',
       dateRange: ['2017-08-01', '2018-07-30'],
@@ -112,14 +113,14 @@
         title: '日期选择'
       },
       descList: [
-        { date: '2017-06-23', value: '￥200' },
-        { date: '2017-06-24', value: '￥200' },
-        { date: '2017-06-25', value: '￥200' },
-        { date: '2017-06-26', value: '￥200' },
-        { date: '2017-06-27', value: '￥222' },
-        { date: '2017-06-28', value: '￥341' },
-        { date: '2017-06-29', value: '￥230' },
-        { date: '2017-07-06', value: '￥2000', emphasize: true }
+        { date: '2017-12-23', value: '￥200' },
+        { date: '2017-12-24', value: '￥200' },
+        { date: '2017-12-25', value: '￥200' },
+        { date: '2017-12-26', value: '￥200' },
+        { date: '2017-12-27', value: '￥222' },
+        { date: '2017-12-28', value: '￥341' },
+        { date: '2017-12-29', value: '￥230' },
+        { date: '2017-12-06', value: '￥2000', emphasize: true }
       ]
     }),
     created () {
@@ -139,13 +140,13 @@
         this.isRange = false;
         setTimeout(() => {
           this.$refs['wxcPageCalendar'].show();
-        }, 10);
+        }, 1);
       },
       showReturnCalendar () {
         this.isRange = true;
         setTimeout(() => {
           this.$refs['wxcPageCalendar'].show();
-        }, 10);
+        }, 1);
       }
     }
   };
