@@ -22,13 +22,6 @@
 | **`dotTextStyle`** | `Object` | `N` | `-` | : 文字Style |
 
 
-
-## 安装
-
-```shell
-npm i weex-ui --save
-```
-
 ## 使用方法
 
 ```vue

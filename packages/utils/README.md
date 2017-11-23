@@ -2,12 +2,6 @@
 
 > Weex Ui中的公共函数服务
 
-## 安装
-
-```shell
-npm i weex-ui --save
-```
-
 ## 使用方法
 
 ```vue

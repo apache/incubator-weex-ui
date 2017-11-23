@@ -7,11 +7,6 @@
 
 <img src="https://gw.alipayobjects.com/zos/rmsportal/AQMauSgRgIvdoSfxQVmN.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms01.alicdn.com/tfs/TB1ORR4SpXXXXX8aXXXXXXXXXXX-200-200.png" width="160"/>
 
-## 安装
-
-```shell
-npm install weex-ui --save
-```
 
 ## 使用方法
 

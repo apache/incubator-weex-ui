@@ -6,13 +6,6 @@
 
 <img src="https://gw.alipayobjects.com/zos/rmsportal/RFOOWyVEvoilJgKYQBcB.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1e69sSpXXXXclXXXXXXXXXXXX-200-200.png" width="160"/>
 
-
-## 安装
-
-```shell
-npm i weex-ui --save
-```
-
 ## 使用方法
 
 ```vue

@@ -11,12 +11,6 @@
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-popup/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-popup%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/MmgsYeDkFOioIpiQSfGF.gif" width="240"/>&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1_9v9SpXXXXcuXXXXXXXXXXXX-200-200.png" width="160"/>
 
-## 安装
-
-```shell
-npm i weex-ui --save
-```
-
 ## 使用方法
 
 ```vue

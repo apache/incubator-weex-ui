@@ -17,12 +17,6 @@
 * 注： 由于Weex版本不支持svg，故这边使用gif的Loading，不建议修改原有大小
 
 
-## 安装
-
-```shell
-npm install weex-ui --save
-```
-
 ## 使用方法
 
 ```vue

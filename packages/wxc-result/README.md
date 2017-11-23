@@ -58,7 +58,7 @@ npm install weex-ui --save
 | type | `String` | 'errorPage' | 错误页面的类型，包括errorPage、noNetwork、noGoods、errorLocation|
 | show | `Bool` | `true` | 是否显示，默认显示 |
 | padding-top | `Number` | `240` | 图案距离顶部高度 |
-| custom-set | `Object` | `{}` | 支持自定义配置参数,譬如需要修改无商品下得按钮`{noGoods:{button: '返回上一页'}}``|[type.js#L4](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L4)
+| custom-set | `Object` | `{}` | 支持自定义配置参数,譬如需要修改无商品下得按钮`{noGoods:{button: '返回上一页'}}``[type.js#L4](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L4)
 | wrap-style | `Object` | `{}` | 外层wrap样式自定义 |
 
 ### 自定义配置案例
