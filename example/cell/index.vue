@@ -54,7 +54,7 @@
                   :auto-accessible="false">
           <image class="image"
                  slot="label"
-                 src="http://gtms04.alicdn.com/tfs/TB1eLvjSXXXXXaiXXXXXXXXXXXX-144-166.jpg"></image>
+                 src="https://img.alicdn.com/tfs/TB1eLvjSXXXXXaiXXXXXXXXXXXX-144-166.jpg"></image>
           <text class="red"
                 slot="title">自定义标题、样式还可以加图片</text>
         </wxc-cell>

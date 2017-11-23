@@ -7,7 +7,7 @@
   - 元素图片、容器样式可以配置中成当前活动氛围一致，记得处理config中的图片高宽
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-lottery-rain/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-lottery-rain%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/LhUMuYgbZmUSAOezSTEV.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1MciTdwMPMeJjy1XbXXcwxVXa-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/LhUMuYgbZmUSAOezSTEV.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1MciTdwMPMeJjy1XbXXcwxVXa-200-200.png" width="160"/>
 
 ## 使用方法
 
@@ -30,11 +30,11 @@
     components: { WxcLotteryRain },
     data: () => ({
       images: [
-       'http://gtms03.alicdn.com/tfs/TB1sZPlb5IRMeJjy0FbXXbnqXXa-241-206.png',
-       'http://gtms03.alicdn.com/tfs/TB1eCbwb3MPMeJjy1XcXXXpppXa-241-206.png',
-       'http://gtms02.alicdn.com/tfs/TB1rDTjb3MPMeJjy1XdXXasrXXa-241-206.png',
-       'http://gtms04.alicdn.com/tfs/TB1Nw2sb3MPMeJjy1XbXXcwxVXa-241-206.png',
-       'http://gtms04.alicdn.com/tfs/TB1hCbwb3MPMeJjy1XcXXXpppXa-241-206.png'
+       'https://img.alicdn.com/tfs/TB1sZPlb5IRMeJjy0FbXXbnqXXa-241-206.png',
+       'https://img.alicdn.com/tfs/TB1eCbwb3MPMeJjy1XcXXXpppXa-241-206.png',
+       'https://img.alicdn.com/tfs/TB1rDTjb3MPMeJjy1XdXXasrXXa-241-206.png',
+       'https://img.alicdn.com/tfs/TB1Nw2sb3MPMeJjy1XbXXcwxVXa-241-206.png',
+       'https://img.alicdn.com/tfs/TB1hCbwb3MPMeJjy1XcXXXpppXa-241-206.png'
       ],
       config: {
         intervalTime: 450,

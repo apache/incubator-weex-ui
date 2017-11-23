@@ -9,7 +9,7 @@
     - **假如子组件有点击事件，在Android由于[此约束](http://weex-project.io/cn/references/gesture.html#约束)，目前需要在子元素里面绑定对应事件，我这边提供了一个[wxc-pan-cell](https://github.com/alibaba/weex-ui/tree/master/packages/wxc-pan-item)包裹器来解决此情况，具体使用可以参考[demo](https://github.com/alibaba/weex-ui/tree/master/demo/ep-slider)**
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-ep-slider/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-ep-slider%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/lWWUuRBxjMdLCaJGVHsp.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1Ky4QSpXXXXbRapXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/lWWUuRBxjMdLCaJGVHsp.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1Ky4QSpXXXXbRapXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 使用方法
 
