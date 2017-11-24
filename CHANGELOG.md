@@ -4,6 +4,7 @@
 - [+] Support for IPhoneX.
 - [!] The code format follows ESlint.
 - [+] Stronger about [wxc-page-calendar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-calendar/README.md).
+- [+] Document official website. 🎉🎉 
 
 
 ## 0.2.8
