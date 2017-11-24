@@ -1,4 +1,4 @@
-# Weex Ui 
+# Weex Ui
 
 [![Build Status](https://img.shields.io/travis/alibaba/weex-ui.svg?style=flat-square)](https://travis-ci.org/alibaba/weex-ui)
 [![GitHub last commit](https://img.shields.io/github/last-commit/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/commits/dev)
@@ -13,7 +13,7 @@
 ## 预览
 <img src="https://img.alicdn.com/tfs/TB1O2ulhgoQMeJjy0FoXXcShVXa-1282-986.jpg" width=540/>
 
-*你可以通过[飞猪](http://www.fliggy.com/mobile/?spm=181.52816.a1z6c.19.1fcc529aNQO84O&ad_id=&am_id=1301048151a679d80b29)、[淘宝](https://mpage.taobao.com/hd/download.html?spm=a21bo.50862.201858.1.5523e29eOKuPPN)、[天猫](https://pages.tmall.com/wow/portal/act/app-download?spm=875.7931836/B.a2226mz.16&scm=1027.1.1.1)、[Weex Playground](https://weex.apache.org/cn/playground.html) 或者浏览器扫码[体验](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js)* &nbsp;&nbsp;[English >>](./README.md)
+*你可以通过[飞猪](http://www.fliggy.com/mobile/?spm=181.52816.a1z6c.19.1fcc529aNQO84O&ad_id=&am_id=1301048151a679d80b29)、[淘宝](https://mpage.taobao.com/hd/download.html?spm=a21bo.50862.201858.1.5523e29eOKuPPN)、[天猫](https://pages.tmall.com/wow/portal/act/app-download?spm=875.7931836/B.a2226mz.16&scm=1027.1.1.1)、[Weex Playground](https://weex.apache.org/cn/playground.html) 或者浏览器扫码[体验](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js)* &nbsp;&nbsp;[English >>](./)
 
 ## 安装
 
@@ -116,35 +116,35 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 ## 文档
 |组件名称|分类|描述|
 |:--|:--|:--|
-|[wxc-button](./packages/wxc-button/README.md)|布局|基础按钮组件|
-|[wxc-cell](./packages/wxc-cell/README.md)|布局|单元格组件 展示表单、列表|
-|[wxc-ep-slider](./packages/wxc-ep-slider/README.md) * |布局|表达式绑定效果的 slider |
-|[wxc-lightbox](./packages/wxc-lightbox/README.md)|布局|图片全屏预览|
-|[wxc-overlay](./packages/wxc-overlay/README.md)|布局|基础蒙层|
-|[wxc-popup](./packages/wxc-popup/README.md)|布局|支持上下左右出现的滑板|
-|[wxc-result](./packages/wxc-result/README.md)|布局|通用结果页|
-|[wxc-slide-nav](./packages/wxc-slide-nav/README.md)|布局|导航滑动 增大视窗|
-|[wxc-minibar](./packages/wxc-minibar/README.md)|导航|模拟导航栏|
-|[wxc-tab-page](./packages/wxc-tab-page/README.md) * |导航|Tab页面切换滑动组件|
-|[wxc-checkbox](./packages/wxc-checkbox/README.md)|数据输入|复选列表|
-|[wxc-countdown](./packages/wxc-countdown/README.md)|数据输入|倒计时|
-|[wxc-radio](./packages/wxc-radio/README.md)|数据输入|单选列表|
-|[wxc-slider-bar](./packages/wxc-slider-bar/README.md) * |数据输入|滑动选择数据|
-|[wxc-stepper](./packages/wxc-stepper/README.md)|数据输入|计数器|
-|[wxc-searchbar](./packages/wxc-searchbar/README.md)|数据输入|搜索栏|
-|[wxc-grid-select](./packages/wxc-grid-select/README.md)|数据展示|网格选择|
-|[wxc-indexlist](./packages/wxc-indexlist/README.md)|数据展示|索引列表|
-|[wxc-page-calendar](./packages/wxc-page-calendar/README.md)|数据展示|全屏日历|
-|[wxc-rich-text](./packages/wxc-rich-text/README.md)|数据展示|动态模块 富文本|
-|[wxc-simple-flow](./packages/wxc-simple-flow/README.md)|数据展示|Simple flow chart|
-|[wxc-tag](./packages/wxc-tag/README.md)|数据展示|多种形式的标签|
-|[wxc-dialog](./packages/wxc-dialog/README.md)|反馈|二次确认弹框|
-|[wxc-loading](./packages/wxc-loading/README.md)|反馈|加载器|
-|[wxc-mask](./packages/wxc-mask/README.md)|反馈|中间出现浮层|
-|[wxc-noticebar](./packages/wxc-noticebar/README.md)|反馈|信息通知栏|
-|[wxc-progress](./packages/wxc-progress/README.md)|反馈|进度条|
-|[wxc-lottery-rain](./packages/wxc-lottery-rain/README.md)|游戏|红包雨 抓猫猫游戏|
-|[utils](./packages/utils/README.md)|服务|公共函数|
+|[wxc-button](./packages/wxc-button/)|布局|基础按钮组件|
+|[wxc-cell](./packages/wxc-cell/)|布局|单元格组件 展示表单、列表|
+|[wxc-ep-slider](./packages/wxc-ep-slider/) * |布局|表达式绑定效果的 slider |
+|[wxc-lightbox](./packages/wxc-lightbox/)|布局|图片全屏预览|
+|[wxc-overlay](./packages/wxc-overlay/)|布局|基础蒙层|
+|[wxc-popup](./packages/wxc-popup/)|布局|支持上下左右出现的滑板|
+|[wxc-result](./packages/wxc-result/)|布局|通用结果页|
+|[wxc-slide-nav](./packages/wxc-slide-nav/)|布局|导航滑动 增大视窗|
+|[wxc-minibar](./packages/wxc-minibar/)|导航|模拟导航栏|
+|[wxc-tab-page](./packages/wxc-tab-page/) * |导航|Tab页面切换滑动组件|
+|[wxc-checkbox](./packages/wxc-checkbox/)|数据输入|复选列表|
+|[wxc-countdown](./packages/wxc-countdown/)|数据输入|倒计时|
+|[wxc-radio](./packages/wxc-radio/)|数据输入|单选列表|
+|[wxc-slider-bar](./packages/wxc-slider-bar/) * |数据输入|滑动选择数据|
+|[wxc-stepper](./packages/wxc-stepper/)|数据输入|计数器|
+|[wxc-searchbar](./packages/wxc-searchbar/)|数据输入|搜索栏|
+|[wxc-grid-select](./packages/wxc-grid-select/)|数据展示|网格选择|
+|[wxc-indexlist](./packages/wxc-indexlist/)|数据展示|索引列表|
+|[wxc-page-calendar](./packages/wxc-page-calendar/)|数据展示|全屏日历|
+|[wxc-rich-text](./packages/wxc-rich-text/)|数据展示|动态模块 富文本|
+|[wxc-simple-flow](./packages/wxc-simple-flow/)|数据展示|Simple flow chart|
+|[wxc-tag](./packages/wxc-tag/)|数据展示|多种形式的标签|
+|[wxc-dialog](./packages/wxc-dialog/)|反馈|二次确认弹框|
+|[wxc-loading](./packages/wxc-loading/)|反馈|加载器|
+|[wxc-mask](./packages/wxc-mask/)|反馈|中间出现浮层|
+|[wxc-noticebar](./packages/wxc-noticebar/)|反馈|信息通知栏|
+|[wxc-progress](./packages/wxc-progress/)|反馈|进度条|
+|[wxc-lottery-rain](./packages/wxc-lottery-rain/)|游戏|红包雨 抓猫猫游戏|
+|[utils](./packages/utils/)|服务|公共函数|
 
 - `*` 这些富交互体验组件依赖于 Weex [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)。  
 - 推荐使用 [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en-US) 扩展获得更好的组件文档查找体验。
