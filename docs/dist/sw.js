@@ -13,7 +13,8 @@ const HOSTNAME_WHITELIST = [
   'h5.m.taobao.com/',
   'img.shields.io',
   'gw.alipayobjects.com',
-  'img.alicdn.com'
+  'img.alicdn.com',
+  'raw.githubusercontent.com'
 ]
 
 // The Util Function to hack URLs of intercepted requests
