@@ -40,3 +40,5 @@
    
 - Service
    - [utils](../packages/utils/) 
+   
+- [CHANGELOG](../CHANGELOG)
