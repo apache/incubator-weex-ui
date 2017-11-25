@@ -192,6 +192,19 @@ var Utils = {
 
       return platform.toLowerCase() === 'ios';
     },
+
+    /**
+     * 是否为 iPhone X
+     * @returns {boolean}
+     */
+    isIPhoneX: function isIPhoneX() {
+      var deviceHeight = weex.config.env.deviceHeight;
+
+      if (Utils.env.isWeb()) {
+        return (typeof window === 'undefined' ? 'undefined' : _typeof2(window)) !== undefined && window.screen && window.screen.width && window.screen.height && parseInt(window.screen.width, 10) == 375 && parseInt(window.screen.height, 10) == 812;
+      }
+      return Utils.env.isIOS() && deviceHeight === 2436;
+    },
     isAndroid: function isAndroid() {
       var platform = weex.config.env.platform;
 
@@ -238,7 +251,7 @@ var Utils = {
     getPageHeight: function getPageHeight() {
       var env = weex.config.env;
 
-      var navHeight = Utils.env.isWeb() ? 0 : 130;
+      var navHeight = Utils.env.isWeb() ? 0 : Utils.env.isIPhoneX() ? 176 : 132;
       return env.deviceHeight / env.deviceWidth * 750 - navHeight;
     }
   },
@@ -256,12 +269,12 @@ var Utils = {
    * console.log(compareVersion('0.1.100', '0.1.11')); // 'true'
    */
   compareVersion: function compareVersion() {
-    var currVer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "0.0.0";
-    var promoteVer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "0.0.0";
+    var currVer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '0.0.0';
+    var promoteVer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '0.0.0';
 
     if (currVer === promoteVer) return true;
-    var currVerArr = currVer.split(".");
-    var promoteVerArr = promoteVer.split(".");
+    var currVerArr = currVer.split('.');
+    var promoteVerArr = promoteVer.split('.');
     var len = Math.max(currVerArr.length, promoteVerArr.length);
     for (var i = 0; i < len; i++) {
       var proVal = ~~promoteVerArr[i];
@@ -299,7 +312,7 @@ var Utils = {
     var hasDot = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
     var newLength = 0;
-    var newStr = "";
+    var newStr = '';
     var singleChar = '';
     var chineseRegex = /[^\x00-\xff]/g;
     var strLength = str.replace(chineseRegex, '**').length;
@@ -396,10 +409,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-text.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-rich-text/wxc-rich-text-text.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-7a7c04cc"
+__vue_options__._scopeId = "data-v-31e5250e"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -503,10 +516,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-checkbox/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-checkbox/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-5f56b30c"
+__vue_options__._scopeId = "data-v-03dddc32"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -547,10 +560,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-icon.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-rich-text/wxc-rich-text-icon.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-eb5b13d0"
+__vue_options__._scopeId = "data-v-12384276"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -591,10 +604,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-tag.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-rich-text/wxc-rich-text-tag.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-676c9ccb"
+__vue_options__._scopeId = "data-v-49e4ea7e"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -2045,7 +2058,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /**
  * 根据26个字母取每一项首字母对数据进行排序,处理数据变换
- * @param  {object}
  * @return {[array]}
  */
 function totalList(source, hotListConfig, cityLocationConfig) {
@@ -2090,12 +2102,11 @@ function getSpecialData(data) {
         title = data.title,
         list = data.list;
 
-    var res = {
+    return {
       title: title,
       type: type,
       data: type === 'group' ? _utils2.default.arrayChunk(list) : list
     };
-    return res;
   } else {
     return null;
   }
@@ -2280,8 +2291,7 @@ var Region = {
     }
   },
   buildRandom: function buildRandom() {
-    var random = new Date().getTime() + '_' + parseInt(Math.random() * 1000000);
-    return random;
+    return new Date().getTime() + '_' + parseInt(Math.random() * 1000000);
   },
   add: function add(region) {
     var regions = this.regions;
@@ -2322,23 +2332,23 @@ Object.defineProperty(exports, "__esModule", {
  */
 
 exports.default = {
-  closeIcon: "https://gw.alicdn.com/tfs/TB1THvhpwMPMeJjy1XcXXXpppXa-32-32.png",
+  closeIcon: 'https://gw.alicdn.com/tfs/TB1THvhpwMPMeJjy1XcXXXpppXa-32-32.png',
 
-  linkIcon: "https://gw.alicdn.com/tfs/TB1utlZpwMPMeJjy1XdXXasrXXa-32-32.png",
+  linkIcon: 'https://gw.alicdn.com/tfs/TB1utlZpwMPMeJjy1XdXXasrXXa-32-32.png',
 
-  infoIcon: "https://gw.alicdn.com/tfs/TB1xdlZpwMPMeJjy1XdXXasrXXa-32-32.png",
+  infoIcon: 'https://gw.alicdn.com/tfs/TB1xdlZpwMPMeJjy1XdXXasrXXa-32-32.png',
 
-  warnIcon: "https://gw.alicdn.com/tfs/TB1TCvhpwMPMeJjy1XcXXXpppXa-32-32.png",
+  warnIcon: 'https://gw.alicdn.com/tfs/TB1TCvhpwMPMeJjy1XcXXXpppXa-32-32.png',
 
-  successIcon: "https://gw.alicdn.com/tfs/TB12Em8pwMPMeJjy1XbXXcwxVXa-32-32.png",
+  successIcon: 'https://gw.alicdn.com/tfs/TB12Em8pwMPMeJjy1XbXXcwxVXa-32-32.png',
 
-  errorIcon: "https://gw.alicdn.com/tfs/TB1UCvhpwMPMeJjy1XcXXXpppXa-32-32.png",
+  errorIcon: 'https://gw.alicdn.com/tfs/TB1UCvhpwMPMeJjy1XcXXXpppXa-32-32.png',
 
-  questionIcon: "https://gw.alicdn.com/tfs/TB1vJlZpwMPMeJjy1XdXXasrXXa-32-32.png",
+  questionIcon: 'https://gw.alicdn.com/tfs/TB1vJlZpwMPMeJjy1XdXXasrXXa-32-32.png',
 
-  timeIcon: "https://gw.alicdn.com/tfs/TB1eSzhpwMPMeJjy1XcXXXpppXa-30-30.png",
+  timeIcon: 'https://gw.alicdn.com/tfs/TB1eSzhpwMPMeJjy1XcXXXpppXa-30-30.png',
 
-  redbag: "https://gw.alicdn.com/tfs/TB1dCzhpwMPMeJjy1XcXXXpppXa-32-32.png"
+  redbag: 'https://gw.alicdn.com/tfs/TB1dCzhpwMPMeJjy1XcXXXpppXa-32-32.png'
 };
 
 /***/ }),
@@ -2366,12 +2376,15 @@ exports._unique = _unique;
 exports.getToDay = getToDay;
 exports.getWeekRows = getWeekRows;
 exports.generateDateCell = generateDateCell;
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 /**
  * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2017/07/29.
  */
 
-//国际节日
+// 国际节日
 var GLOBAL_HOLIDAY = exports.GLOBAL_HOLIDAY = {
   '01-01': '元旦',
   '02-14': '情人',
@@ -2381,7 +2394,7 @@ var GLOBAL_HOLIDAY = exports.GLOBAL_HOLIDAY = {
   '12-25': '圣诞'
 };
 
-//传统节日
+// 传统节日
 var TRADITIONAL_HOLIDAY = {
   '除夕': ['2015-02-18', '2016-02-07', '2017-01-27', '2018-02-15', '2019-02-04', '2020-01-24'],
   '春节': ['2015-02-19', '2016-02-08', '2017-01-28', '2018-02-16', '2019-02-05', '2020-01-25'],
@@ -2402,19 +2415,18 @@ function _getTraditionalHoliday() {
   var HOLIDAY_TEMP = {};
 
   var keys = Object.keys(TRADITIONAL_HOLIDAY);
-  keys.forEach(function (k, index) {
+  keys.forEach(function (k) {
     var arr = TRADITIONAL_HOLIDAY[k];
     arr.forEach(function (i) {
       HOLIDAY_TEMP[i] = k;
     });
   });
-
   return HOLIDAY_TEMP;
 }
 
 function _isDate(obj) {
-  var type = obj == null ? String(obj) : {}.toString.call(obj) || 'object';
-  return type == '[object date]';
+  var type = obj === null ? String(obj) : {}.toString.call(obj) || 'object';
+  return type === '[object date]';
 }
 
 /**
@@ -2426,6 +2438,7 @@ function _isDate(obj) {
 function _checkHash(url, hash) {
   return url && url.match(/#/) && url.replace(/^.*#/, '') === hash;
 }
+
 /**
  * 获取当前日期的毫秒数
  * @method getTime
@@ -2445,21 +2458,23 @@ function getTime(date) {
 }
 
 function _isInRange(range, date) {
-  var start = getTime(range[0]),
-      end = getTime(range[1]),
-      date = getTime(date);
-  return start <= date && end >= date;
+  var start = getTime(range[0]);
+  var end = getTime(range[1]);
+  var d = getTime(date);
+  return start <= d && end >= d;
 }
+
 function _isInSelectRange(range, date) {
-  var start = getTime(range[0]),
-      end = getTime(range[1]),
-      date = getTime(date);
-  return start < date && end > date;
+  var start = getTime(range[0]);
+  var end = getTime(range[1]);
+  var d = getTime(date);
+  return start < d && end > d;
 }
 
 function _fixNum(num) {
   return (num < 10 ? '0' : '') + num;
 }
+
 /**
  * 是否是周末
  * @method isWeekend
@@ -2477,8 +2492,8 @@ function _isWeekend(date) {
  * @param {String} date
  * @return {Boolean}
  */
-function _isToday(_today, date) {
-  return getTime(_today) === getTime(date);
+function _isToday(today, date) {
+  return getTime(today) === getTime(date);
 }
 
 /**
@@ -2490,13 +2505,13 @@ function _isToday(_today, date) {
  */
 function _getMonthDays(y, t) {
   var MONTH_DAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-  var y = y || t.getFullYear(),
-      isLeapYear = false;
+  var year = y || t.getFullYear();
+  var isLeapYear = false;
 
-  if (y % 100) {
-    isLeapYear = !(y % 4);
+  if (year % 100) {
+    isLeapYear = !(year % 4);
   } else {
-    isLeapYear = !(y % 400);
+    isLeapYear = !(year % 400);
   }
 
   if (isLeapYear) {
@@ -2506,20 +2521,20 @@ function _getMonthDays(y, t) {
   }
   return MONTH_DAYS;
 }
+
 /**
  * 当月1号前面有多少空格
  * @method _getPadding
  * @protected
  */
 function _getPadding(year, month) {
-  var date = new Date(year + '/' + month + '/1'),
-      day = date.getDay();
-  return day;
+  var date = new Date(year + '/' + month + '/1');
+  return date.getDay();
 }
 
 function _unique(array) {
   return Array.prototype.filter.call(array, function (item, index) {
-    return array.indexOf(item) == index;
+    return array.indexOf(item) === index;
   });
 }
 
@@ -2536,10 +2551,7 @@ function getWeekRows(y, m, today, dateRange, departDate, arriveDate, selectedNot
   var rowsData = [];
 
   for (var i = 1; i <= rows; i++) {
-    var row = {
-      index: i,
-      cells: []
-    };
+    var cells = [];
 
     for (var j = 1; j <= 7; j++) {
       var cell = {};
@@ -2577,11 +2589,11 @@ function getWeekRows(y, m, today, dateRange, departDate, arriveDate, selectedNot
             cls.push('calendar-holiday');
           }
 
-          var tHolidy = _getTraditionalHoliday()[date];
+          var tHoliday = _getTraditionalHoliday()[date];
 
           // 传统节日
-          if (tHolidy) {
-            note = tHolidy;
+          if (tHoliday) {
+            note = tHoliday;
             cls.push('calendar-holiday');
           }
           // 放假日
@@ -2643,17 +2655,14 @@ function getWeekRows(y, m, today, dateRange, departDate, arriveDate, selectedNot
             date: date,
             ext: ext,
             disabled: disabled,
-            year: y,
-            month: m,
-            day: d,
             text: d
           };
         })();
       }
-      row.cells.push(cell);
+      cells.push(cell);
     }
 
-    rowsData.push(row);
+    rowsData.push(cells);
   }
 
   return rowsData;
@@ -2671,29 +2680,20 @@ function generateDateCell(_ref) {
   var end = new Date(range[1].replace(/-/g, '/'));
   var startYear = start.getFullYear();
   var startMonth = start.getMonth() + 1;
-  var startDate = start.getDate();
   var endYear = end.getFullYear();
   var endMonth = end.getMonth() + 1;
-  var endDate = end.getDate();
-  var i = 0;
+
   var l = (endYear - startYear) * 12 + endMonth - startMonth + 1;
   var y = startYear;
   var n = startMonth;
   var months = [];
 
-  for (; i < l; i++) {
+  for (var i = 0; i < l; i++) {
     if (n > 12) {
       n = 1;
       y++;
     }
-    months.push({
-      title: y + '-' + _fixNum(n),
-      year: y,
-      month: n,
-      startDate: i === 0 ? startDate : false,
-      endDate: i === l - 1 ? endDate : false,
-      rowsData: getWeekRows(y, n, today, range, departDate, arriveDate, selectedNote, descList)
-    });
+    months.push.apply(months, [{ title: y + '-' + _fixNum(n) }].concat(_toConsumableArray(getWeekRows(y, n, today, range, departDate, arriveDate, selectedNote, descList))));
     n++;
   }
   return months;
@@ -2800,10 +2800,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-button/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-button/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-e0facbae"
+__vue_options__._scopeId = "data-v-464cfcd6"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -2844,10 +2844,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-cell/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-cell/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-6eea314e"
+__vue_options__._scopeId = "data-v-25f81146"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -2888,10 +2888,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-checkbox-list/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-checkbox-list/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-d3b0c8b2"
+__vue_options__._scopeId = "data-v-2313674c"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -2932,10 +2932,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-countdown/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-countdown/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-5e9a2430"
+__vue_options__._scopeId = "data-v-2f29b33a"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -2976,10 +2976,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-dialog/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-dialog/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-5ae36682"
+__vue_options__._scopeId = "data-v-ed4ea128"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3020,10 +3020,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-ep-slider/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-ep-slider/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-cafda07c"
+__vue_options__._scopeId = "data-v-245231f5"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3064,10 +3064,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-grid-select/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-grid-select/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-d231103c"
+__vue_options__._scopeId = "data-v-1efe8d56"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3108,10 +3108,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-grid-select/option.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-grid-select/option.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-6dfe5215"
+__vue_options__._scopeId = "data-v-478d3f02"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3152,10 +3152,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-indexlist/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-indexlist/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-607d6baf"
+__vue_options__._scopeId = "data-v-2b63243c"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3196,10 +3196,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-lightbox/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-lightbox/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-7f585d2c"
+__vue_options__._scopeId = "data-v-a5d66ece"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3240,10 +3240,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-loading/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-loading/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-216d530a"
+__vue_options__._scopeId = "data-v-11cb496e"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3284,10 +3284,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-lottery-rain/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-lottery-rain/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-2b6e320f"
+__vue_options__._scopeId = "data-v-04fd1efc"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3328,10 +3328,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-lottery-rain/rain-item.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-lottery-rain/rain-item.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-007dc12e"
+__vue_options__._scopeId = "data-v-6d05cdd6"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3372,10 +3372,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-mask/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-mask/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-fbc0ff3a"
+__vue_options__._scopeId = "data-v-40e6ab60"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3416,10 +3416,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-minibar/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-minibar/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-6c3a719b"
+__vue_options__._scopeId = "data-v-e28736e4"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3460,10 +3460,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-noticebar/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-noticebar/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-1747c08c"
+__vue_options__._scopeId = "data-v-7e2d21ed"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3504,10 +3504,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-overlay/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-overlay/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-a52a1ee2"
+__vue_options__._scopeId = "data-v-602638fc"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3548,10 +3548,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-page-calendar/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-page-calendar/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-c4e7920a"
+__vue_options__._scopeId = "data-v-144a30a4"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3588,7 +3588,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-pan-item/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-pan-item/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__.style = __vue_options__.style || {}
@@ -3627,7 +3627,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-part-loading/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-part-loading/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__.style = __vue_options__.style || {}
@@ -3670,10 +3670,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-popup/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-popup/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-0f235a2a"
+__vue_options__._scopeId = "data-v-48a6669e"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3714,10 +3714,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-progress/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-progress/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-5868d064"
+__vue_options__._scopeId = "data-v-f3b5885e"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3758,10 +3758,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-radio/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-radio/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-32a75f7a"
+__vue_options__._scopeId = "data-v-fa4119a6"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3802,10 +3802,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-radio/item.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-radio/item.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-0f804d1b"
+__vue_options__._scopeId = "data-v-6ced7708"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3846,10 +3846,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-result/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-result/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-7dd65154"
+__vue_options__._scopeId = "data-v-34a0b401"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3890,10 +3890,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-rich-text/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-40bf793d"
+__vue_options__._scopeId = "data-v-6adf0920"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -3930,7 +3930,7 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-link.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-rich-text/wxc-rich-text-link.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
 __vue_options__.style = __vue_options__.style || {}
@@ -3973,10 +3973,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-searchbar/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-searchbar/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-3bc83a2c"
+__vue_options__._scopeId = "data-v-6bece51d"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -4017,10 +4017,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-simple-flow/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-simple-flow/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-afc9c130"
+__vue_options__._scopeId = "data-v-01b460db"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -4061,10 +4061,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-slide-nav/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-slide-nav/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-ce8354f4"
+__vue_options__._scopeId = "data-v-228f57b9"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -4105,10 +4105,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-slider-bar/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-slider-bar/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-221cc7de"
+__vue_options__._scopeId = "data-v-5b27e7ea"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -4149,10 +4149,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-special-rich-text/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-special-rich-text/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-d95723ae"
+__vue_options__._scopeId = "data-v-62b4e548"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -4193,10 +4193,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-stepper/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-stepper/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-2fc4e5d0"
+__vue_options__._scopeId = "data-v-5246d8c3"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -4237,10 +4237,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-tab-page/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-tab-page/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-40ad0f7e"
+__vue_options__._scopeId = "data-v-6e697aeb"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -4281,10 +4281,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-tag/index.vue"
+__vue_options__.__file = "/Users/rccoder/dev/weex-ui/packages/wxc-tag/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-5a408959"
+__vue_options__._scopeId = "data-v-4cbfedcc"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -4748,6 +4748,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+//
 //
 //
 //
@@ -6052,6 +6053,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 //
 //
 //
+//
 
 var dom = weex.requireModule('dom');
 exports.default = {
@@ -6094,6 +6096,10 @@ exports.default = {
       }
     }
   },
+  created: function created() {
+    this.isIPhoneX = _utils2.default.env.isIPhoneX();
+  },
+
   computed: {
     formatList: function formatList() {
       var normalList = this.normalList,
@@ -6313,8 +6319,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 
-var appVersion = weex.config.env.appVersion || '0';
-var needShowPng = _utils2.default.compareVersion('8.2.4', appVersion) && _utils2.default.env.isTrip() && _utils2.default.env.isAndroid();
 exports.default = {
   props: {
     show: {
@@ -6342,17 +6346,14 @@ exports.default = {
   },
   computed: {
     showText: function showText() {
-      return this.loadingText || needShowPng;
-    },
-    hackText: function hackText() {
-      return this.loadingText ? this.loadingText : needShowPng ? '正在加载中...' : '';
+      return this.loadingText;
     },
     loading: function loading() {
       var loading = {};
       switch (this.type) {
         case 'trip':
           loading = {
-            url: needShowPng ? _type.PNG : _type.GIF,
+            url: _type.GIF,
             class: 'trip-loading'
           };
           break;
@@ -7386,14 +7387,11 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 //
 //
 //
-//
-//
-//
-//
-//
 
-var dom = weex.requireModule('dom');
+var isWeb = _utils2.default.env.isWeb();
+
 var animation = weex.requireModule('animation');
+var dom = weex.requireModule('dom');
 
 exports.default = {
   components: { WxcMinibar: _wxcMinibar2.default },
@@ -7441,8 +7439,7 @@ exports.default = {
     return {
       isShow: false,
       reSelect: true,
-      useDefaultReturn: false,
-      showHeader: _utils2.default.env.isWeb(),
+      showHeader: isWeb,
       today: Format.getToDay(),
       calendarHeight: 1040,
       pageHeight: 1334,
@@ -7464,20 +7461,41 @@ exports.default = {
     }
   },
   created: function created() {
-    var self = this;
-    var env = weex.config.env;
-    self.pageHeight = env.deviceHeight / env.deviceWidth * 750;
-    self.calendarHeight = self.pageHeight - (this.showHeader ? 100 : 120) - 60;
-    self.detectShow();
+    this.isIPhoneX = _utils2.default.env.isIPhoneX();
+    this.pageHeight = _utils2.default.env.getPageHeight();
+    this.calendarHeight = this.pageHeight - (this.showHeader ? 90 : 0) - 60;
+    this.detectShow();
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    var needDestroy = this.needDestroy;
+
+    var hold = isWeb ? 700 : 100;
+    !needDestroy && setTimeout(function () {
+      _this.isShow = true;
+      _this.scrollToDate();
+    }, hold);
   },
 
+  watch: {
+    needDestroy: function needDestroy(newVal, preVal) {
+      var _this2 = this;
+
+      if (!newVal && newVal !== preVal) {
+        setTimeout(function () {
+          _this2.isShow = true;
+        }, 200);
+      }
+    }
+  },
   methods: {
     minibarLeftButtonClick: function minibarLeftButtonClick() {
-      var _this = this;
+      var _this3 = this;
 
       setTimeout(function () {
-        _this.hide();
-        _this.$emit('wxcPageCalendarBackClicked', {});
+        _this3.hide();
+        _this3.$emit('wxcPageCalendarBackClicked', {});
       }, 100);
     },
     onClickDate: function onClickDate(datConfig) {
@@ -7505,34 +7523,38 @@ exports.default = {
       }
     },
     scrollToDate: function scrollToDate() {
-      if (this.departDate) {
-        var el = this.$refs.departDate[0];
-        dom.getComponentRect && dom.getComponentRect(el, function (e) {
-          if (e && e.result) {
-            var bottom = e.size.bottom;
-            var env = weex.config.env;
-            // 误差
-
-            var height = env.deviceHeight / env.deviceWidth * 750 - 50;
-            if (bottom > height || bottom === 0) {
-              dom.scrollToElement(el, { offset: -146, animated: false });
-            }
-          }
-        });
-      }
-    },
-    dispatchDateChange: function dispatchDateChange(dateArr) {
-      var _this2 = this;
+      var _this4 = this;
 
       setTimeout(function () {
-        _this2.hide();
-      }, 600);
+        if (_this4.departDate) {
+          var el = _this4.$refs.departDate[0];
+          el && dom.getComponentRect && dom.getComponentRect(el, function (e) {
+            if (e && e.result) {
+              var bottom = e.size.bottom;
+              var env = weex.config.env;
+              // 误差
+
+              var height = env.deviceHeight / env.deviceWidth * 750 - 50;
+              if (bottom > height || bottom === 0) {
+                dom.scrollToElement(el, { offset: -146, animated: false });
+              }
+            }
+          });
+        }
+      }, 10);
+    },
+    dispatchDateChange: function dispatchDateChange(dateArr) {
+      var _this5 = this;
+
+      var duration = isWeb ? 400 : 600;
+      setTimeout(function () {
+        _this5.hide();
+      }, duration);
       this.$emit('wxcPageCalendarDateSelected', {
         date: dateArr
       });
     },
     detectShow: function detectShow() {
-      !this.needDestroy && (this.isShow = true);
       if (this.isRange && this.selectedDate.length >= 2) {
         this.departDate = this.selectedDate[0];
         this.arriveDate = this.selectedDate[1];
@@ -7544,25 +7566,23 @@ exports.default = {
     _animate: function _animate() {
       var width = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
 
+      var duration = isWeb ? 200 : 300;
       animation.transition(this.$refs.pageCalendar, {
         styles: {
           transform: 'translateX(' + -width + 'px)'
         },
         timingFunction: 'ease-out',
-        duration: 300
+        duration: duration
       }, function () {});
     },
     show: function show() {
-      var _this3 = this;
+      var needDestroy = this.needDestroy;
 
-      this.needDestroy && (this.isShow = true);
+      needDestroy && (this.isShow = true);
       this.reSelect = true;
       this.detectShow();
       this._animate(750);
-      // 防止没有渲染完成
-      setTimeout(function () {
-        _this3.scrollToDate();
-      }, 1);
+      needDestroy && this.scrollToDate();
     },
     hide: function hide() {
       this.needDestroy && (this.isShow = false);
@@ -11822,18 +11842,19 @@ module.exports = {
   "calendar-list": {
     "flexDirection": "column"
   },
-  "calendar-month": {
+  "month-text": {
+    "fontSize": 32,
     "height": 60,
-    "justifyContent": "center",
+    "lineHeight": 60,
+    "width": 750,
+    "textAlign": "center",
     "alignItems": "center",
     "backgroundColor": "#f2f3f4"
-  },
-  "month-text": {
-    "fontSize": 32
   },
   "calendar-row": {
     "height": 140,
     "flexDirection": "row",
+    "backgroundColor": "#ffffff",
     "borderBottomWidth": 1,
     "borderColor": "#f2f3f4",
     "alignItems": "center",
@@ -11843,10 +11864,13 @@ module.exports = {
   "row-item": {
     "flex": 1,
     "height": 140,
-    "background": "#ffffff",
-    "borderWidth": 0,
     "paddingTop": 10,
-    "paddingBottom": 10
+    "paddingBottom": 10,
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "iphone-x": {
+    "height": 68
   },
   "calendar-note": {
     "height": 36,
@@ -11854,11 +11878,6 @@ module.exports = {
     "fontSize": 24,
     "color": "#000000",
     "textAlign": "center"
-  },
-  "calendar-item": {
-    "justifyContent": "center",
-    "alignItems": "center",
-    "height": 120
   },
   "calendar-day": {
     "height": 48,
@@ -12087,6 +12106,10 @@ module.exports = {
     "paddingLeft": 24,
     "paddingRight": 24,
     "backgroundColor": "#FFFFFF"
+  },
+  "iphone-x": {
+    "height": 68,
+    "backgroundColor": "#ffffff"
   },
   "title": {
     "fontSize": 32,
@@ -13235,10 +13258,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('wxc-minibar', _vm._b({
     attrs: {
       "show": _vm.showHeader,
-      "useDefaultReturn": _vm.useDefaultReturn
+      "useDefaultReturn": false
     },
     on: {
-      "wxcMinibarLeftButtonClicked": _vm.minibarLeftButtonClick
+      "minibarLeftButtonClick": _vm.minibarLeftButtonClick
     }
   }, 'wxc-minibar', _vm.minibarCfg, false)), (_vm.isShow) ? _c('div', {
     staticClass: ["calendar-weekday"]
@@ -13255,52 +13278,46 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     style: {
       height: _vm.calendarHeight + 'px'
     }
-  }, _vm._l((_vm.monthsArray), function(month, index) {
+  }, [_vm._l((_vm.monthsArray), function(month, index) {
     return _c('cell', {
       key: index,
+      class: [!month.title && 'calendar-row'],
       appendAsTree: true,
       attrs: {
         "append": "tree"
       }
-    }, [_c('div', {
-      staticClass: ["calendar-month"]
-    }, [_c('text', {
+    }, [(month.title) ? _c('text', {
       staticClass: ["month-text"]
-    }, [_vm._v(_vm._s(month.title))])]), _vm._l((month.rowsData), function(row, rowIndex) {
+    }, [_vm._v(_vm._s(month.title))]) : _vm._l((month), function(cell, rowIndex) {
       return _c('div', {
-        key: rowIndex,
-        staticClass: ["calendar-row"]
-      }, _vm._l((row.cells), function(cell, index) {
-        return _c('div', {
-          key: index,
-          ref: cell.ref,
-          refInFor: true,
-          class: ['row-item', cell.cellClass],
-          on: {
-            "click": function($event) {
-              _vm.onClickDate(cell)
-            }
+        key: (index + "-" + rowIndex),
+        ref: cell.ref,
+        refInFor: true,
+        class: ['row-item', cell.cellClass],
+        attrs: {
+          "accessible": true,
+          "ariaLabel": ((cell.text?cell.text:'') + "," + (cell.note?cell.note:'') + "," + (cell.ext?cell.ext:''))
+        },
+        on: {
+          "click": function($event) {
+            _vm.onClickDate(cell)
           }
-        }, [(cell.isEmpty) ? _c('div', {
-          attrs: {
-            "ariaHidden": "true"
-          }
-        }) : _vm._e(), (!cell.isEmpty) ? _c('div', {
-          staticClass: ["calendar-item"],
-          attrs: {
-            "accessible": true,
-            "ariaLabel": ((cell.text?cell.text:'') + "," + (cell.note?cell.note:'') + "," + (cell.ext?cell.ext:''))
-          }
-        }, [_c('text', {
-          class: ['calendar-note', cell.cls]
-        }, [_vm._v(_vm._s(cell.note))]), _c('text', {
-          class: ['calendar-day', cell.cls]
-        }, [_vm._v(_vm._s(cell.text))]), _c('text', {
-          class: ['calendar-ext', cell.cls]
-        }, [_vm._v(_vm._s(cell.ext))])]) : _vm._e()])
-      }))
+        }
+      }, [_c('text', {
+        class: ['calendar-note', cell.cls]
+      }, [_vm._v(_vm._s(cell.note))]), _c('text', {
+        class: ['calendar-day', cell.cls]
+      }, [_vm._v(_vm._s(cell.text))]), _c('text', {
+        class: ['calendar-ext', cell.cls]
+      }, [_vm._v(_vm._s(cell.ext))])])
     })], 2)
-  })) : _vm._e()], 1)
+  }), (_vm.isIPhoneX) ? _c('cell', {
+    staticClass: ["iphone-x"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }) : _vm._e()], 2) : _vm._e()], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
@@ -13533,7 +13550,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     style: {
       height: _vm.height + 'px'
     }
-  }, _vm._l((_vm.formatList), function(v, i) {
+  }, [_vm._l((_vm.formatList), function(v, i) {
     return _c('cell', {
       key: i,
       ref: 'index-item-title-' + v.title,
@@ -13595,7 +13612,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         staticClass: ["desc"]
       }, [_vm._v(_vm._s(item.desc))])])
     })) : _vm._e()])
-  })), (_vm.showIndex && !_vm.onlyShowList) ? _c('div', {
+  }), (_vm.isIPhoneX) ? _c('cell', {
+    staticClass: ["iphone-x"],
+    appendAsTree: true,
+    attrs: {
+      "append": "tree"
+    }
+  }) : _vm._e()], 2), (_vm.showIndex && !_vm.onlyShowList) ? _c('div', {
     staticClass: ["index-list-nav"],
     style: _vm.navStyle
   }, _vm._l((_vm.formatList), function(item, index) {
@@ -13930,7 +13953,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     class: ['loading-box', _vm.loading.class],
     attrs: {
-      "ariaHidden": "true"
+      "ariaHidden": true
     }
   }, [_c('image', {
     staticClass: ["loading-trip-image"],
@@ -13939,9 +13962,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "resize": "contain",
       "quality": "original"
     }
-  }), (_vm.showText) ? _c('text', {
+  }), (_vm.loadingText) ? _c('text', {
     staticClass: ["loading-text"]
-  }, [_vm._v(_vm._s(_vm.hackText))]) : _vm._e()])]) : _vm._e()])
+  }, [_vm._v(_vm._s(_vm.loadingText))]) : _vm._e()])]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
