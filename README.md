@@ -172,7 +172,7 @@ Once it has been compiled, a browser window will be opened automatically. You ca
 
 - Use it with NPM.
 - **Star it** if you like.
-- If you have any ideas or suggestions to improve Weex Ui, welcome to submit a PR.
+- If you have any ideas or suggestions to improve Weex Ui, welcome to submit a PR, More can see the [CONTRIBUTING](./CONTRIBUTING.md).
 - Having a problem getting something to work or want to know why we setup something in a certain way? [File a GitHub Issue](https://github.com/alibaba/weex-ui/issues/new).
 
 ## License
