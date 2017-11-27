@@ -20,7 +20,7 @@ dev         <--- Develop/PR
 ## Commit Log
 
 ```
-{action}  {description}
+[{action}] {description}
 ```
 
 * `{action}`
@@ -29,3 +29,7 @@ dev         <--- Develop/PR
     * `-` remove
 * `{description}`
     * Just make it as clear and simple as possible.
+
+for example:
+- [+] Support for IPhoneX.
+- [!] The code format follows ESlint.
