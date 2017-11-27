@@ -12,7 +12,7 @@ dev         <--- Develop/PR
 
 * `dev` branch
   * `dev` is the developing branch.   
-  * ***It's RECOMMENDED to commit feature PR to `dev `***.   
+  * It's **RECOMMENDED** to commit feature PR to `dev `.   
 * `master` branch
   * `master` is the release branch,we will make tag and publish version on this branch.
 
