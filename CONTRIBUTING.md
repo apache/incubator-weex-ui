@@ -10,11 +10,11 @@ master
 dev         <--- Develop/PR
 ```
 
-0. `dev` branch
-    0. `dev` is the developing branch.
-    0. ***It's RECOMMENDED to commit feature PR to `dev `***.
-0. `master` branch
-    0. `master` is the release branch,we will make tag and publish version on this branch.
+* `dev` branch
+  * `dev` is the developing branch.   
+  * ***It's RECOMMENDED to commit feature PR to `dev `***.   
+* `master` branch
+  * `master` is the release branch,we will make tag and publish version on this branch.
 
 
 ## Commit Log
