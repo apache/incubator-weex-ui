@@ -26,7 +26,7 @@
       <div class="item-price">
         <wxc-rich-text :config-list="priceDesc"></wxc-rich-text>
         <div class="price-num">
-          <text class="yen">&#65509;</text>
+          <text class="yen">{{yenSymbol}}</text>
           <text class="price">{{price}}</text>
           <text class="postfix" v-if="postfix">起</text>
         </div>
@@ -197,6 +197,9 @@
         default: 0
       }
     },
+    data: () => ({
+      yenSymbol: '\u00A5'
+    }),
     computed: {
       isTitleString () {
         return Utils.isString(this.title);
