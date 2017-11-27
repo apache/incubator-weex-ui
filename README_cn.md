@@ -162,7 +162,7 @@ npm run start
 
 - 通过 npm 来安装使用
 - 如果您喜欢这个组件库，可以 star 此项目
-- 如果您有任何想法或建议来改善 Weex Ui，欢迎提交PR，更多可见 [CONTRIBUTING](./CONTRIBUTING.md)
+- 如果您有任何想法或建议来改善 Weex Ui，欢迎提交 [PR](./CONTRIBUTING.md)
 - 假如使用过程中碰到了问题或者不明白某个地方为什么要这样处理？ 可以[新建一个 issue](https://github.com/alibaba/weex-ui/issues/new) 来咨询
 
 ## 协议
