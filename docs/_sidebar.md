@@ -24,7 +24,6 @@
     - [wxc-grid-select](./packages/wxc-grid-select/)
     - [wxc-indexlist](./packages/wxc-indexlist/)
     - [wxc-page-calendar](./packages/wxc-page-calendar/)
-    - [wxc-page-calendar](./packages/wxc-page-calendar/)
     - [wxc-rich-text](./packages/wxc-rich-text/)
     - [wxc-simple-flow](./packages/wxc-simple-flow/)
     - [wxc-tag](./packages/wxc-tag/)
