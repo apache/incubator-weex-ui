@@ -83,7 +83,7 @@
       },
       title: {
         type: String,
-        default: '阿里旅行'
+        default: '标题'
       },
       rightText: {
         type: String,

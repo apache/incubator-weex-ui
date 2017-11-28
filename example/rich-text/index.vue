@@ -118,7 +118,7 @@
       specialConfigList: [
         {
           type: 'tag',
-          value: '自由行',
+          value: '渐进式',
           style: {
             width: 84,
             fontSize: 24,
@@ -131,7 +131,7 @@
         },
         {
           type: 'text',
-          value: '春秋旅游广州-泰国曼谷6天往返单机票自由行自由春秋旅游广州-泰国曼谷6天往返单机票自由行自由行…',
+          value: 'VueJS 是 Evan You 开发的渐进式 JavaScript 框架, 开发者能够通过撰写 *.vue 文件',
           theme: 'black',
           style: {
             fontSize: 28
@@ -149,7 +149,7 @@
         },
         {
           type: 'text',
-          value: '首先我很满意酒店，很整洁，早上的自助餐也很丰富，游泳池也不错，其次，租车公司也很赞，这次旅行非常的完美...',
+          value: 'Weex 是一套简单易用的跨平台开发方案，能以 web 的开发体验构建高性能、可扩展的 native 应用',
           theme: 'black'
         }
       ]

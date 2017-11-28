@@ -45,7 +45,7 @@
       </wxc-cell>
       <wxc-cell :has-top-border="false"
                 :auto-accessible="false"
-                title="切换飞猪">
+                title="自定义Loading">
         <switch :checked="type === 'trip'"
                 slot="value"
                 @change="type=(type === 'trip'? 'default' : 'trip')"></switch>

@@ -32,8 +32,8 @@
       </div>
       <category title="高级使用" class="category"></category>
       <div class="demo">
-        <wxc-cell title="阿里旅行飞猪"
-                  desc="这里是附加信息"
+        <wxc-cell title="标题内容"
+                  desc="描述信息"
                   :has-arrow="true"
                   @wxcCellClicked="wxcCellClicked"
                   :has-top-border="true"></wxc-cell>

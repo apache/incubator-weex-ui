@@ -12,12 +12,12 @@
       <div class="demo">
         <wxc-noticebar mode="link"
                        :notice-url="url"
-                       notice="飞猪测试通告,可跳转"></wxc-noticebar>
+                       notice="测试通告,可跳转"></wxc-noticebar>
       </div>
       <div class="demo">
         <wxc-noticebar :show="true"
                        mode="closable"
-                       notice="飞猪测试通告，可关闭"></wxc-noticebar>
+                       notice="测试通告，可关闭"></wxc-noticebar>
       </div>
       <div class="demo">
         <wxc-noticebar type="time"
