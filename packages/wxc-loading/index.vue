@@ -95,7 +95,7 @@
             loading = {
               url: GIF,
               class: 'trip-loading'
-            }
+            };
             break;
           default:
             loading = {
