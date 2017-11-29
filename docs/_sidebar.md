@@ -10,6 +10,7 @@
 
 - Navigator
     - [wxc-minibar](./packages/wxc-minibar/)
+    - [wxc-tab-bar](./packages/wxc-tab-bar/)
     - [wxc-tab-page](./packages/wxc-tab-page/)
  
 - Data Entry
