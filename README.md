@@ -135,7 +135,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 |[wxc-result](./packages/wxc-result/)|Layout|General results page|
 |[wxc-slide-nav](./packages/wxc-slide-nav/)|Layout|Increases view windows|
 |[wxc-minibar](./packages/wxc-minibar/)|Navigator|Top navigation|
-|[wxc-tab-bar](./packages/wxc-tab-bar/) * |Navigator|Tab bar switching component|
+|[wxc-tab-bar](./packages/wxc-tab-bar/)|Navigator|Tab bar switching component|
 |[wxc-tab-page](./packages/wxc-tab-page/) * |Navigator|Single page Tab switching component|
 |[wxc-checkbox](./packages/wxc-checkbox/)|Data Entry|Checkbox list|
 |[wxc-countdown](./packages/wxc-countdown/)|Data Entry|Countdown component|
