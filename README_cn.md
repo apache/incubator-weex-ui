@@ -125,7 +125,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 |[wxc-result](./packages/wxc-result/)|布局|通用结果页|
 |[wxc-slide-nav](./packages/wxc-slide-nav/)|布局|导航滑动 增大视窗|
 |[wxc-minibar](./packages/wxc-minibar/)|导航|模拟导航栏|
-|[wxc-tab-bar](./packages/wxc-tab-bar/) * |导航|底部Bar页面切换|
+|[wxc-tab-bar](./packages/wxc-tab-bar/)|导航|底部Bar页面切换|
 |[wxc-tab-page](./packages/wxc-tab-page/) * |导航|Tab页面切换滑动组件|
 |[wxc-checkbox](./packages/wxc-checkbox/)|数据输入|复选列表|
 |[wxc-countdown](./packages/wxc-countdown/)|数据输入|倒计时|
