@@ -2,8 +2,6 @@
 
 > Weex搜索栏组件，一般可位于 NavBar 下方，通过『取消按钮』退出激活状态, 允许设置点击跳转，支持带出发地形式的搜索。
 
-- 飞猪的同学使用2.0以上版本务必设置`theme='yellow'`
-
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-searchbar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-searchbar%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/qbEmYUETsvpDKuloPFfu.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB10KfVSpXXXXaRXVXXXXXXXXXX-200-200.png" width="160"/>
 
@@ -87,7 +85,7 @@
 | disabled | `Boolean` | false | 是否禁用input |
 | always-show-cancel | `Boolean` | false | 是否一直显示取消按钮 |
 | dep-name | `String` | `杭州` | `mode="hasDep"` 需要设置出发地名称 |
-| theme | `String` | `gray` |  输入框的色值主题`` |
+| theme | `String` | `gray` |  `输入框的色值主题``gray``yellow` |
 
 
 ### 事件回调
