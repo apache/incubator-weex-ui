@@ -7,7 +7,7 @@ const path = require('path');
 const pkg = require('./package.json');
 
 const webpack = require('webpack');
-const glob = require("glob");
+const glob = require('glob');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -16,8 +16,8 @@ const plugins = [
     verbose: true
   }),
   new webpack.DefinePlugin({
-    "process.env": {
-      NODE_ENV: JSON.stringify("production")
+    'process.env': {
+      NODE_ENV: JSON.stringify('production')
     },
     'global': '{}'
   }),
@@ -30,7 +30,7 @@ const plugins = [
   ])
 ];
 
-const needClean = process.argv.indexOf("--watch") > -1;
+const needClean = process.argv.indexOf('--watch') > -1;
 needClean && plugins.shift();
 
 console.log('Building..., Please wait a moment.');
@@ -38,7 +38,7 @@ console.log('Building..., Please wait a moment.');
 const getEntry = dir => {
   const foundScripts = glob.sync(`${dir}/*/index.js`, {});
   // 生成 entry 映射表
-  let ret = {};
+  const ret = {};
   foundScripts.forEach(function (scriptPath) {
     if (!/\.entry\.js$/.test(scriptPath)) {
       ret[scriptPath.replace(/^(.*)\.js$/, '$1')] = './' + scriptPath;

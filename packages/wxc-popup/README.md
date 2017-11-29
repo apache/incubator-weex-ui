@@ -67,7 +67,7 @@
 | popup-color | `String` | `#FFFFFF` | 弹出层的颜色 |
 | stand-out | `Number` | `0` | 底部突发高度，默认为0 |
 | animation | `Object` | `{imingFunction: 'ease-in'}` | 可以自定义面板动画 |
-| overlay-cfg | `Object` | '{ hasAnimation: true, timingFunction: ['ease-in', 'ease-out'], duration: 300, opacity: 0.6 }' |  蒙层配置参数，参考[wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md)组件|
+| overlay-cfg | `Object` | `{ hasAnimation: true, timingFunction: ['ease-in', 'ease-out'], duration: 300, opacity: 0.6 }` |  蒙层配置参数，参考[wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md)组件|
 
 ### 事件回调
 
