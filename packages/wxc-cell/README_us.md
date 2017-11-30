@@ -1,70 +1,71 @@
 # wxc-cell 
 
-> Weex 单元格组件，可用作展示列表信息、链接或者表单等  
+> A cell to display list, link or form.
 
-### 规则
+### Rule
+  - 
   - 可以设置label、标题、描述、跳转、箭头显示和点击事件回调功能
-  - 可以设置子元素传入
   
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-cell/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-cell%2Fdemo%2Findex.native-min.js)
+
+## [Demo Preview](https://h5.m.taobao.com/trip/wxc-cell/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-cell%2Fdemo%2Findex.native-min.js)
 <img src="https://img.alicdn.com/tfs/TB1mIA5c5qAXuNjy1XdXXaYcVXa-750-1334.jpg" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB15ta_SpXXXXcFaVXXXXXXXXXX-191-197.png" width="160"/>
 
-## 使用方法
+## Code Example
 
 ```vue
 <template>
   <div class="container">
     <div class="demo">
-      <text class="demo-title">列表list展示</text>
+      <text class="demo-title">List demo</text>
 
-      <wxc-cell label="标题"
-                title="阿里旅行飞猪"
+      <wxc-cell label="Label demo text"
+                title="Title demo text"
                 :has-arrow="true"
                 @wxcCellClicked="wxcCellClicked"
                 :has-margin="true"></wxc-cell>
 
-      <wxc-cell label="标题"
-                title="带链接"
+      <wxc-cell label="Label demo text"
+                title="Title demo text"
                 :has-arrow="true"
                 link="https://h5.m.taobao.com/trip/home/index.html"
                 @wxcCellClicked="wxcCellClicked"
                 spm="181.12312312.12312.d01"
                 :has-top-border="false"></wxc-cell>
 
-      <wxc-cell label="标题"
-                title="阿里旅行飞猪"
+      <wxc-cell label="Label demo text"
+                title="Title demo text"
                 :has-arrow="true"
                 @wxcCellClicked="wxcCellClicked"
                 :has-top-border="false"></wxc-cell>
 
     </div>
     <div class="demo">
-      <text class="demo-title">不配置label</text>
-      <wxc-cell title="标题"
+      <text class="demo-title">No label</text>
+      <wxc-cell title="Title demo text"
                 :has-arrow="true"
                 @wxcCellClicked="wxcCellClicked"
                 :has-top-border="true"></wxc-cell>
     </div>
 
     <div class="demo">
-      <text class="demo-title">配置附加信息</text>
-      <wxc-cell title="标题"
-                desc="这里是附加信息"
+      <text class="demo-title">Add desc</text>
+      <wxc-cell title="Title text"
+                desc="Desc text"
                 :has-arrow="true"
                 @wxcCellClicked="wxcCellClicked"
                 :has-top-border="true"></wxc-cell>
     </div>
 
     <div class="demo">
-      <text class="demo-title">不显示箭头</text>
-      <wxc-cell title="标题"
+      <text class="demo-title">No arrow</text>
+      <wxc-cell title="Title text"
                 :has-arrow="false"
                 @wxcCellClicked="wxcCellClicked"
                 :has-top-border="true"></wxc-cell>
     </div>
     <div class="demo">
-      <text class="demo-title">自定义子元素</text>
-      <wxc-cell title="这里是标题"
+      <text class="demo-title">Custom slot</text>
+      <wxc-cell title="Title text"
                 :has-arrow="false"
                 :has-top-border="true">
         <switch slot="value"></switch>
@@ -85,10 +86,10 @@
   };
 </script>
 ```
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/cell/index.vue)
+More details can be found [here](https://github.com/alibaba/weex-ui/blob/master/example/cell/index.vue)
 
 
-### 可配置参数
+### API
 
 | Prop      | Type   |Required  | Default   | Description  |
 |-------------|------------|--------|--------|-----|
@@ -105,12 +106,13 @@
 
 
 ### Slot
-1. `<slot name="label"></slot>`：label卡槽，替换默认 label 占位
-2. `<slot name="title"></slot>`：title卡槽，替换默认 title 占位
-3. `<slot name="value"></slot>`：右边卡槽，有时候可以需要传入输入框、checkbox情况
+1. `<slot name="label"></slot>`：label卡槽，不传入使用文案
+2. `<slot name="title"></slot>`：title卡槽， 不传入使用文案
+3. `<slot name="value"></slot>`：有时候可以需要传入输入框、checkbox情况
 
 
-### 事件回调
+### Event
+
 ```
-//点击事件回调  `@wxcCellClicked="wxcCellClicked"`
+//`@wxcCellClicked="wxcCellClicked"`
 ```

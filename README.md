@@ -126,36 +126,36 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 ## Document
 |Name|Category|Description|
 |:--|:--|:--|
-|[wxc-button](./packages/wxc-button/)|Layout|Basic button|
-|[wxc-cell](./packages/wxc-cell/)|Layout|Form layout element|
-|[wxc-ep-slider](./packages/wxc-ep-slider/) * |Layout|Cool slider neighbor|
-|[wxc-lightbox](./packages/wxc-lightbox/)|Layout|Picture list full screen display|
-|[wxc-overlay](./packages/wxc-overlay/)|Layout|Basic monlayer element|
-|[wxc-popup](./packages/wxc-popup/)|Layout|Popup box|
-|[wxc-result](./packages/wxc-result/)|Layout|General results page|
-|[wxc-slide-nav](./packages/wxc-slide-nav/)|Layout|Increases view windows|
-|[wxc-minibar](./packages/wxc-minibar/)|Navigator|Top navigation|
-|[wxc-tab-bar](./packages/wxc-tab-bar/)|Navigator|Tab bar switching component|
-|[wxc-tab-page](./packages/wxc-tab-page/) * |Navigator|Single page Tab switching component|
-|[wxc-checkbox](./packages/wxc-checkbox/)|Data Entry|Checkbox list|
-|[wxc-countdown](./packages/wxc-countdown/)|Data Entry|Countdown component|
-|[wxc-radio](./packages/wxc-radio/)|Data Entry|Radio list|
-|[wxc-slider-bar](./packages/wxc-slider-bar/) * |Data Entry|Sliding select data|
-|[wxc-stepper](./packages/wxc-stepper/)|Data Entry|Quantity changer|
-|[wxc-searchbar](./packages/wxc-searchbar/)|Data Entry|Search bar component|
-|[wxc-grid-select](./packages/wxc-grid-select/)|Data Display|Grid selection component|
-|[wxc-indexlist](./packages/wxc-indexlist/)|Data Display|Index list component|
-|[wxc-page-calendar](./packages/wxc-page-calendar/)|Data Display|Full page calendar|
-|[wxc-rich-text](./packages/wxc-rich-text/)|Data Display|Dynamic template|
-|[wxc-simple-flow](./packages/wxc-simple-flow/)|Data Display|Simple flow chart|
-|[wxc-tag](./packages/wxc-tag/)|Data Display|Various forms of tag|
-|[wxc-dialog](./packages/wxc-dialog/)|Feedback|Second confirmation window|
-|[wxc-loading](./packages/wxc-loading/)|Feedback|Content load reminder|
-|[wxc-mask](./packages/wxc-mask/)|Feedback|Intermediate popup panel|
-|[wxc-noticebar](./packages/wxc-noticebar/)|Feedback|Message prompt bar component|
-|[wxc-progress](./packages/wxc-progress/)|Feedback|Progress bar|
-|[wxc-lottery-rain](./packages/wxc-lottery-rain/)|Game|Cat-cat game|
-|[utils](./packages/utils/)|Service|Common function|
+|[wxc-button](packages/wxc-button/)|Layout|Basic button|
+|[wxc-cell](packages/wxc-cell/)|Layout|Cell layout element|
+|[wxc-ep-slider](packages/wxc-ep-slider/) * |Layout|Cool slider neighbor|
+|[wxc-lightbox](packages/wxc-lightbox/)|Layout|Picture list full screen display|
+|[wxc-overlay](packages/wxc-overlay/)|Layout|Basic monlayer element|
+|[wxc-popup](packages/wxc-popup/)|Layout|Popup box|
+|[wxc-result](packages/wxc-result/)|Layout|General results page|
+|[wxc-slide-nav](packages/wxc-slide-nav/)|Layout|Increases view windows|
+|[wxc-minibar](packages/wxc-minibar/)|Navigator|Top navigation|
+|[wxc-tab-bar](packages/wxc-tab-bar/)|Navigator|Tab bar switching component|
+|[wxc-tab-page](packages/wxc-tab-page/) * |Navigator|Single page Tab switching component|
+|[wxc-checkbox](packages/wxc-checkbox/)|Data Entry|Checkbox list|
+|[wxc-countdown](packages/wxc-countdown/)|Data Entry|Countdown component|
+|[wxc-radio](packages/wxc-radio/)|Data Entry|Radio list|
+|[wxc-slider-bar](packages/wxc-slider-bar/) * |Data Entry|Sliding select data|
+|[wxc-stepper](packages/wxc-stepper/)|Data Entry|Quantity changer|
+|[wxc-searchbar](packages/wxc-searchbar/)|Data Entry|Search bar component|
+|[wxc-grid-select](packages/wxc-grid-select/)|Data Display|Grid selection component|
+|[wxc-indexlist](packages/wxc-indexlist/)|Data Display|Index list component|
+|[wxc-page-calendar](packages/wxc-page-calendar/)|Data Display|Full page calendar|
+|[wxc-rich-text](packages/wxc-rich-text/)|Data Display|Dynamic template|
+|[wxc-simple-flow](packages/wxc-simple-flow/)|Data Display|Simple flow chart|
+|[wxc-tag](packages/wxc-tag/)|Data Display|Various forms of tag|
+|[wxc-dialog](packages/wxc-dialog/)|Feedback|Second confirmation window|
+|[wxc-loading](packages/wxc-loading/)|Feedback|Content load reminder|
+|[wxc-mask](packages/wxc-mask/)|Feedback|Intermediate popup panel|
+|[wxc-noticebar](packages/wxc-noticebar/)|Feedback|Message prompt bar component|
+|[wxc-progress](packages/wxc-progress/)|Feedback|Progress bar|
+|[wxc-lottery-rain](packages/wxc-lottery-rain/)|Game|Cat-cat game|
+|[utils](packages/utils/)|Service|Common function|
 
 - `*` These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).   
 - It's recommended to use the [Octotree extension](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en-US) for better documentation search experience.
