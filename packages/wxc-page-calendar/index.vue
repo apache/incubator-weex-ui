@@ -4,22 +4,18 @@
 
 <template>
   <div class="wxc-page-calendar"
-       ref="pageCalendar"
-       :style="{ height: pageHeight +'px'}">
+       ref="pageCalendar">
     <wxc-minibar :show="showTitle"
                  v-bind="minibarCfg"
                  :use-default-return="false"
                  @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"></wxc-minibar>
-
-    <div class="calendar-weekday"
-         v-if="isShow">
+    <div class="calendar-weekday" v-if="isShow">
       <text class="flex-item weekday-text"
             :key="k"
             :aria-label="`周${week}`"
             v-for="(week,k) in ['日','一','二','三','四','五','六']">{{week}}</text>
     </div>
     <list class="calendar-list"
-          :style="{ height: calendarHeight +'px'}"
           v-if="isShow">
       <cell v-for="(month,index) in monthsArray"
             :key="index"
@@ -97,8 +93,6 @@
       isShow: false,
       reSelect: true,
       today: Format.getToDay(),
-      calendarHeight: 1040,
-      pageHeight: 1334,
       departDate: '',
       arriveDate: ''
     }),
@@ -111,9 +105,7 @@
     },
     created () {
       this.isIPhoneX = Utils.env.isIPhoneX();
-      this.pageHeight = Utils.env.getPageHeight();
       this.showTitle = isWeb || this.showHeader;
-      this.calendarHeight = this.pageHeight - (this.showTitle ? 90 : 0) - 60;
       this.detectShow();
     },
     mounted () {
@@ -232,6 +224,7 @@
   .wxc-page-calendar {
     position: fixed;
     top: 0;
+    bottom: 0;
     right: -750px;
     width: 750px;
     color: #333333;
@@ -257,10 +250,12 @@
   .weekday-text {
     color: #000000;
     flex: 1;
+    font-size: 24px;
     text-align: center;
   }
 
   .calendar-list {
+    flex: 1;
     flex-direction: column;
   }
 
