@@ -9,7 +9,7 @@
     <wxc-minibar :show="showTitle"
                  v-bind="minibarCfg"
                  :use-default-return="false"
-                 @minibarLeftButtonClick="minibarLeftButtonClick"></wxc-minibar>
+                 @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"></wxc-minibar>
 
     <div class="calendar-weekday"
          v-if="isShow">
