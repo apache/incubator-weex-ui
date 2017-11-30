@@ -90,21 +90,16 @@ const Utils = {
     isIPhoneX () {
       const { deviceHeight } = weex.config.env;
       if (Utils.env.isWeb()) {
-        return typeof window !== undefined
-          && window.screen
-          && window.screen.width
-          && window.screen.height
-          && (parseInt(window.screen.width, 10) == 375)
-          && (parseInt(window.screen.height, 10) == 812);
+        return typeof window !== undefined && window.screen && window.screen.width && window.screen.height && (parseInt(window.screen.width, 10) === 375) && (parseInt(window.screen.height, 10) === 812);
       }
       return Utils.env.isIOS() && deviceHeight === 2436;
     },
     isAndroid () {
-      let { platform } = weex.config.env;
+      const { platform } = weex.config.env;
       return platform.toLowerCase() === 'android';
     },
     isAlipay () {
-      let { appName } = weex.config.env;
+      const { appName } = weex.config.env;
       return appName === 'AP';
     },
     isAlipayWeb () {
