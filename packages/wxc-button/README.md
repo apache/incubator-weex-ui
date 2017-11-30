@@ -39,9 +39,9 @@
 | **`btnStyle`** | `object` | `N` | `{}` | 按钮的样式对象（注2） |
 | **`textStyle`** | `object` | `N` | `{}` | 文字的样式对象（注3） |
 
-* 注1：disabled 样式会覆盖掉默认样式
-* 注2：对默认按钮样式的覆盖全部依赖btnStyle进行，详细样式可以参考 [type.js](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)
-* 注2：对默认字体样式的覆盖全部依赖textStyle进行，详细样式可以参考 [type.js](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)
+- 注1：disabled 样式会覆盖掉默认样式
+- 注2：对默认按钮样式的覆盖全部依赖btnStyle进行，详细样式可以参考 [type.js](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)
+- 注2：对默认字体样式的覆盖全部依赖textStyle进行，详细样式可以参考 [type.js](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)
 
 ### 事件回调
 
