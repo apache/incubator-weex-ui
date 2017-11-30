@@ -39,9 +39,9 @@ More details can be found [here](https://github.com/alibaba/weex-ui/blob/master/
 | **`btnStyle`** | `object` | `N` | `{}` | custom style about button（*2） |
 | **`textStyle`** | `object` | `N` | `{}` | custom style about text （*3） |
 
-* *1：`disabled` will override the default style.
-* *2：Detailed style can be referenced [here](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)
-* *3：Detailed style can be referenced [here](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)
+- *1：`disabled` will override the default style.
+- *2：Detailed style can be referenced [here](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)
+- *3：Detailed style can be referenced [here](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)
 
 ### Event
 ```
