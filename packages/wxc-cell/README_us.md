@@ -3,7 +3,6 @@
 > A cell to display list, link or form.
 
 ### Rule
-  - 
   - 可以设置label、标题、描述、跳转、箭头显示和点击事件回调功能
   
 

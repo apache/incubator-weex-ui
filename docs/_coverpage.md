@@ -5,4 +5,4 @@
 > <span style="line-height:1.8rem;font-weight:400;font-size:1.3rem">A rich interaction, lightweight, high performance UI library.<span>
 
 [GitHub](https://github.com/alibaba/weex-ui)
-[Get Started](#Weex-Ui)
+[Get Started](#installation)
