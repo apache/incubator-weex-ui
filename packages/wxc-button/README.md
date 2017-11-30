@@ -33,8 +33,8 @@
 ### 可配置参数
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`text`** | `string` | `Y` | `` | 展现的文字， 不考虑其他情况类型的元素 |
-| **`type`** | `enum` | `N` | `taobao` | 四种基本类型：'taobao', 'fliggy', 'normal', 'highlight' |
+| **`text`** | `string` | `Y` | `` | 展现的文字 |
+| **`type`** | `enum` | `N` | `taobao` | 四种基本类型：`taobao`/`fliggy`/`normal` /`highlight` |
 | **`disabled`** | `bool` | `N` | `false` | 是否 disabled（注1） |
 | **`btnStyle`** | `object` | `N` | `{}` | 按钮的样式对象（注2） |
 | **`textStyle`** | `object` | `N` | `{}` | 文字的样式对象（注3） |
@@ -44,7 +44,8 @@
 * 注2：对默认字体样式的覆盖全部依赖textStyle进行，详细样式可以参考 [type.js](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)
 
 ### 事件回调
+
 ```
-//点击事件回调  `@wxcButtonClicked="wxcButtonClicked"`
+// `@wxcButtonClicked="wxcButtonClicked"`
 将会返回 e, type, disabled
 ```
