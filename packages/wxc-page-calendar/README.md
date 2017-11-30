@@ -108,6 +108,7 @@
 | selected-note | `Array` | `['开始', '到达', '往返']` | 选中提示语，数组格式 |
 | desc-list | `Array` | `[{}]` | 日期附加显示信息譬如{ date: '2017-06-30', value: '￥2000'|
 | minibar-cfg | `Object` | { 'title': '选择日期', 'background-color': '#FFC900', 'text-color': '#3D3D3D' } | 降级web版本中需要显示导航栏，可以配置标题颜色|
+| show-header | `Boolean` | `false` | 是否需要在native下面显示头部，默认是false |
 | need-destroy | `Boolean` | `false` | 是否需要每次销毁节点，会更快但是体验不是很好 |
 
 

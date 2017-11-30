@@ -6,7 +6,7 @@
   <div class="wxc-page-calendar"
        ref="pageCalendar"
        :style="{ height: pageHeight +'px'}">
-    <wxc-minibar :show="showHeader"
+    <wxc-minibar :show="showTitle"
                  v-bind="minibarCfg"
                  :use-default-return="false"
                  @minibarLeftButtonClick="minibarLeftButtonClick"></wxc-minibar>
@@ -72,6 +72,10 @@
           'text-color': '#3D3D3D'
         })
       },
+      showHeader: {
+        type: Boolean,
+        default: false
+      },
       selectedNote: {
         type: Array,
         default: () => (['开始', '到达', '往返'])
@@ -92,7 +96,6 @@
     data: () => ({
       isShow: false,
       reSelect: true,
-      showHeader: isWeb,
       today: Format.getToDay(),
       calendarHeight: 1040,
       pageHeight: 1334,
@@ -109,7 +112,8 @@
     created () {
       this.isIPhoneX = Utils.env.isIPhoneX();
       this.pageHeight = Utils.env.getPageHeight();
-      this.calendarHeight = this.pageHeight - (this.showHeader ? 90 : 0) - 60;
+      this.showTitle = isWeb || this.showHeader;
+      this.calendarHeight = this.pageHeight - (this.showTitle ? 90 : 0) - 60;
       this.detectShow();
     },
     mounted () {
