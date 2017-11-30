@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Weex Ui</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="description" content="A rich interaction, lightweight, high performance UI library.">
   <link rel="icon" href="https://img.alicdn.com/tfs/TB1kCs_er_I8KJjy1XaXXbsxpXa-419-495.png" type="image/png">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -12,30 +12,32 @@
 </head>
 
 <body>
-  <div id="app">Loading...</div>
-  <script>
-    window.$docsify = {
-      name: 'Weex Ui',
-      search: 'auto',
-      themeColor: '#F7C242',
-      coverpage: 'docs/_coverpage.md',
-      homepage: 'README.md',
-      loadSidebar: 'docs/_sidebar.md',
-      auto2top: true,
-      basePath: '/weex-ui/',
-      repo: 'https://github.com/alibaba/weex-ui/',
-      formatUpdated: '{MM}/{DD} {HH}:{mm}',
-      ga: 'UA-57207999-2'
-    }
-  </script>
-  <script>
-    if (typeof navigator.serviceWorker !== 'undefined') {
-      navigator.serviceWorker.register('./docs/dist/sw.js')
-    }
-  </script>
-  <script src="//h5.m.taobao.com/js/trip/weex-ui/docsify.min.js"></script>
-  <script src="//h5.m.taobao.com/js/trip/weex-ui/search.min.js"></script>
-  <script src="//h5.m.taobao.com/js/trip/weex-ui/ga.js"></script>
+<div id="app">Loading...</div>
+<script>
+  window.$docsify = {
+    name: 'Weex Ui',
+    search: 'auto',
+    themeColor: '#F7C242',
+    coverpage: 'docs/_coverpage.md',
+    homepage: 'README.md',
+    loadSidebar: 'docs/_sidebar.md',
+    auto2top: true,
+    alias: {
+      '/.*/_sidebar.md': 'docs/_sidebar.md'
+    },
+    basePath: location.port === '3000' ? '/' : '/weex-ui/',
+    repo: 'https://github.com/alibaba/weex-ui/',
+    ga: 'UA-57207999-2'
+  }
+</script>
+<script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('./docs/dist/sw.js')
+  }
+</script>
+<script src="//h5.m.taobao.com/js/trip/weex-ui/docsify.min.js"></script>
+<script src="//h5.m.taobao.com/js/trip/weex-ui/search.min.js"></script>
+<script src="//h5.m.taobao.com/js/trip/weex-ui/ga.js"></script>
 </body>
 
 </html>

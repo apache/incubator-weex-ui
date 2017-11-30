@@ -11,6 +11,7 @@ const HOSTNAME_WHITELIST = [
   self.location.hostname,
   'fonts.lug.ustc.edu.cn',
   'h5.m.taobao.com/',
+  'alibaba.github.io/weex-ui',
   'img.shields.io',
   'gw.alipayobjects.com',
   'img.alicdn.com',
