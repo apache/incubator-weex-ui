@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.3.1
+- [+] wxc-page-calendar add a showHeader param
+
 ## 0.3.0
 - [+] New component: [wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md)
 - [-] Remove all demo Internal characteristics of Alibaba.
