@@ -1,6 +1,6 @@
 # wxc-button
 
-> Weex 按钮组件，支持 4 种基本类型 button，可自定义样式，支持不可点击样式
+> Weex 按钮组件，支持 4 种基本类型 button，可自定义样式
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-button/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-button%2Fdemo%2Findex.native-min.js)
 
@@ -28,12 +28,12 @@
 </script>
 
 ```
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/button/loading/index.vue)
+更详细代码可以参考 [这里](https://github.com/alibaba/weex-ui/blob/master/button/loading/index.vue)
 
 ### 可配置参数
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`text`** | `string` | `Y` | `` | 展现的文字 |
+| **`text`** | `string` | `Y` | `-` | 展现的文字 |
 | **`type`** | `enum` | `N` | `taobao` | 四种基本类型：`taobao`/`fliggy`/`normal` /`highlight` |
 | **`disabled`** | `bool` | `N` | `false` | 是否 disabled（注1） |
 | **`btnStyle`** | `object` | `N` | `{}` | 按钮的样式对象（注2） |

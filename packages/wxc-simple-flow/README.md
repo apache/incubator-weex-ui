@@ -1,13 +1,9 @@
 # wxc-simple-flow 
 
-> Weex版本简易流程图组件，允许配置主题色
-
-- 规则
-  - 常用于流程进度展示
+> Weex 简易流程图组件，允许配置主题色
   
------
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-simple-flow/index.html?_wx_tpl=http%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-simple-flow%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-simple-flow/index.html?_wx_tpl=http%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-simple-flow%2Fdemo%2Findex.native-min.js)
  
 <img src="https://gw.alipayobjects.com/zos/rmsportal/XYlsptMGnQoGCdgerpYi.gif" width="240">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1jejBSpXXXXXsaXXXXXXXXXXX-200-200.png" width="180">
 
@@ -63,17 +59,17 @@
 
 ### 可配置参数
 
-| 名称 | 类型 | 默认值 | 备注  |
-|-----|------|:-----:|--------|
-| list | `Array` | 无 | `必填`流程图数据 |
-| list[{title}]| `String` | 无 | `必填`标题 |
-| list[{desc}]| `String` | 无 | 描述 |
-| list[{date}]| `String` | 无 | 日期 |
-| list[{highlight}]| `Boolean` | `false` | 是否高亮 |
-| themeColor | `Object` | `{}` | 主题色配置 |
-| themeColor{lineColor} | `String` | 无 | 时间轴颜色 |
-| themeColor{pointInnerColor} | `String` | 无 | 时间节点内部颜色 |
-| themeColor{pointBorderColor} | `String` | 无 | 时间节点边框颜色 |
-| themeColor{highlightTitleColor} | `String` | 无 | 高亮标题颜色 |
-| themeColor{highlightPointInnerColor} | `String` | 无 | 高亮时间节点内部颜色  |
-| themeColor{highlightPointBorderColor} | `String` | 无 | 高亮时间节点边框颜色 |
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| list | `Array` |`Y`| `-` | 流程图数据 |
+| list[{title}]| `String` |`Y`| `-` | 标题 |
+| list[{desc}]| `String` |`N`| `-` | 描述 |
+| list[{date}]| `String` | `N`|`-` | 日期 |
+| list[{highlight}]| `Boolean` |`N`| `false` | 是否高亮 |
+| themeColor | `Object` |`N`| `{}` | 主题色配置 |
+| themeColor{lineColor} |`String` |`N`|  `-` | 时间轴颜色 |
+| themeColor{pointInnerColor} | `String` |`N`| `-` | 时间节点内部颜色 |
+| themeColor{pointBorderColor} |`String` |`N`|  `-` | 时间节点边框颜色 |
+| themeColor{highlightTitleColor} | `String` |`N`| `-` | 高亮标题颜色 |
+| themeColor{highlightPointInnerColor} | `String` |`N`| `-` | 高亮时间节点内部颜色  |
+| themeColor{highlightPointBorderColor} | `String` |`N`| `-` | 高亮时间节点边框颜色 |

@@ -92,10 +92,10 @@ More details can be found [here](https://github.com/alibaba/weex-ui/blob/master/
 
 | Prop      | Type   |Required  | Default   | Description  |
 |-------------|------------|--------|--------|-----|
-| label | `String` | `N`|  '' |label（常用于描述cell） |
-| title | `String` | `N`|  '' |标题 |
-| desc  | `String` | `N`| '' |描述字段，展示说明信息 |
-| link  | `String` | `N`| ''| 跳转链接，无链接不跳转 |
+| label | `String` | `N`|  `-` |label（常用于描述cell） |
+| title | `String` | `N`|  `-` |标题 |
+| desc  | `String` | `N`| `-` |描述字段，展示说明信息 |
+| link  | `String` | `N`| `-`| 跳转链接，无链接不跳转 |
 | arrow-icon | `String` | `N`|`箭头` |  覆盖右向箭头 |
 | has-arrow | `Bool` |`N`| `false` |  是否显示箭头 |
 | has-top-border | `Bool` | `N`| `false` |  是否有上边框 |

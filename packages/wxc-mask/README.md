@@ -1,9 +1,9 @@
 # wxc-mask 
 
-> 一个提供关闭按钮的Weex Mask弹窗组件，可以定制content里面的内容。
+> Weex 弹层组件，可以定制content里面的内容
 
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-mask/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-mask%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-mask/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-mask%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/WMcMaWMTOpBSevBGfNTT.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1CgYJSpXXXXc5aXXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 使用方法
@@ -42,7 +42,6 @@
 
 <script>
   import { WxcMask } from 'weex-ui';
-  const navigationBar = weex.requireModule('navigationBar');
   export default {
     components: { WxcMask },
     data: () => ({
@@ -73,26 +72,28 @@
 
 ### 可配置参数
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| show | `Bool` | false |  设置mask是否显示 |
-| width | `Number` | 702 | 面板的宽度  |
-| height | `Number` | 800 | 面板的高度  |
-| has-animation | `Bool` | true | 面板弹出是否动画 |
-| show-close | `Bool` | false |  是否显示关闭按钮 |
-| has-overlay | `Bool` | true |  是否有蒙层 |
-| border-radius | `Number` | 0 |  弹出的border-radius |
-| overlay-can-close | `Bool` | true |  点击overlay灰层是否可以关闭 |
-| mask-bg-color | `String` | '#ffffff' |  mask的背景颜色 |
-| duration | `String` | '300' |  弹层出现时间 |
-| timing-function | `String` | 'ease-in' |  弹层出现动画方式 |
-| overlay-cfg | `Object` | '{ hasAnimation: true, timingFunction: ['ease-in', 'ease-out'], duration: 300, opacity: 0.6,canAutoClose:true }' |  蒙层配置参数，参考 [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md) 组件 |
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| show | `Bool` |`Y`| false |  是否显示 |
+| width | `Number` |`Y`| 702 | 面板的宽度  |
+| height | `Number` |`Y`| 800 | 面板的高度  |
+| has-animation | `Bool` |`N`| true | 面板弹出是否动画 |
+| show-close | `Bool` | `N`|false |  是否显示关闭按钮 |
+| has-overlay | `Bool` |`N`| true |  是否有蒙层 |
+| border-radius | `Number` |`N`| 0 |  弹出的border-radius |
+| overlay-can-close | `Bool` |`N`| true |  点击overlay灰层是否可以关闭 |
+| mask-bg-color | `String` |`N`| '#ffffff' |  mask的背景颜色 |
+| duration | `String` | `300` | `N`| 弹层出现时间 |
+| timing-function | `String` |`N`| 'ease-in' |  弹层出现动画方式 |
+| overlay-cfg | `Object` | `{}` |  蒙层配置参数，参考 [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md) 组件 |
 
 
 ### 事件回调
 
 ```
-//有一个关闭相关的回调逻辑` @wxcMaskSetHidden="wxcMaskSetHidden"`，需要设置`show=false`
-//详细可见demo
-//此外还有`@wxcMaskCloseClick="wxcMaskCloseClick"`、` @wxcOverlayBodyClicked="wxcOverlayBodyClicked"`需要时候可以使用
+//有一个关闭相关的回调逻辑,需要设置`show=false`
+@wxcMaskSetHidden="wxcMaskSetHidden" 
+
+@wxcMaskCloseClick="wxcMaskCloseClick"
+@wxcOverlayBodyClicked="wxcOverlayBodyClicked"
 ```

@@ -2,7 +2,7 @@
 
 > Weex 网格形选择组件，支持单选、多选
   
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-grid-select/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-grid-select%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-grid-select/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-grid-select%2Fdemo%2Findex.native-min.js)
 
 <img src="https://gw.alipayobjects.com/zos/rmsportal/KVPhzMhbGodSqBiRCEVQ.gif" width="240"><img src="https://gw.alipayobjects.com/zos/rmsportal/yJfbMufZVRJzKicHPQrn.png" width="180">
 
@@ -105,29 +105,29 @@
 
 ### Props
 
-| 名称 | 类型 | 默认值 | 备注  |
-|-----|------|:-----:|--------|
-| list | `Array` | `无` | `必填`数据列表，可以动态更新 |
-| list[{title}]| `String` | `''` | 标题 |
-| list[{checked}]| `Boolean` | `false` | 是否选中 |
-| list[{disabled}]| `Boolean` | `false` | 是否不可选中 |
-| single | `Boolean` | `false` | 是否单选模式 |
-| limit | `Number` | 无 | 多选模式下选择数量限制，可以动态更新 |
-| cols | `Number` | `4` | 列数 |
-| customStyles | `Object` | `{}` | 自定义样式 |
-| customStyles{lineSpacing} | `String` | `12px` | 行间距 |
-| customStyles{width} | `String` | `166px` | item的宽度 |
-| customStyles{height} | `String` | `72px` | item的高度 |
-| customStyles{color} | `String` | `#3d3d3d` | 正常状态文字色值 |
-| customStyles{checkedColor} | `String` | `#3d3d3d` | 选中状态文字色值  |
-| customStyles{disabledColor} | `String` | `#9b9b9b` | 不可选状态文字色值 |
-| customStyles{borderColor} | `String` | `transparent` | 正常状态边框色值 |
-| customStyles{checkedBorderColor} | `String` | `#ffb200` | 选中状态边框色值 |
-| customStyles{disabledBorderColor} | `String` | `transparent` | 不可选状态边框色值 |
-| customStyles{backgroundColor} | `String` | `#f6f6f6` | 正常状态背景色值 |
-| customStyles{checkedBackgroundColor} | `String` | `#fff` | 选中状态背景色值 |
-| customStyles{disabledBackgroundColor} | `String` | `#f6f6f6` | 不可选状态背景色值 |
-| customStyles{icon} | `String` | `x` | 选中状态icon，base64或url，传空则不显示 |
+| Prop | Type | Required | Default | Description |
+|-----|------|:-----:|--------|--------|
+| list | `Array` | `Y`| `无` | 数据列表，可以动态更新 |
+| list[{title}]| `String` | `N`|`''` | 标题 |
+| list[{checked}]| `Boolean` |`N`| `false` | 是否选中 |
+| list[{disabled}]| `Boolean` |`N`| `false` | 是否不可选中 |
+| single | `Boolean` |`N`| `false` | 是否单选模式 |
+| limit | `Number` | `N`|  无 | 多选模式下选择数量限制，可以动态更新 |
+| cols | `Number` | `Y`| `4` | 列数 |
+| customStyles | `Object` |`N`| `{}` | 自定义样式 |
+| customStyles{lineSpacing} | `String` | `N`|`12px` | 行间距 |
+| customStyles{width} | `String` |`N`| `166px` | item的宽度 |
+| customStyles{height} | `String` |`N`| `72px` | item的高度 |
+| customStyles{color} | `String` |`N`| `#3d3d3d` | 正常状态文字色值 |
+| customStyles{checkedColor} | `String` |`N`| `#3d3d3d` | 选中状态文字色值  |
+| customStyles{disabledColor} | `String` |`N`| `#9b9b9b` | 不可选状态文字色值 |
+| customStyles{borderColor} | `String` |`N`| `transparent` | 正常状态边框色值 |
+| customStyles{checkedBorderColor} |`String` |`N`|  `#ffb200` | 选中状态边框色值 |
+| customStyles{disabledBorderColor} | `String` | `N`|`transparent` | 不可选状态边框色值 |
+| customStyles{backgroundColor} | `String` | `N`|`#f6f6f6` | 正常状态背景色值 |
+| customStyles{checkedBackgroundColor} | `String` |`N`| `#fff` | 选中状态背景色值 |
+| customStyles{disabledBackgroundColor} | `String` | `N`|`#f6f6f6` | 不可选状态背景色值 |
+| customStyles{icon} | `String` | `N`| `x` | 选中状态icon，base64或url，传空则不显示 |
 
 
 ### Events

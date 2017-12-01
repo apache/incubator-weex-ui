@@ -76,7 +76,7 @@
   const dom = weex.requireModule('dom');
   const animation = weex.requireModule('animation');
 
-  module.exports = {
+  export default {
     props: {
       tabTitles: {
         type: Array,
