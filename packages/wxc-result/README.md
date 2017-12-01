@@ -2,7 +2,7 @@
       
 > Weex 通用错误结果页，主要包括通用错误、无商品、无网络、定位错误的错误情况
 
-### 规则：
+### 规则
   - 用于出错的页面，减少用户焦虑感
   - 配置 [type.js#L5](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L5) 来定制化
 
