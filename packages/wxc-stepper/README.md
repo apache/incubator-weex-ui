@@ -1,11 +1,12 @@
 # wxc-stepper 
 
-> 步进器：用作增加或者减少当前数值。
+> Weex 步进器组件
 
-- 规则：常用于商品数量的小幅度修改。
+### 规则
+- 用作增加或者减少当前数值, 常用于商品数量的小幅度修改
 
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-stepper/index.html?_wx_tpl=http%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-stepper%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-stepper/index.html?_wx_tpl=http%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-stepper%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/zSfnSJkqwDiMCikZnOmo.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1ZuPISpXXXXbtXVXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 使用方法
@@ -64,20 +65,20 @@
 
 ### 可配置参数
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| default-value | `number` | 1 | 初始值|
-| step | `number` | 1 | 步幅  |
-| min | `number` | 1 | 范围（最小值） |
-| max | `number` | 100 | 范围（最大值） |
-| disabled | `bool` | false | 禁用计数器 |
-| read-only | `bool` | false | 计数器input只可读 |
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| default-value | `Number` |`N`| `1` | 初始值|
+| step | `Number` |`N`| `1` | 步幅  |
+| min | `Number` |`N`| `1` | 范围（最小值） |
+| max | `Number` | `N`|`100` | 范围（最大值） |
+| disabled | `Boolean` |`N`| `false` | 禁用计数器 |
+| read-only | `Boolean` | `N`|`false` | 计数器input只可读 |
 
 
 ### 事件回调
 
 ```
-// 可以通过`@wxcStepperValueChanged="wxcStepperValueChanged"`对计数器的值进行获取
-// `wxcStepperValueIsMinOver`超过最小值的回调
-// `wxcStepperValueIsMaxOver` 超过最大值的回调
+@wxcStepperValueChanged="wxcStepperValueChanged"
+@wxcStepperValueIsMinOver="wxcStepperValueIsMinOver"
+@wxcStepperValueIsMaxOver="wxcStepperValueIsMaxOver"
 ```

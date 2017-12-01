@@ -3,16 +3,12 @@
 <!--A  result page-->
 
 <template>
-  <div class="wrap"
-       v-if="show"
-       :style="wrapStyle">
-    <div class="wxc-result"
-         :style="{paddingTop: setPaddingTop }">
+  <div class="wrap" v-if="show" :style="wrapStyle">
+    <div class="wxc-result" :style="{paddingTop: setPaddingTop }">
       <image class="result-image"
              :aria-hidden="true"
              :src="resultType.pic"></image>
-      <div class="result-content"
-           v-if="resultType.content">
+      <div class="result-content" v-if="resultType.content">
         <text class="content-text">{{resultType.content}}</text>
         <text class="content-text content-desc"
               v-if="resultType.desc">{{resultType.desc}}</text>
@@ -125,7 +121,7 @@
     },
     methods: {
       handleTouchEnd (e) {
-        // 在支付宝上面有点击穿透问题
+        // web上面有点击穿透问题
         const { platform } = weex.config.env;
         platform === 'Web' && e.preventDefault && e.preventDefault();
       },

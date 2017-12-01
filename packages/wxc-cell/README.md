@@ -3,10 +3,10 @@
 > Weex 单元格组件，可用作展示列表信息、链接或者表单等  
 
 ### 规则
-  - 可以设置label、标题、描述、跳转、箭头显示和点击事件回调功能
-  - 可以设置子元素传入
+  - 一般由主要信息、操作动作组成，信息在左、操作在右
+  - 可以对 label, title, value 进行 Slot 覆盖
   
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-cell/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-cell%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-cell/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-cell%2Fdemo%2Findex.native-min.js)
 <img src="https://img.alicdn.com/tfs/TB1mIA5c5qAXuNjy1XdXXaYcVXa-750-1334.jpg" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB15ta_SpXXXXcFaVXXXXXXXXXX-191-197.png" width="160"/>
 
 ## 使用方法
@@ -92,10 +92,10 @@
 
 | Prop      | Type   |Required  | Default   | Description  |
 |-------------|------------|--------|--------|-----|
-| label | `String` | `N`|  '' |label（常用于描述cell） |
-| title | `String` | `N`|  '' |标题 |
-| desc  | `String` | `N`| '' |描述字段，展示说明信息 |
-| link  | `String` | `N`| ''| 跳转链接，无链接不跳转 |
+| label | `String` | `N`|  `-` |前置标签 |
+| title | `String` | `N`|  `-` |标题 |
+| desc  | `String` | `N`| `-` | 展示说明信息 |
+| link  | `String` | `N`| `-`| 跳转链接，无链接不跳转 |
 | arrow-icon | `String` | `N`|`箭头` |  覆盖右向箭头 |
 | has-arrow | `Bool` |`N`| `false` |  是否显示箭头 |
 | has-top-border | `Bool` | `N`| `false` |  是否有上边框 |
@@ -107,7 +107,7 @@
 ### Slot
 1. `<slot name="label"></slot>`：label卡槽，替换默认 label 占位
 2. `<slot name="title"></slot>`：title卡槽，替换默认 title 占位
-3. `<slot name="value"></slot>`：右边卡槽，有时候可以需要传入输入框、checkbox情况
+3. `<slot name="value"></slot>`：右边卡槽，有需要传入输入框、checkbox的场景
 
 
 ### 事件回调

@@ -4,12 +4,8 @@
 
 <template>
   <div class="container">
-    <wxc-overlay v-if="show"
-                 :show="true"
-                 :hasAnimation="false"></wxc-overlay>
-    <div class="dialog-box"
-         v-if="show"
-         :style="{top:top+'px'}">
+    <wxc-overlay v-if="show" :show="true" :hasAnimation="false"></wxc-overlay>
+    <div class="dialog-box" v-if="show" :style="{top:top+'px'}">
       <div class="dialog-content">
         <slot name="title">
           <text class="content-title">{{title}}</text>
@@ -20,8 +16,7 @@
         <div class="no-prompt"
              v-if="showNoPrompt"
              @click="noPromptClicked">
-          <image :src="noPromptIcon"
-                 class="no-prompt-icon"></image>
+          <image :src="noPromptIcon" class="no-prompt-icon"></image>
           <text class="no-prompt-text">{{noPromptText}}</text>
         </div>
       </div>
@@ -29,13 +24,10 @@
         <div class="footer-btn cancel"
              v-if="!single"
              @click="secondaryClicked">
-          <text class="btn-text"
-                :style="{ color: secondBtnColor }">{{cancelText}}</text>
+          <text class="btn-text" :style="{ color: secondBtnColor }">{{cancelText}}</text>
         </div>
-        <div class="footer-btn confirm"
-             @click="primaryClicked">
-          <text class="btn-text"
-                :style="{ color: mainBtnColor }">{{confirmText}}</text>
+        <div class="footer-btn confirm" @click="primaryClicked">
+          <text class="btn-text" :style="{ color: mainBtnColor }">{{confirmText}}</text>
         </div>
       </div>
     </div>

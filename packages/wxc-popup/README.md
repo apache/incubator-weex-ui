@@ -1,14 +1,14 @@
 # wxc-popup 
 
- > Weex版本的popup组件，支持上下左右四个方向面板弹出。
+ > Weex 弹层组件，支持上下左右四个方向面板弹出
  
- - 规则
-  - 从顶部或底部浮出的模态，点击蒙层进行关闭
-  - 支持使用者主动关闭popup,譬如this.$refs.wxcPopup.hide();
-  - 常用于筛选面板组件的包裹组件
+### 规则
+- 常用于筛选面板组件的包裹组件
+- 从顶部或底部浮出的模态，点击蒙层进行关闭
+- 支持使用者主动关闭
 
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-popup/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-popup%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-popup/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-popup%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/MmgsYeDkFOioIpiQSfGF.gif" width="240"/>&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1_9v9SpXXXXcuXXXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 使用方法
@@ -58,21 +58,21 @@
 
 ### 可配置参数
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| pos | `String` | `bottom` | popup出来位置,`top`,`bottom`,`left`,`right`|
-| show | `bool` | false | 开启打开popup  |
-| height | `String` | 840 | 弹出层的高度(向上向下时候设置)  |
-| width | `String` | 750 | 弹出层的宽度(向左向右时候设置)  |
-| popup-color | `String` | `#FFFFFF` | 弹出层的颜色 |
-| stand-out | `Number` | `0` | 底部突发高度，默认为0 |
-| animation | `Object` | `{imingFunction: 'ease-in'}` | 可以自定义面板动画 |
-| overlay-cfg | `Object` | `{ hasAnimation: true, timingFunction: ['ease-in', 'ease-out'], duration: 300, opacity: 0.6 }` |  蒙层配置参数，参考[wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md)组件|
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| show | `Boolean` |`Y`|`false` | 开启打开popup  |
+| pos | `String` | `N`|`bottom` | 出来位置`top`/`bottom`/`left`/`right`|
+| height | `String` |`N`| `840` | 弹出层的高度(向上向下时候设置)  |
+| width | `String` |`N`| `750` | 弹出层的宽度(向左向右时候设置)  |
+| popup-color | `String` |`N`| `#FFFFFF` | 弹出层的颜色 |
+| stand-out | `Number` |`N`| `0` | 底部突发高度，默认为0 |
+| animation | `Object` |`N`| `{timingFunction: 'ease-in'}` | 自定义面板动画 |
+| overlay-cfg | `Object` |`N`| `{}` | [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md)配置参数|
 
 ### 事件回调
 
 ```
-// 具体使用请参考demo，需要在`@wxcPopupOverlayClicked`中设置面板关闭。
+// 需要在`@wxcPopupOverlayClicked`中设置面板关闭。
 ```
 
 ### 调用关闭

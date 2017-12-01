@@ -1,14 +1,8 @@
 # wxc-page-calendar 
 
-> 一个性能更好的weex全屏日历组件
+> Weex 全屏日历组件,支持单程、往返日历的选择，可显示节假日，支持设置附加信息
 
-- 支持单程、往返日历的选择
-- 支持节假日显示
-- 支持设置日期附加信息
-
------
-
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-page-calendar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-page-calendar%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-page-calendar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-page-calendar%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/adMndOsBWDDRjlFuWuHx.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1jQLWSpXXXXaFXVXXXXXXXXXX-200-200.png" width="160"/>
 
 
@@ -17,19 +11,16 @@
 ```vue           
 <template>
   <div class="wrapper">
-    <div class="btn"
-         @click="showCalendar">
+    <div class="btn" @click="showCalendar">
       <text class="btn-txt">单程日历</text>
     </div>
 
-    <div class="btn btn-margin yellow"
-         @click="showReturnCalendar">
+    <div class="btn btn-margin yellow" @click="showReturnCalendar">
       <text class="btn-txt">往返日历</text>
     </div>
 
     <div class="panel">
-      <text v-if="currentDate"
-            class="text">当前日期: {{currentDate}}</text>
+      <text v-if="currentDate" class="text">当前日期: {{currentDate}}</text>
     </div>
 
     <wxc-page-calendar :date-range="dateRange"
@@ -44,10 +35,10 @@
   </div>
 </template>
 <script>
-  import { wxcPageCalendar } from 'weex-ui';
+  import { WxcPageCalendar } from 'weex-ui';
   export default {
     components: {
-      wxcPageCalendar
+      WxcPageCalendar
     },
     data: () => ({
       currentDate: '',
@@ -100,17 +91,15 @@
 
 ### 可配置参数
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| selected-date | `Array` | [] | 当前选择日期,数组格式['2016-12-10']、['2016-12-10','2016-12-15']  |
-| date-range | `Array` | [] | 日期范围,数组格式['2016-11-10','2016-12-15']  |
-| is-range | `Bool` | false | 是否是往返日历  |
-| selected-note | `Array` | `['开始', '到达', '往返']` | 选中提示语，数组格式 |
-| desc-list | `Array` | `[{}]` | 日期附加显示信息譬如{ date: '2017-06-30', value: '￥2000'|
-| minibar-cfg | `Object` | { 'title': '选择日期', 'background-color': '#FFC900', 'text-color': '#3D3D3D' } | 降级web版本中需要显示导航栏，可以配置标题颜色|
-| show-header | `Boolean` | `false` | 是否需要在native下面显示头部，默认是false |
-| need-destroy | `Boolean` | `false` | 是否需要每次销毁节点，会更快但是体验不是很好 |
-
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| date-range | `Array` |`Y`| `[]` | 日历范围 格式`['2016-11-10','2016-12-15']` |
+| selected-date | `Array` |`N`| `[]` | 选中日期 格式`['2016-12-10']`/`['2016-12-10','2016-12-15']` |
+| is-range | `Boolean` |`N`| `false` | 是否是往返日历  |
+| selected-note | `Array` |`N`| `['开始', '到达', '往返']` | 选中提示语，数组格式 |
+| desc-list | `Array` |`N`| `[{}]` | 附加信息 `{ date: '2017-06-30', value: '￥2000'}`|
+| show-header | `Boolean` |`N`| `false` | 是否在 Native下面显示导航栏 |
+| minibar-cfg | `Object` |`N`| `{}` | 导航栏[配置](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-calendar/index.vue#L65)，降级版本默认显示 |
 
 ### 事件回调
 

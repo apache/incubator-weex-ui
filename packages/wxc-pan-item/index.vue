@@ -18,7 +18,7 @@
   const expressionBinding = weex.requireModule('expressionBinding');
   import Utils from '../utils';
 
-  module.exports = {
+  export default {
     props: {
       extId: {
         type: [String, Number],
@@ -46,7 +46,7 @@
         if (this.isPanning) {
           return;
         }
-        this.url && Utils.goToH5Page(this.url,true);
+        this.url && Utils.goToH5Page(this.url, true);
         this.$emit('wxcPanItemClicked', { extId: this.extId });
       },
       onItemAppear () {

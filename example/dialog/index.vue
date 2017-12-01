@@ -6,32 +6,28 @@
     <scroller class="scroller">
       <title title="wxc-dialog"></title>
       <category title="Dialog配置"></category>
-      <wxc-cell :has-top-border="false"
-                title="标题文案">
+      <wxc-cell :has-top-border="false" title="标题文案">
         <input class="input"
                slot="value"
                placeholder="请输入标题"
                :value="title"
                @input="title=$event.value"/>
       </wxc-cell>
-      <wxc-cell :has-top-border="false"
-                title="说明文案">
+      <wxc-cell :has-top-border="false" title="说明文案">
         <input class="input"
                slot="value"
                placeholder="请输入说明内容"
                :value="content"
                @input="content=$event.value"/>
       </wxc-cell>
-      <wxc-cell :has-top-border="false"
-                title="主按钮">
+      <wxc-cell :has-top-border="false" title="主按钮">
         <input class="input"
                slot="value"
                placeholder="确定按钮文案"
                :value="confirmText"
                @input="confirmText=$event.value"/>
       </wxc-cell>
-      <wxc-cell :has-top-border="false"
-                title="副按钮">
+      <wxc-cell :has-top-border="false" title="副按钮">
         <input class="input"
                slot="value"
                placeholder="取消按钮文案"
@@ -68,8 +64,7 @@
                :value="noPromptText"
                @input="noPromptText=$event.value"/>
       </wxc-cell>
-      <div class="btn"
-           @click="openDialog">
+      <div class="btn" @click="openDialog">
         <text class="btn-txt">打开Dialog试一试</text>
       </div>
     </scroller>

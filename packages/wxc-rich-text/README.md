@@ -1,14 +1,13 @@
 # wxc-rich-text 
 
-> 一个Weex富文本的通用解决方案，支持text、icon、link、tag四种形式的混排
+> Weex 富文本的通用解决方案，支持text、icon、link、tag四种形式的混排
 
-- 规则：
-  - 使用统一规范，前后端约定相关字段
-  - text默认是`gray`、tag默认是`blue`、link默认是`black`主题
-  - wxc-rich-text用于支持一行通用图文混排情况，wxc-special-rich-text用于支持两行特殊情况（一个tag或icon 加 两行文本情况）
-  - 具体如下：
-  
-      <img src="https://img.alicdn.com/tfs/TB1kqcoRXXXXXa3XpXXXXXXXXXX-2102-2320.png" width="700"/>
+### 规则：
+- 使用统一规范，前后端约定相关字段
+- wxc-rich-text用于支持一行通用图文混排情况
+- wxc-special-rich-text用于支持两行特殊情况（一个 tag 或 icon 加两行文本情况）
+
+   <img src="https://img.alicdn.com/tfs/TB1kqcoRXXXXXa3XpXXXXXXXXXX-2102-2320.png" width="600"/>
 
 ## [Demo预览](https://h5.m.taobao.com/trip/wxc-rich-text/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-rich-text%2Fdemo%2Findex.native-min.js)
 <img src="https://img.alicdn.com/tfs/TB1e4LYSpXXXXXVXpXXXXXXXXXX-750-1334.png" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1OXrDSpXXXXcyXVXXXXXXXXXX-200-200.png" width="160"/>
@@ -34,10 +33,10 @@ npm install weex-ui --save
 </template>
 <script>
   import icon from './type.js';
-  import { WxcRichText,wxcSpecialRichText } from 'weex-ui';
+  import { WxcRichText,WxcSpecialRichText } from 'weex-ui';
 
   export default {
-    components: { WxcRichText },
+    components: { WxcRichText, WxcSpecialRichText },
     data: () => ({
       configList: [{
         type: 'icon',
@@ -104,8 +103,7 @@ npm install weex-ui --save
       ],
     }),
     methods: {
-      wxcRichTextLinkClick () {  
-      }
+      wxcRichTextLinkClick () {}
     }
   };
 </script>
@@ -116,16 +114,16 @@ npm install weex-ui --save
 
 ### 可配置参数
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| config-list | `Array` | '[]' | 富文本配置数组，详细可以参考**规则图**和[index.vue](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue#L78)|
-| has-text-margin | `Boolean` | 'true' | 文字相互之间是否有margin，默认是有|
+| Prop | Type | Required | Default | Description |
+| ---- |:----:|:---:|:-------:| :----------:|
+| config-list | `Array` |`Y`| '[]' | 富文本配置 可参考**规则图**和[index.vue](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue#L78)|
+| has-text-margin | `Boolean` |`N`| 'true' | 文字相互之间是否有margin|
 
 
 ### 事件回调
 
 ```
-请参考demo中的` @wxcRichTextLinkClick`，如不需要，可以不使用。
+@wxcRichTextLinkClick="wxcRichTextLinkClick"
 ```
 
 

@@ -1,9 +1,9 @@
 # wxc-radio 
 
-> Weex 单选组组件，支持单个和一组的形式
+> Weex 单选组组件
 
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-radio/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-radio%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-radio/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-radio%2Fdemo%2Findex.native-min.js)
 
 <img src="https://gw.alipayobjects.com/zos/rmsportal/AQMauSgRgIvdoSfxQVmN.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1ORR4SpXXXXX8aXXXXXXXXXXX-200-200.png" width="160"/>
 
@@ -14,8 +14,7 @@
 <template>
   <div class="wxc-demo">
     <scroller class="scroller">
-      <wxc-radio :list="list"
-                 @wxcRadioListChecked="wxcRadioListChecked"></wxc-radio>
+      <wxc-radio :list="list" @wxcRadioListChecked="wxcRadioListChecked"></wxc-radio>
       <text class="radio-text">checkedItem: {{checkedInfo}}</text>
       <category title="Radio不可选"></category>
       <wxc-radio :list="list2"></wxc-radio>
@@ -80,5 +79,5 @@ const list=[
 
 ```
 //点击事件回调 `@wxcRadioListChecked="wxcRadioListChecked"`
-将会返回e.value、e.title、e.oldIndex、e.index
+将会返回 e.value、e.title、e.oldIndex、e.index
 ```

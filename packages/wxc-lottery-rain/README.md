@@ -2,11 +2,11 @@
       
 > Weex 版本的红包雨游戏
 
-- 规则
-  - 一般在营销活动中使用，类似于捉猫猫、打地鼠这种场景
-  - 元素图片、容器样式可以配置中成当前活动氛围一致，记得处理config中的图片高宽
+### 规则
+- 一般在营销活动中使用，类似于捉猫猫、打地鼠这种场景
+- 元素图片、容器样式可以配置中成当前活动氛围一致，记得处理config中的图片高宽
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-lottery-rain/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-lottery-rain%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-lottery-rain/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-lottery-rain%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/LhUMuYgbZmUSAOezSTEV.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1MciTdwMPMeJjy1XbXXcwxVXa-200-200.png" width="160"/>
 
 ## 使用方法
@@ -64,11 +64,11 @@
 
 ### 可配置参数
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| pic-list | `Array` | `[]` |定制化图片配置|
-| config | `Object` | `{}` | 红包雨相关配置，默认为[config] |
-| wrap-style | `Object` | `{}` | 红包雨容器样式自定义 |
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| pic-list | `Array` |`Y`| `[]` |定制化图片配置|
+| config | `Object` |`N`| `{}` | 红包雨相关配置，默认为[config] |
+| wrap-style | `Object` |`N`| `{}` | 红包雨容器样式自定义 |
 
 ### 事件回调
 
@@ -79,8 +79,7 @@
 ```
 
 ### 销毁api
-- 我们在游戏结束或者用户切走时候建议销毁`红包雨`动画、定时器等影响性能的东西，此处提供方法为：
-
+我们在游戏结束或者用户切走时候建议销毁`红包雨`动画、定时器等影响性能的东西，此处提供方法为：
 ```
 //绑定wxc-lottery-rain组件的 ref="wxc-lottery-rain"
 //调用内部方法destroy进行销毁

@@ -33,7 +33,7 @@ More details can be found [here](https://github.com/alibaba/weex-ui/blob/master/
 ### API
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`text`** | `string` | `Y` | `` | the text of button |
+| **`text`** | `string` | `Y` | `-` | the text of button |
 | **`type`** | `enum` | `N` | `taobao` | can be set to  `taobao`/`fliggy`/`normal`/ `highlight` |
 | **`disabled`** | `bool` | `N` | `false` | set disabled（*1） |
 | **`btnStyle`** | `object` | `N` | `{}` | custom style about button（*2） |

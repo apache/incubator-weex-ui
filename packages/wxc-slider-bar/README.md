@@ -1,7 +1,10 @@
 # wxc-slider-bar 
 
+> Weex 滑动选择组件
 
-> 滑动选择组件，主要用于选择线性取值范围中某个具体的值（整数），或者选取一个取值范围
+### 规则
+- 用于选择线性取值范围中某个具体的值（整数），或者选取一个取值范围
+
 
 ## [Demo 预览](https://h5.m.taobao.com/trip/wxc-slider-bar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-slider-bar%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/KAGxLOahnabmMTggilTC.gif" width="240px"/>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -14,9 +17,9 @@
   <wxc-slider-bar v-bind="sliderBarCfg"></wxc-slider-bar>
 </template>
 <script>
-  import { wxcSliderBar } from 'weex-ui';
+  import { WxcSliderBar } from 'weex-ui';
   export default {
-  	components: { wxcSliderBar },
+  	components: { WxcSliderBar },
   	data: () => ({
       sliderBarCfg: {
         length: 400,
@@ -34,17 +37,17 @@
 
 ### 可配置参数
 
-| 名称          | 类型     | 默认值    | 备注  |
-|--------------|----------|----------|-----|
-| length       | `Number` | `500`    | 滑条长度（单位px） |
-| height       | `Number` | `4`      | 滑条高度 |
-| range        | `Boolean` | `false`  | 是否选择范围 |
-| min          | `Number` | `0`      | 滑条最小值 |
-| max          | `Number` | `100`    | 滑条最大值 |
-| minDiff      | `Number` | `5`      | 选择范围时最小差值（用于避免按钮重合） |
-| value        | `[Number, Array]` | `0`      | 设置当前取值。当 range 为 false 时，使用 number，否则用 [number, number] |
-| defaultValue | `[Number, Array]` | `0`      | 设置初始取值。当 range 为 false 时，使用 number，否则用 [number, number] |
-| disabled     | `Boolean` | `false`  | 是否禁用，值为 true 时，滑块为禁用状态 |
-| invalidColor | `String` | `#E0E0E0`| 无效颜色 |
-| validColor   | `String` | `#EE9900`| 有效颜色 |
-| disabledColor| `String` | `#AAA`   | 禁用颜色 |
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| length       | `Number` |`N`| `500`    | 滑条长度 |
+| height       | `Number` |`N`| `4`      | 滑条高度 |
+| range        | `Boolean` |`N`| `false`  | 是否选择范围 |
+| min          | `Number` |`N`| `0`      | 滑条最小值 |
+| max          | `Number` |`N`| `100`    | 滑条最大值 |
+| minDiff      | `Number` |`N`| `5`      | 选择范围时最小差值（用于避免按钮重合） |
+| value        | `[Number, Array]` |`N`| `0` | 设置当前取值|
+| defaultValue | `[Number, Array]` |`N`| `0` | 设置初始取值|
+| disabled     | `Boolean` |`N`| `false`  | 是否禁用 |
+| invalidColor | `String` |`N`| `#E0E0E0`| 无效颜色 |
+| validColor   | `String` |`N`| `#EE9900`| 有效颜色 |
+| disabledColor| `String` |`N`| `#AAA`   | 禁用颜色 |

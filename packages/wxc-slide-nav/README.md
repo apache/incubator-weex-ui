@@ -1,6 +1,9 @@
 # wxc-slide-nav 
 
-> 导航滑动组件，上下滚动列表的时候，优雅地动画收起展开导航条，使得能展示更多的列表内容
+> Weex 导航滑动视窗增大组件
+
+### 规则
+- 上下滚动列表的时候，可以优雅地动画收起展开导航条，使得能展示更多的列表内容
 
 
 ## [Demo 预览](<https://h5.m.taobao.com/trip/wxc-slide-nav/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-slide-nav%2Fdemo%2Findex.native-min.js>)
@@ -22,8 +25,7 @@
         @touchstart.native="onTouchStart"
         @touchmove.native="onTouchMove"
         @touchend.native="onTouchEnd"
-        @touchcancel.native="onTouchEnd"
-      >
+        @touchcancel.native="onTouchEnd">
         <cell>
           <div class="padding"></div>
         </cell>
@@ -83,8 +85,7 @@
   @touchstart.native="onTouchStart"
   @touchmove.native="onTouchMove"
   @touchend.native="onTouchEnd"
-  @touchcancel.native="onTouchEnd"
->
+  @touchcancel.native="onTouchEnd">
   <cell>
     <div class="padding"></div>
   </cell>
@@ -122,10 +123,10 @@ onScroll(e) {
 
 ### 可配置参数
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| position | `String` | `'top'` | 顶部还是底部 `top|bottom` |
-| height | `String|Number` | `''` | 高度 |
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| position | `String` |`N`| `'top'` | 顶部还是底部 `top/bottom` |
+| height | `String|Number` |`N`| `-` | 高度 |
 
 ### 支持事件
 

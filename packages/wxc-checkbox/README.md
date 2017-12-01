@@ -1,9 +1,12 @@
 # wxc-checkbox 
 
-> Weex复选框组件，支持单个和列表checkbox的设置
+> Weex 复选框组件
+
+### 规则
+- 建议以成组的方式出现，使用`wxc-checkbox-list`
 
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-checkbox/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-checkbox%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-checkbox/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-checkbox%2Fdemo%2Findex.native-min.js)
 
 <img src="https://gw.alipayobjects.com/zos/rmsportal/uvtUDCJtVFhvszyfsLBJ.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1aLygSpXXXXXVXFXXXXXXXXXX-200-200.png" width="160"/>
 
@@ -61,12 +64,12 @@
 #### Checkbox
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`title`** | `String` | `Y` | `` | checkbox显示label |
-| **`Value`** | `[String、Number、Object]` | `Y` | `` | checkbox的value |
+| **`title`** | `String` | `Y` | `-` | checkbox显示label |
+| **`Value`** | `[String、Number、Object]` | `Y` | `-` | checkbox的value |
 | **`checked`** | `Boolean` | `N` | `false` | checkbox是否选中 |
 | **`disabled`** | `Boolean` | `N` | `false` | checkbox是否不可选 |
 
-### 事件回调
+- 事件回调
 ```
 //点击事件回调  `@wxcCheckBoxItemChecked="wxcCheckBoxItemChecked"`
 将会返回e.value、e.checked
@@ -87,7 +90,7 @@ const list=[
       ];
 ```
 
-### 事件回调
+- 事件回调
 ```
 //点击事件回调  `@wxcCheckBoxListChecked="wxcCheckBoxListChecked"`
 将会返回已经选中的e.checkedList

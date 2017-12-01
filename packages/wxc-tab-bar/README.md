@@ -1,8 +1,9 @@
 # wxc-tab-bar
 
-> Weex版本底部tab-bar组件
+> Weex 版本底部tab-bar组件
 
-- 规则: 用于底部Tab切换页面，目前支持**icon和文字**形式的底栏,详细见配置 [config.js](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)
+#### 规则
+- 用于底部Tab切换页面，目前支持**icon和文字**形式的底栏
 
 ## Demo
 
@@ -69,16 +70,16 @@
 
 ### 可配置参数
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| tab-titles | `Array` | `[]` | `必填`底部tab显示配置,详细请见[master/demo/config.js#L55]|
-| title-type | `String` | `icon` | 底部样式是`icon`形式还是`text`形式，默认`icon`|
-| tab-styles | `Array` | `[]` | `必填`底部tab样式配置,详细请见[config.js](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
-| tab-page-height | `Number` | `1334` |`必填`tab page页面的高度，详细计算可以参数demo中 |
-| is-tab-view | `Boolean` | `true` |假如需要跳出tab，可以设置这个为`true`，同时在对应的tab配置中加入url参数即可 |
-| duration | `Number` | `300` | 页面切换动画的时间 |
-| timing-function | `String` | `cubic-bezier(0.25, 0.46, 0.45, 0.94)` | 页面切换动画函数 |
-| wrap-bg-color | `String` | `#F2F3F4` |page背景颜色支持自定义|
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| tab-titles | `Array` |`Y`| `[]` | tab显示[配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L7)|
+| title-type | `String` |`N`| `icon` | 底部样式 `icon`/`text`|
+| tab-styles | `Array` |`N`| `[]` |  底部tab[样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
+| tab-page-height | `Number` |`N`| `1334` |tab page页面的高度 |
+| is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时tab配置url参数即可跳出 |
+| duration | `Number` |`N`| `300` | 页面切换动画的时间 |
+| timing-function | `String` |`N`| `cubic-bezier(0.25, 0.46, 0.45, 0.94)` | 页面切换动画函数 |
+| wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|
 
 ### 主动触发设置页面
 

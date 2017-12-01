@@ -103,7 +103,7 @@
   const supportsEBForIos = Utils.env.supportsEBForIos();
   const isIos = Utils.env.isIOS();
 
-  module.exports = {
+  export default {
     props: {
       tabTitles: {
         type: Array,

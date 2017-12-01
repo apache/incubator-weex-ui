@@ -6,8 +6,7 @@
        :style="runWayStyle"
        :accessible="true"
        :aria-label="`进度为百分之${value}`">
-    <div class="progress"
-         :style="progressStyle"></div>
+    <div class="progress" :style="progressStyle"></div>
   </div>
 </template>
 
