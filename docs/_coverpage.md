@@ -6,3 +6,6 @@
 
 [GitHub](https://github.com/alibaba/weex-ui)
 [Get Started](#weex-ui)
+
+<!-- background image -->
+![](linear-gradient(to left bottom, hsl(66, 100%, 85%) 0%,hsl(40, 100%, 85%) 100%))
