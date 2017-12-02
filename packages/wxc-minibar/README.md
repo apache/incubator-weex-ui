@@ -19,9 +19,9 @@
       <wxc-minibar title="标题"
                    background-color="#009ff0"
                    text-color="#FFFFFF"
+                   right-text="更多"
                    @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
-                   @wxcMinibarRightButtonClicked="minibarRightButtonClick"
-                   right-text="更多"></wxc-minibar>
+                   @wxcMinibarRightButtonClicked="minibarRightButtonClick"></wxc-minibar>
     </div>
   </div>
 </template>
