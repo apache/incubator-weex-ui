@@ -71,10 +71,9 @@
 </style>
 <script>
   const dom = weex.requireModule('dom');
-
   import { WxcTabPage, WxcPanItem, Utils } from 'weex-ui';
 
-  // 详细配置可见demo代码
+  // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js
   import Config from './config'
 
   export default {

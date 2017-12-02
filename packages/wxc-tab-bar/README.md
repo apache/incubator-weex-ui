@@ -44,6 +44,8 @@
 </style>
 <script>
   import { WxcTabBar, Utils } from 'weex-ui';
+ 
+  // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js 
   import Config from './config'
 
   export default {
