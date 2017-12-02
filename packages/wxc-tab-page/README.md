@@ -132,7 +132,7 @@
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| tab-titles | `Array` |`Y`| `[]` | 顶部[显示配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L7)|
+| tab-titles | `Array` |`Y`| `[]` | 顶部 [显示配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L7)|
 | title-type | `String` |`N`| `icon` | 顶部类型 `icon`/`text`|
 | tab-styles | `Array` |`N`| `[]` | 顶部 [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
 | tab-page-height | `Number` |`N`| `1334` | Tab page 页面的高度 |
@@ -140,7 +140,7 @@
 | need-slider | `Boolean` |`N`| `true` | 是否需要滑动功能|
 | pan-dist | `Number` |`N`| `200` | 滚动多少切换上下一屏幕|
 | duration | `Number` |`N`| `300` | 页面切换动画的时间 |
-| timing-function | `String` |`N`| `cubic-bezier(0.25, 0.46, 0.45, 0.94)` | 页面切换动画函数 |
+| timing-function | `String` |`N`| `-` | 页面切换动画函数 |
 | title-use-slot | `Boolean` |`N`| `false` | 使用 slot 配置头部导航 (注1)|
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|
 
