@@ -1,11 +1,11 @@
 # wxc-noticebar 
 
-> Weex  通知栏组件
+> Weex 通知栏组件
 
 ### 规则：
 - 在导航栏下方，一般用作系统提醒、活动提醒等通知
 - 需要引起用户关注时使用，重要级别低于 Modal ，高于 Toast。
-- 文案应该简洁明了，过长将会... , 同时特殊情况也可以设置lines为2行
+- 文案应该简洁明了，过长将会... , 特殊情况可以设置 lines 为2行
 
 ## [Demo 预览](https://h5.m.taobao.com/trip/wxc-noticebar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-noticebar%2Fdemo%2Findex.native-min.js)
 <img src="https://img.alicdn.com/tfs/TB1mIA5c5qAXuNjy1XdXXaYcVXa-750-1334.jpg" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB18V3aSpXXXXboXpXXXXXXXXXX-200-200.png" width="160"/>

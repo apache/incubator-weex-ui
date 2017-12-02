@@ -1,6 +1,6 @@
 # wxc-rich-text 
 
-> Weex 富文本的通用解决方案，支持text、icon、link、tag四种形式的混排
+> Weex 富文本的通用解决方案，支持 文字、图标、链接、标签 形式的混排
 
 ### 规则：
 - 使用统一规范，前后端约定相关字段
@@ -116,8 +116,8 @@ npm install weex-ui --save
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| config-list | `Array` |`Y`| `[]` | 富文本配置 可参考**规则图**和[index.vue](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue#L78)|
-| has-text-margin | `Boolean` |`N`| 'true' | 文字相互之间是否有margin|
+| config-list | `Array` |`Y`| `[]` | 富文本配置 可参考 **规则图** 和 [Demo](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue#L78)|
+| has-text-margin | `Boolean` |`N`| 'true' | 文字相互之间是否有 margin|
 
 
 ### 事件回调

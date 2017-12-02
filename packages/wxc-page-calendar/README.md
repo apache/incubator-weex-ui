@@ -93,13 +93,13 @@
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| date-range | `Array` |`Y`| `[]` | 日历范围 格式`['2016-11-10','2016-12-15']` |
-| selected-date | `Array` |`N`| `[]` | 选中日期 格式`['2016-12-10']`/`['2016-12-10','2016-12-15']` |
+| date-range | `Array` |`Y`| `[]` | 日历范围 |
+| selected-date | `Array` |`N`| `[]` | 选中日期 |
 | is-range | `Boolean` |`N`| `false` | 是否是往返日历  |
-| selected-note | `Array` |`N`| `['开始', '到达', '往返']` | 选中提示语，数组格式 |
-| desc-list | `Array` |`N`| `[{}]` | 附加信息 `{ date: '2017-06-30', value: '￥2000'}`|
-| show-header | `Boolean` |`N`| `false` | 是否在 Native下面显示导航栏 |
-| minibar-cfg | `Object` |`N`| `{}` | 导航栏[配置](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-calendar/index.vue#L65)，降级版本默认显示 |
+| selected-note | `Array` |`N`| `['开始', '到达', '往返']` | 选中提示语 |
+| desc-list | `Array` |`N`| `[{}]` | 附加信息 |
+| show-header | `Boolean` |`N`| `false` | 是否在 Native 下显示导航栏 |
+| minibar-cfg | `Object` |`N`| `{}` | 导航栏 [配置](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-calendar/index.vue#L65)，降级版本默认显示 |
 
 ### 事件回调
 

@@ -3,7 +3,7 @@
 > Weex 顶部导航栏组件
 
 ### 规则
-- 建议优先使用 Native 自带的 navigator
+- 优先使用 Native 自带的 Navigator Bar
      
 
 ## [Demo 预览](https://h5.m.taobao.com/trip/wxc-minibar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-minibar%2Fdemo%2Findex.native-min.js)
