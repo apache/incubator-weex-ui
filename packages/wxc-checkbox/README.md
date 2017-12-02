@@ -64,10 +64,10 @@
 #### Checkbox
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`title`** | `String` | `Y` | `-` | checkbox显示label |
-| **`Value`** | `[String、Number、Object]` | `Y` | `-` | checkbox的value |
-| **`checked`** | `Boolean` | `N` | `false` | checkbox是否选中 |
-| **`disabled`** | `Boolean` | `N` | `false` | checkbox是否不可选 |
+| title | `String` | `Y` | `-` | checkbox显示label |
+| Value | `[String、Number、Object]` | `Y` | `-` | checkbox的value |
+| checked | `Boolean` | `N` | `false` | checkbox是否选中 |
+| disabled | `Boolean` | `N` | `false` | checkbox是否不可选 |
 
 - 事件回调
 ```
@@ -78,7 +78,7 @@
 #### CheckboxList
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`list`** | `Array` | `Y` | `[]` | checkbox列表配置 |
+| list | `Array` | `Y` | `[]` | checkbox列表配置 |
 
 - 详细:
 ```

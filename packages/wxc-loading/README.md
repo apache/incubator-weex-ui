@@ -1,11 +1,11 @@
 # wxc-loading 
 
- > Weex版本的loading组件，`全页面加载`、`局部加载情况`
+ > Weex 加载提示组件
  
 ### 规则
 - 让用户知道页面正在加载
 - 在某些特定场景下，提供有意义的文案，帮助用户明白哪个任务正在进行中
-- 局部Loading不建议设置太大(gif放大有毛边)
+- 局部Loading不建议设置太大
 
 ## [Demo 预览](https://h5.m.taobao.com/trip/wxc-loading/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-loading%2Fdemo%2Findex.native-min.js)
 <img src="https://img.alicdn.com/tfs/TB11cTsfBfH8KJjy1XbXXbLdXXa-376-668.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB195ehSpXXXXc4XpXXXXXXXXXX-200-200.png" width="160"/>
@@ -38,14 +38,14 @@
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
 | show | `Bool` |`Y`| `false` | 是否显示|
-| loading-text | `String` |`N`| '' | 配置文案的显示 |
-| **interval** | `Number` |`N`| 0 | 延迟毫秒数显示，用于体验优化|
-| type | `String` | `N`|'default' |图案类别`default`/`fliggy`|
+| loading-text | `String` |`N`| `-` | 配置文案的显示 |
+| **interval** | `Number` |`N`| `0` | 延迟毫秒数显示，用于体验优化|
+| type | `String` | `N`|`default` |图案类别`default`/`fliggy`|
 
 #### 局部Loading
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| show | `Bool` |`Y`| false | 是否显示|
+| show | `Bool` |`Y`| `false` | 是否显示|
 | width | `Number` |`N`| `36` | 局部加载的宽度 |
 | height | `Number` |`N`| `36` | 局部加载的高度 |

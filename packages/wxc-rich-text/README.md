@@ -116,7 +116,7 @@ npm install weex-ui --save
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| config-list | `Array` |`Y`| '[]' | 富文本配置 可参考**规则图**和[index.vue](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue#L78)|
+| config-list | `Array` |`Y`| `[]` | 富文本配置 可参考**规则图**和[index.vue](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue#L78)|
 | has-text-margin | `Boolean` |`N`| 'true' | 文字相互之间是否有margin|
 
 

@@ -32,12 +32,12 @@
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`type`** | `String` | `N` | `solid` | 标签的类型(注1) |
-| **`value`** | `String` | `Y` | `` | 文字标签的文案 |
-| **`tag-color`** | `String` | `N` | `#ff5000` | 标签颜色 |
-| **`font-color`** | `String` | `N` | `#ffffff` | 文字颜色 |
-| **`special-icon`** | `String` | `N` | `` | 特殊标签的小icon(注2) |
-| **`img`** | `String` | `N` | `` | 图片类型tag的图片地址(注3) |
+| type | `String` | `N` | `solid` | 标签的类型(注1) |
+| value | `String` | `Y` | `-` | 文字标签的文案 |
+| tag-color | `String` | `N` | `#ff5000` | 标签颜色 |
+| font-color | `String` | `N` | `#ffffff` | 文字颜色 |
+| special-icon | `String` | `N` | `-` | 特殊标签的小icon(注2) |
+| img | `String` | `N` | `-` | 图片类型tag的图片地址(注3) |
 
 * 注1: type的类型有如下四种solid、hollow、special、image，默认是solid(实心)
 * 注2: specialIcon本应该为iconfont的，但是考虑的Weex,直接使用png会更方便

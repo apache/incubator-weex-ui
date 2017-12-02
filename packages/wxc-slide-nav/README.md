@@ -125,8 +125,8 @@ onScroll(e) {
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| position | `String` |`N`| `'top'` | 顶部还是底部 `top/bottom` |
-| height | `String|Number` |`N`| `-` | 高度 |
+| position | `String` |`N`| `'top'` | 位置`top/bottom` |
+| height | `[String,Number]` |`N`| `-` | 高度 |
 
 ### 支持事件
 

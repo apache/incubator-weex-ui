@@ -1,6 +1,6 @@
 # wxc-dialog 
 
-> Weex 二次确认弹窗组件，可以设置标题、内容、按钮定制、不再提示等。
+> Weex 二次确认弹窗组件，可以设置标题、内容、按钮定制、不再提示等
 
 ### 规则
 - 尽可能少用，Dialog 会打断用户操作，只用在重要的时候
@@ -82,7 +82,7 @@
 | second-btn-color | `String` | `N` |`#666666` |  次要按钮颜色 |
 | show-no-prompt | `Boolean` | `N` |`false` |  是否显示不再提示 |
 | no-prompt-text | `String` | `N` |`不再提示` |  不再提示的文案 |
-| is-checked | `Boolean` | `false` |  不再提示是否勾选 |
+| is-checked | `Boolean` |`N` | `false` |  不再提示是否勾选 |
 
 
 ### 事件回调

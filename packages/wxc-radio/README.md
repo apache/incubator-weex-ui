@@ -54,15 +54,15 @@
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`list`** | `Array` | `Y` | `[]` | Radio列表配置 |
+| list | `Array` | `Y` | `[]` | Radio列表配置 |
 
 #### 子item详细说明
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`title`** | `String` | `Y` | `` | Radio显示label |
-| **`Value`** | `[String、Number、Object]` | `Y` | `` | Radio的value |
-| **`checked`** | `Boolean` | `N` | `false` | Radio是否选中 |
-| **`disabled`** | `Boolean` | `N` | `false` | Radio是否不可选 |
+| title | `String` | `Y` | `-` | Radio显示label |
+| Value | `[String、Number、Object]` | `Y` | `-` | Radio的value |
+| checked | `Boolean` | `N` | `false` | Radio是否选中 |
+| disabled | `Boolean` | `N` | `false` | Radio是否不可选 |
 
 
 ```

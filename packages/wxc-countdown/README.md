@@ -9,15 +9,15 @@
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`time`** | `Number` | `Y` | `1501200000000` | 最终时间戳 |
-| **`interval`** | `Number` | `N` | `1000` | 间隔,单位为"毫秒" |
-| **`tpl`** | `String` | `N` | `{h}:{m}:{s}` | 展示模板 |
-| **`onComplete`** | `Function` | `N` | `()=>()` | 完成时调用的方法 |
-| **`timeWrapStyle`** | `Object` | `N` | `-` | 最外层包裹 style |
-| **`timeBoxStyle`** | `Object` | `N` | `-` | 数字盒子 style |
-| **`dotBoxStyle`** | `Object` | `N` | `-` |  符号盒子 style |
-| **`timeTextStyle`** | `Object` | `N` | `-` | 数字文字 style |
-| **`dotTextStyle`** | `Object` | `N` | `-` |  符号文字 style |
+| time | `Number` | `Y` | `1501200000000` | 最终时间戳 |
+| interval | `Number` | `N` | `1000` | 间隔,单位为"毫秒" |
+| tpl | `String` | `N` | `{h}:{m}:{s}` | 展示模板 |
+| onComplete | `Function` | `N` | `()=>()` | 完成时调用的方法 |
+| timeWrapStyle | `Object` | `N` | `-` | 最外层包裹 style |
+| timeBoxStyle | `Object` | `N` | `-` | 数字盒子 style |
+| dotBoxStyle | `Object` | `N` | `-` |  符号盒子 style |
+| timeTextStyle | `Object` | `N` | `-` | 数字文字 style |
+| dotTextStyle | `Object` | `N` | `-` |  符号文字 style |
 
 
 ## 使用方法

@@ -3,10 +3,10 @@
 > Weex tab页面滑动组件
 
 ### 规则
-- 常用于Tab切换页面，目前支持**icon和文字**形式的顶栏,详细见配置文件[config.js](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
-- **Android由于[此约束](http://weex-project.io/cn/references/gesture.html#约束)，目前需要在子元素里面绑定对应事件，可以通过`wxc-pan-item`解决此问题，详细使用见下面**
-- 允许对头部进行配置，正常版本Weex支持expressionBinding手势跟随效果，低版本和H5版本支持降级效果滑动切换
-- 支持配置**居中形式**的tab-page，需要将tabStyles中的leftOffset设置成合适的值即可，同时tab的数量不能超过屏幕能放下的数目
+- 允许对头部进行配置，支持 ExpressionBinding 手势跟随效果，H5 支持降级效果滑动切换
+- 常用于 Tab 切换页面，目前支持**icon 和文字**形式的顶栏,详细可见[config.js](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
+- **Android 由于[此约束](http://weex-project.io/cn/references/gesture.html#约束)，需在子元素上绑定对应事件，可通过`wxc-pan-item`解决此问题**
+- 支持**居中形式 Tab**，将 tabStyles 中的 leftOffset 配置合适的值即可
  
 
 ## [Demo 预览](https://h5.m.taobao.com/trip/wxc-tab-page/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-tab-page%2Fdemo%2Findex.native-min.js)
@@ -132,16 +132,16 @@
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| tab-titles | `Array` |`Y`| `[]` | `必填`顶部[显示配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L7)|
-| title-type | `String` |`N`| `icon` | 顶部模式 `icon`/`text`|
-| tab-styles | `Array` |`N`| `[]` | 顶部[样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
-| tab-page-height | `Number` |`N`| `1334` |tab page页面的高度 |
-| is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时tab配置url参数即可跳出|
+| tab-titles | `Array` |`Y`| `[]` | 顶部[显示配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L7)|
+| title-type | `String` |`N`| `icon` | 顶部类型 `icon`/`text`|
+| tab-styles | `Array` |`N`| `[]` | 顶部 [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
+| tab-page-height | `Number` |`N`| `1334` | Tab page 页面的高度 |
+| is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时 tab 配置 url 参数即可跳出|
 | need-slider | `Boolean` |`N`| `true` | 是否需要滑动功能|
 | pan-dist | `Number` |`N`| `200` | 滚动多少切换上下一屏幕|
 | duration | `Number` |`N`| `300` | 页面切换动画的时间 |
 | timing-function | `String` |`N`| `cubic-bezier(0.25, 0.46, 0.45, 0.94)` | 页面切换动画函数 |
-| title-use-slot | `Boolean` |`N`| `false` | 使用slot的方式配置头部导航，注1|
+| title-use-slot | `Boolean` |`N`| `false` | 使用 slot 配置头部导航 (注1)|
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|
 
 

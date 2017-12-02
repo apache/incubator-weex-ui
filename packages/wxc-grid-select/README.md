@@ -107,12 +107,12 @@
 
 | Prop | Type | Required | Default | Description |
 |-----|------|:-----:|--------|--------|
-| list | `Array` | `Y`| `无` | 数据列表，可以动态更新 |
+| list | `Array` | `Y`| `-` | 数据列表，可以动态更新 |
 | list[{title}]| `String` | `N`|`''` | 标题 |
 | list[{checked}]| `Boolean` |`N`| `false` | 是否选中 |
 | list[{disabled}]| `Boolean` |`N`| `false` | 是否不可选中 |
 | single | `Boolean` |`N`| `false` | 是否单选模式 |
-| limit | `Number` | `N`|  无 | 多选模式下选择数量限制，可以动态更新 |
+| limit | `Number` | `N`|  `-` | 多选模式下选择数量限制，可以动态更新 |
 | cols | `Number` | `Y`| `4` | 列数 |
 | customStyles | `Object` |`N`| `{}` | 自定义样式 |
 | customStyles{lineSpacing} | `String` | `N`|`12px` | 行间距 |

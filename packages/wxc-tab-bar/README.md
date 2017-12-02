@@ -74,11 +74,11 @@
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| tab-titles | `Array` |`Y`| `[]` | tab显示[配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L7)|
-| title-type | `String` |`N`| `icon` | 底部样式 `icon`/`text`|
-| tab-styles | `Array` |`N`| `[]` |  底部tab[样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
-| tab-page-height | `Number` |`N`| `1334` |tab page页面的高度 |
-| is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时tab配置url参数即可跳出 |
+| tab-titles | `Array` |`Y`| `[]` | Tab显示 [配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L7)|
+| title-type | `String` |`N`| `icon` | 类型 `icon`/`text`|
+| tab-styles | `Array` |`N`| `[]` |  底部 Tab [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
+| tab-page-height | `Number` |`N`| `1334` |Tab page 页面的高度 |
+| is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时 tab 配置 url 参数即可跳出 |
 | duration | `Number` |`N`| `300` | 页面切换动画的时间 |
 | timing-function | `String` |`N`| `cubic-bezier(0.25, 0.46, 0.45, 0.94)` | 页面切换动画函数 |
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|

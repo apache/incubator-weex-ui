@@ -57,7 +57,7 @@ npm install weex-ui --save
 | show | `Boolean` |`N`| `true` | 是否显示 |
 | padding-top | `Number` |`N`| `240` | 图案距离顶部高度 |
 | custom-set | `Object` |`N`| `{}` | 自定义配置`{noGoods:{button: '返回上一页'}}``[type.js#L4](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L4)
-| wrap-style | `Object` | `{}` | 外层wrap样式自定义 |
+| wrap-style | `Object` | `N`|`{}` | 外层wrap样式自定义 |
 
 ### 自定义配置案例
 

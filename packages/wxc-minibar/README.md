@@ -54,11 +54,11 @@
 | title | `String` |`Y`| `-` | 标题 |
 | right-button | `String` |`N`| `-` | 右侧button icon |
 | right-text | `String` |`N`| `-` | 右侧button文案，优先显示icon |
-| left-button | `String` |`N`| '返回图标' |  左侧 button icon |
-| text-color | `String` |`N`| '#333333' | 标题颜色 |
-| background-color | `String` |`N`| '#ffffff' | 背景颜色 |
-| use-default-return | `Boolean` |`N`| 'true' | 是否使用默认的返回 |
-| show | `Boolean` | 'true' |`N`| 是否显示 |
+| left-button | `String` |`N`| `返回图标` |  左侧 button icon |
+| text-color | `String` |`N`| `#333333` | 标题颜色 |
+| background-color | `String` |`N`| `#ffffff` | 背景颜色 |
+| use-default-return | `Boolean` |`N`| `true` | 是否使用默认的返回 |
+| show | `Boolean` | `true` |`N`| 是否显示 |
 
 
 ### 事件回调
