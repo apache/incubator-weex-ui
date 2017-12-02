@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.3.2
+- [!] Organize all component documents
+- [!] Some of the optimizations on the [website](https://alibaba.github.io/weex-ui/)
+- [!] Fixed some component export error in some env [issue 70](https://github.com/alibaba/weex-ui/issues/70)
+- [+]  wxc-page-calendar add a showHeader params.
+
+
 ## 0.3.1
 - [+] wxc-page-calendar add a showHeader params
 - [!] Correct the minibar function callback.
