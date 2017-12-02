@@ -3,8 +3,8 @@
 > Weex 版本的红包雨游戏
 
 ### 规则
-- 一般在营销活动中使用，类似于捉猫猫、打地鼠这种场景
-- 元素图片、容器样式可以配置中成当前活动氛围一致，记得处理config中的图片高宽
+- 通常在营销活动中使用，类似于捉猫猫、打地鼠这种场景
+- 元素图片、容器样式可以配置中成当前活动氛围一致
 
 ## [Demo 预览](https://h5.m.taobao.com/trip/wxc-lottery-rain/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-lottery-rain%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/LhUMuYgbZmUSAOezSTEV.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1MciTdwMPMeJjy1XbXXcwxVXa-200-200.png" width="160"/>
@@ -66,9 +66,9 @@
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| pic-list | `Array` |`Y`| `[]` |定制化图片配置|
-| config | `Object` |`N`| `{}` | 红包雨相关配置，默认为[config] |
-| wrap-style | `Object` |`N`| `{}` | 红包雨容器样式自定义 |
+| pic-list | `Array` |`Y`| `[]` | 定制化图片配置|
+| config | `Object` |`N`| `{}` | 红包雨 [相关配置](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-lottery-rain/libs/config.js) |
+| wrap-style | `Object` |`N`| `{}` | 容器样式自定义 |
 
 ### 事件回调
 

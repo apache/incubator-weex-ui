@@ -69,8 +69,12 @@
 | height | `Number` |`Y`| `750` | 全屏显示图片高度 |
 | width | `Number` |`Y`| `750` | 全屏显示图片宽度 |
 | show-indicator | `Bool` |`N`| `true` |全屏后是否显示索引...|
-| indicator-color | `Object` |`N`| `{'item-color': 'rgba(255, 195, 0, .5)','item-selected-color': '#ffc300','item-size': '20px'}` |索引样式配置|
+| indicator-color | `Object` |`N`| `{}` |索引样式配置（注 1）|
 
+注 1 中样式：
+```
+{'item-color': 'rgba(255, 195, 0, .5)','item-selected-color': '#ffc300','item-size': '20px'}
+```
 
 ### 事件回调
 
