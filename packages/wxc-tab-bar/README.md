@@ -1,9 +1,9 @@
 # wxc-tab-bar
 
-> Weex 版本底部tab-bar组件
+> Weex 版本底部 tab-bar 组件
 
 #### 规则
-- 用于底部Tab切换页面，目前支持**icon和文字**形式的底栏
+- 用于底部 Tab 切换页面，目前支持 **icon 和文字**形式的底栏
 
 ## [Demo 预览](https://h5.m.taobao.com/trip/wx-detection-demo/tab-bar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Ftab-bar%2Findex.weex.js)
 
