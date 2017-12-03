@@ -1,6 +1,6 @@
 # wxc-tab-page 
 
-> Weex tab页面滑动组件
+> Weex tab 页面滑动切换组件
 
 ### 规则
 - 允许对头部进行配置，支持 ExpressionBinding 手势跟随效果，H5 支持降级效果滑动切换
