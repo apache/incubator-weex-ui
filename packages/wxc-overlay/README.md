@@ -3,7 +3,7 @@
 > Weex 蒙层组件
 
 ### 规则
-- 常用于wxc-mask、wxc-dialog、wxc-popup等weex组件的基础组件。
+- 常用于 wxc-mask、wxc-dialog、wxc-popup 等的基础蒙层组件。
 
 ## [Demo 预览](https://h5.m.taobao.com/trip/wxc-overlay/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-overlay%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/uVBoujAIcLFYDociannN.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1rXrwSpXXXXb3aFXXXXXXXXXX-200-200.png" width="160"/>

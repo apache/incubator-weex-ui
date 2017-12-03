@@ -24,8 +24,11 @@
     loadNavbar: 'docs/_navbar.md',
     auto2top: true,
     alias: {
-      '/.*/_sidebar.md': 'docs/_sidebar.md',
-      '/.*/_navbar.md': 'docs/_navbar.md'
+      '/.*/_navbar.md': 'docs/_navbar.md',
+      '/cn/.*/_sidebar.md': 'docs/cn/_sidebar.md',
+      '/packages/.*/_sidebar.md': 'docs/_sidebar.md',
+      '/cn/': 'README_cn.md',
+      '/cn/packages/(.*)/':'../packages/$1/README_us.md'
     },
     basePath: location.port === '3000' ? '/' : '/weex-ui/',
     repo: 'alibaba/weex-ui',
