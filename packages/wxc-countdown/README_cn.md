@@ -2,7 +2,7 @@
 
 > Weex 倒计时组件
 
-## [Demo 预览](https://h5.m.taobao.com/trip/wxc-countdown/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-countdown%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wxc-countdown/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-countdown%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/vKCrGoTgfBlPsFKtJNhk.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1Kj1MSFXXXXbMXpXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 参数配置

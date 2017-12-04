@@ -6,7 +6,7 @@
 - 一般可位于 NavBar 下方
 - 通过"取消按钮"退出激活状态, 允许设置点击跳转，支持带出发地形式的搜索
 
-## [Demo 预览](https://h5.m.taobao.com/trip/wxc-searchbar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-searchbar%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wxc-searchbar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-searchbar%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/qbEmYUETsvpDKuloPFfu.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB10KfVSpXXXXaRXVXXXXXXXXXX-200-200.png" width="160"/>
 
 
