@@ -1,16 +1,16 @@
 # wxc-slider-bar 
 
-> Weex 滑动选择组件
+> A slider component for displaying current value and intervals in range.
 
-### 规则
-- 用于选择线性取值范围中某个具体的值（整数），或者选取一个取值范围
+### Rule
+- To input a value in a range.
 
 
-## [Demo 预览](https://h5.m.taobao.com/trip/wxc-slider-bar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-slider-bar%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wxc-slider-bar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-slider-bar%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/KAGxLOahnabmMTggilTC.gif" width="240px"/>&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://img.alicdn.com/tfs/TB1bnL_SpXXXXb7XXXXXXXXXXXX-200-200.png" width="160px"/>
 
-## 使用方法
+## Code Example
 
 ```vue
 <template>
@@ -35,19 +35,21 @@
 </script>
 ```
 
-### 可配置参数
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/slider-bar/index.vue)
+
+### API
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| length       | `Number` |`N`| `500`    | 滑条长度 |
-| height       | `Number` |`N`| `4`      | 滑条高度 |
-| range        | `Boolean` |`N`| `false`  | 是否选择范围 |
-| min          | `Number` |`N`| `0`      | 滑条最小值 |
-| max          | `Number` |`N`| `100`    | 滑条最大值 |
-| minDiff      | `Number` |`N`| `5`      | 选择范围时最小差值（用于避免按钮重合） |
-| value        | `[Number, Array]` |`N`| `0` | 设置当前取值|
-| defaultValue | `[Number, Array]` |`N`| `0` | 设置初始取值|
-| disabled     | `Boolean` |`N`| `false`  | 是否禁用 |
-| invalidColor | `String` |`N`| `#E0E0E0`| 无效颜色 |
-| validColor   | `String` |`N`| `#EE9900`| 有效颜色 |
-| disabledColor| `String` |`N`| `#AAA`   | 禁用颜色 |
+| length       | `Number` |`N`| `500`    | bar width |
+| height       | `Number` |`N`| `4`      | bar height |
+| range        | `Boolean` |`N`| `false`  | dual thumb mode |
+| min          | `Number` |`N`| `0`      | the minimum value the slider can slide to.	 |
+| max          | `Number` |`N`| `100`    | the maximum value the slider can slide to |
+| minDiff      | `Number` |`N`| `5`      | the granularity the slider can step through values.  |
+| value        | `[Number, Array]` |`N`| `0` | the value of slider|
+| defaultValue | `[Number, Array]` |`N`| `0` | default value|
+| disabled     | `Boolean` |`N`| `false`  | if true, the slider will not be interactable. |
+| invalidColor | `String` |`N`| `#E0E0E0`| invalid color |
+| validColor   | `String` |`N`| `#EE9900`| valid color |
+| disabledColor| `String` |`N`| `#AAA`   | disabled color |

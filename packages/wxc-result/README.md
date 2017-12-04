@@ -1,23 +1,16 @@
 # wxc-result 
       
-> Weex 通用错误结果页，主要包括通用错误、无商品、无网络、定位错误的错误情况
+> Common error result pages, which include general errors, no products, no network, and error of locating errors
 
-### 规则
-  - 用于出错的页面，减少用户焦虑感
-  - 配置 [type.js#L5](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L5) 来定制化
+### Rule
+  - Used for error pages to reduce user anxiety.
+  - You can configure this [type.js#L5](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L5) for custom errors
 
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-result/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-result%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wxc-result/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-result%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/ZdBCotUDWDbtYVYUTqDf.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1ck8JSpXXXXXpaFXXXXXXXXXX-200-200.png" width="160"/>
 
-
-## 安装
-
-```shell
-npm install weex-ui --save
-```
-
-## 使用方法
+## Code Example
 
 ```vue
 <template>
@@ -35,7 +28,6 @@ npm install weex-ui --save
     }),
     methods: {
       wxcResultButtonClicked(e){
-      // e.type即错误页面类型，可以在这里做对应操作
         modal.toast({
           'message': e.type,
           'duration': 1,
@@ -46,26 +38,26 @@ npm install weex-ui --save
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/result/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/result/index.vue)
 
 
-### 可配置参数
+### API
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| type | `String` |`N`| `errorPage`|类型 `errorPage、noNetwork、noGoods、errorLocation`|
-| show | `Boolean` |`N`| `true` | 是否显示 |
-| padding-top | `Number` |`N`| `240` | 图案距离顶部高度 |
-| custom-set | `Object` |`N`| `{}` | 自定义覆盖 [type.js#L4](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L4)|
-| wrap-style | `Object` | `N`|`{}` | 外层 wrap 样式自定义 |
+| type | `String` |`N`| `errorPage`|error type `errorPage、noNetwork、noGoods、errorLocation`|
+| show | `Boolean` |`N`| `true` | whether to show |
+| padding-top | `Number` |`N`| `240` | padding top from screen |
+| custom-set | `Object` |`N`| `{}` |custom config [type.js#L4](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L4)|
+| wrap-style | `Object` | `N`|`{}` | custom wrap style|
 
-### 自定义配置案例
+### Custom Config
 
 ```
-this.customSet={errorPage: { button: null, desc: '可以减少筛选内容试试', content: '抱歉主人，没有找到合适条件的推荐' }}
+this.customSet={errorPage: { button: null, desc: 'You can try to reduce the filter content', content: 'I'm sorry, Sir. I haven't found the recommended conditions' }}
 ```
 
-### 事件回调
+### Event
 
 ```
 @wxcResultButtonClicked="wxcResultButtonClicked"

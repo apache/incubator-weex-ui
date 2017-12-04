@@ -1,16 +1,16 @@
 # wxc-slide-nav 
 
-> Parallax rolling expansion.
+> Weex 导航滑动视窗增大组件
 
-### Rule
-- When scrolling up and down the list, you can gracefully animate the open navigation bar to show more of the list content.
+### 规则
+- 上下滚动列表的时候，可以优雅地动画收起展开导航条，使得能展示更多的列表内容
 
 
-## [Demo](<https://h5.m.taobao.com/trip/wxc-slide-nav/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-slide-nav%2Fdemo%2Findex.native-min.js>)
+## [Demo 预览](<https://h5.m.taobao.com/trip/wxc-slide-nav/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-slide-nav%2Fdemo%2Findex.native-min.js>)
 
 <img src="https://gw.alipayobjects.com/zos/rmsportal/ERzwXExyQcqgmXzPxGgf.gif" width="240" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1Cg02SFXXXXc3apXXXXXXXXXX-200-200.png" width="160" />
 
-## Code Example
+## 使用方法
 
 ```vue
 <template>
@@ -35,15 +35,15 @@
       </list>
   
       <wxc-slide-nav class="nav nav-top" ref="topNav" position="top" @slideIn="slideIn">
-        <div class="nav-cell"><text>Before</text></div>
+        <div class="nav-cell"><text>前一天</text></div>
         <div class="nav-cell"><text>06-22</text></div>
-        <div class="nav-cell"><text>Next</text></div>
+        <div class="nav-cell"><text>后一天</text></div>
       </wxc-slide-nav>
   
       <wxc-slide-nav class="nav nav-bottom" ref="bottomNav" position="bottom" @slideOut="slideOut">
-        <div class="nav-cell"><text class="nav-text">Filter</text></div>
-        <div class="nav-cell"><text class="nav-text">Time</text></div>
-        <div class="nav-cell"><text class="nav-text">From</text></div>
+        <div class="nav-cell"><text class="nav-text">筛选</text></div>
+        <div class="nav-cell"><text class="nav-text">时间</text></div>
+        <div class="nav-cell"><text class="nav-text">从低到高</text></div>
       </wxc-slide-nav>
     </div>
 </template>
@@ -70,18 +70,18 @@
 </script>
 ```
 
-Due to the compatibility and other reasons, to use the API is not particularly elegant, need to cooperate in `<list>` manual binding event.
+由于兼容性以及其他原因，目前API使用起来不是特别优雅，需要配合在`<list>`组件上手动绑定事件
 
 ```
 <list
   ref="scroller"
   @scroll="onScroll"
-  <!-- to Native -->
+  <!-- 针对Native -->
   @touchstart="onTouchStart"
   @touchmove="onTouchMove"
   @touchend="onTouchEnd"
   @touchcancel="onTouchEnd"
-  <!-- to H5 -->
+  <!-- 针对H5 -->
   @touchstart.native="onTouchStart"
   @touchmove.native="onTouchMove"
   @touchend.native="onTouchEnd"
@@ -92,7 +92,7 @@ Due to the compatibility and other reasons, to use the API is not particularly e
 </list>
 ```
 
-In addition, the top of `list` needs to add `padding`, because `list` and `cell` do`nt support `padding` and `margin` styles. It needs to add a placeholder `cell` to `padding`, which is highly consistent with `topNav`.
+另外`list`顶部需要添加`padding`，因为`list`和`cell`不支持`padding`和`margin`样式，需要在里面加一个占位的`cell`充当`padding`，高度与 `topNav` 一致
 
 ```
 <cell>
@@ -107,12 +107,12 @@ In addition, the top of `list` needs to add `padding`, because `list` and `cell`
 </style>
 ```
 
-The event method of `slideNav` is then bound in the event callback, where `onTouchMove` and `onScroll` need to be passed into the `scroller` and `slideNav` objects.
+然后在事件回调里绑定`slideNav`的事件方法，其中`onTouchMove`和`onScroll`需要传入`scroller`和`slideNav`对象
 
 ```
 onTouchStart: WxcSlideNav.handleTouchStart,
 onTouchEnd: WxcSlideNav.handleTouchEnd,
-// The following method does not use the arrow function, which results in this pointing error
+// 下面方法不要使用箭头函数，会导致this指向错误
 onTouchMove(e) {
   WxcSlideNav.handleTouchMove.call(this, e, this.$refs.bottomNav);
 },
@@ -121,17 +121,17 @@ onScroll(e) {
 }
 ```
 
-### API
+### 可配置参数
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| position | `String` |`N`| `'top'` |nav position `top/bottom` |
-| height | `[String,Number]` |`N`| `-` | list height |
+| position | `String` |`N`| `'top'` | 位置`top/bottom` |
+| height | `[String,Number]` |`N`| `-` | 高度 |
 
-### Supporting Event
+### 支持事件
 
-* `slideIn`
-* `slideInEnd`
-* `slideOut`
-* `slideOutEnd`
+* `slideIn`：滑出来（展示）
+* `slideInEnd`：滑出来结束
+* `slideOut`：滑出去（隐藏）
+* `slideOutEnd`：滑出去结束 
 

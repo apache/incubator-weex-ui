@@ -1,13 +1,13 @@
 # wxc-simple-flow 
 
-> Weex 简易流程图组件，允许配置主题色
+> Simple flow 
   
 
-## [Demo 预览](https://h5.m.taobao.com/trip/wxc-simple-flow/index.html?_wx_tpl=http%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-simple-flow%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wxc-simple-flow/index.html?_wx_tpl=http%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-simple-flow%2Fdemo%2Findex.native-min.js)
  
 <img src="https://gw.alipayobjects.com/zos/rmsportal/XYlsptMGnQoGCdgerpYi.gif" width="240">&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1jejBSpXXXXXsaXXXXXXXXXXX-200-200.png" width="180">
 
-## 使用方法
+## Code Example
 
 ```vue
 <template>
@@ -31,22 +31,22 @@
           'date': '2017-05-24 21:10:29',
           'desc': '',
           'highlight': true,
-          'title': '方案已确认'
+          'title': 'confirm'
         },
         {
           'date': '2017-05-24 19:54:28',
           'desc': '',
-          'title': '方案已更新'
+          'title': 'updated'
         },
         {
           'date': '2017-05-24 19:50:21',
-          'desc': '您以确定了方案',
-          'title': '方案已上传'
+          'desc': 'You have determined the plan',
+          'title': 'Plan uploaded'
         },
         {
           'date': '2017-05-24 19:49:03',
-          'desc': '商家会在2个工作小时内电话或旺旺联系您',
-          'title': '商家已接单'
+          'desc': 'The merchant will contact you within 2 working hours',
+          'title': 'Business receipt'
         }
       ]
     })
@@ -54,22 +54,22 @@
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/simple-flow/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/simple-flow/index.vue)
 
 
-### 可配置参数
+### API
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| list | `Array` |`Y`| `-` | 流程图数据 |
-| list[{title}]| `String` |`Y`| `-` | 标题 |
-| list[{desc}]| `String` |`N`| `-` | 描述 |
-| list[{date}]| `String` | `N`|`-` | 日期 |
-| list[{highlight}]| `Boolean` |`N`| `false` | 是否高亮 |
-| themeColor | `Object` |`N`| `{}` | 主题色配置 |
-| themeColor{lineColor} |`String` |`N`|  `-` | 时间轴颜色 |
-| themeColor{pointInnerColor} | `String` |`N`| `-` | 时间节点内部颜色 |
-| themeColor{pointBorderColor} |`String` |`N`|  `-` | 时间节点边框颜色 |
-| themeColor{highlightTitleColor} | `String` |`N`| `-` | 高亮标题颜色 |
-| themeColor{highlightPointInnerColor} | `String` |`N`| `-` | 高亮时间节点内部颜色  |
-| themeColor{highlightPointBorderColor} | `String` |`N`| `-` | 高亮时间节点边框颜色 |
+| list | `Array` |`Y`| `-` | list data |
+| list[{title}]| `String` |`Y`| `-` | main information |
+| list[{desc}]| `String` |`N`| `-` | description |
+| list[{date}]| `String` | `N`|`-` | date |
+| list[{highlight}]| `Boolean` |`N`| `false` | whether is highlight |
+| themeColor | `Object` |`N`| `{}` | theme color config |
+| themeColor{lineColor} |`String` |`N`|  `-` | line color |
+| themeColor{pointInnerColor} | `String` |`N`| `-` | inner point  Color |
+| themeColor{pointBorderColor} |`String` |`N`|  `-` | point border color |
+| themeColor{highlightTitleColor} | `String` |`N`| `-` | highlight title color |
+| themeColor{highlightPointInnerColor} | `String` |`N`| `-` | point inner highlight color  |
+| themeColor{highlightPointBorderColor} | `String` |`N`| `-` | highlight point border color |

@@ -1,21 +1,21 @@
 # wxc-stepper 
 
-> Enter a number within certain range with the mouse or keyboard.
+> Weex 步进器组件
 
-### Rule
-- When a numeric value needs to be provided.
+### 规则
+- 用作增加或者减少当前数值, 常用于商品数量的小幅度修改
 
 
-## [Demo](https://h5.m.taobao.com/trip/wxc-stepper/index.html?_wx_tpl=http%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-stepper%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-stepper/index.html?_wx_tpl=http%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-stepper%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/zSfnSJkqwDiMCikZnOmo.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1ZuPISpXXXXbtXVXXXXXXXXXX-200-200.png" width="160"/>
 
-## Code Example
+## 使用方法
 
 ```vue
 <template>
   <div class="wrapper">
     <div class="demo">
-      <text class="text">no config:</text>
+      <text class="text">无配置:</text>
       <wxc-stepper></wxc-stepper>
     </div>
     <div class="demo">
@@ -27,7 +27,7 @@
                    @stepperValueChange="stepperValueChange"></wxc-stepper>
     </div>
     <div class="demo">
-      <text class="text">disabled</text>
+      <text class="text">禁用</text>
       <wxc-stepper default-value="4"
                    step="2"
                    max="10"
@@ -60,22 +60,22 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/stepper/index.vue)
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/stepper/index.vue)
 
 
-### API
+### 可配置参数
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| default-value | `Number` |`N`| `1` | initial value|
-| step | `Number` |`N`| `1` | step value |
-| min | `Number` |`N`| `1` | min value |
-| max | `Number` | `N`|`100` |max value |
-| disabled | `Boolean` |`N`| `false` | disable the stepper |
-| read-only | `Boolean` | `N`|`false` | disable the input |
+| default-value | `Number` |`N`| `1` | 初始值|
+| step | `Number` |`N`| `1` | 步幅  |
+| min | `Number` |`N`| `1` | 范围（最小值） |
+| max | `Number` | `N`|`100` | 范围（最大值） |
+| disabled | `Boolean` |`N`| `false` | 禁用计数器 |
+| read-only | `Boolean` | `N`|`false` | 计数器input只可读 |
 
 
-### Event
+### 事件回调
 
 ```
 @wxcStepperValueChanged="wxcStepperValueChanged"

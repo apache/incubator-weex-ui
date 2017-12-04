@@ -8,7 +8,7 @@
 ![Accessibility](https://img.shields.io/badge/accessibility-support-orange.svg?style=flat-square)
 [![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://img.shields.io/gitter/room/alibaba/weex-ui.svg?style=flat-square)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
-> 一个基于 [Weex](https://github.com/apache/incubator-weex) 的富交互、轻量级、高性能的 UI 组件库。
+> 一个基于 [Weex](https://github.com/apache/incubator-weex) 的富交互、轻量级、高性能的 UI 组件库
 
 ## 预览
 <img src="https://img.alicdn.com/tfs/TB1O2ulhgoQMeJjy0FoXXcShVXa-1282-986.jpg" width=540/>
@@ -116,36 +116,36 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 ## 文档
 |组件名称|分类|描述|
 |:--|:--|:--|
-|[wxc-button](packages/wxc-button/)|布局|基础按钮组件|
-|[wxc-cell](packages/wxc-cell/)|布局|单元格组件 展示表单、列表|
+|[wxc-button](packages/wxc-button/README_cn.md)|布局|基础按钮组件|
+|[wxc-cell](packages/wxc-cell/README_cn.md)|布局|单元格组件 展示表单、列表|
 |[wxc-ep-slider](packages/wxc-ep-slider/) * |布局|表达式绑定效果的 slider |
-|[wxc-lightbox](packages/wxc-lightbox/)|布局|图片全屏预览|
-|[wxc-overlay](packages/wxc-overlay/)|布局|基础蒙层|
-|[wxc-popup](packages/wxc-popup/)|布局|支持上下左右出现的滑板|
-|[wxc-result](packages/wxc-result/)|布局|通用结果页|
-|[wxc-slide-nav](packages/wxc-slide-nav/)|布局|导航滑动 增大视窗|
-|[wxc-minibar](packages/wxc-minibar/)|导航|模拟导航栏|
-|[wxc-tab-bar](packages/wxc-tab-bar/)|导航|底部Bar页面切换|
+|[wxc-lightbox](packages/wxc-lightbox/README_cn.md)|布局|图片全屏预览|
+|[wxc-overlay](packages/wxc-overlay/README_cn.md)|布局|基础蒙层|
+|[wxc-popup](packages/wxc-popup/README_cn.md)|布局|支持上下左右出现的滑板|
+|[wxc-result](packages/wxc-result/README_cn.md)|布局|通用结果页|
+|[wxc-slide-nav](packages/wxc-slide-nav/README_cn.md)|布局|导航滑动 增大视窗|
+|[wxc-minibar](packages/wxc-minibar/README_cn.md)|导航|模拟导航栏|
+|[wxc-tab-bar](packages/wxc-tab-bar/README_cn.md)|导航|底部Bar页面切换|
 |[wxc-tab-page](packages/wxc-tab-page/) * |导航|Tab页面切换滑动组件|
-|[wxc-checkbox](packages/wxc-checkbox/)|数据输入|复选列表|
-|[wxc-countdown](packages/wxc-countdown/)|数据输入|倒计时|
-|[wxc-radio](packages/wxc-radio/)|数据输入|单选列表|
+|[wxc-checkbox](packages/wxc-checkbox/README_cn.md)|数据输入|复选列表|
+|[wxc-countdown](packages/wxc-countdown/README_cn.md)|数据输入|倒计时|
+|[wxc-radio](packages/wxc-radio/README_cn.md)|数据输入|单选列表|
 |[wxc-slider-bar](packages/wxc-slider-bar/) * |数据输入|滑动选择数据|
-|[wxc-stepper](packages/wxc-stepper/)|数据输入|计数器|
-|[wxc-searchbar](packages/wxc-searchbar/)|数据输入|搜索栏|
-|[wxc-grid-select](packages/wxc-grid-select/)|数据展示|网格选择|
-|[wxc-indexlist](packages/wxc-indexlist/)|数据展示|索引列表|
-|[wxc-page-calendar](packages/wxc-page-calendar/)|数据展示|全屏日历|
-|[wxc-rich-text](packages/wxc-rich-text/)|数据展示|动态模块 富文本|
-|[wxc-simple-flow](packages/wxc-simple-flow/)|数据展示|Simple flow chart|
-|[wxc-tag](packages/wxc-tag/)|数据展示|多种形式的标签|
-|[wxc-dialog](packages/wxc-dialog/)|反馈|二次确认弹框|
-|[wxc-loading](packages/wxc-loading/)|反馈|加载器|
-|[wxc-mask](packages/wxc-mask/)|反馈|中间出现浮层|
-|[wxc-noticebar](packages/wxc-noticebar/)|反馈|信息通知栏|
-|[wxc-progress](packages/wxc-progress/)|反馈|进度条|
-|[wxc-lottery-rain](packages/wxc-lottery-rain/)|游戏|红包雨 抓猫猫游戏|
-|[utils](packages/utils/)|服务|公共函数|
+|[wxc-stepper](packages/wxc-stepper/README_cn.md)|数据输入|计数器|
+|[wxc-searchbar](packages/wxc-searchbar/README_cn.md)|数据输入|搜索栏|
+|[wxc-grid-select](packages/wxc-grid-select/README_cn.md)|数据展示|网格选择|
+|[wxc-indexlist](packages/wxc-indexlist/README_cn.md)|数据展示|索引列表|
+|[wxc-page-calendar](packages/wxc-page-calendar/README_cn.md)|数据展示|全屏日历|
+|[wxc-rich-text](packages/wxc-rich-text/README_cn.md)|数据展示|动态模块 富文本|
+|[wxc-simple-flow](packages/wxc-simple-flow/README_cn.md)|数据展示|Simple flow chart|
+|[wxc-tag](packages/wxc-tag/README_cn.md)|数据展示|多种形式的标签|
+|[wxc-dialog](packages/wxc-dialog/README_cn.md)|反馈|二次确认弹框|
+|[wxc-loading](packages/wxc-loading/README_cn.md)|反馈|加载器|
+|[wxc-mask](packages/wxc-mask/README_cn.md)|反馈|中间出现浮层|
+|[wxc-noticebar](packages/wxc-noticebar/README_cn.md)|反馈|信息通知栏|
+|[wxc-progress](packages/wxc-progress/README_cn.md)|反馈|进度条|
+|[wxc-lottery-rain](packages/wxc-lottery-rain/README_cn.md)|游戏|红包雨 抓猫猫游戏|
+|[utils](packages/utils/README_cn.md)|服务|公共函数|
 
 - `*` 这些富交互体验组件依赖于 Weex [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)。  
 - 推荐使用 [Octotree](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en-US) 扩展获得更好的组件文档查找体验。
