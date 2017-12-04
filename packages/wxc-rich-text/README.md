@@ -6,7 +6,6 @@
 - Using unified specification, conventions related fields in front and back end.
 - `wxc-rich-text` supports a row of general graphic and text mixing.
 - `wxc-special-rich-text` supports two row of special mixing (tag + text、icon + text).
-
    <img src='https://img.alicdn.com/tfs/TB1kqcoRXXXXXa3XpXXXXXXXXXX-2102-2320.png' width='600'/>
 
 ## [Demo](https://h5.m.taobao.com/trip/wxc-rich-text/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-rich-text%2Fdemo%2Findex.native-min.js)
