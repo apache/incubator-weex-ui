@@ -1,11 +1,11 @@
 # Utils
 
-> Util function services
+> Weex Ui 中的公共函数服务
 
-## Rule
+## 规则
 <img src="https://img.alicdn.com/tfs/TB13AAPgcLJ8KJjy0FnXXcFDpXa-2420-1046.png" width="860"/>
 
-## Code Example
+## 使用方法
 
 ```vue
 <script>
@@ -13,5 +13,4 @@
   // Utils.env.getPageHeight();
 </script>
 ```
-
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/packages/utils/index.js)
+更详细代码可以参考 [utils](https://github.com/alibaba/weex-ui/blob/master/packages/utils/index.js)

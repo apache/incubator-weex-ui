@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>Weex Ui</title>
@@ -23,16 +22,31 @@
     loadSidebar: 'docs/_sidebar.md',
     loadNavbar: 'docs/_navbar.md',
     auto2top: true,
+    nameLink: {
+      '/cn/': '#/cn/',
+      '/': '/'
+    },
     alias: {
       '/.*/_navbar.md': 'docs/_navbar.md',
       '/cn/.*/_sidebar.md': 'docs/cn/_sidebar.md',
       '/packages/.*/_sidebar.md': 'docs/_sidebar.md',
       '/cn/': 'README_cn.md',
-      '/cn/packages/(.*)/':'../packages/$1/README_us.md'
+      '/cn/packages/(.*)/': '../packages/$1/README_cn.md'
     },
     basePath: location.port === '3000' ? '/' : '/weex-ui/',
     repo: 'alibaba/weex-ui',
-    ga: 'UA-57207999-2'
+    ga: 'UA-57207999-2',
+    plugins: [
+      function (hook, vm) {
+        hook.beforeEach(function (html) {
+          var url = 'https://github.com/alibaba/weex-ui/blob/master/' + vm.route.file;
+          var editHtml = '[:memo: Edit Document](' + url + ')\n';
+          return html
+            + '\n----\n'
+            + editHtml
+        })
+      }
+    ]
   }
 </script>
 <script>

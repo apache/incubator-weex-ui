@@ -1,17 +1,17 @@
 # wxc-tab-bar
 
-> Weex 版本底部 tab-bar 组件
+> Bottom tab bar
 
-#### 规则
-- 用于底部 Tab 切换页面，目前支持 **icon 和文字**形式的底栏
+### Rule
+- For the bottom Tab slider page, currently support **icon and text ** form of the bottom bar.
 
-## [Demo 预览](https://h5.m.taobao.com/trip/wx-detection-demo/tab-bar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Ftab-bar%2Findex.weex.js)
+## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/tab-bar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Ftab-bar%2Findex.weex.js)
 
 
 <img src="https://img.alicdn.com/tfs/TB1_bxvgm_I8KJjy0FoXXaFnVXa-376-668.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1AEx7gcLJ8KJjy0FnXXcFDpXa-200-200.png" width="160"/>
 
 
-## 使用方法
+## Code Example
 
 ```vue
 <template>
@@ -20,17 +20,17 @@
                title-type="icon"
                :tab-page-height="tabPageHeight"
                @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
-    <!-- 第一个页面内容-->
-    <div class="item-container" :style="contentStyle"><text>首页</text></div>
+    <!--The first page content-->
+    <div class="item-container" :style="contentStyle"><text>Home</text></div>
     
-    <!-- 第二个页面内容-->
-    <div class="item-container" :style="contentStyle"><text>特别推荐</text></div>
+    <!--The second page content-->
+    <div class="item-container" :style="contentStyle"><text>Hot</text></div>
     
-    <!-- 第三个页面内容-->
-    <div class="item-container" :style="contentStyle"><text>消息中心</text></div>
+    <!-- The third page content-->
+    <div class="item-container" :style="contentStyle"><text>Message</text></div>
     
-    <!-- 第四个页面内容-->
-    <div class="item-container" :style="contentStyle"><text>我的主页</text></div>
+    <!-- The fourth page content-->
+    <div class="item-container" :style="contentStyle"><text>My</text></div>
   </wxc-tab-bar>
 </template>
 
@@ -69,35 +69,36 @@
 </script>
 
 ```
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/index.vue)
 
 
-### 可配置参数
+### API
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| tab-titles | `Array` |`Y`| `[]` | Tab显示 [配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L7)|
-| title-type | `String` |`N`| `icon` | 类型 `icon`/`text`|
-| tab-styles | `Array` |`N`| `[]` |  底部 Tab [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
-| tab-page-height | `Number` |`N`| `1334` |Tab page 页面的高度 |
-| is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时 tab 配置 url 参数即可跳出 |
-| duration | `Number` |`N`| `300` | 页面切换动画的时间 |
-| timing-function | `String` |`N`| `-` | 页面切换动画函数 |
-| wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|
+| tab-titles | `Array` |`Y`| `[]` | Tab list [config](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L7)|
+| title-type | `String` |`N`| `icon` | type `icon`/`text`|
+| tab-styles | `Array` |`N`| `[]` |  bottom Tab [config](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
+| tab-page-height | `Number` |`N`| `1334` |Tab page height |
+| is-tab-view | `Boolean` |`N`| `true` |if set `false`,add tab-titles config with `url` can be jumped out |
+| duration | `Number` |`N`| `300` | page slider time of animation |
+| timing-function | `String` |`N`| `-` | page slider function of animation |
+| wrap-bg-color | `String` |`N`| `#F2F3F4` |page background color|
 
-### 主动触发设置页面
+### Manually setting the page
 
 ```
-// 直接在wxc-tab-bar上面绑定ref="wxc-tab-bar",然后调用即可
+// <wxc-tab-bar ref="wxc-tab-bar">
+// set the third page
 this.$refs['wxc-tab-bar'].setPage(2)
 
-// 如果想设置无动画跳转，可以这样使用(中间参数用于设置url，设置null即可)
+// set the third page with no animation
 this.$refs['wxc-tab-bar'].setPage(2,null,false);
-
 ```
 
-### 事件回调
+### Event
 ```
-//当前页面被选中的回调`@wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected"`
+// @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected"
+// will return the selected index
 ```
 

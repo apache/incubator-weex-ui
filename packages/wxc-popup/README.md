@@ -1,23 +1,21 @@
 # wxc-popup 
 
- > Weex 弹层组件，支持上下左右四个方向面板弹出
+ > Support the upper and lower direction of the panel pop-up
  
-### 规则
-- 常用于筛选面板组件的包裹组件
-- 从顶部或底部浮出的模态，点击蒙层进行关闭
-- 支持使用者主动关闭
+### Rule
+- Commonly used to filter panel components.
+- To surface from the top or bottom, click on the mask to close.
 
-
-## [Demo 预览](https://h5.m.taobao.com/trip/wxc-popup/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-popup%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wxc-popup/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-popup%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/MmgsYeDkFOioIpiQSfGF.gif" width="240"/>&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1_9v9SpXXXXcuXXXXXXXXXXXX-200-200.png" width="160"/>
 
-## 使用方法
+## Code Example
 
 ```vue
 <template>
   <div class="wrapper">
     <div class="btn yellow  btn-margin" @click="openBottomPopup">
-      <text class="btn-txt">点击弹出底部面板</text>
+      <text class="btn-txt">Click</text>
     </div>
     <wxc-popup popup-color="rgb(92, 184, 92)"
                :show="isBottomShow"
@@ -26,8 +24,7 @@
                height="400">
       <div class="demo-content">
         <image src="https://img.alicdn.com/tfs/TB1ojYvOXXXXXaOXFXXXXXXXXXX-180-41.png" class="demo-image"></image>
-        <text>这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容
-        </text>
+        <text>this is content,this is content,this is content,this is content,this is content,this is content,this is content,this is content,this is content,this is content,this is content.</text>
       </div>
     </wxc-popup>
   </div>
@@ -45,7 +42,6 @@
       openBottomPopup () {
         this.isBottomShow = true;
       },
-      //非状态组件，需要在这里关闭
       popupOverlayBottomClick () {
         this.isBottomShow = false;
       }
@@ -54,29 +50,31 @@
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/popup/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/popup/index.vue)
 
-### 可配置参数
+### API
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| show | `Boolean` |`Y`|`false` | 开启打开popup  |
-| pos | `String` | `N`|`bottom` | 出来位置`top`/`bottom`/`left`/`right`|
-| height | `String` |`N`| `840` | 弹出层的高度(向上向下时候设置)  |
-| width | `String` |`N`| `750` | 弹出层的宽度(向左向右时候设置)  |
-| popup-color | `String` |`N`| `#FFFFFF` | 弹出层的颜色 |
-| stand-out | `Number` |`N`| `0` | 底部突发高度，默认为0 |
-| animation | `Object` |`N`| `{timingFunction: 'ease-in'}` | 自定义面板动画 |
-| overlay-cfg | `Object` |`N`| `{}` | [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md)配置参数|
+| show | `Boolean` |`Y`|`false` | whether to show  |
+| pos | `String` | `N`|`bottom` | out of the direction `top`/`bottom`/`left`/`right`|
+| height | `String` |`N`| `840` | popup height(go up or down)  |
+| width | `String` |`N`| `750` | popup width(go right or left )  |
+| popup-color | `String` |`N`| `#FFFFFF` | background color |
+| stand-out | `Number` |`N`| `0` | Bottom stand out offset |
+| animation | `Object` |`N`| `{timingFunction: 'ease-in'}` | animation timing function |
+| overlay-cfg | `Object` |`N`| `{}` | [wxc-overlay config](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md)|
 
-### 事件回调
-
-```
-// 需要在`@wxcPopupOverlayClicked`中设置面板关闭。
-```
-
-### 调用关闭
+### Event
 
 ```
-在wxc-popup上面绑定ref，然后调用this.$refs.wxcPopup.hide();即可关闭，常用于侧滑筛选面板
+// need set `this.show=false`
+// @wxcPopupOverlayClicked="overlayClicked"
+```
+
+### Manual Close
+
+```
+<wxc-popup ref="wxcPopup"></wxc-popup>
+// this.$refs.wxcPopup.hide();
 ```

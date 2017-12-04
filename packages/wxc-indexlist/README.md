@@ -1,16 +1,16 @@
 # wxc-indexlist 
 
-> Weex 索引列表组件,支持设置成列、成组的展示。
+> An indexed list, can be navigated by index.
 
 ### 规则：
-- 可以通过索引快速定位
-- 常用于联系人列表、城市列表的基础组件
+- Support to set up columns and group presentations.
+- Basic component that`s often used in contact lists and city lists.
     
-## [Demo 预览](https://h5.m.taobao.com/trip/wxc-indexlist/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-indexlist%2Fdemo%2Findex.native-min.js)【group、list】
+## [Demo](https://h5.m.taobao.com/trip/wxc-indexlist/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-indexlist%2Fdemo%2Findex.native-min.js)【group、list】
 <img src="https://gw.alipayobjects.com/zos/rmsportal/MQBwOrcmQyMwUwPppoPo.gif" width="240"/>&nbsp;&nbsp;<img src="https://gw.alipayobjects.com/zos/rmsportal/USnVdDeDTNIkrMomOOpO.gif" width="240"/>&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1qK2USpXXXXbSXpXXXXXXXXXX-200-200.png" width="160"/>
 
 
-## 使用方法
+## Code Example
 
 ```vue
 <template>
@@ -34,13 +34,13 @@
       showIndex: true,
       hotListConfig: {
         type: 'group',
-        title: '热门',
+        title: 'hot',
         list: dataList.hotList
       },
       cityLocationConfig: {
         type: 'group',
-        title: '定位',
-        list: [{ name: '杭州', isLocation: true }]
+        title: 'location',
+        list: [{ name: 'hangzhou', isLocation: true }]
       }
     }),
     methods: {
@@ -52,41 +52,42 @@
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/index.vue)
 
-### 可配置参数
+### API
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| list | `Array` |`Y`| `[]` | 索引列表的数据项 (注1)|
-| hot-list-config | `Object` | `N`|`{}` | 热门列表项目配置 (注2) |
-| city-location-config | `Object` | `N`|`{}` | 特殊、城市定位逻辑配置 (注3) |
-| show-index | `Boolean` |`N`| `true` |  是否显示索引 |
-| only-show-list | `Boolean` | `N`|`false` |  是否只显示列表 (注4) |
-| nav-style | `Object` |`N`| `{}` |  索引侧边栏样式自定义 |
+| list | `Array` |`Y`| `[]` |data list (*1)|
+| hot-list-config | `Object` | `N`|`{}` | hot list (*2) |
+| city-location-config | `Object` | `N`|`{}` | special、positioning configuration (*3) |
+| show-index | `Boolean` |`N`| `true` |  whether to show index nav | 
+| only-show-list | `Boolean` | `N`|`false` |  whether to only show list *4) |
+| nav-style | `Object` |`N`| `{}` |  index sidebar custom style |
 
-- 注1：正常列表的配置项目，采用list的形式展示，详细可见 [demo/data.js#L16](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L16)
-- 注2：有些索引列表需要在正常列表前面展示一个`热门`列表，同时支持`group`、`list`形式，格式可见[demo/data.js#L2](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L2)，整体配置为
+- *1：The configuration items of the normal list, Detailed data format: [demo/data.js#L16](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L16)
+- *2：Some index list need in front of the normal list shows a list of popular form ,Support `group`,`list` type, Detailed data format: [demo/data.js#L2](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L2): 
 
    ```json
    hotListConfig: {
            type: 'group',
-           title: '热门',
+           title: 'hot',
            list: dataList.hotList
          }
    ```
-- 注3：特殊的城市列表需要展示定位逻辑，此处新增city-location-config配置，其他列表不需要配置，数据格式为，如果需要显示定位icon，传入isLocation
+   
+- *3：Added a `city-location-config` for setting location city.
 
    ```json
    cityLocationConfig: {
            type: 'group',
-           title: '定位',
-           list: [{ name: '杭州', isLocation: true }]
+           title: 'location',
+           list: [{ name: 'hangzhou', isLocation: true }]
          }
    ```
-- 注4：是否只显示列表项目，去除定位、热门显示，常用于搜索结果的显示
+- *4：Whether to only display list items, remove location, hot display, often used for search results display.
 
-### 事件回调
+### Event
 
 ```
 `@wxcIndexlistItemClicked="wxcIndexlistItemClicked"`

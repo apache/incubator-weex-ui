@@ -1,28 +1,28 @@
 # wxc-dialog 
 
-> Weex 二次确认弹窗组件，可以设置标题、内容、按钮定制、不再提示等
+> Use to show important information for the system, and ask for user feedback. eg: When deleting an important content, pop up a Modal for secondary confirmation.
 
-### 规则
-- 尽可能少用，Dialog 会打断用户操作，只用在重要的时候
-- 标题不要超过一行，按钮最多两个
-- 取消按钮在左侧，确定按钮在右侧
+### Rule
+- Use as few as possible. Modal will interrupt user operation, only use it at important situation.
+- Title should be concise, do not exceed 1 line; description should be concise and complete, generally no more than 2 lines.
+- Generally put the most likely clicked button on the right side. In addition, the cancel button should always be on the left.
  
 
-## [Demo 预览](https://h5.m.taobao.com/trip/wxc-dialog/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-dialog%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wxc-dialog/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-dialog%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/qastXqTFLQMoCDjYoeRc.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1Oa09SpXXXXbiXVXXXXXXXXXX-200-200.png" width="160"/>
 
-## 使用方法
+## Code Example
 
 ```vue
 <template>
   <div class="container">
     <div class="demo">
       <div class="btn" @click="openDialog">
-        <text class="btn-txt">对话消息Dialog</text>
+        <text class="btn-txt">Dialog</text>
       </div>
     </div>
-    <wxc-dialog title="标题"
-                content="这里是内容"
+    <wxc-dialog title="title"
+                content="this is content"
                 :show="show"
                 :single="false"
                 :is-checked="isChecked"
@@ -49,15 +49,15 @@
         this.show = true;
       },
       wxcDialogCancelBtnClicked () {
-      //此处必须设置，组件为无状态组件，自己管理
+      // must setting,control by yourself
         this.show = false;
       },
       wxcDialogConfirmBtnClicked () {
-      //此处必须设置，组件为无状态组件，自己管理
+      // must setting,control by yourself
         this.show = false;
       },
       wxcDialogNoPromptClicked (e) {
-      //此处必须设置，组件为无状态组件，自己管理
+      // must setting,control by yourself
         this.isChecked = e.isChecked;
       }
     }
@@ -66,26 +66,26 @@
 
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/dialog/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/dialog/index.vue)
 
-### 可配置参数
+### API
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| title | `String` | `Y` | `-` | 标题 |
-| content | `String` | `N` | `-`| 内容说明描述 |
-| top | `Number` | `N` |`400` |  弹层距离顶部的高度 |
-| single | `Boolean` | `N` |`false` |  是否只有一个按钮（显示确认） |
-| cancel-text | `String` |`N` | `取消` |  取消按钮文案定制 |
-| confirm-text | `String` | `N` |`确定` |  确定按钮文案定制 |
-| main-btn-color | `String` | `N` |`#EE9900` |  主按钮的颜色值 |
-| second-btn-color | `String` | `N` |`#666666` |  次要按钮颜色 |
-| show-no-prompt | `Boolean` | `N` |`false` |  是否显示不再提示 |
-| no-prompt-text | `String` | `N` |`不再提示` |  不再提示的文案 |
-| is-checked | `Boolean` |`N` | `false` |  不再提示是否勾选 |
+| title | `String` | `Y` | `-` | title (only transparent) |
+| content | `String` | `N` | `-`| content |
+| top | `Number` | `N` |`400` |  distance from the top of the screen |
+| single | `Boolean` | `N` |`false` |  whether is single button |
+| confirm-text | `String` | `N` |`确定` |  text of the primary button |
+| cancel-text | `String` |`N` | `取消` |  text of the secondary button |
+| main-btn-color | `String` | `N` |`#EE9900` |  color of the primary button |
+| second-btn-color | `String` | `N` |`#666666` |  color of the secondary button |
+| show-no-prompt | `Boolean` | `N` |`false` |  whether to show no-prompt |
+| no-prompt-text | `String` | `N` |`不再提示` |  text of the no-prompt |
+| is-checked | `Boolean` |`N` | `false` |  checked of the no-prompt |
 
 
-### 事件回调
+### Event
 
 ```
 @wxcDialogCancelBtnClicked="wxcDialogCancelBtnClicked"、
@@ -93,7 +93,7 @@
 @wxcDialogNoPromptClicked="wxcDialogNoPromptClicked"
 ```
 
-### slot卡槽
-1. `<slot name="title"></slot>`：标题卡槽，不传入使用文案
-2. `<slot name="content"></slot>`：说明文案卡槽， 不传入使用文案
+### Slot
+1. `<slot name="title"></slot>`
+2. `<slot name="content"></slot>`
 

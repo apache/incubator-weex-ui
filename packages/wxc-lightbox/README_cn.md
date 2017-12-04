@@ -1,22 +1,23 @@
 # wxc-lightbox 
 
-> Picture list of full screen display
+> Weex 图片列表全屏显示组件
 
-### Rule
-- Often used for the detailed page of the image to enlarge the display, let the user see the effect clearly.
-- You can pass in a set of images, slide shows.
+### 规则：
+- 常用于详情页面的图片放大显示，让用户清晰看到效果
+- 需要设置图片的显示高度，也可以设置宽度（默认750px）
+- 可以传入一组图片，滑动显示
     
-## [Demo](https://h5.m.taobao.com/trip/wxc-lightbox/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-lightbox%2Fdemo%2Findex.native-min.js)
+## [Demo 预览](https://h5.m.taobao.com/trip/wxc-lightbox/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-lightbox%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/RzbkfaSHRYaJzdPrsgLj.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1BGPdSpXXXXajaVXXXXXXXXXX-200-200.png" width="160"/>
 
-## Code Example
+## 使用方法
 
 ```vue
 <template>
   <div class="demo-container">
-    <text class="image-text">Click the image</text>
+    <text class="image-text">点击图片弹出全屏图片</text>
     <div class="btn" @click="openLightBox">
-      <text class="btn-txt">Click the button</text>
+      <text class="btn-txt">点击按钮弹出全屏图片</text>
     </div>
     <wxc-lightbox
       ref="wxc-lightbox"
@@ -49,6 +50,7 @@
         this.show = true;
       },
       wxcLightboxOverlayClicked () {
+      // 无状态组件，需要在此次关闭
         this.show = false;
       }
     }
@@ -56,27 +58,27 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/lightbox/index.vue)
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/lightbox/index.vue)
 
-### API
+### 可配置参数
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| show | `Bool` |`Y`| `false` | whether to show the light box |
-| imageList | `Array` |`Y`| `[]` | image list |
-| height | `Number` |`Y`| `750` | light box height |
-| width | `Number` |`Y`| `750` | light box width |
-| show-indicator | `Bool` |`N`| `true` |whether to show indicator|
-| indicator-color | `Object` |`N`| `{}` | indicator style（*1）|
+| show | `Bool` |`Y`| `false` | 全屏图片是否显示 |
+| imageList | `Array` |`Y`| `[]` | 全屏显示图片列表 |
+| height | `Number` |`Y`| `750` | 全屏显示图片高度 |
+| width | `Number` |`Y`| `750` | 全屏显示图片宽度 |
+| show-indicator | `Bool` |`N`| `true` |全屏后是否显示索引...|
+| indicator-color | `Object` |`N`| `{}` |索引样式配置（注 1）|
 
-*1 default style: 
+注 1 中样式：
 ```
 {'item-color': 'rgba(255, 195, 0, .5)','item-selected-color': '#ffc300','item-size': '20px'}
 ```
 
-### Event
+### 事件回调
 
 ```
-// @wxcLightboxOverlayClicked="wxcLightboxOverlayClicked"
+// 点击蒙层关闭预览 `@wxcLightboxOverlayClicked="wxcLightboxOverlayClicked"`
 ```
 
