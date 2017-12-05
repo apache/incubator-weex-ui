@@ -10,6 +10,7 @@ const webpack = require('webpack');
 const glob = require('glob');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const precompile = require('weex-vue-precompiler')();
 
 const plugins = [
   new CleanWebpackPlugin(['build'], {
@@ -98,11 +99,13 @@ webCfg.output.filename = '[name].web.js';
 webCfg.module.rules[1].use.push({
   loader: 'vue-loader',
   options: {
+    postcss: [require('autoprefixer')({
+      browsers: ['> 0.1%', 'ios >= 8']
+    }), require('postcss-px2rem')({ remUnit: 75 })],
     compilerModules: [
       {
         postTransformNode: el => {
-          el.staticStyle = `$processStyle(${el.staticStyle})`
-          el.styleBinding = `$processStyle(${el.styleBinding})`
+          precompile(el)
         }
       }
     ]
