@@ -46,7 +46,7 @@
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| type | `String` |`N`| `errorPage`|类型 `errorPage、noNetwork、noGoods、errorLocation`|
+| type | `String` |`N`| `errorPage`|`errorPage、noNetwork、noGoods、errorLocation`|
 | show | `Boolean` |`N`| `true` | 是否显示 |
 | padding-top | `Number` |`N`| `240` | 图案距离顶部高度 |
 | custom-set | `Object` |`N`| `{}` | 自定义覆盖 [type.js#L4](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L4)|

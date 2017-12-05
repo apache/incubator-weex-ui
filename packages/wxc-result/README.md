@@ -45,7 +45,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| type | `String` |`N`| `errorPage`|error type `errorPage、noNetwork、noGoods、errorLocation`|
+| type | `String` |`N`| `errorPage`|`errorPage、noNetwork、noGoods、errorLocation`|
 | show | `Boolean` |`N`| `true` | whether to show |
 | padding-top | `Number` |`N`| `240` | padding top from screen |
 | custom-set | `Object` |`N`| `{}` |custom config [type.js#L4](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L4)|
