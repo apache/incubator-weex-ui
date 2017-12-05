@@ -8,7 +8,7 @@
 - wxc-special-rich-text用于支持两行特殊情况（一个 tag 或 icon 加两行文本情况）
    <img src="https://img.alicdn.com/tfs/TB1kqcoRXXXXXa3XpXXXXXXXXXX-2102-2320.png" width="600"/>
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-rich-text/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-rich-text%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wxc-rich-text/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-rich-text%2Fdemo%2Findex.native-min.js)
 <img src="https://img.alicdn.com/tfs/TB1e4LYSpXXXXXVXpXXXXXXXXXX-750-1334.png" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1OXrDSpXXXXcyXVXXXXXXXXXX-200-200.png" width="160"/>
 
 ## 使用方法
