@@ -2,7 +2,7 @@
 
 > Weex 按钮组件，支持 4 种基本类型 button，可自定义样式
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-button/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-button%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wxc-button/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-button%2Fdemo%2Findex.native-min.js)
 
 <img src="https://gw.alipayobjects.com/zos/rmsportal/RFOOWyVEvoilJgKYQBcB.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1e69sSpXXXXclXXXXXXXXXXXX-200-200.png" width="160"/>
 
