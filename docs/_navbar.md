@@ -1,3 +1,3 @@
 - [En](/)
 - [中文](/cn/)
-- [Demo](//alibaba.github.io/weex-ui/docs/demo.html)
+- <a href="//alibaba.github.io/weex-ui/docs/demo.html" target="_self">Demo</a>
