@@ -201,7 +201,7 @@ var Utils = {
       var deviceHeight = weex.config.env.deviceHeight;
 
       if (Utils.env.isWeb()) {
-        return (typeof window === 'undefined' ? 'undefined' : _typeof2(window)) !== undefined && window.screen && window.screen.width && window.screen.height && parseInt(window.screen.width, 10) == 375 && parseInt(window.screen.height, 10) == 812;
+        return (typeof window === 'undefined' ? 'undefined' : _typeof2(window)) !== undefined && window.screen && window.screen.width && window.screen.height && parseInt(window.screen.width, 10) === 375 && parseInt(window.screen.height, 10) === 812;
       }
       return Utils.env.isIOS() && deviceHeight === 2436;
     },
@@ -2063,8 +2063,8 @@ Object.defineProperty(exports, "__esModule", {
  * Created by Tw93 on 2016/10/29.
  */
 
-var CHECKED = exports.CHECKED = "https://gw.alicdn.com/tfs/TB1UT3VpgMPMeJjy1XdXXasrXXa-42-42.png";
-var UN_CHECKED = exports.UN_CHECKED = "https://gw.alicdn.com/tfs/TB1hE3VpgMPMeJjy1XdXXasrXXa-42-42.png";
+var CHECKED = exports.CHECKED = 'https://gw.alicdn.com/tfs/TB1UT3VpgMPMeJjy1XdXXasrXXa-42-42.png';
+var UN_CHECKED = exports.UN_CHECKED = 'https://gw.alicdn.com/tfs/TB1hE3VpgMPMeJjy1XdXXasrXXa-42-42.png';
 
 /***/ }),
 /* 46 */
@@ -2362,21 +2362,13 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = {
   closeIcon: 'https://gw.alicdn.com/tfs/TB1THvhpwMPMeJjy1XcXXXpppXa-32-32.png',
-
   linkIcon: 'https://gw.alicdn.com/tfs/TB1utlZpwMPMeJjy1XdXXasrXXa-32-32.png',
-
   infoIcon: 'https://gw.alicdn.com/tfs/TB1xdlZpwMPMeJjy1XdXXasrXXa-32-32.png',
-
   warnIcon: 'https://gw.alicdn.com/tfs/TB1TCvhpwMPMeJjy1XcXXXpppXa-32-32.png',
-
   successIcon: 'https://gw.alicdn.com/tfs/TB12Em8pwMPMeJjy1XbXXcwxVXa-32-32.png',
-
   errorIcon: 'https://gw.alicdn.com/tfs/TB1UCvhpwMPMeJjy1XcXXXpppXa-32-32.png',
-
   questionIcon: 'https://gw.alicdn.com/tfs/TB1vJlZpwMPMeJjy1XdXXasrXXa-32-32.png',
-
   timeIcon: 'https://gw.alicdn.com/tfs/TB1eSzhpwMPMeJjy1XcXXXpppXa-30-30.png',
-
   redbag: 'https://gw.alicdn.com/tfs/TB1dCzhpwMPMeJjy1XcXXXpppXa-32-32.png'
 };
 
@@ -2738,8 +2730,8 @@ function generateDateCell(_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var CHECKED = exports.CHECKED = "https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png";
-var UNCHECKED = exports.UNCHECKED = "https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png";
+var CHECKED = exports.CHECKED = 'https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png';
+var UNCHECKED = exports.UNCHECKED = 'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png';
 
 /***/ }),
 /* 53 */
@@ -5179,14 +5171,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 exports.default = {
   components: { WxcOverlay: _wxcOverlay2.default },
@@ -7456,10 +7440,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 //
 //
 //
-//
-//
-//
-//
 
 var isWeb = _utils2.default.env.isWeb();
 
@@ -7487,6 +7467,10 @@ exports.default = {
         };
       }
     },
+    showHeader: {
+      type: Boolean,
+      default: false
+    },
     selectedNote: {
       type: Array,
       default: function _default() {
@@ -7512,10 +7496,7 @@ exports.default = {
     return {
       isShow: false,
       reSelect: true,
-      showHeader: isWeb,
       today: Format.getToDay(),
-      calendarHeight: 1040,
-      pageHeight: 1334,
       departDate: '',
       arriveDate: ''
     };
@@ -7535,8 +7516,7 @@ exports.default = {
   },
   created: function created() {
     this.isIPhoneX = _utils2.default.env.isIPhoneX();
-    this.pageHeight = _utils2.default.env.getPageHeight();
-    this.calendarHeight = this.pageHeight - (this.showHeader ? 90 : 0) - 60;
+    this.showTitle = isWeb || this.showHeader;
     this.detectShow();
   },
   mounted: function mounted() {
@@ -7673,6 +7653,10 @@ exports.default = {
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _utils = __webpack_require__(0);
 
 var _utils2 = _interopRequireDefault(_utils);
@@ -7697,9 +7681,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 
 var expressionBinding = weex.requireModule('expressionBinding');
-
-
-module.exports = {
+exports.default = {
   props: {
     extId: {
       type: [String, Number],
@@ -8099,7 +8081,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
 
 exports.default = {
   props: {
@@ -8445,10 +8426,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
 
 exports.default = {
   props: {
@@ -8491,7 +8468,7 @@ exports.default = {
   },
   methods: {
     handleTouchEnd: function handleTouchEnd(e) {
-      // 在支付宝上面有点击穿透问题
+      // web上面有点击穿透问题
       var platform = weex.config.env.platform;
 
       platform === 'Web' && e.preventDefault && e.preventDefault();
@@ -10641,6 +10618,46 @@ exports.default = {
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -10719,7 +10736,7 @@ exports.default = {
 var dom = weex.requireModule('dom');
 var animation = weex.requireModule('animation');
 
-module.exports = {
+exports.default = {
   props: {
     tabTitles: {
       type: Array,
@@ -10855,6 +10872,10 @@ module.exports = {
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _utils = __webpack_require__(0);
 
 var _utils2 = _interopRequireDefault(_utils);
@@ -10964,7 +10985,7 @@ var supportsEB = _utils2.default.env.supportsEB();
 var supportsEBForIos = _utils2.default.env.supportsEBForIos();
 var isIos = _utils2.default.env.isIOS();
 
-module.exports = {
+exports.default = {
   props: {
     tabTitles: {
       type: Array,
@@ -11407,39 +11428,39 @@ exports.default = {
 
 module.exports = {
   "wxc-minibar": {
-    "width": 750,
-    "height": 90,
+    "width": "750",
+    "height": "90",
     "flexDirection": "row",
     "justifyContent": "space-between",
     "alignItems": "center",
     "backgroundColor": "#009ff0"
   },
   "left": {
-    "width": 90
+    "width": "90"
   },
   "middle-title": {
-    "fontSize": 30,
+    "fontSize": "30",
     "color": "#ffffff",
-    "height": 36,
-    "lineHeight": 34
+    "height": "36",
+    "lineHeight": "34"
   },
   "right": {
-    "width": 80
+    "width": "80"
   },
   "left-button": {
-    "width": 21,
-    "height": 36,
-    "marginLeft": 40
+    "width": "21",
+    "height": "36",
+    "marginLeft": "40"
   },
   "right-button": {
-    "width": 32,
-    "height": 32,
-    "marginRight": 16
+    "width": "32",
+    "height": "32",
+    "marginRight": "16"
   },
   "right-text": {
-    "width": 80,
-    "marginRight": 20,
-    "fontSize": 28,
+    "width": "80",
+    "marginRight": "20",
+    "fontSize": "28",
     "textAlign": "left",
     "color": "#ffffff"
   }
@@ -11451,7 +11472,7 @@ module.exports = {
 
 module.exports = {
   "wxc-tab-page": {
-    "width": 750,
+    "width": "750",
     "flexDirection": "column"
   },
   "tab-title-list": {
@@ -11466,7 +11487,7 @@ module.exports = {
     "position": "relative"
   },
   "tab-page-wrap": {
-    "width": 750,
+    "width": "750",
     "overflow": "hidden",
     "position": "relative"
   },
@@ -11478,6 +11499,37 @@ module.exports = {
   "tab-text": {
     "lines": 1,
     "textOverflow": "ellipsis"
+  },
+  "desc-tag": {
+    "position": "absolute",
+    "top": "10",
+    "right": "20",
+    "borderBottomRightRadius": "14",
+    "borderBottomLeftRadius": 0,
+    "borderTopLeftRadius": "14",
+    "borderTopRightRadius": "14",
+    "backgroundColor": "#FF5E00",
+    "height": "26",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "paddingLeft": "6",
+    "paddingRight": "6"
+  },
+  "dot": {
+    "width": "12",
+    "height": "12",
+    "borderBottomRightRadius": "12",
+    "borderBottomLeftRadius": "12",
+    "borderTopLeftRadius": "12",
+    "borderTopRightRadius": "12",
+    "position": "absolute",
+    "top": "10",
+    "right": "40",
+    "backgroundColor": "#FF5E00"
+  },
+  "desc-text": {
+    "fontSize": "18",
+    "color": "#ffffff"
   }
 }
 
@@ -11487,11 +11539,11 @@ module.exports = {
 
 module.exports = {
   "radio": {
-    "width": 48,
-    "height": 48
+    "width": "48",
+    "height": "48"
   },
   "title-text": {
-    "fontSize": 30
+    "fontSize": "30"
   }
 }
 
@@ -11501,11 +11553,11 @@ module.exports = {
 
 module.exports = {
   "checkbox": {
-    "width": 48,
-    "height": 48
+    "width": "48",
+    "height": "48"
   },
   "title-text": {
-    "fontSize": 30
+    "fontSize": "30"
   }
 }
 
@@ -11515,7 +11567,7 @@ module.exports = {
 
 module.exports = {
   "wxc-text": {
-    "fontSize": 24,
+    "fontSize": "24",
     "color": "#3d3d3d"
   },
   "black": {
@@ -11531,7 +11583,7 @@ module.exports = {
     "color": "#FF5000"
   },
   "margin-text": {
-    "marginRight": 6
+    "marginRight": "6"
   }
 }
 
@@ -11544,20 +11596,20 @@ module.exports = {
     "userSelect": "none"
   },
   "slider-bar-container": {
-    "height": 56,
+    "height": "56",
     "display": "flex",
     "justifyContent": "center",
     "alignItems": "center"
   },
   "value-bar": {
-    "height": 4
+    "height": "4"
   },
   "slide-block": {
-    "width": 56,
-    "height": 56,
+    "width": "56",
+    "height": "56",
     "backgroundColor": "#ffffff",
-    "borderRadius": 28,
-    "borderWidth": 1,
+    "borderRadius": "28",
+    "borderWidth": "1",
     "borderColor": "rgba(0,0,0,0.1)",
     "boxShadow": "0 6px 12px rgba(0, 0, 0, 0.05)",
     "position": "absolute",
@@ -11573,38 +11625,38 @@ module.exports = {
 module.exports = {
   "container": {
     "position": "fixed",
-    "width": 750,
+    "width": "750",
     "zIndex": 99999
   },
   "dialog-box": {
     "position": "fixed",
-    "left": 96,
-    "width": 558,
+    "left": "96",
+    "width": "558",
     "backgroundColor": "#FFFFFF"
   },
   "dialog-content": {
-    "paddingTop": 36,
-    "paddingBottom": 36,
-    "paddingLeft": 36,
-    "paddingRight": 36
+    "paddingTop": "36",
+    "paddingBottom": "36",
+    "paddingLeft": "36",
+    "paddingRight": "36"
   },
   "content-title": {
     "color": "#333333",
-    "fontSize": 36,
+    "fontSize": "36",
     "textAlign": "center",
-    "marginBottom": 24
+    "marginBottom": "24"
   },
   "content-subtext": {
     "color": "#666666",
-    "fontSize": 26,
-    "lineHeight": 36,
+    "fontSize": "26",
+    "lineHeight": "36",
     "textAlign": "center"
   },
   "dialog-footer": {
     "flexDirection": "row",
     "alignItems": "center",
     "borderTopColor": "#F3F3F3",
-    "borderTopWidth": 1,
+    "borderTopWidth": "1",
     "borderTop": "1px solid #F3F3F3"
   },
   "footer-btn": {
@@ -11612,31 +11664,31 @@ module.exports = {
     "alignItems": "center",
     "justifyContent": "center",
     "flex": 1,
-    "height": 90
+    "height": "90"
   },
   "cancel": {
     "borderRightColor": "#F3F3F3",
-    "borderRightWidth": 1,
+    "borderRightWidth": "1",
     "borderRight": "1px solid #F3F3F3"
   },
   "btn-text": {
-    "fontSize": 36,
+    "fontSize": "36",
     "color": "#666666"
   },
   "no-prompt": {
-    "width": 486,
+    "width": "486",
     "alignItems": "center",
     "justifyContent": "center",
     "flexDirection": "row",
-    "marginTop": 24
+    "marginTop": "24"
   },
   "no-prompt-icon": {
-    "width": 24,
-    "height": 24,
-    "marginRight": 12
+    "width": "24",
+    "height": "24",
+    "marginRight": "12"
   },
   "no-prompt-text": {
-    "fontSize": 24,
+    "fontSize": "24",
     "color": "#A5A5A5"
   }
 }
@@ -11647,9 +11699,9 @@ module.exports = {
 
 module.exports = {
   "wxc-image": {
-    "width": 90,
-    "height": 24,
-    "marginRight": 6
+    "width": "90",
+    "height": "24",
+    "marginRight": "6"
   }
 }
 
@@ -11684,11 +11736,11 @@ module.exports = {
 
 module.exports = {
   "wxc-search-bar": {
-    "paddingLeft": 20,
-    "paddingRight": 20,
+    "paddingLeft": "20",
+    "paddingRight": "20",
     "backgroundColor": "#ffffff",
-    "width": 750,
-    "height": 84,
+    "width": "750",
+    "height": "84",
     "flexDirection": "row"
   },
   "wxc-search-bar-yellow": {
@@ -11696,18 +11748,18 @@ module.exports = {
   },
   "search-bar-input": {
     "position": "absolute",
-    "top": 10,
+    "top": "10",
     "paddingTop": 0,
     "paddingBottom": 0,
-    "paddingRight": 40,
-    "paddingLeft": 60,
-    "fontSize": 26,
-    "width": 624,
-    "height": 64,
-    "lineHeight": 64,
+    "paddingRight": "40",
+    "paddingLeft": "60",
+    "fontSize": "26",
+    "width": "624",
+    "height": "64",
+    "lineHeight": "64",
     "backgroundColor": "#E5E5E5",
     "outline": "none",
-    "borderRadius": 6
+    "borderRadius": "6"
   },
   "search-bar-input-yellow": {
     "backgroundColor": "#fff6d6",
@@ -11715,50 +11767,50 @@ module.exports = {
   },
   "search-bar-ICON": {
     "position": "absolute",
-    "width": 30,
-    "height": 30,
-    "left": 34,
-    "top": 28
+    "width": "30",
+    "height": "30",
+    "left": "34",
+    "top": "28"
   },
   "search-bar-close": {
     "position": "absolute",
-    "width": 30,
-    "height": 30,
-    "right": 120,
-    "top": 28
+    "width": "30",
+    "height": "30",
+    "right": "120",
+    "top": "28"
   },
   "search-bar-button": {
-    "width": 94,
-    "height": 36,
-    "fontSize": 30,
+    "width": "94",
+    "height": "36",
+    "fontSize": "30",
     "textAlign": "center",
     "backgroundColor": "#ffffff",
-    "marginTop": 16,
+    "marginTop": "16",
     "marginRight": 0,
     "color": "#333333",
     "position": "absolute",
-    "right": 8,
-    "top": 9
+    "right": "8",
+    "top": "9"
   },
   "search-bar-button-yellow": {
     "backgroundColor": "#FFC900"
   },
   "input-has-dep": {
-    "paddingLeft": 240,
-    "width": 710
+    "paddingLeft": "240",
+    "width": "710"
   },
   "bar-dep": {
-    "width": 170,
-    "paddingRight": 12,
-    "paddingLeft": 12,
-    "height": 42,
+    "width": "170",
+    "paddingRight": "12",
+    "paddingLeft": "12",
+    "height": "42",
     "alignItems": "center",
     "flexDirection": "row",
     "position": "absolute",
-    "left": 24,
-    "top": 22,
+    "left": "24",
+    "top": "22",
     "borderRightStyle": "solid",
-    "borderRightWidth": 1,
+    "borderRightWidth": "1",
     "borderRightColor": "#C7C7C7"
   },
   "bar-dep-yellow": {
@@ -11767,29 +11819,29 @@ module.exports = {
   "dep-text": {
     "flex": 1,
     "textAlign": "center",
-    "fontSize": 26,
+    "fontSize": "26",
     "color": "#666666",
-    "marginRight": 6,
+    "marginRight": "6",
     "lines": 1,
     "textOverflow": "ellipsis"
   },
   "dep-arrow": {
-    "width": 24,
-    "height": 24
+    "width": "24",
+    "height": "24"
   },
   "ICON-has-dep": {
-    "left": 214
+    "left": "214"
   },
   "disabled-input": {
-    "width": 750,
-    "height": 64,
+    "width": "750",
+    "height": "64",
     "position": "absolute",
     "left": 0,
     "backgroundColor": "rgba(0,0,0,0)"
   },
   "has-dep-disabled": {
-    "width": 550,
-    "left": 200
+    "width": "550",
+    "left": "200"
   }
 }
 
@@ -11821,11 +11873,11 @@ module.exports = {
     "top": 0,
     "left": 0,
     "color": "#A5A5A5",
-    "fontSize": 24,
-    "lineHeight": 30
+    "fontSize": "24",
+    "lineHeight": "30"
   },
   "wxc-text": {
-    "fontSize": 24,
+    "fontSize": "24",
     "color": "#3d3d3d",
     "lines": 2,
     "textOverflow": "ellipsis",
@@ -11844,7 +11896,7 @@ module.exports = {
     "color": "#FF5000"
   },
   "margin-text": {
-    "marginRight": 6
+    "marginRight": "6"
   }
 }
 
@@ -11854,7 +11906,7 @@ module.exports = {
 
 module.exports = {
   "wxc-overlay": {
-    "width": 750,
+    "width": "750",
     "position": "fixed",
     "left": 0,
     "top": 0,
@@ -11869,13 +11921,13 @@ module.exports = {
 
 module.exports = {
   "wxc-noticebar": {
-    "width": 750,
-    "paddingTop": 10,
-    "paddingBottom": 10,
-    "paddingLeft": 24,
+    "width": "750",
+    "paddingTop": "10",
+    "paddingBottom": "10",
+    "paddingLeft": "24",
     "backgroundColor": "#FFF7D6",
-    "borderBottomWidth": 1,
-    "borderTopWidth": 1,
+    "borderBottomWidth": "1",
+    "borderTopWidth": "1",
     "borderColor": "#FFEEAE",
     "borderStyle": "solid",
     "flexDirection": "row",
@@ -11884,23 +11936,23 @@ module.exports = {
   },
   "noticebar-content": {
     "color": "#EE9900",
-    "fontSize": 26,
-    "lineHeight": 36,
-    "width": 592,
+    "fontSize": "26",
+    "lineHeight": "36",
+    "width": "592",
     "textOverflow": "ellipsis"
   },
   "more-click-content": {
-    "width": 64,
+    "width": "64",
     "alignItems": "center",
     "justifyContent": "center"
   },
   "mode-ICON": {
-    "width": 32,
-    "height": 32
+    "width": "32",
+    "height": "32"
   },
   "type-ICON": {
-    "width": 32,
-    "height": 32
+    "width": "32",
+    "height": "32"
   }
 }
 
@@ -11929,26 +11981,26 @@ module.exports = {
 module.exports = {
   "container": {
     "position": "fixed",
-    "width": 750,
+    "width": "750",
     "zIndex": 99999
   },
   "wxc-mask": {
     "position": "fixed",
-    "top": 300,
-    "left": 60,
-    "width": 702,
-    "height": 800
+    "top": "300",
+    "left": "60",
+    "width": "702",
+    "height": "800"
   },
   "mask-bottom": {
-    "width": 100,
-    "height": 100,
+    "width": "100",
+    "height": "100",
     "backgroundColor": "rgba(0,0,0,0)",
     "justifyContent": "center",
     "alignItems": "center"
   },
   "mask-close-icon": {
-    "width": 64,
-    "height": 64
+    "width": "64",
+    "height": "64"
   }
 }
 
@@ -11964,20 +12016,20 @@ module.exports = {
     "flex": 1
   },
   "root": {
-    "paddingTop": 28,
-    "paddingBottom": 24,
+    "paddingTop": "28",
+    "paddingBottom": "24",
     "backgroundColor": "#ffffff"
   },
   "title": {
-    "height": 40,
-    "paddingLeft": 70,
-    "paddingRight": 70
+    "height": "40",
+    "paddingLeft": "70",
+    "paddingRight": "70"
   },
   "content": {
-    "paddingTop": 9,
-    "paddingBottom": 42,
-    "paddingLeft": 70,
-    "paddingRight": 70
+    "paddingTop": "9",
+    "paddingBottom": "42",
+    "paddingLeft": "70",
+    "paddingRight": "70"
   },
   "last-one-content": {
     "paddingBottom": 0
@@ -11986,55 +12038,55 @@ module.exports = {
     "position": "absolute",
     "top": 0,
     "bottom": 0,
-    "left": 38,
-    "width": 2,
+    "left": "38",
+    "width": "2",
     "backgroundColor": "#FFC300"
   },
   "first-one-title-line": {
-    "top": 20
+    "top": "20"
   },
   "last-one-title-line": {
-    "bottom": 20
+    "bottom": "20"
   },
   "last-one-content-line": {
     "width": 0
   },
   "point": {
     "position": "absolute",
-    "top": 13,
-    "left": 32,
-    "width": 14,
-    "height": 14,
+    "top": "13",
+    "left": "32",
+    "width": "14",
+    "height": "14",
     "backgroundColor": "#FFF0BD",
     "borderStyle": "solid",
-    "borderWidth": 2,
+    "borderWidth": "2",
     "borderColor": "#EE9900",
     "borderRadius": 100
   },
   "highlight-point": {
-    "top": 7,
-    "left": 26,
-    "width": 26,
-    "height": 26,
+    "top": "7",
+    "left": "26",
+    "width": "26",
+    "height": "26",
     "backgroundColor": "#EE9900",
     "borderStyle": "solid",
-    "borderWidth": 6,
+    "borderWidth": "6",
     "borderColor": "#FFE78D"
   },
   "text-title": {
-    "fontSize": 30,
+    "fontSize": "30",
     "color": "#3d3d3d"
   },
   "text-highlight-title": {
     "color": "#EE9900"
   },
   "text-desc": {
-    "fontSize": 24,
+    "fontSize": "24",
     "color": "#a5a5a5",
-    "marginBottom": 12
+    "marginBottom": "12"
   },
   "text-date": {
-    "fontSize": 24,
+    "fontSize": "24",
     "color": "#a5a5a5"
   }
 }
@@ -12048,44 +12100,44 @@ module.exports = {
     "alignItems": "flex-start"
   },
   "tag-item": {
-    "height": 24,
+    "height": "24",
     "justifyContent": "center",
     "alignItems": "center",
     "overflow": "hidden",
-    "paddingBottom": 2
+    "paddingBottom": "2"
   },
   "tag-border": {
-    "borderBottomLeftRadius": 4,
-    "borderBottomRightRadius": 4,
-    "borderTopLeftRadius": 4,
-    "borderTopRightRadius": 4
+    "borderBottomLeftRadius": "4",
+    "borderBottomRightRadius": "4",
+    "borderTopLeftRadius": "4",
+    "borderTopRightRadius": "4"
   },
   "tag-hollow": {
-    "borderWidth": 1
+    "borderWidth": "1"
   },
   "tag-image": {
-    "height": 24
+    "height": "24"
   },
   "tag-special": {
-    "borderWidth": 1,
+    "borderWidth": "1",
     "flexDirection": "row"
   },
   "left-image": {
-    "width": 20,
-    "height": 20
+    "width": "20",
+    "height": "20"
   },
   "tag-left": {
-    "width": 24,
-    "height": 24,
+    "width": "24",
+    "height": "24",
     "alignItems": "center",
     "justifyContent": "center"
   },
   "tag-text": {
-    "fontSize": 20,
-    "height": 22,
-    "lineHeight": 22,
-    "paddingLeft": 6,
-    "paddingRight": 6
+    "fontSize": "20",
+    "height": "22",
+    "lineHeight": "22",
+    "paddingLeft": "6",
+    "paddingRight": "6"
   }
 }
 
@@ -12098,34 +12150,34 @@ module.exports = {
     "flexDirection": "row"
   },
   "stepper-plus": {
-    "width": 56,
-    "height": 56,
+    "width": "56",
+    "height": "56",
     "backgroundColor": "#ededed",
     "alignItems": "center",
     "justifyContent": "center",
-    "borderRadius": 6
+    "borderRadius": "6"
   },
   "stepper-minus": {
-    "width": 56,
-    "height": 56,
+    "width": "56",
+    "height": "56",
     "backgroundColor": "#ededed",
     "alignItems": "center",
     "justifyContent": "center",
-    "borderRadius": 6
+    "borderRadius": "6"
   },
   "stepper-input": {
     "borderWidth": 0,
     "outline": "none",
     "textAlign": "center",
     "color": "#3d3d3d",
-    "fontSize": 30,
-    "lineHeight": 56,
-    "width": 86
+    "fontSize": "30",
+    "lineHeight": "56",
+    "width": "86"
   },
   "stepper-icon": {
-    "fontSize": 36,
+    "fontSize": "36",
     "color": "#666666",
-    "marginTop": -4
+    "marginTop": "-4"
   }
 }
 
@@ -12137,8 +12189,9 @@ module.exports = {
   "wxc-page-calendar": {
     "position": "fixed",
     "top": 0,
-    "right": -750,
-    "width": 750,
+    "bottom": 0,
+    "right": "-750",
+    "width": "750",
     "color": "#333333",
     "backgroundColor": "#ffffff"
   },
@@ -12147,10 +12200,10 @@ module.exports = {
     "textAlign": "center"
   },
   "calendar-weekday": {
-    "height": 60,
+    "height": "60",
     "backgroundColor": "#ffffff",
-    "borderBottomWidth": 1,
-    "borderTopWidth": 1,
+    "borderBottomWidth": "1",
+    "borderTopWidth": "1",
     "borderColor": "#e2e2e2",
     "flexDirection": "row",
     "justifyContent": "space-around",
@@ -12159,25 +12212,27 @@ module.exports = {
   "weekday-text": {
     "color": "#000000",
     "flex": 1,
+    "fontSize": "24",
     "textAlign": "center"
   },
   "calendar-list": {
+    "flex": 1,
     "flexDirection": "column"
   },
   "month-text": {
-    "fontSize": 32,
-    "height": 60,
-    "lineHeight": 60,
-    "width": 750,
+    "fontSize": "32",
+    "height": "60",
+    "lineHeight": "60",
+    "width": "750",
     "textAlign": "center",
     "alignItems": "center",
     "backgroundColor": "#f2f3f4"
   },
   "calendar-row": {
-    "height": 140,
+    "height": "140",
     "flexDirection": "row",
     "backgroundColor": "#ffffff",
-    "borderBottomWidth": 1,
+    "borderBottomWidth": "1",
     "borderColor": "#f2f3f4",
     "alignItems": "center",
     "justifyContent": "space-between",
@@ -12185,35 +12240,35 @@ module.exports = {
   },
   "row-item": {
     "flex": 1,
-    "height": 140,
-    "paddingTop": 10,
-    "paddingBottom": 10,
+    "height": "140",
+    "paddingTop": "10",
+    "paddingBottom": "10",
     "justifyContent": "center",
     "alignItems": "center"
   },
   "iphone-x": {
-    "height": 68
+    "height": "68"
   },
   "calendar-note": {
-    "height": 36,
-    "lineHeight": 36,
-    "fontSize": 24,
+    "height": "36",
+    "lineHeight": "36",
+    "fontSize": "24",
     "color": "#000000",
     "textAlign": "center"
   },
   "calendar-day": {
-    "height": 48,
-    "lineHeight": 48,
-    "fontSize": 36,
+    "height": "48",
+    "lineHeight": "48",
+    "fontSize": "36",
     "color": "#000000",
     "textAlign": "center"
   },
   "calendar-ext": {
-    "height": 36,
-    "lineHeight": 36,
+    "height": "36",
+    "lineHeight": "36",
     "color": "#999999",
     "textAlign": "center",
-    "fontSize": 24,
+    "fontSize": "24",
     "overflow": "hidden",
     "textOverflow": "ellipsis"
   },
@@ -12249,7 +12304,7 @@ module.exports = {
 
 module.exports = {
   "wxc-tab-page": {
-    "width": 750,
+    "width": "750",
     "flexDirection": "column"
   },
   "tab-title-list": {
@@ -12267,7 +12322,7 @@ module.exports = {
     "bottom": 0
   },
   "tab-page-wrap": {
-    "width": 750,
+    "width": "750",
     "overflow": "hidden",
     "position": "relative"
   },
@@ -12289,24 +12344,24 @@ module.exports = {
 module.exports = {
   "grid-option": {
     "justifyContent": "center",
-    "borderRadius": 8,
-    "borderWidth": 2,
-    "paddingLeft": 6,
-    "paddingRight": 6
+    "borderRadius": "8",
+    "borderWidth": "2",
+    "paddingLeft": "6",
+    "paddingRight": "6"
   },
   "text-title": {
     "lines": 2,
-    "lineHeight": 30,
+    "lineHeight": "30",
     "textOverflow": "ellipsis",
     "textAlign": "center",
-    "fontSize": 26
+    "fontSize": "26"
   },
   "image-checked": {
     "position": "absolute",
     "right": 0,
     "bottom": 0,
-    "width": 38,
-    "height": 34
+    "width": "38",
+    "height": "34"
   }
 }
 
@@ -12325,9 +12380,9 @@ module.exports = {
     "position": "absolute",
     "itemColor": "rgba(255,195,0,0.5)",
     "itemSelectedColor": "#ffc300",
-    "itemSize": 20,
-    "height": 20,
-    "bottom": 24
+    "itemSize": "20",
+    "height": "20",
+    "bottom": "24"
   }
 }
 
@@ -12337,56 +12392,56 @@ module.exports = {
 
 module.exports = {
   "wxc-cell": {
-    "height": 100,
+    "height": "100",
     "position": "relative",
     "flexDirection": "row",
     "alignItems": "center",
-    "paddingLeft": 24,
-    "paddingRight": 24,
+    "paddingLeft": "24",
+    "paddingRight": "24",
     "backgroundColor": "#ffffff"
   },
   "cell-margin": {
-    "marginBottom": 24
+    "marginBottom": "24"
   },
   "cell-title": {
     "flex": 1
   },
   "cell-indent": {
-    "paddingBottom": 30,
-    "paddingTop": 30
+    "paddingBottom": "30",
+    "paddingTop": "30"
   },
   "has-desc": {
-    "paddingBottom": 18,
-    "paddingTop": 18
+    "paddingBottom": "18",
+    "paddingTop": "18"
   },
   "cell-top-border": {
     "borderTopColor": "#e2e2e2",
-    "borderTopWidth": 1
+    "borderTopWidth": "1"
   },
   "cell-bottom-border": {
     "borderBottomColor": "#e2e2e2",
-    "borderBottomWidth": 1
+    "borderBottomWidth": "1"
   },
   "cell-label-text": {
-    "fontSize": 30,
+    "fontSize": "30",
     "color": "#666666",
-    "width": 188,
-    "marginRight": 10
+    "width": "188",
+    "marginRight": "10"
   },
   "cell-arrow-icon": {
-    "width": 22,
-    "height": 22
+    "width": "22",
+    "height": "22"
   },
   "cell-content": {
     "color": "#333333",
-    "fontSize": 30,
-    "lineHeight": 40
+    "fontSize": "30",
+    "lineHeight": "40"
   },
   "cell-desc-text": {
     "color": "#999999",
-    "fontSize": 24,
-    "lineHeight": 30,
-    "marginTop": 4
+    "fontSize": "24",
+    "lineHeight": "30",
+    "marginTop": "4"
   }
 }
 
@@ -12399,106 +12454,106 @@ module.exports = {
     "position": "relative"
   },
   "index-list": {
-    "width": 750,
-    "height": 1334
+    "width": "750",
+    "height": "1334"
   },
   "index-list-title": {
-    "borderBottomWidth": 1,
+    "borderBottomWidth": "1",
     "borderColor": "rgba(32,35,37,0.15)",
     "backgroundColor": "#FBFBFB",
-    "fontSize": 24,
+    "fontSize": "24",
     "color": "#666666",
-    "paddingBottom": 14,
-    "paddingTop": 14,
-    "paddingLeft": 23,
-    "width": 750
+    "paddingBottom": "14",
+    "paddingTop": "14",
+    "paddingLeft": "23",
+    "width": "750"
   },
   "group-title": {
     "borderBottomWidth": 0,
     "paddingBottom": 0,
-    "paddingTop": 24
+    "paddingTop": "24"
   },
   "index-list-item": {
-    "width": 750,
+    "width": "750",
     "flexDirection": "row",
     "alignItems": "center",
-    "borderBottomWidth": 1,
+    "borderBottomWidth": "1",
     "borderBottomColor": "#e0e0e0",
-    "height": 92,
-    "paddingLeft": 24,
-    "paddingRight": 24,
+    "height": "92",
+    "paddingLeft": "24",
+    "paddingRight": "24",
     "backgroundColor": "#FFFFFF"
   },
   "iphone-x": {
-    "height": 68,
+    "height": "68",
     "backgroundColor": "#ffffff"
   },
   "title": {
-    "fontSize": 32,
+    "fontSize": "32",
     "color": "#3D3D3D"
   },
   "desc": {
-    "fontSize": 24,
+    "fontSize": "24",
     "color": "#A5A5A5",
-    "marginLeft": 30
+    "marginLeft": "30"
   },
   "index-list-nav": {
     "position": "absolute",
     "top": 0,
     "right": 0,
-    "marginBottom": 60,
-    "marginTop": 60,
-    "paddingBottom": 20,
-    "paddingTop": 20,
-    "width": 70
+    "marginBottom": "60",
+    "marginTop": "60",
+    "paddingBottom": "20",
+    "paddingTop": "20",
+    "width": "70"
   },
   "list-nav-key": {
     "textAlign": "center",
-    "fontSize": 24,
-    "height": 40,
+    "fontSize": "24",
+    "height": "40",
     "color": "#666666"
   },
   "index-list-pop": {
     "position": "fixed",
-    "top": 550,
-    "left": 316,
-    "width": 120,
-    "height": 120,
+    "top": "550",
+    "left": "316",
+    "width": "120",
+    "height": "120",
     "textAlign": "center",
     "justifyContent": "center",
     "backgroundColor": "rgba(32,35,37,0.6)",
-    "borderBottomLeftRadius": 60,
-    "borderBottomRightRadius": 60,
-    "borderTopLeftRadius": 60,
-    "borderTopRightRadius": 60,
+    "borderBottomLeftRadius": "60",
+    "borderBottomRightRadius": "60",
+    "borderTopLeftRadius": "60",
+    "borderTopRightRadius": "60",
     "paddingLeft": 0,
     "paddingRight": 0,
-    "paddingTop": 35,
-    "paddingBottom": 35,
+    "paddingTop": "35",
+    "paddingBottom": "35",
     "color": "#ffffff"
   },
   "list-pop-text": {
-    "fontSize": 40,
+    "fontSize": "40",
     "textAlign": "center",
     "color": "#ffffff"
   },
   "group": {
-    "paddingBottom": 18,
-    "paddingRight": 70,
+    "paddingBottom": "18",
+    "paddingRight": "70",
     "backgroundColor": "#FBFBFB"
   },
   "group-list": {
     "flexDirection": "row",
-    "marginLeft": 18,
-    "marginTop": 18,
+    "marginLeft": "18",
+    "marginTop": "18",
     "backgroundColor": "#FBFBFB"
   },
   "group-item": {
-    "width": 146,
-    "height": 64,
-    "borderWidth": 1,
+    "width": "146",
+    "height": "64",
+    "borderWidth": "1",
     "borderColor": "#e0e0e0",
-    "marginRight": 18,
+    "marginRight": "18",
     "flexDirection": "row",
     "alignItems": "center",
     "justifyContent": "center",
@@ -12508,20 +12563,20 @@ module.exports = {
     "flexDirection": "column"
   },
   "item-name": {
-    "fontSize": 24,
-    "lineHeight": 26,
+    "fontSize": "24",
+    "lineHeight": "26",
     "color": "#333333"
   },
   "item-desc": {
-    "marginTop": 2,
+    "marginTop": "2",
     "color": "#999999",
-    "fontSize": 20,
+    "fontSize": "20",
     "textAlign": "center"
   },
   "location-icon": {
-    "width": 32,
-    "height": 32,
-    "marginRight": 8
+    "width": "32",
+    "height": "32",
+    "marginRight": "8"
   }
 }
 
@@ -12542,16 +12597,16 @@ module.exports = {
 
 module.exports = {
   "wxc-btn": {
-    "width": 702,
-    "height": 88,
+    "width": "702",
+    "height": "88",
     "alignItems": "center",
     "justifyContent": "center",
-    "borderRadius": 12
+    "borderRadius": "12"
   },
   "btn-text": {
     "textOverflow": "ellipsis",
     "lines": 1,
-    "fontSize": 36,
+    "fontSize": "36",
     "color": "#FFFFFF"
   }
 }
@@ -12563,18 +12618,18 @@ module.exports = {
 module.exports = {
   "wxc-tag": {
     "borderColor": "#3d3d3d",
-    "borderWidth": 2,
-    "borderRadius": 4,
-    "marginRight": 6,
+    "borderWidth": "2",
+    "borderRadius": "4",
+    "marginRight": "6",
     "backgroundColor": "rgba(0,0,0,0)",
-    "paddingLeft": 6,
-    "paddingRight": 6,
-    "height": 26,
+    "paddingLeft": "6",
+    "paddingRight": "6",
+    "height": "26",
     "justifyContent": "center",
     "alignItems": "center"
   },
   "tag-text": {
-    "fontSize": 20,
+    "fontSize": "20",
     "color": "#3d3d3d"
   },
   "black": {
@@ -12613,7 +12668,7 @@ module.exports = {
 module.exports = {
   "wxc-popup": {
     "position": "fixed",
-    "width": 750
+    "width": "750"
   },
   "top": {
     "left": 0,
@@ -12646,44 +12701,44 @@ module.exports = {
     "bottom": 0
   },
   "wxc-result": {
-    "width": 750,
+    "width": "750",
     "flex": 1,
     "alignItems": "center",
     "backgroundColor": "#f2f3f4"
   },
   "result-image": {
-    "width": 320,
-    "height": 320
+    "width": "320",
+    "height": "320"
   },
   "result-content": {
-    "marginTop": 36,
+    "marginTop": "36",
     "alignItems": "center"
   },
   "content-text": {
-    "fontSize": 30,
+    "fontSize": "30",
     "color": "#A5A5A5",
-    "height": 42,
-    "lineHeight": 42,
+    "height": "42",
+    "lineHeight": "42",
     "textAlign": "center"
   },
   "content-desc": {
-    "marginTop": 10
+    "marginTop": "10"
   },
   "result-button": {
-    "marginTop": 60,
-    "borderWidth": 1,
+    "marginTop": "60",
+    "borderWidth": "1",
     "borderColor": "#979797",
     "backgroundColor": "#FFFFFF",
-    "borderRadius": 6,
-    "width": 240,
-    "height": 72,
+    "borderRadius": "6",
+    "width": "240",
+    "height": "72",
     "flexDirection": "row",
     "alignItems": "center",
     "justifyContent": "center"
   },
   "button-text": {
     "color": "#666666",
-    "fontSize": 30
+    "fontSize": "30"
   }
 }
 
@@ -12727,8 +12782,8 @@ module.exports = {
   },
   "default-text": {
     "color": "#A5A5A5",
-    "fontSize": 24,
-    "lineHeight": 30
+    "fontSize": "24",
+    "lineHeight": "30"
   }
 }
 
@@ -12739,33 +12794,33 @@ module.exports = {
 module.exports = {
   "wxc-loading": {
     "position": "fixed",
-    "left": 287,
-    "top": 500,
+    "left": "287",
+    "top": "500",
     "zIndex": 9999
   },
   "loading-box": {
     "alignItems": "center",
     "justifyContent": "center",
-    "borderRadius": 20,
-    "width": 175,
-    "height": 175,
+    "borderRadius": "20",
+    "width": "175",
+    "height": "175",
     "backgroundColor": "rgba(0,0,0,0.8)"
   },
   "trip-loading": {
     "backgroundColor": "rgba(0,0,0,0.2)"
   },
   "loading-trip-image": {
-    "height": 75,
-    "width": 75
+    "height": "75",
+    "width": "75"
   },
   "loading-text": {
     "color": "#ffffff",
-    "fontSize": 24,
-    "lineHeight": 30,
-    "height": 30,
-    "marginTop": 8,
+    "fontSize": "24",
+    "lineHeight": "30",
+    "height": "30",
+    "marginTop": "8",
     "textOverflow": "ellipsis",
-    "width": 140,
+    "width": "140",
     "textAlign": "center"
   }
 }
@@ -12882,7 +12937,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         paddingLeft: _vm.tabStyles.textPaddingLeft + 'px',
         paddingRight: _vm.tabStyles.textPaddingRight + 'px'
       }
-    }, [_vm._v(_vm._s(v.title))])])
+    }, [_vm._v(_vm._s(v.title))]), (v.badge) ? _c('div', {
+      staticClass: ["desc-tag"]
+    }, [_c('text', {
+      staticClass: ["desc-text"]
+    }, [_vm._v(_vm._s(v.badge))])]) : _vm._e(), (v.dot && !v.badge) ? _c('div', {
+      staticClass: ["dot"]
+    }) : _vm._e()])
   }))])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -13641,17 +13702,14 @@ module.exports.render._withStripped = true
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     ref: "pageCalendar",
-    staticClass: ["wxc-page-calendar"],
-    style: {
-      height: _vm.pageHeight + 'px'
-    }
+    staticClass: ["wxc-page-calendar"]
   }, [_c('wxc-minibar', _vm._b({
     attrs: {
-      "show": _vm.showHeader,
+      "show": _vm.showTitle,
       "useDefaultReturn": false
     },
     on: {
-      "minibarLeftButtonClick": _vm.minibarLeftButtonClick
+      "wxcMinibarLeftButtonClicked": _vm.minibarLeftButtonClick
     }
   }, 'wxc-minibar', _vm.minibarCfg, false)), (_vm.isShow) ? _c('div', {
     staticClass: ["calendar-weekday"]
@@ -13664,10 +13722,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }, [_vm._v(_vm._s(week))])
   })) : _vm._e(), (_vm.isShow) ? _c('list', {
-    staticClass: ["calendar-list"],
-    style: {
-      height: _vm.calendarHeight + 'px'
-    }
+    staticClass: ["calendar-list"]
   }, [_vm._l((_vm.monthsArray), function(month, index) {
     return _c('cell', {
       key: index,
