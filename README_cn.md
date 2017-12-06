@@ -165,6 +165,10 @@ npm run start
 - 如果您喜欢这个组件库，可以 star 此项目
 - 如果您有任何想法或建议来改善 Weex Ui，欢迎提交 [PR](./CONTRIBUTING.md)
 - 假如使用过程中碰到了问题或者不明白某个地方为什么要这样处理？ 可以[新建一个 issue](https://github.com/alibaba/weex-ui/issues/new) 来咨询
+- <details>
+    <summary>加入钉钉聊天群</summary>
+    <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
+  </details>
 
 ## 协议
 - 遵循 [MIT 协议](http://opensource.org/licenses/MIT)

@@ -175,6 +175,10 @@ Once it has been compiled, a browser window will be opened automatically. You ca
 - **Star it** if you like.
 - If you have any ideas or suggestions to improve Weex Ui, welcome to submit a [PR](./CONTRIBUTING.md).
 - Having a problem getting something to work or want to know why we setup something in a certain way? [File a GitHub Issue](https://github.com/alibaba/weex-ui/issues/new).
+- <details>
+    <summary>Join our chat at dingtalk.</summary>
+    <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
+  </details>
 
 ## License
 - The [MIT License](http://opensource.org/licenses/MIT)

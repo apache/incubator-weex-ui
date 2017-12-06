@@ -65,15 +65,6 @@ section.cover.has-mask .cover-main {
   cursor: pointer;
 }
 
-#logo {
-  width: 30px;
-  height: auto;
-  display: inline;
-  margin-right: 10px;
-  position: relative;
-  top: -5px;
-}
-
 #qrcode {
   width: 160px;
   height: 160px;
