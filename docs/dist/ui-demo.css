@@ -1,0 +1,101 @@
+:root {
+  --theme-color: #F7C242;
+}
+
+.has-mask {
+  background: linear-gradient(to left bottom, rgb(255, 245, 179) 0%, rgb(190, 179, 255) 100%) center center / cover;
+}
+
+section.cover.has-mask .cover-main {
+  display: flex;
+  display: -webkit-flex;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1;
+  width: 800px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+}
+
+.phone {
+  border-radius: 40px;
+  margin: 100px 60px 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  width: 300px;
+  height: 600px;
+  position: relative;
+}
+
+.phone iframe {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.phone.view {
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  box-shadow: 0px 3px 0 #BBB, 0px 4px 0 #BBB, 0px 7px 0 #BBB, 0px 7px 0 #BBB, 0px 6px 16px #666;
+}
+
+.weex-info {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  height: 800px;
+  width: 340px;
+}
+
+.return-button {
+  position: relative;
+  bottom: 60px;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  color: #999;
+  font-size: 12px;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#logo {
+  width: 30px;
+  height: auto;
+  display: inline;
+  margin-right: 10px;
+  position: relative;
+  top: -5px;
+}
+
+#qrcode {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  bottom: 160px;
+}
+
+.weex-info .weex-title {
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #34495e;
+}
+
+.weex-info .comp-desc {
+  line-height: 1.8rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.try-text {
+  color: #F7C242;
+  position: absolute;
+  bottom: 10px;
+  right: 60px;
+}
