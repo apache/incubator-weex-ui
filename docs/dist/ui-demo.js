@@ -6,4 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     width: 200,
     height: 200
   });
+  $('#J_return').on('click', e => {
+    $('#J_frame').attr('src', HOME_URL);
+  });
 });
