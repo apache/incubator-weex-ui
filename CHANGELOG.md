@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.3.3
+- [+]  [wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md) supports `bedge`、`dot`
+- [+] Add component [demo page](https://alibaba.github.io/weex-ui/docc/demo.html) of the website.
+
 ## 0.3.2
 - [!] Organize all component documents
 - [!] Some of the optimizations on the [website](https://alibaba.github.io/weex-ui/)
