@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.3.4
+- [+] [wxc-radio](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-radio/README.md#api)、[wxc-checkbox](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-checkbox/README.md#checkboxlist) add a `config` param for changing the style and icon.
+- [!] [wxc-result](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-result/README.md) using general theme instead of `fliggy theme`.
+- [!] [wxc-button] using `red/yellow` instead of `taobao/fliggy`.
+- [+] Add a [`chat`](https://alibaba.github.io/weex-ui/) of the website.
+
 ## 0.3.3
 - [+]  [wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md) supports `bedge`、`dot`
 - [+] Add component [demo page](https://alibaba.github.io/weex-ui/docc/demo.html) of the website.

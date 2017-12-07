@@ -30,7 +30,7 @@
 
 <script>
   import WxcCell from '../wxc-cell';
-  import { CHECKED, UNCHECKED } from './type.js'
+  import { CHECKED, DISABLED } from './type.js'
 
   export default {
     components: { WxcCell },
@@ -54,23 +54,32 @@
       checked: {
         type: Boolean,
         default: false
+      },
+      config: {
+        type: Object,
+        default: () => ({})
       }
     },
     data: () => ({
-      icon: [CHECKED, UNCHECKED]
+      icon: [CHECKED, DISABLED]
     }),
     computed: {
       radioIcon () {
-        const { icon, disabled, checked } = this;
-        return checked ? icon[disabled ? 1 : 0] : '';
+        const { icon, disabled, checked, config } = this;
+        const mergeIcon = icon;
+        config.checkedIcon && (mergeIcon[0] = config.checkedIcon);
+        config.disabledIcon && (mergeIcon[1] = config.disabledIcon);
+        return checked ? mergeIcon[disabled ? 1 : 0] : '';
       },
       backgroundColor () {
         const { disabled } = this;
         return disabled ? '#F2F3F4' : '#FFFFFF';
       },
       color () {
-        const { disabled, checked } = this;
-        return checked && !disabled ? '#EE9900' : '#3D3D3D';
+        const { disabled, checked, config } = this;
+        let checkedColor = '#EE9900';
+        config.checkedColor && (checkedColor = config.checkedColor);
+        return checked && !disabled ? checkedColor : '#3D3D3D';
       }
     },
     methods: {

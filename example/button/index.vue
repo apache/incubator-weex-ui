@@ -7,13 +7,6 @@
       <title title="wxc-button"></title>
       <category title="五种基本样式"></category>
       <div class="button-list">
-        <text class="button-text">taobao</text>
-        <wxc-button text="确定"
-                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">fliggy</text>
-        <wxc-button text="确定"
-                    type="fliggy"
-                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
         <text class="button-text">normal</text>
         <wxc-button text="确定"
                     type="normal"
@@ -21,6 +14,14 @@
         <text class="button-text">highlight</text>
         <wxc-button text="确定"
                     type="highlight"
+                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+        <text class="button-text">red</text>
+        <wxc-button text="确定"
+                    type="red"
+                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+        <text class="button-text">yellow</text>
+        <wxc-button text="确定"
+                    type="yellow"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
         <text class="button-text">disabled</text>
         <wxc-button text="确定"
@@ -135,7 +136,7 @@
   export default {
     components: { Title, Category, WxcButton, WxcCell },
     data: () => ({
-      type: 'taobao',
+      type: 'red',
       text: '按钮文字',
       width: '702px',
       height: '88px',

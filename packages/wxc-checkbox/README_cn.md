@@ -68,6 +68,7 @@
 | Value | `[String、Number、Object]` | `Y` | `-` | checkbox的value |
 | checked | `Boolean` | `N` | `false` | checkbox是否选中 |
 | disabled | `Boolean` | `N` | `false` | checkbox是否不可选 |
+| config | `Object` | `N` | `{}` | 覆盖颜色和 icon|
 
 - 事件回调
 ```
@@ -78,9 +79,10 @@
 #### CheckboxList
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| list | `Array` | `Y` | `[]` | checkbox列表配置 |
+| list | `Array` | `Y` | `[]` | checkbox列表配置 (*1) |
+| config | `Object` | `N` | `{}` | 覆盖颜色和 icon (*2)|
 
-- 详细:
+- 注1: `list`
 ```
 const list=[
         { title: '选项1', value: 1 },
@@ -88,6 +90,23 @@ const list=[
         { title: '选项3', value: 3 },
         { title: '选项4', value: 4 }
       ];
+```
+
+- 注2: `config`
+
+```
+// 你可以这样覆盖样式和 icon:
+<wxc-checkbox-list :list="list"
+                   :config="config"
+                   @wxcCheckBoxListChecked="wxcCheckBoxListChecked"></wxc-checkbox-list>
+
+const config={
+    checkedIcon:'https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png',
+    disabledIcon:'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png',
+    checkedDisabledIcon:'https://gw.alicdn.com/tfs/TB1aPabpwMPMeJjy1XcXXXpppXa-72-72.png',
+    unCheckedDisabledIcon:'https://gw.alicdn.com/tfs/TB1lTuzpwoQMeJjy0FoXXcShVXa-72-72.png',
+    checkedColor: '#000000'
+}
 ```
 
 - 事件回调

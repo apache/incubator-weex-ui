@@ -7,8 +7,8 @@
   - You can configure this [type.js#L5](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L5) for custom errors
 
 
-## [Demo](https://h5.m.taobao.com/trip/wxc-result/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-result%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/ZdBCotUDWDbtYVYUTqDf.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1ck8JSpXXXXXpaFXXXXXXXXXX-200-200.png" width="160"/>
+## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/result/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Fresult%2Findex.weex.js)
+<img src="https://gw.alicdn.com/tfs/TB1wqdhhdzJ8KJjSspkXXbF7VXa-562-1000.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://gw.alicdn.com/tfs/TB1lFBlhdfJ8KJjy0FeXXXKEXXa-200-200.png" width="160"/>
 
 ## Code Example
 

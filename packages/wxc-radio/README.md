@@ -54,7 +54,8 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| list | `Array` | `Y` | `[]` | Radio config list |
+| list | `Array` | `Y` | `[]` | Radio config list(*1) |
+| config | `Object` | `N` | `{}` |overwrite color and icon(*2) |
 
 #### child item configs
 | Prop | Type | Required | Default | Description |
@@ -63,8 +64,9 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | Value | `[String、Number、Object]` | `Y` | `-` | radio value |
 | checked | `Boolean` | `N` | `false` | whether is been checked |
 | disabled | `Boolean` | `N` | `false` | whether is been disabled |
+| config | `Object` | `N` | `{}` | overwrite color and icon|
 
-
+*1: `list`
 ```
 const list=[
         { title: 'option1', value: 1 },
@@ -73,6 +75,19 @@ const list=[
         { title: 'option3', value: 3 },
         { title: 'option4', value: 4 }
       ];
+```
+
+*2: `config`
+
+```
+// you can overwrite it like this:
+<wxc-radio :list="list" :config="config"></wxc-radio>
+
+const config={
+    checkedIcon:'https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png',
+    disabledIcon:'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png',
+    checkedColor: '#000000'
+}
 ```
 
 ### Event
