@@ -83,6 +83,11 @@
         return innerChecked && !disabled ? checkedColor : '#3D3D3D';
       }
     },
+    watch: {
+      checked (newChecked) {
+        this.innerChecked = newChecked;
+      }
+    },
     created () {
       const { checked } = this;
       this.innerChecked = checked;
