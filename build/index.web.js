@@ -2124,6 +2124,12 @@ exports.default = {
       default: function _default() {
         return [];
       }
+    },
+    config: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
     }
   },
   data: function data() {
@@ -2167,9 +2173,6 @@ exports.default = {
 //
 //
 //
-//
-//
-//
 
 /***/ }),
 /* 46 */
@@ -2190,7 +2193,7 @@ var _type = __webpack_require__(88);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } //
 //
 //
 //
@@ -2241,6 +2244,12 @@ exports.default = {
     checked: {
       type: Boolean,
       default: false
+    },
+    config: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
     }
   },
   data: function data() {
@@ -2254,21 +2263,33 @@ exports.default = {
     checkIcon: function checkIcon() {
       var icon = this.icon,
           disabled = this.disabled,
-          innerChecked = this.innerChecked;
+          innerChecked = this.innerChecked,
+          config = this.config;
 
+      var mergeIcon = [].concat(_toConsumableArray(icon));
+      config.checkedIcon && (mergeIcon[0] = config.checkedIcon);
+      config.unCheckedIcon && (mergeIcon[1] = config.unCheckedIcon);
+      config.checkedDisabledIcon && (mergeIcon[2] = config.checkedDisabledIcon);
+      config.unCheckedDisabledIcon && (mergeIcon[3] = config.unCheckedDisabledIcon);
       if (disabled) {
-        return icon[innerChecked ? 2 : 3];
+        return mergeIcon[innerChecked ? 2 : 3];
       } else {
-        return icon[innerChecked ? 0 : 1];
+        return mergeIcon[innerChecked ? 0 : 1];
       }
+    },
+    textColor: function textColor() {
+      var innerChecked = this.innerChecked,
+          disabled = this.disabled,
+          config = this.config;
+
+      var checkedColor = config.checkedColor ? config.checkedColor : '#EE9900';
+      return innerChecked && !disabled ? checkedColor : '#3D3D3D';
     }
   },
   created: function created() {
-    var checked = this.checked,
-        disabled = this.disabled;
+    var checked = this.checked;
 
     this.innerChecked = checked;
-    this.color = checked && !disabled ? '#EE9900' : '#3D3D3D';
   },
 
   methods: {
@@ -2279,7 +2300,6 @@ exports.default = {
 
       if (!disabled) {
         this.innerChecked = !innerChecked;
-        this.color = this.innerChecked ? '#EE9900' : '#3D3D3D';
         this.$emit('wxcCheckBoxItemChecked', { value: value, checked: this.innerChecked });
       }
     }
@@ -5770,20 +5790,30 @@ exports.default = {
     checked: {
       type: Boolean,
       default: false
+    },
+    config: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
     }
   },
   data: function data() {
     return {
-      icon: [_type.CHECKED, _type.UNCHECKED]
+      icon: [_type.CHECKED, _type.DISABLED]
     };
   },
   computed: {
     radioIcon: function radioIcon() {
       var icon = this.icon,
           disabled = this.disabled,
-          checked = this.checked;
+          checked = this.checked,
+          config = this.config;
 
-      return checked ? icon[disabled ? 1 : 0] : '';
+      var mergeIcon = icon;
+      config.checkedIcon && (mergeIcon[0] = config.checkedIcon);
+      config.disabledIcon && (mergeIcon[1] = config.disabledIcon);
+      return checked ? mergeIcon[disabled ? 1 : 0] : '';
     },
     backgroundColor: function backgroundColor() {
       var disabled = this.disabled;
@@ -5792,9 +5822,12 @@ exports.default = {
     },
     color: function color() {
       var disabled = this.disabled,
-          checked = this.checked;
+          checked = this.checked,
+          config = this.config;
 
-      return checked && !disabled ? '#EE9900' : '#3D3D3D';
+      var checkedColor = '#EE9900';
+      config.checkedColor && (checkedColor = config.checkedColor);
+      return checked && !disabled ? checkedColor : '#3D3D3D';
     }
   },
   methods: {
@@ -9489,10 +9522,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var STYLE_MAP = exports.STYLE_MAP = {
-  taobao: {
+  red: {
     backgroundColor: '#FF5000'
   },
-  fliggy: {
+  yellow: {
     backgroundColor: '#FFC900'
   },
   normal: {
@@ -10225,7 +10258,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var CHECKED = exports.CHECKED = 'https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png';
-var UNCHECKED = exports.UNCHECKED = 'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png';
+var DISABLED = exports.DISABLED = 'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png';
 
 /***/ }),
 /* 97 */
@@ -10244,25 +10277,25 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = {
   errorPage: {
-    pic: 'https://gtms01.alicdn.com/tfs/TB1HH4TSpXXXXauXVXXXXXXXXXX-320-320.png',
-    content: '抱歉出错了，飞猪正在全力解决中',
+    pic: 'https://img.alicdn.com/tfs/TB17blphfDH8KJjy1XcXXcpdXXa-320-320.png',
+    content: '抱歉出错了，我们正在全力解决中',
     button: '再试一次',
     title: '出错啦'
   },
   noGoods: {
-    pic: 'https://gw.alicdn.com/tfs/TB1QXlEQXXXXXcNXFXXXXXXXXXX-320-320.png',
+    pic: 'https://img.alicdn.com/tfs/TB1mPWEeOqAXuNjy1XdXXaYcVXa-320-320.png',
     content: '主人，这里什么都没有找到',
     button: '再试一次',
     title: '暂无商品'
   },
   noNetwork: {
-    pic: 'https://gw.alicdn.com/tfs/TB1rs83QXXXXXcBXpXXXXXXXXXX-320-320.png',
+    pic: 'https://img.alicdn.com/tfs/TB1jkA5g9_I8KJjy0FoXXaFnVXa-320-320.png',
     content: '哎呀，没有网络了......',
     button: '刷新一下',
     title: '无网络'
   },
   errorLocation: {
-    pic: 'https://gw.alicdn.com/tfs/TB1rs83QXXXXXcBXpXXXXXXXXXX-320-320.png',
+    pic: 'https://img.alicdn.com/tfs/TB1zXXahhrI8KJjy0FpXXb5hVXa-320-320.png',
     content: '哎呀，定位失败了......',
     button: '刷新一下',
     title: '定位失败'
@@ -10415,20 +10448,7 @@ exports.push([module.i, "\n.wxc-cell[data-v-289df085] {\n  height: 100px;\n  pos
 
 
 /***/ }),
-/* 108 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(true);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":[],"mappings":"","file":"index.vue","sourceRoot":""}]);
-
-// exports
-
-
-/***/ }),
+/* 108 */,
 /* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10605,7 +10625,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.radio[data-v-6f935647] {\n  width: 48px;\n  height: 48px;\n}\n.title-text[data-v-6f935647] {\n  font-size: 30px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-radio/item.vue?4aaf652c"],"names":[],"mappings":";AAoBA;EACA,YAAA;EACA,aAAA;CACA;AAEA;EACA,gBAAA;CACA","file":"item.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <wxc-cell :has-top-border=\"hasTopBorder\"\n            :cell-style=\"{backgroundColor:backgroundColor}\"\n            @wxcCellClicked=\"wxcCellClicked\"\n            :accessible=\"true\"\n            :aria-label=\"`${title},状态为${checked?'已选中':'未选中'},${disabled?'不可更改':''}`\">\n    <text :style=\"{color:color}\"\n          class=\"title-text\"\n          slot=\"title\">{{title}}</text>\n    <image :src=\"radioIcon\"\n           v-if=\"radioIcon\"\n           slot=\"value\"\n           class=\"radio\"></image>\n  </wxc-cell>\n</template>\n\n<style scoped>\n  .radio {\n    width: 48px;\n    height: 48px;\n  }\n\n  .title-text {\n    font-size: 30px;\n  }\n</style>\n\n<script>\n  import WxcCell from '../wxc-cell';\n  import { CHECKED, UNCHECKED } from './type.js'\n\n  export default {\n    components: { WxcCell },\n    props: {\n      hasTopBorder: {\n        type: Boolean,\n        default: false\n      },\n      title: {\n        type: String,\n        require: true\n      },\n      value: {\n        type: [String, Number, Object],\n        require: true\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      checked: {\n        type: Boolean,\n        default: false\n      }\n    },\n    data: () => ({\n      icon: [CHECKED, UNCHECKED]\n    }),\n    computed: {\n      radioIcon () {\n        const { icon, disabled, checked } = this;\n        return checked ? icon[disabled ? 1 : 0] : '';\n      },\n      backgroundColor () {\n        const { disabled } = this;\n        return disabled ? '#F2F3F4' : '#FFFFFF';\n      },\n      color () {\n        const { disabled, checked } = this;\n        return checked && !disabled ? '#EE9900' : '#3D3D3D';\n      }\n    },\n    methods: {\n      wxcCellClicked () {\n        const { disabled, value } = this;\n        if (!disabled) {\n          this.$emit('wxcRadioItemChecked', { value, disabled })\n        }\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.radio[data-v-6f935647] {\n  width: 48px;\n  height: 48px;\n}\n.title-text[data-v-6f935647] {\n  font-size: 30px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-radio/item.vue?6b78199a"],"names":[],"mappings":";AAoBA;EACA,YAAA;EACA,aAAA;CACA;AAEA;EACA,gBAAA;CACA","file":"item.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <wxc-cell :has-top-border=\"hasTopBorder\"\n            :cell-style=\"{backgroundColor:backgroundColor}\"\n            @wxcCellClicked=\"wxcCellClicked\"\n            :accessible=\"true\"\n            :aria-label=\"`${title},状态为${checked?'已选中':'未选中'},${disabled?'不可更改':''}`\">\n    <text :style=\"{color:color}\"\n          class=\"title-text\"\n          slot=\"title\">{{title}}</text>\n    <image :src=\"radioIcon\"\n           v-if=\"radioIcon\"\n           slot=\"value\"\n           class=\"radio\"></image>\n  </wxc-cell>\n</template>\n\n<style scoped>\n  .radio {\n    width: 48px;\n    height: 48px;\n  }\n\n  .title-text {\n    font-size: 30px;\n  }\n</style>\n\n<script>\n  import WxcCell from '../wxc-cell';\n  import { CHECKED, DISABLED } from './type.js'\n\n  export default {\n    components: { WxcCell },\n    props: {\n      hasTopBorder: {\n        type: Boolean,\n        default: false\n      },\n      title: {\n        type: String,\n        require: true\n      },\n      value: {\n        type: [String, Number, Object],\n        require: true\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      checked: {\n        type: Boolean,\n        default: false\n      },\n      config: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    data: () => ({\n      icon: [CHECKED, DISABLED]\n    }),\n    computed: {\n      radioIcon () {\n        const { icon, disabled, checked, config } = this;\n        const mergeIcon = icon;\n        config.checkedIcon && (mergeIcon[0] = config.checkedIcon);\n        config.disabledIcon && (mergeIcon[1] = config.disabledIcon);\n        return checked ? mergeIcon[disabled ? 1 : 0] : '';\n      },\n      backgroundColor () {\n        const { disabled } = this;\n        return disabled ? '#F2F3F4' : '#FFFFFF';\n      },\n      color () {\n        const { disabled, checked, config } = this;\n        let checkedColor = '#EE9900';\n        config.checkedColor && (checkedColor = config.checkedColor);\n        return checked && !disabled ? checkedColor : '#3D3D3D';\n      }\n    },\n    methods: {\n      wxcCellClicked () {\n        const { disabled, value } = this;\n        if (!disabled) {\n          this.$emit('wxcRadioItemChecked', { value, disabled })\n        }\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10619,7 +10639,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.checkbox[data-v-702739a6] {\n  width: 48px;\n  height: 48px;\n}\n.title-text[data-v-702739a6] {\n  font-size: 30px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-checkbox/index.vue?bc85d6e4"],"names":[],"mappings":";AAkBA;EACA,YAAA;EACA,aAAA;CACA;AAEA;EACA,gBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <wxc-cell :has-top-border=\"hasTopBorder\"\n            @wxcCellClicked=\"wxcCellClicked\"\n            :accessible=\"true\"\n            :aria-label=\"`${title},状态为${checked ? '已选中' : '未选中'},${disabled ? '不可更改' : '点击可切换'}`\">\n    <text :style=\"{color:color}\"\n          class=\"title-text\"\n          slot=\"title\">{{title}}</text>\n    <image :src=\"checkIcon\"\n           slot=\"value\"\n           class=\"checkbox\"></image>\n  </wxc-cell>\n</template>\n\n<style scoped>\n  .checkbox {\n    width: 48px;\n    height: 48px;\n  }\n\n  .title-text {\n    font-size: 30px;\n  }\n</style>\n\n<script>\n  import WxcCell from '../wxc-cell';\n  import { CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED } from './type'\n\n  export default {\n    components: { WxcCell },\n    props: {\n      hasTopBorder: {\n        type: Boolean,\n        default: false\n      },\n      title: {\n        type: String,\n        require: true\n      },\n      value: {\n        type: [String, Number, Object],\n        require: true\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      checked: {\n        type: Boolean,\n        default: false\n      }\n    },\n    data: () => ({\n      icon: [CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED],\n      color: '#3D3D3D',\n      innerChecked: false\n    }),\n    computed: {\n      checkIcon () {\n        const { icon, disabled, innerChecked } = this;\n        if (disabled) {\n          return icon[innerChecked ? 2 : 3];\n        } else {\n          return icon[innerChecked ? 0 : 1];\n        }\n      }\n    },\n    created () {\n      const { checked, disabled } = this;\n      this.innerChecked = checked;\n      this.color = checked && !disabled ? '#EE9900' : '#3D3D3D';\n    },\n    methods: {\n      wxcCellClicked () {\n        const { disabled, innerChecked, value } = this;\n        if (!disabled) {\n          this.innerChecked = !innerChecked;\n          this.color = (this.innerChecked ? '#EE9900' : '#3D3D3D');\n          this.$emit('wxcCheckBoxItemChecked', { value, checked: this.innerChecked })\n        }\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.checkbox[data-v-702739a6] {\n  width: 48px;\n  height: 48px;\n}\n.title-text[data-v-702739a6] {\n  font-size: 30px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-checkbox/index.vue?d66cf696"],"names":[],"mappings":";AAkBA;EACA,YAAA;EACA,aAAA;CACA;AAEA;EACA,gBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <wxc-cell :has-top-border=\"hasTopBorder\"\n            @wxcCellClicked=\"wxcCellClicked\"\n            :accessible=\"true\"\n            :aria-label=\"`${title},状态为${checked ? '已选中' : '未选中'},${disabled ? '不可更改' : '点击可切换'}`\">\n    <text :style=\"{color:textColor}\"\n          class=\"title-text\"\n          slot=\"title\">{{title}}</text>\n    <image :src=\"checkIcon\"\n           slot=\"value\"\n           class=\"checkbox\"></image>\n  </wxc-cell>\n</template>\n\n<style scoped>\n  .checkbox {\n    width: 48px;\n    height: 48px;\n  }\n\n  .title-text {\n    font-size: 30px;\n  }\n</style>\n\n<script>\n  import WxcCell from '../wxc-cell';\n  import { CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED } from './type'\n\n  export default {\n    components: { WxcCell },\n    props: {\n      hasTopBorder: {\n        type: Boolean,\n        default: false\n      },\n      title: {\n        type: String,\n        require: true\n      },\n      value: {\n        type: [String, Number, Object],\n        require: true\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      checked: {\n        type: Boolean,\n        default: false\n      },\n      config: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    data: () => ({\n      icon: [CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED],\n      color: '#3D3D3D',\n      innerChecked: false\n    }),\n    computed: {\n      checkIcon () {\n        const { icon, disabled, innerChecked, config } = this;\n        const mergeIcon = [...icon];\n        config.checkedIcon && (mergeIcon[0] = config.checkedIcon);\n        config.unCheckedIcon && (mergeIcon[1] = config.unCheckedIcon);\n        config.checkedDisabledIcon && (mergeIcon[2] = config.checkedDisabledIcon);\n        config.unCheckedDisabledIcon && (mergeIcon[3] = config.unCheckedDisabledIcon);\n        if (disabled) {\n          return mergeIcon[innerChecked ? 2 : 3];\n        } else {\n          return mergeIcon[innerChecked ? 0 : 1];\n        }\n      },\n      textColor () {\n        const { innerChecked, disabled, config } = this;\n        const checkedColor = config.checkedColor ? config.checkedColor : '#EE9900';\n        return innerChecked && !disabled ? checkedColor : '#3D3D3D';\n      }\n    },\n    created () {\n      const { checked } = this;\n      this.innerChecked = checked;\n    },\n    methods: {\n      wxcCellClicked () {\n        const { disabled, innerChecked, value } = this;\n        if (!disabled) {\n          this.innerChecked = !innerChecked;\n          this.$emit('wxcCheckBoxItemChecked', { value, checked: this.innerChecked })\n        }\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10899,19 +10919,15 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(221)
-}
 var Component = __webpack_require__(0)(
   /* script */
   __webpack_require__(45),
   /* template */
-  __webpack_require__(183),
+  __webpack_require__(464),
   /* styles */
-  injectStyle,
+  null,
   /* scopeId */
-  "data-v-2d0e23fb",
+  null,
   /* moduleIdentifier (server only) */
   null
 )
@@ -12822,30 +12838,7 @@ if (false) {
 }
 
 /***/ }),
-/* 183 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', _vm._l((_vm.list), function(item, i) {
-    return _c('wxc-checkbox', _vm._b({
-      key: i,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined)),
-      on: {
-        "wxcCheckBoxItemChecked": _vm.wxcCheckBoxItemChecked
-      }
-    }, 'wxc-checkbox', item, false))
-  }))
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-2d0e23fb", module.exports)
-  }
-}
-
-/***/ }),
+/* 183 */,
 /* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13690,7 +13683,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "title-text",
     staticStyle: _vm.$processStyle(undefined),
     style: (_vm.$processStyle({
-      color: _vm.color
+      color: _vm.textColor
     })),
     attrs: {
       "slot": "title"
@@ -14767,32 +14760,7 @@ if(false) {
 }
 
 /***/ }),
-/* 221 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(108);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("ae385fb0", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2d0e23fb\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2d0e23fb\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
+/* 221 */,
 /* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15492,6 +15460,248 @@ if(false) {
  }
  // When the module is disposed, remove the <style> tags
  module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */,
+/* 417 */,
+/* 418 */,
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */,
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */,
+/* 431 */,
+/* 432 */,
+/* 433 */,
+/* 434 */,
+/* 435 */,
+/* 436 */,
+/* 437 */,
+/* 438 */,
+/* 439 */,
+/* 440 */,
+/* 441 */,
+/* 442 */,
+/* 443 */,
+/* 444 */,
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */,
+/* 450 */,
+/* 451 */,
+/* 452 */,
+/* 453 */,
+/* 454 */,
+/* 455 */,
+/* 456 */,
+/* 457 */,
+/* 458 */,
+/* 459 */,
+/* 460 */,
+/* 461 */,
+/* 462 */,
+/* 463 */,
+/* 464 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', _vm._l((_vm.list), function(item, i) {
+    return _c('wxc-checkbox', _vm._b({
+      key: i,
+      staticStyle: _vm.$processStyle(undefined),
+      style: (_vm.$processStyle(undefined)),
+      attrs: {
+        "config": _vm.config
+      },
+      on: {
+        "wxcCheckBoxItemChecked": _vm.wxcCheckBoxItemChecked
+      }
+    }, 'wxc-checkbox', item, false))
+  }))
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-2d0e23fb", module.exports)
+  }
 }
 
 /***/ })

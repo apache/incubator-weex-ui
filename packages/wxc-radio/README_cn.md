@@ -54,17 +54,19 @@
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| list | `Array` | `Y` | `[]` | Radio列表配置 |
+| list | `Array` | `Y` | `[]` | Radio 列表配置(注1) |
+| config | `Object` | `N` | `{}` |覆盖颜色和 icon(注2)|
 
 #### 子item详细说明
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| title | `String` | `Y` | `-` | Radio显示label |
-| Value | `[String、Number、Object]` | `Y` | `-` | Radio的value |
-| checked | `Boolean` | `N` | `false` | Radio是否选中 |
-| disabled | `Boolean` | `N` | `false` | Radio是否不可选 |
+| title | `String` | `Y` | `-` | Radio 显示 label |
+| Value | `[String、Number、Object]` | `Y` | `-` | Radio 的 value |
+| checked | `Boolean` | `N` | `false` | Radio 是否选中 |
+| disabled | `Boolean` | `N` | `false` | Radio 是否不可选 |
+| config | `Object` | `N` | `{}` |覆盖颜色和 icon|
 
-
+注1: `list`
 ```
 const list=[
         { title: '选项1', value: 1 },
@@ -73,6 +75,20 @@ const list=[
         { title: '选项3', value: 3 },
         { title: '选项4', value: 4 }
       ];
+```
+
+注2: `config`
+```
+
+// 你可以这样来覆盖原有的样式和icon设置
+<wxc-radio :list="list" :config="config"></wxc-radio>
+
+const config={
+    checkedIcon:'https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png',
+    disabledIcon:'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png',
+    checkedColor: '#000000'
+}
+
 ```
 
 ### 事件回调

@@ -2,9 +2,9 @@
 
 > Weex 按钮组件，支持 4 种基本类型 button，可自定义样式
 
-## [Demo](https://h5.m.taobao.com/trip/wxc-button/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-button%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/button/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Fbutton%2Findex.weex.js)
 
-<img src="https://gw.alipayobjects.com/zos/rmsportal/RFOOWyVEvoilJgKYQBcB.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1e69sSpXXXXclXXXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://img.alicdn.com/tfs/TB1aMRGhgvD8KJjy0FlXXagBFXa-562-1000.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1b0tMhf6H8KJjy0FjXXaXepXa-200-200.png" width="160"/>
 
 ## 使用方法
 
@@ -34,7 +34,7 @@
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`text`** | `string` | `Y` | `-` | 展现的文字 |
-| **`type`** | `enum` | `N` | `taobao` | 类型：`taobao`/`fliggy`/`normal` /`highlight` |
+| **`type`** | `enum` | `N` | `taobao` | 类型：`normal`/ `highlight`/`red`/`yellow` |
 | **`disabled`** | `bool` | `N` | `false` | 是否 disabled（注1） |
 | **`btnStyle`** | `object` | `N` | `{}` | 按钮的样式对象（注2） |
 | **`textStyle`** | `object` | `N` | `{}` | 文字的样式对象（注3） |

@@ -1,8 +1,8 @@
 export const STYLE_MAP = {
-  taobao: {
+  red: {
     backgroundColor: '#FF5000'
   },
-  fliggy: {
+  yellow: {
     backgroundColor: '#FFC900'
   },
   normal: {

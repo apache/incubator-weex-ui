@@ -1995,10 +1995,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var STYLE_MAP = exports.STYLE_MAP = {
-  taobao: {
+  red: {
     backgroundColor: '#FF5000'
   },
-  fliggy: {
+  yellow: {
     backgroundColor: '#FFC900'
   },
   normal: {
@@ -2731,7 +2731,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var CHECKED = exports.CHECKED = 'https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png';
-var UNCHECKED = exports.UNCHECKED = 'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png';
+var DISABLED = exports.DISABLED = 'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png';
 
 /***/ }),
 /* 53 */
@@ -2750,25 +2750,25 @@ Object.defineProperty(exports, "__esModule", {
 
 exports.default = {
   errorPage: {
-    pic: 'https://gtms01.alicdn.com/tfs/TB1HH4TSpXXXXauXVXXXXXXXXXX-320-320.png',
-    content: '抱歉出错了，飞猪正在全力解决中',
+    pic: 'https://img.alicdn.com/tfs/TB17blphfDH8KJjy1XcXXcpdXXa-320-320.png',
+    content: '抱歉出错了，我们正在全力解决中',
     button: '再试一次',
     title: '出错啦'
   },
   noGoods: {
-    pic: 'https://gw.alicdn.com/tfs/TB1QXlEQXXXXXcNXFXXXXXXXXXX-320-320.png',
+    pic: 'https://img.alicdn.com/tfs/TB1mPWEeOqAXuNjy1XdXXaYcVXa-320-320.png',
     content: '主人，这里什么都没有找到',
     button: '再试一次',
     title: '暂无商品'
   },
   noNetwork: {
-    pic: 'https://gw.alicdn.com/tfs/TB1rs83QXXXXXcBXpXXXXXXXXXX-320-320.png',
+    pic: 'https://img.alicdn.com/tfs/TB1jkA5g9_I8KJjy0FoXXaFnVXa-320-320.png',
     content: '哎呀，没有网络了......',
     button: '刷新一下',
     title: '无网络'
   },
   errorLocation: {
-    pic: 'https://gw.alicdn.com/tfs/TB1rs83QXXXXXcBXpXXXXXXXXXX-320-320.png',
+    pic: 'https://img.alicdn.com/tfs/TB1zXXahhrI8KJjy0FpXXb5hVXa-320-320.png',
     content: '哎呀，定位失败了......',
     button: '刷新一下',
     title: '定位失败'
@@ -2889,10 +2889,6 @@ module.exports = __vue_exports__
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
-/* styles */
-__vue_styles__.push(__webpack_require__(155)
-)
-
 /* script */
 __vue_exports__ = __webpack_require__(93)
 
@@ -2912,7 +2908,6 @@ if (typeof __vue_options__ === "function") {
 __vue_options__.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-checkbox-list/index.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-d3b0c8b2"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -4638,6 +4633,12 @@ exports.default = {
       default: function _default() {
         return [];
       }
+    },
+    config: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
     }
   },
   data: function data() {
@@ -4681,9 +4682,6 @@ exports.default = {
 //
 //
 //
-//
-//
-//
 
 /***/ }),
 /* 94 */
@@ -4704,7 +4702,7 @@ var _type = __webpack_require__(44);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } } //
 //
 //
 //
@@ -4755,6 +4753,12 @@ exports.default = {
     checked: {
       type: Boolean,
       default: false
+    },
+    config: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
     }
   },
   data: function data() {
@@ -4768,21 +4772,33 @@ exports.default = {
     checkIcon: function checkIcon() {
       var icon = this.icon,
           disabled = this.disabled,
-          innerChecked = this.innerChecked;
+          innerChecked = this.innerChecked,
+          config = this.config;
 
+      var mergeIcon = [].concat(_toConsumableArray(icon));
+      config.checkedIcon && (mergeIcon[0] = config.checkedIcon);
+      config.unCheckedIcon && (mergeIcon[1] = config.unCheckedIcon);
+      config.checkedDisabledIcon && (mergeIcon[2] = config.checkedDisabledIcon);
+      config.unCheckedDisabledIcon && (mergeIcon[3] = config.unCheckedDisabledIcon);
       if (disabled) {
-        return icon[innerChecked ? 2 : 3];
+        return mergeIcon[innerChecked ? 2 : 3];
       } else {
-        return icon[innerChecked ? 0 : 1];
+        return mergeIcon[innerChecked ? 0 : 1];
       }
+    },
+    textColor: function textColor() {
+      var innerChecked = this.innerChecked,
+          disabled = this.disabled,
+          config = this.config;
+
+      var checkedColor = config.checkedColor ? config.checkedColor : '#EE9900';
+      return innerChecked && !disabled ? checkedColor : '#3D3D3D';
     }
   },
   created: function created() {
-    var checked = this.checked,
-        disabled = this.disabled;
+    var checked = this.checked;
 
     this.innerChecked = checked;
-    this.color = checked && !disabled ? '#EE9900' : '#3D3D3D';
   },
 
   methods: {
@@ -4793,7 +4809,6 @@ exports.default = {
 
       if (!disabled) {
         this.innerChecked = !innerChecked;
-        this.color = this.innerChecked ? '#EE9900' : '#3D3D3D';
         this.$emit('wxcCheckBoxItemChecked', { value: value, checked: this.innerChecked });
       }
     }
@@ -8284,20 +8299,30 @@ exports.default = {
     checked: {
       type: Boolean,
       default: false
+    },
+    config: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
     }
   },
   data: function data() {
     return {
-      icon: [_type.CHECKED, _type.UNCHECKED]
+      icon: [_type.CHECKED, _type.DISABLED]
     };
   },
   computed: {
     radioIcon: function radioIcon() {
       var icon = this.icon,
           disabled = this.disabled,
-          checked = this.checked;
+          checked = this.checked,
+          config = this.config;
 
-      return checked ? icon[disabled ? 1 : 0] : '';
+      var mergeIcon = icon;
+      config.checkedIcon && (mergeIcon[0] = config.checkedIcon);
+      config.disabledIcon && (mergeIcon[1] = config.disabledIcon);
+      return checked ? mergeIcon[disabled ? 1 : 0] : '';
     },
     backgroundColor: function backgroundColor() {
       var disabled = this.disabled;
@@ -8306,9 +8331,12 @@ exports.default = {
     },
     color: function color() {
       var disabled = this.disabled,
-          checked = this.checked;
+          checked = this.checked,
+          config = this.config;
 
-      return checked && !disabled ? '#EE9900' : '#3D3D3D';
+      var checkedColor = '#EE9900';
+      config.checkedColor && (checkedColor = config.checkedColor);
+      return checked && !disabled ? checkedColor : '#3D3D3D';
     }
   },
   methods: {
@@ -12366,12 +12394,7 @@ module.exports = {
 }
 
 /***/ }),
-/* 155 */
-/***/ (function(module, exports) {
-
-module.exports = {}
-
-/***/ }),
+/* 155 */,
 /* 156 */
 /***/ (function(module, exports) {
 
@@ -13002,7 +13025,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('text', {
     staticClass: ["title-text"],
     style: {
-      color: _vm.color
+      color: _vm.textColor
     },
     attrs: {
       "slot": "title"
@@ -13893,6 +13916,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', _vm._l((_vm.list), function(item, i) {
     return _c('wxc-checkbox', _vm._b({
       key: i,
+      attrs: {
+        "config": _vm.config
+      },
       on: {
         "wxcCheckBoxItemChecked": _vm.wxcCheckBoxItemChecked
       }

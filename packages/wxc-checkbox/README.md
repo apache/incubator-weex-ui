@@ -68,6 +68,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | Value | `[String、Number、Object]` | `Y` | `-` | original value |
 | checked | `Boolean` | `N` | `false` | whether is checked |
 | disabled | `Boolean` | `N` | `false` | whether is been disabled |
+| config | `Object` | `N` | `{}` | overwrite color and icon|
 
 - Event
 ```
@@ -78,9 +79,11 @@ will return e.value、e.checked
 #### CheckboxList
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| list | `Array` | `Y` | `[]` | config list |
+| list | `Array` | `Y` | `[]` | config list(*1) |
+| config | `Object` | `N` | `{}` | overwrite color and icon(*1)|
 
-- Detail config list
+
+- *1: `list`
 ```
 const list=[
         { title: 'option1', value: 1 },
@@ -89,6 +92,24 @@ const list=[
         { title: 'option4', value: 4 }
       ];
 ```
+
+- *2: `config`
+
+```
+// you can overwrite it like this:
+<wxc-checkbox-list :list="list"
+                   :config="config"
+                   @wxcCheckBoxListChecked="wxcCheckBoxListChecked"></wxc-checkbox-list>
+
+const config={
+    checkedIcon:'https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png',
+    disabledIcon:'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png',
+    checkedDisabledIcon:'https://gw.alicdn.com/tfs/TB1aPabpwMPMeJjy1XcXXXpppXa-72-72.png',
+    unCheckedDisabledIcon:'https://gw.alicdn.com/tfs/TB1lTuzpwoQMeJjy0FoXXcShVXa-72-72.png',
+    checkedColor: '#000000'
+}
+```
+
 
 - Event
 ```
