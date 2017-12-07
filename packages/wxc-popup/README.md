@@ -7,7 +7,7 @@
 - To surface from the top or bottom, click on the mask to close.
 
 ## [Demo](https://h5.m.taobao.com/trip/wxc-popup/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-popup%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/MmgsYeDkFOioIpiQSfGF.gif" width="240"/>&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1_9v9SpXXXXcuXXXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://img.alicdn.com/tfs/TB1WkKEhcLJ8KJjy0FnXXcFDpXa-562-1000.gif" width="240"/>&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1_9v9SpXXXXcuXXXXXXXXXXXX-200-200.png" width="160"/>
 
 ## Code Example
 
@@ -24,7 +24,7 @@
                height="400">
       <div class="demo-content">
         <image src="https://img.alicdn.com/tfs/TB1ojYvOXXXXXaOXFXXXXXXXXXX-180-41.png" class="demo-image"></image>
-        <text>this is content,this is content,this is content,this is content,this is content,this is content,this is content,this is content,this is content,this is content,this is content.</text>
+        <text>Different from a "web app", "HTML5 app", or "hybrid app", you can use Weex to build a real mobile app. The code that you write is relatively simple, because you can build native applications just using HTML, CSS, Javascript.</text>
       </div>
     </wxc-popup>
   </div>
