@@ -61,7 +61,7 @@ npm i weex-ui -S
 </script>
 ```
 
-### Used together (recommend)
+### Used together (Recommend)
 
 ```javascript
 import { WxcComponent1, WxcComponent2 } from "weex-ui"
