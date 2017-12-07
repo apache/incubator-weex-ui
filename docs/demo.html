@@ -8,8 +8,10 @@
   <link rel="icon" href="https://img.alicdn.com/tfs/TB1kCs_er_I8KJjy1XaXXbsxpXa-419-495.png" type="image/png">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//h5.m.taobao.com/css/trip/weex-ui/vue.css">
-  <link rel="stylesheet" href="./dist/ui-demo.css">
+  <style type="text/css">
+    :root {--theme-color: #F7C242;}
+  </style>
+  <link rel="stylesheet" href="//h5.m.taobao.com/css/trip/weex-ui/index.min.css">
   <script>
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       location.href = 'https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js'
@@ -17,7 +19,7 @@
   </script>
 </head>
 
-<body class="ready">
+<body class="ready weex-ui-demo">
 <nav class="app-nav">
   <ul>
     <li><a href="//alibaba.github.io/weex-ui/#/">En</a></li>
@@ -29,7 +31,7 @@
     </li>
   </ul>
 </nav>
-<a href="https://github.com/alibaba/weex-ui" class="github-corner" aria-label="View source on Github">
+<a href="https://github.com/alibaba/weex-ui" class="github-corner" aria-label="View source on Github" target="_blank">
   <svg viewBox="0 0 250 250" aria-hidden="true">
     <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
     <path
@@ -46,20 +48,16 @@
     <div class="container phone-container phone view" id="phone">
       <iframe id="J_frame"
               src="//h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js"></iframe>
-      <div class="return-button" id="J_return"></div>
+      <div class="return-button"  onclick="document.getElementById('J_frame').setAttribute('src', '//h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js');"></div>
     </div>
     <div class="weex-info">
       <p  class="weex-title">Weex Ui</p>
       <p class="comp-desc">A rich interaction, lightweight, high performance UI library.</p>
-      <div id="J_qrcode"></div>
+      <img src="https://img.alicdn.com/tfs/TB1ftMKg8TH8KJjy0FiXXcRsXXa-200-200.png" width="200px">
       <p class="try-text">Try it with Fliggy、Taobao、Tmall、Weex Playground or any browsers now!</p>
     </div>
   </div>
   <div class="mask"></div>
 </section>
-
 </body>
-<script src="//h5.m.taobao.com/js/trip/weex-ui/js/jquery.min.js"></script>
-<script src="//h5.m.taobao.com/js/trip/weex-ui/js/jquery.qrcode.min.js"></script>
-<script src="./dist/ui-demo.js"></script>
 </html>
