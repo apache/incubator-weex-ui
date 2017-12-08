@@ -1,4 +1,4 @@
-## 在 weex-toolkit 创建的项目中使用 Weex Ui
+## 在 weex-toolkit 创建的项目中使用
 
 ### 安装前
 
@@ -62,7 +62,7 @@ npm --version
 }
 ```
 
-### 开始使用 Weex Ui
+### 玩一玩 Weex Ui
 修改 `src/index.vue` 进行测试
 
 ```vue
