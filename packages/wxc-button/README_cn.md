@@ -34,7 +34,7 @@
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`text`** | `string` | `Y` | `-` | 展现的文字 |
-| **`type`** | `enum` | `N` | `taobao` | 类型：`normal`/ `highlight`/`red`/`yellow` |
+| **`type`** | `enum` | `N` | `red` | 类型：`normal`/ `highlight`/`red`/`yellow` |
 | **`disabled`** | `bool` | `N` | `false` | 是否 disabled（注1） |
 | **`btnStyle`** | `object` | `N` | `{}` | 按钮的样式对象（注2） |
 | **`textStyle`** | `object` | `N` | `{}` | 文字的样式对象（注3） |

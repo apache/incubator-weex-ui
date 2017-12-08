@@ -42,3 +42,4 @@
    - [utils 功能函数](cn/packages/utils/) 
    
 - [CHANGELOG](CHANGELOG)
+- [在 weex-toolkit 项目中使用](docs/with-weex-toolkit_cn)

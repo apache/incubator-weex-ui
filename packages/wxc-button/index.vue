@@ -22,7 +22,7 @@
       },
       type: {
         type: String,
-        default: 'taobao'
+        default: 'red'
       },
       disabled: {
         type: Boolean,
