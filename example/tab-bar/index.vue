@@ -5,7 +5,6 @@
   <wxc-tab-bar :tab-titles="tabTitles"
                :tab-styles="tabStyles"
                title-type="icon"
-               :tab-page-height="tabPageHeight"
                @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
     <div class="item-container" :style="contentStyle"><text>首页</text></div>
     <div class="item-container" :style="contentStyle"><text>特别推荐</text></div>
@@ -35,8 +34,8 @@
     }),
     created () {
       setTitle('TabBar');
-      this.tabPageHeight = Utils.env.getPageHeight();
-      const { tabPageHeight, tabStyles } = this;
+      const tabPageHeight = Utils.env.getPageHeight();
+      const { tabStyles } = this;
       this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
     },
     methods: {

@@ -55,8 +55,8 @@
       tabStyles: Config.tabStyles
     }),
     created () {
-      this.tabPageHeight = Utils.env.getPageHeight();
-      const { tabPageHeight, tabStyles } = this;
+      const tabPageHeight = Utils.env.getPageHeight();
+      const { tabStyles } = this;
       this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
     },
     methods: {

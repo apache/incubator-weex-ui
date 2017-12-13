@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.3.7
+- [!] Fixed the height calculation error about[wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md).
+- [+] Util function Enhancement.
+- [!] Modify the configuration of webpack.
+
 ## 0.3.4
 - [+] [wxc-radio](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-radio/README.md#api)、[wxc-checkbox](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-checkbox/README.md#checkboxlist) add a `config` param for changing the style and icon.
 - [!] [wxc-result](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-result/README.md) using general theme instead of `fliggy theme`.
