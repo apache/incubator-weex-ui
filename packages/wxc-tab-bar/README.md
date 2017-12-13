@@ -18,7 +18,6 @@
   <wxc-tab-bar :tab-titles="tabTitles"
                :tab-styles="tabStyles"
                title-type="icon"
-               :tab-page-height="tabPageHeight"
                @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
     <!--The first page content-->
     <div class="item-container" :style="contentStyle"><text>Home</text></div>
@@ -55,8 +54,8 @@
       tabStyles: Config.tabStyles
     }),
     created () {
-      this.tabPageHeight = Utils.env.getPageHeight();
-      const { tabPageHeight, tabStyles } = this;
+      const tabPageHeight = Utils.env.getPageHeight();
+      const { tabStyles } = this;
       this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
     },
     methods: {
@@ -79,7 +78,6 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | tab-titles | `Array` |`Y`| `[]` | Tab list [config](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L7)|
 | title-type | `String` |`N`| `icon` | type `icon`/`text`|
 | tab-styles | `Array` |`N`| `[]` |  bottom Tab [config](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
-| tab-page-height | `Number` |`N`| `1334` |Tab page height |
 | is-tab-view | `Boolean` |`N`| `true` |if set `false`,add tab-titles config with `url` can be jumped out |
 | duration | `Number` |`N`| `300` | page slider time of animation |
 | timing-function | `String` |`N`| `-` | page slider function of animation |

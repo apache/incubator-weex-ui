@@ -19,7 +19,7 @@ const Region = {
       // 两区域相交
       curRegion.right = curRegion.left + curRegion.width;
       curRegion.bottom = curRegion.top + curRegion.height;
-      if (!(region.left > curRegion.right || region.right < curRegion.left || region.bottom < curRegion.top || region.top > curRegion.bottom )) {
+      if (!(region.left > curRegion.right || region.right < curRegion.left || region.bottom < curRegion.top || region.top > curRegion.bottom)) {
         return true;
       }
     }
@@ -38,14 +38,14 @@ const Region = {
     wrapWidth = wrapWidth < 0 ? 0 : wrapWidth;
 
     const region = {
-      left: -9999,
-      top: -9999,
-      width: width,
-      height: height
+      left: '-9999px',
+      top: '-9999px',
+      width: width + 'px',
+      height: height + 'px'
     };
     while (i--) {
-      region.left = Math.round(Math.random() * wrapWidth);
-      region.top = Math.round(Math.random() * wrapHeight + height);
+      region.left = Math.round(Math.random() * wrapWidth) + 'px';
+      region.top = Math.round(Math.random() * wrapHeight + height) + 'px';
       if (!this.isCross(region)) {
         this.add(region);
         return region;
