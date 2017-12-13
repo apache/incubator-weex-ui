@@ -11,28 +11,6 @@ const glob = require('glob');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-const plugins = [
-  new CleanWebpackPlugin(['build'], {
-    verbose: true
-  }),
-  new webpack.DefinePlugin({
-    'process.env': {
-      NODE_ENV: JSON.stringify('production')
-    },
-    'global': '{}'
-  }),
-  new webpack.BannerPlugin({
-    banner: '// { "framework": "Vue" }\n',
-    raw: true
-  }),
-  new CopyWebpackPlugin([
-    { from: 'example/*/index.html' }
-  ])
-];
-
-const needClean = process.argv.indexOf('--watch') > -1;
-needClean && plugins.shift();
-
 console.log('Building..., Please wait a moment.');
 
 const getEntry = dir => {
@@ -47,10 +25,44 @@ const getEntry = dir => {
   return ret;
 };
 
+const getCopyConfig = () => {
+  const foundScripts = glob.sync('example/*/', {});
+  const ret = [];
+  foundScripts.forEach(function (scriptPath) {
+    if (scriptPath !== 'example/_mods/') {
+      ret.push({
+        from: 'example/_mods/index.html',
+        to: scriptPath + 'index.html'
+      })
+    }
+  });
+  return ret;
+};
+
 const example = getEntry('example');
 const entry = Object.assign({
   'index': './index.js'
 }, example);
+
+const plugins = [
+  new CleanWebpackPlugin(['build'], {
+    verbose: true
+  }),
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: JSON.stringify('production')
+    },
+    'global': '{}'
+  }),
+  new webpack.BannerPlugin({
+    banner: '// { "framework": "Vue" }\n',
+    raw: true
+  }),
+  new CopyWebpackPlugin(getCopyConfig(), { copyUnmodified: true })
+];
+
+const needClean = process.argv.indexOf('--watch') > -1;
+needClean && plugins.shift();
 
 const getBaseConfig = () => ({
   devtool: '#source-map',
@@ -98,11 +110,18 @@ webCfg.output.filename = '[name].web.js';
 webCfg.module.rules[1].use.push({
   loader: 'vue-loader',
   options: {
+    optimizeSSR: false,
+    postcss: [
+      require('postcss-plugin-weex')(),
+      require('autoprefixer')({
+        browsers: ['> 0.1%', 'ios >= 8', 'not ie < 12']
+      }),
+      require('postcss-plugin-px2rem')({ rootValue: 75 })
+    ],
     compilerModules: [
       {
         postTransformNode: el => {
-          el.staticStyle = `$processStyle(${el.staticStyle})`
-          el.styleBinding = `$processStyle(${el.styleBinding})`
+          require('weex-vue-precompiler')()(el)
         }
       }
     ]

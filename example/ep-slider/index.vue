@@ -81,10 +81,11 @@
     width: 250px;
     height: 80px;
     margin-left: 250px;
+    margin-bottom: 40px;
+    margin-top: 40px;
     background-color: #635147;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
   }
 
   .btn-text {
