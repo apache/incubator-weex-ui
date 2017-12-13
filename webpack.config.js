@@ -29,9 +29,9 @@ const getCopyConfig = () => {
   const foundScripts = glob.sync('example/*/', {});
   const ret = [];
   foundScripts.forEach(function (scriptPath) {
-    if (scriptPath !== 'example/_mods/') {
+    if (!/(_mods|_public)/.test(scriptPath)) {
       ret.push({
-        from: 'example/_mods/index.html',
+        from: 'example/_public/index.html',
         to: scriptPath + 'index.html'
       })
     }
