@@ -4,10 +4,8 @@
 
 <template>
   <div class="wxc-tab-page"
-       :style="{ height: (tabPageHeight)+'px', backgroundColor:wrapBgColor }">
-    <div class="tab-page-wrap"
-         ref="tab-page-wrap"
-         :style="{ height: (tabPageHeight-tabStyles.height)+'px' }">
+       :style="{backgroundColor:wrapBgColor }">
+    <div class="tab-page-wrap" ref="tab-page-wrap">
       <div ref="tab-container"
            class="tab-container">
         <slot></slot>
@@ -41,7 +39,11 @@
 
 <style scoped>
   .wxc-tab-page {
-    width: 750px;
+    position: absolute;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
     flex-direction: column;
   }
 
@@ -60,6 +62,7 @@
 
   .tab-page-wrap {
     width: 750px;
+    flex: 1;
     overflow: hidden;
     position: relative;
   }
@@ -142,10 +145,6 @@
       titleType: {
         type: String,
         default: 'icon'
-      },
-      tabPageHeight: {
-        type: [String, Number],
-        default: 1334
       },
       isTabView: {
         type: Boolean,

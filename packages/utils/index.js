@@ -105,6 +105,13 @@ const Utils = {
     isAlipayWeb () {
       return Utils.env.isAlipay() && Utils.env.isWeb();
     },
+    isTmall () {
+      let { appName } = weex.config.env;
+      return /(tm|tmall|天猫)/i.test(appName);
+    },
+    isAliWeex () {
+      return Utils.env.isTmall() || Utils.env.isTrip() || Utils.env.isTaobao();
+    },
     supportsEB () {
       const weexVersion = weex.config.env.weexVersion || '0';
       const isHighWeex = Utils.compareVersion(weexVersion, '0.10.1.4') && (Utils.env.isIOS() || Utils.env.isAndroid());
