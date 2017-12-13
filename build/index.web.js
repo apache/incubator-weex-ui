@@ -75,7 +75,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -836,201 +836,6 @@ module.exports = Component.exports
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _index = __webpack_require__(148);
-
-Object.defineProperty(exports, 'default', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_index).default;
-  }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-/* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _index = __webpack_require__(149);
-
-Object.defineProperty(exports, 'default', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_index).default;
-  }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-/**
- * Created by Tw93 on 2016/10/29.
- */
-
-var GIF = exports.GIF = 'https://img.alicdn.com/tfs/TB1aks3PpXXXXcXXFXXXXXXXXXX-150-150.gif';
-var BLACK_GIF = exports.BLACK_GIF = 'https://img.alicdn.com/tfs/TB1Ep_9NVXXXXb8XVXXXXXXXXXX-74-74.gif';
-var PNG = exports.PNG = 'https://gw.alicdn.com/tfs/TB1HwGTpwoQMeJjy0FpXXcTxpXa-75-75.png';
-var PART = exports.PART = 'https://gtms02.alicdn.com/tfs/TB1y4QbSXXXXXbgapXXXXXXXXXX-50-50.gif';
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(233)
-}
-var Component = __webpack_require__(0)(
-  /* script */
-  __webpack_require__(46),
-  /* template */
-  __webpack_require__(196),
-  /* styles */
-  injectStyle,
-  /* scopeId */
-  "data-v-702739a6",
-  /* moduleIdentifier (server only) */
-  null
-)
-Component.options.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-checkbox/index.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] index.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-702739a6", Component.options)
-  } else {
-    hotAPI.reload("data-v-702739a6", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(246)
-}
-var Component = __webpack_require__(0)(
-  /* script */
-  __webpack_require__(70),
-  /* template */
-  __webpack_require__(210),
-  /* styles */
-  injectStyle,
-  /* scopeId */
-  "data-v-fb43e778",
-  /* moduleIdentifier (server only) */
-  null
-)
-Component.options.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-icon.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] wxc-rich-text-icon.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-fb43e778", Component.options)
-  } else {
-    hotAPI.reload("data-v-fb43e778", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(239)
-}
-var Component = __webpack_require__(0)(
-  /* script */
-  __webpack_require__(72),
-  /* template */
-  __webpack_require__(203),
-  /* styles */
-  injectStyle,
-  /* scopeId */
-  "data-v-8c80ddc2",
-  /* moduleIdentifier (server only) */
-  null
-)
-Component.options.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-tag.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] wxc-rich-text-tag.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8c80ddc2", Component.options)
-  } else {
-    hotAPI.reload("data-v-8c80ddc2", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 exports.WxcTag = exports.WxcTabBar = exports.WxcTabPage = exports.WxcStepper = exports.WxcSliderBar = exports.WxcSlideNav = exports.WxcSimpleFlow = exports.WxcSearchbar = exports.WxcSpecialRichText = exports.WxcRichText = exports.WxcResult = exports.WxcRadio = exports.WxcProgress = exports.WxcPopup = exports.WxcPageCalendar = exports.WxcOverlay = exports.WxcNoticebar = exports.WxcLotteryRain = exports.WxcMinibar = exports.WxcMask = exports.WxcPartLoading = exports.WxcLoading = exports.WxcLightbox = exports.WxcIndexlist = exports.WxcGridSelect = exports.WxcPanItem = exports.WxcEpSlider = exports.WxcDialog = exports.WxcCountdown = exports.WxcCheckboxList = exports.WxcCheckbox = exports.WxcCell = exports.WxcButton = exports.Utils = undefined;
 
 var _utils = __webpack_require__(3);
@@ -1089,11 +894,11 @@ var _wxcPartLoading = __webpack_require__(28);
 
 var _wxcPartLoading2 = _interopRequireDefault(_wxcPartLoading);
 
-var _wxcMask = __webpack_require__(7);
+var _wxcMask = __webpack_require__(8);
 
 var _wxcMask2 = _interopRequireDefault(_wxcMask);
 
-var _wxcMinibar = __webpack_require__(8);
+var _wxcMinibar = __webpack_require__(9);
 
 var _wxcMinibar2 = _interopRequireDefault(_wxcMinibar);
 
@@ -1212,6 +1017,201 @@ exports.WxcTabBar = _wxcTabBar2.default;
 exports.WxcTag = _wxcTag2.default;
 
 /***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = __webpack_require__(148);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_index).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = __webpack_require__(149);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_index).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/**
+ * Created by Tw93 on 2016/10/29.
+ */
+
+var GIF = exports.GIF = 'https://img.alicdn.com/tfs/TB1aks3PpXXXXcXXFXXXXXXXXXX-150-150.gif';
+var BLACK_GIF = exports.BLACK_GIF = 'https://img.alicdn.com/tfs/TB1Ep_9NVXXXXb8XVXXXXXXXXXX-74-74.gif';
+var PNG = exports.PNG = 'https://gw.alicdn.com/tfs/TB1HwGTpwoQMeJjy0FpXXcTxpXa-75-75.png';
+var PART = exports.PART = 'https://gtms02.alicdn.com/tfs/TB1y4QbSXXXXXbgapXXXXXXXXXX-50-50.gif';
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(233)
+}
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(46),
+  /* template */
+  __webpack_require__(196),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-702739a6",
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-checkbox/index.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] index.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-702739a6", Component.options)
+  } else {
+    hotAPI.reload("data-v-702739a6", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(246)
+}
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(70),
+  /* template */
+  __webpack_require__(210),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-fb43e778",
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-icon.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] wxc-rich-text-icon.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-fb43e778", Component.options)
+  } else {
+    hotAPI.reload("data-v-fb43e778", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(239)
+}
+var Component = __webpack_require__(0)(
+  /* script */
+  __webpack_require__(72),
+  /* template */
+  __webpack_require__(203),
+  /* styles */
+  injectStyle,
+  /* scopeId */
+  "data-v-8c80ddc2",
+  /* moduleIdentifier (server only) */
+  null
+)
+Component.options.__file = "/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-tag.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] wxc-rich-text-tag.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-8c80ddc2", Component.options)
+  } else {
+    hotAPI.reload("data-v-8c80ddc2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1266,7 +1266,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(10);
+var _index = __webpack_require__(11);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -2110,7 +2110,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _index = __webpack_require__(10);
+var _index = __webpack_require__(11);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -3759,7 +3759,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 
-var _wxcMask = __webpack_require__(7);
+var _wxcMask = __webpack_require__(8);
 
 var _wxcMask2 = _interopRequireDefault(_wxcMask);
 
@@ -3819,7 +3819,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _type = __webpack_require__(9);
+var _type = __webpack_require__(10);
 
 var _utils = __webpack_require__(3);
 
@@ -4901,7 +4901,7 @@ var _utils = __webpack_require__(3);
 
 var _utils2 = _interopRequireDefault(_utils);
 
-var _wxcMinibar = __webpack_require__(8);
+var _wxcMinibar = __webpack_require__(9);
 
 var _wxcMinibar2 = _interopRequireDefault(_wxcMinibar);
 
@@ -5272,7 +5272,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _type = __webpack_require__(9);
+var _type = __webpack_require__(10);
 
 exports.default = {
   props: {
@@ -6025,8 +6025,8 @@ exports.default = {
   components: {
     WxcRichTextText: __webpack_require__(6),
     WxcRichTextLink: __webpack_require__(161),
-    WxcRichTextIcon: __webpack_require__(11),
-    WxcRichTextTag: __webpack_require__(12)
+    WxcRichTextIcon: __webpack_require__(12),
+    WxcRichTextTag: __webpack_require__(13)
   },
   props: {
     configList: {
@@ -7863,11 +7863,11 @@ var _wxcRichTextText = __webpack_require__(6);
 
 var _wxcRichTextText2 = _interopRequireDefault(_wxcRichTextText);
 
-var _wxcRichTextIcon = __webpack_require__(11);
+var _wxcRichTextIcon = __webpack_require__(12);
 
 var _wxcRichTextIcon2 = _interopRequireDefault(_wxcRichTextIcon);
 
-var _wxcRichTextTag = __webpack_require__(12);
+var _wxcRichTextTag = __webpack_require__(13);
 
 var _wxcRichTextTag2 = _interopRequireDefault(_wxcRichTextTag);
 
@@ -8256,6 +8256,9 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
 
 var dom = weex.requireModule('dom');
 var animation = weex.requireModule('animation');
@@ -8293,10 +8296,6 @@ exports.default = {
     titleType: {
       type: String,
       default: 'icon'
-    },
-    tabPageHeight: {
-      type: [String, Number],
-      default: 1334
     },
     isTabView: {
       type: Boolean,
@@ -9837,14 +9836,14 @@ var Region = {
     wrapWidth = wrapWidth < 0 ? 0 : wrapWidth;
 
     var region = {
-      left: -9999,
-      top: -9999,
-      width: width,
-      height: height
+      left: '-9999px',
+      top: '-9999px',
+      width: width + 'px',
+      height: height + 'px'
     };
     while (i--) {
-      region.left = Math.round(Math.random() * wrapWidth);
-      region.top = Math.round(Math.random() * wrapHeight + height);
+      region.left = Math.round(Math.random() * wrapWidth) + 'px';
+      region.top = Math.round(Math.random() * wrapHeight + height) + 'px';
       if (!this.isCross(region)) {
         this.add(region);
         return region;
@@ -10363,7 +10362,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-overlay[data-v-16b9703a] {\n  width: 750px;\n  position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  right: 0;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-overlay/index.vue?346a33ce"],"names":[],"mappings":";AAiBA;EACA,aAAA;EACA,gBAAA;EACA,QAAA;EACA,OAAA;EACA,UAAA;EACA,SAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A gray overlay mask-->\n\n<template>\n  <div>\n    <div class=\"wxc-overlay\"\n         ref=\"wxc-overlay\"\n         v-if=\"show\"\n         :hack=\"shouldShow\"\n         @click=\"overlayClicked\"\n         :style=\"overlayStyle\">\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-overlay {\n    width: 750px;\n    position: fixed;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    right: 0;\n  }\n</style>\n\n<script>\n  const animation = weex.requireModule('animation');\n  export default {\n    props: {\n      show: {\n        type: Boolean,\n        default: true\n      },\n      hasAnimation: {\n        type: Boolean,\n        default: true\n      },\n      duration: {\n        type: [Number, String],\n        default: 300\n      },\n      timingFunction: {\n        type: Array,\n        default: () => (['ease-in', 'ease-out'])\n      },\n      opacity: {\n        type: [Number, String],\n        default: 0.6\n      },\n      canAutoClose: {\n        type: Boolean,\n        default: true\n      }\n    },\n    computed: {\n      overlayStyle () {\n        return {\n          opacity: this.hasAnimation ? 0 : 1,\n          backgroundColor: `rgba(0, 0, 0,${this.opacity})`\n        }\n      },\n      shouldShow () {\n        const { show, hasAnimation } = this;\n        hasAnimation && setTimeout(() => {\n          this.appearOverlay(show);\n        }, 50);\n        return show;\n      }\n    },\n    methods: {\n      overlayClicked (e) {\n        this.canAutoClose ? this.appearOverlay(false) : this.$emit('wxcOverlayBodyClicked', {});\n      },\n      appearOverlay (bool, duration = this.duration) {\n        const { hasAnimation, timingFunction, canAutoClose } = this;\n        const needEmit = !bool && canAutoClose;\n        needEmit && (this.$emit('wxcOverlayBodyClicking', {}));\n        const overlayEl = this.$refs['wxc-overlay'];\n        if (hasAnimation && overlayEl) {\n          animation.transition(overlayEl, {\n            styles: {\n              opacity: bool ? 1 : 0\n            },\n            duration,\n            timingFunction: timingFunction[bool ? 0 : 1],\n            delay: 0\n          }, () => {\n            needEmit && (this.$emit('wxcOverlayBodyClicked', {}));\n          });\n        } else {\n          needEmit && (this.$emit('wxcOverlayBodyClicked', {}));\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-overlay[data-v-16b9703a] {\n  width: 10rem;\n  position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  right: 0;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-overlay/index.vue?346a33ce"],"names":[],"mappings":";AAiBA;EACA,aAAA;EACA,gBAAA;EACA,QAAA;EACA,OAAA;EACA,UAAA;EACA,SAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A gray overlay mask-->\n\n<template>\n  <div>\n    <div class=\"wxc-overlay\"\n         ref=\"wxc-overlay\"\n         v-if=\"show\"\n         :hack=\"shouldShow\"\n         @click=\"overlayClicked\"\n         :style=\"overlayStyle\">\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-overlay {\n    width: 750px;\n    position: fixed;\n    left: 0;\n    top: 0;\n    bottom: 0;\n    right: 0;\n  }\n</style>\n\n<script>\n  const animation = weex.requireModule('animation');\n  export default {\n    props: {\n      show: {\n        type: Boolean,\n        default: true\n      },\n      hasAnimation: {\n        type: Boolean,\n        default: true\n      },\n      duration: {\n        type: [Number, String],\n        default: 300\n      },\n      timingFunction: {\n        type: Array,\n        default: () => (['ease-in', 'ease-out'])\n      },\n      opacity: {\n        type: [Number, String],\n        default: 0.6\n      },\n      canAutoClose: {\n        type: Boolean,\n        default: true\n      }\n    },\n    computed: {\n      overlayStyle () {\n        return {\n          opacity: this.hasAnimation ? 0 : 1,\n          backgroundColor: `rgba(0, 0, 0,${this.opacity})`\n        }\n      },\n      shouldShow () {\n        const { show, hasAnimation } = this;\n        hasAnimation && setTimeout(() => {\n          this.appearOverlay(show);\n        }, 50);\n        return show;\n      }\n    },\n    methods: {\n      overlayClicked (e) {\n        this.canAutoClose ? this.appearOverlay(false) : this.$emit('wxcOverlayBodyClicked', {});\n      },\n      appearOverlay (bool, duration = this.duration) {\n        const { hasAnimation, timingFunction, canAutoClose } = this;\n        const needEmit = !bool && canAutoClose;\n        needEmit && (this.$emit('wxcOverlayBodyClicking', {}));\n        const overlayEl = this.$refs['wxc-overlay'];\n        if (hasAnimation && overlayEl) {\n          animation.transition(overlayEl, {\n            styles: {\n              opacity: bool ? 1 : 0\n            },\n            duration,\n            timingFunction: timingFunction[bool ? 0 : 1],\n            delay: 0\n          }, () => {\n            needEmit && (this.$emit('wxcOverlayBodyClicked', {}));\n          });\n        } else {\n          needEmit && (this.$emit('wxcOverlayBodyClicked', {}));\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10377,7 +10376,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-slider-bar[data-v-1797400a] {\n  user-select: none;\n}\n.slider-bar-container[data-v-1797400a] {\n  height: 56px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.value-bar[data-v-1797400a] {\n  height: 4px;\n}\n.slide-block[data-v-1797400a] {\n  width: 56px;\n  height: 56px;\n  background-color: #fff;\n  border-radius: 28px;\n  border-width: 1px;\n  border-color: rgba(0, 0, 0, .1);\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);\n  position: absolute;\n  left: 0;\n  bottom: 0;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-slider-bar/index.vue?b5ded9fa"],"names":[],"mappings":";AA0bA;EACA,kBAAA;CACA;AAEA;EACA,aAAA;EACA,cAAA;EACA,wBAAA;EACA,oBAAA;CACA;AAEA;EACA,YAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;EACA,uBAAA;EACA,oBAAA;EACA,kBAAA;EACA,gCAAA;EACA,2CAAA;EACA,mBAAA;EACA,QAAA;EACA,UAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by 走鹃 on 2017-05-09. -->\n\n<template>\n  <div class=\"wxc-slider-bar\">\n    <div\n      ref=\"bar-container\"\n      class=\"slider-bar-container\"\n      :style=\"containerStyle\">\n      <div\n        class=\"range-bar\"\n        :style=\"rangeBarStyle\">\n        <div\n          ref=\"value-bar\"\n          class=\"value-bar\"\n          :style=\"valueBarStyle\">\n          <div></div>\n        </div>\n      </div>\n      <div\n        ref=\"slide-block-1\"\n        class=\"slide-block\"\n        @touchstart=\"_weexStartHandler1\"\n        @panstart=\"_webStartHandler\"\n        @panmove=\"_webMoveHandler1\"\n        @touchend=\"_weexEndHandler\"\n        @horizontalpan=\"dispatchPan\"\n        :prevent-move-event=\"preventMoveEvent\"\n        :style=\"blockStyle1\">\n        <div></div>\n      </div>\n      <div\n        v-if=\"range\"\n        ref=\"slide-block-2\"\n        class=\"slide-block\"\n        @touchstart=\"_weexStartHandler2\"\n        @panstart=\"_webStartHandler\"\n        @panmove=\"_webMoveHandler2\"\n        @touchend=\"_weexEndHandler\"\n        @horizontalpan=\"dispatchPan\"\n        :prevent-move-event=\"preventMoveEvent\"\n        :style=\"blockStyle2\">\n        <div></div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\n  import Utils from '../utils';\n\n  const EB = weex.requireModule('expressionBinding');\n  const animation = weex.requireModule('animation');\n  const dom = weex.requireModule('dom');\n\n  export default {\n    data: () => ({\n      env: 'weex',\n      diffX1: 0,\n      diffX2: 0,\n      barWidth: 0,\n      preventMoveEvent: true,\n      timeout: 100,\n      minDiffX: 0,\n      selectRange: [0, 0]\n    }),\n    props: {\n      length: {\n        type: Number,\n        default: 500\n      },\n      height: {\n        type: Number,\n        default: 4\n      },\n      // 是否双滑块模式\n      range: {\n        type: Boolean,\n        default: false\n      },\n      // 最小值\n      min: {\n        type: Number,\n        default: 0\n      },\n      // 最大值\n      max: {\n        type: Number,\n        default: 100\n      },\n      // 最小取值范围，用于范围选择范围最小差值\n      minDiff: {\n        type: Number,\n        default: 5\n      },\n      // 设置当前取值。当 range 为 false 时，使用 number，否则用 [number, number]\n      value: {\n        type: [Number, Array],\n        default: 0\n      },\n      // 设置初始取值。当 range 为 false 时，使用 number，否则用 [number, number]\n      defaultValue: {\n        type: [Number, Array],\n        default: 0\n      },\n      // 值为 true 时，滑块为禁用状态\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      invalidColor: {\n        type: String,\n        default: '#E0E0E0'\n      },\n      validColor: {\n        type: String,\n        default: '#EE9900'\n      },\n      disabledColor: {\n        type: String,\n        default: '#AAA'\n      }\n    },\n    created () {\n      if (Utils.env.isWeb()) {\n        this.env = 'web';\n      }\n    },\n    mounted () {\n      this.block1 = this.$refs['slide-block-1'];        // 左侧滑块\n      this.block2 = this.$refs['slide-block-2'];        // 右侧滑块\n      this.valueBar = this.$refs['value-bar'];          // 黄色值条\n      this.barContainer = this.$refs['bar-container'];  // 滚动条容器\n\n      if (!this.range) {\n        this.diffX1 = this._getDiffX(this.value || this.defaultValue);\n      } else {\n        this.diffX1 = this._getDiffX(this.value[0] || this.defaultValue[0]);\n        this.diffX2 = this._getDiffX(this.value[1] || this.defaultValue[1]);\n        this.barWidth = this.diffX2 - this.diffX1;\n      }\n      // 是否支持expresstionBinding\n      if (Utils.env.supportsEB()) {\n        this.block1 && EB.enableBinding(this.block1.ref, 'pan');\n        this.block2 && EB.enableBinding(this.block2.ref, 'pan');\n        this.valueBar && EB.enableBinding(this.valueBar.ref, 'pan');\n      }\n      if (Utils.env.isAndroid()) {\n        this.timeout = 250;\n      }\n      if (this.range) {\n        this.selectRange = this.value || this.defaultValue;                    // 初始化范围选择返回数据\n        this.minDiffX = (this.minDiff / (this.max - this.min)) * this.length;  // 滑块1、2之前最小间距\n      }\n      // 由于weex在mounted后渲染是异步的不能确保元素渲染完成，需要异步执行\n      setTimeout(() => {\n        dom.getComponentRect(this.barContainer, option => {\n          const { left } = option.size;\n          this.leftDiffX = left;\n        });\n      }, 100);\n\n      this.bindExp();\n    },\n    computed: {\n      containerStyle () {\n        return {\n          width: this.length + 56 + 'px',\n          height: '56px'\n        };\n      },\n      rangeBarStyle () {\n        return {\n          width: this.length + 'px',\n          height: this.height + 'px',\n          flexDirection: 'row',\n          backgroundColor: this.invalidColor,\n          overflow: 'hidden'\n        };\n      },\n      valueBarStyle () {\n        let left = 0;\n        let width = 0\n        if (!this.range) {\n          width = this.diffX1;\n        } else {\n          left = this.diffX1;\n          width = this.diffX2 - this.diffX1;\n        }\n        return {\n          width: width + 'px',\n          height: this.height + 'px',\n          transform: `translateX(${left}px)`,\n          backgroundColor: this.disabled ? this.disabledColor : this.validColor\n        };\n      },\n      blockStyle1 () {\n        return {\n          transform: `translateX(${this.diffX1}px)`\n        };\n      },\n      blockStyle2 () {\n        return {\n          transform: `translateX(${this.diffX2}px)`\n        }\n      }\n    },\n    methods: {\n      dispatchPan () {},\n\n      // 更新单选值或最小值\n      _weexStartHandler1 () {\n        this.firstInterval = setInterval(() => {\n          if (!this.range) {\n            dom.getComponentRect(this.valueBar, option => {\n              const { width } = option.size;\n              const value = this._getValue(width);\n              this.$emit('updateValue', value);\n            });\n          } else {\n            dom.getComponentRect(this.block1, option => {\n              const { left } = option.size;\n              this.selectRange[0] = this._getValue(left - this.leftDiffX);\n              this.$emit('updateValue', this.selectRange);\n            });\n          }\n        }, this.timeout);\n      },\n\n      // 更新最大值\n      _weexStartHandler2 () {\n        this.secondInterval = setInterval(() => {\n          dom.getComponentRect(this.block2, option => {\n            const { left } = option.size;\n            this.selectRange[1] = this._getValue(left - this.leftDiffX);\n            this.$emit('updateValue', this.selectRange);\n          });\n        }, this.timeout);\n      },\n\n      // 清除定时器\n      _weexEndHandler () {\n        this.firstInterval && clearInterval(this.firstInterval);\n        this.secondInterval && clearInterval(this.secondInterval);\n      },\n\n      _webStartHandler (e) {\n        if (this.env === 'weex') {\n          return;\n        }\n        this.startX = e.touch.clientX;\n        this.startDiffX1 = this.diffX1;\n        this.startDiffX2 = this.diffX2;\n      },\n\n      _webMoveHandler1 (e) {\n        if (this.env === 'weex' || this.disabled) {\n          return;\n        }\n        const deltaX = e.touch.clientX - this.startX;\n        const diff = this.startDiffX1 + deltaX;\n        let max = this.length;\n        if (this.range) {\n          max = this.diffX2 - this.minDiffX;\n        }\n        if (diff > 0 && diff < max) {\n          this.diffX1 = diff;\n          animation.transition(this.block1, {\n            styles: {\n              transform: `translateX(${this.diffX1}px)`\n            }\n          }, () => {});\n          if (!this.range) {\n            this.$emit('updateValue', this._getValue(this.diffX1));\n          } else {\n            this.selectRange[0] = this._getValue(this.diffX1);\n            this.$emit('updateValue', this.selectRange);\n          }\n        }\n      },\n\n      _webMoveHandler2 (e) {\n        if (this.env === 'weex' || this.disabled) {\n          return;\n        }\n        const deltaX = e.touch.clientX - this.startX;\n        const diff = this.startDiffX2 + deltaX;\n        const min = this.diffX1 + this.minDiffX;\n        const max = this.length;\n        if (diff > min && diff < max) {\n          this.diffX2 = diff;\n          animation.transition(this.block2, {\n            styles: {\n              transform: `translateX(${this.diffX2}px)`\n            }\n          }, () => {});\n          if (!this.range) {\n            this.$emit('updateValue', this._getValue(this.diffX2));\n          } else {\n            this.selectRange[1] = this._getValue(this.diffX2);\n            this.$emit('updateValue', this.selectRange);\n          }\n        }\n      },\n\n      bindExp () {\n        const self = this;\n\n        // 如果禁用，不行进行表达式绑定\n        if (self.disabled) {\n          return;\n        }\n\n        // 初始化按钮&条的大小范围\n        let blockMax1 = 0;\n        if (self.range) {\n          blockMax1 = self.diffX2 - self.minDiffX;\n        } else {\n          blockMax1 = self.length;\n        }\n\n        const blockMax2 = self.length;\n        const blockMin2 = self.diffX1 + self.minDiffX;\n        const barMax1 = self.diffX2;\n        const barMax2 = self.length - self.diffX1;\n\n        // 滑块1表达式\n        var expBlock1 = `{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"min\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${blockMax1}},{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"max\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"+\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"x\\\"},{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${self.diffX1}}]},{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":0}]}]}]}]}`;\n        // 滑块2表达式\n        var expBlock2 = `{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"min\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${blockMax2}},{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"max\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"+\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"x\\\"},{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${self.diffX2}}]},{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${blockMin2}}]}]}]}]}`;\n        // valuebar表达式\n        var expBar1 = `{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"min\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${barMax1}},{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"max\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":0},{\\\"type\\\":\\\"-\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${self.barWidth}},{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"x\\\"}]}]}]}]}]}`;\n        // valuebar 范围表达式\n        var expBar2 = `{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"min\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${barMax2}},{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"max\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":0},{\\\"type\\\":\\\"+\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${self.barWidth}},{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"x\\\"}]}]}]}]}]}`;\n\n        if (!self.range) {\n          // 单选\n          const args = [{\n            element: self.block1.ref,\n            property: 'transform.translateX',\n            expression: expBlock1\n          }, {\n            element: self.valueBar.ref,\n            property: 'width',\n            expression: expBlock1\n          }];\n          EB && EB.createBinding(self.block1.ref, 'pan', '', args, e => {\n            if (e.state === 'end') {\n              const range = self.getRange();\n              // 限制diffX1范围\n              self.diffX1 = self._restrictValue(range.rangeX1, self.diffX1 + e.deltaX);\n              self.bindExp();\n            }\n          });\n        } else {\n          // 选范围\n          const args = [{\n            element: self.block1.ref,\n            property: 'transform.translateX',\n            expression: expBlock1\n          }, {\n            element: self.valueBar.ref,\n            property: 'transform.translateX',\n            expression: expBlock1\n          }, {\n            element: self.valueBar.ref,\n            property: 'width',\n            expression: expBar1\n          }];\n\n          const args2 = [{\n            element: self.block2.ref,\n            property: 'transform.translateX',\n            expression: expBlock2\n          }, {\n            element: self.valueBar.ref,\n            property: 'width',\n            expression: expBar2\n          }];\n\n          EB && EB.createBinding(self.block1.ref, 'pan', '', args, e => {\n            if (e.state === 'end') {\n              const range = self.getRange();\n              self.barWidth = self._restrictValue(range.rangeX1, self.barWidth - e.deltaX);\n              self.diffX1 = self._restrictValue(range.rangeX1, self.diffX1 + e.deltaX);\n              self.bindExp();\n            }\n          });\n\n          EB && EB.createBinding(self.block2.ref, 'pan', '', args2, e => {\n            if (e.state === 'end') {\n              const range = self.getRange();\n              self.diffX2 = self._restrictValue(range.rangeX2, self.diffX2 + e.deltaX);\n              self.barWidth = self._restrictValue([0, self.length - self.diffX1], self.barWidth + e.deltaX);\n              self.bindExp();\n            }\n          });\n        }\n      },\n\n      // 获取diffx1 diffx2 取值范围\n      getRange (deltaX) {\n        if (!this.range) {\n          return {\n            rangeX1: [0, this.length]\n          }\n        } else {\n          return {\n            rangeX1: [0, this.diffX2 - this.minDiffX],\n            rangeX2: [this.diffX1 + this.minDiffX, this.length]\n          }\n        }\n      },\n\n      // 限制取值范围\n      _restrictValue (range, value) {\n        if (range && range.length && range.length === 2) {\n          if (value < range[0]) {\n            return range[0];\n          } else if (value > range[1]) {\n            return range[1];\n          } else {\n            return value;\n          }\n        }\n        return;\n      },\n\n      // 根据x方向偏移量计算value\n      _getValue (diffX) {\n        return Math.round((diffX / this.length) * (this.max - this.min) + this.min);\n      },\n\n      // 根据value和length计算x方向偏移值\n      _getDiffX (value) {\n        return ((value - this.min) / (this.max - this.min)) * this.length;\n      }\n    }\n  }\n</script>\n\n<style scoped>\n  .wxc-slider-bar {\n    user-select: none;\n  }\n\n  .slider-bar-container {\n    height: 56px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .value-bar {\n    height: 4px;\n  }\n\n  .slide-block {\n    width: 56px;\n    height: 56px;\n    background-color: #fff;\n    border-radius: 28px;\n    border-width: 1px;\n    border-color: rgba(0, 0, 0, .1);\n    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);\n    position: absolute;\n    left: 0;\n    bottom: 0;\n  }\n</style>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-slider-bar[data-v-1797400a] {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.slider-bar-container[data-v-1797400a] {\n  height: 0.74667rem;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n}\n.value-bar[data-v-1797400a] {\n  height: 0.05333rem;\n}\n.slide-block[data-v-1797400a] {\n  width: 0.74667rem;\n  height: 0.74667rem;\n  background-color: #fff;\n  border-radius: 0.37333rem;\n  border-width: 0.01333rem;\n  border-color: rgba(0, 0, 0, .1);\n  -webkit-box-shadow: 0 0.08rem 0.16rem rgba(0, 0, 0, 0.05);\n          box-shadow: 0 0.08rem 0.16rem rgba(0, 0, 0, 0.05);\n  position: absolute;\n  left: 0;\n  bottom: 0;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-slider-bar/index.vue?b5ded9fa"],"names":[],"mappings":";AA0bA;EACA,0BAAA;KAAA,uBAAA;MAAA,sBAAA;UAAA,kBAAA;CACA;AAEA;EACA,mBAAA;EACA,qBAAA;EAAA,sBAAA;EAAA,cAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,mBAAA;CACA;AAEA;EACA,kBAAA;EACA,mBAAA;EACA,uBAAA;EACA,0BAAA;EACA,yBAAA;EACA,gCAAA;EACA,0DAAA;UAAA,kDAAA;EACA,mBAAA;EACA,QAAA;EACA,UAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by 走鹃 on 2017-05-09. -->\n\n<template>\n  <div class=\"wxc-slider-bar\">\n    <div\n      ref=\"bar-container\"\n      class=\"slider-bar-container\"\n      :style=\"containerStyle\">\n      <div\n        class=\"range-bar\"\n        :style=\"rangeBarStyle\">\n        <div\n          ref=\"value-bar\"\n          class=\"value-bar\"\n          :style=\"valueBarStyle\">\n          <div></div>\n        </div>\n      </div>\n      <div\n        ref=\"slide-block-1\"\n        class=\"slide-block\"\n        @touchstart=\"_weexStartHandler1\"\n        @panstart=\"_webStartHandler\"\n        @panmove=\"_webMoveHandler1\"\n        @touchend=\"_weexEndHandler\"\n        @horizontalpan=\"dispatchPan\"\n        :prevent-move-event=\"preventMoveEvent\"\n        :style=\"blockStyle1\">\n        <div></div>\n      </div>\n      <div\n        v-if=\"range\"\n        ref=\"slide-block-2\"\n        class=\"slide-block\"\n        @touchstart=\"_weexStartHandler2\"\n        @panstart=\"_webStartHandler\"\n        @panmove=\"_webMoveHandler2\"\n        @touchend=\"_weexEndHandler\"\n        @horizontalpan=\"dispatchPan\"\n        :prevent-move-event=\"preventMoveEvent\"\n        :style=\"blockStyle2\">\n        <div></div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\n  import Utils from '../utils';\n\n  const EB = weex.requireModule('expressionBinding');\n  const animation = weex.requireModule('animation');\n  const dom = weex.requireModule('dom');\n\n  export default {\n    data: () => ({\n      env: 'weex',\n      diffX1: 0,\n      diffX2: 0,\n      barWidth: 0,\n      preventMoveEvent: true,\n      timeout: 100,\n      minDiffX: 0,\n      selectRange: [0, 0]\n    }),\n    props: {\n      length: {\n        type: Number,\n        default: 500\n      },\n      height: {\n        type: Number,\n        default: 4\n      },\n      // 是否双滑块模式\n      range: {\n        type: Boolean,\n        default: false\n      },\n      // 最小值\n      min: {\n        type: Number,\n        default: 0\n      },\n      // 最大值\n      max: {\n        type: Number,\n        default: 100\n      },\n      // 最小取值范围，用于范围选择范围最小差值\n      minDiff: {\n        type: Number,\n        default: 5\n      },\n      // 设置当前取值。当 range 为 false 时，使用 number，否则用 [number, number]\n      value: {\n        type: [Number, Array],\n        default: 0\n      },\n      // 设置初始取值。当 range 为 false 时，使用 number，否则用 [number, number]\n      defaultValue: {\n        type: [Number, Array],\n        default: 0\n      },\n      // 值为 true 时，滑块为禁用状态\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      invalidColor: {\n        type: String,\n        default: '#E0E0E0'\n      },\n      validColor: {\n        type: String,\n        default: '#EE9900'\n      },\n      disabledColor: {\n        type: String,\n        default: '#AAA'\n      }\n    },\n    created () {\n      if (Utils.env.isWeb()) {\n        this.env = 'web';\n      }\n    },\n    mounted () {\n      this.block1 = this.$refs['slide-block-1'];        // 左侧滑块\n      this.block2 = this.$refs['slide-block-2'];        // 右侧滑块\n      this.valueBar = this.$refs['value-bar'];          // 黄色值条\n      this.barContainer = this.$refs['bar-container'];  // 滚动条容器\n\n      if (!this.range) {\n        this.diffX1 = this._getDiffX(this.value || this.defaultValue);\n      } else {\n        this.diffX1 = this._getDiffX(this.value[0] || this.defaultValue[0]);\n        this.diffX2 = this._getDiffX(this.value[1] || this.defaultValue[1]);\n        this.barWidth = this.diffX2 - this.diffX1;\n      }\n      // 是否支持expresstionBinding\n      if (Utils.env.supportsEB()) {\n        this.block1 && EB.enableBinding(this.block1.ref, 'pan');\n        this.block2 && EB.enableBinding(this.block2.ref, 'pan');\n        this.valueBar && EB.enableBinding(this.valueBar.ref, 'pan');\n      }\n      if (Utils.env.isAndroid()) {\n        this.timeout = 250;\n      }\n      if (this.range) {\n        this.selectRange = this.value || this.defaultValue;                    // 初始化范围选择返回数据\n        this.minDiffX = (this.minDiff / (this.max - this.min)) * this.length;  // 滑块1、2之前最小间距\n      }\n      // 由于weex在mounted后渲染是异步的不能确保元素渲染完成，需要异步执行\n      setTimeout(() => {\n        dom.getComponentRect(this.barContainer, option => {\n          const { left } = option.size;\n          this.leftDiffX = left;\n        });\n      }, 100);\n\n      this.bindExp();\n    },\n    computed: {\n      containerStyle () {\n        return {\n          width: this.length + 56 + 'px',\n          height: '56px'\n        };\n      },\n      rangeBarStyle () {\n        return {\n          width: this.length + 'px',\n          height: this.height + 'px',\n          flexDirection: 'row',\n          backgroundColor: this.invalidColor,\n          overflow: 'hidden'\n        };\n      },\n      valueBarStyle () {\n        let left = 0;\n        let width = 0\n        if (!this.range) {\n          width = this.diffX1;\n        } else {\n          left = this.diffX1;\n          width = this.diffX2 - this.diffX1;\n        }\n        return {\n          width: width + 'px',\n          height: this.height + 'px',\n          transform: `translateX(${left}px)`,\n          backgroundColor: this.disabled ? this.disabledColor : this.validColor\n        };\n      },\n      blockStyle1 () {\n        return {\n          transform: `translateX(${this.diffX1}px)`\n        };\n      },\n      blockStyle2 () {\n        return {\n          transform: `translateX(${this.diffX2}px)`\n        }\n      }\n    },\n    methods: {\n      dispatchPan () {},\n\n      // 更新单选值或最小值\n      _weexStartHandler1 () {\n        this.firstInterval = setInterval(() => {\n          if (!this.range) {\n            dom.getComponentRect(this.valueBar, option => {\n              const { width } = option.size;\n              const value = this._getValue(width);\n              this.$emit('updateValue', value);\n            });\n          } else {\n            dom.getComponentRect(this.block1, option => {\n              const { left } = option.size;\n              this.selectRange[0] = this._getValue(left - this.leftDiffX);\n              this.$emit('updateValue', this.selectRange);\n            });\n          }\n        }, this.timeout);\n      },\n\n      // 更新最大值\n      _weexStartHandler2 () {\n        this.secondInterval = setInterval(() => {\n          dom.getComponentRect(this.block2, option => {\n            const { left } = option.size;\n            this.selectRange[1] = this._getValue(left - this.leftDiffX);\n            this.$emit('updateValue', this.selectRange);\n          });\n        }, this.timeout);\n      },\n\n      // 清除定时器\n      _weexEndHandler () {\n        this.firstInterval && clearInterval(this.firstInterval);\n        this.secondInterval && clearInterval(this.secondInterval);\n      },\n\n      _webStartHandler (e) {\n        if (this.env === 'weex') {\n          return;\n        }\n        this.startX = e.touch.clientX;\n        this.startDiffX1 = this.diffX1;\n        this.startDiffX2 = this.diffX2;\n      },\n\n      _webMoveHandler1 (e) {\n        if (this.env === 'weex' || this.disabled) {\n          return;\n        }\n        const deltaX = e.touch.clientX - this.startX;\n        const diff = this.startDiffX1 + deltaX;\n        let max = this.length;\n        if (this.range) {\n          max = this.diffX2 - this.minDiffX;\n        }\n        if (diff > 0 && diff < max) {\n          this.diffX1 = diff;\n          animation.transition(this.block1, {\n            styles: {\n              transform: `translateX(${this.diffX1}px)`\n            }\n          }, () => {});\n          if (!this.range) {\n            this.$emit('updateValue', this._getValue(this.diffX1));\n          } else {\n            this.selectRange[0] = this._getValue(this.diffX1);\n            this.$emit('updateValue', this.selectRange);\n          }\n        }\n      },\n\n      _webMoveHandler2 (e) {\n        if (this.env === 'weex' || this.disabled) {\n          return;\n        }\n        const deltaX = e.touch.clientX - this.startX;\n        const diff = this.startDiffX2 + deltaX;\n        const min = this.diffX1 + this.minDiffX;\n        const max = this.length;\n        if (diff > min && diff < max) {\n          this.diffX2 = diff;\n          animation.transition(this.block2, {\n            styles: {\n              transform: `translateX(${this.diffX2}px)`\n            }\n          }, () => {});\n          if (!this.range) {\n            this.$emit('updateValue', this._getValue(this.diffX2));\n          } else {\n            this.selectRange[1] = this._getValue(this.diffX2);\n            this.$emit('updateValue', this.selectRange);\n          }\n        }\n      },\n\n      bindExp () {\n        const self = this;\n\n        // 如果禁用，不行进行表达式绑定\n        if (self.disabled) {\n          return;\n        }\n\n        // 初始化按钮&条的大小范围\n        let blockMax1 = 0;\n        if (self.range) {\n          blockMax1 = self.diffX2 - self.minDiffX;\n        } else {\n          blockMax1 = self.length;\n        }\n\n        const blockMax2 = self.length;\n        const blockMin2 = self.diffX1 + self.minDiffX;\n        const barMax1 = self.diffX2;\n        const barMax2 = self.length - self.diffX1;\n\n        // 滑块1表达式\n        var expBlock1 = `{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"min\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${blockMax1}},{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"max\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"+\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"x\\\"},{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${self.diffX1}}]},{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":0}]}]}]}]}`;\n        // 滑块2表达式\n        var expBlock2 = `{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"min\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${blockMax2}},{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"max\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"+\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"x\\\"},{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${self.diffX2}}]},{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${blockMin2}}]}]}]}]}`;\n        // valuebar表达式\n        var expBar1 = `{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"min\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${barMax1}},{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"max\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":0},{\\\"type\\\":\\\"-\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${self.barWidth}},{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"x\\\"}]}]}]}]}]}`;\n        // valuebar 范围表达式\n        var expBar2 = `{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"min\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${barMax2}},{\\\"type\\\":\\\"CallExpression\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"max\\\"},{\\\"type\\\":\\\"Arguments\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":0},{\\\"type\\\":\\\"+\\\",\\\"children\\\":[{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${self.barWidth}},{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"x\\\"}]}]}]}]}]}`;\n\n        if (!self.range) {\n          // 单选\n          const args = [{\n            element: self.block1.ref,\n            property: 'transform.translateX',\n            expression: expBlock1\n          }, {\n            element: self.valueBar.ref,\n            property: 'width',\n            expression: expBlock1\n          }];\n          EB && EB.createBinding(self.block1.ref, 'pan', '', args, e => {\n            if (e.state === 'end') {\n              const range = self.getRange();\n              // 限制diffX1范围\n              self.diffX1 = self._restrictValue(range.rangeX1, self.diffX1 + e.deltaX);\n              self.bindExp();\n            }\n          });\n        } else {\n          // 选范围\n          const args = [{\n            element: self.block1.ref,\n            property: 'transform.translateX',\n            expression: expBlock1\n          }, {\n            element: self.valueBar.ref,\n            property: 'transform.translateX',\n            expression: expBlock1\n          }, {\n            element: self.valueBar.ref,\n            property: 'width',\n            expression: expBar1\n          }];\n\n          const args2 = [{\n            element: self.block2.ref,\n            property: 'transform.translateX',\n            expression: expBlock2\n          }, {\n            element: self.valueBar.ref,\n            property: 'width',\n            expression: expBar2\n          }];\n\n          EB && EB.createBinding(self.block1.ref, 'pan', '', args, e => {\n            if (e.state === 'end') {\n              const range = self.getRange();\n              self.barWidth = self._restrictValue(range.rangeX1, self.barWidth - e.deltaX);\n              self.diffX1 = self._restrictValue(range.rangeX1, self.diffX1 + e.deltaX);\n              self.bindExp();\n            }\n          });\n\n          EB && EB.createBinding(self.block2.ref, 'pan', '', args2, e => {\n            if (e.state === 'end') {\n              const range = self.getRange();\n              self.diffX2 = self._restrictValue(range.rangeX2, self.diffX2 + e.deltaX);\n              self.barWidth = self._restrictValue([0, self.length - self.diffX1], self.barWidth + e.deltaX);\n              self.bindExp();\n            }\n          });\n        }\n      },\n\n      // 获取diffx1 diffx2 取值范围\n      getRange (deltaX) {\n        if (!this.range) {\n          return {\n            rangeX1: [0, this.length]\n          }\n        } else {\n          return {\n            rangeX1: [0, this.diffX2 - this.minDiffX],\n            rangeX2: [this.diffX1 + this.minDiffX, this.length]\n          }\n        }\n      },\n\n      // 限制取值范围\n      _restrictValue (range, value) {\n        if (range && range.length && range.length === 2) {\n          if (value < range[0]) {\n            return range[0];\n          } else if (value > range[1]) {\n            return range[1];\n          } else {\n            return value;\n          }\n        }\n        return;\n      },\n\n      // 根据x方向偏移量计算value\n      _getValue (diffX) {\n        return Math.round((diffX / this.length) * (this.max - this.min) + this.min);\n      },\n\n      // 根据value和length计算x方向偏移值\n      _getDiffX (value) {\n        return ((value - this.min) / (this.max - this.min)) * this.length;\n      }\n    }\n  }\n</script>\n\n<style scoped>\n  .wxc-slider-bar {\n    user-select: none;\n  }\n\n  .slider-bar-container {\n    height: 56px;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .value-bar {\n    height: 4px;\n  }\n\n  .slide-block {\n    width: 56px;\n    height: 56px;\n    background-color: #fff;\n    border-radius: 28px;\n    border-width: 1px;\n    border-color: rgba(0, 0, 0, .1);\n    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);\n    position: absolute;\n    left: 0;\n    bottom: 0;\n  }\n</style>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10405,7 +10404,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.indicator[data-v-1f2af058] {\n  position: absolute;\n  item-color: rgba(255, 195, 0, .5);\n  item-selected-color: #ffc300;\n  item-size: 20px;\n  height: 20px;\n  bottom: 24px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-lightbox/index.vue?6d300862"],"names":[],"mappings":";AA6BA;EACA,mBAAA;EACA,kCAAA;EACA,6BAAA;EACA,gBAAA;EACA,aAAA;EACA,aAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <wxc-mask :width=\"width\"\n            :height=\"height\"\n            aria-hidden=\"true\"\n            mask-bg-color=\"transparent\"\n            overlay-opacity=\"0.8\"\n            :show=\"show\"\n            :show-close=\"false\"\n            @wxcMaskSetHidden=\"maskOverlayClick\">\n    <slider auto-play=\"false\"\n            v-if=\"show\"\n            :style=\"{ height: height  + 'px'}\">\n      <div v-for=\"(v,index) in imageList\"\n           :style=\"{ height: height  + 'px'}\"\n           :key=\"index\">\n        <image resize=\"cover\"\n               :src=\"v.src\"\n               :style=\"{ height: height + 'px', width: width  + 'px'}\"></image>\n      </div>\n      <indicator class=\"indicator\"\n                 :style=\"indicatorStyle\"></indicator>\n    </slider>\n  </wxc-mask>\n</template>\n\n<style scoped>\n  .indicator {\n    position: absolute;\n    item-color: rgba(255, 195, 0, .5);\n    item-selected-color: #ffc300;\n    item-size: 20px;\n    height: 20px;\n    bottom: 24px;\n  }\n</style>\n\n<script>\n  import WxcMask from '../wxc-mask';\n\n  export default {\n    components: {\n      WxcMask\n    },\n    props: {\n      width: {\n        type: [Number, String],\n        default: 750\n      },\n      height: {\n        type: [Number, String],\n        default: 750\n      },\n      show: {\n        type: Boolean,\n        default: false\n      },\n      imageList: Array,\n      indicatorColor: {\n        type: Object,\n        default: () => ({\n          'item-color': 'rgba(255, 195, 0, .5)',\n          'item-selected-color': '#ffc300',\n          'item-size': '20px'\n        })\n      }\n    },\n    computed: {\n      indicatorStyle () {\n        return {\n          width: this.width + 'px',\n          ...this.indicatorColor\n        }\n      }\n    },\n    methods: {\n      maskOverlayClick () {\n        this.$emit('wxcLightboxOverlayClicked', {});\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.indicator[data-v-1f2af058] {\n  position: absolute;\n  item-color: rgba(255, 195, 0, .5);\n  item-selected-color: #ffc300;\n  item-size: 0.26667rem;\n  height: 0.26667rem;\n  bottom: 0.32rem;\n}.indicator > .weex-indicator-item[data-v-1f2af058] {\n  width: 0.26667rem;\n  height: 0.26667rem;\n}\n.indicator > .weex-indicator-item.weex-indicator-item-active[data-v-1f2af058] {\n  background-color: #ffc300;\n}\n.indicator > .weex-indicator-item[data-v-1f2af058] {\n  background-color: rgba(255, 195, 0, .5);\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-lightbox/index.vue?4346e4bc","/Users/Tw93/www/github/weex-ui/packages/wxc-lightbox/<input css 33>","/Users/Tw93/www/github/weex-ui/packages/wxc-lightbox/<input css 32>","/Users/Tw93/www/github/weex-ui/packages/wxc-lightbox/<input css 31>"],"names":[],"mappings":";AA6BA;EACA,mBAAA;EACA,kCAAA;EACA,6BAAA;EACA,sBAAA;EACA,mBAAA;EACA,gBAAA;CACA;ECnCE,kBAAY;EACZ,mBAAa;CACd;ACFD;EACE,0BAA0B;CAC3B;ACFD;EACE,wCAAwC;CACzC","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <wxc-mask :width=\"width\"\n            :height=\"height\"\n            aria-hidden=\"true\"\n            mask-bg-color=\"transparent\"\n            overlay-opacity=\"0.8\"\n            :show=\"show\"\n            :show-close=\"false\"\n            @wxcMaskSetHidden=\"maskOverlayClick\">\n    <slider auto-play=\"false\"\n            v-if=\"show\"\n            :style=\"{ height: height  + 'px'}\">\n      <div v-for=\"(v,index) in imageList\"\n           :style=\"{ height: height  + 'px'}\"\n           :key=\"index\">\n        <image resize=\"cover\"\n               :src=\"v.src\"\n               :style=\"{ height: height + 'px', width: width  + 'px'}\"></image>\n      </div>\n      <indicator class=\"indicator\"\n                 :style=\"[indicatorStyle,{itemSelectedColor:indicatorStyle[item-selected-color],itemSize: indicatorStyle[item-size]}]\"></indicator>\n    </slider>\n  </wxc-mask>\n</template>\n\n<style scoped>\n  .indicator {\n    position: absolute;\n    item-color: rgba(255, 195, 0, .5);\n    item-selected-color: #ffc300;\n    item-size: 20px;\n    height: 20px;\n    bottom: 24px;\n  }\n</style>\n\n<script>\n  import WxcMask from '../wxc-mask';\n\n  export default {\n    components: {\n      WxcMask\n    },\n    props: {\n      width: {\n        type: [Number, String],\n        default: 750\n      },\n      height: {\n        type: [Number, String],\n        default: 750\n      },\n      show: {\n        type: Boolean,\n        default: false\n      },\n      imageList: Array,\n      indicatorColor: {\n        type: Object,\n        default: () => ({\n          'item-color': 'rgba(255, 195, 0, .5)',\n          'item-selected-color': '#ffc300',\n          'item-size': '20px'\n        })\n      }\n    },\n    computed: {\n      indicatorStyle () {\n        return {\n          width: this.width + 'px',\n          ...this.indicatorColor\n        }\n      }\n    },\n    methods: {\n      maskOverlayClick () {\n        this.$emit('wxcLightboxOverlayClicked', {});\n      }\n    }\n  };\n</script>\n",".indicator > .weex-indicator-item {\n  width: 20px;\n  height: 20px;\n}","\n.indicator > .weex-indicator-item.weex-indicator-item-active {\n  background-color: #ffc300;\n}","\n.indicator > .weex-indicator-item {\n  background-color: rgba(255, 195, 0, .5);\n}"],"sourceRoot":""}]);
 
 // exports
 
@@ -10419,7 +10418,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.grid-option[data-v-2289217e] {\n  justify-content: center;\n  border-radius: 8px;\n  border-width: 2px;\n  padding-left: 6px;\n  padding-right: 6px;\n}\n.text-title[data-v-2289217e] {\n  lines: 2;\n  line-height: 30px;\n  text-overflow: ellipsis;\n  text-align: center;\n  font-size: 26px;\n}\n.image-checked[data-v-2289217e] {\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  width: 38px;\n  height: 34px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-grid-select/option.vue?e747a80e"],"names":[],"mappings":";AA4HA;EACA,wBAAA;EACA,mBAAA;EACA,kBAAA;EACA,kBAAA;EACA,mBAAA;CACA;AAEA;EACA,SAAA;EACA,kBAAA;EACA,wBAAA;EACA,mBAAA;EACA,gBAAA;CACA;AAEA;EACA,mBAAA;EACA,SAAA;EACA,UAAA;EACA,YAAA;EACA,aAAA;CACA","file":"option.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by 南麓 on 2017/8/10. -->\n\n<template>\n  <div class=\"grid-option\"\n       :style=\"cWrapperStyle\"\n       @click=\"onClick\"\n       :accessible=\"true\"\n       :aria-label=\"`${title},${checked?'已选中':'未选中'}`\">\n    <text v-if=\"title\" class=\"text-title\" :style=\"cTitleStyle\">{{title}}</text>\n\n    <image v-if=\"checked && icon\" class=\"image-checked\" :src=\"icon\"></image>\n  </div>\n</template>\n\n<script>\n  export default {\n    props: {\n      index: {\n        type: Number,\n        default: -1\n      },\n      // 是否选中\n      checked: {\n        type: Boolean,\n        default: false\n      },\n      // 是否可选\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      // 标题\n      title: {\n        type: String,\n        default: ''\n      },\n      width: {\n        type: String,\n        default: '166px'\n      },\n      height: {\n        type: String,\n        default: '72px'\n      },\n      // 默认 x\n      icon: {\n        type: String,\n        default: 'https://gw.alicdn.com/tfs/TB1IAByhgMPMeJjy1XdXXasrXXa-38-34.png'\n      },\n      // 正常状态文字色值\n      color: {\n        type: String,\n        default: '#3d3d3d'\n      },\n      // 选中状态文字色值\n      checkedColor: {\n        type: String,\n        default: '#3d3d3d'\n      },\n      // 不可选状态文字色值\n      disabledColor: {\n        type: String,\n        default: '#9b9b9b'\n      },\n      // 正常状态边框色值\n      borderColor: {\n        type: String,\n        default: 'transparent'\n      },\n      // 选中状态边框色值\n      checkedBorderColor: {\n        type: String,\n        default: '#ffb200'\n      },\n      // 不可选状态边框色值\n      disabledBorderColor: {\n        type: String,\n        default: 'transparent'\n      },\n      // 正常状态背景色值\n      backgroundColor: {\n        type: String,\n        default: '#f6f6f6'\n      },\n      // 选中状态背景色值\n      checkedBackgroundColor: {\n        type: String,\n        default: '#fff'\n      },\n      // 不可选状态背景色值\n      disabledBackgroundColor: {\n        type: String,\n        default: '#f6f6f6'\n      }\n    },\n    computed: {\n      cWrapperStyle () {\n        const { checked, disabled, width, height, borderColor, checkedBorderColor, disabledBorderColor, backgroundColor, checkedBackgroundColor, disabledBackgroundColor } = this;\n        return {\n          width,\n          height,\n          borderColor: disabled ? disabledBorderColor : checked ? checkedBorderColor : borderColor,\n          backgroundColor: disabled ? disabledBackgroundColor : checked ? checkedBackgroundColor : backgroundColor\n        }\n      },\n      cTitleStyle () {\n        const { checked, disabled, color, checkedColor, disabledColor } = this;\n        return {\n          color: disabled ? disabledColor : checked ? checkedColor : color\n        }\n      }\n    },\n    methods: {\n      onClick () {\n        if (!this.disabled) {\n          this.$emit('select', this.index);\n        }\n      }\n    }\n  }\n</script>\n\n<style scoped>\n  .grid-option {\n    justify-content: center;\n    border-radius: 8px;\n    border-width: 2px;\n    padding-left: 6px;\n    padding-right: 6px;\n  }\n\n  .text-title {\n    lines: 2;\n    line-height: 30px;\n    text-overflow: ellipsis;\n    text-align: center;\n    font-size: 26px;\n  }\n\n  .image-checked {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n    width: 38px;\n    height: 34px;\n  }\n</style>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.grid-option[data-v-2289217e] {\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  border-radius: 0.10667rem;\n  border-width: 0.02667rem;\n  padding-left: 0.08rem;\n  padding-right: 0.08rem;\n}\n.text-title[data-v-2289217e] {\n  lines: 2;\n  line-height: 0.4rem;\n  text-overflow: ellipsis;\n  text-align: center;\n  font-size: 0.34667rem;\n}\n.image-checked[data-v-2289217e] {\n  position: absolute;\n  right: 0;\n  bottom: 0;\n  width: 0.50667rem;\n  height: 0.45333rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-grid-select/option.vue?e747a80e"],"names":[],"mappings":";AA4HA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,0BAAA;EACA,yBAAA;EACA,sBAAA;EACA,uBAAA;CACA;AAEA;EACA,SAAA;EACA,oBAAA;EACA,wBAAA;EACA,mBAAA;EACA,sBAAA;CACA;AAEA;EACA,mBAAA;EACA,SAAA;EACA,UAAA;EACA,kBAAA;EACA,mBAAA;CACA","file":"option.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by 南麓 on 2017/8/10. -->\n\n<template>\n  <div class=\"grid-option\"\n       :style=\"cWrapperStyle\"\n       @click=\"onClick\"\n       :accessible=\"true\"\n       :aria-label=\"`${title},${checked?'已选中':'未选中'}`\">\n    <text v-if=\"title\" class=\"text-title\" :style=\"cTitleStyle\">{{title}}</text>\n\n    <image v-if=\"checked && icon\" class=\"image-checked\" :src=\"icon\"></image>\n  </div>\n</template>\n\n<script>\n  export default {\n    props: {\n      index: {\n        type: Number,\n        default: -1\n      },\n      // 是否选中\n      checked: {\n        type: Boolean,\n        default: false\n      },\n      // 是否可选\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      // 标题\n      title: {\n        type: String,\n        default: ''\n      },\n      width: {\n        type: String,\n        default: '166px'\n      },\n      height: {\n        type: String,\n        default: '72px'\n      },\n      // 默认 x\n      icon: {\n        type: String,\n        default: 'https://gw.alicdn.com/tfs/TB1IAByhgMPMeJjy1XdXXasrXXa-38-34.png'\n      },\n      // 正常状态文字色值\n      color: {\n        type: String,\n        default: '#3d3d3d'\n      },\n      // 选中状态文字色值\n      checkedColor: {\n        type: String,\n        default: '#3d3d3d'\n      },\n      // 不可选状态文字色值\n      disabledColor: {\n        type: String,\n        default: '#9b9b9b'\n      },\n      // 正常状态边框色值\n      borderColor: {\n        type: String,\n        default: 'transparent'\n      },\n      // 选中状态边框色值\n      checkedBorderColor: {\n        type: String,\n        default: '#ffb200'\n      },\n      // 不可选状态边框色值\n      disabledBorderColor: {\n        type: String,\n        default: 'transparent'\n      },\n      // 正常状态背景色值\n      backgroundColor: {\n        type: String,\n        default: '#f6f6f6'\n      },\n      // 选中状态背景色值\n      checkedBackgroundColor: {\n        type: String,\n        default: '#fff'\n      },\n      // 不可选状态背景色值\n      disabledBackgroundColor: {\n        type: String,\n        default: '#f6f6f6'\n      }\n    },\n    computed: {\n      cWrapperStyle () {\n        const { checked, disabled, width, height, borderColor, checkedBorderColor, disabledBorderColor, backgroundColor, checkedBackgroundColor, disabledBackgroundColor } = this;\n        return {\n          width,\n          height,\n          borderColor: disabled ? disabledBorderColor : checked ? checkedBorderColor : borderColor,\n          backgroundColor: disabled ? disabledBackgroundColor : checked ? checkedBackgroundColor : backgroundColor\n        }\n      },\n      cTitleStyle () {\n        const { checked, disabled, color, checkedColor, disabledColor } = this;\n        return {\n          color: disabled ? disabledColor : checked ? checkedColor : color\n        }\n      }\n    },\n    methods: {\n      onClick () {\n        if (!this.disabled) {\n          this.$emit('select', this.index);\n        }\n      }\n    }\n  }\n</script>\n\n<style scoped>\n  .grid-option {\n    justify-content: center;\n    border-radius: 8px;\n    border-width: 2px;\n    padding-left: 6px;\n    padding-right: 6px;\n  }\n\n  .text-title {\n    lines: 2;\n    line-height: 30px;\n    text-overflow: ellipsis;\n    text-align: center;\n    font-size: 26px;\n  }\n\n  .image-checked {\n    position: absolute;\n    right: 0;\n    bottom: 0;\n    width: 38px;\n    height: 34px;\n  }\n</style>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10433,7 +10432,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wrap[data-v-254bbf80] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.wxc-result[data-v-254bbf80] {\n  width: 750px;\n  flex: 1;\n  align-items: center;\n  background-color: #f2f3f4;\n}\n.result-image[data-v-254bbf80] {\n  width: 320px;\n  height: 320px;\n}\n.result-content[data-v-254bbf80] {\n  margin-top: 36px;\n  align-items: center;\n}\n.content-text[data-v-254bbf80] {\n  font-size: 30px;\n  color: #A5A5A5;\n  height: 42px;\n  line-height: 42px;\n  text-align: center;\n}\n.content-desc[data-v-254bbf80] {\n  margin-top: 10px;\n}\n.result-button[data-v-254bbf80] {\n  margin-top: 60px;\n  border-width: 1px;\n  border-color: #979797;\n  background-color: #FFFFFF;\n  border-radius: 6px;\n  width: 240px;\n  height: 72px;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n}\n.button-text[data-v-254bbf80] {\n  color: #666666;\n  font-size: 30px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-result/index.vue?16e90a89"],"names":[],"mappings":";AA0BA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,UAAA;CACA;AAEA;EACA,aAAA;EACA,QAAA;EACA,oBAAA;EACA,0BAAA;CACA;AAEA;EACA,aAAA;EACA,cAAA;CACA;AAEA;EACA,iBAAA;EACA,oBAAA;CACA;AAEA;EACA,gBAAA;EACA,eAAA;EACA,aAAA;EACA,kBAAA;EACA,mBAAA;CACA;AAEA;EACA,iBAAA;CACA;AAEA;EACA,iBAAA;EACA,kBAAA;EACA,sBAAA;EACA,0BAAA;EACA,mBAAA;EACA,aAAA;EACA,aAAA;EACA,oBAAA;EACA,oBAAA;EACA,wBAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A  result page-->\n\n<template>\n  <div class=\"wrap\" v-if=\"show\" :style=\"wrapStyle\">\n    <div class=\"wxc-result\" :style=\"{paddingTop: setPaddingTop }\">\n      <image class=\"result-image\"\n             :aria-hidden=\"true\"\n             :src=\"resultType.pic\"></image>\n      <div class=\"result-content\" v-if=\"resultType.content\">\n        <text class=\"content-text\">{{resultType.content}}</text>\n        <text class=\"content-text content-desc\"\n              v-if=\"resultType.desc\">{{resultType.desc}}</text>\n      </div>\n      <div class=\"result-button\"\n           v-if=\"resultType.button\"\n           @touchend=\"handleTouchEnd\"\n           @click=\"onClick\">\n        <text class=\"button-text\">{{resultType.button}}</text>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wrap {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n  }\n\n  .wxc-result {\n    width: 750px;\n    flex: 1;\n    align-items: center;\n    background-color: #f2f3f4;\n  }\n\n  .result-image {\n    width: 320px;\n    height: 320px;\n  }\n\n  .result-content {\n    margin-top: 36px;\n    align-items: center;\n  }\n\n  .content-text {\n    font-size: 30px;\n    color: #A5A5A5;\n    height: 42px;\n    line-height: 42px;\n    text-align: center;\n  }\n\n  .content-desc {\n    margin-top: 10px;\n  }\n\n  .result-button {\n    margin-top: 60px;\n    border-width: 1px;\n    border-color: #979797;\n    background-color: #FFFFFF;\n    border-radius: 6px;\n    width: 240px;\n    height: 72px;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n  }\n\n  .button-text {\n    color: #666666;\n    font-size: 30px;\n  }\n</style>\n\n<script>\n  import TYPES from './type';\n  import Utils from '../utils';\n\n  export default {\n    props: {\n      type: {\n        type: String,\n        default: 'errorPage'\n      },\n      show: {\n        type: Boolean,\n        default: true\n      },\n      wrapStyle: Object,\n      paddingTop: {\n        type: [Number, String],\n        default: 232\n      },\n      customSet: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    computed: {\n      resultType () {\n        const { type, customSet } = this;\n        const allTypes = Utils.isEmptyObject(customSet) ? TYPES : Utils.mergeDeep(TYPES, customSet);\n        let types = allTypes['errorPage'];\n        if (['errorPage', 'noGoods', 'noNetwork', 'errorLocation'].indexOf(type) > -1) {\n          types = allTypes[type];\n        }\n        return types;\n      },\n      setPaddingTop () {\n        const paddingTop = this.paddingTop;\n        return `${paddingTop}px`\n      }\n    },\n    methods: {\n      handleTouchEnd (e) {\n        // web上面有点击穿透问题\n        const { platform } = weex.config.env;\n        platform === 'Web' && e.preventDefault && e.preventDefault();\n      },\n      onClick () {\n        const type = this.type;\n        this.$emit('wxcResultButtonClicked', { type })\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wrap[data-v-254bbf80] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n.wxc-result[data-v-254bbf80] {\n  width: 10rem;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  background-color: #f2f3f4;\n}\n.result-image[data-v-254bbf80] {\n  width: 4.26667rem;\n  height: 4.26667rem;\n}\n.result-content[data-v-254bbf80] {\n  margin-top: 0.48rem;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n}\n.content-text[data-v-254bbf80] {\n  font-size: 0.4rem;\n  color: #A5A5A5;\n  height: 0.56rem;\n  line-height: 0.56rem;\n  text-align: center;\n}\n.content-desc[data-v-254bbf80] {\n  margin-top: 0.13333rem;\n}\n.result-button[data-v-254bbf80] {\n  margin-top: 0.8rem;\n  border-width: 0.01333rem;\n  border-color: #979797;\n  background-color: #FFFFFF;\n  border-radius: 0.08rem;\n  width: 3.2rem;\n  height: 0.96rem;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n}\n.button-text[data-v-254bbf80] {\n  color: #666666;\n  font-size: 0.4rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-result/index.vue?16e90a89"],"names":[],"mappings":";AA0BA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;EACA,SAAA;EACA,UAAA;CACA;AAEA;EACA,aAAA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;CACA;AAEA;EACA,kBAAA;EACA,mBAAA;CACA;AAEA;EACA,oBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,kBAAA;EACA,eAAA;EACA,gBAAA;EACA,qBAAA;EACA,mBAAA;CACA;AAEA;EACA,uBAAA;CACA;AAEA;EACA,mBAAA;EACA,yBAAA;EACA,sBAAA;EACA,0BAAA;EACA,uBAAA;EACA,cAAA;EACA,gBAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;CACA;AAEA;EACA,eAAA;EACA,kBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A  result page-->\n\n<template>\n  <div class=\"wrap\" v-if=\"show\" :style=\"wrapStyle\">\n    <div class=\"wxc-result\" :style=\"{paddingTop: setPaddingTop }\">\n      <image class=\"result-image\"\n             :aria-hidden=\"true\"\n             :src=\"resultType.pic\"></image>\n      <div class=\"result-content\" v-if=\"resultType.content\">\n        <text class=\"content-text\">{{resultType.content}}</text>\n        <text class=\"content-text content-desc\"\n              v-if=\"resultType.desc\">{{resultType.desc}}</text>\n      </div>\n      <div class=\"result-button\"\n           v-if=\"resultType.button\"\n           @touchend=\"handleTouchEnd\"\n           @click=\"onClick\">\n        <text class=\"button-text\">{{resultType.button}}</text>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wrap {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n  }\n\n  .wxc-result {\n    width: 750px;\n    flex: 1;\n    align-items: center;\n    background-color: #f2f3f4;\n  }\n\n  .result-image {\n    width: 320px;\n    height: 320px;\n  }\n\n  .result-content {\n    margin-top: 36px;\n    align-items: center;\n  }\n\n  .content-text {\n    font-size: 30px;\n    color: #A5A5A5;\n    height: 42px;\n    line-height: 42px;\n    text-align: center;\n  }\n\n  .content-desc {\n    margin-top: 10px;\n  }\n\n  .result-button {\n    margin-top: 60px;\n    border-width: 1px;\n    border-color: #979797;\n    background-color: #FFFFFF;\n    border-radius: 6px;\n    width: 240px;\n    height: 72px;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n  }\n\n  .button-text {\n    color: #666666;\n    font-size: 30px;\n  }\n</style>\n\n<script>\n  import TYPES from './type';\n  import Utils from '../utils';\n\n  export default {\n    props: {\n      type: {\n        type: String,\n        default: 'errorPage'\n      },\n      show: {\n        type: Boolean,\n        default: true\n      },\n      wrapStyle: Object,\n      paddingTop: {\n        type: [Number, String],\n        default: 232\n      },\n      customSet: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    computed: {\n      resultType () {\n        const { type, customSet } = this;\n        const allTypes = Utils.isEmptyObject(customSet) ? TYPES : Utils.mergeDeep(TYPES, customSet);\n        let types = allTypes['errorPage'];\n        if (['errorPage', 'noGoods', 'noNetwork', 'errorLocation'].indexOf(type) > -1) {\n          types = allTypes[type];\n        }\n        return types;\n      },\n      setPaddingTop () {\n        const paddingTop = this.paddingTop;\n        return `${paddingTop}px`\n      }\n    },\n    methods: {\n      handleTouchEnd (e) {\n        // web上面有点击穿透问题\n        const { platform } = weex.config.env;\n        platform === 'Web' && e.preventDefault && e.preventDefault();\n      },\n      onClick () {\n        const type = this.type;\n        this.$emit('wxcResultButtonClicked', { type })\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10447,7 +10446,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-cell[data-v-289df085] {\n  height: 100px;\n  position: relative;\n  flex-direction: row;\n  align-items: center;\n  padding-left: 24px;\n  padding-right: 24px;\n  background-color: #ffffff;\n}\n.cell-margin[data-v-289df085] {\n  margin-bottom: 24px;\n}\n.cell-title[data-v-289df085] {\n  flex: 1;\n}\n.cell-indent[data-v-289df085] {\n  padding-bottom: 30px;\n  padding-top: 30px;\n}\n.has-desc[data-v-289df085] {\n  padding-bottom: 18px;\n  padding-top: 18px;\n}\n.cell-top-border[data-v-289df085] {\n  border-top-color: #e2e2e2;\n  border-top-width: 1px;\n}\n.cell-bottom-border[data-v-289df085] {\n  border-bottom-color: #e2e2e2;\n  border-bottom-width: 1px;\n}\n.cell-label-text[data-v-289df085] {\n  font-size: 30px;\n  color: #666666;\n  width: 188px;\n  margin-right: 10px;\n}\n.cell-arrow-icon[data-v-289df085] {\n  width: 22px;\n  height: 22px;\n}\n.cell-content[data-v-289df085] {\n  color: #333333;\n  font-size: 30px;\n  line-height: 40px;\n}\n.cell-desc-text[data-v-289df085] {\n  color: #999999;\n  font-size: 24px;\n  line-height: 30px;\n  margin-top: 4px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-cell/index.vue?3a6e942c"],"names":[],"mappings":";AAiCA;EACA,cAAA;EACA,mBAAA;EACA,oBAAA;EACA,oBAAA;EACA,mBAAA;EACA,oBAAA;EACA,0BAAA;CACA;AAEA;EACA,oBAAA;CACA;AAEA;EACA,QAAA;CACA;AAEA;EACA,qBAAA;EACA,kBAAA;CACA;AAEA;EACA,qBAAA;EACA,kBAAA;CACA;AAEA;EACA,0BAAA;EACA,sBAAA;CACA;AAEA;EACA,6BAAA;EACA,yBAAA;CACA;AAEA;EACA,gBAAA;EACA,eAAA;EACA,aAAA;EACA,mBAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;EACA,kBAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;EACA,kBAAA;EACA,gBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/09/25. -->\n<!--A Cell -->\n\n<template>\n  <div\n    :class=\"['wxc-cell', hasTopBorder && 'cell-top-border', hasBottomBorder && 'cell-bottom-border', hasMargin && 'cell-margin', hasVerticalIndent && 'cell-indent', desc && 'has-desc']\"\n    :style=\"cellStyle\"\n    :accessible=\"autoAccessible\"\n    :aria-label=\"`${label},${title},${desc}`\"\n    @click=\"cellClicked\">\n    <slot name=\"label\">\n      <div v-if=\"label\">\n        <text class=\"cell-label-text\">{{label}}</text>\n      </div>\n    </slot>\n    <div class=\"cell-title\">\n      <slot name=\"title\">\n        <text class=\"cell-content\">{{title}}</text>\n        <text class=\"cell-desc-text\"\n              v-if=\"desc\">{{desc}}</text>\n      </slot>\n    </div>\n    <slot name=\"value\"></slot>\n    <slot></slot>\n    <image :src=\"arrowIcon\"\n           class=\"cell-arrow-icon\"\n           :aria-hidden=\"true\"\n           v-if=\"hasArrow\"></image>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-cell {\n    height: 100px;\n    position: relative;\n    flex-direction: row;\n    align-items: center;\n    padding-left: 24px;\n    padding-right: 24px;\n    background-color: #ffffff;\n  }\n\n  .cell-margin {\n    margin-bottom: 24px;\n  }\n\n  .cell-title {\n    flex: 1;\n  }\n\n  .cell-indent {\n    padding-bottom: 30px;\n    padding-top: 30px;\n  }\n\n  .has-desc {\n    padding-bottom: 18px;\n    padding-top: 18px;\n  }\n\n  .cell-top-border {\n    border-top-color: #e2e2e2;\n    border-top-width: 1px;\n  }\n\n  .cell-bottom-border {\n    border-bottom-color: #e2e2e2;\n    border-bottom-width: 1px;\n  }\n\n  .cell-label-text {\n    font-size: 30px;\n    color: #666666;\n    width: 188px;\n    margin-right: 10px;\n  }\n\n  .cell-arrow-icon {\n    width: 22px;\n    height: 22px;\n  }\n\n  .cell-content {\n    color: #333333;\n    font-size: 30px;\n    line-height: 40px;\n  }\n\n  .cell-desc-text {\n    color: #999999;\n    font-size: 24px;\n    line-height: 30px;\n    margin-top: 4px;\n  }\n</style>\n\n<script>\n  import Utils from '../utils';\n\n  export default {\n    props: {\n      label: {\n        type: String,\n        default: ''\n      },\n      title: {\n        type: String,\n        default: ''\n      },\n      desc: {\n        type: String,\n        default: ''\n      },\n      link: {\n        type: String,\n        default: ''\n      },\n      hasTopBorder: {\n        type: Boolean,\n        default: false\n      },\n      hasMargin: {\n        type: Boolean,\n        default: false\n      },\n      hasBottomBorder: {\n        type: Boolean,\n        default: true\n      },\n      hasArrow: {\n        type: Boolean,\n        default: false\n      },\n      arrowIcon: {\n        type: String,\n        default: 'https://gw.alicdn.com/tfs/TB11zBUpwMPMeJjy1XbXXcwxVXa-22-22.png'\n      },\n      hasVerticalIndent: {\n        type: Boolean,\n        default: true\n      },\n      cellStyle: {\n        type: Object,\n        default: () => ({})\n      },\n      autoAccessible: {\n        type: Boolean,\n        default: true\n      }\n    },\n    methods: {\n      cellClicked (e) {\n        const link = this.link;\n        this.$emit('wxcCellClicked', { e });\n        link && Utils.goToH5Page(link, true);\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-cell[data-v-289df085] {\n  height: 1.33333rem;\n  position: relative;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  padding-left: 0.32rem;\n  padding-right: 0.32rem;\n  background-color: #ffffff;\n}\n.cell-margin[data-v-289df085] {\n  margin-bottom: 0.32rem;\n}\n.cell-title[data-v-289df085] {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n}\n.cell-indent[data-v-289df085] {\n  padding-bottom: 0.4rem;\n  padding-top: 0.4rem;\n}\n.has-desc[data-v-289df085] {\n  padding-bottom: 0.24rem;\n  padding-top: 0.24rem;\n}\n.cell-top-border[data-v-289df085] {\n  border-top-color: #e2e2e2;\n  border-top-width: 0.01333rem;\n}\n.cell-bottom-border[data-v-289df085] {\n  border-bottom-color: #e2e2e2;\n  border-bottom-width: 0.01333rem;\n}\n.cell-label-text[data-v-289df085] {\n  font-size: 0.4rem;\n  color: #666666;\n  width: 2.50667rem;\n  margin-right: 0.13333rem;\n}\n.cell-arrow-icon[data-v-289df085] {\n  width: 0.29333rem;\n  height: 0.29333rem;\n}\n.cell-content[data-v-289df085] {\n  color: #333333;\n  font-size: 0.4rem;\n  line-height: 0.53333rem;\n}\n.cell-desc-text[data-v-289df085] {\n  color: #999999;\n  font-size: 0.32rem;\n  line-height: 0.4rem;\n  margin-top: 0.05333rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-cell/index.vue?3a6e942c"],"names":[],"mappings":";AAiCA;EACA,mBAAA;EACA,mBAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,sBAAA;EACA,uBAAA;EACA,0BAAA;CACA;AAEA;EACA,uBAAA;CACA;AAEA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;CACA;AAEA;EACA,uBAAA;EACA,oBAAA;CACA;AAEA;EACA,wBAAA;EACA,qBAAA;CACA;AAEA;EACA,0BAAA;EACA,6BAAA;CACA;AAEA;EACA,6BAAA;EACA,gCAAA;CACA;AAEA;EACA,kBAAA;EACA,eAAA;EACA,kBAAA;EACA,yBAAA;CACA;AAEA;EACA,kBAAA;EACA,mBAAA;CACA;AAEA;EACA,eAAA;EACA,kBAAA;EACA,wBAAA;CACA;AAEA;EACA,eAAA;EACA,mBAAA;EACA,oBAAA;EACA,uBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/09/25. -->\n<!--A Cell -->\n\n<template>\n  <div\n    :class=\"['wxc-cell', hasTopBorder && 'cell-top-border', hasBottomBorder && 'cell-bottom-border', hasMargin && 'cell-margin', hasVerticalIndent && 'cell-indent', desc && 'has-desc']\"\n    :style=\"cellStyle\"\n    :accessible=\"autoAccessible\"\n    :aria-label=\"`${label},${title},${desc}`\"\n    @click=\"cellClicked\">\n    <slot name=\"label\">\n      <div v-if=\"label\">\n        <text class=\"cell-label-text\">{{label}}</text>\n      </div>\n    </slot>\n    <div class=\"cell-title\">\n      <slot name=\"title\">\n        <text class=\"cell-content\">{{title}}</text>\n        <text class=\"cell-desc-text\"\n              v-if=\"desc\">{{desc}}</text>\n      </slot>\n    </div>\n    <slot name=\"value\"></slot>\n    <slot></slot>\n    <image :src=\"arrowIcon\"\n           class=\"cell-arrow-icon\"\n           :aria-hidden=\"true\"\n           v-if=\"hasArrow\"></image>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-cell {\n    height: 100px;\n    position: relative;\n    flex-direction: row;\n    align-items: center;\n    padding-left: 24px;\n    padding-right: 24px;\n    background-color: #ffffff;\n  }\n\n  .cell-margin {\n    margin-bottom: 24px;\n  }\n\n  .cell-title {\n    flex: 1;\n  }\n\n  .cell-indent {\n    padding-bottom: 30px;\n    padding-top: 30px;\n  }\n\n  .has-desc {\n    padding-bottom: 18px;\n    padding-top: 18px;\n  }\n\n  .cell-top-border {\n    border-top-color: #e2e2e2;\n    border-top-width: 1px;\n  }\n\n  .cell-bottom-border {\n    border-bottom-color: #e2e2e2;\n    border-bottom-width: 1px;\n  }\n\n  .cell-label-text {\n    font-size: 30px;\n    color: #666666;\n    width: 188px;\n    margin-right: 10px;\n  }\n\n  .cell-arrow-icon {\n    width: 22px;\n    height: 22px;\n  }\n\n  .cell-content {\n    color: #333333;\n    font-size: 30px;\n    line-height: 40px;\n  }\n\n  .cell-desc-text {\n    color: #999999;\n    font-size: 24px;\n    line-height: 30px;\n    margin-top: 4px;\n  }\n</style>\n\n<script>\n  import Utils from '../utils';\n\n  export default {\n    props: {\n      label: {\n        type: String,\n        default: ''\n      },\n      title: {\n        type: String,\n        default: ''\n      },\n      desc: {\n        type: String,\n        default: ''\n      },\n      link: {\n        type: String,\n        default: ''\n      },\n      hasTopBorder: {\n        type: Boolean,\n        default: false\n      },\n      hasMargin: {\n        type: Boolean,\n        default: false\n      },\n      hasBottomBorder: {\n        type: Boolean,\n        default: true\n      },\n      hasArrow: {\n        type: Boolean,\n        default: false\n      },\n      arrowIcon: {\n        type: String,\n        default: 'https://gw.alicdn.com/tfs/TB11zBUpwMPMeJjy1XbXXcwxVXa-22-22.png'\n      },\n      hasVerticalIndent: {\n        type: Boolean,\n        default: true\n      },\n      cellStyle: {\n        type: Object,\n        default: () => ({})\n      },\n      autoAccessible: {\n        type: Boolean,\n        default: true\n      }\n    },\n    methods: {\n      cellClicked (e) {\n        const link = this.link;\n        this.$emit('wxcCellClicked', { e });\n        link && Utils.goToH5Page(link, true);\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10461,7 +10460,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-page-calendar[data-v-3472bf4f] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  right: -750px;\n  width: 750px;\n  color: #333333;\n  background-color: #fff;\n}\n.flex-item[data-v-3472bf4f] {\n  flex: 1;\n  text-align: center;\n}\n.calendar-weekday[data-v-3472bf4f] {\n  height: 60px;\n  background-color: #ffffff;\n  border-bottom-width: 1px;\n  border-top-width: 1px;\n  border-color: #e2e2e2;\n  flex-direction: row;\n  justify-content: space-around;\n  align-items: center;\n}\n.weekday-text[data-v-3472bf4f] {\n  color: #000000;\n  flex: 1;\n  font-size: 24px;\n  text-align: center;\n}\n.calendar-list[data-v-3472bf4f] {\n  flex: 1;\n  flex-direction: column;\n}\n.month-text[data-v-3472bf4f] {\n  font-size: 32px;\n  height: 60px;\n  line-height: 60px;\n  width: 750px;\n  text-align: center;\n  align-items: center;\n  background-color: #f2f3f4;\n}\n.calendar-row[data-v-3472bf4f] {\n  height: 140px;\n  flex-direction: row;\n  background-color: #ffffff;\n  border-bottom-width: 1px;\n  border-color: #f2f3f4;\n  align-items: center;\n  justify-content: space-between;\n  position: relative;\n}\n.row-item[data-v-3472bf4f] {\n  flex: 1;\n  height: 140px;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  justify-content: center;\n  align-items: center;\n}\n.iphone-x[data-v-3472bf4f] {\n  height: 68px;\n}\n.calendar-note[data-v-3472bf4f] {\n  height: 36px;\n  line-height: 36px;\n  font-size: 24px;\n  color: #000000;\n  text-align: center;\n}\n.calendar-day[data-v-3472bf4f] {\n  height: 48px;\n  line-height: 48px;\n  font-size: 36px;\n  color: #000000;\n  text-align: center;\n}\n.calendar-ext[data-v-3472bf4f] {\n  height: 36px;\n  line-height: 36px;\n  color: #999999;\n  text-align: center;\n  font-size: 24px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.calendar-holiday[data-v-3472bf4f] {\n  color: #FF5000;\n}\n.calendar-rest[data-v-3472bf4f] {\n  color: #FF5000;\n}\n.item-row-selected[data-v-3472bf4f] {\n  color: #fff;\n  background-color: #FFC900;\n  text-align: center;\n}\n.item-text-selected[data-v-3472bf4f] {\n  color: #3d3d3d;\n  text-align: center;\n}\n.calendar-disabled[data-v-3472bf4f] {\n  color: #CCCCCC;\n}\n.cell-disabled[data-v-3472bf4f] {\n  background-color: #FBFBFB;\n}\n.calendar-day-include[data-v-3472bf4f] {\n  background-color: #FFF7D6;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-page-calendar/index.vue?ff4a6cd2"],"names":[],"mappings":";AA+NA;EACA,gBAAA;EACA,OAAA;EACA,UAAA;EACA,cAAA;EACA,aAAA;EACA,eAAA;EACA,uBAAA;CACA;AAEA;EACA,QAAA;EACA,mBAAA;CACA;AAEA;EACA,aAAA;EACA,0BAAA;EACA,yBAAA;EACA,sBAAA;EACA,sBAAA;EACA,oBAAA;EACA,8BAAA;EACA,oBAAA;CACA;AAEA;EACA,eAAA;EACA,QAAA;EACA,gBAAA;EACA,mBAAA;CACA;AAEA;EACA,QAAA;EACA,uBAAA;CACA;AAEA;EACA,gBAAA;EACA,aAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,oBAAA;EACA,0BAAA;CACA;AAEA;EACA,cAAA;EACA,oBAAA;EACA,0BAAA;EACA,yBAAA;EACA,sBAAA;EACA,oBAAA;EACA,+BAAA;EACA,mBAAA;CACA;AAEA;EACA,QAAA;EACA,cAAA;EACA,kBAAA;EACA,qBAAA;EACA,wBAAA;EACA,oBAAA;CACA;AAEA;EACA,aAAA;CACA;AAEA;EACA,aAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,mBAAA;CACA;AAEA;EACA,aAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,mBAAA;CACA;AAEA;EACA,aAAA;EACA,kBAAA;EACA,eAAA;EACA,mBAAA;EACA,gBAAA;EACA,iBAAA;EACA,wBAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,YAAA;EACA,0BAAA;EACA,mBAAA;CACA;AAEA;EACA,eAAA;EACA,mBAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,0BAAA;CACA;AAEA;EACA,0BAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n<!-- Updated by Tw93 on 17/11/22. -->\n\n<template>\n  <div class=\"wxc-page-calendar\"\n       ref=\"pageCalendar\">\n    <wxc-minibar :show=\"showTitle\"\n                 v-bind=\"minibarCfg\"\n                 :use-default-return=\"false\"\n                 @wxcMinibarLeftButtonClicked=\"minibarLeftButtonClick\"></wxc-minibar>\n    <div class=\"calendar-weekday\" v-if=\"isShow\">\n      <text class=\"flex-item weekday-text\"\n            :key=\"k\"\n            :aria-label=\"`周${week}`\"\n            v-for=\"(week,k) in ['日','一','二','三','四','五','六']\">{{week}}</text>\n    </div>\n    <list class=\"calendar-list\"\n          v-if=\"isShow\">\n      <cell v-for=\"(month,index) in monthsArray\"\n            :key=\"index\"\n            :class=\"[!month.title && 'calendar-row']\">\n        <text class=\"month-text\"\n              v-if=\"month.title\">{{month.title}}</text>\n        <div v-else\n             v-for=\"(cell,rowIndex) in month\"\n             :key=\"`${index}-${rowIndex}`\"\n             :ref=\"cell.ref\"\n             :class=\"['row-item', cell.cellClass]\"\n             :accessible=\"true\"\n             :aria-label=\"`${cell.text?cell.text:''},${cell.note?cell.note:''},${cell.ext?cell.ext:''}`\"\n             @click=\"onClickDate(cell)\">\n          <text :class=\"['calendar-note', cell.cls]\">{{cell.note}}</text>\n          <text :class=\"['calendar-day', cell.cls]\">{{cell.text}}</text>\n          <text :class=\"['calendar-ext', cell.cls]\">{{cell.ext}}</text>\n        </div>\n      </cell>\n      <cell class=\"iphone-x\" v-if=\"isIPhoneX\"></cell>\n    </list>\n  </div>\n</template>\n\n<script>\n  import * as Format from './format';\n  import Utils from '../utils';\n\n  const isWeb = Utils.env.isWeb();\n\n  const animation = weex.requireModule('animation');\n  const dom = weex.requireModule('dom');\n\n  import WxcMinibar from '../wxc-minibar'\n\n  export default {\n    components: { WxcMinibar },\n    props: {\n      selectedDate: Array,\n      dateRange: {\n        type: Array,\n        required: true,\n        default: () => ([])\n      },\n      minibarCfg: {\n        type: Object,\n        default: () => ({\n          'title': '选择日期',\n          'background-color': '#FFC900',\n          'text-color': '#3D3D3D'\n        })\n      },\n      showHeader: {\n        type: Boolean,\n        default: false\n      },\n      selectedNote: {\n        type: Array,\n        default: () => (['开始', '到达', '往返'])\n      },\n      isRange: {\n        type: Boolean,\n        default: false\n      },\n      needDestroy: {\n        type: Boolean,\n        default: false\n      },\n      descList: {\n        type: Array,\n        default: () => ([])\n      }\n    },\n    data: () => ({\n      isShow: false,\n      reSelect: true,\n      today: Format.getToDay(),\n      departDate: '',\n      arriveDate: ''\n    }),\n    computed: {\n      monthsArray () {\n        const { dateRange: range, today, departDate, arriveDate, selectedNote, descList } = this;\n        const param = { range, today, departDate, arriveDate, selectedNote, descList }\n        return Format.generateDateCell(param);\n      }\n    },\n    created () {\n      this.isIPhoneX = Utils.env.isIPhoneX();\n      this.showTitle = isWeb || this.showHeader;\n      this.detectShow();\n    },\n    mounted () {\n      const { needDestroy } = this;\n      const hold = isWeb ? 700 : 100;\n      !needDestroy && setTimeout(() => {\n        this.isShow = true;\n        this.scrollToDate();\n      }, hold);\n    },\n    watch: {\n      needDestroy (newVal, preVal) {\n        if (!newVal && newVal !== preVal) {\n          setTimeout(() => {\n            this.isShow = true;\n          }, 200)\n        }\n      }\n    },\n    methods: {\n      minibarLeftButtonClick () {\n        setTimeout(() => {\n          this.hide();\n          this.$emit('wxcPageCalendarBackClicked', {});\n        }, 100);\n      },\n      onClickDate (datConfig) {\n        const self = this;\n        if (datConfig.disabled || datConfig.isEmpty) return;\n\n        if (self.reSelect) {\n          self.departDate = '';\n          self.arriveDate = '';\n          self.reSelect = false;\n        }\n\n        if (self.isRange) {\n          if (self.departDate && Date.parse(self.departDate) <= Date.parse(datConfig.date)) {\n            self.arriveDate = datConfig.date;\n          } else {\n            self.departDate = datConfig.date;\n          }\n          if (self.departDate && self.arriveDate) {\n            self.dispatchDateChange([self.departDate, self.arriveDate]);\n          }\n        } else {\n          self.departDate = datConfig.date;\n          self.dispatchDateChange([self.departDate]);\n        }\n      },\n      scrollToDate () {\n        setTimeout(() => {\n          if (this.departDate) {\n            const el = this.$refs.departDate[0];\n            el && dom.getComponentRect && dom.getComponentRect(el, (e) => {\n              if (e && e.result) {\n                const { bottom } = e.size;\n                const { env } = weex.config;\n                // 误差\n                const height = env.deviceHeight / env.deviceWidth * 750 - 50;\n                if (bottom > height || bottom === 0) {\n                  dom.scrollToElement(el, { offset: -146, animated: false });\n                }\n              }\n            })\n          }\n        }, 10);\n      },\n      dispatchDateChange (dateArr) {\n        const duration = isWeb ? 400 : 600;\n        setTimeout(() => {\n          this.hide();\n        }, duration);\n        this.$emit('wxcPageCalendarDateSelected', {\n          date: dateArr\n        });\n      },\n      detectShow () {\n        if (this.isRange && this.selectedDate.length >= 2) {\n          this.departDate = this.selectedDate[0];\n          this.arriveDate = this.selectedDate[1];\n        } else if (this.selectedDate.length >= 1) {\n          this.departDate = this.selectedDate[0];\n          this.arriveDate = '';\n        }\n      },\n      _animate (width = 0) {\n        const duration = isWeb ? 200 : 300;\n        animation.transition(this.$refs.pageCalendar, {\n          styles: {\n            transform: `translateX(${-width}px)`\n          },\n          timingFunction: 'ease-out',\n          duration\n        }, () => {\n        });\n      },\n      show () {\n        const { needDestroy } = this;\n        needDestroy && (this.isShow = true);\n        this.reSelect = true;\n        this.detectShow();\n        this._animate(750);\n        needDestroy && this.scrollToDate();\n      },\n      hide () {\n        this.needDestroy && (this.isShow = false);\n        this.reSelect = false;\n        this._animate(0);\n        this.$emit('wxcPageCalendarHide', {});\n      }\n    }\n  };\n</script>\n<style scoped>\n  .wxc-page-calendar {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    right: -750px;\n    width: 750px;\n    color: #333333;\n    background-color: #fff;\n  }\n\n  .flex-item {\n    flex: 1;\n    text-align: center;\n  }\n\n  .calendar-weekday {\n    height: 60px;\n    background-color: #ffffff;\n    border-bottom-width: 1px;\n    border-top-width: 1px;\n    border-color: #e2e2e2;\n    flex-direction: row;\n    justify-content: space-around;\n    align-items: center;\n  }\n\n  .weekday-text {\n    color: #000000;\n    flex: 1;\n    font-size: 24px;\n    text-align: center;\n  }\n\n  .calendar-list {\n    flex: 1;\n    flex-direction: column;\n  }\n\n  .month-text {\n    font-size: 32px;\n    height: 60px;\n    line-height: 60px;\n    width: 750px;\n    text-align: center;\n    align-items: center;\n    background-color: #f2f3f4;\n  }\n\n  .calendar-row {\n    height: 140px;\n    flex-direction: row;\n    background-color: #ffffff;\n    border-bottom-width: 1px;\n    border-color: #f2f3f4;\n    align-items: center;\n    justify-content: space-between;\n    position: relative;\n  }\n\n  .row-item {\n    flex: 1;\n    height: 140px;\n    padding-top: 10px;\n    padding-bottom: 10px;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .iphone-x {\n    height: 68px;\n  }\n\n  .calendar-note {\n    height: 36px;\n    line-height: 36px;\n    font-size: 24px;\n    color: #000000;\n    text-align: center;\n  }\n\n  .calendar-day {\n    height: 48px;\n    line-height: 48px;\n    font-size: 36px;\n    color: #000000;\n    text-align: center;\n  }\n\n  .calendar-ext {\n    height: 36px;\n    line-height: 36px;\n    color: #999999;\n    text-align: center;\n    font-size: 24px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n\n  .calendar-holiday {\n    color: #FF5000;\n  }\n\n  .calendar-rest {\n    color: #FF5000;\n  }\n\n  .item-row-selected {\n    color: #fff;\n    background-color: #FFC900;\n    text-align: center;\n  }\n\n  .item-text-selected {\n    color: #3d3d3d;\n    text-align: center;\n  }\n\n  .calendar-disabled {\n    color: #CCCCCC;\n  }\n\n  .cell-disabled {\n    background-color: #FBFBFB;\n  }\n\n  .calendar-day-include {\n    background-color: #FFF7D6;\n  }\n</style>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-page-calendar[data-v-3472bf4f] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  right: -10rem;\n  width: 10rem;\n  color: #333333;\n  background-color: #fff;\n}\n.flex-item[data-v-3472bf4f] {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n  text-align: center;\n}\n.calendar-weekday[data-v-3472bf4f] {\n  height: 0.8rem;\n  background-color: #ffffff;\n  border-bottom-width: 0.01333rem;\n  border-top-width: 0.01333rem;\n  border-color: #e2e2e2;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-justify-content: space-around;\n          justify-content: space-around;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n}\n.weekday-text[data-v-3472bf4f] {\n  color: #000000;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n  font-size: 0.32rem;\n  text-align: center;\n}\n.calendar-list[data-v-3472bf4f] {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n}\n.month-text[data-v-3472bf4f] {\n  font-size: 0.42667rem;\n  height: 0.8rem;\n  line-height: 0.8rem;\n  width: 10rem;\n  text-align: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  background-color: #f2f3f4;\n}\n.calendar-row[data-v-3472bf4f] {\n  height: 1.86667rem;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  background-color: #ffffff;\n  border-bottom-width: 0.01333rem;\n  border-color: #f2f3f4;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n          justify-content: space-between;\n  position: relative;\n}\n.row-item[data-v-3472bf4f] {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n  height: 1.86667rem;\n  padding-top: 0.13333rem;\n  padding-bottom: 0.13333rem;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n}\n.iphone-x[data-v-3472bf4f] {\n  height: 0.90667rem;\n}\n.calendar-note[data-v-3472bf4f] {\n  height: 0.48rem;\n  line-height: 0.48rem;\n  font-size: 0.32rem;\n  color: #000000;\n  text-align: center;\n}\n.calendar-day[data-v-3472bf4f] {\n  height: 0.64rem;\n  line-height: 0.64rem;\n  font-size: 0.48rem;\n  color: #000000;\n  text-align: center;\n}\n.calendar-ext[data-v-3472bf4f] {\n  height: 0.48rem;\n  line-height: 0.48rem;\n  color: #999999;\n  text-align: center;\n  font-size: 0.32rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.calendar-holiday[data-v-3472bf4f] {\n  color: #FF5000;\n}\n.calendar-rest[data-v-3472bf4f] {\n  color: #FF5000;\n}\n.item-row-selected[data-v-3472bf4f] {\n  color: #fff;\n  background-color: #FFC900;\n  text-align: center;\n}\n.item-text-selected[data-v-3472bf4f] {\n  color: #3d3d3d;\n  text-align: center;\n}\n.calendar-disabled[data-v-3472bf4f] {\n  color: #CCCCCC;\n}\n.cell-disabled[data-v-3472bf4f] {\n  background-color: #FBFBFB;\n}\n.calendar-day-include[data-v-3472bf4f] {\n  background-color: #FFF7D6;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-page-calendar/index.vue?ff4a6cd2"],"names":[],"mappings":";AA+NA;EACA,gBAAA;EACA,OAAA;EACA,UAAA;EACA,cAAA;EACA,aAAA;EACA,eAAA;EACA,uBAAA;CACA;AAEA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;EACA,mBAAA;CACA;AAEA;EACA,eAAA;EACA,0BAAA;EACA,gCAAA;EACA,6BAAA;EACA,sBAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,sCAAA;UAAA,8BAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,eAAA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;EACA,mBAAA;EACA,mBAAA;CACA;AAEA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;EACA,6BAAA;EAAA,8BAAA;EAAA,+BAAA;UAAA,uBAAA;CACA;AAEA;EACA,sBAAA;EACA,eAAA;EACA,oBAAA;EACA,aAAA;EACA,mBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;CACA;AAEA;EACA,mBAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EACA,gCAAA;EACA,sBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EAAA,uCAAA;UAAA,+BAAA;EACA,mBAAA;CACA;AAEA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;EACA,mBAAA;EACA,wBAAA;EACA,2BAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,mBAAA;CACA;AAEA;EACA,gBAAA;EACA,qBAAA;EACA,mBAAA;EACA,eAAA;EACA,mBAAA;CACA;AAEA;EACA,gBAAA;EACA,qBAAA;EACA,mBAAA;EACA,eAAA;EACA,mBAAA;CACA;AAEA;EACA,gBAAA;EACA,qBAAA;EACA,eAAA;EACA,mBAAA;EACA,mBAAA;EACA,iBAAA;EACA,wBAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,YAAA;EACA,0BAAA;EACA,mBAAA;CACA;AAEA;EACA,eAAA;EACA,mBAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,0BAAA;CACA;AAEA;EACA,0BAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n<!-- Updated by Tw93 on 17/11/22. -->\n\n<template>\n  <div class=\"wxc-page-calendar\"\n       ref=\"pageCalendar\">\n    <wxc-minibar :show=\"showTitle\"\n                 v-bind=\"minibarCfg\"\n                 :use-default-return=\"false\"\n                 @wxcMinibarLeftButtonClicked=\"minibarLeftButtonClick\"></wxc-minibar>\n    <div class=\"calendar-weekday\" v-if=\"isShow\">\n      <text class=\"flex-item weekday-text\"\n            :key=\"k\"\n            :aria-label=\"`周${week}`\"\n            v-for=\"(week,k) in ['日','一','二','三','四','五','六']\">{{week}}</text>\n    </div>\n    <list class=\"calendar-list\"\n          v-if=\"isShow\">\n      <cell v-for=\"(month,index) in monthsArray\"\n            :key=\"index\"\n            :class=\"[!month.title && 'calendar-row']\">\n        <text class=\"month-text\"\n              v-if=\"month.title\">{{month.title}}</text>\n        <div v-else\n             v-for=\"(cell,rowIndex) in month\"\n             :key=\"`${index}-${rowIndex}`\"\n             :ref=\"cell.ref\"\n             :class=\"['row-item', cell.cellClass]\"\n             :accessible=\"true\"\n             :aria-label=\"`${cell.text?cell.text:''},${cell.note?cell.note:''},${cell.ext?cell.ext:''}`\"\n             @click=\"onClickDate(cell)\">\n          <text :class=\"['calendar-note', cell.cls]\">{{cell.note}}</text>\n          <text :class=\"['calendar-day', cell.cls]\">{{cell.text}}</text>\n          <text :class=\"['calendar-ext', cell.cls]\">{{cell.ext}}</text>\n        </div>\n      </cell>\n      <cell class=\"iphone-x\" v-if=\"isIPhoneX\"></cell>\n    </list>\n  </div>\n</template>\n\n<script>\n  import * as Format from './format';\n  import Utils from '../utils';\n\n  const isWeb = Utils.env.isWeb();\n\n  const animation = weex.requireModule('animation');\n  const dom = weex.requireModule('dom');\n\n  import WxcMinibar from '../wxc-minibar'\n\n  export default {\n    components: { WxcMinibar },\n    props: {\n      selectedDate: Array,\n      dateRange: {\n        type: Array,\n        required: true,\n        default: () => ([])\n      },\n      minibarCfg: {\n        type: Object,\n        default: () => ({\n          'title': '选择日期',\n          'background-color': '#FFC900',\n          'text-color': '#3D3D3D'\n        })\n      },\n      showHeader: {\n        type: Boolean,\n        default: false\n      },\n      selectedNote: {\n        type: Array,\n        default: () => (['开始', '到达', '往返'])\n      },\n      isRange: {\n        type: Boolean,\n        default: false\n      },\n      needDestroy: {\n        type: Boolean,\n        default: false\n      },\n      descList: {\n        type: Array,\n        default: () => ([])\n      }\n    },\n    data: () => ({\n      isShow: false,\n      reSelect: true,\n      today: Format.getToDay(),\n      departDate: '',\n      arriveDate: ''\n    }),\n    computed: {\n      monthsArray () {\n        const { dateRange: range, today, departDate, arriveDate, selectedNote, descList } = this;\n        const param = { range, today, departDate, arriveDate, selectedNote, descList }\n        return Format.generateDateCell(param);\n      }\n    },\n    created () {\n      this.isIPhoneX = Utils.env.isIPhoneX();\n      this.showTitle = isWeb || this.showHeader;\n      this.detectShow();\n    },\n    mounted () {\n      const { needDestroy } = this;\n      const hold = isWeb ? 700 : 100;\n      !needDestroy && setTimeout(() => {\n        this.isShow = true;\n        this.scrollToDate();\n      }, hold);\n    },\n    watch: {\n      needDestroy (newVal, preVal) {\n        if (!newVal && newVal !== preVal) {\n          setTimeout(() => {\n            this.isShow = true;\n          }, 200)\n        }\n      }\n    },\n    methods: {\n      minibarLeftButtonClick () {\n        setTimeout(() => {\n          this.hide();\n          this.$emit('wxcPageCalendarBackClicked', {});\n        }, 100);\n      },\n      onClickDate (datConfig) {\n        const self = this;\n        if (datConfig.disabled || datConfig.isEmpty) return;\n\n        if (self.reSelect) {\n          self.departDate = '';\n          self.arriveDate = '';\n          self.reSelect = false;\n        }\n\n        if (self.isRange) {\n          if (self.departDate && Date.parse(self.departDate) <= Date.parse(datConfig.date)) {\n            self.arriveDate = datConfig.date;\n          } else {\n            self.departDate = datConfig.date;\n          }\n          if (self.departDate && self.arriveDate) {\n            self.dispatchDateChange([self.departDate, self.arriveDate]);\n          }\n        } else {\n          self.departDate = datConfig.date;\n          self.dispatchDateChange([self.departDate]);\n        }\n      },\n      scrollToDate () {\n        setTimeout(() => {\n          if (this.departDate) {\n            const el = this.$refs.departDate[0];\n            el && dom.getComponentRect && dom.getComponentRect(el, (e) => {\n              if (e && e.result) {\n                const { bottom } = e.size;\n                const { env } = weex.config;\n                // 误差\n                const height = env.deviceHeight / env.deviceWidth * 750 - 50;\n                if (bottom > height || bottom === 0) {\n                  dom.scrollToElement(el, { offset: -146, animated: false });\n                }\n              }\n            })\n          }\n        }, 10);\n      },\n      dispatchDateChange (dateArr) {\n        const duration = isWeb ? 400 : 600;\n        setTimeout(() => {\n          this.hide();\n        }, duration);\n        this.$emit('wxcPageCalendarDateSelected', {\n          date: dateArr\n        });\n      },\n      detectShow () {\n        if (this.isRange && this.selectedDate.length >= 2) {\n          this.departDate = this.selectedDate[0];\n          this.arriveDate = this.selectedDate[1];\n        } else if (this.selectedDate.length >= 1) {\n          this.departDate = this.selectedDate[0];\n          this.arriveDate = '';\n        }\n      },\n      _animate (width = 0) {\n        const duration = isWeb ? 200 : 300;\n        animation.transition(this.$refs.pageCalendar, {\n          styles: {\n            transform: `translateX(${-width}px)`\n          },\n          timingFunction: 'ease-out',\n          duration\n        }, () => {\n        });\n      },\n      show () {\n        const { needDestroy } = this;\n        needDestroy && (this.isShow = true);\n        this.reSelect = true;\n        this.detectShow();\n        this._animate(750);\n        needDestroy && this.scrollToDate();\n      },\n      hide () {\n        this.needDestroy && (this.isShow = false);\n        this.reSelect = false;\n        this._animate(0);\n        this.$emit('wxcPageCalendarHide', {});\n      }\n    }\n  };\n</script>\n<style scoped>\n  .wxc-page-calendar {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    right: -750px;\n    width: 750px;\n    color: #333333;\n    background-color: #fff;\n  }\n\n  .flex-item {\n    flex: 1;\n    text-align: center;\n  }\n\n  .calendar-weekday {\n    height: 60px;\n    background-color: #ffffff;\n    border-bottom-width: 1px;\n    border-top-width: 1px;\n    border-color: #e2e2e2;\n    flex-direction: row;\n    justify-content: space-around;\n    align-items: center;\n  }\n\n  .weekday-text {\n    color: #000000;\n    flex: 1;\n    font-size: 24px;\n    text-align: center;\n  }\n\n  .calendar-list {\n    flex: 1;\n    flex-direction: column;\n  }\n\n  .month-text {\n    font-size: 32px;\n    height: 60px;\n    line-height: 60px;\n    width: 750px;\n    text-align: center;\n    align-items: center;\n    background-color: #f2f3f4;\n  }\n\n  .calendar-row {\n    height: 140px;\n    flex-direction: row;\n    background-color: #ffffff;\n    border-bottom-width: 1px;\n    border-color: #f2f3f4;\n    align-items: center;\n    justify-content: space-between;\n    position: relative;\n  }\n\n  .row-item {\n    flex: 1;\n    height: 140px;\n    padding-top: 10px;\n    padding-bottom: 10px;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .iphone-x {\n    height: 68px;\n  }\n\n  .calendar-note {\n    height: 36px;\n    line-height: 36px;\n    font-size: 24px;\n    color: #000000;\n    text-align: center;\n  }\n\n  .calendar-day {\n    height: 48px;\n    line-height: 48px;\n    font-size: 36px;\n    color: #000000;\n    text-align: center;\n  }\n\n  .calendar-ext {\n    height: 36px;\n    line-height: 36px;\n    color: #999999;\n    text-align: center;\n    font-size: 24px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n  }\n\n  .calendar-holiday {\n    color: #FF5000;\n  }\n\n  .calendar-rest {\n    color: #FF5000;\n  }\n\n  .item-row-selected {\n    color: #fff;\n    background-color: #FFC900;\n    text-align: center;\n  }\n\n  .item-text-selected {\n    color: #3d3d3d;\n    text-align: center;\n  }\n\n  .calendar-disabled {\n    color: #CCCCCC;\n  }\n\n  .cell-disabled {\n    background-color: #FBFBFB;\n  }\n\n  .calendar-day-include {\n    background-color: #FFF7D6;\n  }\n</style>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10475,7 +10474,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-loading[data-v-3681adcf] {\n  position: fixed;\n  left: 287px;\n  top: 500px;\n  z-index: 9999;\n}\n.loading-box[data-v-3681adcf] {\n  align-items: center;\n  justify-content: center;\n  border-radius: 20px;\n  width: 175px;\n  height: 175px;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n.trip-loading[data-v-3681adcf] {\n  background-color: rgba(0, 0, 0, .2);\n}\n.loading-trip-image[data-v-3681adcf] {\n  height: 75px;\n  width: 75px;\n}\n.loading-text[data-v-3681adcf] {\n  color: #ffffff;\n  font-size: 24px;\n  line-height: 30px;\n  height: 30px;\n  margin-top: 8px;\n  text-overflow: ellipsis;\n  width: 140px;\n  text-align: center;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-loading/index.vue?d4e63b12"],"names":[],"mappings":";AAsBA;EACA,gBAAA;EACA,YAAA;EACA,WAAA;EACA,cAAA;CACA;AAEA;EACA,oBAAA;EACA,wBAAA;EACA,oBAAA;EACA,aAAA;EACA,cAAA;EACA,qCAAA;CACA;AAEA;EACA,oCAAA;CACA;AAEA;EACA,aAAA;EACA,YAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;EACA,kBAAA;EACA,aAAA;EACA,gBAAA;EACA,wBAAA;EACA,aAAA;EACA,mBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/26. -->\n<!--A loading indicator. Custom text supported. -->\n\n<template>\n  <div :hack-show=\"needShow\">\n    <div class=\"wxc-loading\"\n         :style=\"{ top: topPosition +'px'}\"\n         v-if=\"showLoading\">\n      <div :class=\"['loading-box',loading.class]\" :aria-hidden=\"true\">\n        <image :src=\"loading.url\"\n               class=\"loading-trip-image\"\n               resize=\"contain\"\n               quality=\"original\"></image>\n        <text v-if=\"loadingText\"\n              class=\"loading-text\">{{loadingText}}</text>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-loading {\n    position: fixed;\n    left: 287px;\n    top: 500px;\n    z-index: 9999;\n  }\n\n  .loading-box {\n    align-items: center;\n    justify-content: center;\n    border-radius: 20px;\n    width: 175px;\n    height: 175px;\n    background-color: rgba(0, 0, 0, 0.8);\n  }\n\n  .trip-loading {\n    background-color: rgba(0, 0, 0, .2);\n  }\n\n  .loading-trip-image {\n    height: 75px;\n    width: 75px;\n  }\n\n  .loading-text {\n    color: #ffffff;\n    font-size: 24px;\n    line-height: 30px;\n    height: 30px;\n    margin-top: 8px;\n    text-overflow: ellipsis;\n    width: 140px;\n    text-align: center;\n  }\n</style>\n\n<script>\n  import { GIF, BLACK_GIF } from './type';\n  import Utils from '../utils';\n\n  export default {\n    props: {\n      show: {\n        type: Boolean,\n        default: false\n      },\n      loadingText: {\n        type: String,\n        default: ''\n      },\n      type: {\n        type: String,\n        default: 'default'\n      },\n      interval: {\n        type: [Number, String],\n        default: 0\n      }\n    },\n    data: () => ({\n      showLoading: false,\n      tid: 0\n    }),\n    computed: {\n      showText () {\n        return this.loadingText;\n      },\n      loading () {\n        let loading = {};\n        switch (this.type) {\n          case 'trip':\n            loading = {\n              url: GIF,\n              class: 'trip-loading'\n            };\n            break;\n          default:\n            loading = {\n              url: BLACK_GIF,\n              class: 'default-loading'\n            }\n        }\n        return loading;\n      },\n      topPosition () {\n        return (Utils.env.getPageHeight() - 200) / 2;\n      },\n      needShow () {\n        this.setShow();\n        return this.show;\n      }\n    },\n    methods: {\n      setShow () {\n        const { interval, show, showLoading } = this;\n        const stInterval = parseInt(interval);\n        clearTimeout(this.tid);\n        if (show) {\n          if (showLoading) {\n            return;\n          }\n          if (stInterval === 0) {\n            this.showLoading = true;\n          } else {\n            this.tid = setTimeout(() => {\n              this.showLoading = true;\n            }, stInterval);\n          }\n        } else {\n          this.showLoading = false;\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-loading[data-v-3681adcf] {\n  position: fixed;\n  left: 3.82667rem;\n  top: 6.66667rem;\n  z-index: 9999;\n}\n.loading-box[data-v-3681adcf] {\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  border-radius: 0.26667rem;\n  width: 2.33333rem;\n  height: 2.33333rem;\n  background-color: rgba(0, 0, 0, 0.8);\n}\n.trip-loading[data-v-3681adcf] {\n  background-color: rgba(0, 0, 0, .2);\n}\n.loading-trip-image[data-v-3681adcf] {\n  height: 1rem;\n  width: 1rem;\n}\n.loading-text[data-v-3681adcf] {\n  color: #ffffff;\n  font-size: 0.32rem;\n  line-height: 0.4rem;\n  height: 0.4rem;\n  margin-top: 0.10667rem;\n  text-overflow: ellipsis;\n  width: 1.86667rem;\n  text-align: center;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-loading/index.vue?d4e63b12"],"names":[],"mappings":";AAsBA;EACA,gBAAA;EACA,iBAAA;EACA,gBAAA;EACA,cAAA;CACA;AAEA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,0BAAA;EACA,kBAAA;EACA,mBAAA;EACA,qCAAA;CACA;AAEA;EACA,oCAAA;CACA;AAEA;EACA,aAAA;EACA,YAAA;CACA;AAEA;EACA,eAAA;EACA,mBAAA;EACA,oBAAA;EACA,eAAA;EACA,uBAAA;EACA,wBAAA;EACA,kBAAA;EACA,mBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/26. -->\n<!--A loading indicator. Custom text supported. -->\n\n<template>\n  <div :hack-show=\"needShow\">\n    <div class=\"wxc-loading\"\n         :style=\"{ top: topPosition +'px'}\"\n         v-if=\"showLoading\">\n      <div :class=\"['loading-box',loading.class]\" :aria-hidden=\"true\">\n        <image :src=\"loading.url\"\n               class=\"loading-trip-image\"\n               resize=\"contain\"\n               quality=\"original\"></image>\n        <text v-if=\"loadingText\"\n              class=\"loading-text\">{{loadingText}}</text>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-loading {\n    position: fixed;\n    left: 287px;\n    top: 500px;\n    z-index: 9999;\n  }\n\n  .loading-box {\n    align-items: center;\n    justify-content: center;\n    border-radius: 20px;\n    width: 175px;\n    height: 175px;\n    background-color: rgba(0, 0, 0, 0.8);\n  }\n\n  .trip-loading {\n    background-color: rgba(0, 0, 0, .2);\n  }\n\n  .loading-trip-image {\n    height: 75px;\n    width: 75px;\n  }\n\n  .loading-text {\n    color: #ffffff;\n    font-size: 24px;\n    line-height: 30px;\n    height: 30px;\n    margin-top: 8px;\n    text-overflow: ellipsis;\n    width: 140px;\n    text-align: center;\n  }\n</style>\n\n<script>\n  import { GIF, BLACK_GIF } from './type';\n  import Utils from '../utils';\n\n  export default {\n    props: {\n      show: {\n        type: Boolean,\n        default: false\n      },\n      loadingText: {\n        type: String,\n        default: ''\n      },\n      type: {\n        type: String,\n        default: 'default'\n      },\n      interval: {\n        type: [Number, String],\n        default: 0\n      }\n    },\n    data: () => ({\n      showLoading: false,\n      tid: 0\n    }),\n    computed: {\n      showText () {\n        return this.loadingText;\n      },\n      loading () {\n        let loading = {};\n        switch (this.type) {\n          case 'trip':\n            loading = {\n              url: GIF,\n              class: 'trip-loading'\n            };\n            break;\n          default:\n            loading = {\n              url: BLACK_GIF,\n              class: 'default-loading'\n            }\n        }\n        return loading;\n      },\n      topPosition () {\n        return (Utils.env.getPageHeight() - 200) / 2;\n      },\n      needShow () {\n        this.setShow();\n        return this.show;\n      }\n    },\n    methods: {\n      setShow () {\n        const { interval, show, showLoading } = this;\n        const stInterval = parseInt(interval);\n        clearTimeout(this.tid);\n        if (show) {\n          if (showLoading) {\n            return;\n          }\n          if (stInterval === 0) {\n            this.showLoading = true;\n          } else {\n            this.tid = setTimeout(() => {\n              this.showLoading = true;\n            }, stInterval);\n          }\n        } else {\n          this.showLoading = false;\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10489,7 +10488,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-btn[data-v-36f80855] {\n  width: 702px;\n  height: 88px;\n  align-items: center;\n  justify-content: center;\n  border-radius: 12px;\n}\n.btn-text[data-v-36f80855] {\n  text-overflow: ellipsis;\n  lines: 1;\n  font-size: 36px;\n  color: #FFFFFF;\n}\n\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-button/index.vue?7bb118c3"],"names":[],"mappings":";AA8DA;EACA,aAAA;EACA,aAAA;EACA,oBAAA;EACA,wBAAA;EACA,oBAAA;CACA;AAEA;EACA,wBAAA;EACA,SAAA;EACA,gBAAA;EACA,eAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <div class=\"wxc-btn\"\n       :style=\"mrBtnStyle\"\n       @click=\"onClicked\"\n       :accessible=\"true\"\n       :aria-label=\"text\">\n    <text class=\"btn-text\" :style=\"mrTextStyle\">{{text}}</text>\n  </div>\n</template>\n\n<script>\n  import { STYLE_MAP, TEXT_STYLE_MAP } from './type'\n\n  export default {\n    props: {\n      text: {\n        type: String,\n        default: '确认'\n      },\n      type: {\n        type: String,\n        default: 'taobao'\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      btnStyle: Object,\n      textStyle: Object\n    },\n    computed: {\n      mrBtnStyle () {\n        const { type, disabled, btnStyle } = this;\n        const mrBtnStyle = {\n          ...STYLE_MAP[type],\n          ...btnStyle\n        };\n        return disabled ? {\n          ...mrBtnStyle,\n          backgroundColor: 'rgba(0, 0, 0, 0.1)',\n          borderWidth: 0\n        } : mrBtnStyle;\n      },\n      mrTextStyle () {\n        const { type, disabled, textStyle } = this;\n        const mrTextStyle = { ...TEXT_STYLE_MAP[type], ...textStyle };\n        return disabled ? { ...mrTextStyle, color: '#FFFFFF' } : mrTextStyle;\n      }\n    },\n    methods: {\n      onClicked (e) {\n        const { type, disabled } = this;\n        this.$emit('wxcButtonClicked', { e, type, disabled })\n      }\n    }\n  }\n</script>\n\n<style scoped>\n  .wxc-btn {\n    width: 702px;\n    height: 88px;\n    align-items: center;\n    justify-content: center;\n    border-radius: 12px;\n  }\n\n  .btn-text {\n    text-overflow: ellipsis;\n    lines: 1;\n    font-size: 36px;\n    color: #FFFFFF;\n  }\n\n</style>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-btn[data-v-36f80855] {\n  width: 9.36rem;\n  height: 1.17333rem;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  border-radius: 0.16rem;\n}\n.btn-text[data-v-36f80855] {\n  text-overflow: ellipsis;\n  lines: 1;\n  font-size: 0.48rem;\n  color: #FFFFFF;\n}\n\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-button/index.vue?7bb118c3"],"names":[],"mappings":";AA8DA;EACA,eAAA;EACA,mBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,uBAAA;CACA;AAEA;EACA,wBAAA;EACA,SAAA;EACA,mBAAA;EACA,eAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <div class=\"wxc-btn\"\n       :style=\"mrBtnStyle\"\n       @click=\"onClicked\"\n       :accessible=\"true\"\n       :aria-label=\"text\">\n    <text class=\"btn-text\" :style=\"mrTextStyle\">{{text}}</text>\n  </div>\n</template>\n\n<script>\n  import { STYLE_MAP, TEXT_STYLE_MAP } from './type'\n\n  export default {\n    props: {\n      text: {\n        type: String,\n        default: '确认'\n      },\n      type: {\n        type: String,\n        default: 'taobao'\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      btnStyle: Object,\n      textStyle: Object\n    },\n    computed: {\n      mrBtnStyle () {\n        const { type, disabled, btnStyle } = this;\n        const mrBtnStyle = {\n          ...STYLE_MAP[type],\n          ...btnStyle\n        };\n        return disabled ? {\n          ...mrBtnStyle,\n          backgroundColor: 'rgba(0, 0, 0, 0.1)',\n          borderWidth: 0\n        } : mrBtnStyle;\n      },\n      mrTextStyle () {\n        const { type, disabled, textStyle } = this;\n        const mrTextStyle = { ...TEXT_STYLE_MAP[type], ...textStyle };\n        return disabled ? { ...mrTextStyle, color: '#FFFFFF' } : mrTextStyle;\n      }\n    },\n    methods: {\n      onClicked (e) {\n        const { type, disabled } = this;\n        this.$emit('wxcButtonClicked', { e, type, disabled })\n      }\n    }\n  }\n</script>\n\n<style scoped>\n  .wxc-btn {\n    width: 702px;\n    height: 88px;\n    align-items: center;\n    justify-content: center;\n    border-radius: 12px;\n  }\n\n  .btn-text {\n    text-overflow: ellipsis;\n    lines: 1;\n    font-size: 36px;\n    color: #FFFFFF;\n  }\n\n</style>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10503,7 +10502,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.container[data-v-3b9aece2] {\n  position: fixed;\n  width: 750px;\n  /*兼容H5异常*/\n  z-index: 99999;\n}\n.wxc-mask[data-v-3b9aece2] {\n  position: fixed;\n  top: 300px;\n  left: 60px;\n  width: 702px;\n  height: 800px;\n}\n.mask-bottom[data-v-3b9aece2] {\n  width: 100px;\n  height: 100px;\n  background-color: transparent;\n  justify-content: center;\n  align-items: center;\n}\n.mask-close-icon[data-v-3b9aece2] {\n  width: 64px;\n  height: 64px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-mask/index.vue?4fcd2811"],"names":[],"mappings":";AAgCA;EACA,gBAAA;EACA,aAAA;EACA,UAAA;EACA,eAAA;CACA;AAEA;EACA,gBAAA;EACA,WAAA;EACA,WAAA;EACA,aAAA;EACA,cAAA;CACA;AAEA;EACA,aAAA;EACA,cAAA;EACA,8BAAA;EACA,wBAAA;EACA,oBAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A Mask.-->\n\n<template>\n  <div class=\"container\">\n    <wxc-overlay :show=\"show && hasOverlay\"\n                 v-if=\"show\"\n                 v-bind=\"mergeOverlayCfg\"\n                 @wxcOverlayBodyClicking=\"wxcOverlayBodyClicking\"\n                 @wxcOverlayBodyClicked=\"wxcOverlayBodyClicked\"></wxc-overlay>\n    <div ref=\"wxc-mask\"\n         class=\"wxc-mask\"\n         v-if=\"show\"\n         :hack=\"shouldShow\"\n         :style=\"maskStyle\">\n      <div :style=\"contentStyle\">\n        <slot></slot>\n      </div>\n      <div class=\"mask-bottom\"\n           :style=\"{ width: width + 'px' }\"\n           @click=\"closeIconClicked\"\n           v-if=\"showClose\">\n        <image :src=\"closeIcon\"\n               aria-label=\"关闭\"\n               class=\"mask-close-icon\"></image>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .container {\n    position: fixed;\n    width: 750px;\n    /*兼容H5异常*/\n    z-index: 99999;\n  }\n\n  .wxc-mask {\n    position: fixed;\n    top: 300px;\n    left: 60px;\n    width: 702px;\n    height: 800px;\n  }\n\n  .mask-bottom {\n    width: 100px;\n    height: 100px;\n    background-color: transparent;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .mask-close-icon {\n    width: 64px;\n    height: 64px;\n  }\n</style>\n\n<script>\n  const animation = weex.requireModule('animation');\n  import WxcOverlay from '../wxc-overlay';\n\n  export default {\n    components: { WxcOverlay },\n    props: {\n      height: {\n        type: [String, Number],\n        default: 800\n      },\n      width: {\n        type: [String, Number],\n        default: 702\n      },\n      show: {\n        type: Boolean,\n        default: false\n      },\n      showClose: {\n        type: Boolean,\n        default: false\n      },\n      duration: {\n        type: [String, Number],\n        default: 300\n      },\n      hasOverlay: {\n        type: Boolean,\n        default: true\n      },\n      hasAnimation: {\n        type: Boolean,\n        default: true\n      },\n      timingFunction: {\n        type: Array,\n        default: () => (['ease-in', 'ease-out'])\n      },\n      overlayCfg: {\n        type: Object,\n        default: () => ({\n          hasAnimation: true,\n          timingFunction: ['ease-in', 'ease-out'],\n          canAutoClose: true,\n          duration: 300,\n          opacity: 0.6\n        })\n      },\n      borderRadius: {\n        type: [String, Number],\n        default: 0\n      },\n      overlayCanClose: {\n        type: Boolean,\n        default: true\n      },\n      maskBgColor: {\n        type: String,\n        default: '#ffffff'\n      }\n    },\n    data: () => ({\n      closeIcon: 'https://gw.alicdn.com/tfs/TB1qDJUpwMPMeJjy1XdXXasrXXa-64-64.png',\n      maskTop: 264,\n      opacity: 0\n    }),\n    computed: {\n      mergeOverlayCfg () {\n        return {\n          ...this.overlayCfg,\n          hasAnimation: this.hasAnimation\n        }\n      },\n      maskStyle () {\n        const { width, height, showClose, hasAnimation, opacity } = this;\n        const newHeight = showClose ? height - 0 + 100 : height;\n        const { deviceHeight, deviceWidth, platform } = weex.config.env;\n        const _deviceHeight = deviceHeight || 1334;\n        const isWeb = typeof (window) === 'object' && platform.toLowerCase() === 'web';\n        const navHeight = isWeb ? 0 : 130;\n        const pageHeight = _deviceHeight / deviceWidth * 750 - navHeight;\n        return {\n          width: width + 'px',\n          height: newHeight + 'px',\n          left: (750 - width) / 2 + 'px',\n          top: (pageHeight - height) / 2 + 'px',\n          opacity: hasAnimation ? opacity : 1\n        }\n      },\n      contentStyle () {\n        return {\n          width: this.width + 'px',\n          backgroundColor: this.maskBgColor,\n          height: this.height + 'px',\n          borderRadius: this.borderRadius + 'px'\n        }\n      },\n      shouldShow () {\n        const { show, hasAnimation } = this;\n        hasAnimation && setTimeout(() => {\n          this.appearMask(show);\n        }, 50);\n        return show;\n      }\n    },\n    methods: {\n      closeIconClicked () {\n        this.appearMask(false);\n      },\n      wxcOverlayBodyClicking () {\n        if (this.hasAnimation) {\n          this.appearMask(false);\n          this.$emit('wxcOverlayBodyClicking', {});\n        }\n      },\n      wxcOverlayBodyClicked () {\n        if (!this.hasAnimation) {\n          this.appearMask(false);\n          this.$emit('wxcOverlayBodyClicked', {});\n        }\n      },\n      needEmit (bool = false) {\n        !bool && (this.$emit('wxcMaskSetHidden', {}));\n      },\n      appearMask (bool, duration = this.duration) {\n        const { hasAnimation, timingFunction } = this;\n        const maskEl = this.$refs['wxc-mask'];\n        if (hasAnimation && maskEl) {\n          animation.transition(maskEl, {\n            styles: {\n              opacity: bool ? 1 : 0\n            },\n            duration,\n            timingFunction: timingFunction[bool ? 0 : 1],\n            delay: 0\n          }, () => {\n            this.needEmit(bool);\n          });\n        } else {\n          this.needEmit(bool);\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.container[data-v-3b9aece2] {\n  position: fixed;\n  width: 10rem;\n  /*兼容H5异常*/\n  z-index: 99999;\n}\n.wxc-mask[data-v-3b9aece2] {\n  position: fixed;\n  top: 4rem;\n  left: 0.8rem;\n  width: 9.36rem;\n  height: 10.66667rem;\n}\n.mask-bottom[data-v-3b9aece2] {\n  width: 1.33333rem;\n  height: 1.33333rem;\n  background-color: transparent;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n}\n.mask-close-icon[data-v-3b9aece2] {\n  width: 0.85333rem;\n  height: 0.85333rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-mask/index.vue?4fcd2811"],"names":[],"mappings":";AAgCA;EACA,gBAAA;EACA,aAAA;EACA,UAAA;EACA,eAAA;CACA;AAEA;EACA,gBAAA;EACA,UAAA;EACA,aAAA;EACA,eAAA;EACA,oBAAA;CACA;AAEA;EACA,kBAAA;EACA,mBAAA;EACA,8BAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,kBAAA;EACA,mBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A Mask.-->\n\n<template>\n  <div class=\"container\">\n    <wxc-overlay :show=\"show && hasOverlay\"\n                 v-if=\"show\"\n                 v-bind=\"mergeOverlayCfg\"\n                 @wxcOverlayBodyClicking=\"wxcOverlayBodyClicking\"\n                 @wxcOverlayBodyClicked=\"wxcOverlayBodyClicked\"></wxc-overlay>\n    <div ref=\"wxc-mask\"\n         class=\"wxc-mask\"\n         v-if=\"show\"\n         :hack=\"shouldShow\"\n         :style=\"maskStyle\">\n      <div :style=\"contentStyle\">\n        <slot></slot>\n      </div>\n      <div class=\"mask-bottom\"\n           :style=\"{ width: width + 'px' }\"\n           @click=\"closeIconClicked\"\n           v-if=\"showClose\">\n        <image :src=\"closeIcon\"\n               aria-label=\"关闭\"\n               class=\"mask-close-icon\"></image>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .container {\n    position: fixed;\n    width: 750px;\n    /*兼容H5异常*/\n    z-index: 99999;\n  }\n\n  .wxc-mask {\n    position: fixed;\n    top: 300px;\n    left: 60px;\n    width: 702px;\n    height: 800px;\n  }\n\n  .mask-bottom {\n    width: 100px;\n    height: 100px;\n    background-color: transparent;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .mask-close-icon {\n    width: 64px;\n    height: 64px;\n  }\n</style>\n\n<script>\n  const animation = weex.requireModule('animation');\n  import WxcOverlay from '../wxc-overlay';\n\n  export default {\n    components: { WxcOverlay },\n    props: {\n      height: {\n        type: [String, Number],\n        default: 800\n      },\n      width: {\n        type: [String, Number],\n        default: 702\n      },\n      show: {\n        type: Boolean,\n        default: false\n      },\n      showClose: {\n        type: Boolean,\n        default: false\n      },\n      duration: {\n        type: [String, Number],\n        default: 300\n      },\n      hasOverlay: {\n        type: Boolean,\n        default: true\n      },\n      hasAnimation: {\n        type: Boolean,\n        default: true\n      },\n      timingFunction: {\n        type: Array,\n        default: () => (['ease-in', 'ease-out'])\n      },\n      overlayCfg: {\n        type: Object,\n        default: () => ({\n          hasAnimation: true,\n          timingFunction: ['ease-in', 'ease-out'],\n          canAutoClose: true,\n          duration: 300,\n          opacity: 0.6\n        })\n      },\n      borderRadius: {\n        type: [String, Number],\n        default: 0\n      },\n      overlayCanClose: {\n        type: Boolean,\n        default: true\n      },\n      maskBgColor: {\n        type: String,\n        default: '#ffffff'\n      }\n    },\n    data: () => ({\n      closeIcon: 'https://gw.alicdn.com/tfs/TB1qDJUpwMPMeJjy1XdXXasrXXa-64-64.png',\n      maskTop: 264,\n      opacity: 0\n    }),\n    computed: {\n      mergeOverlayCfg () {\n        return {\n          ...this.overlayCfg,\n          hasAnimation: this.hasAnimation\n        }\n      },\n      maskStyle () {\n        const { width, height, showClose, hasAnimation, opacity } = this;\n        const newHeight = showClose ? height - 0 + 100 : height;\n        const { deviceHeight, deviceWidth, platform } = weex.config.env;\n        const _deviceHeight = deviceHeight || 1334;\n        const isWeb = typeof (window) === 'object' && platform.toLowerCase() === 'web';\n        const navHeight = isWeb ? 0 : 130;\n        const pageHeight = _deviceHeight / deviceWidth * 750 - navHeight;\n        return {\n          width: width + 'px',\n          height: newHeight + 'px',\n          left: (750 - width) / 2 + 'px',\n          top: (pageHeight - height) / 2 + 'px',\n          opacity: hasAnimation ? opacity : 1\n        }\n      },\n      contentStyle () {\n        return {\n          width: this.width + 'px',\n          backgroundColor: this.maskBgColor,\n          height: this.height + 'px',\n          borderRadius: this.borderRadius + 'px'\n        }\n      },\n      shouldShow () {\n        const { show, hasAnimation } = this;\n        hasAnimation && setTimeout(() => {\n          this.appearMask(show);\n        }, 50);\n        return show;\n      }\n    },\n    methods: {\n      closeIconClicked () {\n        this.appearMask(false);\n      },\n      wxcOverlayBodyClicking () {\n        if (this.hasAnimation) {\n          this.appearMask(false);\n          this.$emit('wxcOverlayBodyClicking', {});\n        }\n      },\n      wxcOverlayBodyClicked () {\n        if (!this.hasAnimation) {\n          this.appearMask(false);\n          this.$emit('wxcOverlayBodyClicked', {});\n        }\n      },\n      needEmit (bool = false) {\n        !bool && (this.$emit('wxcMaskSetHidden', {}));\n      },\n      appearMask (bool, duration = this.duration) {\n        const { hasAnimation, timingFunction } = this;\n        const maskEl = this.$refs['wxc-mask'];\n        if (hasAnimation && maskEl) {\n          animation.transition(maskEl, {\n            styles: {\n              opacity: bool ? 1 : 0\n            },\n            duration,\n            timingFunction: timingFunction[bool ? 0 : 1],\n            delay: 0\n          }, () => {\n            this.needEmit(bool);\n          });\n        } else {\n          this.needEmit(bool);\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10517,7 +10516,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-tag[data-v-3c51aaad] {\n  align-items: flex-start;\n}\n.tag-item[data-v-3c51aaad] {\n  height: 24px;\n  justify-content: center;\n  align-items: center;\n  overflow: hidden;\n  /* hack高度不居中问题，后续版本升级去掉 */\n  padding-bottom: 2px;\n}\n.tag-border[data-v-3c51aaad] {\n  border-bottom-left-radius: 4px;\n  border-bottom-right-radius: 4px;\n  border-top-left-radius: 4px;\n  border-top-right-radius: 4px;\n}\n.tag-hollow[data-v-3c51aaad] {\n  border-width: 1px;\n}\n.tag-image[data-v-3c51aaad] {\n  height: 24px;\n}\n.tag-special[data-v-3c51aaad] {\n  border-width: 1px;\n  flex-direction: row;\n}\n.left-image[data-v-3c51aaad] {\n  width: 20px;\n  height: 20px;\n}\n.tag-left[data-v-3c51aaad] {\n  width: 24px;\n  height: 24px;\n  align-items: center;\n  justify-content: center;\n}\n.tag-text[data-v-3c51aaad] {\n  font-size: 20px;\n  height: 22px;\n  line-height: 22px;\n  padding-left: 6px;\n  padding-right: 6px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-tag/index.vue?07dd5b6e"],"names":[],"mappings":";AA+BA;EACA,wBAAA;CACA;AAEA;EACA,aAAA;EACA,wBAAA;EACA,oBAAA;EACA,iBAAA;EACA,0BAAA;EACA,oBAAA;CACA;AAEA;EACA,+BAAA;EACA,gCAAA;EACA,4BAAA;EACA,6BAAA;CACA;AAEA;EACA,kBAAA;CACA;AAEA;EACA,aAAA;CACA;AAEA;EACA,kBAAA;EACA,oBAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;EACA,oBAAA;EACA,wBAAA;CACA;AAEA;EACA,gBAAA;EACA,aAAA;EACA,kBAAA;EACA,kBAAA;EACA,mBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <div class=\"wxc-tag\">\n    <div v-if=\"showSolid || showHollow\"\n         :class=\"['tag-item','tag-border',showHollow && 'tag-hollow']\"\n         :style=\"tagTextStyle\">\n      <text class=\"tag-text\" :style=\"{color:fontColor}\">{{value}}</text>\n    </div>\n    <image v-if=\"showImage\"\n           :src=\"img\"\n           @load=\"onLoad\"\n           :aria-hidden=\"true\"\n           :style=\"{ width: imgWidth}\"\n           class=\"tag-image\"></image>\n    <div class=\"tag-special tag-border\"\n         :style=\"{borderColor:tagColor}\"\n         :accessible=\"true\"\n         :aria-label=\"value\"\n         v-if=\"showSpecial\">\n      <div class=\"tag-left\" :style=\"{backgroundColor:tagColor}\">\n        <image :src=\"specialIcon\" class=\"left-image\"></image>\n      </div>\n      <text class=\"tag-text\" :style=\"{color:fontColor}\">{{value}}</text>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n\n  .wxc-tag {\n    align-items: flex-start;\n  }\n\n  .tag-item {\n    height: 24px;\n    justify-content: center;\n    align-items: center;\n    overflow: hidden;\n    /* hack高度不居中问题，后续版本升级去掉 */\n    padding-bottom: 2px;\n  }\n\n  .tag-border {\n    border-bottom-left-radius: 4px;\n    border-bottom-right-radius: 4px;\n    border-top-left-radius: 4px;\n    border-top-right-radius: 4px;\n  }\n\n  .tag-hollow {\n    border-width: 1px;\n  }\n\n  .tag-image {\n    height: 24px;\n  }\n\n  .tag-special {\n    border-width: 1px;\n    flex-direction: row;\n  }\n\n  .left-image {\n    width: 20px;\n    height: 20px;\n  }\n\n  .tag-left {\n    width: 24px;\n    height: 24px;\n    align-items: center;\n    justify-content: center;\n  }\n\n  .tag-text {\n    font-size: 20px;\n    height: 22px;\n    line-height: 22px;\n    padding-left: 6px;\n    padding-right: 6px;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      type: {\n        type: String,\n        default: 'solid'\n      },\n      value: {\n        type: [String, Number],\n        default: '测试测试'\n      },\n      tagColor: {\n        type: String,\n        default: '#ff5000'\n      },\n      fontColor: {\n        type: String,\n        default: '#333'\n      },\n      specialIcon: {\n        type: String,\n        default: ''\n      },\n      img: {\n        type: String,\n        default: ''\n      }\n    },\n    computed: {\n      showSolid () {\n        const { type, value } = this;\n        return type === 'solid' && value !== '';\n      },\n      showHollow () {\n        const { type, value } = this;\n        return type === 'hollow' && value !== '';\n      },\n      showSpecial () {\n        const { type, value, specialIcon } = this;\n        return type === 'special' && value !== '' && specialIcon !== '';\n      },\n      showImage () {\n        const { type, img } = this;\n        return type === 'image' && img !== ''\n      },\n      tagTextStyle () {\n        const { tagColor, showSolid } = this;\n        return showSolid ? { backgroundColor: tagColor } : { borderColor: tagColor }\n      }\n    },\n    data: () => ({\n      imgWidth: 90\n    }),\n    methods: {\n      onLoad (e) {\n        if (e.success && e.size && e.size.naturalWidth > 0) {\n          const width = e.size.naturalWidth;\n          const height = e.size.naturalHeight;\n          this.imgWidth = width * (24 / height);\n        }\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-tag[data-v-3c51aaad] {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n          align-items: flex-start;\n}\n.tag-item[data-v-3c51aaad] {\n  height: 0.32rem;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  overflow: hidden;\n  /* hack高度不居中问题，后续版本升级去掉 */\n  padding-bottom: 0.02667rem;\n}\n.tag-border[data-v-3c51aaad] {\n  border-bottom-left-radius: 0.05333rem;\n  border-bottom-right-radius: 0.05333rem;\n  border-top-left-radius: 0.05333rem;\n  border-top-right-radius: 0.05333rem;\n}\n.tag-hollow[data-v-3c51aaad] {\n  border-width: 0.01333rem;\n}\n.tag-image[data-v-3c51aaad] {\n  height: 0.32rem;\n}\n.tag-special[data-v-3c51aaad] {\n  border-width: 0.01333rem;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n}\n.left-image[data-v-3c51aaad] {\n  width: 0.26667rem;\n  height: 0.26667rem;\n}\n.tag-left[data-v-3c51aaad] {\n  width: 0.32rem;\n  height: 0.32rem;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n}\n.tag-text[data-v-3c51aaad] {\n  font-size: 0.26667rem;\n  height: 0.29333rem;\n  line-height: 0.29333rem;\n  padding-left: 0.08rem;\n  padding-right: 0.08rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-tag/index.vue?07dd5b6e"],"names":[],"mappings":";AA+BA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;CACA;AAEA;EACA,gBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,iBAAA;EACA,0BAAA;EACA,2BAAA;CACA;AAEA;EACA,sCAAA;EACA,uCAAA;EACA,mCAAA;EACA,oCAAA;CACA;AAEA;EACA,yBAAA;CACA;AAEA;EACA,gBAAA;CACA;AAEA;EACA,yBAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,kBAAA;EACA,mBAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;CACA;AAEA;EACA,sBAAA;EACA,mBAAA;EACA,wBAAA;EACA,sBAAA;EACA,uBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <div class=\"wxc-tag\">\n    <div v-if=\"showSolid || showHollow\"\n         :class=\"['tag-item','tag-border',showHollow && 'tag-hollow']\"\n         :style=\"tagTextStyle\">\n      <text class=\"tag-text\" :style=\"{color:fontColor}\">{{value}}</text>\n    </div>\n    <image v-if=\"showImage\"\n           :src=\"img\"\n           @load=\"onLoad\"\n           :aria-hidden=\"true\"\n           :style=\"{ width: imgWidth}\"\n           class=\"tag-image\"></image>\n    <div class=\"tag-special tag-border\"\n         :style=\"{borderColor:tagColor}\"\n         :accessible=\"true\"\n         :aria-label=\"value\"\n         v-if=\"showSpecial\">\n      <div class=\"tag-left\" :style=\"{backgroundColor:tagColor}\">\n        <image :src=\"specialIcon\" class=\"left-image\"></image>\n      </div>\n      <text class=\"tag-text\" :style=\"{color:fontColor}\">{{value}}</text>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n\n  .wxc-tag {\n    align-items: flex-start;\n  }\n\n  .tag-item {\n    height: 24px;\n    justify-content: center;\n    align-items: center;\n    overflow: hidden;\n    /* hack高度不居中问题，后续版本升级去掉 */\n    padding-bottom: 2px;\n  }\n\n  .tag-border {\n    border-bottom-left-radius: 4px;\n    border-bottom-right-radius: 4px;\n    border-top-left-radius: 4px;\n    border-top-right-radius: 4px;\n  }\n\n  .tag-hollow {\n    border-width: 1px;\n  }\n\n  .tag-image {\n    height: 24px;\n  }\n\n  .tag-special {\n    border-width: 1px;\n    flex-direction: row;\n  }\n\n  .left-image {\n    width: 20px;\n    height: 20px;\n  }\n\n  .tag-left {\n    width: 24px;\n    height: 24px;\n    align-items: center;\n    justify-content: center;\n  }\n\n  .tag-text {\n    font-size: 20px;\n    height: 22px;\n    line-height: 22px;\n    padding-left: 6px;\n    padding-right: 6px;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      type: {\n        type: String,\n        default: 'solid'\n      },\n      value: {\n        type: [String, Number],\n        default: '测试测试'\n      },\n      tagColor: {\n        type: String,\n        default: '#ff5000'\n      },\n      fontColor: {\n        type: String,\n        default: '#333'\n      },\n      specialIcon: {\n        type: String,\n        default: ''\n      },\n      img: {\n        type: String,\n        default: ''\n      }\n    },\n    computed: {\n      showSolid () {\n        const { type, value } = this;\n        return type === 'solid' && value !== '';\n      },\n      showHollow () {\n        const { type, value } = this;\n        return type === 'hollow' && value !== '';\n      },\n      showSpecial () {\n        const { type, value, specialIcon } = this;\n        return type === 'special' && value !== '' && specialIcon !== '';\n      },\n      showImage () {\n        const { type, img } = this;\n        return type === 'image' && img !== ''\n      },\n      tagTextStyle () {\n        const { tagColor, showSolid } = this;\n        return showSolid ? { backgroundColor: tagColor } : { borderColor: tagColor }\n      }\n    },\n    data: () => ({\n      imgWidth: 90\n    }),\n    methods: {\n      onLoad (e) {\n        if (e.success && e.size && e.size.naturalWidth > 0) {\n          const width = e.size.naturalWidth;\n          const height = e.size.naturalHeight;\n          this.imgWidth = width * (24 / height);\n        }\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10531,7 +10530,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-search-bar[data-v-3c9bb53e] {\n  padding-left: 20px;\n  padding-right: 20px;\n  background-color: #ffffff;\n  width: 750px;\n  height: 84px;\n  flex-direction: row;\n}\n.wxc-search-bar-yellow[data-v-3c9bb53e] {\n  background-color: #ffc900;\n}\n.search-bar-input[data-v-3c9bb53e] {\n  position: absolute;\n  top: 10px;\n  padding-top: 0;\n  padding-bottom: 0;\n  padding-right: 40px;\n  padding-left: 60px;\n  font-size: 26px;\n  width: 624px;\n  height: 64px;\n  line-height: 64px;\n  background-color: #E5E5E5;\n  outline: none;\n  border-radius: 6px;\n}\n.search-bar-input-yellow[data-v-3c9bb53e] {\n  background-color: #fff6d6;\n  placeholder-color: #666666;\n}\n.search-bar-ICON[data-v-3c9bb53e] {\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  left: 34px;\n  top: 28px;\n}\n.search-bar-close[data-v-3c9bb53e] {\n  position: absolute;\n  width: 30px;\n  height: 30px;\n  right: 120px;\n  top: 28px;\n}\n.search-bar-button[data-v-3c9bb53e] {\n  width: 94px;\n  height: 36px;\n  font-size: 30px;\n  text-align: center;\n  background-color: #ffffff;\n  margin-top: 16px;\n  margin-right: 0;\n  color: #333333;\n  position: absolute;\n  right: 8px;\n  top: 9px;\n}\n.search-bar-button-yellow[data-v-3c9bb53e] {\n  background-color: #FFC900;\n}\n.input-has-dep[data-v-3c9bb53e] {\n  padding-left: 240px;\n  width: 710px;\n}\n.bar-dep[data-v-3c9bb53e] {\n  width: 170px;\n  padding-right: 12px;\n  padding-left: 12px;\n  height: 42px;\n  align-items: center;\n  flex-direction: row;\n  position: absolute;\n  left: 24px;\n  top: 22px;\n  border-right-style: solid;\n  border-right-width: 1px;\n  border-right-color: #C7C7C7;\n}\n.bar-dep-yellow[data-v-3c9bb53e] {\n  border-right-color: #C7C7C7;\n}\n.dep-text[data-v-3c9bb53e] {\n  flex: 1;\n  text-align: center;\n  font-size: 26px;\n  color: #666666;\n  margin-right: 6px;\n  lines: 1;\n  text-overflow: ellipsis;\n}\n.dep-arrow[data-v-3c9bb53e] {\n  width: 24px;\n  height: 24px;\n}\n.ICON-has-dep[data-v-3c9bb53e] {\n  left: 214px;\n}\n.disabled-input[data-v-3c9bb53e] {\n  width: 750px;\n  height: 64px;\n  position: absolute;\n  left: 0;\n  background-color: transparent;\n}\n.has-dep-disabled[data-v-3c9bb53e] {\n  width: 550px;\n  left: 200px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-searchbar/index.vue?bda0e940"],"names":[],"mappings":";AAiEA;EACA,mBAAA;EACA,oBAAA;EACA,0BAAA;EACA,aAAA;EACA,aAAA;EACA,oBAAA;CACA;AAEA;EACA,0BAAA;CACA;AAEA;EACA,mBAAA;EACA,UAAA;EACA,eAAA;EACA,kBAAA;EACA,oBAAA;EACA,mBAAA;EACA,gBAAA;EACA,aAAA;EACA,aAAA;EACA,kBAAA;EACA,0BAAA;EACA,cAAA;EACA,mBAAA;CACA;AAEA;EACA,0BAAA;EACA,2BAAA;CACA;AAEA;EACA,mBAAA;EACA,YAAA;EACA,aAAA;EACA,WAAA;EACA,UAAA;CACA;AAEA;EACA,mBAAA;EACA,YAAA;EACA,aAAA;EACA,aAAA;EACA,UAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;EACA,gBAAA;EACA,mBAAA;EACA,0BAAA;EACA,iBAAA;EACA,gBAAA;EACA,eAAA;EACA,mBAAA;EACA,WAAA;EACA,SAAA;CACA;AAEA;EACA,0BAAA;CACA;AAEA;EACA,oBAAA;EACA,aAAA;CACA;AAEA;EACA,aAAA;EACA,oBAAA;EACA,mBAAA;EACA,aAAA;EACA,oBAAA;EACA,oBAAA;EACA,mBAAA;EACA,WAAA;EACA,UAAA;EACA,0BAAA;EACA,wBAAA;EACA,4BAAA;CACA;AAEA;EACA,4BAAA;CACA;AAEA;EACA,QAAA;EACA,mBAAA;EACA,gBAAA;EACA,eAAA;EACA,kBAAA;EACA,SAAA;EACA,wBAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;CACA;AAEA;EACA,YAAA;CACA;AAEA;EACA,aAAA;EACA,aAAA;EACA,mBAAA;EACA,QAAA;EACA,8BAAA;CACA;AAEA;EACA,aAAA;EACA,YAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A sSearch bar for city Search-->\n\n<template>\n  <div>\n    <div :class=\"['wxc-search-bar','wxc-search-bar-'+theme]\"\n         v-if=\"mod==='default'\">\n      <input @blur=\"onBlur\"\n             @focus=\"onFocus\"\n             @input=\"onInput\"\n             @return=\"onSubmit\"\n             :autofocus=\"autofocus\"\n             :disabled=\"disabled\"\n             :value=\"value\"\n             ref=\"search-input\"\n             :type=\"inputType\"\n             :placeholder=\"placeholder\"\n             :style=\"{ width: needShowCancel ? '624px' : '710px' }\"\n             :class=\"['search-bar-input','search-bar-input-'+theme]\"/>\n      <div v-if=\"disabled\"\n           @click=\"inputDisabledClicked\"\n           class=\"disabled-input\"></div>\n      <image class=\"search-bar-ICON\"\n             :aria-hidden=\"true\"\n             :src=\"inputIcon\"></image>\n      <image class=\"search-bar-close\"\n             v-if=\"showClose\"\n             :aria-hidden=\"true\"\n             @click=\"closeClicked\"\n             :src=\"closeIcon\"></image>\n      <text :class=\"['search-bar-button','search-bar-button-'+theme]\"\n            v-if=\"needShowCancel\"\n            @click=\"cancelClicked\">取消 </text>\n    </div>\n    <div :class=\"['wxc-search-bar','wxc-search-bar-'+theme]\"\n         v-if=\"mod==='hasDep'\">\n      <input @blur=\"onBlur\"\n             @focus=\"onFocus\"\n             @input=\"onInput\"\n             @return=\"onSubmit\"\n             :disabled=\"disabled\"\n             :autofocus=\"autofocus\"\n             :value=\"value\"\n             :type=\"inputType\"\n             :placeholder=\"placeholder\"\n             :class=\"['search-bar-input','input-has-dep','search-bar-input-'+theme]\"/>\n      <div v-if=\"disabled\"\n           @click=\"inputDisabledClicked\"\n           class=\"disabled-input has-dep-disabled\"></div>\n      <div :class=\"['bar-dep','.bar-dep-'+theme]\"\n           @click=\"depClicked\">\n        <text class=\"dep-text\">{{depName}}</text>\n        <image :src=\"arrowIcon\"\n               :aria-hidden=\"true\"\n               class=\"dep-arrow\"></image>\n      </div>\n      <image class=\"search-bar-ICON ICON-has-dep\"\n             :aria-hidden=\"true\"\n             :src=\"inputIcon\"></image>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-search-bar {\n    padding-left: 20px;\n    padding-right: 20px;\n    background-color: #ffffff;\n    width: 750px;\n    height: 84px;\n    flex-direction: row;\n  }\n\n  .wxc-search-bar-yellow {\n    background-color: #ffc900;\n  }\n\n  .search-bar-input {\n    position: absolute;\n    top: 10px;\n    padding-top: 0;\n    padding-bottom: 0;\n    padding-right: 40px;\n    padding-left: 60px;\n    font-size: 26px;\n    width: 624px;\n    height: 64px;\n    line-height: 64px;\n    background-color: #E5E5E5;\n    outline: none;\n    border-radius: 6px;\n  }\n\n  .search-bar-input-yellow {\n    background-color: #fff6d6;\n    placeholder-color: #666666;\n  }\n\n  .search-bar-ICON {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    left: 34px;\n    top: 28px;\n  }\n\n  .search-bar-close {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    right: 120px;\n    top: 28px;\n  }\n\n  .search-bar-button {\n    width: 94px;\n    height: 36px;\n    font-size: 30px;\n    text-align: center;\n    background-color: #ffffff;\n    margin-top: 16px;\n    margin-right: 0;\n    color: #333333;\n    position: absolute;\n    right: 8px;\n    top: 9px;\n  }\n\n  .search-bar-button-yellow {\n    background-color: #FFC900;\n  }\n\n  .input-has-dep {\n    padding-left: 240px;\n    width: 710px;\n  }\n\n  .bar-dep {\n    width: 170px;\n    padding-right: 12px;\n    padding-left: 12px;\n    height: 42px;\n    align-items: center;\n    flex-direction: row;\n    position: absolute;\n    left: 24px;\n    top: 22px;\n    border-right-style: solid;\n    border-right-width: 1px;\n    border-right-color: #C7C7C7;\n  }\n\n  .bar-dep-yellow {\n    border-right-color: #C7C7C7;\n  }\n\n  .dep-text {\n    flex: 1;\n    text-align: center;\n    font-size: 26px;\n    color: #666666;\n    margin-right: 6px;\n    lines: 1;\n    text-overflow: ellipsis;\n  }\n\n  .dep-arrow {\n    width: 24px;\n    height: 24px;\n  }\n\n  .ICON-has-dep {\n    left: 214px;\n  }\n\n  .disabled-input {\n    width: 750px;\n    height: 64px;\n    position: absolute;\n    left: 0;\n    background-color: transparent;\n  }\n\n  .has-dep-disabled {\n    width: 550px;\n    left: 200px;\n  }\n</style>\n\n<script>\n  import { INPUT_ICON, ARROW_ICON, CLOSE_ICON } from './type';\n\n  export default {\n    props: {\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      alwaysShowCancel: {\n        type: Boolean,\n        default: false\n      },\n      inputType: {\n        type: String,\n        default: 'text'\n      },\n      mod: {\n        type: String,\n        default: 'default'\n      },\n      autofocus: {\n        type: Boolean,\n        default: false\n      },\n      theme: {\n        type: String,\n        default: 'gray'\n      },\n      defaultValue: {\n        type: String,\n        default: ''\n      },\n      placeholder: {\n        type: String,\n        default: '搜索'\n      },\n      depName: {\n        type: String,\n        default: '杭州'\n      }\n    },\n    computed: {\n      needShowCancel () {\n        return this.alwaysShowCancel || this.showCancel;\n      }\n    },\n    data: () => ({\n      inputIcon: INPUT_ICON,\n      closeIcon: CLOSE_ICON,\n      arrowIcon: ARROW_ICON,\n      showCancel: false,\n      showClose: false,\n      value: ''\n    }),\n    created () {\n      this.defaultValue && (this.value = this.defaultValue);\n      if (this.disabled) {\n        this.showCancel = false;\n        this.showClose = false;\n      }\n    },\n    methods: {\n      onBlur () {\n        const self = this;\n        setTimeout(() => {\n          self.showCancel = false;\n          self.detectShowClose();\n          self.$emit('wxcSearchbarInputOnBlur', { value: self.value });\n        }, 10);\n      },\n      autoBlur () {\n        this.$refs['search-input'].blur();\n      },\n      onFocus () {\n        this.showCancel = true;\n        this.detectShowClose();\n        this.$emit('wxcSearchbarInputOnFocus', { value: this.value });\n      },\n      closeClicked () {\n        this.value = '';\n        this.showCancel && (this.showCancel = false);\n        this.showClose && (this.showClose = false);\n        this.$emit('wxcSearchbarCloseClicked', { value: this.value });\n        this.$emit('wxcSearchbarInputOnInput', { value: this.value });\n      },\n      onInput (e) {\n        this.value = e.value;\n        this.showCancel = true;\n        this.detectShowClose();\n        this.$emit('wxcSearchbarInputOnInput', { value: this.value });\n      },\n      onSubmit (e) {\n        this.onBlur();\n        this.value = e.value;\n        this.showCancel = true;\n        this.detectShowClose();\n        this.$emit('wxcSearchbarInputReturned', { value: this.value });\n      },\n      cancelClicked () {\n        this.showCancel && (this.showCancel = false);\n        this.showClose && (this.showClose = false);\n        this.$emit('wxcSearchbarCancelClicked', { value: this.value });\n      },\n      detectShowClose () {\n        this.showClose = (this.value.length > 0) && this.showCancel;\n      },\n      depClicked () {\n        this.$emit('wxcSearchbarDepChooseClicked', {});\n      },\n      inputDisabledClicked () {\n        this.$emit('wxcSearchbarInputDisabledClicked', {});\n      },\n      setValue (value) {\n        this.value = value;\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-search-bar[data-v-3c9bb53e] {\n  padding-left: 0.26667rem;\n  padding-right: 0.26667rem;\n  background-color: #ffffff;\n  width: 10rem;\n  height: 1.12rem;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n}\n.wxc-search-bar-yellow[data-v-3c9bb53e] {\n  background-color: #ffc900;\n}\n.search-bar-input[data-v-3c9bb53e] {\n  position: absolute;\n  top: 0.13333rem;\n  padding-top: 0;\n  padding-bottom: 0;\n  padding-right: 0.53333rem;\n  padding-left: 0.8rem;\n  font-size: 0.34667rem;\n  width: 8.32rem;\n  height: 0.85333rem;\n  line-height: 0.85333rem;\n  background-color: #E5E5E5;\n  outline: none;\n  border-radius: 0.08rem;\n}\n.search-bar-input-yellow[data-v-3c9bb53e] {\n  background-color: #fff6d6;\n  placeholder-color: #666666;\n}\n.search-bar-input-yellow[data-v-3c9bb53e]::-webkit-input-placeholder {\n  color:#666666;\n}\n.search-bar-input-yellow[data-v-3c9bb53e]:-moz-placeholder {\n  color:#666666;\n}\n.search-bar-input-yellow[data-v-3c9bb53e]::-moz-placeholder {\n  color:#666666;\n}\n.search-bar-input-yellow[data-v-3c9bb53e]:-ms-input-placeholder {\n  color:#666666;\n}\n.search-bar-input-yellow[data-v-3c9bb53e]:placeholder-shown {\n  color:#666666;\n}\n.search-bar-ICON[data-v-3c9bb53e] {\n  position: absolute;\n  width: 0.4rem;\n  height: 0.4rem;\n  left: 0.45333rem;\n  top: 0.37333rem;\n}\n.search-bar-close[data-v-3c9bb53e] {\n  position: absolute;\n  width: 0.4rem;\n  height: 0.4rem;\n  right: 1.6rem;\n  top: 0.37333rem;\n}\n.search-bar-button[data-v-3c9bb53e] {\n  width: 1.25333rem;\n  height: 0.48rem;\n  font-size: 0.4rem;\n  text-align: center;\n  background-color: #ffffff;\n  margin-top: 0.21333rem;\n  margin-right: 0;\n  color: #333333;\n  position: absolute;\n  right: 0.10667rem;\n  top: 0.12rem;\n}\n.search-bar-button-yellow[data-v-3c9bb53e] {\n  background-color: #FFC900;\n}\n.input-has-dep[data-v-3c9bb53e] {\n  padding-left: 3.2rem;\n  width: 9.46667rem;\n}\n.bar-dep[data-v-3c9bb53e] {\n  width: 2.26667rem;\n  padding-right: 0.16rem;\n  padding-left: 0.16rem;\n  height: 0.56rem;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  position: absolute;\n  left: 0.32rem;\n  top: 0.29333rem;\n  border-right-style: solid;\n  border-right-width: 0.01333rem;\n  border-right-color: #C7C7C7;\n}\n.bar-dep-yellow[data-v-3c9bb53e] {\n  border-right-color: #C7C7C7;\n}\n.dep-text[data-v-3c9bb53e] {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n  text-align: center;\n  font-size: 0.34667rem;\n  color: #666666;\n  margin-right: 0.08rem;\n  lines: 1;\n  text-overflow: ellipsis;\n}\n.dep-arrow[data-v-3c9bb53e] {\n  width: 0.32rem;\n  height: 0.32rem;\n}\n.ICON-has-dep[data-v-3c9bb53e] {\n  left: 2.85333rem;\n}\n.disabled-input[data-v-3c9bb53e] {\n  width: 10rem;\n  height: 0.85333rem;\n  position: absolute;\n  left: 0;\n  background-color: transparent;\n}\n.has-dep-disabled[data-v-3c9bb53e] {\n  width: 7.33333rem;\n  left: 2.66667rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-searchbar/index.vue?bda0e940","/Users/Tw93/www/github/weex-ui/packages/wxc-searchbar/<input css 34>"],"names":[],"mappings":";AAiEA;EACA,yBAAA;EACA,0BAAA;EACA,0BAAA;EACA,aAAA;EACA,gBAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,0BAAA;CACA;AAEA;EACA,mBAAA;EACA,gBAAA;EACA,eAAA;EACA,kBAAA;EACA,0BAAA;EACA,qBAAA;EACA,sBAAA;EACA,eAAA;EACA,mBAAA;EACA,wBAAA;EACA,0BAAA;EACA,cAAA;EACA,uBAAA;CACA;AAEA;EACA,0BAAA;EACA,2BAAA;CACA;AChFA;EACE,cAAc;CACf;AAND;EACE,cAAc;CACf;AAND;EACE,cAAc;CACf;AAND;EACE,cAAc;CACf;AAND;EACE,cAAc;CACf;ADgGD;EACA,mBAAA;EACA,cAAA;EACA,eAAA;EACA,iBAAA;EACA,gBAAA;CACA;AAEA;EACA,mBAAA;EACA,cAAA;EACA,eAAA;EACA,cAAA;EACA,gBAAA;CACA;AAEA;EACA,kBAAA;EACA,gBAAA;EACA,kBAAA;EACA,mBAAA;EACA,0BAAA;EACA,uBAAA;EACA,gBAAA;EACA,eAAA;EACA,mBAAA;EACA,kBAAA;EACA,aAAA;CACA;AAEA;EACA,0BAAA;CACA;AAEA;EACA,qBAAA;EACA,kBAAA;CACA;AAEA;EACA,kBAAA;EACA,uBAAA;EACA,sBAAA;EACA,gBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,mBAAA;EACA,cAAA;EACA,gBAAA;EACA,0BAAA;EACA,+BAAA;EACA,4BAAA;CACA;AAEA;EACA,4BAAA;CACA;AAEA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;EACA,mBAAA;EACA,sBAAA;EACA,eAAA;EACA,sBAAA;EACA,SAAA;EACA,wBAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;CACA;AAEA;EACA,iBAAA;CACA;AAEA;EACA,aAAA;EACA,mBAAA;EACA,mBAAA;EACA,QAAA;EACA,8BAAA;CACA;AAEA;EACA,kBAAA;EACA,iBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A sSearch bar for city Search-->\n\n<template>\n  <div>\n    <div :class=\"['wxc-search-bar','wxc-search-bar-'+theme]\"\n         v-if=\"mod==='default'\">\n      <input @blur=\"onBlur\"\n             @focus=\"onFocus\"\n             @input=\"onInput\"\n             @return=\"onSubmit\"\n             :autofocus=\"autofocus\"\n             :disabled=\"disabled\"\n             :value=\"value\"\n             ref=\"search-input\"\n             :type=\"inputType\"\n             :placeholder=\"placeholder\"\n             :style=\"{ width: needShowCancel ? '624px' : '710px' }\"\n             :class=\"['search-bar-input','search-bar-input-'+theme]\"/>\n      <div v-if=\"disabled\"\n           @click=\"inputDisabledClicked\"\n           class=\"disabled-input\"></div>\n      <image class=\"search-bar-ICON\"\n             :aria-hidden=\"true\"\n             :src=\"inputIcon\"></image>\n      <image class=\"search-bar-close\"\n             v-if=\"showClose\"\n             :aria-hidden=\"true\"\n             @click=\"closeClicked\"\n             :src=\"closeIcon\"></image>\n      <text :class=\"['search-bar-button','search-bar-button-'+theme]\"\n            v-if=\"needShowCancel\"\n            @click=\"cancelClicked\">取消 </text>\n    </div>\n    <div :class=\"['wxc-search-bar','wxc-search-bar-'+theme]\"\n         v-if=\"mod==='hasDep'\">\n      <input @blur=\"onBlur\"\n             @focus=\"onFocus\"\n             @input=\"onInput\"\n             @return=\"onSubmit\"\n             :disabled=\"disabled\"\n             :autofocus=\"autofocus\"\n             :value=\"value\"\n             :type=\"inputType\"\n             :placeholder=\"placeholder\"\n             :class=\"['search-bar-input','input-has-dep','search-bar-input-'+theme]\"/>\n      <div v-if=\"disabled\"\n           @click=\"inputDisabledClicked\"\n           class=\"disabled-input has-dep-disabled\"></div>\n      <div :class=\"['bar-dep','.bar-dep-'+theme]\"\n           @click=\"depClicked\">\n        <text class=\"dep-text\">{{depName}}</text>\n        <image :src=\"arrowIcon\"\n               :aria-hidden=\"true\"\n               class=\"dep-arrow\"></image>\n      </div>\n      <image class=\"search-bar-ICON ICON-has-dep\"\n             :aria-hidden=\"true\"\n             :src=\"inputIcon\"></image>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-search-bar {\n    padding-left: 20px;\n    padding-right: 20px;\n    background-color: #ffffff;\n    width: 750px;\n    height: 84px;\n    flex-direction: row;\n  }\n\n  .wxc-search-bar-yellow {\n    background-color: #ffc900;\n  }\n\n  .search-bar-input {\n    position: absolute;\n    top: 10px;\n    padding-top: 0;\n    padding-bottom: 0;\n    padding-right: 40px;\n    padding-left: 60px;\n    font-size: 26px;\n    width: 624px;\n    height: 64px;\n    line-height: 64px;\n    background-color: #E5E5E5;\n    outline: none;\n    border-radius: 6px;\n  }\n\n  .search-bar-input-yellow {\n    background-color: #fff6d6;\n    placeholder-color: #666666;\n  }\n\n  .search-bar-ICON {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    left: 34px;\n    top: 28px;\n  }\n\n  .search-bar-close {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    right: 120px;\n    top: 28px;\n  }\n\n  .search-bar-button {\n    width: 94px;\n    height: 36px;\n    font-size: 30px;\n    text-align: center;\n    background-color: #ffffff;\n    margin-top: 16px;\n    margin-right: 0;\n    color: #333333;\n    position: absolute;\n    right: 8px;\n    top: 9px;\n  }\n\n  .search-bar-button-yellow {\n    background-color: #FFC900;\n  }\n\n  .input-has-dep {\n    padding-left: 240px;\n    width: 710px;\n  }\n\n  .bar-dep {\n    width: 170px;\n    padding-right: 12px;\n    padding-left: 12px;\n    height: 42px;\n    align-items: center;\n    flex-direction: row;\n    position: absolute;\n    left: 24px;\n    top: 22px;\n    border-right-style: solid;\n    border-right-width: 1px;\n    border-right-color: #C7C7C7;\n  }\n\n  .bar-dep-yellow {\n    border-right-color: #C7C7C7;\n  }\n\n  .dep-text {\n    flex: 1;\n    text-align: center;\n    font-size: 26px;\n    color: #666666;\n    margin-right: 6px;\n    lines: 1;\n    text-overflow: ellipsis;\n  }\n\n  .dep-arrow {\n    width: 24px;\n    height: 24px;\n  }\n\n  .ICON-has-dep {\n    left: 214px;\n  }\n\n  .disabled-input {\n    width: 750px;\n    height: 64px;\n    position: absolute;\n    left: 0;\n    background-color: transparent;\n  }\n\n  .has-dep-disabled {\n    width: 550px;\n    left: 200px;\n  }\n</style>\n\n<script>\n  import { INPUT_ICON, ARROW_ICON, CLOSE_ICON } from './type';\n\n  export default {\n    props: {\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      alwaysShowCancel: {\n        type: Boolean,\n        default: false\n      },\n      inputType: {\n        type: String,\n        default: 'text'\n      },\n      mod: {\n        type: String,\n        default: 'default'\n      },\n      autofocus: {\n        type: Boolean,\n        default: false\n      },\n      theme: {\n        type: String,\n        default: 'gray'\n      },\n      defaultValue: {\n        type: String,\n        default: ''\n      },\n      placeholder: {\n        type: String,\n        default: '搜索'\n      },\n      depName: {\n        type: String,\n        default: '杭州'\n      }\n    },\n    computed: {\n      needShowCancel () {\n        return this.alwaysShowCancel || this.showCancel;\n      }\n    },\n    data: () => ({\n      inputIcon: INPUT_ICON,\n      closeIcon: CLOSE_ICON,\n      arrowIcon: ARROW_ICON,\n      showCancel: false,\n      showClose: false,\n      value: ''\n    }),\n    created () {\n      this.defaultValue && (this.value = this.defaultValue);\n      if (this.disabled) {\n        this.showCancel = false;\n        this.showClose = false;\n      }\n    },\n    methods: {\n      onBlur () {\n        const self = this;\n        setTimeout(() => {\n          self.showCancel = false;\n          self.detectShowClose();\n          self.$emit('wxcSearchbarInputOnBlur', { value: self.value });\n        }, 10);\n      },\n      autoBlur () {\n        this.$refs['search-input'].blur();\n      },\n      onFocus () {\n        this.showCancel = true;\n        this.detectShowClose();\n        this.$emit('wxcSearchbarInputOnFocus', { value: this.value });\n      },\n      closeClicked () {\n        this.value = '';\n        this.showCancel && (this.showCancel = false);\n        this.showClose && (this.showClose = false);\n        this.$emit('wxcSearchbarCloseClicked', { value: this.value });\n        this.$emit('wxcSearchbarInputOnInput', { value: this.value });\n      },\n      onInput (e) {\n        this.value = e.value;\n        this.showCancel = true;\n        this.detectShowClose();\n        this.$emit('wxcSearchbarInputOnInput', { value: this.value });\n      },\n      onSubmit (e) {\n        this.onBlur();\n        this.value = e.value;\n        this.showCancel = true;\n        this.detectShowClose();\n        this.$emit('wxcSearchbarInputReturned', { value: this.value });\n      },\n      cancelClicked () {\n        this.showCancel && (this.showCancel = false);\n        this.showClose && (this.showClose = false);\n        this.$emit('wxcSearchbarCancelClicked', { value: this.value });\n      },\n      detectShowClose () {\n        this.showClose = (this.value.length > 0) && this.showCancel;\n      },\n      depClicked () {\n        this.$emit('wxcSearchbarDepChooseClicked', {});\n      },\n      inputDisabledClicked () {\n        this.$emit('wxcSearchbarInputDisabledClicked', {});\n      },\n      setValue (value) {\n        this.value = value;\n      }\n    }\n  };\n</script>\n","\n.search-bar-input-yellow:placeholder-shown {\n  color:#666666;\n}\n\n.search-bar-input-yellow:-ms-input-placeholder {\n  color:#666666;\n}\n\n.search-bar-input-yellow::-moz-placeholder {\n  color:#666666;\n}\n\n.search-bar-input-yellow:-moz-placeholder {\n  color:#666666;\n}\n\n.search-bar-input-yellow::-webkit-input-placeholder {\n  color:#666666;\n}"],"sourceRoot":""}]);
 
 // exports
 
@@ -10545,7 +10544,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-tab-page[data-v-3f00baac] {\n  width: 750px;\n  flex-direction: column;\n}\n.tab-title-list[data-v-3f00baac] {\n  flex-direction: row;\n}\n.title-item[data-v-3f00baac] {\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  border-bottom-style: solid;\n  position: relative;\n}\n.border-bottom[data-v-3f00baac] {\n  position: absolute;\n  bottom: 0;\n}\n.tab-page-wrap[data-v-3f00baac] {\n  width: 750px;\n  overflow: hidden;\n  position: relative;\n}\n.tab-container[data-v-3f00baac] {\n  flex: 1;\n  flex-direction: row;\n  position: absolute;\n}\n.tab-text[data-v-3f00baac] {\n  lines: 1;\n  text-overflow: ellipsis;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-tab-page/index.vue?306f77c4"],"names":[],"mappings":";AAqDA;EACA,aAAA;EACA,uBAAA;CACA;AAEA;EACA,oBAAA;CACA;AAEA;EACA,wBAAA;EACA,oBAAA;EACA,uBAAA;EACA,2BAAA;EACA,mBAAA;CACA;AAEA;EACA,mBAAA;EACA,UAAA;CACA;AAEA;EACA,aAAA;EACA,iBAAA;EACA,mBAAA;CACA;AAEA;EACA,QAAA;EACA,oBAAA;EACA,mBAAA;CACA;AAEA;EACA,SAAA;EACA,wBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n<!-- Updated by Tw93 on 17/11/16.-->\n\n<template>\n  <div class=\"wxc-tab-page\"\n       :style=\"{ height: (tabPageHeight)+'px', backgroundColor:wrapBgColor }\">\n    <scroller class=\"tab-title-list\"\n              ref=\"tab-title-list\"\n              :show-scrollbar=\"false\"\n              scroll-direction=\"horizontal\"\n              :data-spm=\"spmC\"\n              :style=\"{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height)+'px',paddingLeft:tabStyles.leftOffset+'px' }\">\n\n      <div class=\"title-item\"\n           v-for=\"(v,index) in tabTitles\"\n           :key=\"index\"\n           :ref=\"'wxc-tab-title-'+index\"\n           @click=\"setPage(index,v.url)\"\n           :style=\"{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage == index ? tabStyles.activeBgColor : tabStyles.bgColor }\"\n           :accessible=\"true\"\n           :aria-label=\"`${v.title?v.title:'标签'+index}`\">\n\n        <image :src=\"currentPage == index ? v.activeIcon : v.icon\"\n               v-if=\"titleType === 'icon' && !titleUseSlot\"\n               :style=\"{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}\"></image>\n        <text\n          v-if=\"!titleUseSlot\"\n          :style=\"{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}\"\n          class=\"tab-text\">{{v.title}}</text>\n        <div class=\"border-bottom\"\n             v-if=\"tabStyles.hasActiveBottom && !titleUseSlot\"\n             :style=\"{ width: tabStyles.activeBottomWidth+'px', left: (tabStyles.width-tabStyles.activeBottomWidth)/2+'px', height: tabStyles.activeBottomHeight+'px', backgroundColor: currentPage == index ? tabStyles.activeBottomColor : 'transparent' }\"></div>\n        <slot :name=\"`tab-title-${index}`\" v-if=\"titleUseSlot\"></slot>\n      </div>\n    </scroller>\n    <div class=\"tab-page-wrap\"\n         ref=\"tab-page-wrap\"\n         @panstart=\"_onTouchStart\"\n         @panmove=\"_onTouchMove\"\n         @panend=\"_onTouchEnd\"\n         :prevent-move-event=\"true\"\n         @horizontalpan=\"startHandler\"\n         :style=\"{ height: (tabPageHeight-tabStyles.height)+'px' }\">\n      <div ref=\"tab-container\"\n           class=\"tab-container\">\n        <slot></slot>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-tab-page {\n    width: 750px;\n    flex-direction: column;\n  }\n\n  .tab-title-list {\n    flex-direction: row;\n  }\n\n  .title-item {\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n    border-bottom-style: solid;\n    position: relative;\n  }\n\n  .border-bottom {\n    position: absolute;\n    bottom: 0;\n  }\n\n  .tab-page-wrap {\n    width: 750px;\n    overflow: hidden;\n    position: relative;\n  }\n\n  .tab-container {\n    flex: 1;\n    flex-direction: row;\n    position: absolute;\n  }\n\n  .tab-text {\n    lines: 1;\n    text-overflow: ellipsis;\n  }\n</style>\n\n<script>\n  const dom = weex.requireModule('dom');\n  const animation = weex.requireModule('animation');\n  const swipeBack = weex.requireModule('swipeBack');\n  const expressionBinding = weex.requireModule('expressionBinding');\n\n  import Utils from '../utils';\n\n  const supportsEB = Utils.env.supportsEB();\n  const supportsEBForIos = Utils.env.supportsEBForIos();\n  const isIos = Utils.env.isIOS();\n\n  export default {\n    props: {\n      tabTitles: {\n        type: Array,\n        default: () => ([])\n      },\n      panDist: {\n        type: Number,\n        default: 200\n      },\n      spmC: {\n        type: [String, Number],\n        default: ''\n      },\n      titleUseSlot: {\n        type: Boolean,\n        default: false\n      },\n      tabStyles: {\n        type: Object,\n        default: () => ({\n          bgColor: '#FFFFFF',\n          titleColor: '#666666',\n          activeTitleColor: '#3D3D3D',\n          activeBgColor: '#FFFFFF',\n          isActiveTitleBold: true,\n          iconWidth: 70,\n          iconHeight: 70,\n          width: 160,\n          height: 120,\n          fontSize: 24,\n          hasActiveBottom: true,\n          activeBottomColor: '#FFC900',\n          activeBottomWidth: 120,\n          activeBottomHeight: 6,\n          textPaddingLeft: 10,\n          textPaddingRight: 10,\n          leftOffset: 0\n        })\n      },\n      titleType: {\n        type: String,\n        default: 'icon'\n      },\n      tabPageHeight: {\n        type: [String, Number],\n        default: 1334\n      },\n      isTabView: {\n        type: Boolean,\n        default: true\n      },\n      needSlider: {\n        type: Boolean,\n        default: true\n      },\n      duration: {\n        type: [Number, String],\n        default: 300\n      },\n      timingFunction: {\n        type: String,\n        default: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'\n      },\n      wrapBgColor: {\n        type: String,\n        default: '#f2f3f4'\n      }\n    },\n    data: () => ({\n      currentPage: 0,\n      isMoving: false,\n      startTime: 0,\n      deltaX: 0,\n      translateX: 0,\n      startPosX: 0,\n      startPosY: 0,\n      judge: 'INITIAL'\n    }),\n    mounted () {\n      if (swipeBack && swipeBack.forbidSwipeBack) {\n        swipeBack.forbidSwipeBack(true);\n      }\n      if (supportsEBForIos && this.needSlider && this.isTabView) {\n        setTimeout(() => {\n          const tabPageEl = this.$refs['tab-page-wrap'];\n          if (tabPageEl && tabPageEl.ref) {\n            expressionBinding.enableBinding(tabPageEl.ref, 'pan');\n            this.bindExp(tabPageEl);\n          }\n        }, 20);\n      }\n    },\n    methods: {\n      next () {\n        let page = this.currentPage;\n        if (page < this.tabTitles.length - 1) {\n          page++;\n        }\n        this.setPage(page);\n      },\n      prev () {\n        let page = this.currentPage;\n        if (page > 0) {\n          page--;\n        }\n        this.setPage(page);\n      },\n      startHandler (e) {\n        if (supportsEBForIos && e.state === 'start' && this.isTabView && this.needSlider) {\n          // list下拉和到最下面问题修复\n          setTimeout(() => {\n            this.bindExp(this.$refs['tab-page-wrap']);\n          }, 0)\n        }\n      },\n      bindExp (element) {\n        if (!this.isMoving && element && element.ref) {\n          const tabElement = this.$refs['tab-container'];\n          const { currentPage, panDist } = this;\n          const dist = currentPage * 750;\n          // x-dist\n          const args = [{\n            element: tabElement.ref,\n            property: 'transform.translateX',\n            expression: `{\\\"type\\\":\\\"-\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"x\\\"},{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${dist}}]}`\n          }];\n          expressionBinding.createBinding(element.ref, 'pan', '', args, e => {\n            const { deltaX, state } = e;\n            if (state === 'end') {\n              if (deltaX < -panDist) {\n                this.next();\n              } else if (deltaX > panDist) {\n                this.prev();\n              } else {\n                this.setPage(currentPage);\n              }\n            }\n          });\n        }\n      },\n      setPage (page, url = null, animated = true) {\n        if (!this.isTabView) {\n          this.jumpOut(url);\n          return;\n        }\n        if (this.isMoving === true) {\n          return;\n        }\n        this.isMoving = true;\n        const previousPage = this.currentPage;\n        const currentTabEl = this.$refs[`wxc-tab-title-${page}`][0];\n        const { width } = this.tabStyles;\n        const appearNum = parseInt(750 / width);\n        const tabsNum = this.tabTitles.length;\n        const offset = page > appearNum ? -(750 - width) / 2 : -width * 2;\n\n        if (appearNum < tabsNum) {\n          (previousPage > appearNum || page > 1) && dom.scrollToElement(currentTabEl, {\n            offset, animated\n          });\n\n          page <= 1 && previousPage > page && dom.scrollToElement(currentTabEl, {\n            offset: -width * page,\n            animated\n          });\n        }\n\n        this.isMoving = false;\n        this.currentPage = page;\n\n        if (isIos) {\n          // 高版本ios 手淘上面会有不固定情况，hack一下\n          setTimeout(() => {\n            this._animateTransformX(page, animated);\n            this.$emit('wxcTabPageCurrentTabSelected', { page });\n          }, 10);\n        } else {\n          this._animateTransformX(page, animated);\n          this.$emit('wxcTabPageCurrentTabSelected', { page });\n        }\n      },\n      jumpOut (url) {\n        url && Utils.goToH5Page(url)\n      },\n      _animateTransformX (page, animated) {\n        const { duration, timingFunction } = this;\n        const computedDur = animated ? duration : 0.00001;\n        const containerEl = this.$refs[`tab-container`];\n        const dist = page * 750;\n        animation.transition(containerEl, {\n          styles: {\n            transform: `translateX(${-dist}px)`\n          },\n          duration: computedDur,\n          timingFunction,\n          delay: 0\n        }, () => {\n        });\n      },\n      _onTouchStart (e) {\n        if (supportsEB || !this.isTabView || !this.needSlider) {\n          return;\n        }\n        this.startPosX = this._getTouchXPos(e);\n        this.startPosY = this._getTouchYPos(e);\n        this.deltaX = 0;\n        this.startTime = new Date().getTime();\n      },\n      _onTouchMove (e) {\n        if (supportsEB || !this.isTabView || !this.needSlider) {\n          return;\n        }\n        this.deltaX = this._getTouchXPos(e) - this.startPosX;\n        this.deltaY = Math.abs(this._getTouchYPos(e) - this.startPosY + 1);\n        if (this.judge === 'INITIAL' && Math.abs(this.deltaX) / this.deltaY > 1.73) {\n          this.judge = 'SLIDE_ING';\n        }\n      },\n      _onTouchEnd () {\n        if (supportsEB || !this.isTabView || !this.needSlider) {\n          return;\n        }\n        if (this.judge === 'SLIDE_ING') {\n          if (this.deltaX < -50) {\n            this.next();\n          } else if (this.deltaX > 50) {\n            this.prev();\n          }\n        }\n        this.judge = 'INITIAL';\n      },\n      _getTouchXPos (e) {\n        return e.changedTouches[0]['pageX'];\n      },\n      _getTouchYPos (e) {\n        return e.changedTouches[0]['pageY'];\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-tab-page[data-v-3f00baac] {\n  width: 10rem;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n}\n.tab-title-list[data-v-3f00baac] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n}\n.title-item[data-v-3f00baac] {\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  border-bottom-style: solid;\n  position: relative;\n}\n.border-bottom[data-v-3f00baac] {\n  position: absolute;\n  bottom: 0;\n}\n.tab-page-wrap[data-v-3f00baac] {\n  width: 10rem;\n  overflow: hidden;\n  position: relative;\n}\n.tab-container[data-v-3f00baac] {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  position: absolute;\n}\n.tab-text[data-v-3f00baac] {\n  lines: 1;\n  text-overflow: ellipsis;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-tab-page/index.vue?306f77c4"],"names":[],"mappings":";AAqDA;EACA,aAAA;EACA,6BAAA;EAAA,8BAAA;EAAA,+BAAA;UAAA,uBAAA;CACA;AAEA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,6BAAA;EAAA,8BAAA;EAAA,+BAAA;UAAA,uBAAA;EACA,2BAAA;EACA,mBAAA;CACA;AAEA;EACA,mBAAA;EACA,UAAA;CACA;AAEA;EACA,aAAA;EACA,iBAAA;EACA,mBAAA;CACA;AAEA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,mBAAA;CACA;AAEA;EACA,SAAA;EACA,wBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n<!-- Updated by Tw93 on 17/11/16.-->\n\n<template>\n  <div class=\"wxc-tab-page\"\n       :style=\"{ height: (tabPageHeight)+'px', backgroundColor:wrapBgColor }\">\n    <scroller class=\"tab-title-list\"\n              ref=\"tab-title-list\"\n              :show-scrollbar=\"false\"\n              scroll-direction=\"horizontal\"\n              :data-spm=\"spmC\"\n              :style=\"{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height)+'px',paddingLeft:tabStyles.leftOffset+'px' }\">\n\n      <div class=\"title-item\"\n           v-for=\"(v,index) in tabTitles\"\n           :key=\"index\"\n           :ref=\"'wxc-tab-title-'+index\"\n           @click=\"setPage(index,v.url)\"\n           :style=\"{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage == index ? tabStyles.activeBgColor : tabStyles.bgColor }\"\n           :accessible=\"true\"\n           :aria-label=\"`${v.title?v.title:'标签'+index}`\">\n\n        <image :src=\"currentPage == index ? v.activeIcon : v.icon\"\n               v-if=\"titleType === 'icon' && !titleUseSlot\"\n               :style=\"{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}\"></image>\n        <text\n          v-if=\"!titleUseSlot\"\n          :style=\"{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}\"\n          class=\"tab-text\">{{v.title}}</text>\n        <div class=\"border-bottom\"\n             v-if=\"tabStyles.hasActiveBottom && !titleUseSlot\"\n             :style=\"{ width: tabStyles.activeBottomWidth+'px', left: (tabStyles.width-tabStyles.activeBottomWidth)/2+'px', height: tabStyles.activeBottomHeight+'px', backgroundColor: currentPage == index ? tabStyles.activeBottomColor : 'transparent' }\"></div>\n        <slot :name=\"`tab-title-${index}`\" v-if=\"titleUseSlot\"></slot>\n      </div>\n    </scroller>\n    <div class=\"tab-page-wrap\"\n         ref=\"tab-page-wrap\"\n         @panstart=\"_onTouchStart\"\n         @panmove=\"_onTouchMove\"\n         @panend=\"_onTouchEnd\"\n         :prevent-move-event=\"true\"\n         @horizontalpan=\"startHandler\"\n         :style=\"{ height: (tabPageHeight-tabStyles.height)+'px' }\">\n      <div ref=\"tab-container\"\n           class=\"tab-container\">\n        <slot></slot>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-tab-page {\n    width: 750px;\n    flex-direction: column;\n  }\n\n  .tab-title-list {\n    flex-direction: row;\n  }\n\n  .title-item {\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n    border-bottom-style: solid;\n    position: relative;\n  }\n\n  .border-bottom {\n    position: absolute;\n    bottom: 0;\n  }\n\n  .tab-page-wrap {\n    width: 750px;\n    overflow: hidden;\n    position: relative;\n  }\n\n  .tab-container {\n    flex: 1;\n    flex-direction: row;\n    position: absolute;\n  }\n\n  .tab-text {\n    lines: 1;\n    text-overflow: ellipsis;\n  }\n</style>\n\n<script>\n  const dom = weex.requireModule('dom');\n  const animation = weex.requireModule('animation');\n  const swipeBack = weex.requireModule('swipeBack');\n  const expressionBinding = weex.requireModule('expressionBinding');\n\n  import Utils from '../utils';\n\n  const supportsEB = Utils.env.supportsEB();\n  const supportsEBForIos = Utils.env.supportsEBForIos();\n  const isIos = Utils.env.isIOS();\n\n  export default {\n    props: {\n      tabTitles: {\n        type: Array,\n        default: () => ([])\n      },\n      panDist: {\n        type: Number,\n        default: 200\n      },\n      spmC: {\n        type: [String, Number],\n        default: ''\n      },\n      titleUseSlot: {\n        type: Boolean,\n        default: false\n      },\n      tabStyles: {\n        type: Object,\n        default: () => ({\n          bgColor: '#FFFFFF',\n          titleColor: '#666666',\n          activeTitleColor: '#3D3D3D',\n          activeBgColor: '#FFFFFF',\n          isActiveTitleBold: true,\n          iconWidth: 70,\n          iconHeight: 70,\n          width: 160,\n          height: 120,\n          fontSize: 24,\n          hasActiveBottom: true,\n          activeBottomColor: '#FFC900',\n          activeBottomWidth: 120,\n          activeBottomHeight: 6,\n          textPaddingLeft: 10,\n          textPaddingRight: 10,\n          leftOffset: 0\n        })\n      },\n      titleType: {\n        type: String,\n        default: 'icon'\n      },\n      tabPageHeight: {\n        type: [String, Number],\n        default: 1334\n      },\n      isTabView: {\n        type: Boolean,\n        default: true\n      },\n      needSlider: {\n        type: Boolean,\n        default: true\n      },\n      duration: {\n        type: [Number, String],\n        default: 300\n      },\n      timingFunction: {\n        type: String,\n        default: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'\n      },\n      wrapBgColor: {\n        type: String,\n        default: '#f2f3f4'\n      }\n    },\n    data: () => ({\n      currentPage: 0,\n      isMoving: false,\n      startTime: 0,\n      deltaX: 0,\n      translateX: 0,\n      startPosX: 0,\n      startPosY: 0,\n      judge: 'INITIAL'\n    }),\n    mounted () {\n      if (swipeBack && swipeBack.forbidSwipeBack) {\n        swipeBack.forbidSwipeBack(true);\n      }\n      if (supportsEBForIos && this.needSlider && this.isTabView) {\n        setTimeout(() => {\n          const tabPageEl = this.$refs['tab-page-wrap'];\n          if (tabPageEl && tabPageEl.ref) {\n            expressionBinding.enableBinding(tabPageEl.ref, 'pan');\n            this.bindExp(tabPageEl);\n          }\n        }, 20);\n      }\n    },\n    methods: {\n      next () {\n        let page = this.currentPage;\n        if (page < this.tabTitles.length - 1) {\n          page++;\n        }\n        this.setPage(page);\n      },\n      prev () {\n        let page = this.currentPage;\n        if (page > 0) {\n          page--;\n        }\n        this.setPage(page);\n      },\n      startHandler (e) {\n        if (supportsEBForIos && e.state === 'start' && this.isTabView && this.needSlider) {\n          // list下拉和到最下面问题修复\n          setTimeout(() => {\n            this.bindExp(this.$refs['tab-page-wrap']);\n          }, 0)\n        }\n      },\n      bindExp (element) {\n        if (!this.isMoving && element && element.ref) {\n          const tabElement = this.$refs['tab-container'];\n          const { currentPage, panDist } = this;\n          const dist = currentPage * 750;\n          // x-dist\n          const args = [{\n            element: tabElement.ref,\n            property: 'transform.translateX',\n            expression: `{\\\"type\\\":\\\"-\\\",\\\"children\\\":[{\\\"type\\\":\\\"Identifier\\\",\\\"value\\\":\\\"x\\\"},{\\\"type\\\":\\\"NumericLiteral\\\",\\\"value\\\":${dist}}]}`\n          }];\n          expressionBinding.createBinding(element.ref, 'pan', '', args, e => {\n            const { deltaX, state } = e;\n            if (state === 'end') {\n              if (deltaX < -panDist) {\n                this.next();\n              } else if (deltaX > panDist) {\n                this.prev();\n              } else {\n                this.setPage(currentPage);\n              }\n            }\n          });\n        }\n      },\n      setPage (page, url = null, animated = true) {\n        if (!this.isTabView) {\n          this.jumpOut(url);\n          return;\n        }\n        if (this.isMoving === true) {\n          return;\n        }\n        this.isMoving = true;\n        const previousPage = this.currentPage;\n        const currentTabEl = this.$refs[`wxc-tab-title-${page}`][0];\n        const { width } = this.tabStyles;\n        const appearNum = parseInt(750 / width);\n        const tabsNum = this.tabTitles.length;\n        const offset = page > appearNum ? -(750 - width) / 2 : -width * 2;\n\n        if (appearNum < tabsNum) {\n          (previousPage > appearNum || page > 1) && dom.scrollToElement(currentTabEl, {\n            offset, animated\n          });\n\n          page <= 1 && previousPage > page && dom.scrollToElement(currentTabEl, {\n            offset: -width * page,\n            animated\n          });\n        }\n\n        this.isMoving = false;\n        this.currentPage = page;\n\n        if (isIos) {\n          // 高版本ios 手淘上面会有不固定情况，hack一下\n          setTimeout(() => {\n            this._animateTransformX(page, animated);\n            this.$emit('wxcTabPageCurrentTabSelected', { page });\n          }, 10);\n        } else {\n          this._animateTransformX(page, animated);\n          this.$emit('wxcTabPageCurrentTabSelected', { page });\n        }\n      },\n      jumpOut (url) {\n        url && Utils.goToH5Page(url)\n      },\n      _animateTransformX (page, animated) {\n        const { duration, timingFunction } = this;\n        const computedDur = animated ? duration : 0.00001;\n        const containerEl = this.$refs[`tab-container`];\n        const dist = page * 750;\n        animation.transition(containerEl, {\n          styles: {\n            transform: `translateX(${-dist}px)`\n          },\n          duration: computedDur,\n          timingFunction,\n          delay: 0\n        }, () => {\n        });\n      },\n      _onTouchStart (e) {\n        if (supportsEB || !this.isTabView || !this.needSlider) {\n          return;\n        }\n        this.startPosX = this._getTouchXPos(e);\n        this.startPosY = this._getTouchYPos(e);\n        this.deltaX = 0;\n        this.startTime = new Date().getTime();\n      },\n      _onTouchMove (e) {\n        if (supportsEB || !this.isTabView || !this.needSlider) {\n          return;\n        }\n        this.deltaX = this._getTouchXPos(e) - this.startPosX;\n        this.deltaY = Math.abs(this._getTouchYPos(e) - this.startPosY + 1);\n        if (this.judge === 'INITIAL' && Math.abs(this.deltaX) / this.deltaY > 1.73) {\n          this.judge = 'SLIDE_ING';\n        }\n      },\n      _onTouchEnd () {\n        if (supportsEB || !this.isTabView || !this.needSlider) {\n          return;\n        }\n        if (this.judge === 'SLIDE_ING') {\n          if (this.deltaX < -50) {\n            this.next();\n          } else if (this.deltaX > 50) {\n            this.prev();\n          }\n        }\n        this.judge = 'INITIAL';\n      },\n      _getTouchXPos (e) {\n        return e.changedTouches[0]['pageX'];\n      },\n      _getTouchYPos (e) {\n        return e.changedTouches[0]['pageY'];\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10559,7 +10558,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-noticebar[data-v-4edbf20e] {\n  width: 750px;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  padding-left: 24px;\n  background-color: #FFF7D6;\n  border-bottom-width: 1px;\n  border-top-width: 1px;\n  border-color: #FFEEAE;\n  border-style: solid;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n}\n.noticebar-content[data-v-4edbf20e] {\n  color: #EE9900;\n  font-size: 26px;\n  line-height: 36px;\n  width: 592px;\n  text-overflow: ellipsis;\n}\n.more-click-content[data-v-4edbf20e] {\n  width: 64px;\n  align-items: center;\n  justify-content: center;\n}\n.mode-ICON[data-v-4edbf20e],\n.type-ICON[data-v-4edbf20e] {\n  width: 32px;\n  height: 32px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-noticebar/index.vue?c1875f30"],"names":[],"mappings":";AA0BA;EACA,aAAA;EACA,kBAAA;EACA,qBAAA;EACA,mBAAA;EACA,0BAAA;EACA,yBAAA;EACA,sBAAA;EACA,sBAAA;EACA,oBAAA;EACA,oBAAA;EACA,+BAAA;EACA,oBAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;EACA,kBAAA;EACA,aAAA;EACA,wBAAA;CACA;AAEA;EACA,YAAA;EACA,oBAAA;EACA,wBAAA;CACA;AAEA;;EAEA,YAAA;EACA,aAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/28. -->\n<!--A notice bar.-->\n\n<template>\n  <div class=\"wxc-noticebar\"\n       v-if=\"show\"\n       @click=\"noticeBarClicked\"\n       :accessible=\"true\"\n       :aria-label=\"notice\">\n    <image class=\"type-ICON\"\n           v-if=\"typeIcon\"\n           :src=\"typeIcon\"></image>\n    <text class=\"noticebar-content\"\n          :style=\"{ width: contentWidth + 'px',lines:lines}\">{{notice}}</text>\n    <div class=\"more-click-content\"\n         @click=\"noticeIconClicked\"\n         v-if=\"modeIcon\"\n         :mode=\"mode\">\n      <image class=\"mode-ICON\"\n             :src=\"modeIcon\"></image>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-noticebar {\n    width: 750px;\n    padding-top: 10px;\n    padding-bottom: 10px;\n    padding-left: 24px;\n    background-color: #FFF7D6;\n    border-bottom-width: 1px;\n    border-top-width: 1px;\n    border-color: #FFEEAE;\n    border-style: solid;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n  }\n\n  .noticebar-content {\n    color: #EE9900;\n    font-size: 26px;\n    line-height: 36px;\n    width: 592px;\n    text-overflow: ellipsis;\n  }\n\n  .more-click-content {\n    width: 64px;\n    align-items: center;\n    justify-content: center;\n  }\n\n  .mode-ICON,\n  .type-ICON {\n    width: 32px;\n    height: 32px;\n  }\n</style>\n\n<script>\n  import ICON from './type';\n  import Utils from '../utils';\n\n  export default {\n    props: {\n      notice: {\n        type: String,\n        default: ''\n      },\n      noticeUrl: {\n        type: String,\n        default: ''\n      },\n      mode: {\n        type: String,\n        default: ''\n      },\n      lines: {\n        type: [Number, String],\n        default: 1\n      },\n      type: {\n        type: String,\n        default: ''\n      },\n      spm: {\n        type: String,\n        default: ''\n      }\n    },\n    computed: {\n      contentWidth () {\n        return this.mode ? 605 : 683;\n      },\n      modeIcon () {\n        let modeIcon;\n        switch (this.mode) {\n          case 'link':\n            modeIcon = ICON.linkIcon;\n            break;\n          case 'closable':\n            modeIcon = ICON.closeIcon;\n            break;\n          default:\n            modeIcon = '';\n        }\n        return modeIcon;\n      },\n      typeIcon () {\n        let typeIcon;\n        switch (this.type) {\n          case 'success':\n            typeIcon = ICON.successIcon;\n            break;\n          case 'error':\n            typeIcon = ICON.errorIcon;\n            break;\n          case 'info':\n            typeIcon = ICON.infoIcon;\n            break;\n          case 'question':\n            typeIcon = ICON.questionIcon;\n            break;\n          case 'warn':\n            typeIcon = ICON.warnIcon;\n            break;\n          case 'time':\n            typeIcon = ICON.timeIcon;\n            break;\n          case 'redbag':\n            typeIcon = ICON.redbag;\n            break;\n          default:\n            typeIcon = '';\n        }\n        return typeIcon;\n      }\n    },\n    data: () => ({\n      show: true\n    }),\n    methods: {\n      noticeBarClicked () {\n        const { mode, noticeUrl, spm } = this;\n        if (mode === 'link' && noticeUrl) {\n          const { ttid } = weex.config.env;\n          Utils.goToH5Page(noticeUrl, spm, ttid, true);\n          this.$emit('wxcNoticebarLinkClicked', { url: noticeUrl });\n        }\n      },\n      noticeIconClicked () {\n        const { mode } = this;\n        if (mode === 'closable') {\n          this.show = false;\n          this.$emit('wxcNoticebarCloseClicked', {});\n        } else {\n          this.noticeBarClicked();\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-noticebar[data-v-4edbf20e] {\n  width: 10rem;\n  padding-top: 0.13333rem;\n  padding-bottom: 0.13333rem;\n  padding-left: 0.32rem;\n  background-color: #FFF7D6;\n  border-bottom-width: 0.01333rem;\n  border-top-width: 0.01333rem;\n  border-color: #FFEEAE;\n  border-style: solid;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n          justify-content: space-between;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n}\n.noticebar-content[data-v-4edbf20e] {\n  color: #EE9900;\n  font-size: 0.34667rem;\n  line-height: 0.48rem;\n  width: 7.89333rem;\n  text-overflow: ellipsis;\n}\n.more-click-content[data-v-4edbf20e] {\n  width: 0.85333rem;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n}\n.mode-ICON[data-v-4edbf20e],\n.type-ICON[data-v-4edbf20e] {\n  width: 0.42667rem;\n  height: 0.42667rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-noticebar/index.vue?c1875f30"],"names":[],"mappings":";AA0BA;EACA,aAAA;EACA,wBAAA;EACA,2BAAA;EACA,sBAAA;EACA,0BAAA;EACA,gCAAA;EACA,6BAAA;EACA,sBAAA;EACA,oBAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EAAA,uCAAA;UAAA,+BAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,eAAA;EACA,sBAAA;EACA,qBAAA;EACA,kBAAA;EACA,wBAAA;CACA;AAEA;EACA,kBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;CACA;AAEA;;EAEA,kBAAA;EACA,mBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/28. -->\n<!--A notice bar.-->\n\n<template>\n  <div class=\"wxc-noticebar\"\n       v-if=\"show\"\n       @click=\"noticeBarClicked\"\n       :accessible=\"true\"\n       :aria-label=\"notice\">\n    <image class=\"type-ICON\"\n           v-if=\"typeIcon\"\n           :src=\"typeIcon\"></image>\n    <text class=\"noticebar-content\"\n          :style=\"{ width: contentWidth + 'px',lines:lines}\">{{notice}}</text>\n    <div class=\"more-click-content\"\n         @click=\"noticeIconClicked\"\n         v-if=\"modeIcon\"\n         :mode=\"mode\">\n      <image class=\"mode-ICON\"\n             :src=\"modeIcon\"></image>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-noticebar {\n    width: 750px;\n    padding-top: 10px;\n    padding-bottom: 10px;\n    padding-left: 24px;\n    background-color: #FFF7D6;\n    border-bottom-width: 1px;\n    border-top-width: 1px;\n    border-color: #FFEEAE;\n    border-style: solid;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n  }\n\n  .noticebar-content {\n    color: #EE9900;\n    font-size: 26px;\n    line-height: 36px;\n    width: 592px;\n    text-overflow: ellipsis;\n  }\n\n  .more-click-content {\n    width: 64px;\n    align-items: center;\n    justify-content: center;\n  }\n\n  .mode-ICON,\n  .type-ICON {\n    width: 32px;\n    height: 32px;\n  }\n</style>\n\n<script>\n  import ICON from './type';\n  import Utils from '../utils';\n\n  export default {\n    props: {\n      notice: {\n        type: String,\n        default: ''\n      },\n      noticeUrl: {\n        type: String,\n        default: ''\n      },\n      mode: {\n        type: String,\n        default: ''\n      },\n      lines: {\n        type: [Number, String],\n        default: 1\n      },\n      type: {\n        type: String,\n        default: ''\n      },\n      spm: {\n        type: String,\n        default: ''\n      }\n    },\n    computed: {\n      contentWidth () {\n        return this.mode ? 605 : 683;\n      },\n      modeIcon () {\n        let modeIcon;\n        switch (this.mode) {\n          case 'link':\n            modeIcon = ICON.linkIcon;\n            break;\n          case 'closable':\n            modeIcon = ICON.closeIcon;\n            break;\n          default:\n            modeIcon = '';\n        }\n        return modeIcon;\n      },\n      typeIcon () {\n        let typeIcon;\n        switch (this.type) {\n          case 'success':\n            typeIcon = ICON.successIcon;\n            break;\n          case 'error':\n            typeIcon = ICON.errorIcon;\n            break;\n          case 'info':\n            typeIcon = ICON.infoIcon;\n            break;\n          case 'question':\n            typeIcon = ICON.questionIcon;\n            break;\n          case 'warn':\n            typeIcon = ICON.warnIcon;\n            break;\n          case 'time':\n            typeIcon = ICON.timeIcon;\n            break;\n          case 'redbag':\n            typeIcon = ICON.redbag;\n            break;\n          default:\n            typeIcon = '';\n        }\n        return typeIcon;\n      }\n    },\n    data: () => ({\n      show: true\n    }),\n    methods: {\n      noticeBarClicked () {\n        const { mode, noticeUrl, spm } = this;\n        if (mode === 'link' && noticeUrl) {\n          const { ttid } = weex.config.env;\n          Utils.goToH5Page(noticeUrl, spm, ttid, true);\n          this.$emit('wxcNoticebarLinkClicked', { url: noticeUrl });\n        }\n      },\n      noticeIconClicked () {\n        const { mode } = this;\n        if (mode === 'closable') {\n          this.show = false;\n          this.$emit('wxcNoticebarCloseClicked', {});\n        } else {\n          this.noticeBarClicked();\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10573,7 +10572,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.grid-select[data-v-50bc0536] {\n  flex-direction: row;\n  justify-content: space-between;\n  flex-wrap: wrap;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-grid-select/index.vue?1e2bf3c6"],"names":[],"mappings":";AAgIA;EACA,oBAAA;EACA,+BAAA;EACA,gBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by 南麓 on 2017/8/10. -->\n\n<template>\n  <div class=\"grid-select\">\n    <option\n      v-for=\"(item, index) in dList\"\n      v-bind=\"Object.assign({}, customStyles, item)\"\n      :key=\"index\"\n      :index=\"index\"\n      :style=\"{marginTop: index >= cols ? lineSpacing : null}\"\n      @select=\"onSelect(index)\"></option>\n\n    <option\n      v-for=\"(item, index) in cHackList\"\n      v-bind=\"Object.assign({}, customStyles, item)\"\n      :key=\"index\"\n      :style=\"{opacity: 0, marginTop: dList.length >= cols ? lineSpacing : null}\"></option>\n  </div>\n</template>\n\n<script>\n  import Option from './option.vue';\n\n  export default {\n    components: { Option },\n    props: {\n      // 列数\n      cols: {\n        type: Number,\n        default: 4\n      },\n      // 是否单选\n      single: {\n        type: Boolean,\n        default: false\n      },\n      // 数据\n      list: {\n        type: Array,\n        default: () => ([])\n      },\n      // 选择个数限制\n      limit: {\n        type: Number\n      },\n      // 用户自定义样式，用于个性化设置option样式\n      customStyles: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    data () {\n      return {\n        dList: this.initList()\n      }\n    },\n    computed: {\n      cHackList () {\n        const { list, cols } = this;\n        const remainder = list.length % cols;\n        const len = remainder ? cols - remainder : 0;\n\n        return Array.apply(null, { length: len });\n      }\n    },\n    watch: {\n      list () {\n        this.dList = this.initList();\n      }\n    },\n    created () {\n      // 行间距\n      this.lineSpacing = this.customStyles.lineSpacing || '12px';\n    },\n    methods: {\n      onSelect (index) {\n        const checked = this.dList[index].checked;\n        if (this.limit <= this.checkedCount && !checked) {\n          this.$emit('overLimit', this.limit);\n        } else {\n          this.updateList(index);\n          this.$emit('select', {\n            selectIndex: index,\n            checked: !checked,\n            checkedList: this.dList.filter(item => item.checked)\n          });\n        }\n      },\n      initList () {\n        const single = this.single;\n        let checkedCount = 0;\n\n        const dList = this.list.map((item, i) => {\n          let { checked, disabled } = item;\n          disabled = !!disabled;\n          // disabled为true时认为checked无效，同时单选模式下只认为第一个checked为true的为有效值\n          checked = !disabled && !!checked && (!single || checkedCount === 0);\n          if (item.checked) checkedCount += 1;\n          return {\n            ...item,\n            checked,\n            disabled\n          }\n        });\n\n        this.checkedCount = checkedCount;\n        return dList;\n      },\n      updateList (index) {\n        const single = this.single;\n        let checkedCount = 0;\n        this.dList = this.dList.map((item, i) => {\n          if (single) {\n            item.checked = index === i && !item.checked;\n          } else {\n            if (i === index) item.checked = !item.checked;\n          }\n          if (item.checked) checkedCount += 1;\n          return item;\n        });\n        this.checkedCount = checkedCount;\n      }\n    }\n  };\n</script>\n\n<style scoped>\n  .grid-select {\n    flex-direction: row;\n    justify-content: space-between;\n    flex-wrap: wrap;\n  }\n</style>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.grid-select[data-v-50bc0536] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n          justify-content: space-between;\n  -webkit-flex-wrap: wrap;\n          flex-wrap: wrap;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-grid-select/index.vue?1e2bf3c6"],"names":[],"mappings":";AAgIA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EAAA,uCAAA;UAAA,+BAAA;EACA,wBAAA;UAAA,gBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by 南麓 on 2017/8/10. -->\n\n<template>\n  <div class=\"grid-select\">\n    <option\n      v-for=\"(item, index) in dList\"\n      v-bind=\"Object.assign({}, customStyles, item)\"\n      :key=\"index\"\n      :index=\"index\"\n      :style=\"{marginTop: index >= cols ? lineSpacing : null}\"\n      @select=\"onSelect(index)\"></option>\n\n    <option\n      v-for=\"(item, index) in cHackList\"\n      v-bind=\"Object.assign({}, customStyles, item)\"\n      :key=\"index\"\n      :style=\"{opacity: 0, marginTop: dList.length >= cols ? lineSpacing : null}\"></option>\n  </div>\n</template>\n\n<script>\n  import Option from './option.vue';\n\n  export default {\n    components: { Option },\n    props: {\n      // 列数\n      cols: {\n        type: Number,\n        default: 4\n      },\n      // 是否单选\n      single: {\n        type: Boolean,\n        default: false\n      },\n      // 数据\n      list: {\n        type: Array,\n        default: () => ([])\n      },\n      // 选择个数限制\n      limit: {\n        type: Number\n      },\n      // 用户自定义样式，用于个性化设置option样式\n      customStyles: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    data () {\n      return {\n        dList: this.initList()\n      }\n    },\n    computed: {\n      cHackList () {\n        const { list, cols } = this;\n        const remainder = list.length % cols;\n        const len = remainder ? cols - remainder : 0;\n\n        return Array.apply(null, { length: len });\n      }\n    },\n    watch: {\n      list () {\n        this.dList = this.initList();\n      }\n    },\n    created () {\n      // 行间距\n      this.lineSpacing = this.customStyles.lineSpacing || '12px';\n    },\n    methods: {\n      onSelect (index) {\n        const checked = this.dList[index].checked;\n        if (this.limit <= this.checkedCount && !checked) {\n          this.$emit('overLimit', this.limit);\n        } else {\n          this.updateList(index);\n          this.$emit('select', {\n            selectIndex: index,\n            checked: !checked,\n            checkedList: this.dList.filter(item => item.checked)\n          });\n        }\n      },\n      initList () {\n        const single = this.single;\n        let checkedCount = 0;\n\n        const dList = this.list.map((item, i) => {\n          let { checked, disabled } = item;\n          disabled = !!disabled;\n          // disabled为true时认为checked无效，同时单选模式下只认为第一个checked为true的为有效值\n          checked = !disabled && !!checked && (!single || checkedCount === 0);\n          if (item.checked) checkedCount += 1;\n          return {\n            ...item,\n            checked,\n            disabled\n          }\n        });\n\n        this.checkedCount = checkedCount;\n        return dList;\n      },\n      updateList (index) {\n        const single = this.single;\n        let checkedCount = 0;\n        this.dList = this.dList.map((item, i) => {\n          if (single) {\n            item.checked = index === i && !item.checked;\n          } else {\n            if (i === index) item.checked = !item.checked;\n          }\n          if (item.checked) checkedCount += 1;\n          return item;\n        });\n        this.checkedCount = checkedCount;\n      }\n    }\n  };\n</script>\n\n<style scoped>\n  .grid-select {\n    flex-direction: row;\n    justify-content: space-between;\n    flex-wrap: wrap;\n  }\n</style>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10601,7 +10600,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.flex-row[data-v-61efacbc] {\n  flex-direction: row;\n}\n.full-rest[data-v-61efacbc] {\n  flex: 1;\n}\n.root[data-v-61efacbc] {\n  padding-top: 28px;\n  padding-bottom: 24px;\n  background-color: #fff;\n}\n.title[data-v-61efacbc] {\n  height: 40px;\n}\n.content[data-v-61efacbc] {\n  padding-top: 9px;\n  padding-bottom: 42px;\n}\n.last-one-content[data-v-61efacbc] {\n  padding-bottom: 0;\n}\n.title[data-v-61efacbc],\n.content[data-v-61efacbc] {\n  padding-left: 70px;\n  padding-right: 70px;\n}\n.line[data-v-61efacbc] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 38px;\n  width: 2px;\n  background-color: #FFC300;\n}\n.first-one-title-line[data-v-61efacbc] {\n  top: 20px;\n}\n.last-one-title-line[data-v-61efacbc] {\n  bottom: 20px;\n}\n.last-one-content-line[data-v-61efacbc] {\n  width: 0;\n}\n.point[data-v-61efacbc] {\n  position: absolute;\n  top: 13px;\n  left: 32px;\n  width: 14px;\n  height: 14px;\n  background-color: #FFF0BD;\n  border-style: solid;\n  border-width: 2px;\n  border-color: #EE9900;\n  border-radius: 100%;\n}\n.highlight-point[data-v-61efacbc] {\n  top: 7px;\n  left: 26px;\n  width: 26px;\n  height: 26px;\n  background-color: #EE9900;\n  border-style: solid;\n  border-width: 6px;\n  border-color: #FFE78D;\n}\n.text-title[data-v-61efacbc] {\n  font-size: 30px;\n  color: #3d3d3d;\n}\n.text-highlight-title[data-v-61efacbc] {\n  color: #EE9900;\n}\n.text-desc[data-v-61efacbc],\n.text-date[data-v-61efacbc] {\n  font-size: 24px;\n  color: #a5a5a5;\n}\n.text-desc[data-v-61efacbc] {\n  margin-bottom: 12px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-simple-flow/index.vue?11384e0f"],"names":[],"mappings":";AAgCA;EACA,oBAAA;CACA;AAEA;EACA,QAAA;CACA;AAEA;EACA,kBAAA;EACA,qBAAA;EACA,uBAAA;CACA;AAEA;EACA,aAAA;CACA;AAEA;EACA,iBAAA;EACA,qBAAA;CACA;AAEA;EACA,kBAAA;CACA;AAEA;;EAEA,mBAAA;EACA,oBAAA;CACA;AAEA;EACA,mBAAA;EACA,OAAA;EACA,UAAA;EACA,WAAA;EACA,WAAA;EACA,0BAAA;CACA;AAEA;EACA,UAAA;CACA;AAEA;EACA,aAAA;CACA;AAEA;EACA,SAAA;CACA;AAEA;EACA,mBAAA;EACA,UAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,0BAAA;EACA,oBAAA;EACA,kBAAA;EACA,sBAAA;EACA,oBAAA;CACA;AAEA;EACA,SAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,0BAAA;EACA,oBAAA;EACA,kBAAA;EACA,sBAAA;CACA;AAEA;EACA,gBAAA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;;EAEA,gBAAA;EACA,eAAA;CACA;AAEA;EACA,oBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by 南麓 on 2017/5/25. -->\n\n<template>\n  <div class=\"root\">\n    <div v-for=\"(item, index) in cItems\"\n         :key=\"item.key\"\n         :accessible=\"true\"\n         :aria-label=\"`${item.title},${item.desc?item.desc:''},${item.date?item.date:''},${item.highlight?'已完成':'等待完成'}`\">\n      <div class=\"title flex-row\">\n        <div class=\"line\" :class=\"item.__titleLineClass__\" :style=\"item.__lineStyle__\"></div>\n\n        <div class=\"point\" :class=\"item.__pointClass__\" :style=\"item.__pointStyle__\"></div>\n\n        <text class=\"text-title full-rest\" :class=\"item.__titleTextClass__\"\n              :style=\"item.__titleStyle__\">{{item.title}}</text>\n      </div>\n\n      <div class=\"content flex-row\" :class=\"item.__contentClass__\">\n        <div class=\"line\" :class=\"item.__contentLineClass__\" :style=\"item.__lineStyle__\"></div>\n\n        <div class=\"full-rest\">\n          <text v-if=\"item.desc\" class=\"text-desc\">{{item.desc}}</text>\n\n          <text v-if=\"item.date\" class=\"text-date\">{{item.date}}</text>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .flex-row {\n    flex-direction: row;\n  }\n\n  .full-rest {\n    flex: 1;\n  }\n\n  .root {\n    padding-top: 28px;\n    padding-bottom: 24px;\n    background-color: #fff;\n  }\n\n  .title {\n    height: 40px;\n  }\n\n  .content {\n    padding-top: 9px;\n    padding-bottom: 42px;\n  }\n\n  .last-one-content {\n    padding-bottom: 0;\n  }\n\n  .title,\n  .content {\n    padding-left: 70px;\n    padding-right: 70px;\n  }\n\n  .line {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 38px;\n    width: 2px;\n    background-color: #FFC300;\n  }\n\n  .first-one-title-line {\n    top: 20px;\n  }\n\n  .last-one-title-line {\n    bottom: 20px;\n  }\n\n  .last-one-content-line {\n    width: 0;\n  }\n\n  .point {\n    position: absolute;\n    top: 13px;\n    left: 32px;\n    width: 14px;\n    height: 14px;\n    background-color: #FFF0BD;\n    border-style: solid;\n    border-width: 2px;\n    border-color: #EE9900;\n    border-radius: 100%;\n  }\n\n  .highlight-point {\n    top: 7px;\n    left: 26px;\n    width: 26px;\n    height: 26px;\n    background-color: #EE9900;\n    border-style: solid;\n    border-width: 6px;\n    border-color: #FFE78D;\n  }\n\n  .text-title {\n    font-size: 30px;\n    color: #3d3d3d;\n  }\n\n  .text-highlight-title {\n    color: #EE9900;\n  }\n\n  .text-desc,\n  .text-date {\n    font-size: 24px;\n    color: #a5a5a5;\n  }\n\n  .text-desc {\n    margin-bottom: 12px;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      list: {\n        type: Array,\n        required: true\n      },\n      themeColor: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    computed: {\n      cItems () {\n        return this.adapter(this.list);\n      }\n    },\n    methods: {\n      adapter (items) {\n        const {\n          lineColor,\n          pointInnerColor,\n          pointBorderColor,\n          highlightTitleColor,\n          highlightPointInnerColor,\n          highlightPointBorderColor\n        } = this.themeColor;\n        const len = items.length;\n        const pre = Date.now();\n\n        return items.map((item, index) => {\n          item.key = `${pre}_${index}`;\n          item.__titleLineClass__ = [];\n          item.__contentClass__ = [];\n          item.__contentLineClass__ = [];\n          item.__pointClass__ = [];\n          item.__titleTextClass__ = [];\n          item.__pointStyle__ = {};\n          item.__lineStyle__ = {};\n          item.__titleStyle__ = {};\n\n          if (lineColor) item.__lineStyle__.backgroundColor = lineColor;\n          if (pointInnerColor) item.__pointStyle__.backgroundColor = pointInnerColor;\n          if (pointBorderColor) item.__pointStyle__.borderColor = pointBorderColor;\n\n          if (index === 0) {\n            item.__titleLineClass__.push('first-one-title-line');\n          }\n\n          if (index === len - 1) {\n            item.__titleLineClass__.push('last-one-title-line');\n            item.__contentClass__.push('last-one-content');\n            item.__contentLineClass__.push('last-one-content-line');\n          }\n\n          if (item.highlight) {\n            item.__pointClass__.push('highlight-point');\n            item.__titleTextClass__.push('text-highlight-title');\n            if (highlightTitleColor) item.__titleStyle__.color = highlightTitleColor;\n            if (highlightPointInnerColor) item.__pointStyle__.backgroundColor = highlightPointInnerColor;\n            if (highlightPointBorderColor) item.__pointStyle__.borderColor = highlightPointBorderColor;\n          }\n          return item;\n        });\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.flex-row[data-v-61efacbc] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n}\n.full-rest[data-v-61efacbc] {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n}\n.root[data-v-61efacbc] {\n  padding-top: 0.37333rem;\n  padding-bottom: 0.32rem;\n  background-color: #fff;\n}\n.title[data-v-61efacbc] {\n  height: 0.53333rem;\n}\n.content[data-v-61efacbc] {\n  padding-top: 0.12rem;\n  padding-bottom: 0.56rem;\n}\n.last-one-content[data-v-61efacbc] {\n  padding-bottom: 0;\n}\n.title[data-v-61efacbc],\n.content[data-v-61efacbc] {\n  padding-left: 0.93333rem;\n  padding-right: 0.93333rem;\n}\n.line[data-v-61efacbc] {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0.50667rem;\n  width: 0.02667rem;\n  background-color: #FFC300;\n}\n.first-one-title-line[data-v-61efacbc] {\n  top: 0.26667rem;\n}\n.last-one-title-line[data-v-61efacbc] {\n  bottom: 0.26667rem;\n}\n.last-one-content-line[data-v-61efacbc] {\n  width: 0;\n}\n.point[data-v-61efacbc] {\n  position: absolute;\n  top: 0.17333rem;\n  left: 0.42667rem;\n  width: 0.18667rem;\n  height: 0.18667rem;\n  background-color: #FFF0BD;\n  border-style: solid;\n  border-width: 0.02667rem;\n  border-color: #EE9900;\n  border-radius: 100%;\n}\n.highlight-point[data-v-61efacbc] {\n  top: 0.09333rem;\n  left: 0.34667rem;\n  width: 0.34667rem;\n  height: 0.34667rem;\n  background-color: #EE9900;\n  border-style: solid;\n  border-width: 0.08rem;\n  border-color: #FFE78D;\n}\n.text-title[data-v-61efacbc] {\n  font-size: 0.4rem;\n  color: #3d3d3d;\n}\n.text-highlight-title[data-v-61efacbc] {\n  color: #EE9900;\n}\n.text-desc[data-v-61efacbc],\n.text-date[data-v-61efacbc] {\n  font-size: 0.32rem;\n  color: #a5a5a5;\n}\n.text-desc[data-v-61efacbc] {\n  margin-bottom: 0.16rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-simple-flow/index.vue?11384e0f"],"names":[],"mappings":";AAgCA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;CACA;AAEA;EACA,wBAAA;EACA,wBAAA;EACA,uBAAA;CACA;AAEA;EACA,mBAAA;CACA;AAEA;EACA,qBAAA;EACA,wBAAA;CACA;AAEA;EACA,kBAAA;CACA;AAEA;;EAEA,yBAAA;EACA,0BAAA;CACA;AAEA;EACA,mBAAA;EACA,OAAA;EACA,UAAA;EACA,iBAAA;EACA,kBAAA;EACA,0BAAA;CACA;AAEA;EACA,gBAAA;CACA;AAEA;EACA,mBAAA;CACA;AAEA;EACA,SAAA;CACA;AAEA;EACA,mBAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;EACA,0BAAA;EACA,oBAAA;EACA,yBAAA;EACA,sBAAA;EACA,oBAAA;CACA;AAEA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;EACA,0BAAA;EACA,oBAAA;EACA,sBAAA;EACA,sBAAA;CACA;AAEA;EACA,kBAAA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;;EAEA,mBAAA;EACA,eAAA;CACA;AAEA;EACA,uBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by 南麓 on 2017/5/25. -->\n\n<template>\n  <div class=\"root\">\n    <div v-for=\"(item, index) in cItems\"\n         :key=\"item.key\"\n         :accessible=\"true\"\n         :aria-label=\"`${item.title},${item.desc?item.desc:''},${item.date?item.date:''},${item.highlight?'已完成':'等待完成'}`\">\n      <div class=\"title flex-row\">\n        <div class=\"line\" :class=\"item.__titleLineClass__\" :style=\"item.__lineStyle__\"></div>\n\n        <div class=\"point\" :class=\"item.__pointClass__\" :style=\"item.__pointStyle__\"></div>\n\n        <text class=\"text-title full-rest\" :class=\"item.__titleTextClass__\"\n              :style=\"item.__titleStyle__\">{{item.title}}</text>\n      </div>\n\n      <div class=\"content flex-row\" :class=\"item.__contentClass__\">\n        <div class=\"line\" :class=\"item.__contentLineClass__\" :style=\"item.__lineStyle__\"></div>\n\n        <div class=\"full-rest\">\n          <text v-if=\"item.desc\" class=\"text-desc\">{{item.desc}}</text>\n\n          <text v-if=\"item.date\" class=\"text-date\">{{item.date}}</text>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .flex-row {\n    flex-direction: row;\n  }\n\n  .full-rest {\n    flex: 1;\n  }\n\n  .root {\n    padding-top: 28px;\n    padding-bottom: 24px;\n    background-color: #fff;\n  }\n\n  .title {\n    height: 40px;\n  }\n\n  .content {\n    padding-top: 9px;\n    padding-bottom: 42px;\n  }\n\n  .last-one-content {\n    padding-bottom: 0;\n  }\n\n  .title,\n  .content {\n    padding-left: 70px;\n    padding-right: 70px;\n  }\n\n  .line {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    left: 38px;\n    width: 2px;\n    background-color: #FFC300;\n  }\n\n  .first-one-title-line {\n    top: 20px;\n  }\n\n  .last-one-title-line {\n    bottom: 20px;\n  }\n\n  .last-one-content-line {\n    width: 0;\n  }\n\n  .point {\n    position: absolute;\n    top: 13px;\n    left: 32px;\n    width: 14px;\n    height: 14px;\n    background-color: #FFF0BD;\n    border-style: solid;\n    border-width: 2px;\n    border-color: #EE9900;\n    border-radius: 100%;\n  }\n\n  .highlight-point {\n    top: 7px;\n    left: 26px;\n    width: 26px;\n    height: 26px;\n    background-color: #EE9900;\n    border-style: solid;\n    border-width: 6px;\n    border-color: #FFE78D;\n  }\n\n  .text-title {\n    font-size: 30px;\n    color: #3d3d3d;\n  }\n\n  .text-highlight-title {\n    color: #EE9900;\n  }\n\n  .text-desc,\n  .text-date {\n    font-size: 24px;\n    color: #a5a5a5;\n  }\n\n  .text-desc {\n    margin-bottom: 12px;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      list: {\n        type: Array,\n        required: true\n      },\n      themeColor: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    computed: {\n      cItems () {\n        return this.adapter(this.list);\n      }\n    },\n    methods: {\n      adapter (items) {\n        const {\n          lineColor,\n          pointInnerColor,\n          pointBorderColor,\n          highlightTitleColor,\n          highlightPointInnerColor,\n          highlightPointBorderColor\n        } = this.themeColor;\n        const len = items.length;\n        const pre = Date.now();\n\n        return items.map((item, index) => {\n          item.key = `${pre}_${index}`;\n          item.__titleLineClass__ = [];\n          item.__contentClass__ = [];\n          item.__contentLineClass__ = [];\n          item.__pointClass__ = [];\n          item.__titleTextClass__ = [];\n          item.__pointStyle__ = {};\n          item.__lineStyle__ = {};\n          item.__titleStyle__ = {};\n\n          if (lineColor) item.__lineStyle__.backgroundColor = lineColor;\n          if (pointInnerColor) item.__pointStyle__.backgroundColor = pointInnerColor;\n          if (pointBorderColor) item.__pointStyle__.borderColor = pointBorderColor;\n\n          if (index === 0) {\n            item.__titleLineClass__.push('first-one-title-line');\n          }\n\n          if (index === len - 1) {\n            item.__titleLineClass__.push('last-one-title-line');\n            item.__contentClass__.push('last-one-content');\n            item.__contentLineClass__.push('last-one-content-line');\n          }\n\n          if (item.highlight) {\n            item.__pointClass__.push('highlight-point');\n            item.__titleTextClass__.push('text-highlight-title');\n            if (highlightTitleColor) item.__titleStyle__.color = highlightTitleColor;\n            if (highlightPointInnerColor) item.__pointStyle__.backgroundColor = highlightPointInnerColor;\n            if (highlightPointBorderColor) item.__pointStyle__.borderColor = highlightPointBorderColor;\n          }\n          return item;\n        });\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10615,7 +10614,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-special-rich-text[data-v-6f52a706] {\n  position: relative;\n}\n.tag-div[data-v-6f52a706] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  color: #A5A5A5;\n  font-size: 24px;\n  line-height: 30px;\n}\n.wxc-text[data-v-6f52a706] {\n  font-size: 24px;\n  color: #3d3d3d;\n  lines: 2;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\n.black[data-v-6f52a706] {\n  color: #3D3D3D;\n}\n.yellow[data-v-6f52a706] {\n  color: #EE9900;\n}\n.blue[data-v-6f52a706] {\n  color: #30A0FF,\n}\n.gray[data-v-6f52a706] {\n  color: #A5A5A5;\n}\n.red[data-v-6f52a706] {\n  color: #FF5000;\n}\n.margin-text[data-v-6f52a706] {\n  margin-right: 6px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-special-rich-text/index.vue?e81b72aa"],"names":[],"mappings":";AAuBA;EACA,mBAAA;CACA;AAEA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;EACA,eAAA;EACA,gBAAA;EACA,kBAAA;CACA;AAEA;EACA,gBAAA;EACA,eAAA;EACA,SAAA;EACA,wBAAA;EACA,iBAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,kBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n<!-- just hack for babel-plugin-component !!!-->\n\n<template>\n  <div class=\"wxc-special-rich-text\">\n    <div class=\"tag-div\"\n         :style=\"{top:top+'px'}\">\n      <wxc-rich-text-icon v-if=\"newList[0].type == 'icon' && newList[0].src\"\n                          :icon-src=\"newList[0].src\"\n                          :icon-style=\"newList[0].style\"></wxc-rich-text-icon>\n      <wxc-rich-text-tag v-if=\"newList[0].type=='tag' && newList[0].value\"\n                         :tag-value=\"newList[0].value\"\n                         :tag-theme=\"newList[0].theme\"\n                         :tag-style=\"newList[0].style\"></wxc-rich-text-tag>\n    </div>\n    <text :class=\"['wxc-text', newList[1].theme]\"\n          :style=\"newList[1].style\"\n          v-if=\"newList[1].value\">{{newList[1].value}}</text>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-special-rich-text {\n    position: relative;\n  }\n\n  .tag-div {\n    position: absolute;\n    top: 0;\n    left: 0;\n    color: #A5A5A5;\n    font-size: 24px;\n    line-height: 30px;\n  }\n\n  .wxc-text {\n    font-size: 24px;\n    color: #3d3d3d;\n    lines: 2;\n    text-overflow: ellipsis;\n    overflow: hidden;\n  }\n\n  .black {\n    color: #3D3D3D;\n  }\n\n  .yellow {\n    color: #EE9900;\n  }\n\n  .blue {\n    color: #30A0FF,\n  }\n\n  .gray {\n    color: #A5A5A5;\n  }\n\n  .red {\n    color: #FF5000;\n  }\n\n  .margin-text {\n    margin-right: 6px;\n  }\n</style>\n\n<script>\n  import Utils from '../utils';\n\n  import WxcRichTextText from '../wxc-rich-text/wxc-rich-text-text.vue';\n  import WxcRichTextIcon from '../wxc-rich-text/wxc-rich-text-icon.vue';\n  import WxcRichTextTag from '../wxc-rich-text/wxc-rich-text-tag.vue'\n\n  export default {\n    components: {\n      WxcRichTextText,\n      WxcRichTextIcon,\n      WxcRichTextTag\n    },\n    props: {\n      configList: {\n        type: [Array, String],\n        default: () => ({})\n      }\n    },\n    computed: {\n      newList () {\n        const { configList } = this;\n        if (Utils.isNonEmptyArray(configList) && configList.length === 2) {\n          let r1 = configList[0];\n          let r2 = configList[1];\n          const iconStyle = r1.style;\n          const textStyle = r2.style;\n          let style = {};\n          let fontSize = 24;\n          const tagWidth = iconStyle && iconStyle.width ? iconStyle.width : 24;\n\n          if (textStyle && textStyle.fontSize) {\n            fontSize = textStyle.fontSize;\n            style = {\n              fontSize: `${textStyle.fontSize}px`,\n              lineHeight: `${textStyle.fontSize * 1.4}px`\n            }\n          }\n\n          if (textStyle && textStyle.color) {\n            style = {\n              ...style,\n              color: textStyle.color\n            }\n          }\n\n          if (r1.type === 'tag' && iconStyle && iconStyle.width) {\n            r1 = {\n              ...r1,\n              style: { ...iconStyle, width: null }\n            }\n          }\n          const newValue = r2.value ? new Array(Math.ceil(tagWidth / fontSize) + 1).join('    ') + ` ${r2.value}` : '';\n          r2 = {\n            ...r2,\n            style,\n            value: newValue\n          }\n          return [r1, r2];\n        } else {\n          return [];\n        }\n      },\n      top () {\n        const { configList } = this;\n        if (Utils.isNonEmptyArray(configList) && configList.length === 2) {\n          const iconStyle = configList[0].style;\n          const textStyle = configList[1].style;\n          let fontSize = 24;\n          const tagHeight = iconStyle && iconStyle.height ? iconStyle.height : 26;\n          if (textStyle && textStyle.fontSize) {\n            fontSize = textStyle.fontSize;\n          }\n          return Math.ceil((fontSize * 1.3 - tagHeight) / 2);\n        } else {\n          return 0;\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-special-rich-text[data-v-6f52a706] {\n  position: relative;\n}\n.tag-div[data-v-6f52a706] {\n  position: absolute;\n  top: 0;\n  left: 0;\n  color: #A5A5A5;\n  font-size: 0.32rem;\n  line-height: 0.4rem;\n}\n.wxc-text[data-v-6f52a706] {\n  font-size: 0.32rem;\n  color: #3d3d3d;\n  lines: 2;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\n.black[data-v-6f52a706] {\n  color: #3D3D3D;\n}\n.yellow[data-v-6f52a706] {\n  color: #EE9900;\n}\n.blue[data-v-6f52a706] {\n  color: #30A0FF,\n}\n.gray[data-v-6f52a706] {\n  color: #A5A5A5;\n}\n.red[data-v-6f52a706] {\n  color: #FF5000;\n}\n.margin-text[data-v-6f52a706] {\n  margin-right: 0.08rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-special-rich-text/index.vue?e81b72aa"],"names":[],"mappings":";AAuBA;EACA,mBAAA;CACA;AAEA;EACA,mBAAA;EACA,OAAA;EACA,QAAA;EACA,eAAA;EACA,mBAAA;EACA,oBAAA;CACA;AAEA;EACA,mBAAA;EACA,eAAA;EACA,SAAA;EACA,wBAAA;EACA,iBAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,sBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n<!-- just hack for babel-plugin-component !!!-->\n\n<template>\n  <div class=\"wxc-special-rich-text\">\n    <div class=\"tag-div\"\n         :style=\"{top:top+'px'}\">\n      <wxc-rich-text-icon v-if=\"newList[0].type == 'icon' && newList[0].src\"\n                          :icon-src=\"newList[0].src\"\n                          :icon-style=\"newList[0].style\"></wxc-rich-text-icon>\n      <wxc-rich-text-tag v-if=\"newList[0].type=='tag' && newList[0].value\"\n                         :tag-value=\"newList[0].value\"\n                         :tag-theme=\"newList[0].theme\"\n                         :tag-style=\"newList[0].style\"></wxc-rich-text-tag>\n    </div>\n    <text :class=\"['wxc-text', newList[1].theme]\"\n          :style=\"newList[1].style\"\n          v-if=\"newList[1].value\">{{newList[1].value}}</text>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-special-rich-text {\n    position: relative;\n  }\n\n  .tag-div {\n    position: absolute;\n    top: 0;\n    left: 0;\n    color: #A5A5A5;\n    font-size: 24px;\n    line-height: 30px;\n  }\n\n  .wxc-text {\n    font-size: 24px;\n    color: #3d3d3d;\n    lines: 2;\n    text-overflow: ellipsis;\n    overflow: hidden;\n  }\n\n  .black {\n    color: #3D3D3D;\n  }\n\n  .yellow {\n    color: #EE9900;\n  }\n\n  .blue {\n    color: #30A0FF,\n  }\n\n  .gray {\n    color: #A5A5A5;\n  }\n\n  .red {\n    color: #FF5000;\n  }\n\n  .margin-text {\n    margin-right: 6px;\n  }\n</style>\n\n<script>\n  import Utils from '../utils';\n\n  import WxcRichTextText from '../wxc-rich-text/wxc-rich-text-text.vue';\n  import WxcRichTextIcon from '../wxc-rich-text/wxc-rich-text-icon.vue';\n  import WxcRichTextTag from '../wxc-rich-text/wxc-rich-text-tag.vue'\n\n  export default {\n    components: {\n      WxcRichTextText,\n      WxcRichTextIcon,\n      WxcRichTextTag\n    },\n    props: {\n      configList: {\n        type: [Array, String],\n        default: () => ({})\n      }\n    },\n    computed: {\n      newList () {\n        const { configList } = this;\n        if (Utils.isNonEmptyArray(configList) && configList.length === 2) {\n          let r1 = configList[0];\n          let r2 = configList[1];\n          const iconStyle = r1.style;\n          const textStyle = r2.style;\n          let style = {};\n          let fontSize = 24;\n          const tagWidth = iconStyle && iconStyle.width ? iconStyle.width : 24;\n\n          if (textStyle && textStyle.fontSize) {\n            fontSize = textStyle.fontSize;\n            style = {\n              fontSize: `${textStyle.fontSize}px`,\n              lineHeight: `${textStyle.fontSize * 1.4}px`\n            }\n          }\n\n          if (textStyle && textStyle.color) {\n            style = {\n              ...style,\n              color: textStyle.color\n            }\n          }\n\n          if (r1.type === 'tag' && iconStyle && iconStyle.width) {\n            r1 = {\n              ...r1,\n              style: { ...iconStyle, width: null }\n            }\n          }\n          const newValue = r2.value ? new Array(Math.ceil(tagWidth / fontSize) + 1).join('    ') + ` ${r2.value}` : '';\n          r2 = {\n            ...r2,\n            style,\n            value: newValue\n          }\n          return [r1, r2];\n        } else {\n          return [];\n        }\n      },\n      top () {\n        const { configList } = this;\n        if (Utils.isNonEmptyArray(configList) && configList.length === 2) {\n          const iconStyle = configList[0].style;\n          const textStyle = configList[1].style;\n          let fontSize = 24;\n          const tagHeight = iconStyle && iconStyle.height ? iconStyle.height : 26;\n          if (textStyle && textStyle.fontSize) {\n            fontSize = textStyle.fontSize;\n          }\n          return Math.ceil((fontSize * 1.3 - tagHeight) / 2);\n        } else {\n          return 0;\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10629,7 +10628,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.radio[data-v-6f935647] {\n  width: 48px;\n  height: 48px;\n}\n.title-text[data-v-6f935647] {\n  font-size: 30px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-radio/item.vue?6b78199a"],"names":[],"mappings":";AAoBA;EACA,YAAA;EACA,aAAA;CACA;AAEA;EACA,gBAAA;CACA","file":"item.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <wxc-cell :has-top-border=\"hasTopBorder\"\n            :cell-style=\"{backgroundColor:backgroundColor}\"\n            @wxcCellClicked=\"wxcCellClicked\"\n            :accessible=\"true\"\n            :aria-label=\"`${title},状态为${checked?'已选中':'未选中'},${disabled?'不可更改':''}`\">\n    <text :style=\"{color:color}\"\n          class=\"title-text\"\n          slot=\"title\">{{title}}</text>\n    <image :src=\"radioIcon\"\n           v-if=\"radioIcon\"\n           slot=\"value\"\n           class=\"radio\"></image>\n  </wxc-cell>\n</template>\n\n<style scoped>\n  .radio {\n    width: 48px;\n    height: 48px;\n  }\n\n  .title-text {\n    font-size: 30px;\n  }\n</style>\n\n<script>\n  import WxcCell from '../wxc-cell';\n  import { CHECKED, DISABLED } from './type.js'\n\n  export default {\n    components: { WxcCell },\n    props: {\n      hasTopBorder: {\n        type: Boolean,\n        default: false\n      },\n      title: {\n        type: String,\n        require: true\n      },\n      value: {\n        type: [String, Number, Object],\n        require: true\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      checked: {\n        type: Boolean,\n        default: false\n      },\n      config: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    data: () => ({\n      icon: [CHECKED, DISABLED]\n    }),\n    computed: {\n      radioIcon () {\n        const { icon, disabled, checked, config } = this;\n        const mergeIcon = icon;\n        config.checkedIcon && (mergeIcon[0] = config.checkedIcon);\n        config.disabledIcon && (mergeIcon[1] = config.disabledIcon);\n        return checked ? mergeIcon[disabled ? 1 : 0] : '';\n      },\n      backgroundColor () {\n        const { disabled } = this;\n        return disabled ? '#F2F3F4' : '#FFFFFF';\n      },\n      color () {\n        const { disabled, checked, config } = this;\n        let checkedColor = '#EE9900';\n        config.checkedColor && (checkedColor = config.checkedColor);\n        return checked && !disabled ? checkedColor : '#3D3D3D';\n      }\n    },\n    methods: {\n      wxcCellClicked () {\n        const { disabled, value } = this;\n        if (!disabled) {\n          this.$emit('wxcRadioItemChecked', { value, disabled })\n        }\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.radio[data-v-6f935647] {\n  width: 0.64rem;\n  height: 0.64rem;\n}\n.title-text[data-v-6f935647] {\n  font-size: 0.4rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-radio/item.vue?6b78199a"],"names":[],"mappings":";AAoBA;EACA,eAAA;EACA,gBAAA;CACA;AAEA;EACA,kBAAA;CACA","file":"item.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <wxc-cell :has-top-border=\"hasTopBorder\"\n            :cell-style=\"{backgroundColor:backgroundColor}\"\n            @wxcCellClicked=\"wxcCellClicked\"\n            :accessible=\"true\"\n            :aria-label=\"`${title},状态为${checked?'已选中':'未选中'},${disabled?'不可更改':''}`\">\n    <text :style=\"{color:color}\"\n          class=\"title-text\"\n          slot=\"title\">{{title}}</text>\n    <image :src=\"radioIcon\"\n           v-if=\"radioIcon\"\n           slot=\"value\"\n           class=\"radio\"></image>\n  </wxc-cell>\n</template>\n\n<style scoped>\n  .radio {\n    width: 48px;\n    height: 48px;\n  }\n\n  .title-text {\n    font-size: 30px;\n  }\n</style>\n\n<script>\n  import WxcCell from '../wxc-cell';\n  import { CHECKED, DISABLED } from './type.js'\n\n  export default {\n    components: { WxcCell },\n    props: {\n      hasTopBorder: {\n        type: Boolean,\n        default: false\n      },\n      title: {\n        type: String,\n        require: true\n      },\n      value: {\n        type: [String, Number, Object],\n        require: true\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      checked: {\n        type: Boolean,\n        default: false\n      },\n      config: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    data: () => ({\n      icon: [CHECKED, DISABLED]\n    }),\n    computed: {\n      radioIcon () {\n        const { icon, disabled, checked, config } = this;\n        const mergeIcon = icon;\n        config.checkedIcon && (mergeIcon[0] = config.checkedIcon);\n        config.disabledIcon && (mergeIcon[1] = config.disabledIcon);\n        return checked ? mergeIcon[disabled ? 1 : 0] : '';\n      },\n      backgroundColor () {\n        const { disabled } = this;\n        return disabled ? '#F2F3F4' : '#FFFFFF';\n      },\n      color () {\n        const { disabled, checked, config } = this;\n        let checkedColor = '#EE9900';\n        config.checkedColor && (checkedColor = config.checkedColor);\n        return checked && !disabled ? checkedColor : '#3D3D3D';\n      }\n    },\n    methods: {\n      wxcCellClicked () {\n        const { disabled, value } = this;\n        if (!disabled) {\n          this.$emit('wxcRadioItemChecked', { value, disabled })\n        }\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10643,7 +10642,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.checkbox[data-v-702739a6] {\n  width: 48px;\n  height: 48px;\n}\n.title-text[data-v-702739a6] {\n  font-size: 30px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-checkbox/index.vue?d9b9daaa"],"names":[],"mappings":";AAkBA;EACA,YAAA;EACA,aAAA;CACA;AAEA;EACA,gBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <wxc-cell :has-top-border=\"hasTopBorder\"\n            @wxcCellClicked=\"wxcCellClicked\"\n            :accessible=\"true\"\n            :aria-label=\"`${title},状态为${checked ? '已选中' : '未选中'},${disabled ? '不可更改' : '点击可切换'}`\">\n    <text :style=\"{color:textColor}\"\n          class=\"title-text\"\n          slot=\"title\">{{title}}</text>\n    <image :src=\"checkIcon\"\n           slot=\"value\"\n           class=\"checkbox\"></image>\n  </wxc-cell>\n</template>\n\n<style scoped>\n  .checkbox {\n    width: 48px;\n    height: 48px;\n  }\n\n  .title-text {\n    font-size: 30px;\n  }\n</style>\n\n<script>\n  import WxcCell from '../wxc-cell';\n  import { CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED } from './type'\n\n  export default {\n    components: { WxcCell },\n    props: {\n      hasTopBorder: {\n        type: Boolean,\n        default: false\n      },\n      title: {\n        type: String,\n        require: true\n      },\n      value: {\n        type: [String, Number, Object],\n        require: true\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      checked: {\n        type: Boolean,\n        default: false\n      },\n      config: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    data: () => ({\n      icon: [CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED],\n      color: '#3D3D3D',\n      innerChecked: false\n    }),\n    computed: {\n      checkIcon () {\n        const { icon, disabled, innerChecked, config } = this;\n        const mergeIcon = [...icon];\n        config.checkedIcon && (mergeIcon[0] = config.checkedIcon);\n        config.unCheckedIcon && (mergeIcon[1] = config.unCheckedIcon);\n        config.checkedDisabledIcon && (mergeIcon[2] = config.checkedDisabledIcon);\n        config.unCheckedDisabledIcon && (mergeIcon[3] = config.unCheckedDisabledIcon);\n        if (disabled) {\n          return mergeIcon[innerChecked ? 2 : 3];\n        } else {\n          return mergeIcon[innerChecked ? 0 : 1];\n        }\n      },\n      textColor () {\n        const { innerChecked, disabled, config } = this;\n        const checkedColor = config.checkedColor ? config.checkedColor : '#EE9900';\n        return innerChecked && !disabled ? checkedColor : '#3D3D3D';\n      }\n    },\n    watch: {\n      checked (newChecked) {\n        this.innerChecked = newChecked;\n      }\n    },\n    created () {\n      const { checked } = this;\n      this.innerChecked = checked;\n    },\n    methods: {\n      wxcCellClicked () {\n        const { disabled, innerChecked, value } = this;\n        if (!disabled) {\n          this.innerChecked = !innerChecked;\n          this.$emit('wxcCheckBoxItemChecked', { value, checked: this.innerChecked })\n        }\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.checkbox[data-v-702739a6] {\n  width: 0.64rem;\n  height: 0.64rem;\n}\n.title-text[data-v-702739a6] {\n  font-size: 0.4rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-checkbox/index.vue?d9b9daaa"],"names":[],"mappings":";AAkBA;EACA,eAAA;EACA,gBAAA;CACA;AAEA;EACA,kBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <wxc-cell :has-top-border=\"hasTopBorder\"\n            @wxcCellClicked=\"wxcCellClicked\"\n            :accessible=\"true\"\n            :aria-label=\"`${title},状态为${checked ? '已选中' : '未选中'},${disabled ? '不可更改' : '点击可切换'}`\">\n    <text :style=\"{color:textColor}\"\n          class=\"title-text\"\n          slot=\"title\">{{title}}</text>\n    <image :src=\"checkIcon\"\n           slot=\"value\"\n           class=\"checkbox\"></image>\n  </wxc-cell>\n</template>\n\n<style scoped>\n  .checkbox {\n    width: 48px;\n    height: 48px;\n  }\n\n  .title-text {\n    font-size: 30px;\n  }\n</style>\n\n<script>\n  import WxcCell from '../wxc-cell';\n  import { CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED } from './type'\n\n  export default {\n    components: { WxcCell },\n    props: {\n      hasTopBorder: {\n        type: Boolean,\n        default: false\n      },\n      title: {\n        type: String,\n        require: true\n      },\n      value: {\n        type: [String, Number, Object],\n        require: true\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      checked: {\n        type: Boolean,\n        default: false\n      },\n      config: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    data: () => ({\n      icon: [CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED],\n      color: '#3D3D3D',\n      innerChecked: false\n    }),\n    computed: {\n      checkIcon () {\n        const { icon, disabled, innerChecked, config } = this;\n        const mergeIcon = [...icon];\n        config.checkedIcon && (mergeIcon[0] = config.checkedIcon);\n        config.unCheckedIcon && (mergeIcon[1] = config.unCheckedIcon);\n        config.checkedDisabledIcon && (mergeIcon[2] = config.checkedDisabledIcon);\n        config.unCheckedDisabledIcon && (mergeIcon[3] = config.unCheckedDisabledIcon);\n        if (disabled) {\n          return mergeIcon[innerChecked ? 2 : 3];\n        } else {\n          return mergeIcon[innerChecked ? 0 : 1];\n        }\n      },\n      textColor () {\n        const { innerChecked, disabled, config } = this;\n        const checkedColor = config.checkedColor ? config.checkedColor : '#EE9900';\n        return innerChecked && !disabled ? checkedColor : '#3D3D3D';\n      }\n    },\n    watch: {\n      checked (newChecked) {\n        this.innerChecked = newChecked;\n      }\n    },\n    created () {\n      const { checked } = this;\n      this.innerChecked = checked;\n    },\n    methods: {\n      wxcCellClicked () {\n        const { disabled, innerChecked, value } = this;\n        if (!disabled) {\n          this.innerChecked = !innerChecked;\n          this.$emit('wxcCheckBoxItemChecked', { value, checked: this.innerChecked })\n        }\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10657,7 +10656,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-text[data-v-72879af8] {\n  font-size: 24px;\n  color: #3d3d3d;\n}\n.black[data-v-72879af8] {\n  color: #3D3D3D;\n}\n.yellow[data-v-72879af8] {\n  color: #EE9900;\n}\n.blue[data-v-72879af8] {\n  color: #30A0FF,\n}\n.gray[data-v-72879af8] {\n  color: #A5A5A5;\n}\n.red[data-v-72879af8] {\n  color: #FF5000;\n}\n.margin-text[data-v-72879af8] {\n  margin-right: 6px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-text.vue?60b9c951"],"names":[],"mappings":";AAQA;EACA,gBAAA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,kBAAA;CACA","file":"wxc-rich-text-text.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <text :class=\"['wxc-text', textTheme,hasTextMargin ? 'margin-text' : '']\" :style=\"themeStyle\">{{textValue}}</text>\n</template>\n\n<style scoped>\n  .wxc-text {\n    font-size: 24px;\n    color: #3d3d3d;\n  }\n\n  .black {\n    color: #3D3D3D;\n  }\n\n  .yellow {\n    color: #EE9900;\n  }\n\n  .blue {\n    color: #30A0FF,\n  }\n\n  .gray {\n    color: #A5A5A5;\n  }\n\n  .red {\n    color: #FF5000;\n  }\n\n  .margin-text {\n    margin-right: 6px;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      textValue: {\n        type: String,\n        default: ''\n      },\n      textTheme: {\n        type: String,\n        default: 'gray'\n      },\n      textStyle: {\n        type: Object,\n        default: () => ({})\n      },\n      hasTextMargin: {\n        type: Boolean,\n        default: true\n      }\n    },\n    computed: {\n      themeStyle () {\n        let style = {};\n        const textStyle = this.textStyle;\n        if (textStyle && textStyle.fontSize) {\n          style = {\n            ...style,\n            fontSize: `${textStyle.fontSize}px`,\n            height: `${textStyle.fontSize * 1.2}px`\n          }\n        }\n        if (textStyle && textStyle.color) {\n          style = {\n            ...style,\n            color: textStyle.color\n          }\n        }\n        return style;\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-text[data-v-72879af8] {\n  font-size: 0.32rem;\n  color: #3d3d3d;\n}\n.black[data-v-72879af8] {\n  color: #3D3D3D;\n}\n.yellow[data-v-72879af8] {\n  color: #EE9900;\n}\n.blue[data-v-72879af8] {\n  color: #30A0FF,\n}\n.gray[data-v-72879af8] {\n  color: #A5A5A5;\n}\n.red[data-v-72879af8] {\n  color: #FF5000;\n}\n.margin-text[data-v-72879af8] {\n  margin-right: 0.08rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-text.vue?60b9c951"],"names":[],"mappings":";AAQA;EACA,mBAAA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,sBAAA;CACA","file":"wxc-rich-text-text.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <text :class=\"['wxc-text', textTheme,hasTextMargin ? 'margin-text' : '']\" :style=\"themeStyle\">{{textValue}}</text>\n</template>\n\n<style scoped>\n  .wxc-text {\n    font-size: 24px;\n    color: #3d3d3d;\n  }\n\n  .black {\n    color: #3D3D3D;\n  }\n\n  .yellow {\n    color: #EE9900;\n  }\n\n  .blue {\n    color: #30A0FF,\n  }\n\n  .gray {\n    color: #A5A5A5;\n  }\n\n  .red {\n    color: #FF5000;\n  }\n\n  .margin-text {\n    margin-right: 6px;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      textValue: {\n        type: String,\n        default: ''\n      },\n      textTheme: {\n        type: String,\n        default: 'gray'\n      },\n      textStyle: {\n        type: Object,\n        default: () => ({})\n      },\n      hasTextMargin: {\n        type: Boolean,\n        default: true\n      }\n    },\n    computed: {\n      themeStyle () {\n        let style = {};\n        const textStyle = this.textStyle;\n        if (textStyle && textStyle.fontSize) {\n          style = {\n            ...style,\n            fontSize: `${textStyle.fontSize}px`,\n            height: `${textStyle.fontSize * 1.2}px`\n          }\n        }\n        if (textStyle && textStyle.color) {\n          style = {\n            ...style,\n            color: textStyle.color\n          }\n        }\n        return style;\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10685,7 +10684,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-stepper[data-v-76fd3d24] {\n  flex-direction: row;\n}\n.stepper-plus[data-v-76fd3d24], .stepper-minus[data-v-76fd3d24] {\n  width: 56px;\n  height: 56px;\n  background-color: #ededed;\n  align-items: center;\n  justify-content: center;\n  border-radius: 6px;\n}\n.stepper-input[data-v-76fd3d24] {\n  border-width: 0;\n  outline: none;\n  text-align: center;\n  color: #3d3d3d;\n  font-size: 30px;\n  line-height: 56px;\n  width: 86px;\n}\n.stepper-icon[data-v-76fd3d24] {\n  font-size: 36px;\n  color: #666666;\n  margin-top: -4px;\n}\n\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-stepper/index.vue?6a00e832"],"names":[],"mappings":";AA6BA;EACA,oBAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;EACA,0BAAA;EACA,oBAAA;EACA,wBAAA;EACA,mBAAA;CACA;AAEA;EACA,gBAAA;EACA,cAAA;EACA,mBAAA;EACA,eAAA;EACA,gBAAA;EACA,kBAAA;EACA,YAAA;CACA;AAEA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A Stepper-->\n\n<template>\n  <div class=\"wxc-stepper\">\n    <div class=\"stepper-minus\"\n         @click=\"minusClicked\"\n         aria-label=\"减数\"\n         :accessible=\"true\">\n      <text class=\"stepper-icon\" :style=\"{ color: isLess?'#cccccc':'#666666' }\">-</text>\n    </div>\n    <input class=\"stepper-input\"\n           type=\"number\"\n           :value=\"valueString\"\n           @input=\"onInput\"\n           @blur=\"onBlur\"\n           :style=\"disableStyle\"\n           :disabled=\"disabled||readOnly\"/>\n    <div class=\"stepper-plus\"\n         @click=\"plusClicked\"\n         aria-label=\"加数\"\n         :accessible=\"true\">\n      <text class=\"stepper-icon\" :style=\"{ color: isOver ? '#cccccc': '#666666' }\">+</text>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-stepper {\n    flex-direction: row;\n  }\n\n  .stepper-plus, .stepper-minus {\n    width: 56px;\n    height: 56px;\n    background-color: #ededed;\n    align-items: center;\n    justify-content: center;\n    border-radius: 6px;\n  }\n\n  .stepper-input {\n    border-width: 0;\n    outline: none;\n    text-align: center;\n    color: #3d3d3d;\n    font-size: 30px;\n    line-height: 56px;\n    width: 86px;\n  }\n\n  .stepper-icon {\n    font-size: 36px;\n    color: #666666;\n    margin-top: -4px;\n  }\n\n</style>\n\n<script>\n  export default {\n    props: {\n      min: {\n        type: [String, Number],\n        default: 1\n      },\n      max: {\n        type: [String, Number],\n        default: 100\n      },\n      step: {\n        type: [String, Number],\n        default: 1\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      defaultValue: {\n        type: [String, Number],\n        default: 1\n      },\n      readOnly: {\n        type: Boolean,\n        default: false\n      }\n    },\n    computed: {\n      disableStyle () {\n        if (this.disabled) {\n          return {\n            color: '#cccccc'\n          }\n        }\n      },\n      valueString () {\n        return this.value.toString();\n      }\n    },\n    data: () => ({\n      value: 1,\n      isLess: false,\n      isOver: false\n    }),\n    created () {\n      const self = this;\n      self.value = parseInt(self.defaultValue, 10);\n      if (self.disabled) {\n        self.isLess = true;\n        self.isOver = true;\n      }\n    },\n    methods: {\n      minusClicked () {\n        const self = this;\n        if (self.disabled) {\n          return;\n        }\n        const isMinOver = self.value <= self.min;\n        const nowNum = self.value - parseInt(self.step, 10);\n        if (isMinOver) {\n          self.$emit('wxcStepperValueIsMinOver', { value: self.value });\n        } else {\n          self.value = nowNum;\n          self.resetDisabledStyle();\n        }\n        // 由于此处已经减step\n        if (nowNum <= self.min) {\n          self.value = parseInt(self.min, 10);\n          self.isLess = true;\n        }\n        self.$emit('wxcStepperValueChanged', { value: self.value });\n      },\n      plusClicked () {\n        const self = this;\n        if (self.disabled) {\n          return;\n        }\n        const isMaxOver = self.value >= self.max;\n        const nowNum = self.value + parseInt(self.step, 10);\n        if (isMaxOver) {\n          self.$emit('wxcStepperValueIsMaxOver', { value: self.value });\n        } else {\n          self.value = nowNum;\n          self.resetDisabledStyle();\n        }\n        // 由于此处已经加step\n        if (nowNum >= self.max) {\n          self.value = parseInt(self.max, 10);\n          self.isOver = true;\n        }\n        self.$emit('wxcStepperValueChanged', { value: self.value });\n      },\n      onInput (e) {\n        this.correctInputValue(e.value);\n      },\n      onBlur (e) {\n        this.correctInputValue(e.value);\n      },\n      correctInputValue (v) {\n        const self = this;\n        if (/^[1-9]\\d{0,}$/.test(v) && parseInt(v, 10) >= self.min && parseInt(v, 10) <= self.max) {\n          self.value = parseInt(v, 10);\n        }\n        self.$emit('wxcStepperValueChanged', { value: self.value });\n      },\n\n      resetDisabledStyle () {\n        this.isLess = false;\n        this.isOver = false;\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-stepper[data-v-76fd3d24] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n}\n.stepper-plus[data-v-76fd3d24], .stepper-minus[data-v-76fd3d24] {\n  width: 0.74667rem;\n  height: 0.74667rem;\n  background-color: #ededed;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  border-radius: 0.08rem;\n}\n.stepper-input[data-v-76fd3d24] {\n  border-width: 0;\n  outline: none;\n  text-align: center;\n  color: #3d3d3d;\n  font-size: 0.4rem;\n  line-height: 0.74667rem;\n  width: 1.14667rem;\n}\n.stepper-icon[data-v-76fd3d24] {\n  font-size: 0.48rem;\n  color: #666666;\n  margin-top: -0.05333rem;\n}\n\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-stepper/index.vue?6a00e832"],"names":[],"mappings":";AA6BA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,kBAAA;EACA,mBAAA;EACA,0BAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,uBAAA;CACA;AAEA;EACA,gBAAA;EACA,cAAA;EACA,mBAAA;EACA,eAAA;EACA,kBAAA;EACA,wBAAA;EACA,kBAAA;CACA;AAEA;EACA,mBAAA;EACA,eAAA;EACA,wBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A Stepper-->\n\n<template>\n  <div class=\"wxc-stepper\">\n    <div class=\"stepper-minus\"\n         @click=\"minusClicked\"\n         aria-label=\"减数\"\n         :accessible=\"true\">\n      <text class=\"stepper-icon\" :style=\"{ color: isLess?'#cccccc':'#666666' }\">-</text>\n    </div>\n    <input class=\"stepper-input\"\n           type=\"number\"\n           :value=\"valueString\"\n           @input=\"onInput\"\n           @blur=\"onBlur\"\n           :style=\"disableStyle\"\n           :disabled=\"disabled||readOnly\"/>\n    <div class=\"stepper-plus\"\n         @click=\"plusClicked\"\n         aria-label=\"加数\"\n         :accessible=\"true\">\n      <text class=\"stepper-icon\" :style=\"{ color: isOver ? '#cccccc': '#666666' }\">+</text>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-stepper {\n    flex-direction: row;\n  }\n\n  .stepper-plus, .stepper-minus {\n    width: 56px;\n    height: 56px;\n    background-color: #ededed;\n    align-items: center;\n    justify-content: center;\n    border-radius: 6px;\n  }\n\n  .stepper-input {\n    border-width: 0;\n    outline: none;\n    text-align: center;\n    color: #3d3d3d;\n    font-size: 30px;\n    line-height: 56px;\n    width: 86px;\n  }\n\n  .stepper-icon {\n    font-size: 36px;\n    color: #666666;\n    margin-top: -4px;\n  }\n\n</style>\n\n<script>\n  export default {\n    props: {\n      min: {\n        type: [String, Number],\n        default: 1\n      },\n      max: {\n        type: [String, Number],\n        default: 100\n      },\n      step: {\n        type: [String, Number],\n        default: 1\n      },\n      disabled: {\n        type: Boolean,\n        default: false\n      },\n      defaultValue: {\n        type: [String, Number],\n        default: 1\n      },\n      readOnly: {\n        type: Boolean,\n        default: false\n      }\n    },\n    computed: {\n      disableStyle () {\n        if (this.disabled) {\n          return {\n            color: '#cccccc'\n          }\n        }\n      },\n      valueString () {\n        return this.value.toString();\n      }\n    },\n    data: () => ({\n      value: 1,\n      isLess: false,\n      isOver: false\n    }),\n    created () {\n      const self = this;\n      self.value = parseInt(self.defaultValue, 10);\n      if (self.disabled) {\n        self.isLess = true;\n        self.isOver = true;\n      }\n    },\n    methods: {\n      minusClicked () {\n        const self = this;\n        if (self.disabled) {\n          return;\n        }\n        const isMinOver = self.value <= self.min;\n        const nowNum = self.value - parseInt(self.step, 10);\n        if (isMinOver) {\n          self.$emit('wxcStepperValueIsMinOver', { value: self.value });\n        } else {\n          self.value = nowNum;\n          self.resetDisabledStyle();\n        }\n        // 由于此处已经减step\n        if (nowNum <= self.min) {\n          self.value = parseInt(self.min, 10);\n          self.isLess = true;\n        }\n        self.$emit('wxcStepperValueChanged', { value: self.value });\n      },\n      plusClicked () {\n        const self = this;\n        if (self.disabled) {\n          return;\n        }\n        const isMaxOver = self.value >= self.max;\n        const nowNum = self.value + parseInt(self.step, 10);\n        if (isMaxOver) {\n          self.$emit('wxcStepperValueIsMaxOver', { value: self.value });\n        } else {\n          self.value = nowNum;\n          self.resetDisabledStyle();\n        }\n        // 由于此处已经加step\n        if (nowNum >= self.max) {\n          self.value = parseInt(self.max, 10);\n          self.isOver = true;\n        }\n        self.$emit('wxcStepperValueChanged', { value: self.value });\n      },\n      onInput (e) {\n        this.correctInputValue(e.value);\n      },\n      onBlur (e) {\n        this.correctInputValue(e.value);\n      },\n      correctInputValue (v) {\n        const self = this;\n        if (/^[1-9]\\d{0,}$/.test(v) && parseInt(v, 10) >= self.min && parseInt(v, 10) <= self.max) {\n          self.value = parseInt(v, 10);\n        }\n        self.$emit('wxcStepperValueChanged', { value: self.value });\n      },\n\n      resetDisabledStyle () {\n        this.isLess = false;\n        this.isOver = false;\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10699,7 +10698,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.container[data-v-7a03baeb] {\n  position: fixed;\n  width: 750px;\n  /*兼容H5异常*/\n  z-index: 99999;\n}\n.dialog-box[data-v-7a03baeb] {\n  position: fixed;\n  left: 96px;\n  width: 558px;\n  background-color: #FFFFFF;\n}\n.dialog-content[data-v-7a03baeb] {\n  padding-top: 36px;\n  padding-bottom: 36px;\n  padding-left: 36px;\n  padding-right: 36px;\n}\n.content-title[data-v-7a03baeb] {\n  color: #333333;\n  font-size: 36px;\n  text-align: center;\n  margin-bottom: 24px;\n}\n.content-subtext[data-v-7a03baeb] {\n  color: #666666;\n  font-size: 26px;\n  line-height: 36px;\n  text-align: center;\n}\n.dialog-footer[data-v-7a03baeb] {\n  flex-direction: row;\n  align-items: center;\n  border-top-color: #F3F3F3;\n  border-top-width: 1px;\n  /*H5处理兼容*/\n  border-top: 1px solid #F3F3F3;\n}\n.footer-btn[data-v-7a03baeb] {\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  flex: 1;\n  height: 90px;\n}\n.cancel[data-v-7a03baeb] {\n  border-right-color: #F3F3F3;\n  border-right-width: 1px;\n  /*H5处理兼容*/\n  border-right: 1px solid #F3F3F3;\n}\n.btn-text[data-v-7a03baeb] {\n  font-size: 36px;\n  color: #666666;\n}\n.no-prompt[data-v-7a03baeb] {\n  width: 486px;\n  align-items: center;\n  justify-content: center;\n  flex-direction: row;\n  margin-top: 24px;\n}\n.no-prompt-icon[data-v-7a03baeb] {\n  width: 24px;\n  height: 24px;\n  margin-right: 12px;\n}\n.no-prompt-text[data-v-7a03baeb] {\n  font-size: 24px;\n  color: #A5A5A5;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-dialog/index.vue?5f679ad7"],"names":[],"mappings":";AAqCA;EACA,gBAAA;EACA,aAAA;EACA,UAAA;EACA,eAAA;CACA;AAEA;EACA,gBAAA;EACA,WAAA;EACA,aAAA;EACA,0BAAA;CACA;AAEA;EACA,kBAAA;EACA,qBAAA;EACA,mBAAA;EACA,oBAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;EACA,mBAAA;EACA,oBAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;EACA,kBAAA;EACA,mBAAA;CACA;AAEA;EACA,oBAAA;EACA,oBAAA;EACA,0BAAA;EACA,sBAAA;EACA,UAAA;EACA,8BAAA;CACA;AAEA;EACA,oBAAA;EACA,oBAAA;EACA,wBAAA;EACA,QAAA;EACA,aAAA;CACA;AAEA;EACA,4BAAA;EACA,wBAAA;EACA,UAAA;EACA,gCAAA;CACA;AAEA;EACA,gBAAA;EACA,eAAA;CACA;AAEA;EACA,aAAA;EACA,oBAAA;EACA,wBAAA;EACA,oBAAA;EACA,iBAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;CACA;AAEA;EACA,gBAAA;EACA,eAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/11/07. -->\n<!--A dialog. -->\n\n<template>\n  <div class=\"container\">\n    <wxc-overlay v-if=\"show\" :show=\"true\" :hasAnimation=\"false\"></wxc-overlay>\n    <div class=\"dialog-box\" v-if=\"show\" :style=\"{top:top+'px'}\">\n      <div class=\"dialog-content\">\n        <slot name=\"title\">\n          <text class=\"content-title\">{{title}}</text>\n        </slot>\n        <slot name=\"content\">\n          <text class=\"content-subtext\">{{content}}</text>\n        </slot>\n        <div class=\"no-prompt\"\n             v-if=\"showNoPrompt\"\n             @click=\"noPromptClicked\">\n          <image :src=\"noPromptIcon\" class=\"no-prompt-icon\"></image>\n          <text class=\"no-prompt-text\">{{noPromptText}}</text>\n        </div>\n      </div>\n      <div class=\"dialog-footer\">\n        <div class=\"footer-btn cancel\"\n             v-if=\"!single\"\n             @click=\"secondaryClicked\">\n          <text class=\"btn-text\" :style=\"{ color: secondBtnColor }\">{{cancelText}}</text>\n        </div>\n        <div class=\"footer-btn confirm\" @click=\"primaryClicked\">\n          <text class=\"btn-text\" :style=\"{ color: mainBtnColor }\">{{confirmText}}</text>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .container {\n    position: fixed;\n    width: 750px;\n    /*兼容H5异常*/\n    z-index: 99999;\n  }\n\n  .dialog-box {\n    position: fixed;\n    left: 96px;\n    width: 558px;\n    background-color: #FFFFFF;\n  }\n\n  .dialog-content {\n    padding-top: 36px;\n    padding-bottom: 36px;\n    padding-left: 36px;\n    padding-right: 36px;\n  }\n\n  .content-title {\n    color: #333333;\n    font-size: 36px;\n    text-align: center;\n    margin-bottom: 24px;\n  }\n\n  .content-subtext {\n    color: #666666;\n    font-size: 26px;\n    line-height: 36px;\n    text-align: center;\n  }\n\n  .dialog-footer {\n    flex-direction: row;\n    align-items: center;\n    border-top-color: #F3F3F3;\n    border-top-width: 1px;\n    /*H5处理兼容*/\n    border-top: 1px solid #F3F3F3;\n  }\n\n  .footer-btn {\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    flex: 1;\n    height: 90px;\n  }\n\n  .cancel {\n    border-right-color: #F3F3F3;\n    border-right-width: 1px;\n    /*H5处理兼容*/\n    border-right: 1px solid #F3F3F3;\n  }\n\n  .btn-text {\n    font-size: 36px;\n    color: #666666;\n  }\n\n  .no-prompt {\n    width: 486px;\n    align-items: center;\n    justify-content: center;\n    flex-direction: row;\n    margin-top: 24px;\n  }\n\n  .no-prompt-icon {\n    width: 24px;\n    height: 24px;\n    margin-right: 12px;\n  }\n\n  .no-prompt-text {\n    font-size: 24px;\n    color: #A5A5A5;\n  }\n</style>\n\n<script>\n  import WxcOverlay from '../wxc-overlay'\n  import { CHECKED, UN_CHECKED } from './type';\n\n  export default {\n    components: { WxcOverlay },\n    props: {\n      show: {\n        type: Boolean,\n        default: false\n      },\n      single: {\n        type: Boolean,\n        default: false\n      },\n      title: {\n        type: String,\n        default: ''\n      },\n      content: {\n        type: String,\n        default: ''\n      },\n      top: {\n        type: Number,\n        default: 400\n      },\n      cancelText: {\n        type: String,\n        default: '取消'\n      },\n      confirmText: {\n        type: String,\n        default: '确定'\n      },\n      mainBtnColor: {\n        type: String,\n        default: '#EE9900'\n      },\n      secondBtnColor: {\n        type: String,\n        default: '#666666'\n      },\n      showNoPrompt: {\n        type: Boolean,\n        default: false\n      },\n      noPromptText: {\n        type: String,\n        default: '不再提示'\n      },\n      isChecked: {\n        type: Boolean,\n        default: false\n      }\n    },\n    data: () => ({\n      noPromptIcon: UN_CHECKED,\n      pageHeight: 1334\n    }),\n    created () {\n      const { env: { deviceHeight, deviceWidth } } = weex.config;\n      this.pageHeight = deviceHeight / deviceWidth * 750;\n    },\n    methods: {\n      secondaryClicked () {\n        this.$emit('wxcDialogCancelBtnClicked', {\n          type: 'cancel'\n        });\n      },\n      primaryClicked (e) {\n        this.$emit('wxcDialogConfirmBtnClicked', {\n          type: 'confirm'\n        });\n      },\n      noPromptClicked (e) {\n        const isChecked = !this.isChecked;\n        this.noPromptIcon = isChecked ? CHECKED : UN_CHECKED;\n        this.$emit('wxcDialogNoPromptClicked', { isChecked });\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.container[data-v-7a03baeb] {\n  position: fixed;\n  width: 10rem;\n  /*兼容H5异常*/\n  z-index: 99999;\n}\n.dialog-box[data-v-7a03baeb] {\n  position: fixed;\n  left: 1.28rem;\n  width: 7.44rem;\n  background-color: #FFFFFF;\n}\n.dialog-content[data-v-7a03baeb] {\n  padding-top: 0.48rem;\n  padding-bottom: 0.48rem;\n  padding-left: 0.48rem;\n  padding-right: 0.48rem;\n}\n.content-title[data-v-7a03baeb] {\n  color: #333333;\n  font-size: 0.48rem;\n  text-align: center;\n  margin-bottom: 0.32rem;\n}\n.content-subtext[data-v-7a03baeb] {\n  color: #666666;\n  font-size: 0.34667rem;\n  line-height: 0.48rem;\n  text-align: center;\n}\n.dialog-footer[data-v-7a03baeb] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  border-top-color: #F3F3F3;\n  border-top-width: 0.01333rem;\n  /*H5处理兼容*/\n  border-top: 0.01333rem solid #F3F3F3;\n}\n.footer-btn[data-v-7a03baeb] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n  height: 1.2rem;\n}\n.cancel[data-v-7a03baeb] {\n  border-right-color: #F3F3F3;\n  border-right-width: 0.01333rem;\n  /*H5处理兼容*/\n  border-right: 0.01333rem solid #F3F3F3;\n}\n.btn-text[data-v-7a03baeb] {\n  font-size: 0.48rem;\n  color: #666666;\n}\n.no-prompt[data-v-7a03baeb] {\n  width: 6.48rem;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  margin-top: 0.32rem;\n}\n.no-prompt-icon[data-v-7a03baeb] {\n  width: 0.32rem;\n  height: 0.32rem;\n  margin-right: 0.16rem;\n}\n.no-prompt-text[data-v-7a03baeb] {\n  font-size: 0.32rem;\n  color: #A5A5A5;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-dialog/index.vue?5f679ad7"],"names":[],"mappings":";AAqCA;EACA,gBAAA;EACA,aAAA;EACA,UAAA;EACA,eAAA;CACA;AAEA;EACA,gBAAA;EACA,cAAA;EACA,eAAA;EACA,0BAAA;CACA;AAEA;EACA,qBAAA;EACA,wBAAA;EACA,sBAAA;EACA,uBAAA;CACA;AAEA;EACA,eAAA;EACA,mBAAA;EACA,mBAAA;EACA,uBAAA;CACA;AAEA;EACA,eAAA;EACA,sBAAA;EACA,qBAAA;EACA,mBAAA;CACA;AAEA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EACA,6BAAA;EACA,UAAA;EACA,qCAAA;CACA;AAEA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;EACA,eAAA;CACA;AAEA;EACA,4BAAA;EACA,+BAAA;EACA,UAAA;EACA,uCAAA;CACA;AAEA;EACA,mBAAA;EACA,eAAA;CACA;AAEA;EACA,eAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,oBAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;EACA,sBAAA;CACA;AAEA;EACA,mBAAA;EACA,eAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/11/07. -->\n<!--A dialog. -->\n\n<template>\n  <div class=\"container\">\n    <wxc-overlay v-if=\"show\" :show=\"true\" :hasAnimation=\"false\"></wxc-overlay>\n    <div class=\"dialog-box\" v-if=\"show\" :style=\"{top:top+'px'}\">\n      <div class=\"dialog-content\">\n        <slot name=\"title\">\n          <text class=\"content-title\">{{title}}</text>\n        </slot>\n        <slot name=\"content\">\n          <text class=\"content-subtext\">{{content}}</text>\n        </slot>\n        <div class=\"no-prompt\"\n             v-if=\"showNoPrompt\"\n             @click=\"noPromptClicked\">\n          <image :src=\"noPromptIcon\" class=\"no-prompt-icon\"></image>\n          <text class=\"no-prompt-text\">{{noPromptText}}</text>\n        </div>\n      </div>\n      <div class=\"dialog-footer\">\n        <div class=\"footer-btn cancel\"\n             v-if=\"!single\"\n             @click=\"secondaryClicked\">\n          <text class=\"btn-text\" :style=\"{ color: secondBtnColor }\">{{cancelText}}</text>\n        </div>\n        <div class=\"footer-btn confirm\" @click=\"primaryClicked\">\n          <text class=\"btn-text\" :style=\"{ color: mainBtnColor }\">{{confirmText}}</text>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .container {\n    position: fixed;\n    width: 750px;\n    /*兼容H5异常*/\n    z-index: 99999;\n  }\n\n  .dialog-box {\n    position: fixed;\n    left: 96px;\n    width: 558px;\n    background-color: #FFFFFF;\n  }\n\n  .dialog-content {\n    padding-top: 36px;\n    padding-bottom: 36px;\n    padding-left: 36px;\n    padding-right: 36px;\n  }\n\n  .content-title {\n    color: #333333;\n    font-size: 36px;\n    text-align: center;\n    margin-bottom: 24px;\n  }\n\n  .content-subtext {\n    color: #666666;\n    font-size: 26px;\n    line-height: 36px;\n    text-align: center;\n  }\n\n  .dialog-footer {\n    flex-direction: row;\n    align-items: center;\n    border-top-color: #F3F3F3;\n    border-top-width: 1px;\n    /*H5处理兼容*/\n    border-top: 1px solid #F3F3F3;\n  }\n\n  .footer-btn {\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    flex: 1;\n    height: 90px;\n  }\n\n  .cancel {\n    border-right-color: #F3F3F3;\n    border-right-width: 1px;\n    /*H5处理兼容*/\n    border-right: 1px solid #F3F3F3;\n  }\n\n  .btn-text {\n    font-size: 36px;\n    color: #666666;\n  }\n\n  .no-prompt {\n    width: 486px;\n    align-items: center;\n    justify-content: center;\n    flex-direction: row;\n    margin-top: 24px;\n  }\n\n  .no-prompt-icon {\n    width: 24px;\n    height: 24px;\n    margin-right: 12px;\n  }\n\n  .no-prompt-text {\n    font-size: 24px;\n    color: #A5A5A5;\n  }\n</style>\n\n<script>\n  import WxcOverlay from '../wxc-overlay'\n  import { CHECKED, UN_CHECKED } from './type';\n\n  export default {\n    components: { WxcOverlay },\n    props: {\n      show: {\n        type: Boolean,\n        default: false\n      },\n      single: {\n        type: Boolean,\n        default: false\n      },\n      title: {\n        type: String,\n        default: ''\n      },\n      content: {\n        type: String,\n        default: ''\n      },\n      top: {\n        type: Number,\n        default: 400\n      },\n      cancelText: {\n        type: String,\n        default: '取消'\n      },\n      confirmText: {\n        type: String,\n        default: '确定'\n      },\n      mainBtnColor: {\n        type: String,\n        default: '#EE9900'\n      },\n      secondBtnColor: {\n        type: String,\n        default: '#666666'\n      },\n      showNoPrompt: {\n        type: Boolean,\n        default: false\n      },\n      noPromptText: {\n        type: String,\n        default: '不再提示'\n      },\n      isChecked: {\n        type: Boolean,\n        default: false\n      }\n    },\n    data: () => ({\n      noPromptIcon: UN_CHECKED,\n      pageHeight: 1334\n    }),\n    created () {\n      const { env: { deviceHeight, deviceWidth } } = weex.config;\n      this.pageHeight = deviceHeight / deviceWidth * 750;\n    },\n    methods: {\n      secondaryClicked () {\n        this.$emit('wxcDialogCancelBtnClicked', {\n          type: 'cancel'\n        });\n      },\n      primaryClicked (e) {\n        this.$emit('wxcDialogConfirmBtnClicked', {\n          type: 'confirm'\n        });\n      },\n      noPromptClicked (e) {\n        const isChecked = !this.isChecked;\n        this.noPromptIcon = isChecked ? CHECKED : UN_CHECKED;\n        this.$emit('wxcDialogNoPromptClicked', { isChecked });\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10713,7 +10712,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-index-list[data-v-8a0583fa] {\n  position: relative;\n}\n.index-list[data-v-8a0583fa] {\n  width: 750px;\n  height: 1334px;\n}\n.index-list-title[data-v-8a0583fa] {\n  border-bottom-width: 1px;\n  border-color: rgba(32, 35, 37, 0.15);\n  background-color: #FBFBFB;\n  font-size: 24px;\n  color: #666666;\n  padding-bottom: 14px;\n  padding-top: 14px;\n  padding-left: 23px;\n  width: 750px;\n}\n.group-title[data-v-8a0583fa] {\n  border-bottom-width: 0;\n  padding-bottom: 0;\n  padding-top: 24px;\n}\n.index-list-item[data-v-8a0583fa] {\n  width: 750px;\n  flex-direction: row;\n  align-items: center;\n  border-bottom-width: 1px;\n  border-bottom-color: #e0e0e0;\n  height: 92px;\n  padding-left: 24px;\n  padding-right: 24px;\n  background-color: #FFFFFF;\n}\n.iphone-x[data-v-8a0583fa] {\n  height: 68px;\n  background-color: #ffffff;\n}\n.title[data-v-8a0583fa] {\n  font-size: 32px;\n  color: #3D3D3D;\n}\n.desc[data-v-8a0583fa] {\n  font-size: 24px;\n  color: #A5A5A5;\n  margin-left: 30px;\n}\n.index-list-nav[data-v-8a0583fa] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  margin-bottom: 60px;\n  margin-top: 60px;\n  padding-bottom: 20px;\n  padding-top: 20px;\n  width: 70px;\n}\n.list-nav-key[data-v-8a0583fa] {\n  text-align: center;\n  font-size: 24px;\n  height: 40px;\n  color: #666666;\n}\n.index-list-pop[data-v-8a0583fa] {\n  position: fixed;\n  top: 550px;\n  left: 316px;\n  width: 120px;\n  height: 120px;\n  text-align: center;\n  justify-content: center;\n  background-color: rgba(32, 35, 37, .6);\n  border-bottom-left-radius: 60px;\n  border-bottom-right-radius: 60px;\n  border-top-left-radius: 60px;\n  border-top-right-radius: 60px;\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 35px;\n  padding-bottom: 35px;\n  color: #ffffff;\n}\n.list-pop-text[data-v-8a0583fa] {\n  font-size: 40px;\n  text-align: center;\n  color: #ffffff;\n}\n.group[data-v-8a0583fa] {\n  padding-bottom: 18px;\n  padding-right: 70px;\n  background-color: #FBFBFB;\n}\n.group-list[data-v-8a0583fa] {\n  flex-direction: row;\n  margin-left: 18px;\n  margin-top: 18px;\n  background-color: #FBFBFB;\n}\n.group-item[data-v-8a0583fa] {\n  width: 146px;\n  height: 64px;\n  border-width: 1px;\n  border-color: #e0e0e0;\n  margin-right: 18px;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n  background-color: #FFF;\n}\n.item-content[data-v-8a0583fa] {\n  flex-direction: column;\n}\n.item-name[data-v-8a0583fa] {\n  font-size: 24px;\n  line-height: 26px;\n  color: #333;\n}\n.item-desc[data-v-8a0583fa] {\n  margin-top: 2px;\n  color: #999;\n  font-size: 20px;\n  text-align: center;\n}\n.location-icon[data-v-8a0583fa] {\n  width: 32px;\n  height: 32px;\n  margin-right: 8px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-indexlist/index.vue?4c3b162c"],"names":[],"mappings":";AA6IA;EACA,mBAAA;CACA;AAEA;EACA,aAAA;EACA,eAAA;CACA;AAEA;EACA,yBAAA;EACA,qCAAA;EACA,0BAAA;EACA,gBAAA;EACA,eAAA;EACA,qBAAA;EACA,kBAAA;EACA,mBAAA;EACA,aAAA;CACA;AAEA;EACA,uBAAA;EACA,kBAAA;EACA,kBAAA;CACA;AAEA;EACA,aAAA;EACA,oBAAA;EACA,oBAAA;EACA,yBAAA;EACA,6BAAA;EACA,aAAA;EACA,mBAAA;EACA,oBAAA;EACA,0BAAA;CACA;AAEA;EACA,aAAA;EACA,0BAAA;CACA;AAEA;EACA,gBAAA;EACA,eAAA;CACA;AAEA;EACA,gBAAA;EACA,eAAA;EACA,kBAAA;CACA;AAEA;EACA,mBAAA;EACA,OAAA;EACA,SAAA;EACA,oBAAA;EACA,iBAAA;EACA,qBAAA;EACA,kBAAA;EACA,YAAA;CACA;AAEA;EACA,mBAAA;EACA,gBAAA;EACA,aAAA;EACA,eAAA;CACA;AAEA;EACA,gBAAA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,cAAA;EACA,mBAAA;EACA,wBAAA;EACA,uCAAA;EACA,gCAAA;EACA,iCAAA;EACA,6BAAA;EACA,8BAAA;EACA,gBAAA;EACA,iBAAA;EACA,kBAAA;EACA,qBAAA;EACA,eAAA;CACA;AAEA;EACA,gBAAA;EACA,mBAAA;EACA,eAAA;CACA;AAEA;EACA,qBAAA;EACA,oBAAA;EACA,0BAAA;CACA;AAEA;EACA,oBAAA;EACA,kBAAA;EACA,iBAAA;EACA,0BAAA;CACA;AAEA;EACA,aAAA;EACA,aAAA;EACA,kBAAA;EACA,sBAAA;EACA,mBAAA;EACA,oBAAA;EACA,oBAAA;EACA,wBAAA;EACA,uBAAA;CACA;AAEA;EACA,uBAAA;CACA;AAEA;EACA,gBAAA;EACA,kBAAA;EACA,YAAA;CACA;AAEA;EACA,gBAAA;EACA,YAAA;EACA,gBAAA;EACA,mBAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;EACA,kBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/11/02. -->\n<!-- Update by Tw93 on 17/10/13. -->\n<!--A index list. -->\n\n<template>\n  <div class=\"wxc-index-list\">\n    <list class=\"index-list\"\n          :style=\"{height: height+'px'}\">\n      <cell v-for=\"(v,i) in formatList\"\n            :key=\"i\"\n            :ref=\"'index-item-title-' + v.title\">\n        <text :class=\"['index-list-title',v.type && v.type=='group' && 'group-title']\"\n              v-if=\"!onlyShowList\">{{v.title}}</text>\n        <div v-if=\"v.type && v.type=='group' && !onlyShowList\"\n             class=\"group\">\n          <div v-for=\"(group,index) in v.data\"\n               :key=\"index\"\n               class=\"group-list\">\n            <div v-for=\"(item,i) in group\"\n                 :key=\"i\"\n                 @click=\"itemClicked(item)\"\n                 class=\"group-item\"\n                 :accessible=\"true\"\n                 :aria-label=\"`${item.name},${item.desc?item.desc:''}`\">\n              <image v-if=\"item.isLocation\"\n                     class=\"location-icon\"\n                     src=\"https://gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png\"></image>\n              <div class=\"item-content\">\n                <text class=\"item-name\">{{item.name}}</text>\n                <text class=\"item-desc\"\n                      v-if=\"item.desc\">{{item.desc}}</text>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div v-if=\"v.type ==='list'\">\n          <div class=\"index-list-item\"\n               v-for=\"(item,index) in v.data\"\n               :key=\"index\"\n               @click=\"itemClicked(item)\"\n               :accessible=\"true\"\n               :aria-label=\"`${item.name},${item.desc?item.desc:''}`\">\n            <text class=\"title\">{{item.name}}</text>\n            <text class=\"desc\">{{item.desc}}</text>\n          </div>\n        </div>\n      </cell>\n      <cell class=\"iphone-x\" v-if=\"isIPhoneX\"></cell>\n    </list>\n    <div class=\"index-list-nav\"\n         :style=\"navStyle\"\n         v-if=\"showIndex && !onlyShowList\">\n      <text v-for=\"(item,index) in formatList\"\n            :key=\"index\"\n            :title=\"item.title\"\n            @click=\"go2Key(item.title)\"\n            class=\"list-nav-key\">{{item.title}}</text>\n    </div>\n    <div class=\"index-list-pop\"\n         v-if=\"popKeyShow\">\n      <text class=\"list-pop-text\">{{popKey}}</text>\n    </div>\n  </div>\n</template>\n\n<script>\n  const dom = weex.requireModule('dom');\n  import * as Format from './format';\n  import Utils from '../utils';\n\n  export default {\n    props: {\n      height: {\n        type: [Number, String],\n        default: Utils.env.getPageHeight()\n      },\n      normalList: {\n        type: Array,\n        default: () => ([])\n      },\n      onlyShowList: {\n        type: Boolean,\n        default: false\n      },\n      showIndex: {\n        type: Boolean,\n        default: true\n      },\n      navStyle: {\n        type: Object,\n        default: () => ({})\n      },\n      hotListConfig: {\n        type: Object,\n        default: () => ({})\n      },\n      // 城市选择子组件 特殊情况支持\n      cityLocationConfig: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    created () {\n      this.isIPhoneX = Utils.env.isIPhoneX();\n    },\n    computed: {\n      formatList () {\n        const { normalList, hotListConfig, cityLocationConfig } = this;\n        return Format.totalList(normalList, hotListConfig, cityLocationConfig);\n      }\n    },\n    data: () => ({\n      popKeyShow: false,\n      popKey: '',\n      navOffsetY: 0,\n      timer: null\n    }),\n    methods: {\n      itemClicked (item) {\n        this.$emit('wxcIndexlistItemClicked', {\n          item\n        });\n      },\n      go2Key (key) {\n        const keyEl = this.$refs['index-item-title-' + key][0];\n        keyEl && dom.scrollToElement(keyEl, {\n          offset: 0\n        });\n        this.popKey = key;\n        this.popKeyShow = true;\n        this.timer && clearTimeout(this.timer);\n        this.timer = setTimeout(() => {\n          this.popKeyShow = false;\n        }, 600);\n      }\n    }\n  };\n</script>\n\n<style scoped>\n  .wxc-index-list {\n    position: relative;\n  }\n\n  .index-list {\n    width: 750px;\n    height: 1334px;\n  }\n\n  .index-list-title {\n    border-bottom-width: 1px;\n    border-color: rgba(32, 35, 37, 0.15);\n    background-color: #FBFBFB;\n    font-size: 24px;\n    color: #666666;\n    padding-bottom: 14px;\n    padding-top: 14px;\n    padding-left: 23px;\n    width: 750px;\n  }\n\n  .group-title {\n    border-bottom-width: 0;\n    padding-bottom: 0;\n    padding-top: 24px;\n  }\n\n  .index-list-item {\n    width: 750px;\n    flex-direction: row;\n    align-items: center;\n    border-bottom-width: 1px;\n    border-bottom-color: #e0e0e0;\n    height: 92px;\n    padding-left: 24px;\n    padding-right: 24px;\n    background-color: #FFFFFF;\n  }\n\n  .iphone-x {\n    height: 68px;\n    background-color: #ffffff;\n  }\n\n  .title {\n    font-size: 32px;\n    color: #3D3D3D;\n  }\n\n  .desc {\n    font-size: 24px;\n    color: #A5A5A5;\n    margin-left: 30px;\n  }\n\n  .index-list-nav {\n    position: absolute;\n    top: 0;\n    right: 0;\n    margin-bottom: 60px;\n    margin-top: 60px;\n    padding-bottom: 20px;\n    padding-top: 20px;\n    width: 70px;\n  }\n\n  .list-nav-key {\n    text-align: center;\n    font-size: 24px;\n    height: 40px;\n    color: #666666;\n  }\n\n  .index-list-pop {\n    position: fixed;\n    top: 550px;\n    left: 316px;\n    width: 120px;\n    height: 120px;\n    text-align: center;\n    justify-content: center;\n    background-color: rgba(32, 35, 37, .6);\n    border-bottom-left-radius: 60px;\n    border-bottom-right-radius: 60px;\n    border-top-left-radius: 60px;\n    border-top-right-radius: 60px;\n    padding-left: 0;\n    padding-right: 0;\n    padding-top: 35px;\n    padding-bottom: 35px;\n    color: #ffffff;\n  }\n\n  .list-pop-text {\n    font-size: 40px;\n    text-align: center;\n    color: #ffffff;\n  }\n\n  .group {\n    padding-bottom: 18px;\n    padding-right: 70px;\n    background-color: #FBFBFB;\n  }\n\n  .group-list {\n    flex-direction: row;\n    margin-left: 18px;\n    margin-top: 18px;\n    background-color: #FBFBFB;\n  }\n\n  .group-item {\n    width: 146px;\n    height: 64px;\n    border-width: 1px;\n    border-color: #e0e0e0;\n    margin-right: 18px;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    background-color: #FFF;\n  }\n\n  .item-content {\n    flex-direction: column;\n  }\n\n  .item-name {\n    font-size: 24px;\n    line-height: 26px;\n    color: #333;\n  }\n\n  .item-desc {\n    margin-top: 2px;\n    color: #999;\n    font-size: 20px;\n    text-align: center;\n  }\n\n  .location-icon {\n    width: 32px;\n    height: 32px;\n    margin-right: 8px;\n  }\n</style>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-index-list[data-v-8a0583fa] {\n  position: relative;\n}\n.index-list[data-v-8a0583fa] {\n  width: 10rem;\n  height: 17.78667rem;\n}\n.index-list-title[data-v-8a0583fa] {\n  border-bottom-width: 0.01333rem;\n  border-color: rgba(32, 35, 37, 0.15);\n  background-color: #FBFBFB;\n  font-size: 0.32rem;\n  color: #666666;\n  padding-bottom: 0.18667rem;\n  padding-top: 0.18667rem;\n  padding-left: 0.30667rem;\n  width: 10rem;\n}\n.group-title[data-v-8a0583fa] {\n  border-bottom-width: 0;\n  padding-bottom: 0;\n  padding-top: 0.32rem;\n}\n.index-list-item[data-v-8a0583fa] {\n  width: 10rem;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  border-bottom-width: 0.01333rem;\n  border-bottom-color: #e0e0e0;\n  height: 1.22667rem;\n  padding-left: 0.32rem;\n  padding-right: 0.32rem;\n  background-color: #FFFFFF;\n}\n.iphone-x[data-v-8a0583fa] {\n  height: 0.90667rem;\n  background-color: #ffffff;\n}\n.title[data-v-8a0583fa] {\n  font-size: 0.42667rem;\n  color: #3D3D3D;\n}\n.desc[data-v-8a0583fa] {\n  font-size: 0.32rem;\n  color: #A5A5A5;\n  margin-left: 0.4rem;\n}\n.index-list-nav[data-v-8a0583fa] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  margin-bottom: 0.8rem;\n  margin-top: 0.8rem;\n  padding-bottom: 0.26667rem;\n  padding-top: 0.26667rem;\n  width: 0.93333rem;\n}\n.list-nav-key[data-v-8a0583fa] {\n  text-align: center;\n  font-size: 0.32rem;\n  height: 0.53333rem;\n  color: #666666;\n}\n.index-list-pop[data-v-8a0583fa] {\n  position: fixed;\n  top: 7.33333rem;\n  left: 4.21333rem;\n  width: 1.6rem;\n  height: 1.6rem;\n  text-align: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  background-color: rgba(32, 35, 37, .6);\n  border-bottom-left-radius: 0.8rem;\n  border-bottom-right-radius: 0.8rem;\n  border-top-left-radius: 0.8rem;\n  border-top-right-radius: 0.8rem;\n  padding-left: 0;\n  padding-right: 0;\n  padding-top: 0.46667rem;\n  padding-bottom: 0.46667rem;\n  color: #ffffff;\n}\n.list-pop-text[data-v-8a0583fa] {\n  font-size: 0.53333rem;\n  text-align: center;\n  color: #ffffff;\n}\n.group[data-v-8a0583fa] {\n  padding-bottom: 0.24rem;\n  padding-right: 0.93333rem;\n  background-color: #FBFBFB;\n}\n.group-list[data-v-8a0583fa] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  margin-left: 0.24rem;\n  margin-top: 0.24rem;\n  background-color: #FBFBFB;\n}\n.group-item[data-v-8a0583fa] {\n  width: 1.94667rem;\n  height: 0.85333rem;\n  border-width: 0.01333rem;\n  border-color: #e0e0e0;\n  margin-right: 0.24rem;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  background-color: #FFF;\n}\n.item-content[data-v-8a0583fa] {\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n}\n.item-name[data-v-8a0583fa] {\n  font-size: 0.32rem;\n  line-height: 0.34667rem;\n  color: #333;\n}\n.item-desc[data-v-8a0583fa] {\n  margin-top: 0.02667rem;\n  color: #999;\n  font-size: 0.26667rem;\n  text-align: center;\n}\n.location-icon[data-v-8a0583fa] {\n  width: 0.42667rem;\n  height: 0.42667rem;\n  margin-right: 0.10667rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-indexlist/index.vue?4c3b162c"],"names":[],"mappings":";AA6IA;EACA,mBAAA;CACA;AAEA;EACA,aAAA;EACA,oBAAA;CACA;AAEA;EACA,gCAAA;EACA,qCAAA;EACA,0BAAA;EACA,mBAAA;EACA,eAAA;EACA,2BAAA;EACA,wBAAA;EACA,yBAAA;EACA,aAAA;CACA;AAEA;EACA,uBAAA;EACA,kBAAA;EACA,qBAAA;CACA;AAEA;EACA,aAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,gCAAA;EACA,6BAAA;EACA,mBAAA;EACA,sBAAA;EACA,uBAAA;EACA,0BAAA;CACA;AAEA;EACA,mBAAA;EACA,0BAAA;CACA;AAEA;EACA,sBAAA;EACA,eAAA;CACA;AAEA;EACA,mBAAA;EACA,eAAA;EACA,oBAAA;CACA;AAEA;EACA,mBAAA;EACA,OAAA;EACA,SAAA;EACA,sBAAA;EACA,mBAAA;EACA,2BAAA;EACA,wBAAA;EACA,kBAAA;CACA;AAEA;EACA,mBAAA;EACA,mBAAA;EACA,mBAAA;EACA,eAAA;CACA;AAEA;EACA,gBAAA;EACA,gBAAA;EACA,iBAAA;EACA,cAAA;EACA,eAAA;EACA,mBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,uCAAA;EACA,kCAAA;EACA,mCAAA;EACA,+BAAA;EACA,gCAAA;EACA,gBAAA;EACA,iBAAA;EACA,wBAAA;EACA,2BAAA;EACA,eAAA;CACA;AAEA;EACA,sBAAA;EACA,mBAAA;EACA,eAAA;CACA;AAEA;EACA,wBAAA;EACA,0BAAA;EACA,0BAAA;CACA;AAEA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,qBAAA;EACA,oBAAA;EACA,0BAAA;CACA;AAEA;EACA,kBAAA;EACA,mBAAA;EACA,yBAAA;EACA,sBAAA;EACA,sBAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,uBAAA;CACA;AAEA;EACA,6BAAA;EAAA,8BAAA;EAAA,+BAAA;UAAA,uBAAA;CACA;AAEA;EACA,mBAAA;EACA,wBAAA;EACA,YAAA;CACA;AAEA;EACA,uBAAA;EACA,YAAA;EACA,sBAAA;EACA,mBAAA;CACA;AAEA;EACA,kBAAA;EACA,mBAAA;EACA,yBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/11/02. -->\n<!-- Update by Tw93 on 17/10/13. -->\n<!--A index list. -->\n\n<template>\n  <div class=\"wxc-index-list\">\n    <list class=\"index-list\"\n          :style=\"{height: height+'px'}\">\n      <cell v-for=\"(v,i) in formatList\"\n            :key=\"i\"\n            :ref=\"'index-item-title-' + v.title\">\n        <text :class=\"['index-list-title',v.type && v.type=='group' && 'group-title']\"\n              v-if=\"!onlyShowList\">{{v.title}}</text>\n        <div v-if=\"v.type && v.type=='group' && !onlyShowList\"\n             class=\"group\">\n          <div v-for=\"(group,index) in v.data\"\n               :key=\"index\"\n               class=\"group-list\">\n            <div v-for=\"(item,i) in group\"\n                 :key=\"i\"\n                 @click=\"itemClicked(item)\"\n                 class=\"group-item\"\n                 :accessible=\"true\"\n                 :aria-label=\"`${item.name},${item.desc?item.desc:''}`\">\n              <image v-if=\"item.isLocation\"\n                     class=\"location-icon\"\n                     src=\"https://gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png\"></image>\n              <div class=\"item-content\">\n                <text class=\"item-name\">{{item.name}}</text>\n                <text class=\"item-desc\"\n                      v-if=\"item.desc\">{{item.desc}}</text>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div v-if=\"v.type ==='list'\">\n          <div class=\"index-list-item\"\n               v-for=\"(item,index) in v.data\"\n               :key=\"index\"\n               @click=\"itemClicked(item)\"\n               :accessible=\"true\"\n               :aria-label=\"`${item.name},${item.desc?item.desc:''}`\">\n            <text class=\"title\">{{item.name}}</text>\n            <text class=\"desc\">{{item.desc}}</text>\n          </div>\n        </div>\n      </cell>\n      <cell class=\"iphone-x\" v-if=\"isIPhoneX\"></cell>\n    </list>\n    <div class=\"index-list-nav\"\n         :style=\"navStyle\"\n         v-if=\"showIndex && !onlyShowList\">\n      <text v-for=\"(item,index) in formatList\"\n            :key=\"index\"\n            :title=\"item.title\"\n            @click=\"go2Key(item.title)\"\n            class=\"list-nav-key\">{{item.title}}</text>\n    </div>\n    <div class=\"index-list-pop\"\n         v-if=\"popKeyShow\">\n      <text class=\"list-pop-text\">{{popKey}}</text>\n    </div>\n  </div>\n</template>\n\n<script>\n  const dom = weex.requireModule('dom');\n  import * as Format from './format';\n  import Utils from '../utils';\n\n  export default {\n    props: {\n      height: {\n        type: [Number, String],\n        default: Utils.env.getPageHeight()\n      },\n      normalList: {\n        type: Array,\n        default: () => ([])\n      },\n      onlyShowList: {\n        type: Boolean,\n        default: false\n      },\n      showIndex: {\n        type: Boolean,\n        default: true\n      },\n      navStyle: {\n        type: Object,\n        default: () => ({})\n      },\n      hotListConfig: {\n        type: Object,\n        default: () => ({})\n      },\n      // 城市选择子组件 特殊情况支持\n      cityLocationConfig: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    created () {\n      this.isIPhoneX = Utils.env.isIPhoneX();\n    },\n    computed: {\n      formatList () {\n        const { normalList, hotListConfig, cityLocationConfig } = this;\n        return Format.totalList(normalList, hotListConfig, cityLocationConfig);\n      }\n    },\n    data: () => ({\n      popKeyShow: false,\n      popKey: '',\n      navOffsetY: 0,\n      timer: null\n    }),\n    methods: {\n      itemClicked (item) {\n        this.$emit('wxcIndexlistItemClicked', {\n          item\n        });\n      },\n      go2Key (key) {\n        const keyEl = this.$refs['index-item-title-' + key][0];\n        keyEl && dom.scrollToElement(keyEl, {\n          offset: 0\n        });\n        this.popKey = key;\n        this.popKeyShow = true;\n        this.timer && clearTimeout(this.timer);\n        this.timer = setTimeout(() => {\n          this.popKeyShow = false;\n        }, 600);\n      }\n    }\n  };\n</script>\n\n<style scoped>\n  .wxc-index-list {\n    position: relative;\n  }\n\n  .index-list {\n    width: 750px;\n    height: 1334px;\n  }\n\n  .index-list-title {\n    border-bottom-width: 1px;\n    border-color: rgba(32, 35, 37, 0.15);\n    background-color: #FBFBFB;\n    font-size: 24px;\n    color: #666666;\n    padding-bottom: 14px;\n    padding-top: 14px;\n    padding-left: 23px;\n    width: 750px;\n  }\n\n  .group-title {\n    border-bottom-width: 0;\n    padding-bottom: 0;\n    padding-top: 24px;\n  }\n\n  .index-list-item {\n    width: 750px;\n    flex-direction: row;\n    align-items: center;\n    border-bottom-width: 1px;\n    border-bottom-color: #e0e0e0;\n    height: 92px;\n    padding-left: 24px;\n    padding-right: 24px;\n    background-color: #FFFFFF;\n  }\n\n  .iphone-x {\n    height: 68px;\n    background-color: #ffffff;\n  }\n\n  .title {\n    font-size: 32px;\n    color: #3D3D3D;\n  }\n\n  .desc {\n    font-size: 24px;\n    color: #A5A5A5;\n    margin-left: 30px;\n  }\n\n  .index-list-nav {\n    position: absolute;\n    top: 0;\n    right: 0;\n    margin-bottom: 60px;\n    margin-top: 60px;\n    padding-bottom: 20px;\n    padding-top: 20px;\n    width: 70px;\n  }\n\n  .list-nav-key {\n    text-align: center;\n    font-size: 24px;\n    height: 40px;\n    color: #666666;\n  }\n\n  .index-list-pop {\n    position: fixed;\n    top: 550px;\n    left: 316px;\n    width: 120px;\n    height: 120px;\n    text-align: center;\n    justify-content: center;\n    background-color: rgba(32, 35, 37, .6);\n    border-bottom-left-radius: 60px;\n    border-bottom-right-radius: 60px;\n    border-top-left-radius: 60px;\n    border-top-right-radius: 60px;\n    padding-left: 0;\n    padding-right: 0;\n    padding-top: 35px;\n    padding-bottom: 35px;\n    color: #ffffff;\n  }\n\n  .list-pop-text {\n    font-size: 40px;\n    text-align: center;\n    color: #ffffff;\n  }\n\n  .group {\n    padding-bottom: 18px;\n    padding-right: 70px;\n    background-color: #FBFBFB;\n  }\n\n  .group-list {\n    flex-direction: row;\n    margin-left: 18px;\n    margin-top: 18px;\n    background-color: #FBFBFB;\n  }\n\n  .group-item {\n    width: 146px;\n    height: 64px;\n    border-width: 1px;\n    border-color: #e0e0e0;\n    margin-right: 18px;\n    flex-direction: row;\n    align-items: center;\n    justify-content: center;\n    background-color: #FFF;\n  }\n\n  .item-content {\n    flex-direction: column;\n  }\n\n  .item-name {\n    font-size: 24px;\n    line-height: 26px;\n    color: #333;\n  }\n\n  .item-desc {\n    margin-top: 2px;\n    color: #999;\n    font-size: 20px;\n    text-align: center;\n  }\n\n  .location-icon {\n    width: 32px;\n    height: 32px;\n    margin-right: 8px;\n  }\n</style>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10727,7 +10726,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-tag[data-v-8c80ddc2] {\n  border-color: #3d3d3d;\n  border-width: 2px;\n  border-radius: 4px;\n  margin-right: 6px;\n  background-color: transparent;\n  padding-left: 6px;\n  padding-right: 6px;\n  height: 26px;\n  justify-content: center;\n  align-items: center;\n}\n.tag-text[data-v-8c80ddc2] {\n  font-size: 20px;\n  color: #3d3d3d;\n}\n.black[data-v-8c80ddc2] {\n  color: #3D3D3D;\n}\n.yellow[data-v-8c80ddc2] {\n  color: #EE9900;\n}\n.blue[data-v-8c80ddc2] {\n  color: #30A0FF;\n}\n.gray[data-v-8c80ddc2] {\n  color: #A5A5A5;\n}\n.red[data-v-8c80ddc2] {\n  color: #FF5000;\n}\n.border-black[data-v-8c80ddc2] {\n  border-color: #A5A5A5;\n}\n.border-yellow[data-v-8c80ddc2] {\n  border-color: #EE9900;\n}\n.border-blue[data-v-8c80ddc2] {\n  border-color: #30A0FF,\n}\n.border-gray[data-v-8c80ddc2] {\n  border-color: #A5A5A5;\n}\n.border-red[data-v-8c80ddc2] {\n  border-color: #FF5000;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-tag.vue?120ba77b"],"names":[],"mappings":";AAYA;EACA,sBAAA;EACA,kBAAA;EACA,mBAAA;EACA,kBAAA;EACA,8BAAA;EACA,kBAAA;EACA,mBAAA;EACA,aAAA;EACA,wBAAA;EACA,oBAAA;CACA;AAEA;EACA,gBAAA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,sBAAA;CACA;AAEA;EACA,sBAAA;CACA;AAEA;EACA,sBAAA;CACA;AAEA;EACA,sBAAA;CACA;AAEA;EACA,sBAAA;CACA","file":"wxc-rich-text-tag.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <div :class=\"['wxc-tag', 'border-' + tagTheme]\"\n       :style=\"newTheme.divStyle\">\n    <text :class=\"['tag-text', tagTheme]\"\n          :style=\"newTheme.textStyle\">{{tagValue}}</text>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-tag {\n    border-color: #3d3d3d;\n    border-width: 2px;\n    border-radius: 4px;\n    margin-right: 6px;\n    background-color: transparent;\n    padding-left: 6px;\n    padding-right: 6px;\n    height: 26px;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .tag-text {\n    font-size: 20px;\n    color: #3d3d3d;\n  }\n\n  .black {\n    color: #3D3D3D;\n  }\n\n  .yellow {\n    color: #EE9900;\n  }\n\n  .blue {\n    color: #30A0FF;\n  }\n\n  .gray {\n    color: #A5A5A5;\n  }\n\n  .red {\n    color: #FF5000;\n  }\n\n  .border-black {\n    border-color: #A5A5A5;\n  }\n\n  .border-yellow {\n    border-color: #EE9900;\n  }\n\n  .border-blue {\n    border-color: #30A0FF,\n  }\n\n  .border-gray {\n    border-color: #A5A5A5;\n  }\n\n  .border-red {\n    border-color: #FF5000;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      tagValue: {\n        type: [String, Number],\n        default: ''\n      },\n      tagTheme: {\n        type: String,\n        default: 'blue'\n      },\n      tagStyle: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    computed: {\n      newTheme () {\n        const tagStyle = this.tagStyle;\n        const tagValue = this.tagValue;\n        let divStyle = {};\n        let textStyle = {};\n        if (tagStyle && tagStyle.fontSize) {\n          textStyle = {\n            ...textStyle,\n            fontSize: `${tagStyle.fontSize}px`\n          }\n        }\n        if (tagStyle && tagStyle.color) {\n          textStyle = {\n            ...textStyle,\n            color: tagStyle.color\n          }\n        }\n\n        if (tagStyle && tagStyle.borderColor) {\n          divStyle = {\n            ...divStyle,\n            borderColor: tagStyle.borderColor\n          }\n        }\n\n        if (tagStyle && tagStyle.borderWidth) {\n          divStyle = {\n            ...divStyle,\n            borderWidth: `${tagStyle.borderWidth}px`\n          }\n        }\n\n        if (tagStyle && tagStyle.borderRadius) {\n          divStyle = {\n            ...divStyle,\n            borderRadius: `${tagStyle.borderRadius}px`\n          }\n        }\n\n        if (tagStyle && tagStyle.backgroundColor) {\n          divStyle = {\n            ...divStyle,\n            backgroundColor: tagStyle.backgroundColor\n          }\n        }\n\n        if (tagStyle && tagStyle.height) {\n          divStyle = {\n            ...divStyle,\n            height: `${tagStyle.height}px`\n          };\n        }\n\n        if (tagStyle && tagStyle.width) {\n          divStyle = {\n            ...divStyle,\n            width: `${tagStyle.width}px`\n          };\n        }\n\n        if (tagValue && tagValue.length === 1) {\n          divStyle = {\n            ...divStyle,\n            paddingLeft: 0,\n            paddingRight: 0\n          };\n        }\n\n        return {\n          divStyle,\n          textStyle\n        };\n      }\n    }\n  };\n</script>\n\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-tag[data-v-8c80ddc2] {\n  border-color: #3d3d3d;\n  border-width: 0.02667rem;\n  border-radius: 0.05333rem;\n  margin-right: 0.08rem;\n  background-color: transparent;\n  padding-left: 0.08rem;\n  padding-right: 0.08rem;\n  height: 0.34667rem;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n}\n.tag-text[data-v-8c80ddc2] {\n  font-size: 0.26667rem;\n  color: #3d3d3d;\n}\n.black[data-v-8c80ddc2] {\n  color: #3D3D3D;\n}\n.yellow[data-v-8c80ddc2] {\n  color: #EE9900;\n}\n.blue[data-v-8c80ddc2] {\n  color: #30A0FF;\n}\n.gray[data-v-8c80ddc2] {\n  color: #A5A5A5;\n}\n.red[data-v-8c80ddc2] {\n  color: #FF5000;\n}\n.border-black[data-v-8c80ddc2] {\n  border-color: #A5A5A5;\n}\n.border-yellow[data-v-8c80ddc2] {\n  border-color: #EE9900;\n}\n.border-blue[data-v-8c80ddc2] {\n  border-color: #30A0FF,\n}\n.border-gray[data-v-8c80ddc2] {\n  border-color: #A5A5A5;\n}\n.border-red[data-v-8c80ddc2] {\n  border-color: #FF5000;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-tag.vue?120ba77b"],"names":[],"mappings":";AAYA;EACA,sBAAA;EACA,yBAAA;EACA,0BAAA;EACA,sBAAA;EACA,8BAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA;AAEA;EACA,sBAAA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,eAAA;CACA;AAEA;EACA,sBAAA;CACA;AAEA;EACA,sBAAA;CACA;AAEA;EACA,sBAAA;CACA;AAEA;EACA,sBAAA;CACA;AAEA;EACA,sBAAA;CACA","file":"wxc-rich-text-tag.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <div :class=\"['wxc-tag', 'border-' + tagTheme]\"\n       :style=\"newTheme.divStyle\">\n    <text :class=\"['tag-text', tagTheme]\"\n          :style=\"newTheme.textStyle\">{{tagValue}}</text>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-tag {\n    border-color: #3d3d3d;\n    border-width: 2px;\n    border-radius: 4px;\n    margin-right: 6px;\n    background-color: transparent;\n    padding-left: 6px;\n    padding-right: 6px;\n    height: 26px;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .tag-text {\n    font-size: 20px;\n    color: #3d3d3d;\n  }\n\n  .black {\n    color: #3D3D3D;\n  }\n\n  .yellow {\n    color: #EE9900;\n  }\n\n  .blue {\n    color: #30A0FF;\n  }\n\n  .gray {\n    color: #A5A5A5;\n  }\n\n  .red {\n    color: #FF5000;\n  }\n\n  .border-black {\n    border-color: #A5A5A5;\n  }\n\n  .border-yellow {\n    border-color: #EE9900;\n  }\n\n  .border-blue {\n    border-color: #30A0FF,\n  }\n\n  .border-gray {\n    border-color: #A5A5A5;\n  }\n\n  .border-red {\n    border-color: #FF5000;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      tagValue: {\n        type: [String, Number],\n        default: ''\n      },\n      tagTheme: {\n        type: String,\n        default: 'blue'\n      },\n      tagStyle: {\n        type: Object,\n        default: () => ({})\n      }\n    },\n    computed: {\n      newTheme () {\n        const tagStyle = this.tagStyle;\n        const tagValue = this.tagValue;\n        let divStyle = {};\n        let textStyle = {};\n        if (tagStyle && tagStyle.fontSize) {\n          textStyle = {\n            ...textStyle,\n            fontSize: `${tagStyle.fontSize}px`\n          }\n        }\n        if (tagStyle && tagStyle.color) {\n          textStyle = {\n            ...textStyle,\n            color: tagStyle.color\n          }\n        }\n\n        if (tagStyle && tagStyle.borderColor) {\n          divStyle = {\n            ...divStyle,\n            borderColor: tagStyle.borderColor\n          }\n        }\n\n        if (tagStyle && tagStyle.borderWidth) {\n          divStyle = {\n            ...divStyle,\n            borderWidth: `${tagStyle.borderWidth}px`\n          }\n        }\n\n        if (tagStyle && tagStyle.borderRadius) {\n          divStyle = {\n            ...divStyle,\n            borderRadius: `${tagStyle.borderRadius}px`\n          }\n        }\n\n        if (tagStyle && tagStyle.backgroundColor) {\n          divStyle = {\n            ...divStyle,\n            backgroundColor: tagStyle.backgroundColor\n          }\n        }\n\n        if (tagStyle && tagStyle.height) {\n          divStyle = {\n            ...divStyle,\n            height: `${tagStyle.height}px`\n          };\n        }\n\n        if (tagStyle && tagStyle.width) {\n          divStyle = {\n            ...divStyle,\n            width: `${tagStyle.width}px`\n          };\n        }\n\n        if (tagValue && tagValue.length === 1) {\n          divStyle = {\n            ...divStyle,\n            paddingLeft: 0,\n            paddingRight: 0\n          };\n        }\n\n        return {\n          divStyle,\n          textStyle\n        };\n      }\n    }\n  };\n</script>\n\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10741,7 +10740,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.time-dot-wrap[data-v-8dcc12f8] {\n  flex-direction: row;\n  align-items: center;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-countdown/index.vue?99349d28"],"names":[],"mappings":";AAiDA;EACA,oBAAA;EACA,oBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by 提隐 on 17/07/28. -->\n\n<template>\n  <div :style=\"mrTimeWrapStyle\">\n    <div class=\"time-dot-wrap\">\n      <div :style=\"mrTimeBoxStyle\"\n           v-if=\"tplIndexOfDays !== -1\"\n           :accessible=\"true\"\n           :aria-label=\"`${countDownData.day}天`\">\n        <text :style=\"mrTimeTextStyle\">{{countDownData.day}}</text>\n      </div>\n      <div :style=\"mrDotBoxStyle\" v-if=\"tplIndexOfDays !== -1\" :aria-hidden=\"true\">\n        <text :style=\"mrDotTextStyle\">{{getDot(tplIndexOfDays, tplIndexOfHours)}}</text>\n      </div>\n\n      <div :style=\"mrTimeBoxStyle\"\n           v-if=\"tplIndexOfHours !== -1\"\n           :accessible=\"true\"\n           :aria-label=\"`${countDownData.hour}时`\">\n        <text :style=\"mrTimeTextStyle\">{{countDownData.hour}}</text>\n      </div>\n      <div :style=\"mrDotBoxStyle\" v-if=\"tplIndexOfHours !== -1\" :aria-hidden=\"true\">\n        <text :style=\"mrDotTextStyle\">{{getDot(tplIndexOfHours, tplIndexOfMinutes)}}</text>\n      </div>\n\n      <div :style=\"mrTimeBoxStyle\" v-if=\"tplIndexOfMinutes !== -1\"\n           :accessible=\"true\"\n           :aria-label=\"`${countDownData.minute}分`\">\n        <text :style=\"mrTimeTextStyle\">{{countDownData.minute}}</text>\n      </div>\n      <div :style=\"mrDotBoxStyle\" v-if=\"tplIndexOfMinutes !== -1\" :aria-hidden=\"true\">\n        <text :style=\"mrDotTextStyle\">{{getDot(tplIndexOfMinutes, tplIndexOfSeconds)}}</text>\n      </div>\n\n      <div :style=\"mrTimeBoxStyle\"\n           v-if=\"tplIndexOfSeconds !== -1\"\n           :accessible=\"true\"\n           :aria-label=\"`${countDownData.second}秒`\">\n        <text :style=\"mrTimeTextStyle\">{{countDownData.second}}</text>\n      </div>\n      <div :style=\"mrDotBoxStyle\" v-if=\"tplIndexOfSeconds !== -1\" :aria-hidden=\"true\">\n        <text :style=\"mrDotTextStyle\">{{getDot(tplIndexOfSeconds, -1)}}</text>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .time-dot-wrap {\n    flex-direction: row;\n    align-items: center;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      // 时间戳\n      time: {\n        type: Number,\n        default: 1501200000000\n      },\n      // 倒计时的间隔,单位为\"毫秒\"\n      interval: {\n        type: Number,\n        default: 1000\n      },\n      tpl: {\n        type: String,\n        default: '{h}:{m}:{s}'\n      },\n      // 最外层包裹 style\n      timeWrapStyle: Object,\n      // 数字盒子 style\n      timeBoxStyle: Object,\n      // : 盒子Style\n      dotBoxStyle: Object,\n      // 数字文字 Style\n      timeTextStyle: Object,\n      // : 文字Style\n      dotTextStyle: Object\n    },\n    data: () => ({\n      NOW_DATE: new Date().getTime(),\n      completed: false,\n      tplIndexOfDays: -1,\n      tplIndexOfHours: -1,\n      tplIndexOfMinutes: -1,\n      tplIndexOfSeconds: -1,\n      TIME_WRAP_STYLE: {\n        flexDirection: 'row',\n        alignItems: 'center',\n        marginLeft: '12px',\n        marginRight: '12px'\n      },\n      TIME_BOX_STYLE: {\n        flexDirection: 'row',\n        justifyContent: 'center',\n        alignItems: 'center',\n        backgroundColor: '#333333',\n        height: '30px',\n        width: '30px'\n      },\n      DOT_BOX_STYLE: {\n        width: '18px',\n        flexDirection: 'row',\n        justifyContent: 'center',\n        alignItems: 'center'\n      },\n      TIME_TEXT_STYLE: {\n        color: '#FFCC80',\n        fontSize: '18px'\n      },\n      DOT_TEXT_STYLE: {\n        color: '#333333',\n        fontSize: '18px',\n        fontWeight: 'bold'\n      }\n    }),\n    mounted () {\n      setInterval(() => {\n        this.NOW_DATE = new Date().getTime();\n      }, this.interval);\n\n      this.tplIndexOfDays = this.tpl.indexOf('d');\n      this.tplIndexOfHours = this.tpl.indexOf('h');\n      this.tplIndexOfMinutes = this.tpl.indexOf('m');\n      this.tplIndexOfSeconds = this.tpl.indexOf('s');\n    },\n    computed: {\n      mrTimeWrapStyle () {\n        return {\n          ...this.TIME_WRAP_STYLE,\n          ...this.timeWrapStyle\n        }\n      },\n      mrTimeBoxStyle () {\n        return {\n          ...this.TIME_BOX_STYLE,\n          ...this.timeBoxStyle\n        }\n      },\n      mrDotBoxStyle () {\n        return {\n          ...this.DOT_BOX_STYLE,\n          ...this.dotBoxStyle\n        }\n      },\n      mrTimeTextStyle () {\n        return {\n          ...this.TIME_TEXT_STYLE,\n          ...this.timeTextStyle\n        }\n      },\n      mrDotTextStyle () {\n        return {\n          ...this.DOT_TEXT_STYLE,\n          ...this.dotTextStyle\n        }\n      },\n\n      countDownData () {\n        const timeSpacing = this.time - this.NOW_DATE;\n\n        // 倒计时结束了\n        if (timeSpacing < 0) {\n          if (this.completed === false) {\n            this.$emit('wxcOnComplete');\n          }\n          this.completed = true;\n          return {\n            day: '00',\n            hour: '00',\n            minute: '00',\n            second: '00'\n          }\n        }\n\n        let day = 0;\n        let hour = 0;\n        let minute = 0;\n        let second = 0;\n\n        if (this.tplIndexOfDays !== -1) {\n          day = Math.floor(timeSpacing / (24 * 60 * 60 * 1000));\n          hour = Math.floor(timeSpacing % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));\n        } else {\n          day = 0;\n          hour = Math.floor(timeSpacing / (60 * 60 * 1000));\n        }\n\n        if (this.tplIndexOfHours !== -1) {\n          hour = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000) / (60 * 60 * 1000));\n          minute = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000) % (60 * 60 * 1000) / (60 * 1000));\n        } else {\n          hour = 0;\n          minute = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000) / (60 * 1000));\n        }\n\n        if (this.tplIndexOfMinutes !== -1) {\n          minute = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000 - hour * 60 * 60 * 1000) / (60 * 1000));\n          second = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000 - hour * 60 * 60 * 1000) % (60 * 1000) / 1000);\n        } else {\n          minute = 0;\n          second = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000 - hour * 60 * 60 * 1000) / 1000);\n        }\n\n        return {\n          day: day < 10 ? '0' + day : '' + day,\n          hour: hour < 10 ? '0' + hour : '' + hour,\n          minute: minute < 10 ? '0' + minute : '' + minute,\n          second: second < 10 ? '0' + second : '' + second\n        }\n      }\n    },\n\n    methods: {\n      getDot (prevTagIndex, nextTagIndex = -1) {\n        if (nextTagIndex === -1) {\n          return this.tpl.slice(prevTagIndex + 2)\n        }\n        return this.tpl.slice(prevTagIndex + 2, nextTagIndex - 1)\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.time-dot-wrap[data-v-8dcc12f8] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-countdown/index.vue?99349d28"],"names":[],"mappings":";AAiDA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by 提隐 on 17/07/28. -->\n\n<template>\n  <div :style=\"mrTimeWrapStyle\">\n    <div class=\"time-dot-wrap\">\n      <div :style=\"mrTimeBoxStyle\"\n           v-if=\"tplIndexOfDays !== -1\"\n           :accessible=\"true\"\n           :aria-label=\"`${countDownData.day}天`\">\n        <text :style=\"mrTimeTextStyle\">{{countDownData.day}}</text>\n      </div>\n      <div :style=\"mrDotBoxStyle\" v-if=\"tplIndexOfDays !== -1\" :aria-hidden=\"true\">\n        <text :style=\"mrDotTextStyle\">{{getDot(tplIndexOfDays, tplIndexOfHours)}}</text>\n      </div>\n\n      <div :style=\"mrTimeBoxStyle\"\n           v-if=\"tplIndexOfHours !== -1\"\n           :accessible=\"true\"\n           :aria-label=\"`${countDownData.hour}时`\">\n        <text :style=\"mrTimeTextStyle\">{{countDownData.hour}}</text>\n      </div>\n      <div :style=\"mrDotBoxStyle\" v-if=\"tplIndexOfHours !== -1\" :aria-hidden=\"true\">\n        <text :style=\"mrDotTextStyle\">{{getDot(tplIndexOfHours, tplIndexOfMinutes)}}</text>\n      </div>\n\n      <div :style=\"mrTimeBoxStyle\" v-if=\"tplIndexOfMinutes !== -1\"\n           :accessible=\"true\"\n           :aria-label=\"`${countDownData.minute}分`\">\n        <text :style=\"mrTimeTextStyle\">{{countDownData.minute}}</text>\n      </div>\n      <div :style=\"mrDotBoxStyle\" v-if=\"tplIndexOfMinutes !== -1\" :aria-hidden=\"true\">\n        <text :style=\"mrDotTextStyle\">{{getDot(tplIndexOfMinutes, tplIndexOfSeconds)}}</text>\n      </div>\n\n      <div :style=\"mrTimeBoxStyle\"\n           v-if=\"tplIndexOfSeconds !== -1\"\n           :accessible=\"true\"\n           :aria-label=\"`${countDownData.second}秒`\">\n        <text :style=\"mrTimeTextStyle\">{{countDownData.second}}</text>\n      </div>\n      <div :style=\"mrDotBoxStyle\" v-if=\"tplIndexOfSeconds !== -1\" :aria-hidden=\"true\">\n        <text :style=\"mrDotTextStyle\">{{getDot(tplIndexOfSeconds, -1)}}</text>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .time-dot-wrap {\n    flex-direction: row;\n    align-items: center;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      // 时间戳\n      time: {\n        type: Number,\n        default: 1501200000000\n      },\n      // 倒计时的间隔,单位为\"毫秒\"\n      interval: {\n        type: Number,\n        default: 1000\n      },\n      tpl: {\n        type: String,\n        default: '{h}:{m}:{s}'\n      },\n      // 最外层包裹 style\n      timeWrapStyle: Object,\n      // 数字盒子 style\n      timeBoxStyle: Object,\n      // : 盒子Style\n      dotBoxStyle: Object,\n      // 数字文字 Style\n      timeTextStyle: Object,\n      // : 文字Style\n      dotTextStyle: Object\n    },\n    data: () => ({\n      NOW_DATE: new Date().getTime(),\n      completed: false,\n      tplIndexOfDays: -1,\n      tplIndexOfHours: -1,\n      tplIndexOfMinutes: -1,\n      tplIndexOfSeconds: -1,\n      TIME_WRAP_STYLE: {\n        flexDirection: 'row',\n        alignItems: 'center',\n        marginLeft: '12px',\n        marginRight: '12px'\n      },\n      TIME_BOX_STYLE: {\n        flexDirection: 'row',\n        justifyContent: 'center',\n        alignItems: 'center',\n        backgroundColor: '#333333',\n        height: '30px',\n        width: '30px'\n      },\n      DOT_BOX_STYLE: {\n        width: '18px',\n        flexDirection: 'row',\n        justifyContent: 'center',\n        alignItems: 'center'\n      },\n      TIME_TEXT_STYLE: {\n        color: '#FFCC80',\n        fontSize: '18px'\n      },\n      DOT_TEXT_STYLE: {\n        color: '#333333',\n        fontSize: '18px',\n        fontWeight: 'bold'\n      }\n    }),\n    mounted () {\n      setInterval(() => {\n        this.NOW_DATE = new Date().getTime();\n      }, this.interval);\n\n      this.tplIndexOfDays = this.tpl.indexOf('d');\n      this.tplIndexOfHours = this.tpl.indexOf('h');\n      this.tplIndexOfMinutes = this.tpl.indexOf('m');\n      this.tplIndexOfSeconds = this.tpl.indexOf('s');\n    },\n    computed: {\n      mrTimeWrapStyle () {\n        return {\n          ...this.TIME_WRAP_STYLE,\n          ...this.timeWrapStyle\n        }\n      },\n      mrTimeBoxStyle () {\n        return {\n          ...this.TIME_BOX_STYLE,\n          ...this.timeBoxStyle\n        }\n      },\n      mrDotBoxStyle () {\n        return {\n          ...this.DOT_BOX_STYLE,\n          ...this.dotBoxStyle\n        }\n      },\n      mrTimeTextStyle () {\n        return {\n          ...this.TIME_TEXT_STYLE,\n          ...this.timeTextStyle\n        }\n      },\n      mrDotTextStyle () {\n        return {\n          ...this.DOT_TEXT_STYLE,\n          ...this.dotTextStyle\n        }\n      },\n\n      countDownData () {\n        const timeSpacing = this.time - this.NOW_DATE;\n\n        // 倒计时结束了\n        if (timeSpacing < 0) {\n          if (this.completed === false) {\n            this.$emit('wxcOnComplete');\n          }\n          this.completed = true;\n          return {\n            day: '00',\n            hour: '00',\n            minute: '00',\n            second: '00'\n          }\n        }\n\n        let day = 0;\n        let hour = 0;\n        let minute = 0;\n        let second = 0;\n\n        if (this.tplIndexOfDays !== -1) {\n          day = Math.floor(timeSpacing / (24 * 60 * 60 * 1000));\n          hour = Math.floor(timeSpacing % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));\n        } else {\n          day = 0;\n          hour = Math.floor(timeSpacing / (60 * 60 * 1000));\n        }\n\n        if (this.tplIndexOfHours !== -1) {\n          hour = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000) / (60 * 60 * 1000));\n          minute = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000) % (60 * 60 * 1000) / (60 * 1000));\n        } else {\n          hour = 0;\n          minute = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000) / (60 * 1000));\n        }\n\n        if (this.tplIndexOfMinutes !== -1) {\n          minute = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000 - hour * 60 * 60 * 1000) / (60 * 1000));\n          second = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000 - hour * 60 * 60 * 1000) % (60 * 1000) / 1000);\n        } else {\n          minute = 0;\n          second = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000 - hour * 60 * 60 * 1000) / 1000);\n        }\n\n        return {\n          day: day < 10 ? '0' + day : '' + day,\n          hour: hour < 10 ? '0' + hour : '' + hour,\n          minute: minute < 10 ? '0' + minute : '' + minute,\n          second: second < 10 ? '0' + second : '' + second\n        }\n      }\n    },\n\n    methods: {\n      getDot (prevTagIndex, nextTagIndex = -1) {\n        if (nextTagIndex === -1) {\n          return this.tpl.slice(prevTagIndex + 2)\n        }\n        return this.tpl.slice(prevTagIndex + 2, nextTagIndex - 1)\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10755,7 +10754,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-tab-page[data-v-9576a0a4] {\n  width: 750px;\n  flex-direction: column;\n}\n.tab-title-list[data-v-9576a0a4] {\n  flex-direction: row;\n  justify-content: space-around;\n}\n.title-item[data-v-9576a0a4] {\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  border-bottom-style: solid;\n  position: relative;\n}\n.tab-page-wrap[data-v-9576a0a4] {\n  width: 750px;\n  overflow: hidden;\n  position: relative;\n}\n.tab-container[data-v-9576a0a4] {\n  flex: 1;\n  flex-direction: row;\n  position: absolute;\n}\n.tab-text[data-v-9576a0a4] {\n  lines: 1;\n  text-overflow: ellipsis;\n}\n.desc-tag[data-v-9576a0a4] {\n  position: absolute;\n  top: 10px;\n  right: 20px;\n  border-bottom-right-radius: 14px;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 14px;\n  border-top-right-radius: 14px;\n  background-color: #FF5E00;\n  height: 26px;\n  align-items: center;\n  justify-content: center;\n  padding-left: 6px;\n  padding-right: 6px;\n}\n.dot[data-v-9576a0a4]{\n  width: 12px;\n  height: 12px;\n  border-bottom-right-radius: 12px;\n  border-bottom-left-radius: 12px;\n  border-top-left-radius: 12px;\n  border-top-right-radius: 12px;\n  position: absolute;\n  top: 10px;\n  right: 40px;\n  background-color: #FF5E00;\n}\n.desc-text[data-v-9576a0a4] {\n  font-size: 18px;\n  color: #ffffff;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-tab-bar/index.vue?3ee93a44"],"names":[],"mappings":";AA0CA;EACA,aAAA;EACA,uBAAA;CACA;AAEA;EACA,oBAAA;EACA,8BAAA;CACA;AAEA;EACA,wBAAA;EACA,oBAAA;EACA,uBAAA;EACA,2BAAA;EACA,mBAAA;CACA;AAEA;EACA,aAAA;EACA,iBAAA;EACA,mBAAA;CACA;AAEA;EACA,QAAA;EACA,oBAAA;EACA,mBAAA;CACA;AAEA;EACA,SAAA;EACA,wBAAA;CACA;AAEA;EACA,mBAAA;EACA,UAAA;EACA,YAAA;EACA,iCAAA;EACA,6BAAA;EACA,6BAAA;EACA,8BAAA;EACA,0BAAA;EACA,aAAA;EACA,oBAAA;EACA,wBAAA;EACA,kBAAA;EACA,mBAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;EACA,iCAAA;EACA,gCAAA;EACA,6BAAA;EACA,8BAAA;EACA,mBAAA;EACA,UAAA;EACA,YAAA;EACA,0BAAA;CACA;AACA;EACA,gBAAA;EACA,eAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n<!-- Updated by Tw93 on 17/11/16.-->\n\n<template>\n  <div class=\"wxc-tab-page\"\n       :style=\"{ height: (tabPageHeight)+'px', backgroundColor:wrapBgColor }\">\n    <div class=\"tab-page-wrap\"\n         ref=\"tab-page-wrap\"\n         :style=\"{ height: (tabPageHeight-tabStyles.height)+'px' }\">\n      <div ref=\"tab-container\"\n           class=\"tab-container\">\n        <slot></slot>\n      </div>\n    </div>\n    <div class=\"tab-title-list\"\n         :style=\"{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height)+'px'}\">\n      <div class=\"title-item\"\n           v-for=\"(v,index) in tabTitles\"\n           :key=\"index\"\n           :ref=\"'wxc-tab-title-'+index\"\n           @click=\"setPage(index,v.url)\"\n           :style=\"{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage == index ? tabStyles.activeBgColor : tabStyles.bgColor }\"\n           :accessible=\"true\"\n           :aria-label=\"`${v.title?v.title:'标签'+index}`\">\n\n        <image :src=\"currentPage == index ? v.activeIcon : v.icon\"\n               v-if=\"titleType === 'icon'\"\n               :style=\"{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}\"></image>\n        <text\n          :style=\"{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}\"\n          class=\"tab-text\">{{v.title}}</text>\n        <div class=\"desc-tag\" v-if=\"v.badge\">\n          <text class=\"desc-text\">{{v.badge}}</text>\n        </div>\n        <div v-if=\"v.dot && !v.badge\" class=\"dot\"></div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-tab-page {\n    width: 750px;\n    flex-direction: column;\n  }\n\n  .tab-title-list {\n    flex-direction: row;\n    justify-content: space-around;\n  }\n\n  .title-item {\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n    border-bottom-style: solid;\n    position: relative;\n  }\n\n  .tab-page-wrap {\n    width: 750px;\n    overflow: hidden;\n    position: relative;\n  }\n\n  .tab-container {\n    flex: 1;\n    flex-direction: row;\n    position: absolute;\n  }\n\n  .tab-text {\n    lines: 1;\n    text-overflow: ellipsis;\n  }\n\n  .desc-tag {\n    position: absolute;\n    top: 10px;\n    right: 20px;\n    border-bottom-right-radius: 14px;\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 14px;\n    border-top-right-radius: 14px;\n    background-color: #FF5E00;\n    height: 26px;\n    align-items: center;\n    justify-content: center;\n    padding-left: 6px;\n    padding-right: 6px;\n  }\n\n  .dot{\n    width: 12px;\n    height: 12px;\n    border-bottom-right-radius: 12px;\n    border-bottom-left-radius: 12px;\n    border-top-left-radius: 12px;\n    border-top-right-radius: 12px;\n    position: absolute;\n    top: 10px;\n    right: 40px;\n    background-color: #FF5E00;\n  }\n  .desc-text {\n    font-size: 18px;\n    color: #ffffff;\n  }\n</style>\n\n<script>\n  const dom = weex.requireModule('dom');\n  const animation = weex.requireModule('animation');\n\n  export default {\n    props: {\n      tabTitles: {\n        type: Array,\n        default: () => ([])\n      },\n      tabStyles: {\n        type: Object,\n        default: () => ({\n          bgColor: '#FFFFFF',\n          titleColor: '#666666',\n          activeTitleColor: '#3D3D3D',\n          activeBgColor: '#FFFFFF',\n          isActiveTitleBold: true,\n          iconWidth: 70,\n          iconHeight: 70,\n          width: 160,\n          height: 120,\n          fontSize: 24,\n          activeBottomColor: '#FFC900',\n          activeBottomWidth: 120,\n          activeBottomHeight: 6,\n          textPaddingLeft: 10,\n          textPaddingRight: 10\n        })\n      },\n      titleType: {\n        type: String,\n        default: 'icon'\n      },\n      tabPageHeight: {\n        type: [String, Number],\n        default: 1334\n      },\n      isTabView: {\n        type: Boolean,\n        default: true\n      },\n      duration: {\n        type: [Number, String],\n        default: 300\n      },\n      timingFunction: {\n        type: String,\n        default: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'\n      },\n      wrapBgColor: {\n        type: String,\n        default: '#f2f3f4'\n      }\n    },\n    data: () => ({\n      currentPage: 0,\n      translateX: 0\n    }),\n    methods: {\n      next () {\n        let page = this.currentPage;\n        if (page < this.tabTitles.length - 1) {\n          page++;\n        }\n        this.setPage(page);\n      },\n      prev () {\n        let page = this.currentPage;\n        if (page > 0) {\n          page--;\n        }\n        this.setPage(page);\n      },\n      setPage (page, url = null, animated = true) {\n        if (!this.isTabView) {\n          this.jumpOut(url);\n          return;\n        }\n        const previousPage = this.currentPage;\n        const currentTabEl = this.$refs[`wxc-tab-title-${page}`][0];\n        const { width } = this.tabStyles;\n        const appearNum = parseInt(750 / width);\n        const tabsNum = this.tabTitles.length;\n        const offset = page > appearNum ? -(750 - width) / 2 : -width * 2;\n\n        if (appearNum < tabsNum) {\n          (previousPage > appearNum || page > 1) && dom.scrollToElement(currentTabEl, {\n            offset, animated\n          });\n\n          page <= 1 && previousPage > page && dom.scrollToElement(currentTabEl, {\n            offset: -width * page,\n            animated\n          });\n        }\n\n        this.currentPage = page;\n        this._animateTransformX(page, animated);\n        this.$emit('wxcTabBarCurrentTabSelected', { page });\n      },\n      jumpOut (url) {\n        url && Utils.goToH5Page(url)\n      },\n      _animateTransformX (page, animated) {\n        const { duration, timingFunction } = this;\n        const computedDur = animated ? duration : 0.00001;\n        const containerEl = this.$refs[`tab-container`];\n        const dist = page * 750;\n        animation.transition(containerEl, {\n          styles: {\n            transform: `translateX(${-dist}px)`\n          },\n          duration: computedDur,\n          timingFunction,\n          delay: 0\n        }, () => {\n        });\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-tab-page[data-v-9576a0a4] {\n  position: absolute;\n  top: 0;\n  left:0;\n  right:0;\n  bottom: 0;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n}\n.tab-title-list[data-v-9576a0a4] {\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-justify-content: space-around;\n          justify-content: space-around;\n}\n.title-item[data-v-9576a0a4] {\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n          flex-direction: column;\n  border-bottom-style: solid;\n  position: relative;\n}\n.tab-page-wrap[data-v-9576a0a4] {\n  width: 10rem;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n  overflow: hidden;\n  position: relative;\n}\n.tab-container[data-v-9576a0a4] {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n          flex: 1;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  position: absolute;\n}\n.tab-text[data-v-9576a0a4] {\n  lines: 1;\n  text-overflow: ellipsis;\n}\n.desc-tag[data-v-9576a0a4] {\n  position: absolute;\n  top: 0.13333rem;\n  right: 0.26667rem;\n  border-bottom-right-radius: 0.18667rem;\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0.18667rem;\n  border-top-right-radius: 0.18667rem;\n  background-color: #FF5E00;\n  height: 0.34667rem;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n          justify-content: center;\n  padding-left: 0.08rem;\n  padding-right: 0.08rem;\n}\n.dot[data-v-9576a0a4]{\n  width: 0.16rem;\n  height: 0.16rem;\n  border-bottom-right-radius: 0.16rem;\n  border-bottom-left-radius: 0.16rem;\n  border-top-left-radius: 0.16rem;\n  border-top-right-radius: 0.16rem;\n  position: absolute;\n  top: 0.13333rem;\n  right: 0.53333rem;\n  background-color: #FF5E00;\n}\n.desc-text[data-v-9576a0a4] {\n  font-size: 0.24rem;\n  color: #ffffff;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-tab-bar/index.vue?0905ce64"],"names":[],"mappings":";AAwCA;EACA,mBAAA;EACA,OAAA;EACA,OAAA;EACA,QAAA;EACA,UAAA;EACA,6BAAA;EAAA,8BAAA;EAAA,+BAAA;UAAA,uBAAA;CACA;AAEA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,sCAAA;UAAA,8BAAA;CACA;AAEA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,6BAAA;EAAA,8BAAA;EAAA,+BAAA;UAAA,uBAAA;EACA,2BAAA;EACA,mBAAA;CACA;AAEA;EACA,aAAA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;EACA,iBAAA;EACA,mBAAA;CACA;AAEA;EACA,oBAAA;EAAA,gBAAA;UAAA,QAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,mBAAA;CACA;AAEA;EACA,SAAA;EACA,wBAAA;CACA;AAEA;EACA,mBAAA;EACA,gBAAA;EACA,kBAAA;EACA,uCAAA;EACA,6BAAA;EACA,mCAAA;EACA,oCAAA;EACA,0BAAA;EACA,mBAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,yBAAA;EAAA,gCAAA;UAAA,wBAAA;EACA,sBAAA;EACA,uBAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;EACA,oCAAA;EACA,mCAAA;EACA,gCAAA;EACA,iCAAA;EACA,mBAAA;EACA,gBAAA;EACA,kBAAA;EACA,0BAAA;CACA;AACA;EACA,mBAAA;EACA,eAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n<!-- Updated by Tw93 on 17/11/16.-->\n\n<template>\n  <div class=\"wxc-tab-page\"\n       :style=\"{backgroundColor:wrapBgColor }\">\n    <div class=\"tab-page-wrap\" ref=\"tab-page-wrap\">\n      <div ref=\"tab-container\"\n           class=\"tab-container\">\n        <slot></slot>\n      </div>\n    </div>\n    <div class=\"tab-title-list\"\n         :style=\"{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height)+'px'}\">\n      <div class=\"title-item\"\n           v-for=\"(v,index) in tabTitles\"\n           :key=\"index\"\n           :ref=\"'wxc-tab-title-'+index\"\n           @click=\"setPage(index,v.url)\"\n           :style=\"{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage == index ? tabStyles.activeBgColor : tabStyles.bgColor }\"\n           :accessible=\"true\"\n           :aria-label=\"`${v.title?v.title:'标签'+index}`\">\n\n        <image :src=\"currentPage == index ? v.activeIcon : v.icon\"\n               v-if=\"titleType === 'icon'\"\n               :style=\"{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}\"></image>\n        <text\n          :style=\"{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}\"\n          class=\"tab-text\">{{v.title}}</text>\n        <div class=\"desc-tag\" v-if=\"v.badge\">\n          <text class=\"desc-text\">{{v.badge}}</text>\n        </div>\n        <div v-if=\"v.dot && !v.badge\" class=\"dot\"></div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-tab-page {\n    position: absolute;\n    top: 0;\n    left:0;\n    right:0;\n    bottom: 0;\n    flex-direction: column;\n  }\n\n  .tab-title-list {\n    flex-direction: row;\n    justify-content: space-around;\n  }\n\n  .title-item {\n    justify-content: center;\n    align-items: center;\n    flex-direction: column;\n    border-bottom-style: solid;\n    position: relative;\n  }\n\n  .tab-page-wrap {\n    width: 750px;\n    flex: 1;\n    overflow: hidden;\n    position: relative;\n  }\n\n  .tab-container {\n    flex: 1;\n    flex-direction: row;\n    position: absolute;\n  }\n\n  .tab-text {\n    lines: 1;\n    text-overflow: ellipsis;\n  }\n\n  .desc-tag {\n    position: absolute;\n    top: 10px;\n    right: 20px;\n    border-bottom-right-radius: 14px;\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 14px;\n    border-top-right-radius: 14px;\n    background-color: #FF5E00;\n    height: 26px;\n    align-items: center;\n    justify-content: center;\n    padding-left: 6px;\n    padding-right: 6px;\n  }\n\n  .dot{\n    width: 12px;\n    height: 12px;\n    border-bottom-right-radius: 12px;\n    border-bottom-left-radius: 12px;\n    border-top-left-radius: 12px;\n    border-top-right-radius: 12px;\n    position: absolute;\n    top: 10px;\n    right: 40px;\n    background-color: #FF5E00;\n  }\n  .desc-text {\n    font-size: 18px;\n    color: #ffffff;\n  }\n</style>\n\n<script>\n  const dom = weex.requireModule('dom');\n  const animation = weex.requireModule('animation');\n\n  export default {\n    props: {\n      tabTitles: {\n        type: Array,\n        default: () => ([])\n      },\n      tabStyles: {\n        type: Object,\n        default: () => ({\n          bgColor: '#FFFFFF',\n          titleColor: '#666666',\n          activeTitleColor: '#3D3D3D',\n          activeBgColor: '#FFFFFF',\n          isActiveTitleBold: true,\n          iconWidth: 70,\n          iconHeight: 70,\n          width: 160,\n          height: 120,\n          fontSize: 24,\n          activeBottomColor: '#FFC900',\n          activeBottomWidth: 120,\n          activeBottomHeight: 6,\n          textPaddingLeft: 10,\n          textPaddingRight: 10\n        })\n      },\n      titleType: {\n        type: String,\n        default: 'icon'\n      },\n      isTabView: {\n        type: Boolean,\n        default: true\n      },\n      duration: {\n        type: [Number, String],\n        default: 300\n      },\n      timingFunction: {\n        type: String,\n        default: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'\n      },\n      wrapBgColor: {\n        type: String,\n        default: '#f2f3f4'\n      }\n    },\n    data: () => ({\n      currentPage: 0,\n      translateX: 0\n    }),\n    methods: {\n      next () {\n        let page = this.currentPage;\n        if (page < this.tabTitles.length - 1) {\n          page++;\n        }\n        this.setPage(page);\n      },\n      prev () {\n        let page = this.currentPage;\n        if (page > 0) {\n          page--;\n        }\n        this.setPage(page);\n      },\n      setPage (page, url = null, animated = true) {\n        if (!this.isTabView) {\n          this.jumpOut(url);\n          return;\n        }\n        const previousPage = this.currentPage;\n        const currentTabEl = this.$refs[`wxc-tab-title-${page}`][0];\n        const { width } = this.tabStyles;\n        const appearNum = parseInt(750 / width);\n        const tabsNum = this.tabTitles.length;\n        const offset = page > appearNum ? -(750 - width) / 2 : -width * 2;\n\n        if (appearNum < tabsNum) {\n          (previousPage > appearNum || page > 1) && dom.scrollToElement(currentTabEl, {\n            offset, animated\n          });\n\n          page <= 1 && previousPage > page && dom.scrollToElement(currentTabEl, {\n            offset: -width * page,\n            animated\n          });\n        }\n\n        this.currentPage = page;\n        this._animateTransformX(page, animated);\n        this.$emit('wxcTabBarCurrentTabSelected', { page });\n      },\n      jumpOut (url) {\n        url && Utils.goToH5Page(url)\n      },\n      _animateTransformX (page, animated) {\n        const { duration, timingFunction } = this;\n        const computedDur = animated ? duration : 0.00001;\n        const containerEl = this.$refs[`tab-container`];\n        const dist = page * 750;\n        animation.transition(containerEl, {\n          styles: {\n            transform: `translateX(${-dist}px)`\n          },\n          duration: computedDur,\n          timingFunction,\n          delay: 0\n        }, () => {\n        });\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10769,7 +10768,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-minibar[data-v-991a6e22] {\n  width: 750px;\n  height: 90px;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #009ff0;\n}\n.left[data-v-991a6e22] {\n  width: 90px;\n}\n.middle-title[data-v-991a6e22] {\n  font-size: 30px;\n  color: #ffffff;\n  height: 36px;\n  line-height: 34px;\n}\n.right[data-v-991a6e22] {\n  width: 80px;\n}\n.left-button[data-v-991a6e22] {\n  width: 21px;\n  height: 36px;\n  margin-left: 40px;\n}\n.right-button[data-v-991a6e22] {\n  width: 32px;\n  height: 32px;\n  margin-right: 16px;\n}\n.right-text[data-v-991a6e22] {\n  width: 80px;\n  margin-right: 20px;\n  font-size: 28px;\n  text-align: left;\n  color: #fff;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-minibar/index.vue?332449fa"],"names":[],"mappings":";AAkBA;EACA,aAAA;EACA,aAAA;EACA,oBAAA;EACA,+BAAA;EACA,oBAAA;EACA,0BAAA;CACA;AAEA;EACA,YAAA;CACA;AAEA;EACA,gBAAA;EACA,eAAA;EACA,aAAA;EACA,kBAAA;CACA;AAEA;EACA,YAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;EACA,kBAAA;CACA;AAEA;EACA,YAAA;EACA,aAAA;EACA,mBAAA;CACA;AAEA;EACA,YAAA;EACA,mBAAA;EACA,gBAAA;EACA,iBAAA;EACA,YAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A top navigation bar.-->\n\n<template>\n  <div class=\"wxc-minibar\" :style=\"{ backgroundColor: backgroundColor }\" v-if=\"show\">\n    <div class=\"left\" @click=\"leftButtonClicked\" aria-label=\"返回\" :accessible=\"true\">\n      <image :src=\"leftButton\" class=\"left-button\"></image>\n    </div>\n    <text class=\"middle-title\" :style=\"{ color: textColor }\">{{title}}</text>\n    <div class=\"right\" @click=\"rightButtonClicked\">\n      <text class=\"right-text\" v-if=\"rightText\" :style=\"{ color: textColor }\">{{rightText}}</text>\n      <image :src=\"rightButton\" class=\"right-button\" v-if=\"rightButton\" :aria-hidden=\"true\"></image>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-minibar {\n    width: 750px;\n    height: 90px;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    background-color: #009ff0;\n  }\n\n  .left {\n    width: 90px;\n  }\n\n  .middle-title {\n    font-size: 30px;\n    color: #ffffff;\n    height: 36px;\n    line-height: 34px;\n  }\n\n  .right {\n    width: 80px;\n  }\n\n  .left-button {\n    width: 21px;\n    height: 36px;\n    margin-left: 40px;\n  }\n\n  .right-button {\n    width: 32px;\n    height: 32px;\n    margin-right: 16px;\n  }\n\n  .right-text {\n    width: 80px;\n    margin-right: 20px;\n    font-size: 28px;\n    text-align: left;\n    color: #fff;\n  }\n</style>\n\n<script>\n  const Navigator = weex.requireModule('navigator');\n  export default {\n    props: {\n      backgroundColor: {\n        type: String,\n        default: '#FFC900'\n      },\n      leftButton: {\n        type: String,\n        default: 'https://gw.alicdn.com/tfs/TB1x18VpwMPMeJjy1XdXXasrXXa-21-36.png'\n      },\n      textColor: {\n        type: String,\n        default: '#3D3D3D'\n      },\n      rightButton: {\n        type: String,\n        default: ''\n      },\n      title: {\n        type: String,\n        default: '标题'\n      },\n      rightText: {\n        type: String,\n        default: ''\n      },\n      useDefaultReturn: {\n        type: Boolean,\n        default: true\n      },\n      show: {\n        type: Boolean,\n        default: true\n      }\n    },\n    methods: {\n      leftButtonClicked () {\n        const self = this;\n        if (self.useDefaultReturn) {\n          Navigator.pop({}, e => {\n          });\n        }\n        self.$emit('wxcMinibarLeftButtonClicked', {});\n      },\n      rightButtonClicked () {\n        const self = this;\n        if (self.rightText || self.rightButton) {\n          self.$emit('wxcMinibarRightButtonClicked', {});\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-minibar[data-v-991a6e22] {\n  width: 10rem;\n  height: 1.2rem;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-box-pack: justify;\n  -webkit-justify-content: space-between;\n          justify-content: space-between;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  background-color: #009ff0;\n}\n.left[data-v-991a6e22] {\n  width: 1.2rem;\n}\n.middle-title[data-v-991a6e22] {\n  font-size: 0.4rem;\n  color: #ffffff;\n  height: 0.48rem;\n  line-height: 0.45333rem;\n}\n.right[data-v-991a6e22] {\n  width: 1.06667rem;\n}\n.left-button[data-v-991a6e22] {\n  width: 0.28rem;\n  height: 0.48rem;\n  margin-left: 0.53333rem;\n}\n.right-button[data-v-991a6e22] {\n  width: 0.42667rem;\n  height: 0.42667rem;\n  margin-right: 0.21333rem;\n}\n.right-text[data-v-991a6e22] {\n  width: 1.06667rem;\n  margin-right: 0.26667rem;\n  font-size: 0.37333rem;\n  text-align: left;\n  color: #fff;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-minibar/index.vue?332449fa"],"names":[],"mappings":";AAkBA;EACA,aAAA;EACA,eAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;EAAA,uCAAA;UAAA,+BAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,0BAAA;CACA;AAEA;EACA,cAAA;CACA;AAEA;EACA,kBAAA;EACA,eAAA;EACA,gBAAA;EACA,wBAAA;CACA;AAEA;EACA,kBAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;EACA,wBAAA;CACA;AAEA;EACA,kBAAA;EACA,mBAAA;EACA,yBAAA;CACA;AAEA;EACA,kBAAA;EACA,yBAAA;EACA,sBAAA;EACA,iBAAA;EACA,YAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A top navigation bar.-->\n\n<template>\n  <div class=\"wxc-minibar\" :style=\"{ backgroundColor: backgroundColor }\" v-if=\"show\">\n    <div class=\"left\" @click=\"leftButtonClicked\" aria-label=\"返回\" :accessible=\"true\">\n      <image :src=\"leftButton\" class=\"left-button\"></image>\n    </div>\n    <text class=\"middle-title\" :style=\"{ color: textColor }\">{{title}}</text>\n    <div class=\"right\" @click=\"rightButtonClicked\">\n      <text class=\"right-text\" v-if=\"rightText\" :style=\"{ color: textColor }\">{{rightText}}</text>\n      <image :src=\"rightButton\" class=\"right-button\" v-if=\"rightButton\" :aria-hidden=\"true\"></image>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-minibar {\n    width: 750px;\n    height: 90px;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: center;\n    background-color: #009ff0;\n  }\n\n  .left {\n    width: 90px;\n  }\n\n  .middle-title {\n    font-size: 30px;\n    color: #ffffff;\n    height: 36px;\n    line-height: 34px;\n  }\n\n  .right {\n    width: 80px;\n  }\n\n  .left-button {\n    width: 21px;\n    height: 36px;\n    margin-left: 40px;\n  }\n\n  .right-button {\n    width: 32px;\n    height: 32px;\n    margin-right: 16px;\n  }\n\n  .right-text {\n    width: 80px;\n    margin-right: 20px;\n    font-size: 28px;\n    text-align: left;\n    color: #fff;\n  }\n</style>\n\n<script>\n  const Navigator = weex.requireModule('navigator');\n  export default {\n    props: {\n      backgroundColor: {\n        type: String,\n        default: '#FFC900'\n      },\n      leftButton: {\n        type: String,\n        default: 'https://gw.alicdn.com/tfs/TB1x18VpwMPMeJjy1XdXXasrXXa-21-36.png'\n      },\n      textColor: {\n        type: String,\n        default: '#3D3D3D'\n      },\n      rightButton: {\n        type: String,\n        default: ''\n      },\n      title: {\n        type: String,\n        default: '标题'\n      },\n      rightText: {\n        type: String,\n        default: ''\n      },\n      useDefaultReturn: {\n        type: Boolean,\n        default: true\n      },\n      show: {\n        type: Boolean,\n        default: true\n      }\n    },\n    methods: {\n      leftButtonClicked () {\n        const self = this;\n        if (self.useDefaultReturn) {\n          Navigator.pop({}, e => {\n          });\n        }\n        self.$emit('wxcMinibarLeftButtonClicked', {});\n      },\n      rightButtonClicked () {\n        const self = this;\n        if (self.rightText || self.rightButton) {\n          self.$emit('wxcMinibarRightButtonClicked', {});\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10797,7 +10796,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-rich-text[data-v-c98168de] {\n  justify-content: flex-start;\n  align-items: center;\n  flex-wrap: wrap;\n  flex-direction: row;\n  flex-shrink: 1;\n}\n.default-text[data-v-c98168de] {\n  color: #A5A5A5;\n  font-size: 24px;\n  line-height: 30px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/index.vue?016a3c23"],"names":[],"mappings":";AAmCA;EACA,4BAAA;EACA,oBAAA;EACA,gBAAA;EACA,oBAAA;EACA,eAAA;CACA;AAEA;EACA,eAAA;EACA,gBAAA;EACA,kBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <div>\n    <div class=\"wxc-rich-text\" v-if=\"isNotEmptyArray\">\n      <div v-for=\"v in configList\">\n        <wxc-rich-text-text v-if=\"v.type=='text' && v.value\"\n                            :text-value=\"v.value\"\n                            :text-style=\"v.style\"\n                            :has-text-margin=\"hasTextMargin\"\n                            :text-theme=\"v.theme\"></wxc-rich-text-text>\n\n        <wxc-rich-text-link v-if=\"v.type=='link' && v.href && v.value\"\n                            :link-value=\"v.value\"\n                            :link-href=\"v.href\"\n                            :link-style=\"v.style\"\n                            :has-text-margin=\"hasTextMargin\"\n                            :link-theme=\"v.theme\"></wxc-rich-text-link>\n\n        <wxc-rich-text-icon v-if=\"v.type=='icon' && v.src\"\n                            :icon-src=\"v.src\"\n                            :icon-style=\"v.style\"></wxc-rich-text-icon>\n\n        <wxc-rich-text-tag v-if=\"v.type=='tag' && v.value\"\n                           :tag-value=\"v.value\"\n                           :tag-theme=\"v.theme\"\n                           :tag-style=\"v.style\"></wxc-rich-text-tag>\n      </div>\n    </div>\n    <text class=\"default-text\" v-if=\"isString\">{{configList}}</text>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-rich-text {\n    justify-content: flex-start;\n    align-items: center;\n    flex-wrap: wrap;\n    flex-direction: row;\n    flex-shrink: 1;\n  }\n\n  .default-text {\n    color: #A5A5A5;\n    font-size: 24px;\n    line-height: 30px;\n  }\n</style>\n\n<script>\n  import Utils from '../utils';\n\n  export default {\n    components: {\n      WxcRichTextText: require('./wxc-rich-text-text.vue'),\n      WxcRichTextLink: require('./wxc-rich-text-link.vue'),\n      WxcRichTextIcon: require('./wxc-rich-text-icon.vue'),\n      WxcRichTextTag: require('./wxc-rich-text-tag.vue')\n    },\n    props: {\n      configList: {\n        type: [Array, String],\n        default: function () {\n          return []\n        }\n      },\n      hasTextMargin: {\n        type: Boolean,\n        default: true\n      }\n    },\n    data: () => ({}),\n    computed: {\n      isNotEmptyArray () {\n        return Utils.isNonEmptyArray(this.configList);\n      },\n      isString () {\n        return Utils.isString(this.configList);\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-rich-text[data-v-c98168de] {\n  -webkit-box-pack: start;\n  -webkit-justify-content: flex-start;\n          justify-content: flex-start;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n          align-items: center;\n  -webkit-flex-wrap: wrap;\n          flex-wrap: wrap;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n          flex-direction: row;\n  -webkit-flex-shrink: 1;\n          flex-shrink: 1;\n}\n.default-text[data-v-c98168de] {\n  color: #A5A5A5;\n  font-size: 0.32rem;\n  line-height: 0.4rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/index.vue?016a3c23"],"names":[],"mappings":";AAmCA;EACA,wBAAA;EAAA,oCAAA;UAAA,4BAAA;EACA,0BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,wBAAA;UAAA,gBAAA;EACA,+BAAA;EAAA,8BAAA;EAAA,4BAAA;UAAA,oBAAA;EACA,uBAAA;UAAA,eAAA;CACA;AAEA;EACA,eAAA;EACA,mBAAA;EACA,oBAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <div>\n    <div class=\"wxc-rich-text\" v-if=\"isNotEmptyArray\">\n      <div v-for=\"v in configList\">\n        <wxc-rich-text-text v-if=\"v.type=='text' && v.value\"\n                            :text-value=\"v.value\"\n                            :text-style=\"v.style\"\n                            :has-text-margin=\"hasTextMargin\"\n                            :text-theme=\"v.theme\"></wxc-rich-text-text>\n\n        <wxc-rich-text-link v-if=\"v.type=='link' && v.href && v.value\"\n                            :link-value=\"v.value\"\n                            :link-href=\"v.href\"\n                            :link-style=\"v.style\"\n                            :has-text-margin=\"hasTextMargin\"\n                            :link-theme=\"v.theme\"></wxc-rich-text-link>\n\n        <wxc-rich-text-icon v-if=\"v.type=='icon' && v.src\"\n                            :icon-src=\"v.src\"\n                            :icon-style=\"v.style\"></wxc-rich-text-icon>\n\n        <wxc-rich-text-tag v-if=\"v.type=='tag' && v.value\"\n                           :tag-value=\"v.value\"\n                           :tag-theme=\"v.theme\"\n                           :tag-style=\"v.style\"></wxc-rich-text-tag>\n      </div>\n    </div>\n    <text class=\"default-text\" v-if=\"isString\">{{configList}}</text>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-rich-text {\n    justify-content: flex-start;\n    align-items: center;\n    flex-wrap: wrap;\n    flex-direction: row;\n    flex-shrink: 1;\n  }\n\n  .default-text {\n    color: #A5A5A5;\n    font-size: 24px;\n    line-height: 30px;\n  }\n</style>\n\n<script>\n  import Utils from '../utils';\n\n  export default {\n    components: {\n      WxcRichTextText: require('./wxc-rich-text-text.vue'),\n      WxcRichTextLink: require('./wxc-rich-text-link.vue'),\n      WxcRichTextIcon: require('./wxc-rich-text-icon.vue'),\n      WxcRichTextTag: require('./wxc-rich-text-tag.vue')\n    },\n    props: {\n      configList: {\n        type: [Array, String],\n        default: function () {\n          return []\n        }\n      },\n      hasTextMargin: {\n        type: Boolean,\n        default: true\n      }\n    },\n    data: () => ({}),\n    computed: {\n      isNotEmptyArray () {\n        return Utils.isNonEmptyArray(this.configList);\n      },\n      isString () {\n        return Utils.isString(this.configList);\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10811,7 +10810,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-popup[data-v-ca872182] {\n  position: fixed;\n  width: 750px;\n}\n.top[data-v-ca872182] {\n  left: 0;\n  right: 0;\n}\n.bottom[data-v-ca872182] {\n  left: 0;\n  right: 0;\n}\n.left[data-v-ca872182] {\n  bottom: 0;\n  top: 0;\n}\n.right[data-v-ca872182] {\n  bottom: 0;\n  top: 0;\n}\n\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-popup/index.vue?4bd8e7aa"],"names":[],"mappings":";AA0BA;EACA,gBAAA;EACA,aAAA;CACA;AAEA;EACA,QAAA;EACA,SAAA;CACA;AAEA;EACA,QAAA;EACA,SAAA;CACA;AAEA;EACA,UAAA;EACA,OAAA;CACA;AAEA;EACA,UAAA;EACA,OAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A popup box with customized contents.-->\n\n<template>\n  <div>\n    <div @touchend=\"handleTouchEnd\">\n      <wxc-overlay :show=\"haveOverlay && isOverShow\"\n                   v-if=\"show\"\n                   ref=\"overlay\"\n                   v-bind=\"overlayCfg\"\n                   @wxcOverlayBodyClicking=\"wxcOverlayBodyClicking\"></wxc-overlay>\n    </div>\n    <div ref=\"wxc-popup\"\n         v-if=\"show\"\n         :height=\"_height\"\n         :hack=\"isNeedShow\"\n         @click=\"()=>{}\"\n         :class=\"['wxc-popup', pos]\"\n         :style=\"padStyle\">\n      <slot></slot>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-popup {\n    position: fixed;\n    width: 750px;\n  }\n\n  .top {\n    left: 0;\n    right: 0;\n  }\n\n  .bottom {\n    left: 0;\n    right: 0;\n  }\n\n  .left {\n    bottom: 0;\n    top: 0;\n  }\n\n  .right {\n    bottom: 0;\n    top: 0;\n  }\n\n</style>\n\n<script>\n  const animation = weex.requireModule('animation');\n  const { platform } = weex.config.env;\n  const isWeb = typeof (window) === 'object' && platform.toLowerCase() === 'web';\n  import WxcOverlay from '../wxc-overlay';\n\n  export default {\n    components: { WxcOverlay },\n    props: {\n      show: {\n        type: Boolean,\n        default: false\n      },\n      pos: {\n        type: String,\n        default: 'bottom'\n      },\n      popupColor: {\n        type: String,\n        default: '#FFFFFF'\n      },\n      overlayCfg: {\n        type: Object,\n        default: () => ({\n          hasAnimation: true,\n          timingFunction: ['ease-in', 'ease-out'],\n          duration: 300,\n          opacity: 0.6\n        })\n      },\n      height: {\n        type: [Number, String],\n        default: 840\n      },\n      standOut: {\n        type: [Number, String],\n        default: 0\n      },\n      width: {\n        type: [Number, String],\n        default: 750\n      },\n      animation: {\n        type: Object,\n        default: () => ({\n          timingFunction: 'ease-in'\n        })\n      }\n    },\n    data: () => ({\n      haveOverlay: true,\n      isOverShow: true\n    }),\n    computed: {\n      isNeedShow () {\n        setTimeout(() => {\n          this.appearPopup(this.show);\n        }, 50)\n        return this.show;\n      },\n      _height () {\n        this.appearPopup(this.show, 150);\n        return this.height;\n      },\n      transformValue () {\n        return this.getTransform(this.pos, this.width, this.height, true);\n      },\n      padStyle () {\n        const { pos, width, height, popupColor } = this;\n        let style = {\n          width: `${width}px`,\n          backgroundColor: popupColor\n        };\n        pos === 'top' && (style = {\n          ...style,\n          top: `${-height}px`,\n          height: `${height}px`\n        });\n        pos === 'bottom' && (style = {\n          ...style,\n          bottom: `${-height}px`,\n          height: `${height}px`\n        });\n        pos === 'left' && (style = {\n          ...style,\n          left: `${-width}px`\n        });\n        pos === 'right' && (style = {\n          ...style,\n          right: `${-width}px`\n        });\n        return style;\n      }\n    },\n    methods: {\n      handleTouchEnd (e) {\n        // 在支付宝上面有点击穿透问题\n        const { platform } = weex.config.env;\n        platform === 'Web' && e.preventDefault && e.preventDefault();\n      },\n      hide () {\n        this.appearPopup(false);\n        this.$refs.overlay.appearOverlay(false);\n      },\n      wxcOverlayBodyClicking () {\n        this.isShow && this.appearPopup(false);\n      },\n      appearPopup (bool, duration = 300) {\n        this.isShow = bool;\n        const popupEl = this.$refs['wxc-popup'];\n        if (!popupEl) {\n          return;\n        }\n        animation.transition(popupEl, {\n          styles: {\n            transform: this.getTransform(this.pos, this.width, this.height, !bool)\n          },\n          duration,\n          delay: 0,\n          ...this.animation\n        }, () => {\n          if (!bool) {\n            this.$emit('wxcPopupOverlayClicked', { pos: this.pos });\n          }\n        });\n      },\n      getTransform (pos, width, height, bool) {\n        let _size = pos === 'top' || pos === 'bottom' ? height : width;\n        let _transform;\n        if (isWeb) {\n          _size -= this.standOut;\n        }\n        bool && (_size = 0);\n        switch (pos) {\n          case 'top':\n            _transform = `translateY(${_size}px)`;\n            break;\n          case 'bottom':\n            _transform = `translateY(-${_size}px)`;\n            break;\n          case 'left':\n            _transform = `translateX(${_size}px)`;\n            break;\n          case 'right':\n            _transform = `translateX(-${_size}px)`;\n            break;\n        }\n        return _transform;\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-popup[data-v-ca872182] {\n  position: fixed;\n  width: 10rem;\n}\n.top[data-v-ca872182] {\n  left: 0;\n  right: 0;\n}\n.bottom[data-v-ca872182] {\n  left: 0;\n  right: 0;\n}\n.left[data-v-ca872182] {\n  bottom: 0;\n  top: 0;\n}\n.right[data-v-ca872182] {\n  bottom: 0;\n  top: 0;\n}\n\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-popup/index.vue?4bd8e7aa"],"names":[],"mappings":";AA0BA;EACA,gBAAA;EACA,aAAA;CACA;AAEA;EACA,QAAA;EACA,SAAA;CACA;AAEA;EACA,QAAA;EACA,SAAA;CACA;AAEA;EACA,UAAA;EACA,OAAA;CACA;AAEA;EACA,UAAA;EACA,OAAA;CACA","file":"index.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 16/10/25. -->\n<!--A popup box with customized contents.-->\n\n<template>\n  <div>\n    <div @touchend=\"handleTouchEnd\">\n      <wxc-overlay :show=\"haveOverlay && isOverShow\"\n                   v-if=\"show\"\n                   ref=\"overlay\"\n                   v-bind=\"overlayCfg\"\n                   @wxcOverlayBodyClicking=\"wxcOverlayBodyClicking\"></wxc-overlay>\n    </div>\n    <div ref=\"wxc-popup\"\n         v-if=\"show\"\n         :height=\"_height\"\n         :hack=\"isNeedShow\"\n         @click=\"()=>{}\"\n         :class=\"['wxc-popup', pos]\"\n         :style=\"padStyle\">\n      <slot></slot>\n    </div>\n  </div>\n</template>\n\n<style scoped>\n  .wxc-popup {\n    position: fixed;\n    width: 750px;\n  }\n\n  .top {\n    left: 0;\n    right: 0;\n  }\n\n  .bottom {\n    left: 0;\n    right: 0;\n  }\n\n  .left {\n    bottom: 0;\n    top: 0;\n  }\n\n  .right {\n    bottom: 0;\n    top: 0;\n  }\n\n</style>\n\n<script>\n  const animation = weex.requireModule('animation');\n  const { platform } = weex.config.env;\n  const isWeb = typeof (window) === 'object' && platform.toLowerCase() === 'web';\n  import WxcOverlay from '../wxc-overlay';\n\n  export default {\n    components: { WxcOverlay },\n    props: {\n      show: {\n        type: Boolean,\n        default: false\n      },\n      pos: {\n        type: String,\n        default: 'bottom'\n      },\n      popupColor: {\n        type: String,\n        default: '#FFFFFF'\n      },\n      overlayCfg: {\n        type: Object,\n        default: () => ({\n          hasAnimation: true,\n          timingFunction: ['ease-in', 'ease-out'],\n          duration: 300,\n          opacity: 0.6\n        })\n      },\n      height: {\n        type: [Number, String],\n        default: 840\n      },\n      standOut: {\n        type: [Number, String],\n        default: 0\n      },\n      width: {\n        type: [Number, String],\n        default: 750\n      },\n      animation: {\n        type: Object,\n        default: () => ({\n          timingFunction: 'ease-in'\n        })\n      }\n    },\n    data: () => ({\n      haveOverlay: true,\n      isOverShow: true\n    }),\n    computed: {\n      isNeedShow () {\n        setTimeout(() => {\n          this.appearPopup(this.show);\n        }, 50)\n        return this.show;\n      },\n      _height () {\n        this.appearPopup(this.show, 150);\n        return this.height;\n      },\n      transformValue () {\n        return this.getTransform(this.pos, this.width, this.height, true);\n      },\n      padStyle () {\n        const { pos, width, height, popupColor } = this;\n        let style = {\n          width: `${width}px`,\n          backgroundColor: popupColor\n        };\n        pos === 'top' && (style = {\n          ...style,\n          top: `${-height}px`,\n          height: `${height}px`\n        });\n        pos === 'bottom' && (style = {\n          ...style,\n          bottom: `${-height}px`,\n          height: `${height}px`\n        });\n        pos === 'left' && (style = {\n          ...style,\n          left: `${-width}px`\n        });\n        pos === 'right' && (style = {\n          ...style,\n          right: `${-width}px`\n        });\n        return style;\n      }\n    },\n    methods: {\n      handleTouchEnd (e) {\n        // 在支付宝上面有点击穿透问题\n        const { platform } = weex.config.env;\n        platform === 'Web' && e.preventDefault && e.preventDefault();\n      },\n      hide () {\n        this.appearPopup(false);\n        this.$refs.overlay.appearOverlay(false);\n      },\n      wxcOverlayBodyClicking () {\n        this.isShow && this.appearPopup(false);\n      },\n      appearPopup (bool, duration = 300) {\n        this.isShow = bool;\n        const popupEl = this.$refs['wxc-popup'];\n        if (!popupEl) {\n          return;\n        }\n        animation.transition(popupEl, {\n          styles: {\n            transform: this.getTransform(this.pos, this.width, this.height, !bool)\n          },\n          duration,\n          delay: 0,\n          ...this.animation\n        }, () => {\n          if (!bool) {\n            this.$emit('wxcPopupOverlayClicked', { pos: this.pos });\n          }\n        });\n      },\n      getTransform (pos, width, height, bool) {\n        let _size = pos === 'top' || pos === 'bottom' ? height : width;\n        let _transform;\n        if (isWeb) {\n          _size -= this.standOut;\n        }\n        bool && (_size = 0);\n        switch (pos) {\n          case 'top':\n            _transform = `translateY(${_size}px)`;\n            break;\n          case 'bottom':\n            _transform = `translateY(-${_size}px)`;\n            break;\n          case 'left':\n            _transform = `translateX(${_size}px)`;\n            break;\n          case 'right':\n            _transform = `translateX(-${_size}px)`;\n            break;\n        }\n        return _transform;\n      }\n    }\n  }\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10825,7 +10824,7 @@ exports = module.exports = __webpack_require__(1)(true);
 
 
 // module
-exports.push([module.i, "\n.wxc-image[data-v-fb43e778] {\n  width: 90px;\n  height: 24px;\n  margin-right: 6px;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-icon.vue?ec8d25a2"],"names":[],"mappings":";AAaA;EACA,YAAA;EACA,aAAA;EACA,kBAAA;CACA","file":"wxc-rich-text-icon.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <image class=\"wxc-image\"\n         :src=\"iconSrc\"\n         :aria-hidden=\"true\"\n         @load=\"onLoad\"\n         :style=\"{ width: computedStyle.width, height: computedStyle.height }\">\n  </image>\n</template>\n\n<style scoped>\n  .wxc-image {\n    width: 90px;\n    height: 24px;\n    margin-right: 6px;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      iconSrc: {\n        type: String,\n        default: ''\n      },\n      iconStyle: {\n        type: Object,\n        default: () => ({\n          height: 24\n        })\n      }\n    },\n    data: () => ({\n      width: 90\n    }),\n    computed: {\n      computedStyle () {\n        const { width, iconStyle } = this;\n        if (iconStyle && iconStyle.width && iconStyle.height) {\n          return {\n            width: `${iconStyle.width}px`,\n            height: `${iconStyle.height}px`\n          }\n        } else {\n          return {\n            width: `${width}px`,\n            height: `${iconStyle.height}px`\n          }\n        }\n      }\n    },\n    methods: {\n      onLoad (e) {\n        if (e.success && e.size && e.size.naturalWidth > 0) {\n          const width = e.size.naturalWidth;\n          const height = e.size.naturalHeight;\n          this.width = width * (this.iconStyle.height / height);\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.wxc-image[data-v-fb43e778] {\n  width: 1.2rem;\n  height: 0.32rem;\n  margin-right: 0.08rem;\n}\n", "", {"version":3,"sources":["/Users/Tw93/www/github/weex-ui/packages/wxc-rich-text/wxc-rich-text-icon.vue?ec8d25a2"],"names":[],"mappings":";AAaA;EACA,cAAA;EACA,gBAAA;EACA,sBAAA;CACA","file":"wxc-rich-text-icon.vue","sourcesContent":["<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->\n<!-- Created by Tw93 on 17/07/28. -->\n\n<template>\n  <image class=\"wxc-image\"\n         :src=\"iconSrc\"\n         :aria-hidden=\"true\"\n         @load=\"onLoad\"\n         :style=\"{ width: computedStyle.width, height: computedStyle.height }\">\n  </image>\n</template>\n\n<style scoped>\n  .wxc-image {\n    width: 90px;\n    height: 24px;\n    margin-right: 6px;\n  }\n</style>\n\n<script>\n  export default {\n    props: {\n      iconSrc: {\n        type: String,\n        default: ''\n      },\n      iconStyle: {\n        type: Object,\n        default: () => ({\n          height: 24\n        })\n      }\n    },\n    data: () => ({\n      width: 90\n    }),\n    computed: {\n      computedStyle () {\n        const { width, iconStyle } = this;\n        if (iconStyle && iconStyle.width && iconStyle.height) {\n          return {\n            width: `${iconStyle.width}px`,\n            height: `${iconStyle.height}px`\n          }\n        } else {\n          return {\n            width: `${width}px`,\n            height: `${iconStyle.height}px`\n          }\n        }\n      }\n    },\n    methods: {\n      onLoad (e) {\n        if (e.success && e.size && e.size.naturalWidth > 0) {\n          const width = e.size.naturalWidth;\n          const height = e.size.naturalHeight;\n          this.width = width * (this.iconStyle.height / height);\n        }\n      }\n    }\n  };\n</script>\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -12403,13 +12402,17 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [(_vm.show) ? _c('image', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.loadingStyle)),
+  return _c('div', [(_vm.show) ? _c('figure', {
+    staticClass: " weex-el weex-img",
+    staticStyle: {
+      "background-size": "contain"
+    },
+    style: (_vm._px2rem(_vm.loadingStyle, 75)),
     attrs: {
       "src": _vm.PART,
       "resize": "contain",
-      "quality": "original"
+      "quality": "original",
+      "data-img-src": _vm.PART
     }
   }) : _vm._e()])
 },staticRenderFns: []}
@@ -12427,17 +12430,16 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wxc-progress",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.runWayStyle)),
+    staticClass: "wxc-progress weex-ct",
+    style: (_vm._px2rem(_vm.runWayStyle, 75)),
     attrs: {
       "accessible": true,
       "aria-label": ("进度为百分之" + _vm.value)
     }
   }, [_c('div', {
-    staticClass: "progress",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.progressStyle))
+    staticClass: "progress weex-ct",
+    style: (_vm._px2rem(_vm.progressStyle, 75)),
+    attrs: {}
   })])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -12454,14 +12456,23 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: " weex-ct",
+    attrs: {
+      "data-evt-click": ""
+    },
     on: {
-      "click": _vm.onLinkClick
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.onLinkClick($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.onLinkClick($event)
+      }
     }
   }, [_c('wxc-rich-text-text', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
       "text-value": _vm.linkValue,
       "has-text-margin": _vm.hasTextMargin,
@@ -12484,40 +12495,68 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.containerS))
+    staticClass: " weex-ct",
+    style: (_vm._px2rem(_vm.containerS, 75)),
+    attrs: {}
   }, [_c('div', {
     ref: ("sliderCtn_" + _vm.sliderId),
-    staticClass: "slider-content",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      width: _vm.cardWidth + 'px',
-      height: _vm.cardS.height + 'px',
-      transform: ("translateX(-" + (_vm.currentIndex * (_vm.cardS.width + _vm.cardS.spacing)) + "px)")
-    })),
+    staticClass: "slider-content weex-ct",
+    style: ({
+      width: _vm._px2rem(_vm.cardWidth + 'px', 75),
+      height: _vm._px2rem(_vm.cardS.height + 'px', 75),
+      transform: _vm._px2rem(("translateX(-" + (_vm.currentIndex * (_vm.cardS.width + _vm.cardS.spacing)) + "px)"), 75)
+    }),
     attrs: {
-      "prevent-move-event": true
+      "prevent-move-event": true,
+      "data-evt-panstart": "",
+      "data-evt-panmove": "",
+      "data-evt-panend": "",
+      "data-evt-horizontalpan": ""
     },
     on: {
-      "panstart": _vm.onTouchStart,
-      "panmove": _vm.onTouchMove,
-      "panend": _vm.onTouchEnd,
+      "panstart": function($event) {
+        $event.stopPropagation();
+        _vm.onTouchStart($event)
+      },
+      "panmove": function($event) {
+        $event.stopPropagation();
+        _vm.onTouchMove($event)
+      },
+      "panend": function($event) {
+        $event.stopPropagation();
+        _vm.onTouchEnd($event)
+      },
+      "horizontalpan": _vm.onEpTouchStart
+    },
+    nativeOn: {
+      "panstart": function($event) {
+        $event.stopPropagation();
+        _vm.onTouchStart($event)
+      },
+      "panmove": function($event) {
+        $event.stopPropagation();
+        _vm.onTouchMove($event)
+      },
+      "panend": function($event) {
+        $event.stopPropagation();
+        _vm.onTouchEnd($event)
+      },
       "horizontalpan": _vm.onEpTouchStart
     }
   }, _vm._l((_vm.cardList), function(v, index) {
     return _c('div', {
       ref: ("card" + index + "_" + _vm.sliderId),
       refInFor: true,
-      staticClass: "slider",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
-        transform: ("scale(" + (index===_vm.currentIndex ? 1 : _vm.cardS.scale) + ")"),
-        left: ((index * (_vm.cardS.width+_vm.cardS.spacing)) + "px"),
-        marginLeft: (((_vm.containerS.width - _vm.cardS.width) / 2) + "px"),
-        width: _vm.cardS.width + 'px',
-        height: _vm.cardS.height + 'px'
-      }))
-    }, [_vm._t(("card" + index + "_" + _vm.sliderId))], 2)
+      staticClass: "slider weex-ct",
+      style: ({
+        transform: _vm._px2rem(("scale(" + (index === _vm.currentIndex ? 1 : _vm.cardS.scale) + ")"), 75),
+        left: _vm._px2rem(((index * (_vm.cardS.width + _vm.cardS.spacing)) + "px"), 75),
+        marginLeft: _vm._px2rem((((_vm.containerS.width - _vm.cardS.width) / 2) + "px"), 75),
+        width: _vm._px2rem(_vm.cardS.width + 'px', 75),
+        height: _vm._px2rem(_vm.cardS.height + 'px', 75)
+      }),
+      attrs: {}
+    }, [_vm._t(("card" + index + "_" + _vm.sliderId), null, {})], 2)
   }))])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -12535,14 +12574,23 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [(_vm.show) ? _c('div', {
     ref: "wxc-overlay",
-    staticClass: "wxc-overlay",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.overlayStyle)),
+    staticClass: "wxc-overlay weex-ct",
+    style: (_vm._px2rem(_vm.overlayStyle, 75)),
     attrs: {
-      "hack": _vm.shouldShow
+      "hack": _vm.shouldShow,
+      "data-evt-click": ""
     },
     on: {
-      "click": _vm.overlayClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.overlayClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.overlayClicked($event)
+      }
     }
   }) : _vm._e()])
 },staticRenderFns: []}
@@ -12560,51 +12608,120 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wxc-slider-bar",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "wxc-slider-bar weex-ct",
+    attrs: {}
   }, [_c('div', {
     ref: "bar-container",
-    staticClass: "slider-bar-container",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.containerStyle))
+    staticClass: "slider-bar-container weex-ct",
+    style: (_vm._px2rem(_vm.containerStyle, 75)),
+    attrs: {}
   }, [_c('div', {
-    staticClass: "range-bar",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.rangeBarStyle))
+    staticClass: "range-bar weex-ct",
+    style: (_vm._px2rem(_vm.rangeBarStyle, 75)),
+    attrs: {}
   }, [_c('div', {
     ref: "value-bar",
-    staticClass: "value-bar",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.valueBarStyle))
+    staticClass: "value-bar weex-ct",
+    style: (_vm._px2rem(_vm.valueBarStyle, 75)),
+    attrs: {}
   }, [_c('div')])]), _vm._v(" "), _c('div', {
     ref: "slide-block-1",
-    staticClass: "slide-block",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.blockStyle1)),
+    staticClass: "slide-block weex-ct",
+    style: (_vm._px2rem(_vm.blockStyle1, 75)),
     attrs: {
-      "prevent-move-event": _vm.preventMoveEvent
+      "prevent-move-event": _vm.preventMoveEvent,
+      "data-evt-touchstart": "",
+      "data-evt-panstart": "",
+      "data-evt-panmove": "",
+      "data-evt-touchend": "",
+      "data-evt-horizontalpan": ""
     },
     on: {
-      "touchstart": _vm._weexStartHandler1,
-      "panstart": _vm._webStartHandler,
-      "panmove": _vm._webMoveHandler1,
-      "touchend": _vm._weexEndHandler,
+      "touchstart": function($event) {
+        $event.stopPropagation();
+        _vm._weexStartHandler1($event)
+      },
+      "panstart": function($event) {
+        $event.stopPropagation();
+        _vm._webStartHandler($event)
+      },
+      "panmove": function($event) {
+        $event.stopPropagation();
+        _vm._webMoveHandler1($event)
+      },
+      "touchend": function($event) {
+        $event.stopPropagation();
+        _vm._weexEndHandler($event)
+      },
+      "horizontalpan": _vm.dispatchPan
+    },
+    nativeOn: {
+      "touchstart": function($event) {
+        $event.stopPropagation();
+        _vm._weexStartHandler1($event)
+      },
+      "panstart": function($event) {
+        $event.stopPropagation();
+        _vm._webStartHandler($event)
+      },
+      "panmove": function($event) {
+        $event.stopPropagation();
+        _vm._webMoveHandler1($event)
+      },
+      "touchend": function($event) {
+        $event.stopPropagation();
+        _vm._weexEndHandler($event)
+      },
       "horizontalpan": _vm.dispatchPan
     }
   }, [_c('div')]), _vm._v(" "), (_vm.range) ? _c('div', {
     ref: "slide-block-2",
-    staticClass: "slide-block",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.blockStyle2)),
+    staticClass: "slide-block weex-ct",
+    style: (_vm._px2rem(_vm.blockStyle2, 75)),
     attrs: {
-      "prevent-move-event": _vm.preventMoveEvent
+      "prevent-move-event": _vm.preventMoveEvent,
+      "data-evt-touchstart": "",
+      "data-evt-panstart": "",
+      "data-evt-panmove": "",
+      "data-evt-touchend": "",
+      "data-evt-horizontalpan": ""
     },
     on: {
-      "touchstart": _vm._weexStartHandler2,
-      "panstart": _vm._webStartHandler,
-      "panmove": _vm._webMoveHandler2,
-      "touchend": _vm._weexEndHandler,
+      "touchstart": function($event) {
+        $event.stopPropagation();
+        _vm._weexStartHandler2($event)
+      },
+      "panstart": function($event) {
+        $event.stopPropagation();
+        _vm._webStartHandler($event)
+      },
+      "panmove": function($event) {
+        $event.stopPropagation();
+        _vm._webMoveHandler2($event)
+      },
+      "touchend": function($event) {
+        $event.stopPropagation();
+        _vm._weexEndHandler($event)
+      },
+      "horizontalpan": _vm.dispatchPan
+    },
+    nativeOn: {
+      "touchstart": function($event) {
+        $event.stopPropagation();
+        _vm._weexStartHandler2($event)
+      },
+      "panstart": function($event) {
+        $event.stopPropagation();
+        _vm._webStartHandler($event)
+      },
+      "panmove": function($event) {
+        $event.stopPropagation();
+        _vm._webMoveHandler2($event)
+      },
+      "touchend": function($event) {
+        $event.stopPropagation();
+        _vm._weexEndHandler($event)
+      },
       "horizontalpan": _vm.dispatchPan
     }
   }, [_c('div')]) : _vm._e()])])
@@ -12624,10 +12741,9 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     ref: "wrapper",
-    staticClass: "slide-nav",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._t("default")], 2)
+    staticClass: "slide-nav weex-ct",
+    attrs: {}
+  }, [_vm._t("default", null, {})], 2)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -12643,8 +12759,6 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('wxc-mask', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
       "width": _vm.width,
       "height": _vm.height,
@@ -12652,41 +12766,52 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "mask-bg-color": "transparent",
       "overlay-opacity": "0.8",
       "show": _vm.show,
-      "show-close": false
+      "show-close": false,
+      "data-evt-wxcMaskSetHidden": ""
     },
     on: {
       "wxcMaskSetHidden": _vm.maskOverlayClick
+    },
+    nativeOn: {
+      "wxcMaskSetHidden": _vm.maskOverlayClick
     }
   }, [(_vm.show) ? _c('slider', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      height: _vm.height + 'px'
-    })),
+    style: ({
+      height: _vm._px2rem(_vm.height + 'px', 75)
+    }),
     attrs: {
       "auto-play": "false"
     }
   }, [_vm._l((_vm.imageList), function(v, index) {
     return _c('div', {
       key: index,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
-        height: _vm.height + 'px'
-      }))
-    }, [_c('image', {
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
-        height: _vm.height + 'px',
-        width: _vm.width + 'px'
-      })),
+      staticClass: " weex-ct",
+      style: ({
+        height: _vm._px2rem(_vm.height + 'px', 75)
+      }),
+      attrs: {}
+    }, [_c('figure', {
+      staticClass: " weex-el weex-img",
+      staticStyle: {
+        "background-size": "cover"
+      },
+      style: ({
+        height: _vm._px2rem(_vm.height + 'px', 75),
+        width: _vm._px2rem(_vm.width + 'px', 75)
+      }),
       attrs: {
         "resize": "cover",
-        "src": v.src
+        "src": v.src,
+        "data-img-src": v.src
       }
     })])
   }), _vm._v(" "), _c('indicator', {
     staticClass: "indicator",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.indicatorStyle))
+    style: ([_vm._px2rem(_vm.indicatorStyle, 75), {
+      itemSelectedColor: _vm.indicatorStyle[_vm.item - _vm.selected - _vm.color],
+      itemSize: _vm.indicatorStyle[_vm.item - _vm.size]
+    }]),
+    attrs: {}
   })], 2) : _vm._e()], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -12703,26 +12828,37 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "grid-option",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.cWrapperStyle)),
+    staticClass: "grid-option weex-ct",
+    style: (_vm._px2rem(_vm.cWrapperStyle, 75)),
     attrs: {
       "accessible": true,
-      "aria-label": (_vm.title + "," + (_vm.checked?'已选中':'未选中'))
+      "aria-label": (_vm.title + "," + (_vm.checked?'已选中':'未选中')),
+      "data-evt-click": ""
     },
     on: {
-      "click": _vm.onClick
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.onClick($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.onClick($event)
+      }
     }
-  }, [(_vm.title) ? _c('text', {
-    staticClass: "text-title",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.cTitleStyle))
-  }, [_vm._v(_vm._s(_vm.title))]) : _vm._e(), _vm._v(" "), (_vm.checked && _vm.icon) ? _c('image', {
-    staticClass: "image-checked",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  }, [(_vm.title) ? _c('p', {
+    staticClass: "text-title weex-el weex-text",
+    style: (_vm._processExclusiveStyle(_vm.cTitleStyle, 75, 'text')),
+    attrs: {}
+  }, [_vm._v(_vm._s(_vm.title))]) : _vm._e(), _vm._v(" "), (_vm.checked && _vm.icon) ? _c('figure', {
+    staticClass: "image-checked weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
-      "src": _vm.icon
+      "src": _vm.icon,
+      "data-img-src": _vm.icon
     }
   }) : _vm._e()])
 },staticRenderFns: []}
@@ -12740,47 +12876,63 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return (_vm.show) ? _c('div', {
-    staticClass: "wrap",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.wrapStyle))
+    staticClass: "wrap weex-ct",
+    style: (_vm._px2rem(_vm.wrapStyle, 75)),
+    attrs: {}
   }, [_c('div', {
-    staticClass: "wxc-result",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      paddingTop: _vm.setPaddingTop
-    }))
-  }, [_c('image', {
-    staticClass: "result-image",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "wxc-result weex-ct",
+    style: ({
+      paddingTop: _vm._px2rem(_vm.setPaddingTop, 75)
+    }),
+    attrs: {}
+  }, [_c('figure', {
+    staticClass: "result-image weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
       "aria-hidden": true,
-      "src": _vm.resultType.pic
+      "src": _vm.resultType.pic,
+      "data-img-src": _vm.resultType.pic
     }
   }), _vm._v(" "), (_vm.resultType.content) ? _c('div', {
-    staticClass: "result-content",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_c('text', {
-    staticClass: "content-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._v(_vm._s(_vm.resultType.content))]), _vm._v(" "), (_vm.resultType.desc) ? _c('text', {
-    staticClass: "content-text content-desc",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "result-content weex-ct",
+    attrs: {}
+  }, [_c('p', {
+    staticClass: "content-text weex-el weex-text",
+    attrs: {}
+  }, [_vm._v(_vm._s(_vm.resultType.content))]), _vm._v(" "), (_vm.resultType.desc) ? _c('p', {
+    staticClass: "content-text content-desc weex-el weex-text",
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.resultType.desc))]) : _vm._e()]) : _vm._e(), _vm._v(" "), (_vm.resultType.button) ? _c('div', {
-    staticClass: "result-button",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "result-button weex-ct",
+    attrs: {
+      "data-evt-touchend": "",
+      "data-evt-click": ""
+    },
     on: {
-      "touchend": _vm.handleTouchEnd,
-      "click": _vm.onClick
+      "touchend": function($event) {
+        $event.stopPropagation();
+        _vm.handleTouchEnd($event)
+      },
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.onClick($event)
+      }
+    },
+    nativeOn: {
+      "touchend": function($event) {
+        $event.stopPropagation();
+        _vm.handleTouchEnd($event)
+      },
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.onClick($event)
+      }
     }
-  }, [_c('text', {
-    staticClass: "button-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+  }, [_c('p', {
+    staticClass: "button-text weex-el weex-text",
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.resultType.button))])]) : _vm._e()])]) : _vm._e()
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -12797,39 +12949,47 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
+    staticClass: " weex-ct",
     class: ['wxc-cell', _vm.hasTopBorder && 'cell-top-border', _vm.hasBottomBorder && 'cell-bottom-border', _vm.hasMargin && 'cell-margin', _vm.hasVerticalIndent && 'cell-indent', _vm.desc && 'has-desc'],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.cellStyle)),
+    style: (_vm._px2rem(_vm.cellStyle, 75)),
     attrs: {
       "accessible": _vm.autoAccessible,
-      "aria-label": (_vm.label + "," + _vm.title + "," + _vm.desc)
+      "aria-label": (_vm.label + "," + _vm.title + "," + _vm.desc),
+      "data-evt-click": ""
     },
     on: {
-      "click": _vm.cellClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.cellClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.cellClicked($event)
+      }
     }
-  }, [_vm._t("label", [(_vm.label) ? _c('div', [_c('text', {
-    staticClass: "cell-label-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._v(_vm._s(_vm.label))])]) : _vm._e()]), _vm._v(" "), _c('div', {
-    staticClass: "cell-title",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._t("title", [_c('text', {
-    staticClass: "cell-content",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), (_vm.desc) ? _c('text', {
-    staticClass: "cell-desc-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._v(_vm._s(_vm.desc))]) : _vm._e()])], 2), _vm._v(" "), _vm._t("value"), _vm._v(" "), _vm._t("default"), _vm._v(" "), (_vm.hasArrow) ? _c('image', {
-    staticClass: "cell-arrow-icon",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  }, [_vm._t("label", [(_vm.label) ? _c('div', [_c('p', {
+    staticClass: "cell-label-text weex-el weex-text",
+    attrs: {}
+  }, [_vm._v(_vm._s(_vm.label))])]) : _vm._e()], {}), _vm._v(" "), _c('div', {
+    staticClass: "cell-title weex-ct",
+    attrs: {}
+  }, [_vm._t("title", [_c('p', {
+    staticClass: "cell-content weex-el weex-text",
+    attrs: {}
+  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), (_vm.desc) ? _c('p', {
+    staticClass: "cell-desc-text weex-el weex-text",
+    attrs: {}
+  }, [_vm._v(_vm._s(_vm.desc))]) : _vm._e()], {})], 2), _vm._v(" "), _vm._t("value", null, {}), _vm._v(" "), _vm._t("default", null, {}), _vm._v(" "), (_vm.hasArrow) ? _c('figure', {
+    staticClass: "cell-arrow-icon weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
       "src": _vm.arrowIcon,
-      "aria-hidden": true
+      "aria-hidden": true,
+      "data-img-src": _vm.arrowIcon
     }
   }) : _vm._e()], 2)
 },staticRenderFns: []}
@@ -12849,12 +13009,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', _vm._l((_vm.list), function(item, i) {
     return _c('wxc-checkbox', _vm._b({
       key: i,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined)),
       attrs: {
-        "config": _vm.config
+        "config": _vm.config,
+        "data-evt-wxcCheckBoxItemChecked": ""
       },
       on: {
+        "wxcCheckBoxItemChecked": _vm.wxcCheckBoxItemChecked
+      },
+      nativeOn: {
         "wxcCheckBoxItemChecked": _vm.wxcCheckBoxItemChecked
       }
     }, 'wxc-checkbox', item, false))
@@ -12875,82 +13037,83 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     ref: "pageCalendar",
-    staticClass: "wxc-page-calendar",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "wxc-page-calendar weex-ct",
+    attrs: {}
   }, [_c('wxc-minibar', _vm._b({
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
       "show": _vm.showTitle,
-      "use-default-return": false
+      "use-default-return": false,
+      "data-evt-wxcMinibarLeftButtonClicked": ""
     },
     on: {
       "wxcMinibarLeftButtonClicked": _vm.minibarLeftButtonClick
+    },
+    nativeOn: {
+      "wxcMinibarLeftButtonClicked": _vm.minibarLeftButtonClick
     }
   }, 'wxc-minibar', _vm.minibarCfg, false)), _vm._v(" "), (_vm.isShow) ? _c('div', {
-    staticClass: "calendar-weekday",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "calendar-weekday weex-ct",
+    attrs: {}
   }, _vm._l((['日', '一', '二', '三', '四', '五', '六']), function(week, k) {
-    return _c('text', {
+    return _c('p', {
       key: k,
-      staticClass: "flex-item weekday-text",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined)),
+      staticClass: "flex-item weekday-text weex-el weex-text",
       attrs: {
         "aria-label": ("周" + week)
       }
     }, [_vm._v(_vm._s(week))])
   })) : _vm._e(), _vm._v(" "), (_vm.isShow) ? _c('list', {
     staticClass: "calendar-list",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    attrs: {}
   }, [_vm._l((_vm.monthsArray), function(month, index) {
     return _c('cell', {
       key: index,
       class: [!month.title && 'calendar-row'],
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
-    }, [(month.title) ? _c('text', {
-      staticClass: "month-text",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
+      attrs: {}
+    }, [(month.title) ? _c('p', {
+      staticClass: "month-text weex-el weex-text",
+      attrs: {}
     }, [_vm._v(_vm._s(month.title))]) : _vm._l((month), function(cell, rowIndex) {
       return _c('div', {
         key: (index + "-" + rowIndex),
         ref: cell.ref,
         refInFor: true,
+        staticClass: " weex-ct",
         class: ['row-item', cell.cellClass],
-        staticStyle: _vm.$processStyle(undefined),
-        style: (_vm.$processStyle(undefined)),
         attrs: {
           "accessible": true,
-          "aria-label": ((cell.text?cell.text:'') + "," + (cell.note?cell.note:'') + "," + (cell.ext?cell.ext:''))
+          "aria-label": ((cell.text?cell.text:'') + "," + (cell.note?cell.note:'') + "," + (cell.ext?cell.ext:'')),
+          "data-evt-click": ""
         },
         on: {
-          "click": function($event) {
+          "weex$tap": function($event) {
+            $event.stopPropagation();
+            _vm.onClickDate(cell)
+          }
+        },
+        nativeOn: {
+          "weex$tap": function($event) {
+            $event.stopPropagation();
             _vm.onClickDate(cell)
           }
         }
-      }, [_c('text', {
+      }, [_c('p', {
+        staticClass: " weex-el weex-text",
         class: ['calendar-note', cell.cls],
-        staticStyle: _vm.$processStyle(undefined),
-        style: (_vm.$processStyle(undefined))
-      }, [_vm._v(_vm._s(cell.note))]), _vm._v(" "), _c('text', {
+        attrs: {}
+      }, [_vm._v(_vm._s(cell.note))]), _vm._v(" "), _c('p', {
+        staticClass: " weex-el weex-text",
         class: ['calendar-day', cell.cls],
-        staticStyle: _vm.$processStyle(undefined),
-        style: (_vm.$processStyle(undefined))
-      }, [_vm._v(_vm._s(cell.text))]), _vm._v(" "), _c('text', {
+        attrs: {}
+      }, [_vm._v(_vm._s(cell.text))]), _vm._v(" "), _c('p', {
+        staticClass: " weex-el weex-text",
         class: ['calendar-ext', cell.cls],
-        staticStyle: _vm.$processStyle(undefined),
-        style: (_vm.$processStyle(undefined))
+        attrs: {}
       }, [_vm._v(_vm._s(cell.ext))])])
     })], 2)
   }), _vm._v(" "), (_vm.isIPhoneX) ? _c('cell', {
     staticClass: "iphone-x",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    attrs: {}
   }) : _vm._e()], 2) : _vm._e()], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -12967,37 +13130,36 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: " weex-ct",
     attrs: {
       "hack-show": _vm.needShow
     }
   }, [(_vm.showLoading) ? _c('div', {
-    staticClass: "wxc-loading",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      top: _vm.topPosition + 'px'
-    }))
+    staticClass: "wxc-loading weex-ct",
+    style: ({
+      top: _vm._px2rem(_vm.topPosition + 'px', 75)
+    }),
+    attrs: {}
   }, [_c('div', {
+    staticClass: " weex-ct",
     class: ['loading-box', _vm.loading.class],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
       "aria-hidden": true
     }
-  }, [_c('image', {
-    staticClass: "loading-trip-image",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  }, [_c('figure', {
+    staticClass: "loading-trip-image weex-el weex-img",
+    staticStyle: {
+      "background-size": "contain"
+    },
     attrs: {
       "src": _vm.loading.url,
       "resize": "contain",
-      "quality": "original"
+      "quality": "original",
+      "data-img-src": _vm.loading.url
     }
-  }), _vm._v(" "), (_vm.loadingText) ? _c('text', {
-    staticClass: "loading-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+  }), _vm._v(" "), (_vm.loadingText) ? _c('p', {
+    staticClass: "loading-text weex-el weex-text",
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.loadingText))]) : _vm._e()])]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -13014,20 +13176,29 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wxc-btn",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrBtnStyle)),
+    staticClass: "wxc-btn weex-ct",
+    style: (_vm._px2rem(_vm.mrBtnStyle, 75)),
     attrs: {
       "accessible": true,
-      "aria-label": _vm.text
+      "aria-label": _vm.text,
+      "data-evt-click": ""
     },
     on: {
-      "click": _vm.onClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.onClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.onClicked($event)
+      }
     }
-  }, [_c('text', {
-    staticClass: "btn-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrTextStyle))
+  }, [_c('p', {
+    staticClass: "btn-text weex-el weex-text",
+    style: (_vm._processExclusiveStyle(_vm.mrTextStyle, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.text))])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -13044,46 +13215,62 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "container",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "container weex-ct",
+    attrs: {}
   }, [(_vm.show) ? _c('wxc-overlay', _vm._b({
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
-      "show": _vm.show && _vm.hasOverlay
+      "show": _vm.show && _vm.hasOverlay,
+      "data-evt-wxcOverlayBodyClicking": "",
+      "data-evt-wxcOverlayBodyClicked": ""
     },
     on: {
+      "wxcOverlayBodyClicking": _vm.wxcOverlayBodyClicking,
+      "wxcOverlayBodyClicked": _vm.wxcOverlayBodyClicked
+    },
+    nativeOn: {
       "wxcOverlayBodyClicking": _vm.wxcOverlayBodyClicking,
       "wxcOverlayBodyClicked": _vm.wxcOverlayBodyClicked
     }
   }, 'wxc-overlay', _vm.mergeOverlayCfg, false)) : _vm._e(), _vm._v(" "), (_vm.show) ? _c('div', {
     ref: "wxc-mask",
-    staticClass: "wxc-mask",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.maskStyle)),
+    staticClass: "wxc-mask weex-ct",
+    style: (_vm._px2rem(_vm.maskStyle, 75)),
     attrs: {
       "hack": _vm.shouldShow
     }
   }, [_c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.contentStyle))
-  }, [_vm._t("default")], 2), _vm._v(" "), (_vm.showClose) ? _c('div', {
-    staticClass: "mask-bottom",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      width: _vm.width + 'px'
-    })),
+    staticClass: " weex-ct",
+    style: (_vm._px2rem(_vm.contentStyle, 75)),
+    attrs: {}
+  }, [_vm._t("default", null, {})], 2), _vm._v(" "), (_vm.showClose) ? _c('div', {
+    staticClass: "mask-bottom weex-ct",
+    style: ({
+      width: _vm._px2rem(_vm.width + 'px', 75)
+    }),
+    attrs: {
+      "data-evt-click": ""
+    },
     on: {
-      "click": _vm.closeIconClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.closeIconClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.closeIconClicked($event)
+      }
     }
-  }, [_c('image', {
-    staticClass: "mask-close-icon",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  }, [_c('figure', {
+    staticClass: "mask-close-icon weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
       "src": _vm.closeIcon,
-      "aria-label": "关闭"
+      "aria-label": "关闭",
+      "data-img-src": _vm.closeIcon
     }
   })]) : _vm._e()]) : _vm._e()], 1)
 },staticRenderFns: []}
@@ -13101,61 +13288,69 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wxc-tag",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "wxc-tag weex-ct",
+    attrs: {}
   }, [(_vm.showSolid || _vm.showHollow) ? _c('div', {
+    staticClass: " weex-ct",
     class: ['tag-item', 'tag-border', _vm.showHollow && 'tag-hollow'],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.tagTextStyle))
-  }, [_c('text', {
-    staticClass: "tag-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+    style: (_vm._px2rem(_vm.tagTextStyle, 75)),
+    attrs: {}
+  }, [_c('p', {
+    staticClass: "tag-text weex-el weex-text",
+    style: ({
       color: _vm.fontColor
-    }))
-  }, [_vm._v(_vm._s(_vm.value))])]) : _vm._e(), _vm._v(" "), (_vm.showImage) ? _c('image', {
-    staticClass: "tag-image",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      width: _vm.imgWidth
-    })),
+    }),
+    attrs: {}
+  }, [_vm._v(_vm._s(_vm.value))])]) : _vm._e(), _vm._v(" "), (_vm.showImage) ? _c('figure', {
+    staticClass: "tag-image weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
+    style: ({
+      width: _vm._px2rem(_vm.imgWidth, 75)
+    }),
     attrs: {
       "src": _vm.img,
-      "aria-hidden": true
+      "aria-hidden": true,
+      "data-img-src": _vm.img,
+      "data-evt-load": ""
     },
     on: {
       "load": _vm.onLoad
+    },
+    nativeOn: {
+      "load": _vm.onLoad
     }
   }) : _vm._e(), _vm._v(" "), (_vm.showSpecial) ? _c('div', {
-    staticClass: "tag-special tag-border",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+    staticClass: "tag-special tag-border weex-ct",
+    style: ({
       borderColor: _vm.tagColor
-    })),
+    }),
     attrs: {
       "accessible": true,
       "aria-label": _vm.value
     }
   }, [_c('div', {
-    staticClass: "tag-left",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+    staticClass: "tag-left weex-ct",
+    style: ({
       backgroundColor: _vm.tagColor
-    }))
-  }, [_c('image', {
-    staticClass: "left-image",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    }),
+    attrs: {}
+  }, [_c('figure', {
+    staticClass: "left-image weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
-      "src": _vm.specialIcon
+      "src": _vm.specialIcon,
+      "data-img-src": _vm.specialIcon
     }
-  })]), _vm._v(" "), _c('text', {
-    staticClass: "tag-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+  })]), _vm._v(" "), _c('p', {
+    staticClass: "tag-text weex-el weex-text",
+    style: ({
       color: _vm.fontColor
-    }))
+    }),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.value))])]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -13172,120 +13367,244 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [(_vm.mod === 'default') ? _c('div', {
+    staticClass: " weex-ct",
     class: ['wxc-search-bar', 'wxc-search-bar-' + _vm.theme],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    attrs: {}
   }, [_c('input', {
     ref: "search-input",
     class: ['search-bar-input', 'search-bar-input-' + _vm.theme],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      width: _vm.needShowCancel ? '624px' : '710px'
-    })),
+    style: ({
+      width: _vm._px2rem(_vm.needShowCancel ? '624px' : '710px', 75)
+    }),
     attrs: {
       "autofocus": _vm.autofocus,
       "disabled": _vm.disabled,
       "type": _vm.inputType,
-      "placeholder": _vm.placeholder
+      "placeholder": _vm.placeholder,
+      "data-evt-blur": "",
+      "data-evt-focus": "",
+      "data-evt-input": "",
+      "data-evt-return": ""
     },
     domProps: {
       "value": _vm.value
     },
     on: {
-      "blur": _vm.onBlur,
-      "focus": _vm.onFocus,
-      "input": _vm.onInput,
-      "return": _vm.onSubmit
+      "blur": function($event) {
+        $event.stopPropagation();
+        _vm.onBlur($event)
+      },
+      "focus": function($event) {
+        $event.stopPropagation();
+        _vm.onFocus($event)
+      },
+      "input": function($event) {
+        $event.stopPropagation();
+        _vm.onInput($event)
+      },
+      "return": function($event) {
+        $event.stopPropagation();
+        _vm.onSubmit($event)
+      }
+    },
+    nativeOn: {
+      "blur": function($event) {
+        $event.stopPropagation();
+        _vm.onBlur($event)
+      },
+      "focus": function($event) {
+        $event.stopPropagation();
+        _vm.onFocus($event)
+      },
+      "input": function($event) {
+        $event.stopPropagation();
+        _vm.onInput($event)
+      },
+      "return": function($event) {
+        $event.stopPropagation();
+        _vm.onSubmit($event)
+      }
     }
   }), _vm._v(" "), (_vm.disabled) ? _c('div', {
-    staticClass: "disabled-input",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
-    on: {
-      "click": _vm.inputDisabledClicked
-    }
-  }) : _vm._e(), _vm._v(" "), _c('image', {
-    staticClass: "search-bar-ICON",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "disabled-input weex-ct",
     attrs: {
-      "aria-hidden": true,
-      "src": _vm.inputIcon
-    }
-  }), _vm._v(" "), (_vm.showClose) ? _c('image', {
-    staticClass: "search-bar-close",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
-    attrs: {
-      "aria-hidden": true,
-      "src": _vm.closeIcon
+      "data-evt-click": ""
     },
     on: {
-      "click": _vm.closeClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.inputDisabledClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.inputDisabledClicked($event)
+      }
     }
-  }) : _vm._e(), _vm._v(" "), (_vm.needShowCancel) ? _c('text', {
-    class: ['search-bar-button', 'search-bar-button-' + _vm.theme],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  }) : _vm._e(), _vm._v(" "), _c('figure', {
+    staticClass: "search-bar-ICON weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
+    attrs: {
+      "aria-hidden": true,
+      "src": _vm.inputIcon,
+      "data-img-src": _vm.inputIcon
+    }
+  }), _vm._v(" "), (_vm.showClose) ? _c('figure', {
+    staticClass: "search-bar-close weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
+    attrs: {
+      "aria-hidden": true,
+      "src": _vm.closeIcon,
+      "data-img-src": _vm.closeIcon,
+      "data-evt-click": ""
+    },
     on: {
-      "click": _vm.cancelClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.closeClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.closeClicked($event)
+      }
+    }
+  }) : _vm._e(), _vm._v(" "), (_vm.needShowCancel) ? _c('p', {
+    staticClass: " weex-el weex-text",
+    class: ['search-bar-button', 'search-bar-button-' + _vm.theme],
+    attrs: {
+      "data-evt-click": ""
+    },
+    on: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.cancelClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.cancelClicked($event)
+      }
     }
   }, [_vm._v("取消 ")]) : _vm._e()]) : _vm._e(), _vm._v(" "), (_vm.mod === 'hasDep') ? _c('div', {
+    staticClass: " weex-ct",
     class: ['wxc-search-bar', 'wxc-search-bar-' + _vm.theme],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    attrs: {}
   }, [_c('input', {
     class: ['search-bar-input', 'input-has-dep', 'search-bar-input-' + _vm.theme],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
       "disabled": _vm.disabled,
       "autofocus": _vm.autofocus,
       "type": _vm.inputType,
-      "placeholder": _vm.placeholder
+      "placeholder": _vm.placeholder,
+      "data-evt-blur": "",
+      "data-evt-focus": "",
+      "data-evt-input": "",
+      "data-evt-return": ""
     },
     domProps: {
       "value": _vm.value
     },
     on: {
-      "blur": _vm.onBlur,
-      "focus": _vm.onFocus,
-      "input": _vm.onInput,
-      "return": _vm.onSubmit
+      "blur": function($event) {
+        $event.stopPropagation();
+        _vm.onBlur($event)
+      },
+      "focus": function($event) {
+        $event.stopPropagation();
+        _vm.onFocus($event)
+      },
+      "input": function($event) {
+        $event.stopPropagation();
+        _vm.onInput($event)
+      },
+      "return": function($event) {
+        $event.stopPropagation();
+        _vm.onSubmit($event)
+      }
+    },
+    nativeOn: {
+      "blur": function($event) {
+        $event.stopPropagation();
+        _vm.onBlur($event)
+      },
+      "focus": function($event) {
+        $event.stopPropagation();
+        _vm.onFocus($event)
+      },
+      "input": function($event) {
+        $event.stopPropagation();
+        _vm.onInput($event)
+      },
+      "return": function($event) {
+        $event.stopPropagation();
+        _vm.onSubmit($event)
+      }
     }
   }), _vm._v(" "), (_vm.disabled) ? _c('div', {
-    staticClass: "disabled-input has-dep-disabled",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "disabled-input has-dep-disabled weex-ct",
+    attrs: {
+      "data-evt-click": ""
+    },
     on: {
-      "click": _vm.inputDisabledClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.inputDisabledClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.inputDisabledClicked($event)
+      }
     }
   }) : _vm._e(), _vm._v(" "), _c('div', {
+    staticClass: " weex-ct",
     class: ['bar-dep', '.bar-dep-' + _vm.theme],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    attrs: {
+      "data-evt-click": ""
+    },
     on: {
-      "click": _vm.depClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.depClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.depClicked($event)
+      }
     }
-  }, [_c('text', {
-    staticClass: "dep-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._v(_vm._s(_vm.depName))]), _vm._v(" "), _c('image', {
-    staticClass: "dep-arrow",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  }, [_c('p', {
+    staticClass: "dep-text weex-el weex-text",
+    attrs: {}
+  }, [_vm._v(_vm._s(_vm.depName))]), _vm._v(" "), _c('figure', {
+    staticClass: "dep-arrow weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
       "src": _vm.arrowIcon,
-      "aria-hidden": true
+      "aria-hidden": true,
+      "data-img-src": _vm.arrowIcon
     }
-  })]), _vm._v(" "), _c('image', {
-    staticClass: "search-bar-ICON ICON-has-dep",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  })]), _vm._v(" "), _c('figure', {
+    staticClass: "search-bar-ICON ICON-has-dep weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
       "aria-hidden": true,
-      "src": _vm.inputIcon
+      "src": _vm.inputIcon,
+      "data-img-src": _vm.inputIcon
     }
   })]) : _vm._e()])
 },staticRenderFns: []}
@@ -13303,21 +13622,20 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wxc-tab-page",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      height: (_vm.tabPageHeight) + 'px',
+    staticClass: "wxc-tab-page weex-ct",
+    style: ({
+      height: _vm._px2rem(_vm.tabPageHeight + 'px', 75),
       backgroundColor: _vm.wrapBgColor
-    }))
+    }),
+    attrs: {}
   }, [_c('scroller', {
     ref: "tab-title-list",
     staticClass: "tab-title-list",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+    style: ({
       backgroundColor: _vm.tabStyles.bgColor,
-      height: (_vm.tabStyles.height) + 'px',
-      paddingLeft: _vm.tabStyles.leftOffset + 'px'
-    })),
+      height: _vm._px2rem(_vm.tabStyles.height + 'px', 75),
+      paddingLeft: _vm._px2rem(_vm.tabStyles.leftOffset + 'px', 75)
+    }),
     attrs: {
       "show-scrollbar": false,
       "scroll-direction": "horizontal",
@@ -13328,73 +13646,110 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       key: index,
       ref: 'wxc-tab-title-' + index,
       refInFor: true,
-      staticClass: "title-item",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
-        width: _vm.tabStyles.width + 'px',
-        height: _vm.tabStyles.height + 'px',
+      staticClass: "title-item weex-ct",
+      style: ({
+        width: _vm._px2rem(_vm.tabStyles.width + 'px', 75),
+        height: _vm._px2rem(_vm.tabStyles.height + 'px', 75),
         backgroundColor: _vm.currentPage == index ? _vm.tabStyles.activeBgColor : _vm.tabStyles.bgColor
-      })),
+      }),
       attrs: {
         "accessible": true,
-        "aria-label": ("" + (v.title?v.title:'标签'+index))
+        "aria-label": ("" + (v.title?v.title:'标签'+index)),
+        "data-evt-click": ""
       },
       on: {
-        "click": function($event) {
+        "weex$tap": function($event) {
+          $event.stopPropagation();
+          _vm.setPage(index, v.url)
+        }
+      },
+      nativeOn: {
+        "weex$tap": function($event) {
+          $event.stopPropagation();
           _vm.setPage(index, v.url)
         }
       }
-    }, [(_vm.titleType === 'icon' && !_vm.titleUseSlot) ? _c('image', {
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
-        width: _vm.tabStyles.iconWidth + 'px',
-        height: _vm.tabStyles.iconHeight + 'px'
-      })),
+    }, [(_vm.titleType === 'icon' && !_vm.titleUseSlot) ? _c('figure', {
+      staticClass: " weex-el weex-img",
+      staticStyle: {
+        "background-size": "100%100%"
+      },
+      style: ({
+        width: _vm._px2rem(_vm.tabStyles.iconWidth + 'px', 75),
+        height: _vm._px2rem(_vm.tabStyles.iconHeight + 'px', 75)
+      }),
       attrs: {
-        "src": _vm.currentPage == index ? v.activeIcon : v.icon
+        "src": _vm.currentPage == index ? v.activeIcon : v.icon,
+        "data-img-src": _vm.currentPage == index ? v.activeIcon : v.icon
       }
-    }) : _vm._e(), _vm._v(" "), (!_vm.titleUseSlot) ? _c('text', {
-      staticClass: "tab-text",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
-        fontSize: _vm.tabStyles.fontSize + 'px',
-        fontWeight: (_vm.currentPage == index && _vm.tabStyles.isActiveTitleBold) ? 'bold' : 'normal',
+    }) : _vm._e(), _vm._v(" "), (!_vm.titleUseSlot) ? _c('p', {
+      staticClass: "tab-text weex-el weex-text",
+      style: ({
+        fontSize: _vm._px2rem(_vm.tabStyles.fontSize + 'px', 75),
+        fontWeight: _vm.currentPage == index && _vm.tabStyles.isActiveTitleBold ? 'bold' : 'normal',
         color: _vm.currentPage == index ? _vm.tabStyles.activeTitleColor : _vm.tabStyles.titleColor,
-        paddingLeft: _vm.tabStyles.textPaddingLeft + 'px',
-        paddingRight: _vm.tabStyles.textPaddingRight + 'px'
-      }))
+        paddingLeft: _vm._px2rem(_vm.tabStyles.textPaddingLeft + 'px', 75),
+        paddingRight: _vm._px2rem(_vm.tabStyles.textPaddingRight + 'px', 75)
+      }),
+      attrs: {}
     }, [_vm._v(_vm._s(v.title))]) : _vm._e(), _vm._v(" "), (_vm.tabStyles.hasActiveBottom && !_vm.titleUseSlot) ? _c('div', {
-      staticClass: "border-bottom",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
-        width: _vm.tabStyles.activeBottomWidth + 'px',
-        left: (_vm.tabStyles.width - _vm.tabStyles.activeBottomWidth) / 2 + 'px',
-        height: _vm.tabStyles.activeBottomHeight + 'px',
+      staticClass: "border-bottom weex-ct",
+      style: ({
+        width: _vm._px2rem(_vm.tabStyles.activeBottomWidth + 'px', 75),
+        left: _vm._px2rem((_vm.tabStyles.width - _vm.tabStyles.activeBottomWidth) / 2 + 'px', 75),
+        height: _vm._px2rem(_vm.tabStyles.activeBottomHeight + 'px', 75),
         backgroundColor: _vm.currentPage == index ? _vm.tabStyles.activeBottomColor : 'transparent'
-      }))
-    }) : _vm._e(), _vm._v(" "), (_vm.titleUseSlot) ? _vm._t(("tab-title-" + index)) : _vm._e()], 2)
+      }),
+      attrs: {}
+    }) : _vm._e(), _vm._v(" "), (_vm.titleUseSlot) ? _vm._t(("tab-title-" + index), null, {}) : _vm._e()], 2)
   })), _vm._v(" "), _c('div', {
     ref: "tab-page-wrap",
-    staticClass: "tab-page-wrap",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      height: (_vm.tabPageHeight - _vm.tabStyles.height) + 'px'
-    })),
+    staticClass: "tab-page-wrap weex-ct",
+    style: ({
+      height: _vm._px2rem(_vm.tabPageHeight - _vm.tabStyles.height + 'px', 75)
+    }),
     attrs: {
-      "prevent-move-event": true
+      "prevent-move-event": true,
+      "data-evt-panstart": "",
+      "data-evt-panmove": "",
+      "data-evt-panend": "",
+      "data-evt-horizontalpan": ""
     },
     on: {
-      "panstart": _vm._onTouchStart,
-      "panmove": _vm._onTouchMove,
-      "panend": _vm._onTouchEnd,
+      "panstart": function($event) {
+        $event.stopPropagation();
+        _vm._onTouchStart($event)
+      },
+      "panmove": function($event) {
+        $event.stopPropagation();
+        _vm._onTouchMove($event)
+      },
+      "panend": function($event) {
+        $event.stopPropagation();
+        _vm._onTouchEnd($event)
+      },
+      "horizontalpan": _vm.startHandler
+    },
+    nativeOn: {
+      "panstart": function($event) {
+        $event.stopPropagation();
+        _vm._onTouchStart($event)
+      },
+      "panmove": function($event) {
+        $event.stopPropagation();
+        _vm._onTouchMove($event)
+      },
+      "panend": function($event) {
+        $event.stopPropagation();
+        _vm._onTouchEnd($event)
+      },
       "horizontalpan": _vm.startHandler
     }
   }, [_c('div', {
     ref: "tab-container",
-    staticClass: "tab-container",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._t("default")], 2)])], 1)
+    staticClass: "tab-container weex-ct",
+    attrs: {}
+  }, [_vm._t("default", null, {})], 2)])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -13410,46 +13765,68 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return (_vm.show) ? _c('div', {
-    staticClass: "wxc-noticebar",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "wxc-noticebar weex-ct",
     attrs: {
       "accessible": true,
-      "aria-label": _vm.notice
+      "aria-label": _vm.notice,
+      "data-evt-click": ""
     },
     on: {
-      "click": _vm.noticeBarClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.noticeBarClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.noticeBarClicked($event)
+      }
     }
-  }, [(_vm.typeIcon) ? _c('image', {
-    staticClass: "type-ICON",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  }, [(_vm.typeIcon) ? _c('figure', {
+    staticClass: "type-ICON weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
-      "src": _vm.typeIcon
+      "src": _vm.typeIcon,
+      "data-img-src": _vm.typeIcon
     }
-  }) : _vm._e(), _vm._v(" "), _c('text', {
-    staticClass: "noticebar-content",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      width: _vm.contentWidth + 'px',
-      lines: _vm.lines
-    }))
+  }) : _vm._e(), _vm._v(" "), _c('p', {
+    staticClass: "noticebar-content weex-el weex-text",
+    style: ({
+      width: _vm._px2rem(_vm.contentWidth + 'px', 75),
+      webkitLineClamp: _vm.lines,
+      overflow: 'hidden',
+      textOverflow: 'ellipsis'
+    }),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.notice))]), _vm._v(" "), (_vm.modeIcon) ? _c('div', {
-    staticClass: "more-click-content",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "more-click-content weex-ct",
     attrs: {
-      "mode": _vm.mode
+      "mode": _vm.mode,
+      "data-evt-click": ""
     },
     on: {
-      "click": _vm.noticeIconClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.noticeIconClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.noticeIconClicked($event)
+      }
     }
-  }, [_c('image', {
-    staticClass: "mode-ICON",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  }, [_c('figure', {
+    staticClass: "mode-ICON weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
-      "src": _vm.modeIcon
+      "src": _vm.modeIcon,
+      "data-img-src": _vm.modeIcon
     }
   })]) : _vm._e()]) : _vm._e()
 },staticRenderFns: []}
@@ -13467,20 +13844,24 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "grid-select",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "grid-select weex-ct",
+    attrs: {}
   }, [_vm._l((_vm.dList), function(item, index) {
     return _c('option', _vm._b({
       key: index,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
-        marginTop: index >= _vm.cols ? _vm.lineSpacing : null
-      })),
+      style: ({
+        marginTop: _vm._px2rem(index >= _vm.cols ? _vm.lineSpacing : null, 75)
+      }),
       attrs: {
-        "index": index
+        "index": index,
+        "data-evt-select": ""
       },
       on: {
+        "select": function($event) {
+          _vm.onSelect(index)
+        }
+      },
+      nativeOn: {
         "select": function($event) {
           _vm.onSelect(index)
         }
@@ -13489,11 +13870,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" "), _vm._l((_vm.cHackList), function(item, index) {
     return _c('option', _vm._b({
       key: index,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
+      style: ({
         opacity: 0,
-        marginTop: _vm.dList.length >= _vm.cols ? _vm.lineSpacing : null
-      }))
+        marginTop: _vm._px2rem(_vm.dList.length >= _vm.cols ? _vm.lineSpacing : null, 75)
+      }),
+      attrs: {}
     }, 'option', Object.assign({}, _vm.customStyles, item), false))
   })], 2)
 },staticRenderFns: []}
@@ -13513,9 +13894,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', _vm._l((_vm.updateList), function(item, i) {
     return _c('wxc-radio', _vm._b({
       key: i,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined)),
+      attrs: {
+        "data-evt-wxcRadioItemChecked": ""
+      },
       on: {
+        "wxcRadioItemChecked": function($event) {
+          _vm.wxcRadioItemChecked(i, $event)
+        }
+      },
+      nativeOn: {
         "wxcRadioItemChecked": function($event) {
           _vm.wxcRadioItemChecked(i, $event)
         }
@@ -13537,59 +13924,52 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "root",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "root weex-ct",
+    attrs: {}
   }, _vm._l((_vm.cItems), function(item, index) {
     return _c('div', {
       key: item.key,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined)),
+      staticClass: " weex-ct",
       attrs: {
         "accessible": true,
         "aria-label": ((item.title) + "," + (item.desc?item.desc:'') + "," + (item.date?item.date:'') + "," + (item.highlight?'已完成':'等待完成'))
       }
     }, [_c('div', {
-      staticClass: "title flex-row",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
+      staticClass: "title flex-row weex-ct",
+      attrs: {}
     }, [_c('div', {
-      staticClass: "line",
+      staticClass: "line weex-ct",
       class: item.__titleLineClass__,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(item.__lineStyle__))
+      style: (_vm._px2rem(item.__lineStyle__, 75)),
+      attrs: {}
     }), _vm._v(" "), _c('div', {
-      staticClass: "point",
+      staticClass: "point weex-ct",
       class: item.__pointClass__,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(item.__pointStyle__))
-    }), _vm._v(" "), _c('text', {
-      staticClass: "text-title full-rest",
+      style: (_vm._px2rem(item.__pointStyle__, 75)),
+      attrs: {}
+    }), _vm._v(" "), _c('p', {
+      staticClass: "text-title full-rest weex-el weex-text",
       class: item.__titleTextClass__,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(item.__titleStyle__))
+      style: (_vm._processExclusiveStyle(item.__titleStyle__, 75, 'text')),
+      attrs: {}
     }, [_vm._v(_vm._s(item.title))])]), _vm._v(" "), _c('div', {
-      staticClass: "content flex-row",
+      staticClass: "content flex-row weex-ct",
       class: item.__contentClass__,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
+      attrs: {}
     }, [_c('div', {
-      staticClass: "line",
+      staticClass: "line weex-ct",
       class: item.__contentLineClass__,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(item.__lineStyle__))
+      style: (_vm._px2rem(item.__lineStyle__, 75)),
+      attrs: {}
     }), _vm._v(" "), _c('div', {
-      staticClass: "full-rest",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
-    }, [(item.desc) ? _c('text', {
-      staticClass: "text-desc",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
-    }, [_vm._v(_vm._s(item.desc))]) : _vm._e(), _vm._v(" "), (item.date) ? _c('text', {
-      staticClass: "text-date",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
+      staticClass: "full-rest weex-ct",
+      attrs: {}
+    }, [(item.desc) ? _c('p', {
+      staticClass: "text-desc weex-el weex-text",
+      attrs: {}
+    }, [_vm._v(_vm._s(item.desc))]) : _vm._e(), _vm._v(" "), (item.date) ? _c('p', {
+      staticClass: "text-date weex-el weex-text",
+      attrs: {}
     }, [_vm._v(_vm._s(item.date))]) : _vm._e()])])])
   }))
 },staticRenderFns: []}
@@ -13607,34 +13987,30 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wxc-special-rich-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "wxc-special-rich-text weex-ct",
+    attrs: {}
   }, [_c('div', {
-    staticClass: "tag-div",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      top: _vm.top + 'px'
-    }))
+    staticClass: "tag-div weex-ct",
+    style: ({
+      top: _vm._px2rem(_vm.top + 'px', 75)
+    }),
+    attrs: {}
   }, [(_vm.newList[0].type == 'icon' && _vm.newList[0].src) ? _c('wxc-rich-text-icon', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
       "icon-src": _vm.newList[0].src,
       "icon-style": _vm.newList[0].style
     }
   }) : _vm._e(), _vm._v(" "), (_vm.newList[0].type == 'tag' && _vm.newList[0].value) ? _c('wxc-rich-text-tag', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
       "tag-value": _vm.newList[0].value,
       "tag-theme": _vm.newList[0].theme,
       "tag-style": _vm.newList[0].style
     }
-  }) : _vm._e()], 1), _vm._v(" "), (_vm.newList[1].value) ? _c('text', {
+  }) : _vm._e()], 1), _vm._v(" "), (_vm.newList[1].value) ? _c('p', {
+    staticClass: " weex-el weex-text",
     class: ['wxc-text', _vm.newList[1].theme],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.newList[1].style))
+    style: (_vm._processExclusiveStyle(_vm.newList[1].style, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.newList[1].value))]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -13651,36 +14027,39 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('wxc-cell', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
       "has-top-border": _vm.hasTopBorder,
       "cell-style": {
         backgroundColor: _vm.backgroundColor
       },
       "accessible": true,
-      "aria-label": (_vm.title + ",状态为" + (_vm.checked?'已选中':'未选中') + "," + (_vm.disabled?'不可更改':''))
+      "aria-label": (_vm.title + ",状态为" + (_vm.checked?'已选中':'未选中') + "," + (_vm.disabled?'不可更改':'')),
+      "data-evt-wxcCellClicked": ""
     },
     on: {
       "wxcCellClicked": _vm.wxcCellClicked
+    },
+    nativeOn: {
+      "wxcCellClicked": _vm.wxcCellClicked
     }
-  }, [_c('text', {
-    staticClass: "title-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+  }, [_c('p', {
+    staticClass: "title-text weex-el weex-text",
+    style: ({
       color: _vm.color
-    })),
+    }),
     attrs: {
       "slot": "title"
     },
     slot: "title"
-  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), (_vm.radioIcon) ? _c('image', {
-    staticClass: "radio",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), (_vm.radioIcon) ? _c('figure', {
+    staticClass: "radio weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
       "slot": "value",
-      "src": _vm.radioIcon
+      "src": _vm.radioIcon,
+      "data-img-src": _vm.radioIcon
     },
     slot: "value"
   }) : _vm._e()])
@@ -13699,33 +14078,36 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('wxc-cell', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
       "has-top-border": _vm.hasTopBorder,
       "accessible": true,
-      "aria-label": (_vm.title + ",状态为" + (_vm.checked ? '已选中' : '未选中') + "," + (_vm.disabled ? '不可更改' : '点击可切换'))
+      "aria-label": (_vm.title + ",状态为" + (_vm.checked ? '已选中' : '未选中') + "," + (_vm.disabled ? '不可更改' : '点击可切换')),
+      "data-evt-wxcCellClicked": ""
     },
     on: {
       "wxcCellClicked": _vm.wxcCellClicked
+    },
+    nativeOn: {
+      "wxcCellClicked": _vm.wxcCellClicked
     }
-  }, [_c('text', {
-    staticClass: "title-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+  }, [_c('p', {
+    staticClass: "title-text weex-el weex-text",
+    style: ({
       color: _vm.textColor
-    })),
+    }),
     attrs: {
       "slot": "title"
     },
     slot: "title"
-  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('image', {
-    staticClass: "checkbox",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('figure', {
+    staticClass: "checkbox weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
       "slot": "value",
-      "src": _vm.checkIcon
+      "src": _vm.checkIcon,
+      "data-img-src": _vm.checkIcon
     },
     slot: "value"
   })])
@@ -13743,10 +14125,11 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('text', {
+  return _c('p', {
+    staticClass: " weex-el weex-text",
     class: ['wxc-text', _vm.textTheme, _vm.hasTextMargin ? 'margin-text' : ''],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.themeStyle))
+    style: (_vm._processExclusiveStyle(_vm.themeStyle, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.textValue))])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -13762,16 +14145,29 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return (_vm.showItem && _vm.src) ? _c('image', {
+  return (_vm.showItem && _vm.src) ? _c('figure', {
     ref: ("rain-item-" + _vm.rainId),
-    staticClass: "rain-item",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.pos)),
+    staticClass: "rain-item weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
+    style: (_vm._px2rem(_vm.pos, 75)),
     attrs: {
-      "src": _vm.src
+      "src": _vm.src,
+      "data-img-src": _vm.src,
+      "data-evt-click": ""
     },
     on: {
-      "click": _vm.caught
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.caught($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.caught($event)
+      }
     }
   }) : _vm._e()
 },staticRenderFns: []}
@@ -13789,58 +14185,90 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wxc-stepper",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "wxc-stepper weex-ct",
+    attrs: {}
   }, [_c('div', {
-    staticClass: "stepper-minus",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "stepper-minus weex-ct",
     attrs: {
       "aria-label": "减数",
-      "accessible": true
+      "accessible": true,
+      "data-evt-click": ""
     },
     on: {
-      "click": _vm.minusClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.minusClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.minusClicked($event)
+      }
     }
-  }, [_c('text', {
-    staticClass: "stepper-icon",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+  }, [_c('p', {
+    staticClass: "stepper-icon weex-el weex-text",
+    style: ({
       color: _vm.isLess ? '#cccccc' : '#666666'
-    }))
+    }),
+    attrs: {}
   }, [_vm._v("-")])]), _vm._v(" "), _c('input', {
     staticClass: "stepper-input",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.disableStyle)),
+    style: (_vm._px2rem(_vm.disableStyle, 75)),
     attrs: {
       "type": "number",
-      "disabled": _vm.disabled || _vm.readOnly
+      "disabled": _vm.disabled || _vm.readOnly,
+      "data-evt-input": "",
+      "data-evt-blur": ""
     },
     domProps: {
       "value": _vm.valueString
     },
     on: {
-      "input": _vm.onInput,
-      "blur": _vm.onBlur
+      "input": function($event) {
+        $event.stopPropagation();
+        _vm.onInput($event)
+      },
+      "blur": function($event) {
+        $event.stopPropagation();
+        _vm.onBlur($event)
+      }
+    },
+    nativeOn: {
+      "input": function($event) {
+        $event.stopPropagation();
+        _vm.onInput($event)
+      },
+      "blur": function($event) {
+        $event.stopPropagation();
+        _vm.onBlur($event)
+      }
     }
   }), _vm._v(" "), _c('div', {
-    staticClass: "stepper-plus",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "stepper-plus weex-ct",
     attrs: {
       "aria-label": "加数",
-      "accessible": true
+      "accessible": true,
+      "data-evt-click": ""
     },
     on: {
-      "click": _vm.plusClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.plusClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.plusClicked($event)
+      }
     }
-  }, [_c('text', {
-    staticClass: "stepper-icon",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+  }, [_c('p', {
+    staticClass: "stepper-icon weex-el weex-text",
+    style: ({
       color: _vm.isOver ? '#cccccc' : '#666666'
-    }))
+    }),
+    attrs: {}
   }, [_vm._v("+")])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -13857,82 +14285,106 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "container",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "container weex-ct",
+    attrs: {}
   }, [(_vm.show) ? _c('wxc-overlay', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
       "show": true,
       "hasAnimation": false
     }
   }) : _vm._e(), _vm._v(" "), (_vm.show) ? _c('div', {
-    staticClass: "dialog-box",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      top: _vm.top + 'px'
-    }))
+    staticClass: "dialog-box weex-ct",
+    style: ({
+      top: _vm._px2rem(_vm.top + 'px', 75)
+    }),
+    attrs: {}
   }, [_c('div', {
-    staticClass: "dialog-content",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._t("title", [_c('text', {
-    staticClass: "content-title",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._v(_vm._s(_vm.title))])]), _vm._v(" "), _vm._t("content", [_c('text', {
-    staticClass: "content-subtext",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._v(_vm._s(_vm.content))])]), _vm._v(" "), (_vm.showNoPrompt) ? _c('div', {
-    staticClass: "no-prompt",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
-    on: {
-      "click": _vm.noPromptClicked
-    }
-  }, [_c('image', {
-    staticClass: "no-prompt-icon",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "dialog-content weex-ct",
+    attrs: {}
+  }, [_vm._t("title", [_c('p', {
+    staticClass: "content-title weex-el weex-text",
+    attrs: {}
+  }, [_vm._v(_vm._s(_vm.title))])], {}), _vm._v(" "), _vm._t("content", [_c('p', {
+    staticClass: "content-subtext weex-el weex-text",
+    attrs: {}
+  }, [_vm._v(_vm._s(_vm.content))])], {}), _vm._v(" "), (_vm.showNoPrompt) ? _c('div', {
+    staticClass: "no-prompt weex-ct",
     attrs: {
-      "src": _vm.noPromptIcon
+      "data-evt-click": ""
+    },
+    on: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.noPromptClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.noPromptClicked($event)
+      }
     }
-  }), _vm._v(" "), _c('text', {
-    staticClass: "no-prompt-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+  }, [_c('figure', {
+    staticClass: "no-prompt-icon weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
+    attrs: {
+      "src": _vm.noPromptIcon,
+      "data-img-src": _vm.noPromptIcon
+    }
+  }), _vm._v(" "), _c('p', {
+    staticClass: "no-prompt-text weex-el weex-text",
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.noPromptText))])]) : _vm._e()], 2), _vm._v(" "), _c('div', {
-    staticClass: "dialog-footer",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "dialog-footer weex-ct",
+    attrs: {}
   }, [(!_vm.single) ? _c('div', {
-    staticClass: "footer-btn cancel",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "footer-btn cancel weex-ct",
+    attrs: {
+      "data-evt-click": ""
+    },
     on: {
-      "click": _vm.secondaryClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.secondaryClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.secondaryClicked($event)
+      }
     }
-  }, [_c('text', {
-    staticClass: "btn-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+  }, [_c('p', {
+    staticClass: "btn-text weex-el weex-text",
+    style: ({
       color: _vm.secondBtnColor
-    }))
+    }),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.cancelText))])]) : _vm._e(), _vm._v(" "), _c('div', {
-    staticClass: "footer-btn confirm",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "footer-btn confirm weex-ct",
+    attrs: {
+      "data-evt-click": ""
+    },
     on: {
-      "click": _vm.primaryClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.primaryClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.primaryClicked($event)
+      }
     }
-  }, [_c('text', {
-    staticClass: "btn-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+  }, [_c('p', {
+    staticClass: "btn-text weex-el weex-text",
+    style: ({
       color: _vm.mainBtnColor
-    }))
+    }),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.confirmText))])])])]) : _vm._e()], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -13950,18 +14402,47 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     ref: ("wxc-pan-item-" + _vm.extId),
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: " weex-ct",
     attrs: {
-      "prevent-move-event": true
+      "prevent-move-event": true,
+      "data-evt-horizontalpan": "",
+      "weex-appear": "",
+      "data-evt-appear": "",
+      "weex-appear": "",
+      "data-evt-disappear": "",
+      "data-evt-click": ""
     },
     on: {
       "horizontalpan": _vm.dispatchPan,
-      "appear": _vm.onItemAppear,
-      "disappear": _vm.onItemDisAppear,
-      "click": _vm.itemClicked
+      "appear": function($event) {
+        $event.stopPropagation();
+        _vm.onItemAppear($event)
+      },
+      "disappear": function($event) {
+        $event.stopPropagation();
+        _vm.onItemDisAppear($event)
+      },
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.itemClicked($event)
+      }
+    },
+    nativeOn: {
+      "horizontalpan": _vm.dispatchPan,
+      "appear": function($event) {
+        $event.stopPropagation();
+        _vm.onItemAppear($event)
+      },
+      "disappear": function($event) {
+        $event.stopPropagation();
+        _vm.onItemDisAppear($event)
+      },
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.itemClicked($event)
+      }
     }
-  }, [_vm._t("default")], 2)
+  }, [_vm._t("default", null, {})], 2)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -13977,128 +14458,136 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wxc-index-list",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "wxc-index-list weex-ct",
+    attrs: {}
   }, [_c('list', {
     staticClass: "index-list",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      height: _vm.height + 'px'
-    }))
+    style: ({
+      height: _vm._px2rem(_vm.height + 'px', 75)
+    }),
+    attrs: {}
   }, [_vm._l((_vm.formatList), function(v, i) {
     return _c('cell', {
       key: i,
       ref: 'index-item-title-' + v.title,
       refInFor: true,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
-    }, [(!_vm.onlyShowList) ? _c('text', {
+      attrs: {}
+    }, [(!_vm.onlyShowList) ? _c('p', {
+      staticClass: " weex-el weex-text",
       class: ['index-list-title', v.type && v.type == 'group' && 'group-title'],
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
+      attrs: {}
     }, [_vm._v(_vm._s(v.title))]) : _vm._e(), _vm._v(" "), (v.type && v.type == 'group' && !_vm.onlyShowList) ? _c('div', {
-      staticClass: "group",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
+      staticClass: "group weex-ct",
+      attrs: {}
     }, _vm._l((v.data), function(group, index) {
       return _c('div', {
         key: index,
-        staticClass: "group-list",
-        staticStyle: _vm.$processStyle(undefined),
-        style: (_vm.$processStyle(undefined))
+        staticClass: "group-list weex-ct",
+        attrs: {}
       }, _vm._l((group), function(item, i) {
         return _c('div', {
           key: i,
-          staticClass: "group-item",
-          staticStyle: _vm.$processStyle(undefined),
-          style: (_vm.$processStyle(undefined)),
+          staticClass: "group-item weex-ct",
           attrs: {
             "accessible": true,
-            "aria-label": ((item.name) + "," + (item.desc?item.desc:''))
+            "aria-label": ((item.name) + "," + (item.desc?item.desc:'')),
+            "data-evt-click": ""
           },
           on: {
-            "click": function($event) {
+            "weex$tap": function($event) {
+              $event.stopPropagation();
+              _vm.itemClicked(item)
+            }
+          },
+          nativeOn: {
+            "weex$tap": function($event) {
+              $event.stopPropagation();
               _vm.itemClicked(item)
             }
           }
-        }, [(item.isLocation) ? _c('image', {
-          staticClass: "location-icon",
-          staticStyle: _vm.$processStyle(undefined),
-          style: (_vm.$processStyle(undefined)),
+        }, [(item.isLocation) ? _c('figure', {
+          staticClass: "location-icon weex-el weex-img",
+          staticStyle: {
+            "background-size": "100%100%"
+          },
           attrs: {
-            "src": "https://gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png"
+            "src": "https://gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png",
+            "data-img-src": "https://gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png"
           }
         }) : _vm._e(), _vm._v(" "), _c('div', {
-          staticClass: "item-content",
-          staticStyle: _vm.$processStyle(undefined),
-          style: (_vm.$processStyle(undefined))
-        }, [_c('text', {
-          staticClass: "item-name",
-          staticStyle: _vm.$processStyle(undefined),
-          style: (_vm.$processStyle(undefined))
-        }, [_vm._v(_vm._s(item.name))]), _vm._v(" "), (item.desc) ? _c('text', {
-          staticClass: "item-desc",
-          staticStyle: _vm.$processStyle(undefined),
-          style: (_vm.$processStyle(undefined))
+          staticClass: "item-content weex-ct",
+          attrs: {}
+        }, [_c('p', {
+          staticClass: "item-name weex-el weex-text",
+          attrs: {}
+        }, [_vm._v(_vm._s(item.name))]), _vm._v(" "), (item.desc) ? _c('p', {
+          staticClass: "item-desc weex-el weex-text",
+          attrs: {}
         }, [_vm._v(_vm._s(item.desc))]) : _vm._e()])])
       }))
     })) : _vm._e(), _vm._v(" "), (v.type === 'list') ? _c('div', _vm._l((v.data), function(item, index) {
       return _c('div', {
         key: index,
-        staticClass: "index-list-item",
-        staticStyle: _vm.$processStyle(undefined),
-        style: (_vm.$processStyle(undefined)),
+        staticClass: "index-list-item weex-ct",
         attrs: {
           "accessible": true,
-          "aria-label": ((item.name) + "," + (item.desc?item.desc:''))
+          "aria-label": ((item.name) + "," + (item.desc?item.desc:'')),
+          "data-evt-click": ""
         },
         on: {
-          "click": function($event) {
+          "weex$tap": function($event) {
+            $event.stopPropagation();
+            _vm.itemClicked(item)
+          }
+        },
+        nativeOn: {
+          "weex$tap": function($event) {
+            $event.stopPropagation();
             _vm.itemClicked(item)
           }
         }
-      }, [_c('text', {
-        staticClass: "title",
-        staticStyle: _vm.$processStyle(undefined),
-        style: (_vm.$processStyle(undefined))
-      }, [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c('text', {
-        staticClass: "desc",
-        staticStyle: _vm.$processStyle(undefined),
-        style: (_vm.$processStyle(undefined))
+      }, [_c('p', {
+        staticClass: "title weex-el weex-text",
+        attrs: {}
+      }, [_vm._v(_vm._s(item.name))]), _vm._v(" "), _c('p', {
+        staticClass: "desc weex-el weex-text",
+        attrs: {}
       }, [_vm._v(_vm._s(item.desc))])])
     })) : _vm._e()])
   }), _vm._v(" "), (_vm.isIPhoneX) ? _c('cell', {
     staticClass: "iphone-x",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    attrs: {}
   }) : _vm._e()], 2), _vm._v(" "), (_vm.showIndex && !_vm.onlyShowList) ? _c('div', {
-    staticClass: "index-list-nav",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.navStyle))
+    staticClass: "index-list-nav weex-ct",
+    style: (_vm._px2rem(_vm.navStyle, 75)),
+    attrs: {}
   }, _vm._l((_vm.formatList), function(item, index) {
-    return _c('text', {
+    return _c('p', {
       key: index,
-      staticClass: "list-nav-key",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined)),
+      staticClass: "list-nav-key weex-el weex-text",
       attrs: {
-        "title": item.title
+        "title": item.title,
+        "data-evt-click": ""
       },
       on: {
-        "click": function($event) {
+        "weex$tap": function($event) {
+          $event.stopPropagation();
+          _vm.go2Key(item.title)
+        }
+      },
+      nativeOn: {
+        "weex$tap": function($event) {
+          $event.stopPropagation();
           _vm.go2Key(item.title)
         }
       }
     }, [_vm._v(_vm._s(item.title))])
   })) : _vm._e(), _vm._v(" "), (_vm.popKeyShow) ? _c('div', {
-    staticClass: "index-list-pop",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_c('text', {
-    staticClass: "list-pop-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "index-list-pop weex-ct",
+    attrs: {}
+  }, [_c('p', {
+    staticClass: "list-pop-text weex-el weex-text",
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.popKey))])]) : _vm._e()], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -14115,13 +14604,15 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
+    staticClass: " weex-ct",
     class: ['wxc-tag', 'border-' + _vm.tagTheme],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.newTheme.divStyle))
-  }, [_c('text', {
+    style: (_vm._px2rem(_vm.newTheme.divStyle, 75)),
+    attrs: {}
+  }, [_c('p', {
+    staticClass: " weex-el weex-text",
     class: ['tag-text', _vm.tagTheme],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.newTheme.textStyle))
+    style: (_vm._processExclusiveStyle(_vm.newTheme.textStyle, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.tagValue))])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -14138,88 +14629,96 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrTimeWrapStyle))
+    staticClass: " weex-ct",
+    style: (_vm._px2rem(_vm.mrTimeWrapStyle, 75)),
+    attrs: {}
   }, [_c('div', {
-    staticClass: "time-dot-wrap",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "time-dot-wrap weex-ct",
+    attrs: {}
   }, [(_vm.tplIndexOfDays !== -1) ? _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrTimeBoxStyle)),
+    staticClass: " weex-ct",
+    style: (_vm._px2rem(_vm.mrTimeBoxStyle, 75)),
     attrs: {
       "accessible": true,
       "aria-label": ((_vm.countDownData.day) + "天")
     }
-  }, [_c('text', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrTimeTextStyle))
+  }, [_c('p', {
+    staticClass: " weex-el weex-text",
+    style: (_vm._processExclusiveStyle(_vm.mrTimeTextStyle, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.countDownData.day))])]) : _vm._e(), _vm._v(" "), (_vm.tplIndexOfDays !== -1) ? _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrDotBoxStyle)),
+    staticClass: " weex-ct",
+    style: (_vm._px2rem(_vm.mrDotBoxStyle, 75)),
     attrs: {
       "aria-hidden": true
     }
-  }, [_c('text', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrDotTextStyle))
+  }, [_c('p', {
+    staticClass: " weex-el weex-text",
+    style: (_vm._processExclusiveStyle(_vm.mrDotTextStyle, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.getDot(_vm.tplIndexOfDays, _vm.tplIndexOfHours)))])]) : _vm._e(), _vm._v(" "), (_vm.tplIndexOfHours !== -1) ? _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrTimeBoxStyle)),
+    staticClass: " weex-ct",
+    style: (_vm._px2rem(_vm.mrTimeBoxStyle, 75)),
     attrs: {
       "accessible": true,
       "aria-label": ((_vm.countDownData.hour) + "时")
     }
-  }, [_c('text', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrTimeTextStyle))
+  }, [_c('p', {
+    staticClass: " weex-el weex-text",
+    style: (_vm._processExclusiveStyle(_vm.mrTimeTextStyle, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.countDownData.hour))])]) : _vm._e(), _vm._v(" "), (_vm.tplIndexOfHours !== -1) ? _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrDotBoxStyle)),
+    staticClass: " weex-ct",
+    style: (_vm._px2rem(_vm.mrDotBoxStyle, 75)),
     attrs: {
       "aria-hidden": true
     }
-  }, [_c('text', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrDotTextStyle))
+  }, [_c('p', {
+    staticClass: " weex-el weex-text",
+    style: (_vm._processExclusiveStyle(_vm.mrDotTextStyle, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.getDot(_vm.tplIndexOfHours, _vm.tplIndexOfMinutes)))])]) : _vm._e(), _vm._v(" "), (_vm.tplIndexOfMinutes !== -1) ? _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrTimeBoxStyle)),
+    staticClass: " weex-ct",
+    style: (_vm._px2rem(_vm.mrTimeBoxStyle, 75)),
     attrs: {
       "accessible": true,
       "aria-label": ((_vm.countDownData.minute) + "分")
     }
-  }, [_c('text', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrTimeTextStyle))
+  }, [_c('p', {
+    staticClass: " weex-el weex-text",
+    style: (_vm._processExclusiveStyle(_vm.mrTimeTextStyle, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.countDownData.minute))])]) : _vm._e(), _vm._v(" "), (_vm.tplIndexOfMinutes !== -1) ? _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrDotBoxStyle)),
+    staticClass: " weex-ct",
+    style: (_vm._px2rem(_vm.mrDotBoxStyle, 75)),
     attrs: {
       "aria-hidden": true
     }
-  }, [_c('text', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrDotTextStyle))
+  }, [_c('p', {
+    staticClass: " weex-el weex-text",
+    style: (_vm._processExclusiveStyle(_vm.mrDotTextStyle, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.getDot(_vm.tplIndexOfMinutes, _vm.tplIndexOfSeconds)))])]) : _vm._e(), _vm._v(" "), (_vm.tplIndexOfSeconds !== -1) ? _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrTimeBoxStyle)),
+    staticClass: " weex-ct",
+    style: (_vm._px2rem(_vm.mrTimeBoxStyle, 75)),
     attrs: {
       "accessible": true,
       "aria-label": ((_vm.countDownData.second) + "秒")
     }
-  }, [_c('text', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrTimeTextStyle))
+  }, [_c('p', {
+    staticClass: " weex-el weex-text",
+    style: (_vm._processExclusiveStyle(_vm.mrTimeTextStyle, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.countDownData.second))])]) : _vm._e(), _vm._v(" "), (_vm.tplIndexOfSeconds !== -1) ? _c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrDotBoxStyle)),
+    staticClass: " weex-ct",
+    style: (_vm._px2rem(_vm.mrDotBoxStyle, 75)),
     attrs: {
       "aria-hidden": true
     }
-  }, [_c('text', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.mrDotTextStyle))
+  }, [_c('p', {
+    staticClass: " weex-el weex-text",
+    style: (_vm._processExclusiveStyle(_vm.mrDotTextStyle, 75, 'text')),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.getDot(_vm.tplIndexOfSeconds, -1)))])]) : _vm._e()])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -14236,83 +14735,86 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wxc-tab-page",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      height: (_vm.tabPageHeight) + 'px',
+    staticClass: "wxc-tab-page weex-ct",
+    style: ({
       backgroundColor: _vm.wrapBgColor
-    }))
+    }),
+    attrs: {}
   }, [_c('div', {
     ref: "tab-page-wrap",
-    staticClass: "tab-page-wrap",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      height: (_vm.tabPageHeight - _vm.tabStyles.height) + 'px'
-    }))
+    staticClass: "tab-page-wrap weex-ct",
+    attrs: {}
   }, [_c('div', {
     ref: "tab-container",
-    staticClass: "tab-container",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
-  }, [_vm._t("default")], 2)]), _vm._v(" "), _c('div', {
-    staticClass: "tab-title-list",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+    staticClass: "tab-container weex-ct",
+    attrs: {}
+  }, [_vm._t("default", null, {})], 2)]), _vm._v(" "), _c('div', {
+    staticClass: "tab-title-list weex-ct",
+    style: ({
       backgroundColor: _vm.tabStyles.bgColor,
-      height: (_vm.tabStyles.height) + 'px'
-    }))
+      height: _vm._px2rem(_vm.tabStyles.height + 'px', 75)
+    }),
+    attrs: {}
   }, _vm._l((_vm.tabTitles), function(v, index) {
     return _c('div', {
       key: index,
       ref: 'wxc-tab-title-' + index,
       refInFor: true,
-      staticClass: "title-item",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
-        width: _vm.tabStyles.width + 'px',
-        height: _vm.tabStyles.height + 'px',
+      staticClass: "title-item weex-ct",
+      style: ({
+        width: _vm._px2rem(_vm.tabStyles.width + 'px', 75),
+        height: _vm._px2rem(_vm.tabStyles.height + 'px', 75),
         backgroundColor: _vm.currentPage == index ? _vm.tabStyles.activeBgColor : _vm.tabStyles.bgColor
-      })),
+      }),
       attrs: {
         "accessible": true,
-        "aria-label": ("" + (v.title?v.title:'标签'+index))
+        "aria-label": ("" + (v.title?v.title:'标签'+index)),
+        "data-evt-click": ""
       },
       on: {
-        "click": function($event) {
+        "weex$tap": function($event) {
+          $event.stopPropagation();
+          _vm.setPage(index, v.url)
+        }
+      },
+      nativeOn: {
+        "weex$tap": function($event) {
+          $event.stopPropagation();
           _vm.setPage(index, v.url)
         }
       }
-    }, [(_vm.titleType === 'icon') ? _c('image', {
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
-        width: _vm.tabStyles.iconWidth + 'px',
-        height: _vm.tabStyles.iconHeight + 'px'
-      })),
+    }, [(_vm.titleType === 'icon') ? _c('figure', {
+      staticClass: " weex-el weex-img",
+      staticStyle: {
+        "background-size": "100%100%"
+      },
+      style: ({
+        width: _vm._px2rem(_vm.tabStyles.iconWidth + 'px', 75),
+        height: _vm._px2rem(_vm.tabStyles.iconHeight + 'px', 75)
+      }),
       attrs: {
-        "src": _vm.currentPage == index ? v.activeIcon : v.icon
+        "src": _vm.currentPage == index ? v.activeIcon : v.icon,
+        "data-img-src": _vm.currentPage == index ? v.activeIcon : v.icon
       }
-    }) : _vm._e(), _vm._v(" "), _c('text', {
-      staticClass: "tab-text",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle({
-        fontSize: _vm.tabStyles.fontSize + 'px',
-        fontWeight: (_vm.currentPage == index && _vm.tabStyles.isActiveTitleBold) ? 'bold' : 'normal',
+    }) : _vm._e(), _vm._v(" "), _c('p', {
+      staticClass: "tab-text weex-el weex-text",
+      style: ({
+        fontSize: _vm._px2rem(_vm.tabStyles.fontSize + 'px', 75),
+        fontWeight: _vm.currentPage == index && _vm.tabStyles.isActiveTitleBold ? 'bold' : 'normal',
         color: _vm.currentPage == index ? _vm.tabStyles.activeTitleColor : _vm.tabStyles.titleColor,
-        paddingLeft: _vm.tabStyles.textPaddingLeft + 'px',
-        paddingRight: _vm.tabStyles.textPaddingRight + 'px'
-      }))
+        paddingLeft: _vm._px2rem(_vm.tabStyles.textPaddingLeft + 'px', 75),
+        paddingRight: _vm._px2rem(_vm.tabStyles.textPaddingRight + 'px', 75)
+      }),
+      attrs: {}
     }, [_vm._v(_vm._s(v.title))]), _vm._v(" "), (v.badge) ? _c('div', {
-      staticClass: "desc-tag",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
-    }, [_c('text', {
-      staticClass: "desc-text",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
+      staticClass: "desc-tag weex-ct",
+      attrs: {}
+    }, [_c('p', {
+      staticClass: "desc-text weex-el weex-text",
+      attrs: {}
     }, [_vm._v(_vm._s(v.badge))])]) : _vm._e(), _vm._v(" "), (v.dot && !v.badge) ? _c('div', {
-      staticClass: "dot",
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined))
+      staticClass: "dot weex-ct",
+      attrs: {}
     }) : _vm._e()])
   }))])
 },staticRenderFns: []}
@@ -14330,55 +14832,77 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return (_vm.show) ? _c('div', {
-    staticClass: "wxc-minibar",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+    staticClass: "wxc-minibar weex-ct",
+    style: ({
       backgroundColor: _vm.backgroundColor
-    }))
+    }),
+    attrs: {}
   }, [_c('div', {
-    staticClass: "left",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "left weex-ct",
     attrs: {
       "aria-label": "返回",
-      "accessible": true
+      "accessible": true,
+      "data-evt-click": ""
     },
     on: {
-      "click": _vm.leftButtonClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.leftButtonClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.leftButtonClicked($event)
+      }
     }
-  }, [_c('image', {
-    staticClass: "left-button",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+  }, [_c('figure', {
+    staticClass: "left-button weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
-      "src": _vm.leftButton
+      "src": _vm.leftButton,
+      "data-img-src": _vm.leftButton
     }
-  })]), _vm._v(" "), _c('text', {
-    staticClass: "middle-title",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+  })]), _vm._v(" "), _c('p', {
+    staticClass: "middle-title weex-el weex-text",
+    style: ({
       color: _vm.textColor
-    }))
+    }),
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.title))]), _vm._v(" "), _c('div', {
-    staticClass: "right",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: "right weex-ct",
+    attrs: {
+      "data-evt-click": ""
+    },
     on: {
-      "click": _vm.rightButtonClicked
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.rightButtonClicked($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        _vm.rightButtonClicked($event)
+      }
     }
-  }, [(_vm.rightText) ? _c('text', {
-    staticClass: "right-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
+  }, [(_vm.rightText) ? _c('p', {
+    staticClass: "right-text weex-el weex-text",
+    style: ({
       color: _vm.textColor
-    }))
-  }, [_vm._v(_vm._s(_vm.rightText))]) : _vm._e(), _vm._v(" "), (_vm.rightButton) ? _c('image', {
-    staticClass: "right-button",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    }),
+    attrs: {}
+  }, [_vm._v(_vm._s(_vm.rightText))]) : _vm._e(), _vm._v(" "), (_vm.rightButton) ? _c('figure', {
+    staticClass: "right-button weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
     attrs: {
       "src": _vm.rightButton,
-      "aria-hidden": true
+      "aria-hidden": true,
+      "data-img-src": _vm.rightButton
     }
   }) : _vm._e()])]) : _vm._e()
 },staticRenderFns: []}
@@ -14396,21 +14920,23 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "wxc-lottery-rain",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.wrapStyle))
+    staticClass: "wxc-lottery-rain weex-ct",
+    style: (_vm._px2rem(_vm.wrapStyle, 75)),
+    attrs: {}
   }, _vm._l((_vm.picList), function(src, i) {
     return _c('rain-item', {
       key: "i",
       ref: ("rain-item-" + i),
       refInFor: true,
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined)),
       attrs: {
         "src": src,
-        "rain-id": i
+        "rain-id": i,
+        "data-evt-wxcLotteryRainCaught": ""
       },
       on: {
+        "wxcLotteryRainCaught": _vm.wxcLotteryRainCaught
+      },
+      nativeOn: {
         "wxcLotteryRainCaught": _vm.wxcLotteryRainCaught
       }
     })
@@ -14430,13 +14956,10 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [(_vm.isNotEmptyArray) ? _c('div', {
-    staticClass: "wxc-rich-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+    staticClass: "wxc-rich-text weex-ct",
+    attrs: {}
   }, _vm._l((_vm.configList), function(v) {
     return _c('div', [(v.type == 'text' && v.value) ? _c('wxc-rich-text-text', {
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined)),
       attrs: {
         "text-value": v.value,
         "text-style": v.style,
@@ -14444,8 +14967,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "text-theme": v.theme
       }
     }) : _vm._e(), _vm._v(" "), (v.type == 'link' && v.href && v.value) ? _c('wxc-rich-text-link', {
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined)),
       attrs: {
         "link-value": v.value,
         "link-href": v.href,
@@ -14454,25 +14975,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "link-theme": v.theme
       }
     }) : _vm._e(), _vm._v(" "), (v.type == 'icon' && v.src) ? _c('wxc-rich-text-icon', {
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined)),
       attrs: {
         "icon-src": v.src,
         "icon-style": v.style
       }
     }) : _vm._e(), _vm._v(" "), (v.type == 'tag' && v.value) ? _c('wxc-rich-text-tag', {
-      staticStyle: _vm.$processStyle(undefined),
-      style: (_vm.$processStyle(undefined)),
       attrs: {
         "tag-value": v.value,
         "tag-theme": v.theme,
         "tag-style": v.style
       }
     }) : _vm._e()], 1)
-  })) : _vm._e(), _vm._v(" "), (_vm.isString) ? _c('text', {
-    staticClass: "default-text",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined))
+  })) : _vm._e(), _vm._v(" "), (_vm.isString) ? _c('p', {
+    staticClass: "default-text weex-el weex-text",
+    attrs: {}
   }, [_vm._v(_vm._s(_vm.configList))]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
@@ -14489,34 +15005,57 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', [_c('div', {
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
+    staticClass: " weex-ct",
+    attrs: {
+      "data-evt-touchend": ""
+    },
     on: {
-      "touchend": _vm.handleTouchEnd
+      "touchend": function($event) {
+        $event.stopPropagation();
+        _vm.handleTouchEnd($event)
+      }
+    },
+    nativeOn: {
+      "touchend": function($event) {
+        $event.stopPropagation();
+        _vm.handleTouchEnd($event)
+      }
     }
   }, [(_vm.show) ? _c('wxc-overlay', _vm._b({
     ref: "overlay",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(undefined)),
     attrs: {
-      "show": _vm.haveOverlay && _vm.isOverShow
+      "show": _vm.haveOverlay && _vm.isOverShow,
+      "data-evt-wxcOverlayBodyClicking": ""
     },
     on: {
+      "wxcOverlayBodyClicking": _vm.wxcOverlayBodyClicking
+    },
+    nativeOn: {
       "wxcOverlayBodyClicking": _vm.wxcOverlayBodyClicking
     }
   }, 'wxc-overlay', _vm.overlayCfg, false)) : _vm._e()], 1), _vm._v(" "), (_vm.show) ? _c('div', {
     ref: "wxc-popup",
+    staticClass: " weex-ct",
     class: ['wxc-popup', _vm.pos],
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle(_vm.padStyle)),
+    style: (_vm._px2rem(_vm.padStyle, 75)),
     attrs: {
       "height": _vm._height,
-      "hack": _vm.isNeedShow
+      "hack": _vm.isNeedShow,
+      "data-evt-click": ""
     },
     on: {
-      "click": function () {}
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        (function () {})($event)
+      }
+    },
+    nativeOn: {
+      "weex$tap": function($event) {
+        $event.stopPropagation();
+        (function () {})($event)
+      }
     }
-  }, [_vm._t("default")], 2) : _vm._e()])
+  }, [_vm._t("default", null, {})], 2) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -14531,18 +15070,25 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('image', {
-    staticClass: "wxc-image",
-    staticStyle: _vm.$processStyle(undefined),
-    style: (_vm.$processStyle({
-      width: _vm.computedStyle.width,
-      height: _vm.computedStyle.height
-    })),
+  return _c('figure', {
+    staticClass: "wxc-image weex-el weex-img",
+    staticStyle: {
+      "background-size": "100%100%"
+    },
+    style: ({
+      width: _vm._px2rem(_vm.computedStyle.width, 75),
+      height: _vm._px2rem(_vm.computedStyle.height, 75)
+    }),
     attrs: {
       "src": _vm.iconSrc,
-      "aria-hidden": true
+      "aria-hidden": true,
+      "data-img-src": _vm.iconSrc,
+      "data-evt-load": ""
     },
     on: {
+      "load": _vm.onLoad
+    },
+    nativeOn: {
       "load": _vm.onLoad
     }
   })
@@ -14566,13 +15112,13 @@ var content = __webpack_require__(99);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("4ae4a80b", content, false);
+var update = __webpack_require__(2)("d3199c88", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f8938e0\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f8938e0\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f8938e0\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0f8938e0\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14592,13 +15138,13 @@ var content = __webpack_require__(100);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("6dbc64b2", content, false);
+var update = __webpack_require__(2)("02edc435", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-15fdfbd4\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-15fdfbd4\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-15fdfbd4\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-15fdfbd4\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14618,13 +15164,13 @@ var content = __webpack_require__(101);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("735e8332", content, false);
+var update = __webpack_require__(2)("57864040", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-16b9703a\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-16b9703a\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-16b9703a\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-16b9703a\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14644,13 +15190,13 @@ var content = __webpack_require__(102);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("df629a96", content, false);
+var update = __webpack_require__(2)("77a829d2", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1797400a\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1797400a\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1797400a\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1797400a\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14670,13 +15216,13 @@ var content = __webpack_require__(103);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("648e08b8", content, false);
+var update = __webpack_require__(2)("db2cf1fa", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1983b04c\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1983b04c\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1983b04c\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1983b04c\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14696,13 +15242,13 @@ var content = __webpack_require__(104);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("1d8f9d75", content, false);
+var update = __webpack_require__(2)("c58231dc", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f2af058\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f2af058\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f2af058\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f2af058\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14722,13 +15268,13 @@ var content = __webpack_require__(105);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("fc2ed14a", content, false);
+var update = __webpack_require__(2)("6d14da10", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2289217e\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./option.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2289217e\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./option.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2289217e\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./option.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2289217e\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./option.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14748,13 +15294,13 @@ var content = __webpack_require__(106);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("5a57b331", content, false);
+var update = __webpack_require__(2)("6f01ac54", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-254bbf80\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-254bbf80\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-254bbf80\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-254bbf80\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14774,13 +15320,13 @@ var content = __webpack_require__(107);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("61fc335c", content, false);
+var update = __webpack_require__(2)("3cf70f6a", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-289df085\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-289df085\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-289df085\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-289df085\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14800,13 +15346,13 @@ var content = __webpack_require__(108);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("3dd3c0b6", content, false);
+var update = __webpack_require__(2)("5c38d7b1", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3472bf4f\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3472bf4f\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3472bf4f\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3472bf4f\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14826,13 +15372,13 @@ var content = __webpack_require__(109);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("c18c8bb4", content, false);
+var update = __webpack_require__(2)("7b141f7e", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3681adcf\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3681adcf\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3681adcf\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3681adcf\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14852,13 +15398,13 @@ var content = __webpack_require__(110);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("48c240be", content, false);
+var update = __webpack_require__(2)("772ea134", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-36f80855\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-36f80855\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-36f80855\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-36f80855\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14878,13 +15424,13 @@ var content = __webpack_require__(111);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("dd605034", content, false);
+var update = __webpack_require__(2)("6b75cafe", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3b9aece2\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3b9aece2\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3b9aece2\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3b9aece2\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14904,13 +15450,13 @@ var content = __webpack_require__(112);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("1a97649a", content, false);
+var update = __webpack_require__(2)("38c43714", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3c51aaad\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3c51aaad\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3c51aaad\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3c51aaad\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14930,13 +15476,13 @@ var content = __webpack_require__(113);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("89eb6dfc", content, false);
+var update = __webpack_require__(2)("05abd436", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3c9bb53e\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3c9bb53e\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3c9bb53e\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3c9bb53e\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14956,13 +15502,13 @@ var content = __webpack_require__(114);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("7d445bb8", content, false);
+var update = __webpack_require__(2)("2ab05722", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f00baac\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f00baac\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f00baac\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f00baac\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -14982,13 +15528,13 @@ var content = __webpack_require__(115);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("0bf0bdf4", content, false);
+var update = __webpack_require__(2)("08083ab3", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4edbf20e\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4edbf20e\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4edbf20e\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4edbf20e\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15008,13 +15554,13 @@ var content = __webpack_require__(116);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("6a407608", content, false);
+var update = __webpack_require__(2)("1b97301f", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-50bc0536\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-50bc0536\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-50bc0536\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-50bc0536\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15034,13 +15580,13 @@ var content = __webpack_require__(117);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("1f6ba10f", content, false);
+var update = __webpack_require__(2)("00670838", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-56150864\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-56150864\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-56150864\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-56150864\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15060,13 +15606,13 @@ var content = __webpack_require__(118);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("d9ae667a", content, false);
+var update = __webpack_require__(2)("673b9604", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-61efacbc\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-61efacbc\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-61efacbc\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-61efacbc\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15086,13 +15632,13 @@ var content = __webpack_require__(119);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("1b8a76cd", content, false);
+var update = __webpack_require__(2)("425782ba", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f52a706\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f52a706\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f52a706\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f52a706\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15112,13 +15658,13 @@ var content = __webpack_require__(120);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("7171a546", content, false);
+var update = __webpack_require__(2)("2827d77a", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f935647\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./item.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f935647\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./item.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f935647\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./item.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6f935647\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./item.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15138,13 +15684,13 @@ var content = __webpack_require__(121);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("488d6806", content, false);
+var update = __webpack_require__(2)("b93d70ec", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-702739a6\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-702739a6\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-702739a6\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-702739a6\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15164,13 +15710,13 @@ var content = __webpack_require__(122);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("7ff03cfa", content, false);
+var update = __webpack_require__(2)("0c114c2c", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-72879af8\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-text.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-72879af8\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-text.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-72879af8\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-text.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-72879af8\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-text.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15190,13 +15736,13 @@ var content = __webpack_require__(123);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("3c216f8e", content, false);
+var update = __webpack_require__(2)("5c6d684c", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7513c695\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./rain-item.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7513c695\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./rain-item.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7513c695\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./rain-item.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7513c695\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./rain-item.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15216,13 +15762,13 @@ var content = __webpack_require__(124);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("704a30b4", content, false);
+var update = __webpack_require__(2)("4d556ff3", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-76fd3d24\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-76fd3d24\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-76fd3d24\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-76fd3d24\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15242,13 +15788,13 @@ var content = __webpack_require__(125);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("04117f26", content, false);
+var update = __webpack_require__(2)("205b051a", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7a03baeb\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7a03baeb\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7a03baeb\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7a03baeb\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15268,13 +15814,13 @@ var content = __webpack_require__(126);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("f41d84b0", content, false);
+var update = __webpack_require__(2)("ae421702", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8a0583fa\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8a0583fa\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8a0583fa\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8a0583fa\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15294,13 +15840,13 @@ var content = __webpack_require__(127);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("5cc2ff08", content, false);
+var update = __webpack_require__(2)("4737437a", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8c80ddc2\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-tag.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8c80ddc2\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-tag.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8c80ddc2\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-tag.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8c80ddc2\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-tag.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15320,13 +15866,13 @@ var content = __webpack_require__(128);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("abe4997a", content, false);
+var update = __webpack_require__(2)("04dfdf84", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8dcc12f8\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8dcc12f8\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8dcc12f8\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8dcc12f8\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15346,13 +15892,13 @@ var content = __webpack_require__(129);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("ccccea3e", content, false);
+var update = __webpack_require__(2)("5a68c7b4", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9576a0a4\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9576a0a4\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9576a0a4\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9576a0a4\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15372,13 +15918,13 @@ var content = __webpack_require__(130);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("64015d23", content, false);
+var update = __webpack_require__(2)("0adf79a4", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-991a6e22\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-991a6e22\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-991a6e22\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-991a6e22\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15398,13 +15944,13 @@ var content = __webpack_require__(131);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("0391ba56", content, false);
+var update = __webpack_require__(2)("10052a11", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a7a9618a\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a7a9618a\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a7a9618a\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-a7a9618a\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15424,13 +15970,13 @@ var content = __webpack_require__(132);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("89d92694", content, false);
+var update = __webpack_require__(2)("bb58a89e", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c98168de\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c98168de\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c98168de\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-c98168de\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15450,13 +15996,13 @@ var content = __webpack_require__(133);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("e480c6cc", content, false);
+var update = __webpack_require__(2)("29a02166", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ca872182\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ca872182\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ca872182\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-ca872182\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./index.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -15476,13 +16022,13 @@ var content = __webpack_require__(134);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(2)("11321d46", content, false);
+var update = __webpack_require__(2)("e3b5c00c", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-fb43e778\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-icon.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-fb43e778\",\"scoped\":true,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-icon.vue");
+   module.hot.accept("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-fb43e778\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-icon.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js?sourceMap!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-fb43e778\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./wxc-rich-text-icon.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
