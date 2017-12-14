@@ -218,6 +218,15 @@ var Utils = {
     isAlipayWeb: function isAlipayWeb() {
       return Utils.env.isAlipay() && Utils.env.isWeb();
     },
+    isTmall: function isTmall() {
+      var appName = weex.config.env.appName;
+
+      return (/(tm|tmall|天猫)/i.test(appName)
+      );
+    },
+    isAliWeex: function isAliWeex() {
+      return Utils.env.isTmall() || Utils.env.isTrip() || Utils.env.isTaobao();
+    },
     supportsEB: function supportsEB() {
       var weexVersion = weex.config.env.weexVersion || '0';
       var isHighWeex = Utils.compareVersion(weexVersion, '0.10.1.4') && (Utils.env.isIOS() || Utils.env.isAndroid());
@@ -4393,7 +4402,7 @@ exports.default = {
     },
     type: {
       type: String,
-      default: 'taobao'
+      default: 'red'
     },
     disabled: {
       type: Boolean,
