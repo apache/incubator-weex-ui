@@ -22,8 +22,8 @@ npm --version
    v1.1.0-beta.7
  - weexpack : v0.4.7-beta.26
  - weex-builder : v0.2.13-beta.4
- - weex-devtool : v0.3.2-beta.7
- - weex-previewer : v1.3.13-beta.10
+ - weex-devtool : v0.3.2-beta.11
+ - weex-previewer : v1.3.13-beta.13
  - toolkit-repair : v0.0.5
 ```
 
