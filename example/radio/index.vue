@@ -5,7 +5,6 @@
       <title title="wxc-radio"></title>
       <category title="Radio可选"></category>
       <wxc-radio :list="list"
-                 :config="config"
                  @wxcRadioListChecked="wxcRadioListChecked"></wxc-radio>
       <text class="radio-text">checkedItem: {{checkedInfo}}</text>
       <category title="Radio不可选"></category>
