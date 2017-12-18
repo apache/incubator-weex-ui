@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.3.8
+- [+] The [wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md) and [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md) support for `iconFont`.
+- [!] Fixed the custom configuration bug about [wxc-radio](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-radio/README.md). [issue 89](https://github.com/alibaba/weex-ui/issues/89)
+- [!] Fixed the blank display about  [wxc-button](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/README.md).
+
 ## 0.3.7
 - [!] Fixed the height calculation error about[wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md).
 - [+] Util function Enhancement.
