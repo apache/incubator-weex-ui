@@ -25,6 +25,18 @@ const Utils = {
   isEmptyObject (obj) {
     return Object.keys(obj).length === 0 && obj.constructor === Object;
   },
+  decodeIconFont (text) {
+    // 正则匹配 图标和文字混排 eg: 我去上学校&#xe600;,天天不&#xe600;迟到
+    const regExp = /&#x[a-z]\d{3,4};?/;
+    if (regExp.test(text)) {
+      return text.replace(new RegExp(regExp, 'g'), function (iconText) {
+        const replace = iconText.replace(/&#x/, '0x').replace(/;$/, '');
+        return String.fromCharCode(replace);
+      });
+    } else {
+      return text;
+    }
+  },
   mergeDeep (target, ...sources) {
     if (!sources.length) return target;
     const source = sources.shift();
@@ -106,7 +118,7 @@ const Utils = {
       return Utils.env.isAlipay() && Utils.env.isWeb();
     },
     isTmall () {
-      let { appName } = weex.config.env;
+      const { appName } = weex.config.env;
       return /(tm|tmall|天猫)/i.test(appName);
     },
     isAliWeex () {

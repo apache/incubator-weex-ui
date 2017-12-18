@@ -3,7 +3,7 @@
 > Weex 版本底部 tab-bar 组件
 
 #### 规则
-- 用于底部 Tab 切换页面，目前支持 **icon 和文字**形式的底栏
+- 用于底部 Tab 切换页面，目前支持 **icon 、text 、iconFont**形式的底栏
 
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/tab-bar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Ftab-bar%2Findex.weex.js)
 
@@ -77,13 +77,50 @@
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
 | tab-titles | `Array` |`Y`| `[]` | Tab显示 [配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L7)|
-| title-type | `String` |`N`| `icon` | 类型 `icon`/`text`|
+| title-type | `String` |`N`| `icon` | 类型 `icon`/`text`/`iconFont`(注1)|
 | tab-styles | `Array` |`N`| `[]` |  底部 Tab [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
 | tab-page-height | `Number` |`N`| `1334` |Tab page 页面的高度 |
 | is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时 tab 配置 url 参数即可跳出 |
 | duration | `Number` |`N`| `300` | 页面切换动画的时间 |
 | timing-function | `String` |`N`| `-` | 页面切换动画函数 |
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|
+
+### 注1：使用 iconFont
+
+- 在 Weex Ui 0.3.8以后，我们可以使用 iconFont 来代替原有 tab title 中的图片配置，像下面这个配置即可：
+ 
+```
+ // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L51
+  tabTitles: [
+    {
+      title: 'Home',
+      codePoint: '&#xe608;'
+    },
+    {
+      title: 'Message',
+      codePoint: '&#xe752;',
+      badge: 5
+    },
+    // ....
+  ],
+  // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L72
+  tabIconFontStyles: {
+      bgColor: '#FFFFFF',
+      titleColor: '#666666',
+      activeTitleColor: '#3D3D3D',
+      activeBgColor: '#FFFFFF',
+      isActiveTitleBold: true,
+      width: 160,
+      height: 120,
+      fontSize: 24,
+      textPaddingLeft: 10,
+      textPaddingRight: 10,
+      iconFontSize: 50,
+      iconFontColor: '#333333',
+      activeIconFontColor: 'red',
+      iconFontUrl: '//at.alicdn.com/t/font_501019_mauqv15evc1pp66r.ttf'
+    }
+```
 
 ### 主动触发设置页面
 

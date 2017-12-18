@@ -25,6 +25,11 @@
         <image :src="currentPage == index ? v.activeIcon : v.icon"
                v-if="titleType === 'icon'"
                :style="{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}"></image>
+
+        <text class="icon-font"
+              v-if="titleType === 'iconFont' && v.codePoint"
+              :style="{fontSize: tabStyles.iconFontSize+'px', color: currentPage == index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{decode(v.codePoint)}}</text>
+
         <text
           :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
           class="tab-text">{{v.title}}</text>
@@ -41,8 +46,8 @@
   .wxc-tab-page {
     position: absolute;
     top: 0;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     bottom: 0;
     flex-direction: column;
   }
@@ -94,7 +99,7 @@
     padding-right: 6px;
   }
 
-  .dot{
+  .dot {
     width: 12px;
     height: 12px;
     border-bottom-right-radius: 12px;
@@ -106,15 +111,22 @@
     right: 40px;
     background-color: #FF5E00;
   }
+
   .desc-text {
     font-size: 18px;
     color: #ffffff;
+  }
+
+  .icon-font {
+    margin-bottom: 8px;
+    font-family: wxcIconFont;
   }
 </style>
 
 <script>
   const dom = weex.requireModule('dom');
   const animation = weex.requireModule('animation');
+  import Utils from '../utils'
 
   export default {
     props: {
@@ -167,7 +179,19 @@
       currentPage: 0,
       translateX: 0
     }),
+    created () {
+      const { titleType, tabStyles } = this;
+      if (titleType === 'iconFont' && tabStyles.iconFontUrl) {
+        dom.addRule('fontFace', {
+          'fontFamily': "wxcIconFont",
+          'src': `url(${tabStyles.iconFontUrl})`
+        });
+      }
+    },
     methods: {
+      decode (text) {
+        return Utils.decodeIconFont(text)
+      },
       next () {
         let page = this.currentPage;
         if (page < this.tabTitles.length - 1) {

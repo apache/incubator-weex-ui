@@ -9,7 +9,7 @@
   "scripts": {
     "build": "webpack --progress",
     "watch": "webpack --progress --watch",
-    "serve": "anywhere -d build/example/ -p 8080",
+    "serve": "anywhere -d build/example/ -p 8888",
     "start": "npm run build && (npm run serve & npm run watch)"
   },
   "keywords": [
