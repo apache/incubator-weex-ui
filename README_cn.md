@@ -108,7 +108,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
   ]
 }
 ```
-更多详细可见：[在 weex-toolkit 创建的项目中使用 Weex Ui](/docs/with-weex-toolkit_cn.md)
+更多详细可见：[在 weex-toolkit 创建的项目中使用 Weex Ui](/docs/with-weex-toolkit_cn.md)。
 
 ### 更多
 - 如果你的`webpack.config.js`中 babel-loader 配置有对 node_modules 进行 exclude 处理，需要将 weex-ui 包过滤才可以使用 `exclude: /node_modules(?!\/.*(weex).*)/`。

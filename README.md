@@ -119,7 +119,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 }
 ```
 
-More details can be found in [How to use with weex-toolkit](/docs/with-weex-toolkit.md)
+More details can be found in [How to use with weex-toolkit](/docs/with-weex-toolkit.md).
 
 ### More
 - If `webpack.config.js`  babel-loader has a exclude for node_modules, Please turn on for week-ui `  exclude: /node_modules(?!\/.*(weex).*)/`.

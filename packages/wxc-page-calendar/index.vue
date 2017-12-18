@@ -3,8 +3,7 @@
 <!-- Updated by Tw93 on 17/11/22. -->
 
 <template>
-  <div class="wxc-page-calendar"
-       ref="pageCalendar">
+  <div class="wxc-page-calendar" ref="pageCalendar">
     <wxc-minibar :show="showTitle"
                  v-bind="minibarCfg"
                  :use-default-return="false"
