@@ -4,6 +4,7 @@
 <template>
   <div>
     <wxc-radio v-for="(item,i) in updateList"
+               :config="config"
                v-bind="item"
                @wxcRadioItemChecked="wxcRadioItemChecked(i,$event)"
                :key="i"></wxc-radio>
@@ -23,6 +24,10 @@
       list: {
         type: Array,
         default: () => ([])
+      },
+      config: {
+        type: Object,
+        default: () => ({})
       }
     },
     data: () => ({
