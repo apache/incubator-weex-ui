@@ -124,6 +124,18 @@ var Utils = {
   isEmptyObject: function isEmptyObject(obj) {
     return Object.keys(obj).length === 0 && obj.constructor === Object;
   },
+  decodeIconFont: function decodeIconFont(text) {
+    // 正则匹配 图标和文字混排 eg: 我去上学校&#xe600;,天天不&#xe600;迟到
+    var regExp = /&#x[a-z]\d{3,4};?/;
+    if (regExp.test(text)) {
+      return text.replace(new RegExp(regExp, 'g'), function (iconText) {
+        var replace = iconText.replace(/&#x/, '0x').replace(/;$/, '');
+        return String.fromCharCode(replace);
+      });
+    } else {
+      return text;
+    }
+  },
   mergeDeep: function mergeDeep(target) {
     for (var _len = arguments.length, sources = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
       sources[_key - 1] = arguments[_key];
@@ -7468,7 +7480,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 //
 //
 //
-//
 
 var isWeb = _utils2.default.env.isWeb();
 
@@ -8181,6 +8192,12 @@ exports.default = {
       default: function _default() {
         return [];
       }
+    },
+    config: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
     }
   },
   data: function data() {
@@ -8225,6 +8242,7 @@ exports.default = {
     }
   }
 }; //
+//
 //
 //
 //
@@ -10663,6 +10681,24 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _utils = __webpack_require__(0);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -10780,7 +10816,6 @@ Object.defineProperty(exports, "__esModule", {
 
 var dom = weex.requireModule('dom');
 var animation = weex.requireModule('animation');
-
 exports.default = {
   props: {
     tabTitles: {
@@ -10838,7 +10873,22 @@ exports.default = {
       translateX: 0
     };
   },
+  created: function created() {
+    var titleType = this.titleType,
+        tabStyles = this.tabStyles;
+
+    if (titleType === 'iconFont' && tabStyles.iconFontUrl) {
+      dom.addRule('fontFace', {
+        'fontFamily': "wxcIconFont",
+        'src': 'url(' + tabStyles.iconFontUrl + ')'
+      });
+    }
+  },
+
   methods: {
+    decode: function decode(text) {
+      return _utils2.default.decodeIconFont(text);
+    },
     next: function next() {
       var page = this.currentPage;
       if (page < this.tabTitles.length - 1) {
@@ -10885,7 +10935,7 @@ exports.default = {
       this.$emit('wxcTabBarCurrentTabSelected', { page: page });
     },
     jumpOut: function jumpOut(url) {
-      url && Utils.goToH5Page(url);
+      url && _utils2.default.goToH5Page(url);
     },
     _animateTransformX: function _animateTransformX(page, animated) {
       var duration = this.duration,
@@ -10923,6 +10973,17 @@ var _utils2 = _interopRequireDefault(_utils);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -11110,6 +11171,17 @@ exports.default = {
       startPosY: 0,
       judge: 'INITIAL'
     };
+  },
+  created: function created() {
+    var titleType = this.titleType,
+        tabStyles = this.tabStyles;
+
+    if (titleType === 'iconFont' && tabStyles.iconFontUrl) {
+      dom.addRule('fontFace', {
+        'fontFamily': "wxcIconFont",
+        'src': 'url(' + tabStyles.iconFontUrl + ')'
+      });
+    }
   },
   mounted: function mounted() {
     var _this = this;
@@ -11576,6 +11648,10 @@ module.exports = {
   "desc-text": {
     "fontSize": "18",
     "color": "#ffffff"
+  },
+  "icon-font": {
+    "marginBottom": "8",
+    "fontFamily": "wxcIconFont"
   }
 }
 
@@ -12380,6 +12456,10 @@ module.exports = {
   "tab-text": {
     "lines": 1,
     "textOverflow": "ellipsis"
+  },
+  "icon-font": {
+    "marginBottom": "8",
+    "fontFamily": "wxcIconFont"
   }
 }
 
@@ -12964,7 +13044,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "src": _vm.currentPage == index ? v.activeIcon : v.icon
       }
-    }) : _vm._e(), _c('text', {
+    }) : _vm._e(), (_vm.titleType === 'iconFont' && v.codePoint) ? _c('text', {
+      staticClass: ["icon-font"],
+      style: {
+        fontSize: _vm.tabStyles.iconFontSize + 'px',
+        color: _vm.currentPage == index ? _vm.tabStyles.activeIconFontColor : _vm.tabStyles.iconFontColor
+      }
+    }, [_vm._v(_vm._s(_vm.decode(v.codePoint)))]) : _vm._e(), _c('text', {
       staticClass: ["tab-text"],
       style: {
         fontSize: _vm.tabStyles.fontSize + 'px',
@@ -13493,6 +13579,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _c('div', _vm._l((_vm.updateList), function(item, i) {
     return _c('wxc-radio', _vm._b({
       key: i,
+      attrs: {
+        "config": _vm.config
+      },
       on: {
         "wxcRadioItemChecked": function($event) {
           _vm.wxcRadioItemChecked(i, $event)
@@ -13854,7 +13943,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "src": _vm.currentPage == index ? v.activeIcon : v.icon
       }
-    }) : _vm._e(), (!_vm.titleUseSlot) ? _c('text', {
+    }) : _vm._e(), (_vm.titleType === 'iconFont' && v.codePoint) ? _c('text', {
+      staticClass: ["icon-font"],
+      style: {
+        fontSize: _vm.tabStyles.iconFontSize + 'px',
+        color: _vm.currentPage == index ? _vm.tabStyles.activeIconFontColor : _vm.tabStyles.iconFontColor
+      }
+    }, [_vm._v(_vm._s(_vm.decode(v.codePoint)))]) : _vm._e(), (!_vm.titleUseSlot) ? _c('text', {
       staticClass: ["tab-text"],
       style: {
         fontSize: _vm.tabStyles.fontSize + 'px',
