@@ -3,7 +3,7 @@
 > Util function services
 
 ## Rule
-<img src="https://img.alicdn.com/tfs/TB13AAPgcLJ8KJjy0FnXXcFDpXa-2420-1046.png" width="860"/>
+<img src="https://img.alicdn.com/tfs/TB19FRki8fH8KJjy1XbXXbLdXXa-2420-1254.png" width="860"/>
 
 ## Code Example
 
