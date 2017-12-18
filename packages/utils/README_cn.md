@@ -3,8 +3,7 @@
 > Weex Ui 中的公共函数服务
 
 ## 规则
-<img src="<img src="https://img.alicdn.com/tfs/TB19FRki8fH8KJjy1XbXXbLdXXa-2420-1254.png" width="860"/>
-" width="860"/>
+<img src="https://img.alicdn.com/tfs/TB19FRki8fH8KJjy1XbXXbLdXXa-2420-1254.png" width="860"/>
 
 ## 使用方法
 
