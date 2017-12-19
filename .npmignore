@@ -1,8 +1,11 @@
 node_modules
 build/example
+docs
+example
 .*
 /*.js
 /*.json
 !package.json
-!lerna.json
+lerna.json
 npm-debug.log
+index.html
