@@ -2,6 +2,8 @@
 
  > ExpressionBinding Slider
 
+!> These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6). 
+
 ### Rule
 - Used to enrich slide, including merchandise window, picture list, etc.
 - If the child element has click event, **because of the [reason](http://weex-project.io/cn/references/gesture.html#约束) in android**, You now need to bind the expression event in child element, Weex Ui has provided [wxc-pan-cell](https://github.com/alibaba/weex-ui/tree/master/packages/wxc-pan-item) to solve this issue, you can see more in [here](https://github.com/alibaba/weex-ui/tree/master/example/ep-slider).
