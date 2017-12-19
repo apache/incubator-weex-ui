@@ -10,16 +10,8 @@
         <div class="demo">
           <wxc-minibar title="Minibar" background-color="#F2F3F4"></wxc-minibar>
         </div>
-
         <div class="demo">
-          <wxc-minibar @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
-                       background-color="#F2F3F4"
-                       @wxcMinibarRightButtonClicked="minibarRightButtonClick"></wxc-minibar>
-        </div>
-
-        <div class="demo">
-          <wxc-minibar title="导航栏标题"
-                       right-text="更多"
+          <wxc-minibar left-text="返回"
                        @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
                        @wxcMinibarRightButtonClicked="minibarRightButtonClick"></wxc-minibar>
         </div>
@@ -38,6 +30,20 @@
                        @wxcMinibarRightButtonClicked="minibarRightButtonClick"
                        :right-button="rightButton"></wxc-minibar>
         </div>
+      </div>
+
+      <div class="demo">
+        <wxc-minibar background-color="#FFF3CD"
+                     @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
+                     @wxcMinibarRightButtonClicked="minibarRightButtonClick">
+          <image src="https://img.alicdn.com/tfs/TB1QN8pdlHH8KJjy0FbXXcqlpXa-220-80.png"
+                 slot="left"
+                 style="height: 32px;width: 88px;"></image>
+          <text style="font-size: 40px;" slot="middle">全部自定义化</text>
+          <image slot="right"
+                 src="https://img.alicdn.com/tfs/TB1j39Uc0fJ8KJjy0FeXXXKEXXa-160-128.png"
+                 style="height: 32px;width: 40px"></image>
+        </wxc-minibar>
       </div>
     </scroller>
   </div>
