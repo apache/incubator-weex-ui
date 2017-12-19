@@ -3,7 +3,7 @@
 > Weex 顶部导航栏组件
 
 ### 规则
-- 优先使用 Native 自带的 Navigator Bar
+- 优先使用 Native 自带的 [Navigator Bar](https://developer.apple.com/documentation/uikit/uinavigationbar)
      
 
 ## [Demo](https://h5.m.taobao.com/trip/wxc-minibar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-minibar%2Fdemo%2Findex.native-min.js)
@@ -27,7 +27,6 @@
 </template>
 
 <script>
-
   import { WxcMinibar } from 'weex-ui';
   const modal = weex.requireModule('modal');
 
@@ -53,13 +52,34 @@
 |-------------|------------|--------|-----|-----|
 | title | `String` |`Y`| `-` | 标题 |
 | right-button | `String` |`N`| `-` | 右侧button icon |
-| right-text | `String` |`N`| `-` | 右侧button文案，优先显示icon |
-| left-button | `String` |`N`| `返回图标` |  左侧 button icon |
+| right-text | `String` |`N`| `-` | 右侧button文案，优先显示|
+| left-button | `String` |`N`| `返回图标` |  左侧 button icon|
+| left-text | `String` |`N`| `` |  左侧文案，优先显示|
 | text-color | `String` |`N`| `#333333` | 标题颜色 |
 | background-color | `String` |`N`| `#ffffff` | 背景颜色 |
 | use-default-return | `Boolean` |`N`| `true` | 是否使用默认的返回 |
 | show | `Boolean` | `true` |`N`| 是否显示 |
 
+### Slot
+当以上配置都不满足时候，你可以使用 slot 来自定义设置你的组件。   `weex-ui >= 0.3.9`
+
+1. `<slot name="left"></slot>`：左边返回坑位
+2. `<slot name="middle"></slot>`：中间标题坑位
+3. `<slot name="right"></slot>`：右边坑位
+
+<img src="https://img.alicdn.com/tfs/TB1nwLviZrI8KJjy0FhXXbfnpXa-752-114.png" width="300"/>
+
+```
+<wxc-minibar background-color="#FFF3CD">
+  <image src="https://img.alicdn.com/tfs/TB1QN8pdlHH8KJjy0FbXXcqlpXa-220-80.png"
+         slot="left"
+         style="height: 32px;width: 88px;"></image>
+  <text style="font-size: 40px;" slot="middle">Customize this component</text>
+  <image slot="right"
+         src="https://img.alicdn.com/tfs/TB1j39Uc0fJ8KJjy0FeXXXKEXXa-160-128.png"
+         style="height: 32px;width: 40px"></image>
+</wxc-minibar>
+```
 
 ### 事件回调
 

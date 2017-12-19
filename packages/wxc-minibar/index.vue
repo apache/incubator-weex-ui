@@ -5,12 +5,28 @@
 <template>
   <div class="wxc-minibar" :style="{ backgroundColor: backgroundColor }" v-if="show">
     <div class="left" @click="leftButtonClicked" aria-label="返回" :accessible="true">
-      <image :src="leftButton" class="left-button"></image>
+      <slot name="left">
+        <image :src="leftButton"
+               v-if="leftButton && !leftText"
+               class="left-button"></image>
+        <text v-if="leftText"
+              class="icon-text"
+              :style="{ color: textColor }">{{leftText}}</text>
+      </slot>
     </div>
-    <text class="middle-title" :style="{ color: textColor }">{{title}}</text>
+    <slot name="middle">
+      <text class="middle-title" :style="{ color: textColor }">{{title}}</text>
+    </slot>
     <div class="right" @click="rightButtonClicked">
-      <text class="right-text" v-if="rightText" :style="{ color: textColor }">{{rightText}}</text>
-      <image :src="rightButton" class="right-button" v-if="rightButton" :aria-hidden="true"></image>
+      <slot name="right">
+        <image v-if="rightButton && !rightText"
+               class="right-button"
+               :src="rightButton"
+               :aria-hidden="true"></image>
+        <text v-if="rightText"
+              class="icon-text"
+              :style="{ color: textColor }">{{rightText}}</text>
+      </slot>
     </div>
   </div>
 </template>
@@ -26,7 +42,8 @@
   }
 
   .left {
-    width: 90px;
+    width: 180px;
+    padding-left: 32px;
   }
 
   .middle-title {
@@ -37,26 +54,23 @@
   }
 
   .right {
-    width: 80px;
+    width: 180px;
+    padding-right: 32px;
+    align-items: flex-end;
   }
 
   .left-button {
     width: 21px;
     height: 36px;
-    margin-left: 40px;
   }
 
   .right-button {
     width: 32px;
     height: 32px;
-    margin-right: 16px;
   }
 
-  .right-text {
-    width: 80px;
-    margin-right: 20px;
+  .icon-text {
     font-size: 28px;
-    text-align: left;
     color: #fff;
   }
 </style>
@@ -84,6 +98,10 @@
       title: {
         type: String,
         default: '标题'
+      },
+      leftText: {
+        type: String,
+        default: ''
       },
       rightText: {
         type: String,
