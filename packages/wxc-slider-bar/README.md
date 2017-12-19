@@ -2,9 +2,10 @@
 
 > A slider component for displaying current value and intervals in range.
 
+!> These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6). 
+
 ### Rule
 - To input a value in a range.
-
 
 ## [Demo](https://h5.m.taobao.com/trip/wxc-slider-bar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-slider-bar%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/KAGxLOahnabmMTggilTC.gif" width="240px"/>&nbsp;&nbsp;&nbsp;&nbsp;

@@ -114,9 +114,6 @@ const Utils = {
       const { appName } = weex.config.env;
       return appName === 'AP';
     },
-    isAlipayWeb () {
-      return Utils.env.isAlipay() && Utils.env.isWeb();
-    },
     isTmall () {
       const { appName } = weex.config.env;
       return /(tm|tmall|天猫)/i.test(appName);

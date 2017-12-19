@@ -1,5 +1,7 @@
 # wxc-slider-bar 
 
+!> 这个富交互体验组件依赖于 Weex [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)
+
 > Weex 滑动选择组件
 
 ### 规则
