@@ -46,7 +46,7 @@ install weex-ui
 
 Please add 'babel-preset-stage-0' and 'babel-plugin-component' to .babelrc
 
-> npm i babel-plugin-component@0 babel-preset-stage-0  -D
+> npm i babel-plugin-component babel-preset-stage-0  -D
 
 Edit the `.babelrc` like this
 

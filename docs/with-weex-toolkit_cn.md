@@ -43,7 +43,7 @@ npm --version
 
 安装babel-preset-stage-0 和 babel-plugin-component 插件，前者用于babel编译，后者用于只优化Weex Ui 包的引用
 
-> npm i babel-plugin-component@0 babel-preset-stage-0  -D
+> npm i babel-plugin-component babel-preset-stage-0  -D
 
 同时修改.babelrc如下
 
