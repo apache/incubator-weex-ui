@@ -15,7 +15,6 @@
 ```vue
 <template>
   <div class="demo-container">
-    <text class="image-text">点击图片弹出全屏图片</text>
     <div class="btn" @click="openLightBox">
       <text class="btn-txt">点击按钮弹出全屏图片</text>
     </div>
