@@ -58,7 +58,8 @@ Edit the `.babelrc` like this
       "component",
       {
         "libraryName": "weex-ui",
-        "libDir": "packages"
+        "libDir": "packages",
+        "style": false
       }
     ]
   ]

@@ -81,7 +81,8 @@ npm i babel-plugin-component -D
       "component",
       {
         "libraryName": "weex-ui",
-        "libDir": "packages"
+        "libDir": "packages",
+        "style": false
       }
     ]
   ]

@@ -14,7 +14,6 @@
 ```vue
 <template>
   <div class="demo-container">
-    <text class="image-text">Click the image</text>
     <div class="btn" @click="openLightBox">
       <text class="btn-txt">Click the button</text>
     </div>

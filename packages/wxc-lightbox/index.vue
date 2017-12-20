@@ -21,7 +21,7 @@
                :style="{ height: height + 'px', width: width  + 'px'}"></image>
       </div>
       <indicator class="indicator"
-                 :style="[indicatorStyle,{itemSelectedColor:indicatorStyle[item-selected-color],itemSize: indicatorStyle[item-size]}]"></indicator>
+                 :style="indicatorStyle"></indicator>
     </slider>
   </wxc-mask>
 </template>
