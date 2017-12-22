@@ -42,5 +42,5 @@
    - [utils 功能函数](cn/packages/utils/) 
    
 - [在 weex-toolkit 项目中使用](cn/with-weex-toolkit)
-- [常见问题](cn/fqa)
+- [常见问题](cn/faq)
 - [CHANGELOG](CHANGELOG)
