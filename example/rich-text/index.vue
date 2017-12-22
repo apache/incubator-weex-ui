@@ -80,11 +80,7 @@
     data: () => ({
       configList: [{
         type: 'icon',
-        src: 'https://gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
-        style: {
-          width: 24,
-          height: 22
-        }
+        src: 'https://gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png'
       }, {
         type: 'text',
         value: '黄色主题',
@@ -120,12 +116,10 @@
           type: 'tag',
           value: '渐进式',
           style: {
-            width: 84,
             fontSize: 24,
             color: '#3D3D3D',
             borderColor: '#FFC900',
             backgroundColor: '#FFC900',
-            height: 28,
             borderRadius: 14
           }
         },
@@ -141,11 +135,7 @@
       specialConfigList1: [
         {
           type: 'icon',
-          src: 'https://gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
-          style: {
-            width: 24,
-            height: 22
-          }
+          src: 'https://gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png'
         },
         {
           type: 'text',

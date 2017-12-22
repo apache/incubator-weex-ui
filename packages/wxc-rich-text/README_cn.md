@@ -35,7 +35,6 @@
         type: 'icon',
         src: 'https//gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
         style: {
-          width: 24,
           height: 22
         }
       }, {
@@ -51,11 +50,7 @@
         }
       }, {
         type: 'icon',
-        src: icon.fliggy,
-        style: {
-          width: 92,
-          height: 24
-        }
+        src: icon.fliggy
       }, {
         type: 'tag',
         value: '满100减20',
@@ -76,12 +71,10 @@
           type: 'tag',
           value: '自由行',
           style: {
-            width: 84,
             fontSize: 24,
             color: '#3D3D3D',
             borderColor: '#FFC900',
             backgroundColor: '#FFC900',
-            height: 28,
             borderRadius: 14,
           }
         },
