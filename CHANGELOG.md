@@ -2,7 +2,7 @@
 ## 0.3.9
 - [+] `wxc-minibar` supports slot.
 - [+] Stronger about [wxc-rich-text](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-rich-text/README.md),do not need post the width and height for a icon.
-
+- [+] Add a [FQA](https://alibaba.github.io/weex-ui/#/docs/fqa)
 
 ## 0.3.8
 - [+] The [wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md) and [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md) support for `iconFont`.
