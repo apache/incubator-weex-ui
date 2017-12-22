@@ -42,5 +42,5 @@
    - [utils](packages/utils/) 
    
 - [How to use with weex-toolkit](docs/with-weex-toolkit)
-
+- [FQA](docs/fqa)
 - [CHANGELOG](CHANGELOG)
