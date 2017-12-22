@@ -41,6 +41,6 @@
 - Service
    - [utils](packages/utils/) 
    
-- [How to use with weex-toolkit](docs/with-weex-toolkit)
-- [FQA](docs/faq)
-- [CHANGELOG](CHANGELOG)
+- [**How to use with weex-toolkit**](docs/with-weex-toolkit)
+- [**FQA**](docs/faq)
+- [**CHANGELOG**](CHANGELOG)
