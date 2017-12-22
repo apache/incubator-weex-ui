@@ -113,7 +113,8 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
       "component",
       {
         "libraryName": "weex-ui",
-        "libDir": "packages"
+        "libDir": "packages",
+        "style": false
       }
     ]
   ]
