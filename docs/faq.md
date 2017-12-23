@@ -35,5 +35,47 @@
      import { WxcComponent1, WxcComponent2 } from "weex-ui/build/index.web.js"
     ```
 
+#### Can Weex Ui be used in weex-dingtalk-cli ?
+- Yes, but you need modify some config
+- Add a `exclude` in `build/webpack.base.weex.conf.js` Like this:
 
+  ```
+  module: {
+      rules: [
+        {
+          test: /\.vue(\?[^?]+)?$/,
+          loaders: ['weex-loader'],
+          exclude: /node_modules(?!(\/|\\).*(weex).*)/
+        },
+        {
+          test: /\.js$/,
+          loaders: ['babel-loader'],
+          exclude: /node_modules(?!(\/|\\).*(weex).*)/
+        }
+      ]
+    }
+  ```
+- Please add 'babel-preset-stage-0' and 'babel-plugin-component' to .babelrc
+  
+  > npm i babel-plugin-component babel-preset-stage-0  -D
+  
+  Edit the `.babelrc` like this
+  
+  ```
+  {
+    "presets": ["es2015", "stage-0"],
+    "plugins": [
+      [
+        "component",
+        {
+          "libraryName": "weex-ui",
+          "libDir": "packages",
+          "style": false
+        }
+      ]
+    ]
+  }
+ ```
+
+---- 
 More questions can be found from the [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=), If you find a new bug, Just file a  [issue](https://github.com/alibaba/weex-ui/issues/new).
