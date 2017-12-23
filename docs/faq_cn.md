@@ -36,6 +36,50 @@
     ```
      import { WxcComponent1, WxcComponent2 } from "weex-ui/build/index.web.js"
     ```
+    
+    
+#### Weex Ui 可以在钉钉 Weex 中 【weex-dingtalk-cli】运行吗 ?
+- 是的，不过你需要需改一些配置来兼容下
+- 像这样新增一个 `exclude` 在 `build/webpack.base.weex.conf.js` 文件中:
+
+  ```
+  module: {
+      rules: [
+        {
+          test: /\.vue(\?[^?]+)?$/,
+          loaders: ['weex-loader'],
+          exclude: /node_modules(?!(\/|\\).*(weex).*)/
+        },
+        {
+          test: /\.js$/,
+          loaders: ['babel-loader'],
+          exclude: /node_modules(?!(\/|\\).*(weex).*)/
+        }
+      ]
+    }
+  ```
+- 同时需要像其他使用一样加入'babel-preset-stage-0' 和 'babel-plugin-component' 到 .babelrc 中
+  
+  > npm i babel-plugin-component babel-preset-stage-0  -D
+  
+  编辑 `.babelrc` 文件：
+  
+  ```
+  {
+    "presets": ["es2015", "stage-0"],
+    "plugins": [
+      [
+        "component",
+        {
+          "libraryName": "weex-ui",
+          "libDir": "packages",
+          "style": false
+        }
+      ]
+    ]
+  }
+ ```
 
 
+-----
 更多问题可以通过 [issue 列表](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=)查找，假如有新问题，可以给我们提 [issue](https://github.com/alibaba/weex-ui/issues/new)。
