@@ -55,9 +55,9 @@
       tabStyles: Config.tabStyles
     }),
     created () {
-      const tabPageHeight = Utils.env.getPageHeight();
-      const { tabStyles } = this;
-      this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
+            this.tabPageHeight = Utils.env.getPageHeight();
+            const {tabPageHeight, tabStyles} = this;
+            this.contentStyle = {height: (tabPageHeight - tabStyles.height) + 'px'};
     },
     methods: {
       wxcTabBarCurrentTabSelected (e) {
