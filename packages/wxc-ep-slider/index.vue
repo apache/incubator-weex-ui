@@ -4,7 +4,6 @@
 <template>
   <div :style="containerS">
     <div :ref="`sliderCtn_${sliderId}`"
-         class="slider-content"
          :prevent-move-event="true"
          :style="{width:cardWidth+'px',height:cardS.height+'px',transform: `translateX(-${currentIndex * (cardS.width + cardS.spacing)}px)`}"
          @panstart="onTouchStart"
@@ -22,11 +21,6 @@
 </template>
 
 <style scoped>
-
-  .slider-content {
-    position: relative;
-  }
-
   .slider {
     position: absolute;
     top: 0;

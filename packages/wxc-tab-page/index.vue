@@ -70,7 +70,6 @@
     align-items: center;
     flex-direction: column;
     border-bottom-style: solid;
-    position: relative;
   }
 
   .border-bottom {
@@ -81,7 +80,6 @@
   .tab-page-wrap {
     width: 750px;
     overflow: hidden;
-    position: relative;
   }
 
   .tab-container {

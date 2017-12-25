@@ -62,14 +62,12 @@
     align-items: center;
     flex-direction: column;
     border-bottom-style: solid;
-    position: relative;
   }
 
   .tab-page-wrap {
     width: 750px;
     flex: 1;
     overflow: hidden;
-    position: relative;
   }
 
   .tab-container {

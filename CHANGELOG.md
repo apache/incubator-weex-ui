@@ -2,6 +2,7 @@
 
 ## 0.3.10
 - [+] New component: [wxc-icon](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-icon/README.md) 🎉🎉 
+- [-] Remove the default position relative style.
 
 ## 0.3.9
 - [+] `wxc-minibar` supports slot.

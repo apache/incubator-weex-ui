@@ -32,7 +32,6 @@
 <style scoped>
   .wxc-cell {
     height: 100px;
-    position: relative;
     flex-direction: row;
     align-items: center;
     padding-left: 24px;

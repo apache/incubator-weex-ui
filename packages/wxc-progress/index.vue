@@ -12,7 +12,6 @@
 
 <style scoped>
   .wxc-progress {
-    position: relative;
     background-color: #f2f3f4;
   }
 
