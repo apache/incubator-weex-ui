@@ -4,7 +4,7 @@
 <!--A index list. -->
 
 <template>
-  <div class="wxc-index-list">
+  <div>
     <list class="index-list"
           :style="{height: height+'px'}">
       <cell v-for="(v,i) in formatList"
@@ -139,10 +139,6 @@
 </script>
 
 <style scoped>
-  .wxc-index-list {
-    position: relative;
-  }
-
   .index-list {
     width: 750px;
     height: 1334px;

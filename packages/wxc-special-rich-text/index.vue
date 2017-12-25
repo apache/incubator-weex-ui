@@ -31,10 +31,6 @@
 </template>
 
 <style scoped>
-  .wxc-special-rich-text {
-    position: relative;
-  }
-
   .tag-div {
     position: absolute;
     top: 0;

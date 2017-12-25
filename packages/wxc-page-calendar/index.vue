@@ -276,7 +276,6 @@
     border-color: #f2f3f4;
     align-items: center;
     justify-content: space-between;
-    position: relative;
   }
 
   .row-item {
