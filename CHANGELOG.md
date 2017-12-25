@@ -1,4 +1,8 @@
 # Change Log
+
+## 0.3.10
+- [+] New component: [wxc-icon](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-icon/README.md) 🎉🎉 
+
 ## 0.3.9
 - [+] `wxc-minibar` supports slot.
 - [+] Stronger about [wxc-rich-text](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-rich-text/README.md),do not need post the width and height for a icon.
@@ -36,7 +40,7 @@
 - [!] Correct the minibar function callback.
 
 ## 0.3.0
-- [+] New component: [wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md)
+- [+] New component: [wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md) 🎉🎉 
 - [-] Remove all demo Internal characteristics of Alibaba.
 
 ## 0.2.9
