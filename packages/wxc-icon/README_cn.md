@@ -6,6 +6,8 @@
 
 <img src="https://img.alicdn.com/tfs/TB1o3jDj_nI8KJjy0FfXXcdoVXa-562-1000.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1_4S1j8TH8KJjy0FiXXcRsXXa-200-200.png" width="160"/>
 
+`weex-ui >= 0.3.10`
+
 ## 使用方法
 
 ```vue
