@@ -23,6 +23,7 @@
     
 - Data Display
     - [wxc-grid-select](packages/wxc-grid-select/)
+    - [wxc-icon](packages/wxc-icon/)
     - [wxc-indexlist](packages/wxc-indexlist/)
     - [wxc-page-calendar](packages/wxc-page-calendar/)
     - [wxc-rich-text](packages/wxc-rich-text/)

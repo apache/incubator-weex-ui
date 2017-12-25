@@ -87,6 +87,10 @@ const Utils = {
       const { appName } = weex.config.env;
       return appName === 'LX';
     },
+    isBoat () {
+      const { appName } = weex.config.env;
+      return appName === 'Boat' || appName === 'BoatPlayground';
+    },
     isWeb () {
       const { platform } = weex.config.env;
       return typeof (window) === 'object' && platform.toLowerCase() === 'web';

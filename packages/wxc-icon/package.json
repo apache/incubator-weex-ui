@@ -1,0 +1,19 @@
+{
+  "name": "wxc-icon",
+  "version": "0.1.0",
+  "description": "Weex 常用 iconfont 汇集",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-icon",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "Layout",
+    "Icon",
+    "WeexUi"
+  ],
+  "author": "Tw93",
+  "license": "MIT",
+  "dependencies": {}
+}
