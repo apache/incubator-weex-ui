@@ -1,4 +1,6 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!-- Created by Tw93 on 17/07/28. -->
+
 <template>
   <div class="wxc-tab-page"
        :style="{ height: (tabPageHeight)+'px' }">
@@ -24,7 +26,9 @@
            :ref="'wxc-tab-title-'+index"
            @click="setPage(index,v.url)"
            :data-spm-click="`gostr=/tbtrip;locaid=d${v.dataSpm!==undefined ? v.dataSpm : '996' + index}`"
-           :style="{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage == index ? tabStyles.activeBgColor : tabStyles.bgColor }">
+           :style="{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage == index ? tabStyles.activeBgColor : tabStyles.bgColor }"
+           :accessible="true"
+           :aria-label="`${v.title?v.title:'标签'+index}`">
 
         <image :src="currentPage == index ? v.activeIcon : v.icon"
                v-if="titleType == 'icon'"
@@ -94,7 +98,7 @@
   const swipeBack = weex.requireModule('swipeBack');
   const expressionBinding = weex.requireModule('expressionBinding');
 
-  import Utils from './utils';
+  import Utils from '../utils';
 
   const supportsEBForIos = Utils.env.supportsEBForIos();
   const isIos = Utils.env.isIOS();

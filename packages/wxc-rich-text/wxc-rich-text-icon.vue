@@ -4,6 +4,7 @@
 <template>
   <image class="wxc-image"
          :src="iconSrc"
+         :aria-hidden="true"
          @load="onLoad"
          :style="{ width: computedStyle.width, height: computedStyle.height }">
   </image>

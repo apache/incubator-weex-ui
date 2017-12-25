@@ -1,11 +1,13 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
 <!-- Created by Tw93 on 17/07/28. -->
+
 <template>
   <div class="wxc-btn"
        :style="mrBtnStyle"
-       @click="onClicked">
-    <text class="btn-text"
-          :style="mrTextStyle">{{text}}</text>
+       @click="onClicked"
+       :accessible="true"
+       :aria-label="text">
+    <text class="btn-text" :style="mrTextStyle">{{text}}</text>
   </div>
 </template>
 
@@ -20,7 +22,7 @@
       },
       type: {
         type: String,
-        default: 'taobao'
+        default: 'red'
       },
       disabled: {
         type: Boolean,

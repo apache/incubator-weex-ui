@@ -32,8 +32,8 @@
       </div>
       <category title="高级使用" class="category"></category>
       <div class="demo">
-        <wxc-cell title="阿里旅行飞猪"
-                  desc="这里是附加信息"
+        <wxc-cell title="标题内容"
+                  desc="描述信息"
                   :has-arrow="true"
                   @wxcCellClicked="wxcCellClicked"
                   :has-top-border="true"></wxc-cell>
@@ -41,7 +41,8 @@
 
       <div class="demo">
         <wxc-cell :has-arrow="false"
-                  :has-top-border="false">
+                  :has-top-border="false"
+                  :auto-accessible="false">
           <text :style="{color:color}"
                 slot="title">自定义标题</text>
           <switch slot="value"
@@ -49,10 +50,11 @@
         </wxc-cell>
         <wxc-cell :has-arrow="false"
                   :cell-style="cellStyle"
-                  :has-top-border="false">
+                  :has-top-border="false"
+                  :auto-accessible="false">
           <image class="image"
                  slot="label"
-                 src="http://gtms04.alicdn.com/tfs/TB1eLvjSXXXXXaiXXXXXXXXXXXX-144-166.jpg"></image>
+                 src="https://img.alicdn.com/tfs/TB1eLvjSXXXXXaiXXXXXXXXXXXX-144-166.jpg"></image>
           <text class="red"
                 slot="title">自定义标题、样式还可以加图片</text>
         </wxc-cell>

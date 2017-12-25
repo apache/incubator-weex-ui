@@ -1,6 +1,7 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
 <!-- Created by Tw93 on 16/10/25. -->
 <!--A Mask.-->
+
 <template>
   <div class="container">
     <wxc-overlay :show="show && hasOverlay"
@@ -21,6 +22,7 @@
            @click="closeIconClicked"
            v-if="showClose">
         <image :src="closeIcon"
+               aria-label="关闭"
                class="mask-close-icon"></image>
       </div>
     </div>
@@ -101,6 +103,7 @@
         default: () => ({
           hasAnimation: true,
           timingFunction: ['ease-in', 'ease-out'],
+          canAutoClose: true,
           duration: 300,
           opacity: 0.6
         })
@@ -119,7 +122,7 @@
       }
     },
     data: () => ({
-      closeIcon: '//gw.alicdn.com/tfs/TB1qDJUpwMPMeJjy1XdXXasrXXa-64-64.png',
+      closeIcon: 'https://gw.alicdn.com/tfs/TB1qDJUpwMPMeJjy1XdXXasrXXa-64-64.png',
       maskTop: 264,
       opacity: 0
     }),

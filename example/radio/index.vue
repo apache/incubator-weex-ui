@@ -27,10 +27,6 @@
     flex: 1;
   }
 
-  .margin {
-    margin-top: 60px;
-  }
-
   .radio-text {
     font-size: 30px;
     color: #333;
@@ -59,6 +55,11 @@
         { title: '未选不可修改', value: 5, disabled: true },
         { title: '已选不可修改', value: 6, disabled: true, checked: true }
       ],
+      config:{
+        checkedIcon:'https://gw.alicdn.com/tfs/TB1TARHdf6H8KJjSspmXXb2WXXa-31-30.png',
+        disabledIcon:'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png',
+        checkedColor: '#000000'
+      },
       checkedInfo: { title: '选项2', value: 2, oldIndex: -1, index: 1 }
     }),
     created () {

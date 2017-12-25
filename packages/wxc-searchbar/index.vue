@@ -22,9 +22,11 @@
            @click="inputDisabledClicked"
            class="disabled-input"></div>
       <image class="search-bar-ICON"
+             :aria-hidden="true"
              :src="inputIcon"></image>
       <image class="search-bar-close"
              v-if="showClose"
+             :aria-hidden="true"
              @click="closeClicked"
              :src="closeIcon"></image>
       <text :class="['search-bar-button','search-bar-button-'+theme]"
@@ -50,9 +52,11 @@
            @click="depClicked">
         <text class="dep-text">{{depName}}</text>
         <image :src="arrowIcon"
+               :aria-hidden="true"
                class="dep-arrow"></image>
       </div>
       <image class="search-bar-ICON ICON-has-dep"
+             :aria-hidden="true"
              :src="inputIcon"></image>
     </div>
   </div>

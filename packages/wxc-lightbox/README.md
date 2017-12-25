@@ -1,36 +1,28 @@
 # wxc-lightbox 
 
-> Weex版本的图片列表全屏显示。
+> Picture list of full screen display
 
-- 规则：
-    - 常用于详情页面的图片放大显示，然后用户清晰看到效果
-    - 需要设置图片的显示高度，也可以设置宽度（默认750px）
-    - 可以传入一组图片，滑动显示
+### Rule
+- Often used for the detailed page of the image to enlarge the display, let the user see the effect clearly.
+- You can pass in a set of images, slide shows.
     
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-lightbox/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-lightbox%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/RzbkfaSHRYaJzdPrsgLj.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1BGPdSpXXXXajaVXXXXXXXXXX-200-200.png" width="160"/>
+## [Demo](https://h5.m.taobao.com/trip/wxc-lightbox/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-lightbox%2Fdemo%2Findex.native-min.js)
+<img src="https://gw.alipayobjects.com/zos/rmsportal/RzbkfaSHRYaJzdPrsgLj.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1BGPdSpXXXXajaVXXXXXXXXXX-200-200.png" width="160"/>
 
-## 安装
-
-```shell
-npm install weex-ui --save
-```
-
-## 使用方法
+## Code Example
 
 ```vue
 <template>
   <div class="demo-container">
-    <text class="image-text">点击图片弹出全屏图片</text>
     <div class="btn" @click="openLightBox">
-      <text class="btn-txt">点击按钮弹出全屏图片</text>
+      <text class="btn-txt">Click the button</text>
     </div>
     <wxc-lightbox
       ref="wxc-lightbox"
       height="800"
+      :show="show"
       :image-list="imageList"
-      @wxcLightboxOverlayClicked="wxcLightboxOverlayClicked"
-      :show="show">
+      @wxcLightboxOverlayClicked="wxcLightboxOverlayClicked">
     </wxc-lightbox>
   </div>
 </template>
@@ -56,7 +48,6 @@ npm install weex-ui --save
         this.show = true;
       },
       wxcLightboxOverlayClicked () {
-      // 无状态组件，需要在此次关闭
         this.show = false;
       }
     }
@@ -64,23 +55,27 @@ npm install weex-ui --save
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/lightbox/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/lightbox/index.vue)
 
-### 可配置参数
+### API
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| show | `Bool` | `false` | 全屏图片是否显示 |
-| imageList | `Array` | `[]` | 全屏显示图片列表 |
-| height | `Number` | `750` | 全屏显示图片高度 |
-| width | `Number` | `750` | 全屏显示图片宽度 |
-| show-indicator | `Bool` | `true` |全屏后是否显示索引...|
-| indicator-color | `Object` | `{'item-color': 'rgba(255, 195, 0, .5)','item-selected-color': '#ffc300','item-size': '20px'}` |索引样式配置|
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| show | `Bool` |`Y`| `false` | whether to show the light box |
+| imageList | `Array` |`Y`| `[]` | image list |
+| height | `Number` |`Y`| `750` | light box height |
+| width | `Number` |`Y`| `750` | light box width |
+| show-indicator | `Bool` |`N`| `true` |whether to show indicator|
+| indicator-color | `Object` |`N`| `{}` | indicator style（*1）|
 
+*1 default style: 
+```
+{'item-color': 'rgba(255, 195, 0, .5)','item-selected-color': '#ffc300','item-size': '20px'}
+```
 
-### 事件回调
+### Event
 
 ```
-// 点击蒙层关闭预览 `@wxcLightboxOverlayClicked="wxcLightboxOverlayClicked"`
+// @wxcLightboxOverlayClicked="wxcLightboxOverlayClicked"
 ```
 

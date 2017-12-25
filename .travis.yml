@@ -1,0 +1,11 @@
+sudo: false
+language: node_js
+notifications:
+  email:
+  - tw93@qq.com
+node_js:
+  - "6"
+  - "7"
+  - "8"
+script:
+  - npm run build

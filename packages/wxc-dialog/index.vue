@@ -3,10 +3,9 @@
 <!--A dialog. -->
 
 <template>
-  <mask class="mask"
-        v-if="show"
-        :style="{backgroundColor: maskBgColor,height:pageHeight+'px'}">
-    <div class="dialog-box">
+  <div class="container">
+    <wxc-overlay v-if="show" :show="true" :hasAnimation="false"></wxc-overlay>
+    <div class="dialog-box" v-if="show" :style="{top:top+'px'}">
       <div class="dialog-content">
         <slot name="title">
           <text class="content-title">{{title}}</text>
@@ -17,8 +16,7 @@
         <div class="no-prompt"
              v-if="showNoPrompt"
              @click="noPromptClicked">
-          <image :src="noPromptIcon"
-                 class="no-prompt-icon"></image>
+          <image :src="noPromptIcon" class="no-prompt-icon"></image>
           <text class="no-prompt-text">{{noPromptText}}</text>
         </div>
       </div>
@@ -26,30 +24,29 @@
         <div class="footer-btn cancel"
              v-if="!single"
              @click="secondaryClicked">
-          <text class="btn-text"
-                :style="{ color: secondBtnColor }">{{cancelText}}</text>
+          <text class="btn-text" :style="{ color: secondBtnColor }">{{cancelText}}</text>
         </div>
-        <div class="footer-btn confirm"
-             @click="primaryClicked">
-          <text class="btn-text"
-                :style="{ color: mainBtnColor }">{{confirmText}}</text>
+        <div class="footer-btn confirm" @click="primaryClicked">
+          <text class="btn-text" :style="{ color: mainBtnColor }">{{confirmText}}</text>
         </div>
       </div>
     </div>
-  </mask>
+  </div>
 </template>
 
 <style scoped>
-  .mask {
+  .container {
+    position: fixed;
     width: 750px;
-    height: 1344px;
-    justify-content: center;
-    align-items: center;
+    /*兼容H5异常*/
+    z-index: 99999;
   }
 
   .dialog-box {
-    background-color: #FFFFFF;
+    position: fixed;
+    left: 96px;
     width: 558px;
+    background-color: #FFFFFF;
   }
 
   .dialog-content {
@@ -123,9 +120,11 @@
 </style>
 
 <script>
+  import WxcOverlay from '../wxc-overlay'
   import { CHECKED, UN_CHECKED } from './type';
 
   export default {
+    components: { WxcOverlay },
     props: {
       show: {
         type: Boolean,
@@ -142,6 +141,10 @@
       content: {
         type: String,
         default: ''
+      },
+      top: {
+        type: Number,
+        default: 400
       },
       cancelText: {
         type: String,
@@ -161,7 +164,7 @@
       },
       showNoPrompt: {
         type: Boolean,
-        default: true
+        default: false
       },
       noPromptText: {
         type: String,
@@ -170,10 +173,6 @@
       isChecked: {
         type: Boolean,
         default: false
-      },
-      maskBgColor: {
-        type: String,
-        default: 'rgba(0,0,0,0.6)'
       }
     },
     data: () => ({

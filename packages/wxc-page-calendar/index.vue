@@ -1,56 +1,52 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
 <!-- Created by Tw93 on 17/07/28. -->
+<!-- Updated by Tw93 on 17/11/22. -->
 
 <template>
-  <div class="wxc-page-calendar"
-       ref="pageCalendar"
-       :style="{ height: pageHeight +'px'}">
-    <wxc-minibar :show="showHeader"
+  <div class="wxc-page-calendar" ref="pageCalendar">
+    <wxc-minibar :show="showTitle"
                  v-bind="minibarCfg"
-                 :use-default-return="useDefaultReturn"
+                 :use-default-return="false"
                  @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"></wxc-minibar>
-
-    <div class="calendar-weekday"
-         v-if="isShow">
+    <div class="calendar-weekday" v-if="isShow">
       <text class="flex-item weekday-text"
             :key="k"
+            :aria-label="`周${week}`"
             v-for="(week,k) in ['日','一','二','三','四','五','六']">{{week}}</text>
     </div>
     <list class="calendar-list"
-          :style="{ height: calendarHeight +'px'}"
           v-if="isShow">
       <cell v-for="(month,index) in monthsArray"
-            :key="index">
-        <div class="calendar-month">
-          <text class="month-text">{{month.title}}</text>
-        </div>
-        <div class="calendar-row"
-             v-for="(row,rowIndex) in month.rowsData"
-             :key="rowIndex">
-          <div v-for="(cell,index) in row.cells"
-               :key="index"
-               :ref="cell.ref"
-               :class="['row-item', cell.cellClass]"
-               @click="onClickDate(cell)">
-            <div v-if="cell.isEmpty"></div>
-            <div v-if="!cell.isEmpty"
-                 class="calendar-item">
-              <text :class="['calendar-note', cell.cls]">{{cell.note}}</text>
-              <text :class="['calendar-day', cell.cls]">{{cell.text}}</text>
-              <text :class="['calendar-ext', cell.cls]">{{cell.ext}}</text>
-            </div>
-          </div>
+            :key="index"
+            :class="[!month.title && 'calendar-row']">
+        <text class="month-text"
+              v-if="month.title">{{month.title}}</text>
+        <div v-else
+             v-for="(cell,rowIndex) in month"
+             :key="`${index}-${rowIndex}`"
+             :ref="cell.ref"
+             :class="['row-item', cell.cellClass]"
+             :accessible="true"
+             :aria-label="`${cell.text?cell.text:''},${cell.note?cell.note:''},${cell.ext?cell.ext:''}`"
+             @click="onClickDate(cell)">
+          <text :class="['calendar-note', cell.cls]">{{cell.note}}</text>
+          <text :class="['calendar-day', cell.cls]">{{cell.text}}</text>
+          <text :class="['calendar-ext', cell.cls]">{{cell.ext}}</text>
         </div>
       </cell>
+      <cell class="iphone-x" v-if="isIPhoneX"></cell>
     </list>
   </div>
 </template>
 
 <script>
-  import * as Utils from './utils';
+  import * as Format from './format';
+  import Utils from '../utils';
 
-  const dom = weex.requireModule('dom');
+  const isWeb = Utils.env.isWeb();
+
   const animation = weex.requireModule('animation');
+  const dom = weex.requireModule('dom');
 
   import WxcMinibar from '../wxc-minibar'
 
@@ -70,6 +66,10 @@
           'background-color': '#FFC900',
           'text-color': '#3D3D3D'
         })
+      },
+      showHeader: {
+        type: Boolean,
+        default: false
       },
       selectedNote: {
         type: Array,
@@ -91,11 +91,7 @@
     data: () => ({
       isShow: false,
       reSelect: true,
-      useDefaultReturn: false,
-      showHeader: Utils.isWeb(),
-      today: Utils.getToDay(),
-      calendarHeight: 1040,
-      pageHeight: 1334,
+      today: Format.getToDay(),
       departDate: '',
       arriveDate: ''
     }),
@@ -103,15 +99,30 @@
       monthsArray () {
         const { dateRange: range, today, departDate, arriveDate, selectedNote, descList } = this;
         const param = { range, today, departDate, arriveDate, selectedNote, descList }
-        return Utils.generateDateCell(param);
+        return Format.generateDateCell(param);
       }
     },
     created () {
-      const self = this;
-      const env = weex.config.env;
-      self.pageHeight = env.deviceHeight / env.deviceWidth * 750;
-      self.calendarHeight = self.pageHeight - (this.showHeader ? 100 : 120) - 60;
-      self.detectShow();
+      this.isIPhoneX = Utils.env.isIPhoneX();
+      this.showTitle = isWeb || this.showHeader;
+      this.detectShow();
+    },
+    mounted () {
+      const { needDestroy } = this;
+      const hold = isWeb ? 700 : 100;
+      !needDestroy && setTimeout(() => {
+        this.isShow = true;
+        this.scrollToDate();
+      }, hold);
+    },
+    watch: {
+      needDestroy (newVal, preVal) {
+        if (!newVal && newVal !== preVal) {
+          setTimeout(() => {
+            this.isShow = true;
+          }, 200)
+        }
+      }
     },
     methods: {
       minibarLeftButtonClick () {
@@ -145,31 +156,33 @@
         }
       },
       scrollToDate () {
-        if (this.departDate) {
-          const el = this.$refs.departDate[0];
-          dom.getComponentRect && dom.getComponentRect(el, (e) => {
-            if (e && e.result) {
-              const bottom = e.size.bottom;
-              const { env } = weex.config;
-              // 误差
-              const height = env.deviceHeight / env.deviceWidth * 750 - 50;
-              if (bottom > height || bottom === 0) {
-                dom.scrollToElement(el, { offset: -146, animated: false });
+        setTimeout(() => {
+          if (this.departDate) {
+            const el = this.$refs.departDate[0];
+            el && dom.getComponentRect && dom.getComponentRect(el, (e) => {
+              if (e && e.result) {
+                const { bottom } = e.size;
+                const { env } = weex.config;
+                // 误差
+                const height = env.deviceHeight / env.deviceWidth * 750 - 50;
+                if (bottom > height || bottom === 0) {
+                  dom.scrollToElement(el, { offset: -146, animated: false });
+                }
               }
-            }
-          })
-        }
+            })
+          }
+        }, 10);
       },
       dispatchDateChange (dateArr) {
+        const duration = isWeb ? 400 : 600;
         setTimeout(() => {
           this.hide();
-        }, 600);
+        }, duration);
         this.$emit('wxcPageCalendarDateSelected', {
           date: dateArr
         });
       },
       detectShow () {
-        !this.needDestroy && (this.isShow = true);
         if (this.isRange && this.selectedDate.length >= 2) {
           this.departDate = this.selectedDate[0];
           this.arriveDate = this.selectedDate[1];
@@ -179,24 +192,23 @@
         }
       },
       _animate (width = 0) {
+        const duration = isWeb ? 200 : 300;
         animation.transition(this.$refs.pageCalendar, {
           styles: {
             transform: `translateX(${-width}px)`
           },
           timingFunction: 'ease-out',
-          duration: 300
+          duration
         }, () => {
         });
       },
       show () {
-        this.needDestroy && (this.isShow = true);
+        const { needDestroy } = this;
+        needDestroy && (this.isShow = true);
         this.reSelect = true;
         this.detectShow();
         this._animate(750);
-        // 防止没有渲染完成
-        setTimeout(() => {
-          this.scrollToDate();
-        }, 1);
+        needDestroy && this.scrollToDate();
       },
       hide () {
         this.needDestroy && (this.isShow = false);
@@ -211,6 +223,7 @@
   .wxc-page-calendar {
     position: fixed;
     top: 0;
+    bottom: 0;
     right: -750px;
     width: 750px;
     color: #333333;
@@ -236,27 +249,29 @@
   .weekday-text {
     color: #000000;
     flex: 1;
+    font-size: 24px;
     text-align: center;
   }
 
   .calendar-list {
+    flex: 1;
     flex-direction: column;
-  }
-
-  .calendar-month {
-    height: 60px;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f3f4;
   }
 
   .month-text {
     font-size: 32px;
+    height: 60px;
+    line-height: 60px;
+    width: 750px;
+    text-align: center;
+    align-items: center;
+    background-color: #f2f3f4;
   }
 
   .calendar-row {
     height: 140px;
     flex-direction: row;
+    background-color: #ffffff;
     border-bottom-width: 1px;
     border-color: #f2f3f4;
     align-items: center;
@@ -267,10 +282,14 @@
   .row-item {
     flex: 1;
     height: 140px;
-    background: #ffffff;
-    border-width: 0;
     padding-top: 10px;
     padding-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iphone-x {
+    height: 68px;
   }
 
   .calendar-note {
@@ -279,12 +298,6 @@
     font-size: 24px;
     color: #000000;
     text-align: center;
-  }
-
-  .calendar-item {
-    justify-content: center;
-    align-items: center;
-    height: 120px;
   }
 
   .calendar-day {

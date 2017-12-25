@@ -1,19 +1,16 @@
 # wxc-slide-nav 
 
-> 导航滑动组件，上下滚动列表的时候，优雅地动画收起展开导航条，使得能展示更多的列表内容
+> Parallax rolling expansion.
+
+### Rule
+- When scrolling up and down the list, you can gracefully animate the open navigation bar to show more of the list content.
 
 
-## [Demo 预览](<https://h5.m.taobao.com/trip/wxc-slide-nav/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-slide-nav%2Fdemo%2Findex.native-min.js>)
+## [Demo](<https://h5.m.taobao.com/trip/wxc-slide-nav/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-slide-nav%2Fdemo%2Findex.native-min.js>)
 
-<img src="https://gw.alipayobjects.com/zos/rmsportal/ERzwXExyQcqgmXzPxGgf.gif" width="240" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1Cg02SFXXXXc3apXXXXXXXXXX-200-200.png" width="160" />
+<img src="https://gw.alipayobjects.com/zos/rmsportal/ERzwXExyQcqgmXzPxGgf.gif" width="240" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1Cg02SFXXXXc3apXXXXXXXXXX-200-200.png" width="160" />
 
-## 安装
-
-```shell
-npm i weex-ui --save
-```
-
-## 使用方法
+## Code Example
 
 ```vue
 <template>
@@ -28,8 +25,7 @@ npm i weex-ui --save
         @touchstart.native="onTouchStart"
         @touchmove.native="onTouchMove"
         @touchend.native="onTouchEnd"
-        @touchcancel.native="onTouchEnd"
-      >
+        @touchcancel.native="onTouchEnd">
         <cell>
           <div class="padding"></div>
         </cell>
@@ -39,15 +35,15 @@ npm i weex-ui --save
       </list>
   
       <wxc-slide-nav class="nav nav-top" ref="topNav" position="top" @slideIn="slideIn">
-        <div class="nav-cell"><text>前一天</text></div>
+        <div class="nav-cell"><text>Before</text></div>
         <div class="nav-cell"><text>06-22</text></div>
-        <div class="nav-cell"><text>后一天</text></div>
+        <div class="nav-cell"><text>Next</text></div>
       </wxc-slide-nav>
   
       <wxc-slide-nav class="nav nav-bottom" ref="bottomNav" position="bottom" @slideOut="slideOut">
-        <div class="nav-cell"><text class="nav-text">筛选</text></div>
-        <div class="nav-cell"><text class="nav-text">时间</text></div>
-        <div class="nav-cell"><text class="nav-text">从低到高</text></div>
+        <div class="nav-cell"><text class="nav-text">Filter</text></div>
+        <div class="nav-cell"><text class="nav-text">Time</text></div>
+        <div class="nav-cell"><text class="nav-text">From</text></div>
       </wxc-slide-nav>
     </div>
 </template>
@@ -74,30 +70,29 @@ npm i weex-ui --save
 </script>
 ```
 
-由于兼容性以及其他原因，目前API使用起来不是特别优雅，需要配合在`<list>`组件上手动绑定事件
+Due to the compatibility and other reasons, to use the API is not particularly elegant, need to cooperate in `<list>` manual binding event.
 
 ```
 <list
   ref="scroller"
   @scroll="onScroll"
-  <!-- 针对Native -->
+  <!-- to Native -->
   @touchstart="onTouchStart"
   @touchmove="onTouchMove"
   @touchend="onTouchEnd"
   @touchcancel="onTouchEnd"
-  <!-- 针对H5 -->
+  <!-- to H5 -->
   @touchstart.native="onTouchStart"
   @touchmove.native="onTouchMove"
   @touchend.native="onTouchEnd"
-  @touchcancel.native="onTouchEnd"
->
+  @touchcancel.native="onTouchEnd">
   <cell>
     <div class="padding"></div>
   </cell>
 </list>
 ```
 
-另外`list`顶部需要添加`padding`，因为`list`和`cell`不支持`padding`和`margin`样式，需要在里面加一个占位的`cell`充当`padding`，高度与 `topNav` 一致
+In addition, the top of `list` needs to add `padding`, because `list` and `cell` do`nt support `padding` and `margin` styles. It needs to add a placeholder `cell` to `padding`, which is highly consistent with `topNav`.
 
 ```
 <cell>
@@ -112,12 +107,12 @@ npm i weex-ui --save
 </style>
 ```
 
-然后在事件回调里绑定`slideNav`的事件方法，其中`onTouchMove`和`onScroll`需要传入`scroller`和`slideNav`对象
+The event method of `slideNav` is then bound in the event callback, where `onTouchMove` and `onScroll` need to be passed into the `scroller` and `slideNav` objects.
 
 ```
 onTouchStart: WxcSlideNav.handleTouchStart,
 onTouchEnd: WxcSlideNav.handleTouchEnd,
-// 下面方法不要使用箭头函数，会导致this指向错误
+// The following method does not use the arrow function, which results in this pointing error
 onTouchMove(e) {
   WxcSlideNav.handleTouchMove.call(this, e, this.$refs.bottomNav);
 },
@@ -126,17 +121,17 @@ onScroll(e) {
 }
 ```
 
-### 可配置参数
+### API
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| position | `String` | `'top'` | 顶部还是底部 `top|bottom` |
-| height | `String|Number` | `''` | 高度 |
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| position | `String` |`N`| `'top'` |nav position `top/bottom` |
+| height | `[String,Number]` |`N`| `-` | list height |
 
-### 支持事件
+### Supporting Event
 
-* `slideIn`：滑出来（展示）
-* `slideInEnd`：滑出来结束
-* `slideOut`：滑出去（隐藏）
-* `slideOutEnd`：滑出去结束 
+* `slideIn`
+* `slideInEnd`
+* `slideOut`
+* `slideOutEnd`
 

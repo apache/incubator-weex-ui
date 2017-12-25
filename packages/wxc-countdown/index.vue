@@ -4,13 +4,44 @@
 <template>
   <div :style="mrTimeWrapStyle">
     <div class="time-dot-wrap">
-      <div :style="mrTimeBoxStyle"><text :style="mrTimeTextStyle">{{countDownData.hour}}</text></div>
-      <div :style="mrDotBoxStyle"><text :style="mrDotTextStyle">{{tplObj().firstDot}}</text></div>
+      <div :style="mrTimeBoxStyle"
+           v-if="tplIndexOfDays !== -1"
+           :accessible="true"
+           :aria-label="`${countDownData.day}天`">
+        <text :style="mrTimeTextStyle">{{countDownData.day}}</text>
+      </div>
+      <div :style="mrDotBoxStyle" v-if="tplIndexOfDays !== -1" :aria-hidden="true">
+        <text :style="mrDotTextStyle">{{getDot(tplIndexOfDays, tplIndexOfHours)}}</text>
+      </div>
 
-      <div :style="mrTimeBoxStyle"><text :style="mrTimeTextStyle">{{countDownData.minute}}</text></div>
-      <div :style="mrDotBoxStyle"><text :style="mrDotTextStyle">{{tplObj().secondDot}}</text></div>
+      <div :style="mrTimeBoxStyle"
+           v-if="tplIndexOfHours !== -1"
+           :accessible="true"
+           :aria-label="`${countDownData.hour}时`">
+        <text :style="mrTimeTextStyle">{{countDownData.hour}}</text>
+      </div>
+      <div :style="mrDotBoxStyle" v-if="tplIndexOfHours !== -1" :aria-hidden="true">
+        <text :style="mrDotTextStyle">{{getDot(tplIndexOfHours, tplIndexOfMinutes)}}</text>
+      </div>
 
-      <div :style="mrTimeBoxStyle"><text :style="mrTimeTextStyle">{{countDownData.second}}</text></div>
+      <div :style="mrTimeBoxStyle" v-if="tplIndexOfMinutes !== -1"
+           :accessible="true"
+           :aria-label="`${countDownData.minute}分`">
+        <text :style="mrTimeTextStyle">{{countDownData.minute}}</text>
+      </div>
+      <div :style="mrDotBoxStyle" v-if="tplIndexOfMinutes !== -1" :aria-hidden="true">
+        <text :style="mrDotTextStyle">{{getDot(tplIndexOfMinutes, tplIndexOfSeconds)}}</text>
+      </div>
+
+      <div :style="mrTimeBoxStyle"
+           v-if="tplIndexOfSeconds !== -1"
+           :accessible="true"
+           :aria-label="`${countDownData.second}秒`">
+        <text :style="mrTimeTextStyle">{{countDownData.second}}</text>
+      </div>
+      <div :style="mrDotBoxStyle" v-if="tplIndexOfSeconds !== -1" :aria-hidden="true">
+        <text :style="mrDotTextStyle">{{getDot(tplIndexOfSeconds, -1)}}</text>
+      </div>
     </div>
   </div>
 </template>
@@ -53,6 +84,10 @@
     data: () => ({
       NOW_DATE: new Date().getTime(),
       completed: false,
+      tplIndexOfDays: -1,
+      tplIndexOfHours: -1,
+      tplIndexOfMinutes: -1,
+      tplIndexOfSeconds: -1,
       TIME_WRAP_STYLE: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -86,7 +121,12 @@
     mounted () {
       setInterval(() => {
         this.NOW_DATE = new Date().getTime();
-      }, this.interval)
+      }, this.interval);
+
+      this.tplIndexOfDays = this.tpl.indexOf('d');
+      this.tplIndexOfHours = this.tpl.indexOf('h');
+      this.tplIndexOfMinutes = this.tpl.indexOf('m');
+      this.tplIndexOfSeconds = this.tpl.indexOf('s');
     },
     computed: {
       mrTimeWrapStyle () {
@@ -130,40 +170,57 @@
           }
           this.completed = true;
           return {
+            day: '00',
             hour: '00',
             minute: '00',
             second: '00'
           }
         }
 
-        // 计算小时
-        const hours = Math.floor(timeSpacing / (3600 * 1000));
+        let day = 0;
+        let hour = 0;
+        let minute = 0;
+        let second = 0;
 
-        // 计算分钟(去除小时)
-        const minute = Math.floor(timeSpacing % (3600 * 1000) / (60 * 1000));
+        if (this.tplIndexOfDays !== -1) {
+          day = Math.floor(timeSpacing / (24 * 60 * 60 * 1000));
+          hour = Math.floor(timeSpacing % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+        } else {
+          day = 0;
+          hour = Math.floor(timeSpacing / (60 * 60 * 1000));
+        }
 
-        // 计算秒数(去除分钟)
-        const second = Math.floor(timeSpacing % (60 * 1000) / 1000);
+        if (this.tplIndexOfHours !== -1) {
+          hour = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000) / (60 * 60 * 1000));
+          minute = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000) % (60 * 60 * 1000) / (60 * 1000));
+        } else {
+          hour = 0;
+          minute = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000) / (60 * 1000));
+        }
+
+        if (this.tplIndexOfMinutes !== -1) {
+          minute = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000 - hour * 60 * 60 * 1000) / (60 * 1000));
+          second = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000 - hour * 60 * 60 * 1000) % (60 * 1000) / 1000);
+        } else {
+          minute = 0;
+          second = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000 - hour * 60 * 60 * 1000) / 1000);
+        }
 
         return {
-          hour: hours < 10 ? '0' + hours : hours,
-          minute: minute < 10 ? '0' + minute : minute,
-          second: second < 10 ? '0' + second : second
+          day: day < 10 ? '0' + day : '' + day,
+          hour: hour < 10 ? '0' + hour : '' + hour,
+          minute: minute < 10 ? '0' + minute : '' + minute,
+          second: second < 10 ? '0' + second : '' + second
         }
       }
     },
 
     methods: {
-      // 分析模板
-      tplObj () {
-        const tplIndexOfHours = this.tpl.indexOf('h');
-        const tplIndexOfMinutes = this.tpl.indexOf('m');
-        const tplIndexOfSeconds = this.tpl.indexOf('s');
-
-        return {
-          firstDot: this.tpl.slice(tplIndexOfHours + 2, tplIndexOfMinutes - 1),
-          secondDot: this.tpl.slice(tplIndexOfMinutes + 2, tplIndexOfSeconds - 1)
+      getDot (prevTagIndex, nextTagIndex = -1) {
+        if (nextTagIndex === -1) {
+          return this.tpl.slice(prevTagIndex + 2)
         }
+        return this.tpl.slice(prevTagIndex + 2, nextTagIndex - 1)
       }
     }
   }

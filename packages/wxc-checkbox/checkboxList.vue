@@ -1,8 +1,11 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!-- Created by Tw93 on 17/07/31. -->
+
 <template>
   <div>
     <wxc-checkbox v-for="(item,i) in list"
                   v-bind="item"
+                  :config="config"
                   @wxcCheckBoxItemChecked="wxcCheckBoxItemChecked"
                   :key="i"></wxc-checkbox>
   </div>
@@ -17,6 +20,10 @@
       list: {
         type: Array,
         default: () => ([])
+      },
+      config: {
+        type: Object,
+        default: () => ({})
       }
     },
     data: () => ({
@@ -35,7 +42,7 @@
         if (e.checked) {
           this.checkedList.push(e.value);
         } else {
-          var index = this.checkedList.indexOf(e.value);
+          const index = this.checkedList.indexOf(e.value);
           this.checkedList.splice(index, 1);
         }
         this.$emit('wxcCheckBoxListChecked', { checkedList: this.checkedList })

@@ -1,9 +1,12 @@
+<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
 <!-- Created by 南麓 on 2017/8/10. -->
 
 <template>
   <div class="grid-option"
        :style="cWrapperStyle"
-       @click="onClick">
+       @click="onClick"
+       :accessible="true"
+       :aria-label="`${title},${checked?'已选中':'未选中'}`">
     <text v-if="title" class="text-title" :style="cTitleStyle">{{title}}</text>
 
     <image v-if="checked && icon" class="image-checked" :src="icon"></image>
@@ -43,7 +46,7 @@
       // 默认 x
       icon: {
         type: String,
-        default: '//gw.alicdn.com/tfs/TB1IAByhgMPMeJjy1XdXXasrXXa-38-34.png'
+        default: 'https://gw.alicdn.com/tfs/TB1IAByhgMPMeJjy1XdXXasrXXa-38-34.png'
       },
       // 正常状态文字色值
       color: {

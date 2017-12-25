@@ -12,6 +12,7 @@
                           :height="height"></wxc-part-loading>
       </div>
       <wxc-cell :has-top-border="true"
+                :auto-accessible="false"
                 title="开启局部Loading">
         <switch :checked="partShow"
                 slot="value"
@@ -23,7 +24,7 @@
                slot="value"
                placeholder="局部Loading长度，默认36"
                :value="width"
-               @input="width=$event.value"></input>
+               @input="width=$event.value"/>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
                 title="高度">
@@ -31,18 +32,20 @@
                slot="value"
                placeholder="局部Loading高度，默认36"
                :value="height"
-               @input="height=$event.value"></input>
+               @input="height=$event.value"/>
       </wxc-cell>
       <div class="blank"></div>
       <category title="页面Loading配置"></category>
       <wxc-cell :has-top-border="false"
+                :auto-accessible="false"
                 title="开启Loading">
         <switch :checked="isShow"
                 slot="value"
                 @change="isShow= !isShow"></switch>
       </wxc-cell>
       <wxc-cell :has-top-border="false"
-                title="切换飞猪">
+                :auto-accessible="false"
+                title="自定义Loading">
         <switch :checked="type === 'trip'"
                 slot="value"
                 @change="type=(type === 'trip'? 'default' : 'trip')"></switch>
@@ -58,7 +61,7 @@
                slot="value"
                placeholder="配置文案，默认无"
                :value="loadingText"
-               @input="loadingText=$event.value"></input>
+               @input="loadingText=$event.value"/>
       </wxc-cell>
     </scroller>
     <wxc-loading :show="isShow"

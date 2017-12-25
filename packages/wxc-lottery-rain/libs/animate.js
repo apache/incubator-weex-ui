@@ -1,12 +1,13 @@
 /**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2017/09/06.
  * 红包雨动画类
  */
 
 const animation = weex.requireModule('animation');
-import * as Utils from './utils';
+import Utils from '../../utils';
 
-const isIos = Utils.isIOS();
+const isIos = Utils.env.isIOS();
 
 export function showPig (ref, duration, callback) {
   ref && animation.transition(ref, {

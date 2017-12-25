@@ -12,7 +12,8 @@
     "Vue": true
   },
   "rules": {
-    "semi": "off"
+    "semi": "off",
+    "no-control-regex": "off"
   },
   "extends": "vue"
 }

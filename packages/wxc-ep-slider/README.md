@@ -1,22 +1,17 @@
 # wxc-ep-slider 
 
- > Weex vue 版本的表达式绑定效果的slider组件
- 
- - 背景：由于官方原生slider-neighbor体验和效果不是很好，但是此场景对于品质感交互又很有必要，所以通过expressionBinding尝试写一个ep-slider，欢迎提PR
- - 规则：
-    - 用于丰富slide，包括商品橱窗，图片列表等 
-    - 注意: 目前已经支持Ios、Android、H5的展示，但还是一个`beta版本`，需要优化。
+ > ExpressionBinding Slider
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-ep-slider/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-ep-slider%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/lWWUuRBxjMdLCaJGVHsp.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1Ky4QSpXXXXbRapXXXXXXXXXX-200-200.png" width="160"/>
+!> These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6). 
 
-## 安装
+### Rule
+- Used to enrich slide, including merchandise window, picture list, etc.
+- If the child element has click event, **because of the [reason](http://weex-project.io/cn/references/gesture.html#约束) in android**, You now need to bind the expression event in child element, Weex Ui has provided [wxc-pan-cell](https://github.com/alibaba/weex-ui/tree/master/packages/wxc-pan-item) to solve this issue, you can see more in [here](https://github.com/alibaba/weex-ui/tree/master/example/ep-slider).
 
-```shell
-npm install weex-ui --save
-```
+## [Demo](https://h5.m.taobao.com/trip/wxc-ep-slider/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-ep-slider%2Fdemo%2Findex.native-min.js)
+<img src="https://gw.alipayobjects.com/zos/rmsportal/lWWUuRBxjMdLCaJGVHsp.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1Ky4QSpXXXXbRapXXXXXXXXXX-200-200.png" width="160"/>
 
-## 使用方法
+## Code Example
 
 ```vue
 <template>
@@ -27,19 +22,18 @@ npm install weex-ui --save
                    :select-index="2"
                    @wxcEpSliderCurrentIndexSelected="wxcEpSliderCurrentIndexSelected">
 
-      <!--自动生成demo-->
+      <!--demo-->
       <div v-for="(v,index) in [1,2,3,4,5]"
            :key="index"
            :slot="`card${index}_${sliderId}`"
            :class="['slider',`slider${index}`]">
-        <text>这里是第{{index + 1}}个滑块</text>
+        <text>this is the {{index + 1}} slider</text>
       </div>
     </wxc-ep-slider>
   </div>
 </template>
 
 <style scoped>
-
   .wrapper {
     padding-top: 100px;
   }
@@ -92,27 +86,39 @@ npm install weex-ui --save
     }
   }
 </script>
-
-
 ```
 
-更多详细情况可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/ep-slider/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/ep-slider/index.vue)
 
-### 可配置参数
+### API
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| slider-id | `Number` | `1` | slider的id，避免页面多个ep-slider导致获取错误|
-| card-length | `Number` | `1` |  slider中item的数量|
-| select-index | `Number` | `0` | 默认突出item的index|
-| enable-swipe | `Boolean` | `true` | 是否需要滑动效果|
-| container-s | `Object` | {position: 'relative',width: 750,height: 352,overflow: 'hidden'} |  包裹容器的样式|
-| card-s | `Object` | {width: 360,height: 300,spacing: 0,scale: 0.75}} | item容器的样式|
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| slider-id | `Number` |`Y`| `1` | slider id|
+| card-length | `Number` |`Y`| `1` |  count of slider items|
+| select-index | `Number` |`N`| `0` | default card |
+| container-s | `Object` |`Y`| `{position: 'relative',width: 750,height: 352,overflow: 'hidden'}` | container style|
+| card-s | `Object` | `Y`|`{width: 360,height: 300,spacing: 0,scale: 0.75}` | card style|
+| auto-play | `Boolean` | `N`|`false` |whether is auto-play|
+| interval | `Number` | `N`|`1200` |interval of auto-play|
 
-### 事件回调
+### More
 
 ```
-//当前滑块被选中的回调
-`@wxcEpSliderCurrentIndexSelected="wxcEpSliderCurrentIndexSelected"`
+// destruction may occur when sliding under the ios list, you need rebind it
+// <wxc-ep-slider ref="wxc-ep-slider"></wxc-ep-slider
+this.$refs['wxc-ep-slider'].rebind();
 ```
 
+### Manually setting page
+
+```
+// <wxc-ep-slider ref="wxc-ep-slider"></wxc-ep-slider
+this.$refs['wxc-ep-slider'].manualSetPage(1); 
+```
+
+### Event
+
+```
+// @wxcEpSliderCurrentIndexSelected="wxcEpSliderCurrentIndexSelected"
+```

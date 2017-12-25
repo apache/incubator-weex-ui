@@ -1,32 +1,27 @@
 # wxc-tab-page 
 
-> Weex版本tab页面滑动组件,允许对头部进行配置，正常版本Weex支持expressionBinding手势跟随效果，低版本和H5版本支持降级效果滑动切换。
+> Tab page make it easy to switch between different views
 
-**新增沉浸式全屏的FullTabPage**🎉 🎉 🎉 
-
-- 规则
-   - 常用于导购业务线Tab页面，目前支持**icon和文字**形式的顶栏,详细见配置文件[config];
-  - **Android由于[此约束](http://weex-project.io/cn/references/gesture.html#约束)，目前需要在子元素里面绑定对应事件，可以参考[wxc-item]当中实现;**
-  - **沉浸式全屏的FullTabPage**请使用`@ali/wxc-tab-page/full-page.vue`
+### Rule
+- Allow configuration of the head, support `ExpressionBinding` gesture to follow the effect, H5 support downgrade slide switch.
+- Commonly used in Tab switch pages, currently supports **icon 、text and iconFont** form the top bar, You can see in [here](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
+- If the child element has click event, **because of the [reason](http://weex-project.io/cn/references/gesture.html#约束) in android**, You now need to bind the expression event in child element, Weex Ui has provided [wxc-pan-cell](https://github.com/alibaba/weex-ui/tree/master/packages/wxc-pan-item) to solve this issue，you can see more in [here](https://github.com/alibaba/weex-ui/tree/master/example/tab-page).
+- Support the **tab center style**, You need set `leftOffset` in `tabStyles` with the correct value.
  
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-tab-page/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-tab-page%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/gEfRLhYhoxktoSjPGoZx.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1M7ywSpXXXXXuXXXXXXXXXXXX-200-200.png" width="160"/>
+## [Demo](https://h5.m.taobao.com/trip/wxc-tab-page/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-tab-page%2Fdemo%2Findex.native-min.js)
+<img src="https://gw.alipayobjects.com/zos/rmsportal/drLGhWpwwSbMTjMCWomE.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1M7ywSpXXXXXuXXXXXXXXXXXX-200-200.png" width="160"/>
 
-## 安装
-
-```shell
-npm install weex-ui --save
-```
-
-## 使用方法
+## Code Example
 
 ```vue
 <template>
-  <wxc-tab-page :tab-titles="tabTitles"
+  <wxc-tab-page ref="wxc-tab-page"
+                :tab-titles="tabTitles"
                 :tab-styles="tabStyles"
                 title-type="icon"
-                ref="wxc-tab-page"
+                :needSlider="needSlider"
+                :is-tab-view="isTabView"
                 :tab-page-height="tabPageHeight"
                 @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
     <list v-for="(v,index) in tabList"
@@ -34,23 +29,20 @@ npm install weex-ui --save
           class="item-container"
           :style="{ height: (tabPageHeight - tabStyles.height) + 'px' }">
       <cell class="border-cell"></cell>
-      <cell v-for="(demo,key) in v" class="cell" :key="key">
-        <wxc-item url="//h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
-                  image="//gtd.alicdn.com/imgextra/TB12yGaNVXXXXX7aXXXSutbFXXX.jpg"
-                  image-text="长沙出发"
-                  title-line-count="2"
-                  desc-line-count="1"
-                  title="飞猪专线｜四川成都出发到九寨沟牟尼沟 温泉3天2晚纯玩跟团旅游"
-                  :desc="desc"
-                  :tags="tags"
-                  icon-type="hotel"
-                  price="219"
-                  :support-slide="supportSlide"
-                  price-desc="月售58笔｜999+条评论"
-                  :ext-id="'1-' + (demo) + '-' + (key)"
-                  :ext-index="key"
-                  :ext-total="demoList.length"
-                  @wxcItemGoodPan="wxcItemGoodPan"></wxc-item>
+      <cell v-for="(demo,key) in v"
+            class="cell"
+            :key="key">
+        <wxc-pan-item :ext-id="'1-' + (v) + '-' + (key)"
+                      url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
+                      @wxcPanItemPan="wxcPanItemPan">
+          <wxc-item image="https://gtd.alicdn.com/imgextra/TB12yGaNVXXXXX7aXXXSutbFXXX.jpg"
+                    :image-text="tabTitles[index].title"
+                    title="this is title,this is title,this is title,this is title"
+                    :desc="desc"
+                    :tags="tags"
+                    price="219"
+                    price-desc="price-desc"></wxc-item>
+        </wxc-pan-item>
       </cell>
     </list>
   </wxc-tab-page>
@@ -59,35 +51,51 @@ npm install weex-ui --save
 <style scoped>
   .item-container {
     width: 750px;
+    background-color: #f2f3f4;
+  }
+
+  .border-cell {
+    background-color: #f2f3f4;
+    width: 750px;
+    height: 24px;
     align-items: center;
     justify-content: center;
-    height: 1334px;
-    background-color: #f2f3f4;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color: #e0e0e0;
+  }
+
+  .cell {
+    background-color: #ffffff;
   }
 </style>
 <script>
-  const config = require('./config');
-  const Utils = require('./utils');
-  import { WxcTabPage} from 'weex-ui';
-  import WxcItem from './wxc-item';
+  const dom = weex.requireModule('dom');
+  import { WxcTabPage, WxcPanItem, Utils } from 'weex-ui';
+
+  // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js
+  import Config from './config'
+
   export default {
-    components: { WxcTabPage, WxcItem },
+    components: { WxcTabPage, WxcPanItem, WxcItem },
     data: () => ({
-      tabTitles: config.tabTitles,
-      tabStyles: config.tabStyles,
+      tabTitles: Config.tabTitles,
+      tabStyles: Config.tabStyles,
       tabList: [],
-      demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      needSlider: true,
+      demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],
       supportSlide: true,
+      isTabView: true,
       tabPageHeight: 1334,
       desc: [{
         type: 'text',
-        value: '特价机票|班期:清明 3/27-4/2等',
+        value: 'rich-text',
         theme: 'gray'
       }],
       tags: [{
         type: 'tag',
-        value: '满100减20',
-        theme: 'red'
+        value: 'rich tag text',
+        theme: 'yellow'
       }]
     }),
     created () {
@@ -99,14 +107,14 @@ npm install weex-ui --save
       wxcTabPageCurrentTabSelected (e) {
         const self = this;
         const index = e.page;
-        /* 未加载tab模拟数据请求 */
+        /* Unloaded tab analog data request */
         if (!Utils.isNonEmptyArray(self.tabList[index])) {
           setTimeout(() => {
             Vue.set(self.tabList, index, self.demoList);
           }, 100);
         }
       },
-      wxcItemGoodPan (e) {
+      wxcPanItemPan (e) {
         if (Utils.env.supportsEBForAndroid()) {
           this.$refs['wxc-tab-page'].bindExp(e.element);
         }
@@ -114,33 +122,119 @@ npm install weex-ui --save
     }
   };
 </script>
-```
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/index.vue)
-
-
-### 可配置参数
-
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| tab-titles | `Array` | `[]` | `必填`顶部nav显示配置,详细请见[master/demo/config.js#L55]|
-| title-type | `String` | `icon` | 顶部样式是`icon`形式还是`text`形式，默认`icon`|
-| tab-styles | `Array` | `[]` | `必填`顶部nav样式配置,详细请见[master/demo/config.js#L46]|
-| tab-page-height | `Number` | `1334` |`必填`tab page页面的高度，详细计算可以参数demo中 |
-| is-tab-view | `Boolean` | `true` |假如需要跳出tab，可以设置这个为`true`，同时在对应的tab配置中加入url参数即可 |
-| need-slider | `Boolean` | `true` | 是否需要滑动功能，默认需要|
-| pan-dist | `Number` | `200` | 滚动多少切换上下一屏幕|
-| duration | `Number` | `300` | 页面切换动画的时间 |
-| timing-function | `String` | `cubic-bezier(0.25, 0.46, 0.45, 0.94)` | 页面切换动画函数 |
-| spm-c | `String` | `0` | 顶部scroller模块的C点|
-
-### 主动触发设置页面
 
 ```
-// 直接在wxc-tab-page上面绑定ref="wxc-tab-page",然后调用即可
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/index.vue)
+
+
+### API
+
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| tab-titles | `Array` |`Y`| `[]` | Tab list [config](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L7)|
+| title-type | `String` |`N`| `icon` | title type `icon`/`text`/`iconFont`(*1)|
+| tab-styles | `Array` |`N`| `[]` | [style config](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
+| tab-page-height | `Number` |`N`| `1334` | Tab page height |
+| is-tab-view | `Boolean` |`N`| `true` |if set `false`,add tab-titles config with `url` can be jumped out|
+| need-slider | `Boolean` |`N`| `true` | whether needs slider|
+| pan-dist | `Number` |`N`| `200` | how many scrolls to switch to the next screen|
+| duration | `Number` |`N`| `300` | page slider function of time |
+| timing-function | `String` |`N`| `-` | page slider function of animation |
+| title-use-slot | `Boolean` |`N`| `false` | configure title using `slot` (*2)|
+| wrap-bg-color | `String` |`N`| `#F2F3F4` |page background color|
+
+### *1: Using iconFont
+- After Weex Ui version about `0.3.8`, we can use `iconFont` to represent our title image, you can use like this:
+```
+ // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L67
+  tabTitles: [
+    {
+      title: 'Home',
+      codePoint: '&#xe608;'
+    },
+    {
+      title: 'Message',
+      codePoint: '&#xe752;',
+      badge: 5
+    },
+    // .... more
+  ],
+  // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L87
+  tabIconFontStyles: {
+      bgColor: '#FFFFFF',
+      titleColor: '#666666',
+      activeTitleColor: '#3D3D3D',
+      activeBgColor: '#FFFFFF',
+      isActiveTitleBold: true,
+      width: 160,
+      height: 120,
+      fontSize: 24,
+      textPaddingLeft: 10,
+      textPaddingRight: 10,
+      iconFontSize: 50,
+      iconFontColor: '#333333',
+      activeIconFontColor: 'red',
+      iconFontUrl: '//at.alicdn.com/t/font_501019_mauqv15evc1pp66r.ttf'
+    }
+```
+ 
+
+### *2：Manually setting the title show
+- When configuring head navigation in the way of slot, we need to make sure that the original simple configuration is no longer able to meet the existing needs, and can be used to import param`:title-use-slot="true"`, At the same time, the following slot corresponding nodes are introduced into the wxc-tab-page component
+- It can be generated by traversing the way and determining the current selection page according to `wxcTabPageCurrentTabSelected`, and you need manage the color.
+
+```
+<div slot="tab-title-0"><text>111</text></div>
+<div slot="tab-title-1"><text>222</text></div>
+<div slot="tab-title-2"><text>333</text></div>
+```
+
+### Manually setting the page
+
+```
+// <wxc-tab-page ref="wxc-tab-page">
+// set the third page
 this.$refs['wxc-tab-page'].setPage(2)
+
+// set the third page with no animation
+this.$refs['wxc-tab-page'].setPage(2,null,false);
 ```
 
-### 事件回调
+### Event
+
 ```
-//当前页面被选中的回调`@wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected"`
+@wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected"
+```
+
+
+
+## wxc-pan-item
+
+#### API
+
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| ext-id | `Number、String` |`Y`| `0` | slider item id|
+| url | `String` |`N`| `-` | jump link, own processing can not be passed |
+
+#### Code Example
+```
+// how to use
+<wxc-pan-item 
+    :ext-id="1" 
+    :url="url" 
+    @wxcPanItemClicked="wxcPanItemClicked"
+    @wxcPanItemPan="wxcPanItemPan">
+      <your-item>....</your-item>
+    </pan-item>
+  
+// Import
+import { WxcPanItem } from 'weex-ui';
+
+//Callback
+wxcPanItemPan (e) {
+    if (Utils.env.supportsEBForAndroid()) {
+      this.$refs['wxc-tab-page'].bindExp(e.element);
+    }
+ }
 ```

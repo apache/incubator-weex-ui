@@ -2,7 +2,7 @@
 <!-- Created by Tw93 on 17/07/28. -->
 
 <template>
-  <div class="wxc-title">
+  <div class="wxc-title" :aria-hidden="true">
     <image class="logo" src="https://gw.alicdn.com/tfs/TB1JpgJRFXXXXc7XpXXXXXXXXXX-800-800.png"></image>
     <text class="text">{{title}}</text>
   </div>

@@ -1,28 +1,26 @@
 # wxc-slider-bar 
 
+> A slider component for displaying current value and intervals in range.
 
-> 滑动选择组件，主要用于选择线性取值范围中某个具体的值（整数），或者选取一个取值范围
+!> These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6). 
 
-## [Demo 预览](https://h5.m.taobao.com/trip/wxc-slider-bar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-slider-bar%2Fdemo%2Findex.native-min.js)
+### Rule
+- To input a value in a range.
+
+## [Demo](https://h5.m.taobao.com/trip/wxc-slider-bar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-slider-bar%2Fdemo%2Findex.native-min.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/KAGxLOahnabmMTggilTC.gif" width="240px"/>&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="http://gtms03.alicdn.com/tfs/TB1bnL_SpXXXXb7XXXXXXXXXXXX-200-200.png" width="160px"/>
+<img src="https://img.alicdn.com/tfs/TB1bnL_SpXXXXb7XXXXXXXXXXXX-200-200.png" width="160px"/>
 
-## 安装
-
-```shell
-npm i weex-ui -S
-```
-
-## 使用方法
+## Code Example
 
 ```vue
 <template>
   <wxc-slider-bar v-bind="sliderBarCfg"></wxc-slider-bar>
 </template>
 <script>
-  import { wxcSliderBar } from 'weex-ui';
+  import { WxcSliderBar } from 'weex-ui';
   export default {
-  	components: { wxcSliderBar },
+  	components: { WxcSliderBar },
   	data: () => ({
       sliderBarCfg: {
         length: 400,
@@ -38,19 +36,21 @@ npm i weex-ui -S
 </script>
 ```
 
-### 可配置参数
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/slider-bar/index.vue)
 
-| 名称          | 类型     | 默认值    | 备注  |
-|--------------|----------|----------|-----|
-| length       | `Number` | `500`    | 滑条长度（单位px） |
-| height       | `Number` | `4`      | 滑条高度 |
-| range        | `Boolean` | `false`  | 是否选择范围 |
-| min          | `Number` | `0`      | 滑条最小值 |
-| max          | `Number` | `100`    | 滑条最大值 |
-| minDiff      | `Number` | `5`      | 选择范围时最小差值（用于避免按钮重合） |
-| value        | `[Number, Array]` | `0`      | 设置当前取值。当 range 为 false 时，使用 number，否则用 [number, number] |
-| defaultValue | `[Number, Array]` | `0`      | 设置初始取值。当 range 为 false 时，使用 number，否则用 [number, number] |
-| disabled     | `Boolean` | `false`  | 是否禁用，值为 true 时，滑块为禁用状态 |
-| invalidColor | `String` | `#E0E0E0`| 无效颜色 |
-| validColor   | `String` | `#EE9900`| 有效颜色 |
-| disabledColor| `String` | `#AAA`   | 禁用颜色 |
+### API
+
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| length       | `Number` |`N`| `500`    | bar width |
+| height       | `Number` |`N`| `4`      | bar height |
+| range        | `Boolean` |`N`| `false`  | dual thumb mode |
+| min          | `Number` |`N`| `0`      | the minimum value the slider can slide to.	 |
+| max          | `Number` |`N`| `100`    | the maximum value the slider can slide to |
+| minDiff      | `Number` |`N`| `5`      | the granularity the slider can step through values.  |
+| value        | `[Number, Array]` |`N`| `0` | the value of slider|
+| defaultValue | `[Number, Array]` |`N`| `0` | default value|
+| disabled     | `Boolean` |`N`| `false`  | if true, the slider will not be interactable. |
+| invalidColor | `String` |`N`| `#E0E0E0`| invalid color |
+| validColor   | `String` |`N`| `#EE9900`| valid color |
+| disabledColor| `String` |`N`| `#AAA`   | disabled color |

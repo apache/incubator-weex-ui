@@ -3,6 +3,7 @@
  * Created by Tw93 on 17/09/25
  */
 
+import Utils from './packages/utils';
 import WxcButton from './packages/wxc-button';
 import WxcCell from './packages/wxc-cell';
 import WxcCheckbox from './packages/wxc-checkbox';
@@ -10,6 +11,7 @@ import WxcCheckboxList from './packages/wxc-checkbox-list';
 import WxcCountdown from './packages/wxc-countdown';
 import WxcDialog from './packages/wxc-dialog';
 import WxcEpSlider from './packages/wxc-ep-slider';
+import WxcPanItem from './packages/wxc-pan-item';
 import WxcGridSelect from './packages/wxc-grid-select';
 import WxcIndexlist from './packages/wxc-indexlist';
 import WxcLightbox from './packages/wxc-lightbox';
@@ -33,9 +35,11 @@ import WxcSlideNav from './packages/wxc-slide-nav';
 import WxcSliderBar from './packages/wxc-slider-bar';
 import WxcStepper from './packages/wxc-stepper';
 import WxcTabPage from './packages/wxc-tab-page';
+import WxcTabBar from './packages/wxc-tab-bar';
 import WxcTag from './packages/wxc-tag';
 
 export {
+  Utils,
   WxcButton,
   WxcCell,
   WxcCheckbox,
@@ -43,6 +47,7 @@ export {
   WxcCountdown,
   WxcDialog,
   WxcEpSlider,
+  WxcPanItem,
   WxcGridSelect,
   WxcIndexlist,
   WxcLightbox,
@@ -66,5 +71,6 @@ export {
   WxcSliderBar,
   WxcStepper,
   WxcTabPage,
+  WxcTabBar,
   WxcTag
-}
+};

@@ -1,9 +1,10 @@
 /**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2017/09/06.
  * 红包雨区域检测类
  */
 
-import * as Utils from './utils';
+import Utils from '../../utils';
 
 const Region = {
   regions: [],
@@ -13,12 +14,12 @@ const Region = {
     region.right = region.left + region.width;
     region.bottom = region.top + region.height;
 
-    for (var i = 0; i < regions.length; i++) {
+    for (let i = 0; i < regions.length; i++) {
       const curRegion = regions[i];
       // 两区域相交
       curRegion.right = curRegion.left + curRegion.width;
       curRegion.bottom = curRegion.top + curRegion.height;
-      if (!(region.left > curRegion.right || region.right < curRegion.left || region.bottom < curRegion.top || region.top > curRegion.bottom )) {
+      if (!(region.left > curRegion.right || region.right < curRegion.left || region.bottom < curRegion.top || region.top > curRegion.bottom)) {
         return true;
       }
     }
@@ -30,21 +31,21 @@ const Region = {
     }
     let i = 1000;
     const viewWidth = 750;
-    const viewHeight = Utils.getPageHeight();
+    const viewHeight = Utils.env.getPageHeight();
     let wrapWidth = viewWidth - width;
     let wrapHeight = viewHeight - height - 140;
     wrapHeight = wrapHeight < 0 ? 0 : wrapHeight;
     wrapWidth = wrapWidth < 0 ? 0 : wrapWidth;
 
     const region = {
-      left: -9999,
-      top: -9999,
-      width: width,
-      height: height
+      left: '-9999px',
+      top: '-9999px',
+      width: width + 'px',
+      height: height + 'px'
     };
     while (i--) {
-      region.left = Math.round(Math.random() * wrapWidth);
-      region.top = Math.round(Math.random() * wrapHeight + height);
+      region.left = Math.round(Math.random() * wrapWidth) + 'px';
+      region.top = Math.round(Math.random() * wrapHeight + height) + 'px';
       if (!this.isCross(region)) {
         this.add(region);
         return region;
@@ -52,8 +53,7 @@ const Region = {
     }
   },
   buildRandom () {
-    const random = new Date().getTime() + '_' + parseInt(Math.random() * 1000000);
-    return random;
+    return new Date().getTime() + '_' + parseInt(Math.random() * 1000000);
   },
   add (region) {
     const { regions } = this;
@@ -69,5 +69,6 @@ const Region = {
       }
     }
   }
-}
+};
+
 export default Region;

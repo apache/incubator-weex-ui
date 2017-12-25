@@ -1,4 +1,6 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!-- Created by Tw93 on 17/03/31. -->
+
 <template>
   <div class="wxc-demo">
     <scroller class="scroller">
@@ -78,11 +80,7 @@
     data: () => ({
       configList: [{
         type: 'icon',
-        src: '//gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
-        style: {
-          width: 24,
-          height: 22
-        }
+        src: 'https://gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png'
       }, {
         type: 'text',
         value: '黄色主题',
@@ -90,13 +88,13 @@
       }, {
         type: 'link',
         value: '自定义颜色link',
-        href: '//h5.m.taobao.com',
+        href: 'https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js',
         style: {
           color: '#546E7A'
         }
       }, {
         type: 'icon',
-        src: '//gw.alicdn.com/tfs/TB1qygJRXXXXXX2XFXXXXXXXXXX-117-37.png'
+        src: 'https://gw.alicdn.com/tfs/TB1qygJRXXXXXX2XFXXXXXXXXXX-117-37.png'
       }, {
         type: 'tag',
         value: '满100减20',
@@ -116,20 +114,18 @@
       specialConfigList: [
         {
           type: 'tag',
-          value: '自由行',
+          value: '渐进式',
           style: {
-            width: 84,
             fontSize: 24,
             color: '#3D3D3D',
             borderColor: '#FFC900',
             backgroundColor: '#FFC900',
-            height: 28,
             borderRadius: 14
           }
         },
         {
           type: 'text',
-          value: '春秋旅游广州-泰国曼谷6天往返单机票自由行自由春秋旅游广州-泰国曼谷6天往返单机票自由行自由行…',
+          value: 'VueJS 是 Evan You 开发的渐进式 JavaScript 框架, 开发者能够通过撰写 *.vue 文件',
           theme: 'black',
           style: {
             fontSize: 28
@@ -139,15 +135,11 @@
       specialConfigList1: [
         {
           type: 'icon',
-          src: '//gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
-          style: {
-            width: 24,
-            height: 22
-          }
+          src: 'https://gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png'
         },
         {
           type: 'text',
-          value: '首先我很满意酒店，很整洁，早上的自助餐也很丰富，游泳池也不错，其次，租车公司也很赞，这次旅行非常的完美...',
+          value: 'Weex 是一套简单易用的跨平台开发方案，能以 web 的开发体验构建高性能、可扩展的 native 应用',
           theme: 'black'
         }
       ]
@@ -156,9 +148,7 @@
       setTitle('RichText');
     },
     methods: {
-      wxcRichTextLinkClick () {
-
-      }
+      wxcRichTextLinkClick () {}
     }
   };
 </script>

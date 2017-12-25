@@ -3,8 +3,10 @@
 
 <template>
   <wxc-cell :has-top-border="hasTopBorder"
-            @wxcCellClicked="wxcCellClicked">
-    <text :style="{color:color}"
+            @wxcCellClicked="wxcCellClicked"
+            :accessible="true"
+            :aria-label="`${title},状态为${checked ? '已选中' : '未选中'},${disabled ? '不可更改' : '点击可切换'}`">
+    <text :style="{color:textColor}"
           class="title-text"
           slot="title">{{title}}</text>
     <image :src="checkIcon"
@@ -50,6 +52,10 @@
       checked: {
         type: Boolean,
         default: false
+      },
+      config: {
+        type: Object,
+        default: () => ({})
       }
     },
     data: () => ({
@@ -59,25 +65,38 @@
     }),
     computed: {
       checkIcon () {
-        const { icon, disabled, innerChecked } = this;
+        const { icon, disabled, innerChecked, config } = this;
+        const mergeIcon = [...icon];
+        config.checkedIcon && (mergeIcon[0] = config.checkedIcon);
+        config.unCheckedIcon && (mergeIcon[1] = config.unCheckedIcon);
+        config.checkedDisabledIcon && (mergeIcon[2] = config.checkedDisabledIcon);
+        config.unCheckedDisabledIcon && (mergeIcon[3] = config.unCheckedDisabledIcon);
         if (disabled) {
-          return icon[innerChecked ? 2 : 3];
+          return mergeIcon[innerChecked ? 2 : 3];
         } else {
-          return icon[innerChecked ? 0 : 1];
+          return mergeIcon[innerChecked ? 0 : 1];
         }
+      },
+      textColor () {
+        const { innerChecked, disabled, config } = this;
+        const checkedColor = config.checkedColor ? config.checkedColor : '#EE9900';
+        return innerChecked && !disabled ? checkedColor : '#3D3D3D';
+      }
+    },
+    watch: {
+      checked (newChecked) {
+        this.innerChecked = newChecked;
       }
     },
     created () {
-      const { checked, disabled } = this;
+      const { checked } = this;
       this.innerChecked = checked;
-      this.color = checked && !disabled ? '#EE9900' : '#3D3D3D';
     },
     methods: {
       wxcCellClicked () {
         const { disabled, innerChecked, value } = this;
         if (!disabled) {
           this.innerChecked = !innerChecked;
-          this.color = (this.innerChecked ? '#EE9900' : '#3D3D3D');
           this.$emit('wxcCheckBoxItemChecked', { value, checked: this.innerChecked })
         }
       }

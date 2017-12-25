@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weex Ui</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="description" content="A rich interaction, lightweight, high performance UI library.">
+  <link rel="icon" href="https://img.alicdn.com/tfs/TB1kCs_er_I8KJjy1XaXXbsxpXa-419-495.png" type="image/png">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <style type="text/css">
+    :root {--theme-color: #F7C242;}
+  </style>
+  <link rel="stylesheet" href="//h5.m.taobao.com/css/trip/weex-ui/index.min.css">
+  <script>
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      location.href = 'https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js'
+    }
+  </script>
+</head>
+
+<body class="ready weex-ui-demo">
+<nav class="app-nav">
+  <ul>
+    <li><a href="//alibaba.github.io/weex-ui/#/">En</a></li>
+    <li><a href="//alibaba.github.io/weex-ui/#/cn/">中文</a></li>
+    <li><a class="active" href="//alibaba.github.io/weex-ui/docs/demo.html">Demo</a></li>
+    <li>
+      <a id="J_show_community" class="show_community" onclick="document.getElementById('J_community_image').classList.toggle('active');this.classList.toggle('active');">Chat</a>
+      <img src="https://img.alicdn.com/tfs/TB1Ohm6g8fH8KJjy1XbXXbLdXXa-1501-1700.jpg" class="community-img" id="J_community_image" />
+    </li>
+  </ul>
+</nav>
+<a href="https://github.com/alibaba/weex-ui" class="github-corner" aria-label="View source on Github" target="_blank">
+  <svg viewBox="0 0 250 250" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+    <path
+      d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+      fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+    <path
+      d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+      fill="currentColor" class="octo-body"></path>
+  </svg>
+</a>
+
+<section class="cover show has-mask">
+  <div class="cover-main">
+    <div class="container phone-container phone view" id="phone">
+      <iframe id="J_frame"
+              src="//h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js"></iframe>
+      <div class="return-button"  onclick="document.getElementById('J_frame').setAttribute('src', '//h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js');"></div>
+    </div>
+    <div class="weex-info">
+      <a  class="weex-title" target="_blank" href="//h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js">Weex Ui</a>
+      <p class="comp-desc">A rich interaction, lightweight, high performance UI library based on Weex.</p>
+      <img src="https://img.alicdn.com/tfs/TB1ftMKg8TH8KJjy0FiXXcRsXXa-200-200.png" width="200px">
+      <p class="try-text">Try it with Fliggy、Taobao、Tmall、Weex Playground or any mobile browsers now!</p>
+    </div>
+  </div>
+  <div class="mask"></div>
+</section>
+</body>
+</html>

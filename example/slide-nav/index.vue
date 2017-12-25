@@ -1,4 +1,6 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!-- Created by Tw93 on 17/03/31. -->
+
 <template>
   <div class="wrapper">
     <list
@@ -13,8 +15,7 @@
       @touchstart.native="onTouchStart"
       @touchmove.native="onTouchMove"
       @touchend.native="onTouchEnd"
-      @touchcancel.native="onTouchEnd"
-    >
+      @touchcancel.native="onTouchEnd">
       <cell>
         <div class="padding"></div>
       </cell>
@@ -22,7 +23,8 @@
         class="cell"
         v-for="(item, index) in items"
         :key="index"
-      >
+        :accessible="true"
+        :aria-label="index + 1">
         <a class="div" href="https://h5.m.taobao.com/trip/home/index.html">
           <text class="text">{{index + 1}}</text>
         </a>

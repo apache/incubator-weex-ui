@@ -1,47 +1,37 @@
 # wxc-mask 
 
-> 一个提供关闭按钮的Weex Mask弹窗组件，可以定制content里面的内容。
+> A pop-up mask
 
+## [Demo](https://h5.m.taobao.com/trip/wxc-mask/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-mask%2Fdemo%2Findex.native-min.js)
+<img src="https://gw.alipayobjects.com/zos/rmsportal/WMcMaWMTOpBSevBGfNTT.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1CgYJSpXXXXc5aXXXXXXXXXXX-200-200.png" width="160"/>
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-mask/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-mask%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/WMcMaWMTOpBSevBGfNTT.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms03.alicdn.com/tfs/TB1CgYJSpXXXXc5aXXXXXXXXXXX-200-200.png" width="160"/>
-
-## 安装
-
-```shell
-npm i weex-ui --save
-```
-
-## 使用方法
+## Code Example
 
 ```vue
 <template>
   <div class="wrapper">
     <div class="btn" @click="openMask">
-      <text class="btn-txt">点击弹出动画面板</text>
+      <text class="btn-txt">Pop up a animation mask</text>
     </div>
     <div class="btn btn-margin yellow" @click="openNoAnimationMask">
-      <text class="btn-txt">点击弹出无动画面板</text>
+      <text class="btn-txt">Pop up a no animation mask</text>
     </div>
     <wxc-mask height="800"
               width="702"
-              overlay-opacity="0.6"
               border-radius="0"
               duration="200"
               mask-bg-color="#FFFFFF"
-              :overlay-can-close="overlayCanClose"
               :has-animation="hasAnimation"
-              :has-overlay="hasOverlay"
-              :show-close="showClose"
-              @wxcMaskSetHidden="wxcMaskSetHidden"
-              :show="show">
+              :has-overlay="true"
+              :show-close="true"
+              :show="show"
+              @wxcMaskSetHidden="wxcMaskSetHidden">
       <div class="content">
         <div class="demo-title">
-          <text class="title">Weex帮助你构建原生应用</text>
+          <text class="title">Help you build a real Native App</text>
         </div>
         <text class="content-text">
-          与 Web App、HTML5 App 或 hybrid App 不同，您可以使用 Weex 构建一个真正的原生应用。更贴心的是你的代码只需使用 HTML、CSS、JavaScript
-          可以构建原生应用，上手非常简单。但实际上，应用的底层是 Objective-C 或 Java， 同时，Weex 提供很多 native 组件或模块供开发人员使用。
+          Different from a "web app", "HTML5 app", or "hybrid app", you can use Weex to build a real mobile app. The code that you write is relatively simple, because you can build native applications just using HTML, CSS, Javascript. But underneath, the core of the application is Objective-C or Java. At the same time, Weex will provide a lot of native components or modules for developers to use.
         </text>
       </div>
     </wxc-mask>
@@ -50,13 +40,10 @@ npm i weex-ui --save
 
 <script>
   import { WxcMask } from 'weex-ui';
-  const navigationBar = weex.requireModule('navigationBar');
   export default {
     components: { WxcMask },
     data: () => ({
       show: false,
-      showClose: true,
-      hasOverlay: true,
       overlayCanClose: true,
       isFalse: false,
       hasAnimation: true
@@ -78,31 +65,33 @@ npm i weex-ui --save
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/mask/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/mask/index.vue)
 
 
-### 可配置参数
+### API
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| show | `Bool` | false |  设置mask是否显示 |
-| width | `Number` | 702 | 面板的宽度  |
-| height | `Number` | 800 | 面板的高度  |
-| has-animation | `Bool` | true | 面板弹出是否动画 |
-| show-close | `Bool` | false |  是否显示关闭按钮 |
-| has-overlay | `Bool` | true |  是否有蒙层 |
-| border-radius | `Number` | 0 |  弹出的border-radius |
-| overlay-can-close | `Bool` | true |  点击overlay灰层是否可以关闭 |
-| mask-bg-color | `String` | '#ffffff' |  mask的背景颜色 |
-| duration | `String` | '300' |  弹层出现时间 |
-| timing-function | `String` | 'ease-in' |  弹层出现动画方式 |
-| overlay-cfg | `Object` | '{ hasAnimation: true, timingFunction: ['ease-in', 'ease-out'], duration: 300, opacity: 0.6 }' |  蒙层配置参数，参考 [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md) 组件 |
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| show | `Bool` |`Y`| `false` |  whether to show |
+| width | `Number` |`Y`| `702` | mask width  |
+| height | `Number` |`Y`| `800` | mask height  |
+| has-animation | `Bool` |`N`| `true` | mask pops up whether to animate |
+| show-close | `Bool` | `N`|`false` |  whether to show close icon |
+| has-overlay | `Bool` |`N`| `true` |  whether has a overlay  |
+| border-radius | `Number` |`N`| `0` |  mask border radius |
+| overlay-can-close | `Bool` |`N`| `true` | Whether the overlay can be closed|
+| mask-bg-color | `String` |`N`| `#ffffff` |  mask background color |
+| duration | `String` |`N`| `300` |  animation duration time |
+| timing-function | `String` |`N`| `ease-in` |  animation timing function |
+| overlay-cfg | `Object` |`N`| `{}` | [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md) configs |
 
 
-### 事件回调
+### Event
 
 ```
-//有一个关闭相关的回调逻辑` @wxcMaskSetHidden="wxcMaskSetHidden"`，需要设置`show=false`
-//详细可见demo
-//此外还有`@wxcMaskCloseClick="wxcMaskCloseClick"`、` @wxcOverlayBodyClicked="wxcOverlayBodyClicked"`需要时候可以使用
+//need set `show=false` when the mask hide
+@wxcMaskSetHidden="wxcMaskSetHidden" 
+
+@wxcMaskCloseClick="wxcMaskCloseClick"
+@wxcOverlayBodyClicked="wxcOverlayBodyClicked"
 ```

@@ -1,16 +1,14 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
 <!-- Created by Tw93 on 16/10/25. -->
-<!--A  fliggy result page-->
+<!--A  result page-->
+
 <template>
-  <div class="wrap"
-       v-if="show"
-       :style="wrapStyle">
-    <div class="wxc-result"
-         :style="{paddingTop: setPaddingTop }">
+  <div class="wrap" v-if="show" :style="wrapStyle">
+    <div class="wxc-result" :style="{paddingTop: setPaddingTop }">
       <image class="result-image"
+             :aria-hidden="true"
              :src="resultType.pic"></image>
-      <div class="result-content"
-           v-if="resultType.content">
+      <div class="result-content" v-if="resultType.content">
         <text class="content-text">{{resultType.content}}</text>
         <text class="content-text content-desc"
               v-if="resultType.desc">{{resultType.desc}}</text>
@@ -83,7 +81,8 @@
 </style>
 
 <script>
-  import * as TYPES from './type'
+  import TYPES from './type';
+  import Utils from '../utils';
 
   export default {
     props: {
@@ -108,7 +107,7 @@
     computed: {
       resultType () {
         const { type, customSet } = this;
-        const allTypes = this.isEmptyObject(customSet) ? TYPES : this.mergeDeep(TYPES, customSet);
+        const allTypes = Utils.isEmptyObject(customSet) ? TYPES : Utils.mergeDeep(TYPES, customSet);
         let types = allTypes['errorPage'];
         if (['errorPage', 'noGoods', 'noNetwork', 'errorLocation'].indexOf(type) > -1) {
           types = allTypes[type];
@@ -122,38 +121,13 @@
     },
     methods: {
       handleTouchEnd (e) {
-        // 在支付宝上面有点击穿透问题
+        // web上面有点击穿透问题
         const { platform } = weex.config.env;
         platform === 'Web' && e.preventDefault && e.preventDefault();
       },
       onClick () {
         const type = this.type;
         this.$emit('wxcResultButtonClicked', { type })
-      },
-      isObject (item) {
-        return (item && typeof item === 'object' && !Array.isArray(item));
-      },
-      isEmptyObject (obj) {
-        return Object.keys(obj).length === 0 && obj.constructor === Object;
-      },
-      mergeDeep (target, ...sources) {
-        if (!sources.length) return target;
-        const source = sources.shift();
-        if (this.isObject(target) && this.isObject(source)) {
-          for (const key in source) {
-            if (this.isObject(source[key])) {
-              if (!target[key]) {
-                Object.assign(target, {
-                  [key]: {}
-                });
-              }
-              this.mergeDeep(target[key], source[key]);
-            } else {
-              Object.assign(target, { [key]: source[key] });
-            }
-          }
-        }
-        return this.mergeDeep(target, ...sources);
       }
     }
   };

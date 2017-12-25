@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  const Utils = require('./utils');
+  import Utils from '../utils';
   import WxcRichTextText from './wxc-rich-text-text.vue'
 
   export default {

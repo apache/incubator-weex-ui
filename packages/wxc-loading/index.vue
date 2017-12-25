@@ -7,13 +7,13 @@
     <div class="wxc-loading"
          :style="{ top: topPosition +'px'}"
          v-if="showLoading">
-      <div :class="['loading-box',loading.class]">
+      <div :class="['loading-box',loading.class]" :aria-hidden="true">
         <image :src="loading.url"
                class="loading-trip-image"
                resize="contain"
                quality="original"></image>
-        <text v-if="showText"
-              class="loading-text">{{hackText}}</text>
+        <text v-if="loadingText"
+              class="loading-text">{{loadingText}}</text>
       </div>
     </div>
   </div>
@@ -58,11 +58,9 @@
 </style>
 
 <script>
-  import { PNG, GIF, BLACK_GIF } from './type';
-  import * as Utils from './utils';
+  import { GIF, BLACK_GIF } from './type';
+  import Utils from '../utils';
 
-  const appVersion = weex.config.env.appVersion || '0';
-  const needShowPng = Utils.compareVersion('8.2.4', appVersion) && Utils.isTrip() && Utils.isAndroid();
   export default {
     props: {
       show: {
@@ -88,19 +86,16 @@
     }),
     computed: {
       showText () {
-        return this.loadingText || needShowPng;
-      },
-      hackText () {
-        return this.loadingText ? this.loadingText : (needShowPng ? '正在加载中...' : '');
+        return this.loadingText;
       },
       loading () {
         let loading = {};
         switch (this.type) {
           case 'trip':
             loading = {
-              url: needShowPng ? PNG : GIF,
+              url: GIF,
               class: 'trip-loading'
-            }
+            };
             break;
           default:
             loading = {
@@ -111,7 +106,7 @@
         return loading;
       },
       topPosition () {
-        return (Utils.getPageHeight() - 200) / 2;
+        return (Utils.env.getPageHeight() - 200) / 2;
       },
       needShow () {
         this.setShow();

@@ -1,43 +1,39 @@
 /**
+ * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 2017-7-18.
  */
-"use strict";
 
 const path = require('path');
-const webpack = require('webpack');
 const pkg = require('./package.json');
-const glob = require("glob");
+
+const webpack = require('webpack');
+const glob = require('glob');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
-const plugins = [
-  new CleanWebpackPlugin(['build'], {
-    verbose: true
-  }),
-  new webpack.DefinePlugin({
-    "process.env": {
-      NODE_ENV: JSON.stringify("production")
-    },
-    'global': '{}'
-  }),
-  new webpack.BannerPlugin({
-    banner: '// { "framework": "Vue" }\n',
-    raw: true
-  }),
-  new CopyWebpackPlugin([
-    { from: 'example/*/index.html' }
-  ]),
-];
 
 console.log('Building..., Please wait a moment.');
 
 const getEntry = dir => {
   const foundScripts = glob.sync(`${dir}/*/index.js`, {});
   // 生成 entry 映射表
-  let ret = {};
+  const ret = {};
   foundScripts.forEach(function (scriptPath) {
     if (!/\.entry\.js$/.test(scriptPath)) {
       ret[scriptPath.replace(/^(.*)\.js$/, '$1')] = './' + scriptPath;
+    }
+  });
+  return ret;
+};
+
+const getCopyConfig = () => {
+  const foundScripts = glob.sync('example/*/', {});
+  const ret = [];
+  foundScripts.forEach(function (scriptPath) {
+    if (!/(_mods|_public)/.test(scriptPath)) {
+      ret.push({
+        from: 'example/_public/index.html',
+        to: scriptPath + 'index.html'
+      })
     }
   });
   return ret;
@@ -47,6 +43,26 @@ const example = getEntry('example');
 const entry = Object.assign({
   'index': './index.js'
 }, example);
+
+const plugins = [
+  new CleanWebpackPlugin(['build'], {
+    verbose: true
+  }),
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: JSON.stringify('production')
+    },
+    'global': '{}'
+  }),
+  new webpack.BannerPlugin({
+    banner: '// { "framework": "Vue" }\n',
+    raw: true
+  }),
+  new CopyWebpackPlugin(getCopyConfig(), { copyUnmodified: true })
+];
+
+const needClean = process.argv.indexOf('--watch') > -1;
+needClean && plugins.shift();
 
 const getBaseConfig = () => ({
   devtool: '#source-map',
@@ -80,13 +96,6 @@ const getBaseConfig = () => ({
     }]
   },
   plugins,
-  devServer: {
-    inline: true,
-    hot: true,
-    headers: {
-      "Cache-Control": "no-cache"
-    }
-  },
   resolve: {
     extensions: ['.js'],
     modules: [
@@ -97,14 +106,25 @@ const getBaseConfig = () => ({
 
 const webCfg = getBaseConfig();
 webCfg.output.filename = '[name].web.js';
+
 webCfg.module.rules[1].use.push({
   loader: 'vue-loader',
   options: {
+    optimizeSSR: false,
+    postcss: [
+      require('postcss-plugin-weex')(),
+      require('autoprefixer')({
+        browsers: ['> 0.1%', 'ios >= 8', 'not ie < 12']
+      }),
+      require('postcss-plugin-px2rem')({
+        rootValue: 75,
+        minPixelValue: 1.01
+      })
+    ],
     compilerModules: [
       {
         postTransformNode: el => {
-          el.staticStyle = `$processStyle(${el.staticStyle})`
-          el.styleBinding = `$processStyle(${el.styleBinding})`
+          require('weex-vue-precompiler')()(el)
         }
       }
     ]

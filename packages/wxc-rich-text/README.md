@@ -1,75 +1,63 @@
 # wxc-rich-text 
 
-> 一个Weex富文本的通用解决方案，支持text、icon、link、tag四种形式的混排。
+> Rich text general solution, support text, icon, link, label form of mixing
 
-- 规则：
-  - 使用统一规范，前后端约定相关字段。
-  - text默认是`gray`、tag默认是`blue`、link默认是`black`主题。
-  - 具体如下：
-  
-      <img src="http://gtms04.alicdn.com/tfs/TB1kqcoRXXXXXa3XpXXXXXXXXXX-2102-2320.png" width="700"/>
+### Rule
+- Using unified specification, conventions related fields in front and back end.
+- `wxc-rich-text` supports a row of general graphic and text mixing.
+- `wxc-special-rich-text` supports two row of special mixing (tag + text、icon + text).
+   <img src='https://img.alicdn.com/tfs/TB1kqcoRXXXXXa3XpXXXXXXXXXX-2102-2320.png' width='600'/>
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-rich-text/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-rich-text%2Fdemo%2Findex.native-min.js)
-<img src="http://gtms01.alicdn.com/tfs/TB1e4LYSpXXXXXVXpXXXXXXXXXX-750-1334.png" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1OXrDSpXXXXcyXVXXXXXXXXXX-200-200.png" width="160"/>
+## [Demo](https://h5.m.taobao.com/trip/wxc-rich-text/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-rich-text%2Fdemo%2Findex.native-min.js)
+<img src='https://img.alicdn.com/tfs/TB1e4LYSpXXXXXVXpXXXXXXXXXX-750-1334.png' width='240'/>&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://img.alicdn.com/tfs/TB1OXrDSpXXXXcyXVXXXXXXXXXX-200-200.png' width='160'/>
 
-## 安装
-
-```shell
-npm install weex-ui --save
-```
-
-## 使用方法
+## Code Example
 
 ```vue
 <template>
-  <div class="container">
-    <wxc-rich-text :config-list="configList"
-                   @wxcRichTextLinkClick="wxcRichTextLinkClick"></wxc-rich-text>
-     <div class="special-rich">
-       <wxc-special-rich-text :config-list="specialConfigList"></wxc-special-rich-text>
+  <div class='container'>
+    <wxc-rich-text :config-list='configList'
+                   @wxcRichTextLinkClick='wxcRichTextLinkClick'></wxc-rich-text>
+     <div class='special-rich'>
+       <wxc-special-rich-text :config-list='specialConfigList'></wxc-special-rich-text>
      </div>
   </div>
   
 </template>
 <script>
   import icon from './type.js';
-  import { WxcRichText,wxcSpecialRichText } from 'weex-ui';
+  import { WxcRichText,WxcSpecialRichText } from 'weex-ui';
 
   export default {
-    components: { WxcRichText },
+    components: { WxcRichText, WxcSpecialRichText },
     data: () => ({
       configList: [{
         type: 'icon',
-        src: '//gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
+        src: 'https//gw.alicdn.com/tfs/TB1RRVWQXXXXXasXpXXXXXXXXXX-24-22.png',
         style: {
-          width: 24,
           height: 22
         }
       }, {
         type: 'text',
-        value: '黄色主题',
+        value: 'yellow theme',
         theme: 'yellow'
       }, {
         type: 'link',
-        value: '自定义颜色link',
+        value: 'link',
         href: '//h5.m.taobao.com',
         style: {
           color: '#546E7A'
         }
       }, {
         type: 'icon',
-        src: icon.fliggy,
-        style: {
-          width: 92,
-          height: 24
-        }
+        src: icon.fliggy
       }, {
         type: 'tag',
-        value: '满100减20',
+        value: 'hello world',
         theme: 'red'
       }, {
         type: 'tag',
-        value: '自定义标签',
+        value: 'custom tag',
         style: {
           fontSize: 26,
           color: '#ffffff',
@@ -81,20 +69,18 @@ npm install weex-ui --save
       specialConfigList: [
         {
           type: 'tag',
-          value: '自由行',
+          value: 'happy go',
           style: {
-            width: 84,
             fontSize: 24,
             color: '#3D3D3D',
             borderColor: '#FFC900',
             backgroundColor: '#FFC900',
-            height: 28,
             borderRadius: 14,
           }
         },
         {
           type: 'text',
-          value: '春秋旅游广州-泰国曼谷6天往返单机票自由行自由春秋旅游广州-泰国曼谷6天往返单机票自由行自由行…',
+          value: 'Different from a web app you can use Weex to build a real mobile app.',
           theme: 'black',
           style: {
             fontSize: 28
@@ -103,28 +89,27 @@ npm install weex-ui --save
       ],
     }),
     methods: {
-      wxcRichTextLinkClick () {  
-      }
+      wxcRichTextLinkClick () {}
     }
   };
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue)
 
 
-### 可配置参数
+### API
 
-| 名称      | 类型     | 默认值   | 备注  |
-|-------------|------------|--------|-----|
-| config-list | `Array` | '[]' | 富文本配置数组，详细可以参考**规则图**和[index.vue](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue#L78)|
-| has-text-margin | `Boolean` | 'true' | 文字相互之间是否有margin，默认是有|
+| Prop | Type | Required | Default | Description |
+| ---- |:----:|:---:|:-------:| :----------:|
+| config-list | `Array` |`Y`| `[]` | config list eg:[Demo](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue#L78)|
+| has-text-margin | `Boolean` |`N`| 'true' | whether has text margin|
 
 
-### 事件回调
+### Event
 
 ```
-请参考demo中的` @wxcRichTextLinkClick`，如不需要，可以不使用。
+@wxcRichTextLinkClick='wxcRichTextLinkClick'
 ```
 
 

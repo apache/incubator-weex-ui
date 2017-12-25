@@ -4,6 +4,7 @@
 <template>
   <div class="sub-demo">
     <wxc-cell :has-top-border="false"
+              :auto-accessible="false"
               title="图片地址">
       <input class="input"
              placeholder="请输入tag图片地址"
@@ -11,6 +12,7 @@
              @input="specialIcon=$event.value"/>
     </wxc-cell>
     <wxc-cell :has-top-border="false"
+              :auto-accessible="false"
               title="标签颜色">
       <input class="input"
              placeholder="请输入标签色值"
@@ -18,6 +20,7 @@
              @input="tagColor=$event.value"/>
     </wxc-cell>
     <wxc-cell :has-top-border="false"
+              :auto-accessible="false"
               title="文字颜色">
       <input class="input"
              placeholder="请输入文字色值"
@@ -25,6 +28,7 @@
              @input="fontColor=$event.value"/>
     </wxc-cell>
     <wxc-cell :has-top-border="false"
+              :auto-accessible="false"
               title="标签内容">
       <input class="input"
              placeholder="请输入tag文字内容"

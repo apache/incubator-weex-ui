@@ -3,11 +3,11 @@
 <!--A Cell -->
 
 <template>
-  <div
-    :class="['wxc-cell', hasTopBorder && 'cell-top-border', hasBottomBorder && 'cell-bottom-border', hasMargin && 'cell-margin', hasVerticalIndent && 'cell-indent', desc && 'has-desc']"
+  <div :class="['wxc-cell', hasTopBorder && 'cell-top-border', hasBottomBorder && 'cell-bottom-border', hasMargin && 'cell-margin', hasVerticalIndent && 'cell-indent', desc && 'has-desc']"
     :style="cellStyle"
-    @click="cellClicked"
-    :link="link">
+    :accessible="autoAccessible"
+    :aria-label="`${label},${title},${desc}`"
+    @click="cellClicked">
     <slot name="label">
       <div v-if="label">
         <text class="cell-label-text">{{label}}</text>
@@ -24,6 +24,7 @@
     <slot></slot>
     <image :src="arrowIcon"
            class="cell-arrow-icon"
+           :aria-hidden="true"
            v-if="hasArrow"></image>
   </div>
 </template>
@@ -77,9 +78,6 @@
   .cell-arrow-icon {
     width: 22px;
     height: 22px;
-    position: absolute;
-    top: 41px;
-    right: 24px;
   }
 
   .cell-content {
@@ -97,7 +95,7 @@
 </style>
 
 <script>
-  import Utils from './utils';
+  import Utils from '../utils';
 
   export default {
     props: {
@@ -135,7 +133,7 @@
       },
       arrowIcon: {
         type: String,
-        default: '//gw.alicdn.com/tfs/TB11zBUpwMPMeJjy1XbXXcwxVXa-22-22.png'
+        default: 'https://gw.alicdn.com/tfs/TB11zBUpwMPMeJjy1XbXXcwxVXa-22-22.png'
       },
       hasVerticalIndent: {
         type: Boolean,
@@ -144,6 +142,10 @@
       cellStyle: {
         type: Object,
         default: () => ({})
+      },
+      autoAccessible: {
+        type: Boolean,
+        default: true
       }
     },
     methods: {

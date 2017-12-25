@@ -5,7 +5,9 @@
 <template>
   <div class="wxc-noticebar"
        v-if="show"
-       @click="noticeBarClicked">
+       @click="noticeBarClicked"
+       :accessible="true"
+       :aria-label="notice">
     <image class="type-ICON"
            v-if="typeIcon"
            :src="typeIcon"></image>
@@ -60,7 +62,7 @@
 
 <script>
   import ICON from './type';
-  import Utils from './utils';
+  import Utils from '../utils';
 
   export default {
     props: {

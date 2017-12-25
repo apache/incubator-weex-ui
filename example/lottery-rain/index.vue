@@ -22,11 +22,11 @@
     components: { WxcLotteryRain },
     data: () => ({
       images: [
-        '//gw.alicdn.com/tfs/TB1474LgwoQMeJjy1XaXXcSsFXa-241-206.png',
-        '//gw.alicdn.com/tfs/TB1Q5hQgwoQMeJjy0FnXXb8gFXa-241-206.png',
-        '//gw.alicdn.com/tfs/TB1JNd4gwoQMeJjy0FoXXcShVXa-241-206.png',
-        '//gw.alicdn.com/tfs/TB1INd4gwoQMeJjy0FoXXcShVXa-241-206.png',
-        '//gw.alicdn.com/tfs/TB1474LgwoQMeJjy1XaXXcSsFXa-241-206.png'
+        'https://gw.alicdn.com/tfs/TB1474LgwoQMeJjy1XaXXcSsFXa-241-206.png',
+        'https://gw.alicdn.com/tfs/TB1Q5hQgwoQMeJjy0FnXXb8gFXa-241-206.png',
+        'https://gw.alicdn.com/tfs/TB1JNd4gwoQMeJjy0FoXXcShVXa-241-206.png',
+        'https://gw.alicdn.com/tfs/TB1INd4gwoQMeJjy0FoXXcShVXa-241-206.png',
+        'https://gw.alicdn.com/tfs/TB1474LgwoQMeJjy1XaXXcSsFXa-241-206.png'
       ],
       config: {
         intervalTime: 450,

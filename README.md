@@ -1,8 +1,12 @@
 # Weex Ui
 
-[![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600)](https://www.npmjs.com/package/weex-ui)
-[![NPM downloads](http://img.shields.io/npm/dm/weex-ui.svg)](https://npmjs.org/package/weex-ui)
-[![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://badges.gitter.im/alibaba-weex-ui/chat.svg)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+[![Build Status](https://img.shields.io/travis/alibaba/weex-ui.svg?style=flat-square)](https://travis-ci.org/alibaba/weex-ui)
+[![GitHub last commit](https://img.shields.io/github/last-commit/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/commits/dev)
+[![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/weex-ui)
+[![NPM downloads](https://img.shields.io/npm/dm/weex-ui.svg?style=flat-square)](https://npmjs.org/package/weex-ui)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=)
+![Accessibility](https://img.shields.io/badge/accessibility-support-orange.svg?style=flat-square)
+[![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://img.shields.io/gitter/room/alibaba/weex-ui.svg?style=flat-square)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 
 > A rich interaction, lightweight, high performance UI library based on [Weex](https://github.com/apache/incubator-weex).
@@ -57,7 +61,7 @@ npm i weex-ui -S
 </script>
 ```
 
-### Used together (recommend)
+### Used together (Recommend)
 
 ```javascript
 import { WxcComponent1, WxcComponent2 } from "weex-ui"
@@ -77,7 +81,8 @@ npm i babel-plugin-component -D
       "component",
       {
         "libraryName": "weex-ui",
-        "libDir": "packages"
+        "libDir": "packages",
+        "style": false
       }
     ]
   ]
@@ -96,6 +101,7 @@ import WxcComponent2 from "weex-ui/packages/wxc-component2"
 If you use [weex-toolkit](https://github.com/weexteam/weex-toolkit) to develop a Weex project, Please add 'state-0' and 'babel-plugin-component' to .babelrc.
 
 ```shell
+weex update weexpack
 npm i babel-preset-stage-0 babel-plugin-component  -D
 ```
 
@@ -107,12 +113,15 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
       "component",
       {
         "libraryName": "weex-ui",
-        "libDir": "packages"
+        "libDir": "packages",
+        "style": false
       }
     ]
   ]
 }
 ```
+
+More details can be found in [How to use with weex-toolkit](/docs/with-weex-toolkit.md).
 
 ### More
 - If `webpack.config.js`  babel-loader has a exclude for node_modules, Please turn on for week-ui `  exclude: /node_modules(?!\/.*(weex).*)/`.
@@ -121,36 +130,39 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 ## Document
 |Name|Category|Description|
 |:--|:--|:--|
-|[wxc-button](./packages/wxc-button/README.md)|Layout|Basic button|
-|[wxc-cell](./packages/wxc-cell/README.md)|Layout|Form layout element|
-|[wxc-ep-slider](./packages/wxc-ep-slider/README.md) * |Layout|Cool slider neighbor|
-|[wxc-lightbox](./packages/wxc-lightbox/README.md)|Layout|Picture list full screen display|
-|[wxc-overlay](./packages/wxc-overlay/README.md)|Layout|Basic monlayer element|
-|[wxc-popup](./packages/wxc-popup/README.md)|Layout|Popup box|
-|[wxc-result](./packages/wxc-result/README.md)|Layout|General results page|
-|[wxc-slide-nav](./packages/wxc-slide-nav/README.md)|Layout|Increases view windows|
-|[wxc-minibar](./packages/wxc-minibar/README.md)|Navigator|Top navigation|
-|[wxc-tab-page](./packages/wxc-tab-page/README.md) * |Navigator|Single page Tab switching component|
-|[wxc-checkbox](./packages/wxc-checkbox/README.md)|Data Entry|Checkbox list|
-|[wxc-countdown](./packages/wxc-countdown/README.md)|Data Entry|Countdown component|
-|[wxc-radio](./packages/wxc-radio/README.md)|Data Entry|Radio list|
-|[wxc-slider-bar](./packages/wxc-slider-bar/README.md) * |Data Entry|Sliding select data|
-|[wxc-stepper](./packages/wxc-stepper/README.md)|Data Entry|Quantity changer|
-|[wxc-searchbar](./packages/wxc-searchbar/README.md)|Data Entry|Search bar component|
-|[wxc-grid-select](./packages/wxc-grid-select/README.md)|Data Display|Grid selection component|
-|[wxc-indexlist](./packages/wxc-indexlist/README.md)|Data Display|Index list component|
-|[wxc-page-calendar](./packages/wxc-page-calendar/README.md)|Data Display|Full page calendar|
-|[wxc-rich-text](./packages/wxc-rich-text/README.md)|Data Display|Dynamic template|
-|[wxc-simple-flow](./packages/wxc-simple-flow/README.md)|Data Display|Simple flow chart|
-|[wxc-tag](./packages/wxc-tag/README.md)|Data Display|Various forms of tag|
-|[wxc-dialog](./packages/wxc-dialog/README.md)|Feedback|Second confirmation window|
-|[wxc-loading](./packages/wxc-loading/README.md)|Feedback|Content load reminder|
-|[wxc-mask](./packages/wxc-mask/README.md)|Feedback|Intermediate popup panel|
-|[wxc-noticebar](./packages/wxc-noticebar/README.md)|Feedback|Message prompt bar component|
-|[wxc-progress](./packages/wxc-progress/README.md)|Feedback|Progress bar|
-|[wxc-lottery-rain](./packages/wxc-lottery-rain/README.md)|Game|Cat-cat game|
+|[wxc-button](packages/wxc-button/)|Layout|Basic button|
+|[wxc-cell](packages/wxc-cell/)|Layout|Cell layout element|
+|[wxc-ep-slider](packages/wxc-ep-slider/) * |Layout|Cool slider neighbor|
+|[wxc-lightbox](packages/wxc-lightbox/)|Layout|Picture list full screen display|
+|[wxc-overlay](packages/wxc-overlay/)|Layout|Basic monlayer element|
+|[wxc-popup](packages/wxc-popup/)|Layout|Popup box|
+|[wxc-result](packages/wxc-result/)|Layout|General results page|
+|[wxc-slide-nav](packages/wxc-slide-nav/)|Layout|Increases view windows|
+|[wxc-minibar](packages/wxc-minibar/)|Navigator|Top navigation|
+|[wxc-tab-bar](packages/wxc-tab-bar/)|Navigator|Tab bar switching component|
+|[wxc-tab-page](packages/wxc-tab-page/) * |Navigator|Single page Tab switching component|
+|[wxc-checkbox](packages/wxc-checkbox/)|Data Entry|Checkbox list|
+|[wxc-countdown](packages/wxc-countdown/)|Data Entry|Countdown component|
+|[wxc-radio](packages/wxc-radio/)|Data Entry|Radio list|
+|[wxc-slider-bar](packages/wxc-slider-bar/) * |Data Entry|Sliding select data|
+|[wxc-stepper](packages/wxc-stepper/)|Data Entry|Quantity changer|
+|[wxc-searchbar](packages/wxc-searchbar/)|Data Entry|Search bar component|
+|[wxc-grid-select](packages/wxc-grid-select/)|Data Display|Grid selection component|
+|[wxc-indexlist](packages/wxc-indexlist/)|Data Display|Index list component|
+|[wxc-page-calendar](packages/wxc-page-calendar/)|Data Display|Full page calendar|
+|[wxc-rich-text](packages/wxc-rich-text/)|Data Display|Dynamic template|
+|[wxc-simple-flow](packages/wxc-simple-flow/)|Data Display|Simple flow chart|
+|[wxc-tag](packages/wxc-tag/)|Data Display|Various forms of tag|
+|[wxc-dialog](packages/wxc-dialog/)|Feedback|Second confirmation window|
+|[wxc-loading](packages/wxc-loading/)|Feedback|Content load reminder|
+|[wxc-mask](packages/wxc-mask/)|Feedback|Intermediate popup panel|
+|[wxc-noticebar](packages/wxc-noticebar/)|Feedback|Message prompt bar component|
+|[wxc-progress](packages/wxc-progress/)|Feedback|Progress bar|
+|[wxc-lottery-rain](packages/wxc-lottery-rain/)|Game|Cat-cat game|
+|[utils](packages/utils/)|Service|Common function|
 
-`*` These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).
+- `*` These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).   
+- It's recommended to use the [Octotree extension](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en-US) for better documentation search experience.
 
 ## Development
 
@@ -165,8 +177,12 @@ Once it has been compiled, a browser window will be opened automatically. You ca
 
 - Use it with NPM.
 - **Star it** if you like.
-- If you have any ideas or suggestions to improve Weex Ui, welcome to submit a PR.
+- If you have any ideas or suggestions to improve Weex Ui, welcome to submit a [PR](./CONTRIBUTING.md).
 - Having a problem getting something to work or want to know why we setup something in a certain way? [File a GitHub Issue](https://github.com/alibaba/weex-ui/issues/new).
+- <details>
+    <summary>Join our chat at dingtalk.</summary>
+    <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
+  </details>
 
 ## License
 - The [MIT License](http://opensource.org/licenses/MIT)

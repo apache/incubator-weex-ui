@@ -1,37 +1,34 @@
 # wxc-checkbox 
 
-> Weex复选框组件，支持单个和列表checkbox的设置
+> Checkbox
+
+### Rule
+- It`s recommended to appear in groups by using **wxc-checkbox-list**.
 
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-checkbox/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-checkbox%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wxc-checkbox/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-checkbox%2Fdemo%2Findex.native-min.js)
 
-<img src="https://gw.alipayobjects.com/zos/rmsportal/uvtUDCJtVFhvszyfsLBJ.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms04.alicdn.com/tfs/TB1aLygSpXXXXXVXFXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/uvtUDCJtVFhvszyfsLBJ.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1aLygSpXXXXXVXFXXXXXXXXXX-200-200.png" width="160"/>
 
 
-## 安装
-
-```shell
-npm i weex-ui --save
-```
-
-## 使用方法
+## Code Example
 
 ```vue
 <template>
   <div class="wxc-demo">
     <scroller class="scroller">
-      <wxc-checkbox title="默认"></wxc-checkbox>
-      <wxc-checkbox title="默认选中"
+      <wxc-checkbox title="default"></wxc-checkbox>
+      <wxc-checkbox title="default checked"
                     :checked="true"></wxc-checkbox>
-      <wxc-checkbox title="未选中不可更改"
+      <wxc-checkbox title="unchecked and disabled"
                     :disabled="true"></wxc-checkbox>
-      <wxc-checkbox title="选中不可更改"
+      <wxc-checkbox title="checked and disabled"
                     :disabled="true"
                     :checked="true"></wxc-checkbox>
       <div class="margin">
         <wxc-checkbox-list :list="list"
                            @wxcCheckBoxListChecked="wxcCheckBoxListChecked"></wxc-checkbox-list>
-        <text class="checked-text">选中项 {{checkedList.toString()}}</text>
+        <text class="checked-text">checked list {{checkedList.toString()}}</text>
       </div>
     </scroller>
   </div>
@@ -43,10 +40,10 @@ npm i weex-ui --save
     components: { WxcCheckbox, WxcCheckboxList },
     data: () => ({
       list: [
-        { title: '选项1', value: 1 },
-        { title: '选项2', value: 2, checked: true },
-        { title: '选项3', value: 3 },
-        { title: '选项4', value: 4 }
+        { title: 'option1', value: 1 },
+        { title: 'option2', value: 2, checked: true },
+        { title: 'option3', value: 3 },
+        { title: 'option4', value: 4 }
       ],
       checkedList: [2]
     }),
@@ -60,41 +57,62 @@ npm i weex-ui --save
 
 ```
 
-更多详细情况可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/checkbox/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/checkbox/index.vue)
 
 
-### 可配置参数
+### API
 #### Checkbox
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`title`** | `String` | `Y` | `` | checkbox显示label |
-| **`Value`** | `[String、Number、Object]` | `Y` | `` | checkbox的value |
-| **`checked`** | `Boolean` | `N` | `false` | checkbox是否选中 |
-| **`disabled`** | `Boolean` | `N` | `false` | checkbox是否不可选 |
+| title | `String` | `Y` | `-` |  label |
+| Value | `[String、Number、Object]` | `Y` | `-` | original value |
+| checked | `Boolean` | `N` | `false` | whether is checked |
+| disabled | `Boolean` | `N` | `false` | whether is been disabled |
+| config | `Object` | `N` | `{}` | overwrite color and icon|
 
-### 事件回调
+- Event
 ```
-//点击事件回调  `@wxcCheckBoxItemChecked="wxcCheckBoxItemChecked"`
-将会返回e.value、e.checked
+// @wxcCheckBoxItemChecked="wxcCheckBoxItemChecked"
+will return e.value、e.checked
 ```
 
 #### CheckboxList
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`list`** | `Array` | `Y` | `[]` | checkbox列表配置 |
+| list | `Array` | `Y` | `[]` | config list(*1) |
+| config | `Object` | `N` | `{}` | overwrite color and icon(*1)|
 
-- 详细:
+
+- *1: `list`
 ```
 const list=[
-        { title: '选项1', value: 1 },
-        { title: '选项2', value: 2, checked: true },
-        { title: '选项3', value: 3 },
-        { title: '选项4', value: 4 }
+        { title: 'option1', value: 1 },
+        { title: 'option2', value: 2, checked: true },
+        { title: 'option3', value: 3 },
+        { title: 'option4', value: 4 }
       ];
 ```
 
-### 事件回调
+- *2: `config`
+
 ```
-//点击事件回调  `@wxcCheckBoxListChecked="wxcCheckBoxListChecked"`
-将会返回已经选中的e.checkedList
+// you can overwrite it like this:
+<wxc-checkbox-list :list="list"
+                   :config="config"
+                   @wxcCheckBoxListChecked="wxcCheckBoxListChecked"></wxc-checkbox-list>
+
+const config={
+    checkedIcon:'https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png',
+    disabledIcon:'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png',
+    checkedDisabledIcon:'https://gw.alicdn.com/tfs/TB1aPabpwMPMeJjy1XcXXXpppXa-72-72.png',
+    unCheckedDisabledIcon:'https://gw.alicdn.com/tfs/TB1lTuzpwoQMeJjy0FoXXcShVXa-72-72.png',
+    checkedColor: '#000000'
+}
+```
+
+
+- Event
+```
+//@wxcCheckBoxListChecked="wxcCheckBoxListChecked"
+will return e.checkedList
 ```

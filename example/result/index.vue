@@ -33,7 +33,14 @@
     components: { WxcResult },
     data: () => ({
       show: true,
-      type: 'errorPage'
+      type: 'noNetwork'
+      // customSet:{
+      //   errorPage: {
+      //     button: '立即反馈',
+      //     content: '亲，出错了',
+      //     pic: 'https://gw.alicdn.com/tfs/TB1lgzNfBHH8KJjy0FbXXcqlpXa-320-320.png'
+      //   }
+      // }
     }),
     computed: {},
     created () {

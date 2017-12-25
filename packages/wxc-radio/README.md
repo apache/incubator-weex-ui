@@ -1,28 +1,22 @@
 # wxc-radio 
 
-> Weex 单选组组件，支持单个和一组的形式
+> Radio Group 
 
 
-## [Demo预览](https://h5.m.taobao.com/trip/wxc-radio/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-radio%2Fdemo%2Findex.native-min.js)
+## [Demo](https://h5.m.taobao.com/trip/wxc-radio/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-radio%2Fdemo%2Findex.native-min.js)
 
-<img src="https://gw.alipayobjects.com/zos/rmsportal/AQMauSgRgIvdoSfxQVmN.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms01.alicdn.com/tfs/TB1ORR4SpXXXXX8aXXXXXXXXXXX-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/AQMauSgRgIvdoSfxQVmN.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1ORR4SpXXXXX8aXXXXXXXXXXX-200-200.png" width="160"/>
 
-## 安装
 
-```shell
-npm install weex-ui --save
-```
-
-## 使用方法
+## Code Example
 
 ```vue
 <template>
   <div class="wxc-demo">
     <scroller class="scroller">
-      <wxc-radio :list="list"
-                 @wxcRadioListChecked="wxcRadioListChecked"></wxc-radio>
+      <wxc-radio :list="list" @wxcRadioListChecked="wxcRadioListChecked"></wxc-radio>
       <text class="radio-text">checkedItem: {{checkedInfo}}</text>
-      <category title="Radio不可选"></category>
+      <category title="Radio disabled"></category>
       <wxc-radio :list="list2"></wxc-radio>
     </scroller>
   </div>
@@ -34,16 +28,16 @@ npm install weex-ui --save
     components: { WxcRadio },
     data: () => ({
       list: [
-        { title: '选项1', value: 1 },
-        { title: '选项2', value: 2, checked: true },
-        { title: '选项3', value: 3 },
-        { title: '选项4', value: 4 },
+        { title: 'option1', value: 1 },
+        { title: 'option2', value: 2, checked: true },
+        { title: 'option3', value: 3 },
+        { title: 'option4', value: 4 },
       ],
       list2: [
-        { title: '未选不可修改', value: 5, disabled: true },
-        { title: '已选不可修改', value: 6, disabled: true, checked: true },
+        { title: 'unchecked and disabled', value: 5, disabled: true },
+        { title: 'checked and disabled', value: 6, disabled: true, checked: true },
       ],
-      checkedInfo: { title: '选项2', value: 2 }
+      checkedInfo: { title: 'option2', value: 2 }
     }),
     methods: {
       wxcRadioListChecked (e) {
@@ -54,36 +48,51 @@ npm install weex-ui --save
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/radio/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/radio/index.vue)
 
-### 可配置参数
+### API
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`list`** | `Array` | `Y` | `[]` | Radio列表配置 |
+| list | `Array` | `Y` | `[]` | Radio config list(*1) |
+| config | `Object` | `N` | `{}` |overwrite color and icon(*2) |
 
-#### 子item详细说明
+#### child item configs
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`title`** | `String` | `Y` | `` | Radio显示label |
-| **`Value`** | `[String、Number、Object]` | `Y` | `` | Radio的value |
-| **`checked`** | `Boolean` | `N` | `false` | Radio是否选中 |
-| **`disabled`** | `Boolean` | `N` | `false` | Radio是否不可选 |
+| title | `String` | `Y` | `-` | radio label |
+| Value | `[String、Number、Object]` | `Y` | `-` | radio value |
+| checked | `Boolean` | `N` | `false` | whether is been checked |
+| disabled | `Boolean` | `N` | `false` | whether is been disabled |
+| config | `Object` | `N` | `{}` | overwrite color and icon|
 
-
+*1: `list`
 ```
 const list=[
-        { title: '选项1', value: 1 },
-        { title: '选项2', value: 2, checked: true },
-        { title: '未选不可修改', value: 5, disabled: true },
-        { title: '选项3', value: 3 },
-        { title: '选项4', value: 4 }
+        { title: 'option1', value: 1 },
+        { title: 'option2', value: 2, checked: true },
+        { title: 'checked and disabled', value: 5, disabled: true },
+        { title: 'option3', value: 3 },
+        { title: 'option4', value: 4 }
       ];
 ```
 
-### 事件回调
+*2: `config`
 
 ```
-//点击事件回调 `@wxcRadioListChecked="wxcRadioListChecked"`
-将会返回e.value、e.title、e.oldIndex、e.index
+// you can overwrite it like this:
+<wxc-radio :list="list" :config="config"></wxc-radio>
+
+const config={
+    checkedIcon:'https://gw.alicdn.com/tfs/TB1Y9vlpwMPMeJjy1XcXXXpppXa-72-72.png',
+    disabledIcon:'https://gw.alicdn.com/tfs/TB1PtN3pwMPMeJjy1XdXXasrXXa-72-72.png',
+    checkedColor: '#000000'
+}
+```
+
+### Event
+
+```
+// @wxcRadioListChecked="wxcRadioListChecked"
+will return e.value、e.title、e.oldIndex、e.index
 ```
