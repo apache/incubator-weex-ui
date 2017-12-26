@@ -48,7 +48,7 @@ export default {
     textPaddingRight: 10
   },
 
-  // 使用 iconfont 模式的tab title配置
+  // 使用 iconFont 模式的tab title配置
   tabIconFontTitles: [
     {
       title: '首页',

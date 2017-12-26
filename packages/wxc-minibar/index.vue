@@ -71,7 +71,7 @@
 
   .icon-text {
     font-size: 28px;
-    color: #fff;
+    color: #ffffff;
   }
 </style>
 
