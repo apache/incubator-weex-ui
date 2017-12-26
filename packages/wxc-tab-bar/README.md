@@ -87,7 +87,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 - After Weex Ui version about `0.3.8`, we can use `iconFont` to represent our title image, you can use like this:
 ```
  // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L51
-  tabTitles: [
+  tabIconFontTitles: [
     {
       title: 'Home',
       codePoint: '&#xe608;'

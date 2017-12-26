@@ -79,7 +79,6 @@
 | tab-titles | `Array` |`Y`| `[]` | Tab显示 [配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L7)|
 | title-type | `String` |`N`| `icon` | 类型 `icon`/`text`/`iconFont`(注1)|
 | tab-styles | `Array` |`N`| `[]` |  底部 Tab [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
-| tab-page-height | `Number` |`N`| `1334` |Tab page 页面的高度 |
 | is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时 tab 配置 url 参数即可跳出 |
 | duration | `Number` |`N`| `300` | 页面切换动画的时间 |
 | timing-function | `String` |`N`| `-` | 页面切换动画函数 |
@@ -91,7 +90,7 @@
  
 ```
  // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L51
-  tabTitles: [
+  tabIconFontTitles: [
     {
       title: 'Home',
       codePoint: '&#xe608;'
