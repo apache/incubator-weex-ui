@@ -7,6 +7,7 @@
   <div>
     <list class="index-list"
           :style="{height: height+'px'}">
+      <cell><slot name="head"></slot></cell>
       <cell v-for="(v,i) in formatList"
             :key="i"
             :ref="'index-item-title-' + v.title">

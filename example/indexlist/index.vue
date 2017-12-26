@@ -7,8 +7,8 @@
     <wxc-indexlist :normal-list="list.normalList"
                    :hot-list-config="hotListConfig"
                    :city-location-config="cityLocationConfig"
-                   @wxcIndexlistItemClicked="wxcIndexlistItemClicked"
-                   :show-index="showIndex"></wxc-indexlist>
+                   :show-index="showIndex"
+                   @wxcIndexlistItemClicked="wxcIndexlistItemClicked"></wxc-indexlist>
   </div>
 </template>
 
