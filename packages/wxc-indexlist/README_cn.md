@@ -86,6 +86,21 @@
    ```
 - 注4：是否只显示列表项目，去除定位、热门显示，常用于搜索结果的显示
 
+### Slot
+
+`<slot name="head"></slot>`: 可以在列表最开头插入一个自定义 slot ，同时可以传入nav-style 来兼容样式
+
+```
+<wxc-indexlist :normal-list="list.normalList"
+                   :hot-list-config="hotListConfig"
+                   :city-location-config="cityLocationConfig"
+                   :show-index="showIndex"
+                   @wxcIndexlistItemClicked="wxcIndexlistItemClicked">
+                <div slot="head"><text>aaaaaa</text></div>       
+</wxc-indexlist>
+```
+<img src="https://img.alicdn.com/tfs/TB1YhUjj9_I8KJjy0FoXXaFnVXa-818-276.jpg" width="240"/>
+
 ### 事件回调
 
 ```
