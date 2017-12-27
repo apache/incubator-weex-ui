@@ -2,6 +2,8 @@
 
 > Tab page make it easy to switch between different views
 
+!> The effect of sliding with hand is based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).
+ 
 ### Rule
 - Allow configuration of the head, support `ExpressionBinding` gesture to follow the effect, H5 support downgrade slide switch.
 - Commonly used in Tab switch pages, currently supports **icon 、text and iconFont** form the top bar, You can see in [here](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
@@ -35,13 +37,9 @@
         <wxc-pan-item :ext-id="'1-' + (v) + '-' + (key)"
                       url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
                       @wxcPanItemPan="wxcPanItemPan">
-          <wxc-item image="https://gtd.alicdn.com/imgextra/TB12yGaNVXXXXX7aXXXSutbFXXX.jpg"
-                    :image-text="tabTitles[index].title"
-                    title="this is title,this is title,this is title,this is title"
-                    :desc="desc"
-                    :tags="tags"
-                    price="219"
-                    price-desc="price-desc"></wxc-item>
+         <div class="content">
+            <text>{{key}}</text>
+         </div>
         </wxc-pan-item>
       </cell>
     </list>
@@ -68,6 +66,14 @@
   .cell {
     background-color: #ffffff;
   }
+  
+  .content{
+    width:750px;
+    height:300px;
+    border-bottom-width:1px;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
 <script>
   const dom = weex.requireModule('dom');
@@ -77,7 +83,7 @@
   import Config from './config'
 
   export default {
-    components: { WxcTabPage, WxcPanItem, WxcItem },
+    components: { WxcTabPage, WxcPanItem },
     data: () => ({
       tabTitles: Config.tabTitles,
       tabStyles: Config.tabStyles,
@@ -86,17 +92,7 @@
       demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],
       supportSlide: true,
       isTabView: true,
-      tabPageHeight: 1334,
-      desc: [{
-        type: 'text',
-        value: 'rich-text',
-        theme: 'gray'
-      }],
-      tags: [{
-        type: 'tag',
-        value: 'rich tag text',
-        theme: 'yellow'
-      }]
+      tabPageHeight: 1334
     }),
     created () {
       this.tabPageHeight = Utils.env.getPageHeight();

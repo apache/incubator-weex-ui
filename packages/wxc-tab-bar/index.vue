@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="tab-title-list"
-         :style="{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height)+'px'}">
+         :style="{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height + (isIPhoneX ? 78 : 0))+'px',paddingBottom:isIPhoneX?'78px':'0'}">
       <div class="title-item"
            v-for="(v,index) in tabTitles"
            :key="index"
@@ -185,6 +185,7 @@
           'src': `url(${tabStyles.iconFontUrl})`
         });
       }
+      this.isIPhoneX = Utils.env.isIPhoneX();
     },
     methods: {
       decode (text) {
