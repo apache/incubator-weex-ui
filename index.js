@@ -6,6 +6,7 @@
 import Utils from './packages/utils';
 import WxcButton from './packages/wxc-button';
 import WxcCell from './packages/wxc-cell';
+import WxcCity from './packages/wxc-city';
 import WxcCheckbox from './packages/wxc-checkbox';
 import WxcCheckboxList from './packages/wxc-checkbox-list';
 import WxcCountdown from './packages/wxc-countdown';
@@ -43,6 +44,7 @@ export {
   Utils,
   WxcButton,
   WxcCell,
+  WxcCity,
   WxcCheckbox,
   WxcCheckboxList,
   WxcCountdown,

@@ -21,7 +21,8 @@
               class="text">当前日期: {{currentDate}}</text>
       </div>
 
-      <wxc-page-calendar :date-range="dateRange"
+      <wxc-page-calendar ref="wxcPageCalendar"
+                         :date-range="dateRange"
                          :selected-date="selectedDate"
                          :selected-note="selectedNote"
                          :is-range="isRange"
@@ -30,7 +31,7 @@
                          :desc-list="descList"
                          @wxcPageCalendarBackClicked="wxcPageCalendarBackClicked"
                          @wxcPageCalendarDateSelected="wxcPageCalendarDateSelected"
-                         ref="wxcPageCalendar"></wxc-page-calendar>
+      ></wxc-page-calendar>
     </scroller>
   </div>
 </template>

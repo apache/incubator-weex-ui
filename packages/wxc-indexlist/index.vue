@@ -13,7 +13,7 @@
             :ref="'index-item-title-' + v.title">
         <text :class="['index-list-title',v.type && v.type=='group' && 'group-title']"
               v-if="!onlyShowList">{{v.title}}</text>
-        <div v-if="v.type && v.type=='group' && !onlyShowList"
+        <div v-if="v.type && v.type === 'group' && !onlyShowList"
              class="group">
           <div v-for="(group,index) in v.data"
                :key="index"
@@ -29,8 +29,7 @@
                      src="https://gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png"></image>
               <div class="item-content">
                 <text class="item-name">{{item.name}}</text>
-                <text class="item-desc"
-                      v-if="item.desc">{{item.desc}}</text>
+                <text class="item-desc" v-if="item.desc">{{item.desc}}</text>
               </div>
             </div>
           </div>
@@ -147,19 +146,20 @@
 
   .index-list-title {
     border-bottom-width: 1px;
-    border-color: rgba(32, 35, 37, 0.15);
+    border-bottom-color: rgba(32, 35, 37, 0.15);
     background-color: #FBFBFB;
     font-size: 24px;
     color: #666666;
-    padding-bottom: 14px;
-    padding-top: 14px;
-    padding-left: 23px;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 24px;
     width: 750px;
   }
 
   .group-title {
     border-bottom-width: 0;
     padding-bottom: 0;
+    height: 60px;
     padding-top: 24px;
   }
 

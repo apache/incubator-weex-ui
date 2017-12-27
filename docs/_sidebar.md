@@ -15,6 +15,7 @@
  
 - Data Entry
     - [wxc-checkbox](packages/wxc-checkbox/)
+    - [wxc-city](packages/wxc-city/)
     - [wxc-countdown](packages/wxc-countdown/)
     - [wxc-radio](packages/wxc-radio/)
     - [wxc-slider-bar](packages/wxc-slider-bar/)

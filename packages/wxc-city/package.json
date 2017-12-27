@@ -1,0 +1,20 @@
+{
+  "name": "wxc-cell",
+  "version": "0.1.0",
+  "description": "Weex 城市选择组件",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-city",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "DataDisplay",
+    "City",
+    "WeexUi"
+  ],
+  "author": "Tw93",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
