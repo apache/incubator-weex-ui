@@ -2,6 +2,8 @@
 
 > Weex tab 页面滑动切换组件
 
+!> 随手滑动的效果依赖于 [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)。
+
 ### 规则
 - 允许对头部进行配置，支持 ExpressionBinding 手势跟随效果，H5 支持降级效果滑动切换
 - 常用于 Tab 切换页面，目前支持**icon、text、iconFont**形式的顶栏,详细可见[config.js](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
@@ -35,13 +37,9 @@
         <wxc-pan-item :ext-id="'1-' + (v) + '-' + (key)"
                       url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
                       @wxcPanItemPan="wxcPanItemPan">
-          <wxc-item image="https://gtd.alicdn.com/imgextra/TB12yGaNVXXXXX7aXXXSutbFXXX.jpg"
-                    :image-text="tabTitles[index].title"
-                    title="飞猪专线｜四川成都出发到九寨沟牟尼沟 温泉3天2晚纯玩跟团旅游"
-                    :desc="desc"
-                    :tags="tags"
-                    price="219"
-                    price-desc="月售58笔｜999+条评论"></wxc-item>
+         <div class="content">
+            <text>{{key}}</text>
+         </div>
         </wxc-pan-item>
       </cell>
     </list>
@@ -68,6 +66,14 @@
   .cell {
     background-color: #ffffff;
   }
+  
+  .content{
+    width:750px;
+    height:300px;
+    border-bottom-width:1px;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
 <script>
   const dom = weex.requireModule('dom');
@@ -77,7 +83,7 @@
   import Config from './config'
 
   export default {
-    components: { WxcTabPage, WxcPanItem, WxcItem },
+    components: { WxcTabPage, WxcPanItem },
     data: () => ({
       tabTitles: Config.tabTitles,
       tabStyles: Config.tabStyles,
@@ -86,17 +92,7 @@
       demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],
       supportSlide: true,
       isTabView: true,
-      tabPageHeight: 1334,
-      desc: [{
-        type: 'text',
-        value: '特价机票|班期:清明 3/27-4/2等',
-        theme: 'gray'
-      }],
-      tags: [{
-        type: 'tag',
-        value: '满100减20测试',
-        theme: 'yellow'
-      }]
+      tabPageHeight: 1334
     }),
     created () {
       this.tabPageHeight = Utils.env.getPageHeight();
@@ -107,7 +103,7 @@
       wxcTabPageCurrentTabSelected (e) {
         const self = this;
         const index = e.page;
-        /* 未加载tab模拟数据请求 */
+        /* Unloaded tab analog data request */
         if (!Utils.isNonEmptyArray(self.tabList[index])) {
           setTimeout(() => {
             Vue.set(self.tabList, index, self.demoList);
@@ -122,7 +118,6 @@
     }
   };
 </script>
-
 ```
 更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/index.vue)
 

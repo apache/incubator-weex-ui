@@ -148,6 +148,7 @@ More details can be found in [How to use with weex-toolkit](/docs/with-weex-tool
 |[wxc-stepper](packages/wxc-stepper/)|Data Entry|Quantity changer|
 |[wxc-searchbar](packages/wxc-searchbar/)|Data Entry|Search bar component|
 |[wxc-grid-select](packages/wxc-grid-select/)|Data Display|Grid selection component|
+|[wxc-icon](packages/wxc-icon/)|Data Display|Common iconFont summary |
 |[wxc-indexlist](packages/wxc-indexlist/)|Data Display|Index list component|
 |[wxc-page-calendar](packages/wxc-page-calendar/)|Data Display|Full page calendar|
 |[wxc-rich-text](packages/wxc-rich-text/)|Data Display|Dynamic template|

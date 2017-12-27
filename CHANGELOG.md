@@ -1,9 +1,11 @@
 # Change Log
 
 ## 0.3.10
-- [+] New component: [wxc-icon](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-icon/README.md) 🎉🎉 
+- [+] New component: [`wxc-icon`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-icon/README.md) 🎉🎉 
+- New component: [`wxc-city`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md)
 - [-] Remove the default position relative style.
-- [+] `wxc-indexlist` add a head slot. [issue](https://github.com/alibaba/weex-ui/issues/105)
+- [+] `wxc-indexlist` add a head slot.   [issue105](https://github.com/alibaba/weex-ui/issues/105)
+- [+] `wxc-tab-bar` [supports for IPhoneX](https://img.alicdn.com/tfs/TB1_qrtkf2H8KJjy0FcXXaDlFXa-768-354.png).
 
 ## 0.3.9
 - [+] `wxc-minibar` supports slot.
@@ -27,7 +29,7 @@
 - [+] Add a [`chat`](https://alibaba.github.io/weex-ui/) of the website.
 
 ## 0.3.3
-- [+]  [wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md) supports `bedge`、`dot`
+- [+]  [wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-bar/README.md) supports `bedge`、`dot` setting.
 - [+] Add component [demo page](https://alibaba.github.io/weex-ui/docc/demo.html) of the website.
 
 ## 0.3.2

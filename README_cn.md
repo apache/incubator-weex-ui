@@ -136,6 +136,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 |[wxc-stepper](packages/wxc-stepper/README_cn.md)|数据输入|计数器|
 |[wxc-searchbar](packages/wxc-searchbar/README_cn.md)|数据输入|搜索栏|
 |[wxc-grid-select](packages/wxc-grid-select/README_cn.md)|数据展示|网格选择|
+|[wxc-icon](packages/wxc-icon/README_cn.md)|数据展示|通用 iconFont 汇集 |
 |[wxc-indexlist](packages/wxc-indexlist/README_cn.md)|数据展示|索引列表|
 |[wxc-page-calendar](packages/wxc-page-calendar/README_cn.md)|数据展示|全屏日历|
 |[wxc-rich-text](packages/wxc-rich-text/README_cn.md)|数据展示|动态模块 富文本|
