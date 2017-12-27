@@ -130,6 +130,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 |[wxc-tab-bar](packages/wxc-tab-bar/README_cn.md)|导航|底部Bar页面切换|
 |[wxc-tab-page](packages/wxc-tab-page/) * |导航|Tab页面切换滑动组件|
 |[wxc-checkbox](packages/wxc-checkbox/README_cn.md)|数据输入|复选列表|
+|[wxc-city](packages/wxc-city/README_cn.md)|数据输入|通用城市选择|
 |[wxc-countdown](packages/wxc-countdown/README_cn.md)|数据输入|倒计时|
 |[wxc-radio](packages/wxc-radio/README_cn.md)|数据输入|单选列表|
 |[wxc-slider-bar](packages/wxc-slider-bar/) * |数据输入|滑动选择数据|

@@ -15,6 +15,7 @@
  
 - 数据输入
     - [wxc-checkbox 多选](cn/packages/wxc-checkbox/)
+    - [wxc-city 城市选择](cn/packages/wxc-city/)
     - [wxc-countdown 倒计时](cn/packages/wxc-countdown/)
     - [wxc-radio 单选](cn/packages/wxc-radio/)
     - [wxc-slider-bar 滑动输入条](cn/packages/wxc-slider-bar/)
