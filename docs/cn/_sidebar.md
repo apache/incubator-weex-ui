@@ -24,7 +24,7 @@
     
 - 数据展示
     - [wxc-grid-select 多格筛选](cn/packages/wxc-grid-select/)
-    - [wxc-icon iconfont](cn/packages/wxc-icon/)
+    - [wxc-icon 常用 iconFont](cn/packages/wxc-icon/)
     - [wxc-indexlist 索引列表](cn/packages/wxc-indexlist/)
     - [wxc-page-calendar 日历](cn/packages/wxc-page-calendar/)
     - [wxc-rich-text 富文本](cn/packages/wxc-rich-text/)

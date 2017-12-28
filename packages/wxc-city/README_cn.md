@@ -3,9 +3,7 @@
 > 通用城市选择组件，允许配置输入框、定位、热门城市、普通城市列表等
 
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/city/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Fcity%2Findex.weex.js)
-<img src="https://img.alicdn.com/tfs/TB1tUfFkmYH8KJjSspdXXcRgVXa-562-1000.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1nj6FkmYH8KJjSspdXXcRgVXa-200-200.png" width="160"/>
-
-`weex-ui >= 0.3.10`
+<img src="https://img.alicdn.com/tfs/TB1tUfFkmYH8KJjSspdXXcRgVXa-562-1000.gif" i >= 0.3.10`
 
 ## 使用方法
 
