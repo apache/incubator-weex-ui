@@ -41,7 +41,7 @@ npm --version
 
 >npm i weex-ui@latest -S
 
-安装babel-preset-stage-0 和 babel-plugin-component 插件，前者用于babel编译，后者用于只优化Weex Ui 包的引用
+安装babel-preset-stage-0 和 babel-plugin-component 插件，前者用于babel编译，后者用于优化   weex-ui 包的组件引用
 
 > npm i babel-plugin-component babel-preset-stage-0  -D
 
@@ -115,10 +115,20 @@ npm --version
 
 <img src="https://img.alicdn.com/tfs/TB1QYEMhfDH8KJjy1XcXXcpdXXa-1672-824.png" width=400/>
 
-测试下android打包
+测试下 Android 编译和打包
 
 > weex platform add android
-   
+       
 > weex run android
 
 <img src="https://img.alicdn.com/tfs/TB1cqothcjI8KJjSsppXXXbyVXa-1620-892.png" width="400"/>    <img src="https://img.alicdn.com/tfs/TB1hq3xhgnH8KJjSspcXXb3QFXa-890-438.png" width="200" />
+
+
+测试下 iOS 编译和打包
+
+> weex platform add ios
+       
+> weex run ios
+
+<img src="https://img.alicdn.com/tfs/TB1YdW2kvDH8KJjy1XcXXcpdXXa-2300-1156.png" width="600" />
+

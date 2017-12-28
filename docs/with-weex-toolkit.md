@@ -116,10 +116,18 @@ Preview a vue file using Weex HTML5 renderer
 
 <img src="https://img.alicdn.com/tfs/TB1QYEMhfDH8KJjy1XcXXcpdXXa-1672-824.png" width=400/>
 
-Add weex platform and run commands for testing
+Add a weex platform of Android and run commands for testing
 
 > weex platform add android
    
 > weex run android
 
 <img src="https://img.alicdn.com/tfs/TB1cqothcjI8KJjSsppXXXbyVXa-1620-892.png" width="400"/>    <img src="https://img.alicdn.com/tfs/TB1hq3xhgnH8KJjSspcXXb3QFXa-890-438.png" width="200" />
+
+Add a weex platform of iOS and run commands for testing
+
+> weex platform add ios
+       
+> weex run ios
+
+<img src="https://img.alicdn.com/tfs/TB1YdW2kvDH8KJjy1XcXXcpdXXa-2300-1156.png" width="600" />
