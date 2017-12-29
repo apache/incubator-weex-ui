@@ -45,4 +45,4 @@
    
 - [**在 weex-toolkit 项目中使用**](cn/with-weex-toolkit)
 - [**常见问题**](cn/faq)
-- [**CHANGELOG**](CHANGELOG)
+- [**CHANGELOG**](cn/CHANGELOG)
