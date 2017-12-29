@@ -55,6 +55,8 @@
     }),
     created () {
       const tabPageHeight = Utils.env.getPageHeight();
+      // If the page doesn't have a navigation bar
+      // const tabPageHeight = env.deviceHeight / env.deviceWidth * 750;
       const { tabStyles } = this;
       this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
     },

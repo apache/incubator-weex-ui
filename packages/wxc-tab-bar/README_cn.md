@@ -56,6 +56,8 @@
     }),
     created () {
       const tabPageHeight = Utils.env.getPageHeight();
+      // 如果页面没有导航栏，可以用下面这个计算高度的方法
+      // const tabPageHeight = env.deviceHeight / env.deviceWidth * 750;
       const { tabStyles } = this;
       this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
     },
