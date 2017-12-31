@@ -22,7 +22,6 @@
     loadSidebar: 'docs/_sidebar.md',
     loadNavbar: 'docs/_navbar.md',
     auto2top: true,
-    formatUpdated: '{YY}/{MM}/{DD} {HH}:{mm}',
     nameLink: {
       '/cn/': '#/cn/',
       '/': '#/'
@@ -48,7 +47,6 @@
           var editHtml = '[:memo:](' + url + ')';
           return html
             + '\n----\n'
-            + 'Last modified {docsify-updated}'
             + editHtml + github
         })
       }
