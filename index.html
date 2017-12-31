@@ -43,10 +43,11 @@
       function (hook, vm) {
         hook.beforeEach(function (html) {
           var url = 'https://github.com/alibaba/weex-ui/blob/master/' + vm.route.file;
-          var editHtml = '[:memo: Edit Document](' + url + ')\n';
+          var github = "<iframe src=\"https://ghbtns.com/github-btn.html?user=alibaba&amp;repo=weex-ui&amp;type=watch&amp;count=true\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"0\" width=\"110\" height=\"20\" style='margin:0 10px -6px'></iframe>";
+          var editHtml = '[:memo: Edit](' + url + ')';
           return html
             + '\n----\n'
-            + editHtml
+            + editHtml + github
         })
       }
     ]
