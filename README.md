@@ -142,13 +142,13 @@ More details can be found in [How to use with weex-toolkit](/docs/with-weex-tool
 |[wxc-tab-bar](packages/wxc-tab-bar/)|Navigator|Tab bar switching component|
 |[wxc-tab-page](packages/wxc-tab-page/) * |Navigator|Single page Tab switching component|
 |[wxc-checkbox](packages/wxc-checkbox/)|Data Entry|Checkbox list|
-|[wxc-city](packages/wxc-city/)|Data Entry|General city selection|
 |[wxc-countdown](packages/wxc-countdown/)|Data Entry|Countdown component|
+|[wxc-grid-select](packages/wxc-grid-select/)|Data Entry|Grid selection component|
 |[wxc-radio](packages/wxc-radio/)|Data Entry|Radio list|
 |[wxc-slider-bar](packages/wxc-slider-bar/) * |Data Entry|Sliding select data|
 |[wxc-stepper](packages/wxc-stepper/)|Data Entry|Quantity changer|
 |[wxc-searchbar](packages/wxc-searchbar/)|Data Entry|Search bar component|
-|[wxc-grid-select](packages/wxc-grid-select/)|Data Display|Grid selection component|
+|[wxc-city](packages/wxc-city/)|Data Display|General city selection|
 |[wxc-icon](packages/wxc-icon/)|Data Display|Common iconFont summary |
 |[wxc-indexlist](packages/wxc-indexlist/)|Data Display|Index list component|
 |[wxc-page-calendar](packages/wxc-page-calendar/)|Data Display|Full page calendar|
