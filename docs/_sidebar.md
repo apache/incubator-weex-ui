@@ -15,15 +15,15 @@
  
 - Data Entry
     - [wxc-checkbox](packages/wxc-checkbox/)
-    - [wxc-city](packages/wxc-city/)
     - [wxc-countdown](packages/wxc-countdown/)
+    - [wxc-grid-select](packages/wxc-grid-select/)
     - [wxc-radio](packages/wxc-radio/)
     - [wxc-slider-bar](packages/wxc-slider-bar/)
     - [wxc-stepper](packages/wxc-stepper/)
     - [wxc-searchbar](packages/wxc-searchbar/)
     
 - Data Display
-    - [wxc-grid-select](packages/wxc-grid-select/)
+    - [wxc-city](packages/wxc-city/)
     - [wxc-icon](packages/wxc-icon/)
     - [wxc-indexlist](packages/wxc-indexlist/)
     - [wxc-page-calendar](packages/wxc-page-calendar/)
