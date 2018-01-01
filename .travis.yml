@@ -4,8 +4,8 @@ notifications:
   email:
   - tw93@qq.com
 node_js:
-  - "6"
   - "7"
   - "8"
+  - "9"
 script:
   - npm run build
