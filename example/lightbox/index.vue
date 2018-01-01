@@ -4,7 +4,7 @@
 <template>
   <div class="wxc-demo">
     <scroller class="scroller">
-      <title title="wxc-lightbox" class="title"></title>
+      <title title="wxc-lightbox"></title>
       <category title="使用案例"></category>
       <div class="wrapper">
         <image class="demo-image"
@@ -48,10 +48,6 @@
   .scroller {
     flex: 1;
     align-items: center;
-  }
-
-  .title {
-    align-self: flex-start;
   }
 
   .demo-image {

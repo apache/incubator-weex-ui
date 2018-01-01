@@ -19,7 +19,7 @@
       <text class="item-text" v-if="isTitleString">{{title}}</text>
       <wxc-special-rich-text :config-list="title" v-else></wxc-special-rich-text>
 
-      <wxc-rich-text :config-list="desc" class="one-desc"></wxc-rich-text>
+      <wxc-rich-text :config-list="desc"></wxc-rich-text>
 
       <wxc-rich-text :config-list="tags"></wxc-rich-text>
 
@@ -40,7 +40,6 @@
     width: 750px;
     height: 246px;
     flex-direction: row;
-    position: relative;
   }
 
   .item-image {
@@ -119,11 +118,6 @@
     color: #A5A5A5;
     margin-top: 6px;
     margin-left: 2px;
-  }
-
-  .one-desc {
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 
   .category-tag {

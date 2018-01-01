@@ -2,7 +2,7 @@
 <!-- Created by Tw93 on 17/07/28. -->
 
 <template>
-  <div class="wxc-tag">
+  <div>
     <div v-if="showSolid || showHollow"
          :class="['tag-item','tag-border',showHollow && 'tag-hollow']"
          :style="tagTextStyle">
@@ -28,11 +28,6 @@
 </template>
 
 <style scoped>
-
-  .wxc-tag {
-    align-items: flex-start;
-  }
-
   .tag-item {
     height: 24px;
     justify-content: center;

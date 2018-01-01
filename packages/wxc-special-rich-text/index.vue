@@ -45,7 +45,6 @@
     color: #3d3d3d;
     lines: 2;
     text-overflow: ellipsis;
-    overflow: hidden;
   }
 
   .black {

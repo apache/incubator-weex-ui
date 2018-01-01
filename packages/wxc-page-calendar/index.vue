@@ -312,7 +312,6 @@
     color: #999999;
     text-align: center;
     font-size: 24px;
-    overflow: hidden;
     text-overflow: ellipsis;
   }
 
@@ -325,7 +324,7 @@
   }
 
   .item-row-selected {
-    color: #fff;
+    color: #ffffff;
     background-color: #FFC900;
     text-align: center;
   }

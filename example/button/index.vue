@@ -39,7 +39,7 @@
       <wxc-cell :has-top-border="false" title="是否禁用">
         <switch :checked="disabled"
                 slot="value"
-                @change="disabled= !disabled"></switch>
+                @change="disabled = !disabled"></switch>
       </wxc-cell>
 
       <wxc-cell :has-top-border="false" title="按钮宽度">

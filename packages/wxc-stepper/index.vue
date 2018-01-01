@@ -42,7 +42,6 @@
 
   .stepper-input {
     border-width: 0;
-    outline: none;
     text-align: center;
     color: #3d3d3d;
     font-size: 30px;

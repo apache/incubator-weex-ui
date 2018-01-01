@@ -20,7 +20,7 @@
   }
 
   .blue {
-    color: #30A0FF,
+    color: #30A0FF;
   }
 
   .gray {

@@ -4,8 +4,7 @@
 <template>
   <div class="wxc-demo">
     <scroller class="scroller">
-      <title title="wxc-mask"
-             class="wxc-title"></title>
+      <title title="wxc-mask"></title>
       <category title="使用案例"></category>
       <div class="btn"
            @click="openMask">
@@ -56,9 +55,9 @@
     width: 600px;
     height: 80px;
     margin-top: 300px;
+    margin-left: 75px;
     flex-direction: row;
     align-items: center;
-    align-self: center;
     justify-content: center;
     border-radius: 6px;
     background-color: rgb(92, 184, 92);
@@ -92,10 +91,6 @@
   .title {
     color: #333333;
     font-size: 40px;
-  }
-
-  .wxc-title {
-    align-self: flex-start;
   }
 
   .content-text {
