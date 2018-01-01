@@ -12,7 +12,7 @@
            :src="img"
            @load="onLoad"
            :aria-hidden="true"
-           :style="{ width: imgWidth}"
+           :style="{ width: imgWidth+'px'}"
            class="tag-image"></image>
     <div class="tag-special tag-border"
          :style="{borderColor:tagColor}"
@@ -37,7 +37,6 @@
     height: 24px;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     /* hack高度不居中问题，后续版本升级去掉 */
     padding-bottom: 2px;
   }
@@ -100,7 +99,7 @@
       },
       fontColor: {
         type: String,
-        default: '#333'
+        default: '#333333'
       },
       specialIcon: {
         type: String,

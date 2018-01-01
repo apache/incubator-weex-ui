@@ -446,7 +446,6 @@
 
   .slider-bar-container {
     height: 56px;
-    display: flex;
     justify-content: center;
     align-items: center;
   }

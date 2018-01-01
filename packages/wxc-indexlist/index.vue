@@ -27,7 +27,7 @@
               <image v-if="item.isLocation"
                      class="location-icon"
                      src="https://gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png"></image>
-              <div class="item-content">
+              <div>
                 <text class="item-name">{{item.name}}</text>
                 <text class="item-desc" v-if="item.desc">{{item.desc}}</text>
               </div>
@@ -260,19 +260,15 @@
     background-color: #FFF;
   }
 
-  .item-content {
-    flex-direction: column;
-  }
-
   .item-name {
     font-size: 24px;
     line-height: 26px;
-    color: #333;
+    color: #333333;
   }
 
   .item-desc {
     margin-top: 2px;
-    color: #999;
+    color: #999999;
     font-size: 20px;
     text-align: center;
   }

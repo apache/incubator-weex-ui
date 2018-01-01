@@ -49,7 +49,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    flex-direction: column;
   }
 
   .tab-title-list {
@@ -60,14 +59,12 @@
   .title-item {
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     border-bottom-style: solid;
   }
 
   .tab-page-wrap {
     width: 750px;
     flex: 1;
-    overflow: hidden;
   }
 
   .tab-container {

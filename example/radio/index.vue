@@ -20,7 +20,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
   .scroller {
@@ -29,7 +29,7 @@
 
   .radio-text {
     font-size: 30px;
-    color: #333;
+    color: #333333;
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 24px;

@@ -38,7 +38,6 @@
     align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    flex-shrink: 1;
   }
 
   .default-text {

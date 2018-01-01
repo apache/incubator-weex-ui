@@ -23,7 +23,7 @@
   .text {
     font-size: 30px;
     font-weight: 600;
-    color: #000;
+    color: #000000;
   }
 
 </style>

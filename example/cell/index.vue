@@ -88,7 +88,7 @@
   }
 
   .default {
-    color: #000;
+    color: #000000;
   }
 
   .active {
@@ -107,7 +107,7 @@
 
   .demo-title {
     font-size: 30px;
-    color: #333;
+    color: #333333;
     margin-top: 30px;
     margin-left: 30px;
     margin-bottom: 16px;

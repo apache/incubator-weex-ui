@@ -79,13 +79,13 @@
   .value-text {
     margin: 24px;
     font-size: 30px;
-    color: #333;
+    color: #333333;
   }
 
   .hint {
     margin-left: 24px;
     font-size: 30px;
-    color: #333;
+    color: #333333;
   }
 </style>
 

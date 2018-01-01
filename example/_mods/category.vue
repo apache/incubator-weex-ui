@@ -18,7 +18,7 @@
   }
 
   .category-text {
-    color: #000;
+    color: #000000;
     font-weight: 600;
     font-size: 28px;
   }

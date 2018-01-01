@@ -5746,8 +5746,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
 
 exports.default = {
   components: { WxcOverlay: _wxcOverlay2.default },
@@ -9282,7 +9280,6 @@ exports.default = {
 //
 //
 //
-//
 
 /***/ }),
 /* 127 */
@@ -11543,9 +11540,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
 
 var dom = weex.requireModule('dom');
 var animation = weex.requireModule('animation');
@@ -11707,8 +11701,6 @@ var _utils2 = _interopRequireDefault(_utils);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//
-//
 //
 //
 //
@@ -12189,7 +12181,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
 
 exports.default = {
   props: {
@@ -12207,7 +12198,7 @@ exports.default = {
     },
     fontColor: {
       type: String,
-      default: '#333'
+      default: '#333333'
     },
     specialIcon: {
       type: String,
@@ -12319,8 +12310,7 @@ module.exports = {
     "top": 0,
     "left": 0,
     "right": 0,
-    "bottom": 0,
-    "flexDirection": "column"
+    "bottom": 0
   },
   "tab-title-list": {
     "flexDirection": "row",
@@ -12329,13 +12319,11 @@ module.exports = {
   "title-item": {
     "justifyContent": "center",
     "alignItems": "center",
-    "flexDirection": "column",
     "borderBottomStyle": "solid"
   },
   "tab-page-wrap": {
     "width": "750",
-    "flex": 1,
-    "overflow": "hidden"
+    "flex": 1
   },
   "tab-container": {
     "flex": 1,
@@ -12447,7 +12435,6 @@ module.exports = {
   },
   "slider-bar-container": {
     "height": "56",
-    "display": "flex",
     "justifyContent": "center",
     "alignItems": "center"
   },
@@ -12506,8 +12493,7 @@ module.exports = {
     "flexDirection": "row",
     "alignItems": "center",
     "borderTopColor": "#F3F3F3",
-    "borderTopWidth": "1",
-    "borderTop": "1px solid #F3F3F3"
+    "borderTopWidth": "1"
   },
   "footer-btn": {
     "flexDirection": "row",
@@ -12940,7 +12926,7 @@ module.exports = {
     "borderStyle": "solid",
     "borderWidth": "2",
     "borderColor": "#EE9900",
-    "borderRadius": 100
+    "borderRadius": "100"
   },
   "highlight-point": {
     "top": "7",
@@ -12982,7 +12968,6 @@ module.exports = {
     "height": "24",
     "justifyContent": "center",
     "alignItems": "center",
-    "overflow": "hidden",
     "paddingBottom": "2"
   },
   "tag-border": {
@@ -13095,8 +13080,7 @@ module.exports = {
     "textAlign": "center"
   },
   "calendar-list": {
-    "flex": 1,
-    "flexDirection": "column"
+    "flex": 1
   },
   "month-text": {
     "fontSize": "32",
@@ -13182,8 +13166,7 @@ module.exports = {
 
 module.exports = {
   "wxc-tab-page": {
-    "width": "750",
-    "flexDirection": "column"
+    "width": "750"
   },
   "tab-title-list": {
     "flexDirection": "row"
@@ -13191,7 +13174,6 @@ module.exports = {
   "title-item": {
     "justifyContent": "center",
     "alignItems": "center",
-    "flexDirection": "column",
     "borderBottomStyle": "solid"
   },
   "border-bottom": {
@@ -13430,9 +13412,6 @@ module.exports = {
     "justifyContent": "center",
     "backgroundColor": "#FFFFFF"
   },
-  "item-content": {
-    "flexDirection": "column"
-  },
   "item-name": {
     "fontSize": "24",
     "lineHeight": "26",
@@ -13647,8 +13626,7 @@ module.exports = {
     "justifyContent": "flex-start",
     "alignItems": "center",
     "flexWrap": "wrap",
-    "flexDirection": "row",
-    "flexShrink": 1
+    "flexDirection": "row"
   },
   "default-text": {
     "color": "#A5A5A5",
@@ -14606,7 +14584,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v(_vm._s(_vm.value))])]) : _vm._e(), (_vm.showImage) ? _c('image', {
     staticClass: ["tag-image"],
     style: {
-      width: _vm.imgWidth
+      width: _vm.imgWidth + 'px'
     },
     attrs: {
       "src": _vm.img,
@@ -15040,9 +15018,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           attrs: {
             "src": "https://gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png"
           }
-        }) : _vm._e(), _c('div', {
-          staticClass: ["item-content"]
-        }, [_c('text', {
+        }) : _vm._e(), _c('div', [_c('text', {
           staticClass: ["item-name"]
         }, [_vm._v(_vm._s(item.name))]), (item.desc) ? _c('text', {
           staticClass: ["item-desc"]

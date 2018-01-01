@@ -23,7 +23,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
   .scroller {
@@ -36,11 +36,9 @@
     justify-content: center;
     margin-top: 60px;
     flex-direction: row;
-    flex-flow: wrap;
   }
 
   .icon-item {
-    flex-direction: column;
     width: 160px;
     height: 120px;
     align-items: center;

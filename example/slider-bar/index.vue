@@ -51,13 +51,13 @@
   }
 
   .label {
-    color: #999;
+    color: #999999;
     font-size: 26px;
     margin-bottom: 10px;
   }
 
   .value-text {
-    color: #999;
+    color: #999999;
     font-size: 26px;
     margin-bottom: 10px;
   }
