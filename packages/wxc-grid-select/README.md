@@ -125,7 +125,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | customStyles{checkedBorderColor} |`String` |`N`|  `#ffb200` | checked border color |
 | customStyles{disabledBorderColor} | `String` | `N`|`transparent` | disabled border color |
 | customStyles{backgroundColor} | `String` | `N`|`#f6f6f6` | background color |
-| customStyles{checkedBackgroundColor} | `String` |`N`| `#fff` | checked background color |
+| customStyles{checkedBackgroundColor} | `String` |`N`| `#ffffff` | checked background color |
 | customStyles{disabledBackgroundColor} | `String` | `N`|`#f6f6f6` | disabled background color |
 | customStyles{icon} | `String` | `N`| `x` | icon when checked |
 

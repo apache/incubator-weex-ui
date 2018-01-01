@@ -34,9 +34,7 @@
 
 <style scoped>
   .wxc-rich-text {
-    justify-content: flex-start;
     align-items: center;
-    flex-wrap: wrap;
     flex-direction: row;
   }
 

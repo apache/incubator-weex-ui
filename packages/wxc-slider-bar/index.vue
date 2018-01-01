@@ -450,7 +450,7 @@
   .slide-block {
     width: 56px;
     height: 56px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 28px;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.1);

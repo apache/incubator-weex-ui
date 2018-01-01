@@ -9276,8 +9276,6 @@ exports.default = {
 //
 //
 //
-//
-//
 
 /***/ }),
 /* 127 */
@@ -12801,8 +12799,7 @@ module.exports = {}
 module.exports = {
   "grid-select": {
     "flexDirection": "row",
-    "justifyContent": "space-between",
-    "flexWrap": "wrap"
+    "justifyContent": "space-between"
   }
 }
 
@@ -13387,7 +13384,7 @@ module.exports = {
     "flexDirection": "row",
     "alignItems": "center",
     "justifyContent": "center",
-    "backgroundColor": "#FFFFFF"
+    "backgroundColor": "#ffffff"
   },
   "item-name": {
     "fontSize": "24",
@@ -13603,9 +13600,7 @@ module.exports = {
 
 module.exports = {
   "wxc-rich-text": {
-    "justifyContent": "flex-start",
     "alignItems": "center",
-    "flexWrap": "wrap",
     "flexDirection": "row"
   },
   "default-text": {

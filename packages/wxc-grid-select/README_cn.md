@@ -125,7 +125,7 @@
 | customStyles{checkedBorderColor} |`String` |`N`|  `#ffb200` | 选中状态边框色值 |
 | customStyles{disabledBorderColor} | `String` | `N`|`transparent` | 不可选状态边框色值 |
 | customStyles{backgroundColor} | `String` | `N`|`#f6f6f6` | 正常状态背景色值 |
-| customStyles{checkedBackgroundColor} | `String` |`N`| `#fff` | 选中状态背景色值 |
+| customStyles{checkedBackgroundColor} | `String` |`N`| `#ffffff` | 选中状态背景色值 |
 | customStyles{disabledBackgroundColor} | `String` | `N`|`#f6f6f6` | 不可选状态背景色值 |
 | customStyles{icon} | `String` | `N`| `x` | 选中状态icon，base64或url，传空则不显示 |
 

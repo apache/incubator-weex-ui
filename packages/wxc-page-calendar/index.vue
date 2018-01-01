@@ -227,7 +227,7 @@
     right: -750px;
     width: 750px;
     color: #333333;
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
   .flex-item {
