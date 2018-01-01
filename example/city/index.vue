@@ -125,10 +125,10 @@
   .btn {
     width: 600px;
     height: 80px;
+    margin-left: 75px;
     margin-top: 300px;
     flex-direction: row;
     align-items: center;
-    align-self: center;
     justify-content: center;
     border-radius: 6px;
     background-color: rgb(92, 184, 92);
@@ -154,12 +154,7 @@
   }
 
   .panel {
-    align-self: center;
     height: 300px;
     margin-top: 40px;
-  }
-
-  .title {
-    align-self: flex-start;
   }
 </style>

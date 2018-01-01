@@ -51,7 +51,6 @@
 <style scoped>
   .wxc-tab-page {
     width: 750px;
-    flex-direction: column;
     background-color: #f2f3f4;
   }
 
@@ -64,7 +63,6 @@
   .title-item {
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     border-bottom-style: solid;
   }
 

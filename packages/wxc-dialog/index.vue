@@ -75,8 +75,6 @@
     align-items: center;
     border-top-color: #F3F3F3;
     border-top-width: 1px;
-    /*H5处理兼容*/
-    border-top: 1px solid #F3F3F3;
   }
 
   .footer-btn {

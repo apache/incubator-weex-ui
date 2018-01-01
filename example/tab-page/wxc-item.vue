@@ -73,12 +73,10 @@
     border-bottom-width: 1px;
     border-bottom-color: #e0e0e0;
     border-bottom-style: solid;
-    flex-direction: column;
     justify-content: space-between;
     padding-top: 24px;
     padding-right: 24px;
     padding-bottom: 18px;
-    overflow: hidden;
   }
 
   .item-text {
@@ -87,7 +85,6 @@
     color: #333333;
     lines: 2;
     text-overflow: ellipsis;
-    overflow: hidden;
   }
 
   .item-price {

@@ -55,7 +55,7 @@
     left: 0;
     right: 0;
     padding-bottom: 24px;
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
   .scroller {
@@ -234,12 +234,12 @@
         width: '120px',
         height: '50px',
         icon: '',
-        color: '#333',
-        checkedColor: '#fff',
-        disabledColor: '#eee',
-        borderColor: '#666',
+        color: '#333333',
+        checkedColor: '#ffffff',
+        disabledColor: '#eeeeee',
+        borderColor: '#666666',
         checkedBorderColor: '#ffb200',
-        backgroundColor: '#fff',
+        backgroundColor: '#ffffff',
         checkedBackgroundColor: '#ffb200'
       }
     }),

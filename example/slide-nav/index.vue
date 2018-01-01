@@ -63,7 +63,7 @@
   .div {
     margin-top: 10px;
     height: 120px;
-    background-color: #fff;
+    background-color: #ffffff;
     align-items: center;
     justify-content: center;
   }

@@ -255,7 +255,6 @@
 
   .calendar-list {
     flex: 1;
-    flex-direction: column;
   }
 
   .month-text {
