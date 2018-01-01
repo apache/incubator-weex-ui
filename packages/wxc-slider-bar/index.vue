@@ -2,46 +2,44 @@
 <!-- Created by 走鹃 on 2017-05-09. -->
 
 <template>
-  <div class="wxc-slider-bar">
+  <div
+    ref="bar-container"
+    class="slider-bar-container"
+    :style="containerStyle">
     <div
-      ref="bar-container"
-      class="slider-bar-container"
-      :style="containerStyle">
+      class="range-bar"
+      :style="rangeBarStyle">
       <div
-        class="range-bar"
-        :style="rangeBarStyle">
-        <div
-          ref="value-bar"
-          class="value-bar"
-          :style="valueBarStyle">
-          <div></div>
-        </div>
-      </div>
-      <div
-        ref="slide-block-1"
-        class="slide-block"
-        @touchstart="_weexStartHandler1"
-        @panstart="_webStartHandler"
-        @panmove="_webMoveHandler1"
-        @touchend="_weexEndHandler"
-        @horizontalpan="dispatchPan"
-        :prevent-move-event="preventMoveEvent"
-        :style="blockStyle1">
+        ref="value-bar"
+        class="value-bar"
+        :style="valueBarStyle">
         <div></div>
       </div>
-      <div
-        v-if="range"
-        ref="slide-block-2"
-        class="slide-block"
-        @touchstart="_weexStartHandler2"
-        @panstart="_webStartHandler"
-        @panmove="_webMoveHandler2"
-        @touchend="_weexEndHandler"
-        @horizontalpan="dispatchPan"
-        :prevent-move-event="preventMoveEvent"
-        :style="blockStyle2">
-        <div></div>
-      </div>
+    </div>
+    <div
+      ref="slide-block-1"
+      class="slide-block"
+      @touchstart="_weexStartHandler1"
+      @panstart="_webStartHandler"
+      @panmove="_webMoveHandler1"
+      @touchend="_weexEndHandler"
+      @horizontalpan="dispatchPan"
+      :prevent-move-event="preventMoveEvent"
+      :style="blockStyle1">
+      <div></div>
+    </div>
+    <div
+      v-if="range"
+      ref="slide-block-2"
+      class="slide-block"
+      @touchstart="_weexStartHandler2"
+      @panstart="_webStartHandler"
+      @panmove="_webMoveHandler2"
+      @touchend="_weexEndHandler"
+      @horizontalpan="dispatchPan"
+      :prevent-move-event="preventMoveEvent"
+      :style="blockStyle2">
+      <div></div>
     </div>
   </div>
 </template>
@@ -174,8 +172,7 @@
           width: this.length + 'px',
           height: this.height + 'px',
           flexDirection: 'row',
-          backgroundColor: this.invalidColor,
-          overflow: 'hidden'
+          backgroundColor: this.invalidColor
         };
       },
       valueBarStyle () {
@@ -440,10 +437,6 @@
 </script>
 
 <style scoped>
-  .wxc-slider-bar {
-    user-select: none;
-  }
-
   .slider-bar-container {
     height: 56px;
     justify-content: center;
@@ -460,7 +453,7 @@
     background-color: #fff;
     border-radius: 28px;
     border-width: 1px;
-    border-color: rgba(0, 0, 0, .1);
+    border-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
     position: absolute;
     left: 0;

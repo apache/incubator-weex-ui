@@ -88,7 +88,6 @@
     height: 64px;
     line-height: 64px;
     background-color: #E5E5E5;
-    outline: none;
     border-radius: 6px;
   }
 

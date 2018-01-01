@@ -2,7 +2,7 @@
 <template>
   <div class="wxc-demo">
     <scroller class="scroller">
-      <title title="wxc-overlay" class="title"></title>
+      <title title="wxc-overlay"></title>
       <category title="使用案例"></category>
       <div class="btn"
            @click="openOverlay">
@@ -36,17 +36,13 @@
     flex: 1;
   }
 
-  .title {
-    align-self: flex-start;
-  }
-
   .btn {
     width: 600px;
     height: 80px;
     margin-top: 300px;
+    margin-left: 75px;
     flex-direction: row;
     align-items: center;
-    align-self: center;
     justify-content: center;
     border-radius: 6px;
     background-color: rgb(92, 184, 92);

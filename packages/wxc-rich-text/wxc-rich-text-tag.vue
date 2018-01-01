@@ -57,7 +57,7 @@
   }
 
   .border-blue {
-    border-color: #30A0FF,
+    border-color: #30A0FF;
   }
 
   .border-gray {

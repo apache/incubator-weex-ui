@@ -5744,8 +5744,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
 
 exports.default = {
   components: { WxcOverlay: _wxcOverlay2.default },
@@ -6542,7 +6540,7 @@ exports.default = {
     // 选中状态背景色值
     checkedBackgroundColor: {
       type: String,
-      default: '#fff'
+      default: '#ffffff'
     },
     // 不可选状态背景色值
     disabledBackgroundColor: {
@@ -10018,7 +10016,6 @@ exports.default = {
 //
 //
 //
-//
 
 /***/ }),
 /* 132 */
@@ -10546,8 +10543,6 @@ var EB = weex.requireModule('expressionBinding'); //
 //
 //
 //
-//
-//
 
 var animation = weex.requireModule('animation');
 var dom = weex.requireModule('dom');
@@ -10679,8 +10674,7 @@ exports.default = {
         width: this.length + 'px',
         height: this.height + 'px',
         flexDirection: 'row',
-        backgroundColor: this.invalidColor,
-        overflow: 'hidden'
+        backgroundColor: this.invalidColor
       };
     },
     valueBarStyle: function valueBarStyle() {
@@ -11038,7 +11032,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-//
 
 var _utils = __webpack_require__(0);
 
@@ -11226,7 +11219,6 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
 //
 //
 //
@@ -11800,7 +11792,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
 
 var dom = weex.requireModule('dom');
 var animation = weex.requireModule('animation');
@@ -12176,11 +12167,6 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-//
-//
-//
-//
 
 exports.default = {
   props: {
@@ -12414,6 +12400,9 @@ module.exports = {
   "yellow": {
     "color": "#EE9900"
   },
+  "blue": {
+    "color": "#30A0FF"
+  },
   "gray": {
     "color": "#A5A5A5"
   },
@@ -12430,9 +12419,6 @@ module.exports = {
 /***/ (function(module, exports) {
 
 module.exports = {
-  "wxc-slider-bar": {
-    "userSelect": "none"
-  },
   "slider-bar-container": {
     "height": "56",
     "justifyContent": "center",
@@ -12504,8 +12490,7 @@ module.exports = {
   },
   "cancel": {
     "borderRightColor": "#F3F3F3",
-    "borderRightWidth": "1",
-    "borderRight": "1px solid #F3F3F3"
+    "borderRightWidth": "1"
   },
   "btn-text": {
     "fontSize": "36",
@@ -12591,7 +12576,6 @@ module.exports = {
     "height": "64",
     "lineHeight": "64",
     "backgroundColor": "#E5E5E5",
-    "outline": "none",
     "borderRadius": "6"
   },
   "search-bar-input-yellow": {
@@ -12726,8 +12710,7 @@ module.exports = {
     "lineHeight": "34",
     "color": "#3d3d3d",
     "lines": 2,
-    "textOverflow": "ellipsis",
-    "overflow": "hidden"
+    "textOverflow": "ellipsis"
   },
   "black": {
     "color": "#3D3D3D"
@@ -12961,9 +12944,6 @@ module.exports = {
 /***/ (function(module, exports) {
 
 module.exports = {
-  "wxc-tag": {
-    "alignItems": "flex-start"
-  },
   "tag-item": {
     "height": "24",
     "justifyContent": "center",
@@ -13031,7 +13011,6 @@ module.exports = {
   },
   "stepper-input": {
     "borderWidth": 0,
-    "outline": "none",
     "textAlign": "center",
     "color": "#3d3d3d",
     "fontSize": "30",
@@ -13131,7 +13110,6 @@ module.exports = {
     "color": "#999999",
     "textAlign": "center",
     "fontSize": "24",
-    "overflow": "hidden",
     "textOverflow": "ellipsis"
   },
   "calendar-holiday": {
@@ -13181,8 +13159,7 @@ module.exports = {
     "bottom": 0
   },
   "tab-page-wrap": {
-    "width": "750",
-    "overflow": "hidden"
+    "width": "750"
   },
   "tab-container": {
     "flex": 1,
@@ -13502,6 +13479,9 @@ module.exports = {
   },
   "border-yellow": {
     "borderColor": "#EE9900"
+  },
+  "border-blue": {
+    "borderColor": "#30A0FF"
   },
   "border-gray": {
     "borderColor": "#A5A5A5"
@@ -13937,8 +13917,6 @@ module.exports.render._withStripped = true
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: ["wxc-slider-bar"]
-  }, [_c('div', {
     ref: "bar-container",
     staticClass: ["slider-bar-container"],
     style: _vm.containerStyle
@@ -13977,7 +13955,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "touchend": _vm._weexEndHandler,
       "horizontalpan": _vm.dispatchPan
     }
-  }, [_c('div')]) : _vm._e()])])
+  }, [_c('div')]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
@@ -14571,9 +14549,7 @@ module.exports.render._withStripped = true
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["wxc-tag"]
-  }, [(_vm.showSolid || _vm.showHollow) ? _c('div', {
+  return _c('div', [(_vm.showSolid || _vm.showHollow) ? _c('div', {
     class: ['tag-item', 'tag-border', _vm.showHollow && 'tag-hollow'],
     style: _vm.tagTextStyle
   }, [_c('text', {

@@ -45,7 +45,7 @@
     text-align: center;
     font-size: 26px;
     color: #333333;
-    background-color: #eee;
+    background-color: #eeeeee;
     font-weight: bold;
   }
 

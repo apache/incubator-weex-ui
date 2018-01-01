@@ -26,14 +26,14 @@
   .tab-item {
     flex: 1;
     height: 90px;
-    background-color: #fff;
+    background-color: #ffffff;
     align-items: center;
     justify-content: center;
   }
 
   .tab-item-text {
     text-align: center;
-    color: #000;
+    color: #000000;
     font-size: 28px;
     font-weight: normal;
   }
