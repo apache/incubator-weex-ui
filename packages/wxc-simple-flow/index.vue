@@ -41,7 +41,7 @@
   .root {
     padding-top: 28px;
     padding-bottom: 24px;
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
   .title {

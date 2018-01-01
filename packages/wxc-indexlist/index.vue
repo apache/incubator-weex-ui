@@ -257,7 +257,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-color: #FFF;
+    background-color: #ffffff;
   }
 
   .item-name {

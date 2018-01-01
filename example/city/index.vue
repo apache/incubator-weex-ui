@@ -155,6 +155,7 @@
 
   .panel {
     height: 300px;
+    align-items: center;
     margin-top: 40px;
   }
 </style>
