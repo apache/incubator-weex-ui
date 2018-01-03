@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
   <meta name="description" content="A rich interaction, lightweight, high performance UI library.">
   <link rel="icon" href="https://img.alicdn.com/tfs/TB1kCs_er_I8KJjy1XaXXbsxpXa-419-495.png" type="image/png">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//h5.m.taobao.com/css/trip/weex-ui/index.min.css">
 </head>
 
@@ -23,6 +24,7 @@
     loadSidebar: 'docs/_sidebar.md',
     loadNavbar: 'docs/_navbar.md',
     auto2top: true,
+    formatUpdated: '{YYYY}-{MM}-{DD} {HH}:{mm}',
     nameLink: {
       '/cn/': '#/cn/',
       '/': '#/'
@@ -46,57 +48,61 @@
           var url = 'https://github.com/alibaba/weex-ui/blob/master/' + vm.route.file;
           var github = "<iframe src=\"https://ghbtns.com/github-btn.html?user=alibaba&amp;repo=weex-ui&amp;type=watch&amp;count=true\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"0\" width=\"110\" height=\"20\" style='margin:0 10px -6px'></iframe>";
           var editHtml = '[:memo:](' + url + ')';
-          return html
-            + '\n----\n'
+          return "<div class=\"tool-docs-header\">"
             + editHtml
             + github
+            + "</div>"
+            + '\n\n'
+            + html
+            + '\n----\n'
+            + 'Last modified {docsify-updated} '
         })
       },
-    function(hook, vm) {
-      hook.doneEach(function() {
-        var codeBlocks = document.querySelectorAll("pre[v-pre]");
-        codeBlocks.forEach((element, i, obj) => {
-          var button = document.createElement("button");
-          button.appendChild(document.createTextNode("Click to copy"));
-          button.classList.add("docsify-copy-code-button");
+      function (hook, vm) {
+        hook.doneEach(function () {
+          var codeBlocks = document.querySelectorAll("pre[v-pre]");
+          codeBlocks.forEach((element, i, obj) => {
+            var button = document.createElement("button");
+            button.appendChild(document.createTextNode("Click to copy"));
+            button.classList.add("docsify-copy-code-button");
 
-          if (vm.config.themeColor) {
-            button.style.background = vm.config.themeColor;
-          }
+            if (vm.config.themeColor) {
+              button.style.background = vm.config.themeColor;
+            }
 
-          button.addEventListener("click", function(event) {
-            var range = document.createRange();
-            var codeBlock = element.querySelector("code");
-            range.selectNode(codeBlock);
-            window.getSelection().addRange(range);
+            button.addEventListener("click", function (event) {
+              var range = document.createRange();
+              var codeBlock = element.querySelector("code");
+              range.selectNode(codeBlock);
+              window.getSelection().addRange(range);
 
-            try {
-              // Now that we've selected the anchor text, execute the copy command
-              var successful = document.execCommand("copy");
-              if (successful) {
-                button.classList.add("success");
-                setTimeout(function() {
-                  button.classList.remove("success");
+              try {
+                // Now that we've selected the anchor text, execute the copy command
+                var successful = document.execCommand("copy");
+                if (successful) {
+                  button.classList.add("success");
+                  setTimeout(function () {
+                    button.classList.remove("success");
+                  }, 1000);
+                }
+              } catch (err) {
+                button.classList.add("error");
+                setTimeout(function () {
+                  button.classList.remove("error");
                 }, 1000);
               }
-            } catch (err) {
-              button.classList.add("error");
-              setTimeout(function() {
-                button.classList.remove("error");
-              }, 1000);
-            }
 
-            var selection = window.getSelection();
-            if (typeof selection.removeRange === "function") {
-              selection.removeRange(range);
-            } else if (typeof selection.removeAllRanges === "function") {
-              selection.removeAllRanges();
-            }
+              var selection = window.getSelection();
+              if (typeof selection.removeRange === "function") {
+                selection.removeRange(range);
+              } else if (typeof selection.removeAllRanges === "function") {
+                selection.removeAllRanges();
+              }
+            });
+            element.appendChild(button);
           });
-          element.appendChild(button);
         });
-      });
-    }]
+      }]
   }
 </script>
 <script>
