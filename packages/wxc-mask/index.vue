@@ -124,7 +124,7 @@
     data: () => ({
       closeIcon: 'https://gw.alicdn.com/tfs/TB1qDJUpwMPMeJjy1XdXXasrXXa-64-64.png',
       maskTop: 264,
-      opacity: 0
+      opened: false
     }),
     computed: {
       mergeOverlayCfg () {
@@ -134,7 +134,7 @@
         }
       },
       maskStyle () {
-        const { width, height, showClose, hasAnimation, opacity } = this;
+        const { width, height, showClose, hasAnimation, opened } = this;
         const newHeight = showClose ? height - 0 + 100 : height;
         const { deviceHeight, deviceWidth, platform } = weex.config.env;
         const _deviceHeight = deviceHeight || 1334;
@@ -146,7 +146,7 @@
           height: newHeight + 'px',
           left: (750 - width) / 2 + 'px',
           top: (pageHeight - height) / 2 + 'px',
-          opacity: hasAnimation ? opacity : 1
+          opacity: hasAnimation && !opened ? 0 : 1
         }
       },
       contentStyle () {
@@ -182,7 +182,8 @@
         }
       },
       needEmit (bool = false) {
-        !bool && (this.$emit('wxcMaskSetHidden', {}));
+        this.opened = bool;
+        !bool && this.$emit('wxcMaskSetHidden', {});
       },
       appearMask (bool, duration = this.duration) {
         const { hasAnimation, timingFunction } = this;

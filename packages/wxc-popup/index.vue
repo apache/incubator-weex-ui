@@ -108,7 +108,7 @@
       isNeedShow () {
         setTimeout(() => {
           this.appearPopup(this.show);
-        }, 50)
+        }, 50);
         return this.show;
       },
       _height () {
