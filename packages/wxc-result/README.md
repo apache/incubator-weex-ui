@@ -23,7 +23,7 @@
   import { WxcResult } from 'weex-ui';
   export default {
     components: { WxcResult },
-    data () => ({
+    data: () => ({
         show: true
     }),
     methods: {
