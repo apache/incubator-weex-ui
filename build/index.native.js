@@ -7431,6 +7431,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 
 var animation = weex.requireModule('animation');
 exports.default = {
@@ -7499,7 +7500,7 @@ exports.default = {
     return {
       closeIcon: 'https://gw.alicdn.com/tfs/TB1qDJUpwMPMeJjy1XdXXasrXXa-64-64.png',
       maskTop: 264,
-      opacity: 0
+      opened: false
     };
   },
   computed: {
@@ -7513,7 +7514,7 @@ exports.default = {
           height = this.height,
           showClose = this.showClose,
           hasAnimation = this.hasAnimation,
-          opacity = this.opacity;
+          opened = this.opened;
 
       var newHeight = showClose ? height - 0 + 100 : height;
       var _weex$config$env = weex.config.env,
@@ -7530,7 +7531,7 @@ exports.default = {
         height: newHeight + 'px',
         left: (750 - width) / 2 + 'px',
         top: (pageHeight - height) / 2 + 'px',
-        opacity: hasAnimation ? opacity : 1
+        opacity: hasAnimation && !opened ? 0 : 1
       };
     },
     contentStyle: function contentStyle() {
@@ -7572,6 +7573,7 @@ exports.default = {
     needEmit: function needEmit() {
       var bool = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
+      this.opened = bool;
       !bool && this.$emit('wxcMaskSetHidden', {});
     },
     appearMask: function appearMask(bool) {
@@ -8860,19 +8862,25 @@ exports.default = {
       return updateList;
     }
   },
-  created: function created() {
-    var _this = this;
-
-    var list = this.list;
-
-    if (list && list.length > 0) {
-      list.forEach(function (item, i) {
-        item.checked && (_this.checkedIndex = i);
-      });
+  watch: {
+    list: function list(newList) {
+      this.setListChecked(newList);
     }
+  },
+  created: function created() {
+    this.setListChecked(this.list);
   },
 
   methods: {
+    setListChecked: function setListChecked(list) {
+      var _this = this;
+
+      if (list && list.length > 0) {
+        list.forEach(function (item, i) {
+          item.checked && (_this.checkedIndex = i);
+        });
+      }
+    },
     wxcRadioItemChecked: function wxcRadioItemChecked(i, e) {
       var oldIndex = this.checkedIndex;
       var _list$i = this.list[i],
@@ -8884,6 +8892,7 @@ exports.default = {
     }
   }
 }; //
+//
 //
 //
 //
@@ -11530,6 +11539,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
 
 var dom = weex.requireModule('dom');
 var animation = weex.requireModule('animation');
@@ -11566,6 +11577,10 @@ exports.default = {
     titleType: {
       type: String,
       default: 'icon'
+    },
+    titleUseSlot: {
+      type: Boolean,
+      default: false
     },
     isTabView: {
       type: Boolean,
@@ -13769,7 +13784,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       height: (_vm.tabStyles.height + (_vm.isIPhoneX ? 78 : 0)) + 'px',
       paddingBottom: _vm.isIPhoneX ? '78px' : '0'
     }
-  }, _vm._l((_vm.tabTitles), function(v, index) {
+  }, [_vm._l((_vm.tabTitles), function(v, index) {
     return _c('div', {
       key: index,
       ref: 'wxc-tab-title-' + index,
@@ -13789,7 +13804,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           _vm.setPage(index, v.url)
         }
       }
-    }, [(_vm.titleType === 'icon') ? _c('image', {
+    }, [(_vm.titleType === 'icon' && !_vm.titleUseSlot) ? _c('image', {
       style: {
         width: _vm.tabStyles.iconWidth + 'px',
         height: _vm.tabStyles.iconHeight + 'px'
@@ -13797,13 +13812,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "src": _vm.currentPage == index ? v.activeIcon : v.icon
       }
-    }) : _vm._e(), (_vm.titleType === 'iconFont' && v.codePoint) ? _c('text', {
+    }) : _vm._e(), (_vm.titleType === 'iconFont' && v.codePoint && !_vm.titleUseSlot) ? _c('text', {
       staticClass: ["icon-font"],
       style: {
         fontSize: _vm.tabStyles.iconFontSize + 'px',
         color: _vm.currentPage == index ? _vm.tabStyles.activeIconFontColor : _vm.tabStyles.iconFontColor
       }
-    }, [_vm._v(_vm._s(_vm.decode(v.codePoint)))]) : _vm._e(), _c('text', {
+    }, [_vm._v(_vm._s(_vm.decode(v.codePoint)))]) : _vm._e(), (!_vm.titleUseSlot) ? _c('text', {
       staticClass: ["tab-text"],
       style: {
         fontSize: _vm.tabStyles.fontSize + 'px',
@@ -13812,14 +13827,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         paddingLeft: _vm.tabStyles.textPaddingLeft + 'px',
         paddingRight: _vm.tabStyles.textPaddingRight + 'px'
       }
-    }, [_vm._v(_vm._s(v.title))]), (v.badge) ? _c('div', {
+    }, [_vm._v(_vm._s(v.title))]) : _vm._e(), (v.badge && !_vm.titleUseSlot) ? _c('div', {
       staticClass: ["desc-tag"]
     }, [_c('text', {
       staticClass: ["desc-text"]
-    }, [_vm._v(_vm._s(v.badge))])]) : _vm._e(), (v.dot && !v.badge) ? _c('div', {
+    }, [_vm._v(_vm._s(v.badge))])]) : _vm._e(), (v.dot && !v.badge && !_vm.titleUseSlot) ? _c('div', {
       staticClass: ["dot"]
     }) : _vm._e()])
-  }))])
+  }), (_vm.titleUseSlot) ? _vm._t(("tab-title-" + _vm.index)) : _vm._e()], 2)])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
@@ -14766,7 +14781,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       attrs: {
         "src": _vm.currentPage == index ? v.activeIcon : v.icon
       }
-    }) : _vm._e(), (_vm.titleType === 'iconFont' && v.codePoint) ? _c('text', {
+    }) : _vm._e(), (_vm.titleType === 'iconFont' && v.codePoint && !_vm.titleUseSlot) ? _c('text', {
       staticClass: ["icon-font"],
       style: {
         fontSize: _vm.tabStyles.iconFontSize + 'px',

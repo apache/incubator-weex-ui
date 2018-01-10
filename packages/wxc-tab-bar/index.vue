@@ -23,21 +23,23 @@
            :aria-label="`${v.title?v.title:'标签'+index}`">
 
         <image :src="currentPage == index ? v.activeIcon : v.icon"
-               v-if="titleType === 'icon'"
+               v-if="titleType === 'icon' && !titleUseSlot"
                :style="{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}"></image>
 
         <text class="icon-font"
-              v-if="titleType === 'iconFont' && v.codePoint"
+              v-if="titleType === 'iconFont' && v.codePoint && !titleUseSlot"
               :style="{fontSize: tabStyles.iconFontSize+'px', color: currentPage == index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{decode(v.codePoint)}}</text>
 
         <text
+          v-if="!titleUseSlot"
           :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
           class="tab-text">{{v.title}}</text>
-        <div class="desc-tag" v-if="v.badge">
+        <div class="desc-tag" v-if="v.badge && !titleUseSlot">
           <text class="desc-text">{{v.badge}}</text>
         </div>
-        <div v-if="v.dot && !v.badge" class="dot"></div>
+        <div v-if="v.dot && !v.badge && !titleUseSlot" class="dot"></div>
       </div>
+      <slot :name="`tab-title-${index}`" v-if="titleUseSlot"></slot>
     </div>
   </div>
 </template>
@@ -152,6 +154,10 @@
       titleType: {
         type: String,
         default: 'icon'
+      },
+      titleUseSlot: {
+        type: Boolean,
+        default: false
       },
       isTabView: {
         type: Boolean,

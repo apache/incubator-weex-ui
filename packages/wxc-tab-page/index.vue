@@ -26,7 +26,7 @@
                :style="{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}"></image>
 
         <text class="icon-font"
-              v-if="titleType === 'iconFont' && v.codePoint"
+              v-if="titleType === 'iconFont' && v.codePoint && !titleUseSlot"
               :style="{fontSize: tabStyles.iconFontSize+'px', color: currentPage == index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{decode(v.codePoint)}}</text>
 
         <text
