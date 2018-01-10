@@ -104,6 +104,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | has-bottom-border | `Bool` | `N`| `true` | whether to show bottom border |
 | has-vertical-indent | `Bool` | `N`| `true` |  whether has vertical indent|
 | has-margin | `Bool` |`N`| `false` | whether has vertical margin |
+| cell-style | `Object` |`N`| `{}` | Custom cell style |
 
 
 ### Slot
