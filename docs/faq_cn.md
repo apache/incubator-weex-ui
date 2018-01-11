@@ -80,6 +80,8 @@
   }
  ```
 
+#### Weex Ui 现在支持横屏吗 ？
+- 很抱歉，目前由于 Weex 本身还不支持横屏，所以 Weex Ui 现在也还没有横屏模式，等到 Weex 支持后，这边会立马跟上的。
 
 -----
 更多问题可以通过 [issue 列表](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=)查找，假如有新问题，可以给我们提 [issue](https://github.com/alibaba/weex-ui/issues/new)。
