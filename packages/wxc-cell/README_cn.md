@@ -102,6 +102,7 @@
 | has-bottom-border | `Bool` | `N`| `true` | 是否有下边框 |
 | has-vertical-indent | `Bool` | `N`| `true` |  是否有垂直间距 |
 | has-margin | `Bool` |`N`| `false` | cell之间是否有margin |
+| cell-style | `Object` |`N`| `{}` | 自定义cell的样式 |
 
 
 ### Slot
