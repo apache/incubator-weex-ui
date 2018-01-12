@@ -8,26 +8,22 @@ export default {
   tabTitles: [
     {
       title: '首页',
-      codePoint: '&#xe623;',
       icon: 'https://gw.alicdn.com/tfs/TB1MWXdSpXXXXcmXXXXXXXXXXXX-72-72.png',
       activeIcon: 'https://gw.alicdn.com/tfs/TB1kCk2SXXXXXXFXFXXXXXXXXXX-72-72.png'
     },
     {
       title: '特别推荐',
-      codePoint: '&#xe608;',
       icon: 'https://gw.alicdn.com/tfs/TB1ARoKSXXXXXc9XVXXXXXXXXXX-72-72.png',
       activeIcon: 'https://gw.alicdn.com/tfs/TB19Z72SXXXXXamXFXXXXXXXXXX-72-72.png'
     },
     {
       title: '消息中心',
-      codePoint: '&#xe6b0;',
       icon: 'https://gw.alicdn.com/tfs/TB1VKMISXXXXXbyaXXXXXXXXXXX-72-72.png',
       activeIcon: 'https://gw.alicdn.com/tfs/TB1aTgZSXXXXXazXFXXXXXXXXXX-72-72.png',
       badge: 5
     },
     {
       title: '我的主页',
-      codePoint: '&#xe601;',
       icon: 'https://gw.alicdn.com/tfs/TB1Do3tSXXXXXXMaFXXXXXXXXXX-72-72.png',
       activeIcon: 'https://gw.alicdn.com/tfs/TB1LiNhSpXXXXaWXXXXXXXXXXXX-72-72.png',
       dot: true
@@ -52,20 +48,20 @@ export default {
   tabIconFontTitles: [
     {
       title: '首页',
-      codePoint: '&#xe623;'
+      codePoint: '\ue623'
     },
     {
       title: '特别推荐',
-      codePoint: '&#xe608;'
+      codePoint: '\ue608'
     },
     {
       title: '消息中心',
-      codePoint: '&#xe752;',
+      codePoint: '\ue752',
       badge: 5
     },
     {
       title: '我的主页',
-      codePoint: '&#xe601;',
+      codePoint: '\ue601',
       dot: true
     }
   ],

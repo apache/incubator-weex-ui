@@ -93,14 +93,15 @@
  
 ```
  // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L51
+ // '&#xe608;' -> '\ue608'
   tabIconFontTitles: [
     {
       title: 'Home',
-      codePoint: '&#xe608;'
+      codePoint: '\ue608'
     },
     {
       title: 'Message',
-      codePoint: '&#xe752;',
+      codePoint: '\ue752',
       badge: 5
     },
     // ....
