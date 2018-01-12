@@ -28,8 +28,7 @@
 
         <text class="icon-font"
               v-if="titleType === 'iconFont' && v.codePoint && !titleUseSlot"
-              :style="{fontSize: tabStyles.iconFontSize+'px', color: currentPage == index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{decode(v.codePoint)}}</text>
-
+              :style="{fontFamily: 'wxcIconFont',fontSize: tabStyles.iconFontSize+'px', color: currentPage == index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{v.codePoint}}</text>
         <text
           v-if="!titleUseSlot"
           :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
@@ -116,7 +115,6 @@
 
   .icon-font {
     margin-bottom: 8px;
-    font-family: wxcIconFont;
   }
 </style>
 
@@ -185,15 +183,12 @@
       if (titleType === 'iconFont' && tabStyles.iconFontUrl) {
         dom.addRule('fontFace', {
           'fontFamily': "wxcIconFont",
-          'src': `url(${tabStyles.iconFontUrl})`
+          'src': `url('${tabStyles.iconFontUrl}')`
         });
       }
       this.isIPhoneX = Utils.env.isIPhoneX();
     },
     methods: {
-      decode (text) {
-        return Utils.decodeIconFont(text)
-      },
       next () {
         let page = this.currentPage;
         if (page < this.tabTitles.length - 1) {

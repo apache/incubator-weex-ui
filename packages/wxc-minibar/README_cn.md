@@ -4,7 +4,7 @@
 
 ### 规则
 - 优先使用 Native 自带的 [Navigator Bar](https://developer.apple.com/documentation/uikit/uinavigationbar)
-     
+- 假如你想隐藏左边返回按钮，直接传入`leftButton=""`即可
 
 ## [Demo](https://h5.m.taobao.com/trip/wxc-minibar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-minibar%2Fdemo%2Findex.native-min.js)
 <img src="https://img.alicdn.com/tfs/TB1IK_TfxPI8KJjSspfXXcCFXXa-750-1334.jpg" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1EJY_SpXXXXcmXpXXXXXXXXXX-200-200.png" width="160"/>

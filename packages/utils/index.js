@@ -27,7 +27,7 @@ const Utils = {
   },
   decodeIconFont (text) {
     // 正则匹配 图标和文字混排 eg: 我去上学校&#xe600;,天天不&#xe600;迟到
-    const regExp = /&#x[a-z]\d{3,4};?/;
+    const regExp = /&#x[a-z|0-9]{4,5};?/g;
     if (regExp.test(text)) {
       return text.replace(new RegExp(regExp, 'g'), function (iconText) {
         const replace = iconText.replace(/&#x/, '0x').replace(/;$/, '');

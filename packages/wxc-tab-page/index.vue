@@ -27,7 +27,7 @@
 
         <text class="icon-font"
               v-if="titleType === 'iconFont' && v.codePoint && !titleUseSlot"
-              :style="{fontSize: tabStyles.iconFontSize+'px', color: currentPage == index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{decode(v.codePoint)}}</text>
+              :style="{fontFamily: 'wxcIconFont',fontSize: tabStyles.iconFontSize+'px', color: currentPage == index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{v.codePoint}}</text>
 
         <text
           v-if="!titleUseSlot"

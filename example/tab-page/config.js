@@ -67,20 +67,20 @@ export default {
   tabIconFontTitles: [
     {
       title: '首页',
-      codePoint: '&#xe623;'
+      codePoint: '\ue623'
     },
     {
       title: '特别推荐',
-      codePoint: '&#xe608;'
+      codePoint: '\ue608'
     },
     {
       title: '消息中心',
-      codePoint: '&#xe752;',
+      codePoint: '\ue752',
       badge: 5
     },
     {
       title: '我的主页',
-      codePoint: '&#xe601;',
+      codePoint: '\ue601',
       dot: true
     }
   ],
