@@ -4,8 +4,9 @@
 - [+] [`wxc-tab-bar`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-bar/README.md) supports fully customizable navigation header using slot
 - [!] Fixed the dynamic update bug about [wxc-radio](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-radio/README.md).
 - [!] Fixed the example code error about [wxc-result](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-result/README.md).  [issue112](https://github.com/alibaba/weex-ui/issues/112).
-- [!] Fix bug about [wxc-mask](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-mask/README.md) that is hidden when updating. [issue111](https://github.com/alibaba/weex-ui/issues/111).
-- [+] The official website supports user editing and direct copy example code.
+- [!] Fix the bug about [wxc-mask](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-mask/README.md) that will hidden when updating. [issue111](https://github.com/alibaba/weex-ui/issues/111).
+- [!] Fix the iconfont bug about [`wxc-tab-bar`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-bar/README.md).
+- [+] The official website supports user editing and directly copy example code.
 
 ## 0.3.10
 - [+] New component: [`wxc-icon`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-icon/README.md) 🎉🎉 
