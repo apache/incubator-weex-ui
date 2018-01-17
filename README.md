@@ -121,10 +121,10 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 }
 ```
 
-More details can be found in [How to use with weex-toolkit](/docs/with-weex-toolkit.md).
+More details can be found in [How to use with weex-toolkit](/docs/with-weex-toolkit.md) and [weex-ui-demo](https://github.com/tw93/weex-ui-demo).
 
 ### More
-- If `webpack.config.js`  babel-loader has a exclude for node_modules, Please turn on for week-ui `  exclude: /node_modules(?!\/.*(weex).*)/`.
+- If `webpack.config.js`  babel-loader has a exclude for node_modules, Please turn on for week-ui `exclude: /node_modules(?!(\/|\\).*(weex).*)/`.
 - You can find more examples [here](https://github.com/alibaba/weex-ui/tree/master/example). Write once and support iOS / Android / Html5 right now!
 
 ## Document

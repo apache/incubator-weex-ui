@@ -102,54 +102,56 @@
       isLess: false,
       isOver: false
     }),
+    watch: {
+      defaultValue (newNum) {
+        this.value = newNum;
+      }
+    },
     created () {
-      const self = this;
-      self.value = parseInt(self.defaultValue, 10);
-      if (self.disabled) {
-        self.isLess = true;
-        self.isOver = true;
+      this.value = parseInt(this.defaultValue, 10);
+      if (this.disabled) {
+        this.isLess = true;
+        this.isOver = true;
       }
     },
     methods: {
       minusClicked () {
-        const self = this;
-        if (self.disabled) {
+        if (this.disabled) {
           return;
         }
-        const isMinOver = self.value <= self.min;
-        const nowNum = self.value - parseInt(self.step, 10);
+        const isMinOver = this.value <= this.min;
+        const nowNum = this.value - parseInt(this.step, 10);
         if (isMinOver) {
-          self.$emit('wxcStepperValueIsMinOver', { value: self.value });
+          this.$emit('wxcStepperValueIsMinOver', { value: this.value });
         } else {
-          self.value = nowNum;
-          self.resetDisabledStyle();
+          this.value = nowNum;
+          this.resetDisabledStyle();
         }
         // 由于此处已经减step
-        if (nowNum <= self.min) {
-          self.value = parseInt(self.min, 10);
-          self.isLess = true;
+        if (nowNum <= this.min) {
+          this.value = parseInt(this.min, 10);
+          this.isLess = true;
         }
-        self.$emit('wxcStepperValueChanged', { value: self.value });
+        this.$emit('wxcStepperValueChanged', { value: this.value });
       },
       plusClicked () {
-        const self = this;
-        if (self.disabled) {
+        if (this.disabled) {
           return;
         }
-        const isMaxOver = self.value >= self.max;
-        const nowNum = self.value + parseInt(self.step, 10);
+        const isMaxOver = this.value >= this.max;
+        const nowNum = this.value + parseInt(this.step, 10);
         if (isMaxOver) {
-          self.$emit('wxcStepperValueIsMaxOver', { value: self.value });
+          this.$emit('wxcStepperValueIsMaxOver', { value: this.value });
         } else {
-          self.value = nowNum;
-          self.resetDisabledStyle();
+          this.value = nowNum;
+          this.resetDisabledStyle();
         }
         // 由于此处已经加step
-        if (nowNum >= self.max) {
-          self.value = parseInt(self.max, 10);
-          self.isOver = true;
+        if (nowNum >= this.max) {
+          this.value = parseInt(this.max, 10);
+          this.isOver = true;
         }
-        self.$emit('wxcStepperValueChanged', { value: self.value });
+        this.$emit('wxcStepperValueChanged', { value: this.value });
       },
       onInput (e) {
         this.correctInputValue(e.value);
@@ -158,11 +160,10 @@
         this.correctInputValue(e.value);
       },
       correctInputValue (v) {
-        const self = this;
-        if (/^[1-9]\d{0,}$/.test(v) && parseInt(v, 10) >= self.min && parseInt(v, 10) <= self.max) {
-          self.value = parseInt(v, 10);
+        if (/^[1-9]\d{0,}$/.test(v) && parseInt(v, 10) >= this.min && parseInt(v, 10) <= this.max) {
+          this.value = parseInt(v, 10);
         }
-        self.$emit('wxcStepperValueChanged', { value: self.value });
+        this.$emit('wxcStepperValueChanged', { value: this.value });
       },
 
       resetDisabledStyle () {

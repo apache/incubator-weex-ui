@@ -12,7 +12,7 @@
       </div>
       <div class="demo">
         <text class="text">{min:2,max:10,step:2,defaultValue:4}</text>
-        <wxc-stepper :default-value="4"
+        <wxc-stepper :default-value="value"
                      step="2"
                      max="10"
                      min="2"
@@ -22,7 +22,7 @@
       </div>
       <div class="demo">
         <text class="text">禁用</text>
-        <wxc-stepper default-value="4"
+        <wxc-stepper :default-value="4"
                      step="2"
                      max="10"
                      min="2"
@@ -81,6 +81,11 @@
     }),
     created () {
       setTitle('Stepper');
+    },
+    mounted(){
+      setTimeout(()=>{
+        this.value=10;
+      },2000)
     },
     methods: {
       wxcStepperValueChanged (e) {
