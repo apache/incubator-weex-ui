@@ -37,8 +37,8 @@
           <text class="desc-text">{{v.badge}}</text>
         </div>
         <div v-if="v.dot && !v.badge && !titleUseSlot" class="dot"></div>
+        <slot :name="`tab-title-${index}`" v-if="titleUseSlot"></slot>
       </div>
-      <slot :name="`tab-title-${index}`" v-if="titleUseSlot"></slot>
     </div>
   </div>
 </template>
