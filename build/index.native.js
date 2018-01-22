@@ -6783,6 +6783,16 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 var dom = weex.requireModule('dom');
 exports.default = {
@@ -6805,12 +6815,6 @@ exports.default = {
       type: Boolean,
       default: true
     },
-    navStyle: {
-      type: Object,
-      default: function _default() {
-        return {};
-      }
-    },
     hotListConfig: {
       type: Object,
       default: function _default() {
@@ -6819,6 +6823,78 @@ exports.default = {
     },
     // 城市选择子组件 特殊情况支持
     cityLocationConfig: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    headerStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    navStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    navTextStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    popStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    popTextStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    itemStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    itemTextStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    itemDescStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    groupWrapStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    groupItemStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    groupItemTextStyle: {
+      type: Object,
+      default: function _default() {
+        return {};
+      }
+    },
+    groupItemDescStyle: {
       type: Object,
       default: function _default() {
         return {};
@@ -12323,6 +12399,7 @@ module.exports = {
     "borderBottomStyle": "solid"
   },
   "tab-page-wrap": {
+    "width": "750",
     "flex": 1
   },
   "tab-container": {
@@ -13323,8 +13400,7 @@ module.exports = {
     "backgroundColor": "#FFFFFF"
   },
   "iphone-x": {
-    "height": "68",
-    "backgroundColor": "#ffffff"
+    "height": "68"
   },
   "title": {
     "fontSize": "32",
@@ -13383,8 +13459,7 @@ module.exports = {
   "group-list": {
     "flexDirection": "row",
     "marginLeft": "18",
-    "marginTop": "18",
-    "backgroundColor": "#FBFBFB"
+    "marginTop": "18"
   },
   "group-item": {
     "width": "146",
@@ -14977,9 +15052,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "append": "tree"
       }
     }, [(!_vm.onlyShowList) ? _c('text', {
-      class: ['index-list-title', v.type && v.type == 'group' && 'group-title']
+      class: ['index-list-title', v.type && v.type == 'group' && 'group-title'],
+      style: _vm.headerStyle
     }, [_vm._v(_vm._s(v.title))]) : _vm._e(), (v.type && v.type === 'group' && !_vm.onlyShowList) ? _c('div', {
-      staticClass: ["group"]
+      staticClass: ["group"],
+      style: _vm.groupWrapStyle
     }, _vm._l((v.data), function(group, index) {
       return _c('div', {
         key: index,
@@ -14988,6 +15065,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         return _c('div', {
           key: i,
           staticClass: ["group-item"],
+          style: _vm.groupItemStyle,
           attrs: {
             "accessible": true,
             "ariaLabel": ((item.name) + "," + (item.desc?item.desc:''))
@@ -15003,15 +15081,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
             "src": "https://gw.alicdn.com/tfs/TB1JUiUPFXXXXXUXXXXXXXXXXXX-32-32.png"
           }
         }) : _vm._e(), _c('div', [_c('text', {
-          staticClass: ["item-name"]
+          staticClass: ["item-name"],
+          style: _vm.groupItemTextStyle
         }, [_vm._v(_vm._s(item.name))]), (item.desc) ? _c('text', {
-          staticClass: ["item-desc"]
+          staticClass: ["item-desc"],
+          style: _vm.groupItemDescStyle
         }, [_vm._v(_vm._s(item.desc))]) : _vm._e()])])
       }))
     })) : _vm._e(), (v.type === 'list') ? _c('div', _vm._l((v.data), function(item, index) {
       return _c('div', {
         key: index,
         staticClass: ["index-list-item"],
+        style: _vm.itemStyle,
         attrs: {
           "accessible": true,
           "ariaLabel": ((item.name) + "," + (item.desc?item.desc:''))
@@ -15022,9 +15103,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
           }
         }
       }, [_c('text', {
-        staticClass: ["title"]
+        staticClass: ["title"],
+        style: _vm.itemTextStyle
       }, [_vm._v(_vm._s(item.name))]), _c('text', {
-        staticClass: ["desc"]
+        staticClass: ["desc"],
+        style: _vm.itemDescStyle
       }, [_vm._v(_vm._s(item.desc))])])
     })) : _vm._e()])
   }), (_vm.isIPhoneX) ? _c('cell', {
@@ -15040,6 +15123,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     return _c('text', {
       key: index,
       staticClass: ["list-nav-key"],
+      style: _vm.navTextStyle,
       attrs: {
         "title": item.title
       },
@@ -15050,9 +15134,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }, [_vm._v(_vm._s(item.title))])
   })) : _vm._e(), (_vm.popKeyShow) ? _c('div', {
-    staticClass: ["index-list-pop"]
+    staticClass: ["index-list-pop"],
+    style: _vm.popStyle
   }, [_c('text', {
-    staticClass: ["list-pop-text"]
+    staticClass: ["list-pop-text"],
+    style: _vm.popTextStyle
   }, [_vm._v(_vm._s(_vm.popKey))])]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
