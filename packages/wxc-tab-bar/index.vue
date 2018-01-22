@@ -64,7 +64,7 @@
   }
 
   .tab-page-wrap {
-    width: 750px;
+    /*width: 750px;*/
     flex: 1;
   }
 

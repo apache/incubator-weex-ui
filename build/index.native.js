@@ -11339,7 +11339,9 @@ exports.default = {
     };
   },
   watch: {
-    defaultValue: defaultValue
+    defaultValue: function defaultValue(newNum) {
+      this.value = newNum;
+    }
   },
   created: function created() {
     this.value = parseInt(this.defaultValue, 10);
@@ -12321,7 +12323,6 @@ module.exports = {
     "borderBottomStyle": "solid"
   },
   "tab-page-wrap": {
-    "width": "750",
     "flex": 1
   },
   "tab-container": {
@@ -13779,7 +13780,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       height: (_vm.tabStyles.height + (_vm.isIPhoneX ? 78 : 0)) + 'px',
       paddingBottom: _vm.isIPhoneX ? '78px' : '0'
     }
-  }, [_vm._l((_vm.tabTitles), function(v, index) {
+  }, _vm._l((_vm.tabTitles), function(v, index) {
     return _c('div', {
       key: index,
       ref: 'wxc-tab-title-' + index,
@@ -13829,8 +13830,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       staticClass: ["desc-text"]
     }, [_vm._v(_vm._s(v.badge))])]) : _vm._e(), (v.dot && !v.badge && !_vm.titleUseSlot) ? _c('div', {
       staticClass: ["dot"]
-    }) : _vm._e()])
-  }), (_vm.titleUseSlot) ? _vm._t(("tab-title-" + _vm.index)) : _vm._e()], 2)])
+    }) : _vm._e(), (_vm.titleUseSlot) ? _vm._t(("tab-title-" + index)) : _vm._e()], 2)
+  }))])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

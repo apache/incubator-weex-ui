@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.3.13
+- [!] Fix the `slot` bug about [`wxc-tab-bar`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-bar/README.md).
+
 ## 0.3.12
 - [+] Adding happypack to improve the speed of build.
 - [+] Add a show case of [weex-ui](https://github.com/tw93/weex-ui-demo).
