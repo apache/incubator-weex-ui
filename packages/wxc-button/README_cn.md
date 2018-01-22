@@ -27,7 +27,7 @@
 </script>
 
 ```
-更详细代码可以参考 [这里](https://github.com/alibaba/weex-ui/blob/master/button/loading/index.vue)
+更详细代码可以参考 [这里](https://github.com/alibaba/weex-ui/blob/master/example/button/index.vue)
 
 ### 可配置参数
 | Prop | Type | Required | Default | Description |
