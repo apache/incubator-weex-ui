@@ -28,7 +28,7 @@
 
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/button/loading/index.vue)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/button/index.vue)
 
 ### API
 | Prop | Type | Required | Default | Description |
