@@ -1,6 +1,6 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
 <!-- Created by Tw93 on 17/07/28. -->
-<!-- Updated by Tw93 on 17/11/16.-->
+<!-- Updated by Tw93 on 18/01/22.-->
 
 <template>
   <div class="wxc-tab-page"
@@ -64,7 +64,7 @@
   }
 
   .tab-page-wrap {
-    /*width: 750px;*/
+    width: 750px;
     flex: 1;
   }
 

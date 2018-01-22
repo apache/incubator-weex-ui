@@ -107,3 +107,8 @@
 `@wxcIndexlistItemClicked="wxcIndexlistItemClicked"`
 ```
 
+### 完全自定义样式
+- 假如上述默认样式不符合要求，可以通过传入相对应的参数来覆盖原有的样式。
+- 样式为 Object 类型，使用驼峰方式命名
+
+<img src="https://img.alicdn.com/tfs/TB1ga6Sn6nD8KJjSspbXXbbEXXa-769-1374.jpg" width="300"/>
