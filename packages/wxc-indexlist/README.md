@@ -109,6 +109,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 ```
 
 ### Completely custom style
+- If the above default styles do not meet the requirements, you can cover the original style by passing the corresponding parameters.
 
-<img src="https://img.alicdn.com/tfs/TB1ga6Sn6nD8KJjSspbXXbbEXXa-769-1374.jpg" width="300"/>
+<img src="https://img.alicdn.com/tfs/TB17gzBn9_I8KJjy0FoXXaFnVXa-769-1374.jpg" width="300"/>
 

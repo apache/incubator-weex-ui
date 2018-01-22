@@ -262,6 +262,9 @@
         this.$refs['search-input'].blur();
       },
       onFocus () {
+        if (this.isDisabled) {
+          return;
+        }
         this.showCancel = true;
         this.detectShowClose();
         this.$emit('wxcSearchbarInputOnFocus', { value: this.value });
