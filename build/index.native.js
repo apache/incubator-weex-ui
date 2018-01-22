@@ -11883,6 +11883,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 
 var dom = weex.requireModule('dom');
 var animation = weex.requireModule('animation');
@@ -13243,7 +13244,8 @@ module.exports = {
     "bottom": 0
   },
   "tab-page-wrap": {
-    "width": "750"
+    "width": "750",
+    "overflow": "hidden"
   },
   "tab-container": {
     "flex": 1,
