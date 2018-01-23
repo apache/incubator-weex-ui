@@ -110,4 +110,4 @@
 ### 完全自定义样式
 - 假如上述默认样式不符合要求，可以通过传入相对应的参数来覆盖原有的样式
 
-<img src="https://img.alicdn.com/tfs/TB1ga6Sn6nD8KJjSspbXXbbEXXa-769-1374.jpg" width="300"/>
+<img src="https://img.alicdn.com/tfs/TB13DEPn8TH8KJjy0FiXXcRsXXa-776-1370.jpgg" width="300"/>
