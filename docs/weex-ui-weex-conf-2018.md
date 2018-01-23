@@ -46,6 +46,7 @@ Weex 其实很好的解决了上述的一些问题，包括在飞猪、手淘、
 ## 飞猪 Weex 技术体系
 
 #### 架构图
+
 <img src="https://gw.alipayobjects.com/zos/rmsportal/adNiyVpYLLOwVXUbrHFV.jpeg" width="800"/>
 
 可以从底层一直往上看，底层由我们APP的Framework / Libraries / OS Kernel等组成，我们在Weex的上下层和手淘、天猫一起设计出一套统一的Api设计，包括接口请求、数据埋点、路由跳转、网络状态、支付功能、导航栏定制等这一系列的通用服务，在 Weex 上面我们封装了Weex Ui组件库、业务组件库、UPX搭建营销模块、还有抹平多端差异的 Util 函数库，这样在我们上层可以长出我们众多的业务。
@@ -131,6 +132,7 @@ Weex 其实很好的解决了上述的一些问题，包括在飞猪、手淘、
 业务组件库更多是前端、后端、设计师之间的一个“约定”，通过一定规范共同让业务组件变得可复用。也即Weex代码中直接引入此组件，直接插入后端返回的原始数据，就可以生成设计师所设计出的商品卡片，最终可以做到**支撑任意 Weex 业务模块 投放到 任意 Weex 页面 中 任意位置 的能力**。
 
 那么应该怎么做呢？
+
 <img src="https://gw.alipayobjects.com/zos/rmsportal/JvdNJSPoMrpojagZAtut.jpeg" width="800"/>
 
 #### 可以自动化测试 Weex 吗 ？
@@ -149,6 +151,7 @@ Weex 其实很好的解决了上述的一些问题，包括在飞猪、手淘、
 #### Weex 无障碍优化
 Weex 其实也是支持无障碍的，也即让盲人在最短的时间内通过最快的方式找到自己想要的信息。
 同时当盲人访问我们Weex页面时候，让他们对 Weex 是可感知的、可操作的、可理解的、同时页面也是鲁棒的。譬如如下这个[演示>>>](http://p.tb.cn/rmsportal_7819__E6_97_A0_E9_9A_9C_E7_A2_8D.mov)：
+
 <img src="https://img.alicdn.com/tfs/TB1QlDSlyqAXuNjy1XdXXaYcVXa-510-906.png" width="240"/>
 
 无障碍在Weex实现起来是很简单的，譬如如下实现：
@@ -174,6 +177,7 @@ Weex 其实也是支持无障碍的，也即让盲人在最短的时间内通过
 其实更多的是想大家一起参与进来，共同促进我们 Weex 的发展。
 
 说到共同促进，那么你可以做什么呢？ 其实可以做很多很多事情
+
 <img src="https://gw.alipayobjects.com/zos/rmsportal/WrZhBcWwQnEHuorIASWC.jpeg" width="800"/>
 
 ## 晚上圆桌会议关于 Weex 组件方向讨论总结
@@ -184,7 +188,7 @@ Weex 其实也是支持无障碍的，也即让盲人在最短的时间内通过
 - 原子性，不建议一个组件同时做很多事情，应该是单一的功能，然后通过搭配的方式来得到更多功能
 
 #### 2.weex 组件开发和实践过程中的一些经验？
-- 881原则，默认80%的功能应该是不需要用户配置很多参数，10%的地方用户可以通过配置一些参数来达到目的，10%的稀有情况可以暂时不考虑，可能这里会花费很多时间开发，所以可以等到有业务需要使用时候，再更新上去
+- 811原则，默认80%的功能应该是不需要用户配置很多参数，10%的地方用户可以通过配置一些参数来达到目的，10%的稀有情况可以暂时不考虑，可能这里会花费很多时间开发，所以可以等到有业务需要使用时候，再更新上去
 - 统一收口原则，为了避免后续组件变成一个大杂烩，后续迭代视觉交互、新功能的增加需要将通用性考虑进去，这里需要一个人统一来收口、开发维护此组件，可以避免很多“业务特性”来干扰组件的可用性
 - 性能体验的优化，Weex 组件比页面的编写更应该保证他的性能体验
 - 信任机制：很多时候别人使用你的组件一个很大原因是由于相信你的组件没有问题，是稳定的，同时后续会常常维护的
@@ -201,11 +205,10 @@ Weex 其实也是支持无障碍的，也即让盲人在最短的时间内通过
 ## More
 
 大家可以通过用钉钉扫一扫如下二维码，大家一起来讨论交流：
+
 <img src="https://img.alicdn.com/tfs/TB1irfjlyqAXuNjy1XdXXaYcVXa-624-823.png" width="300"/>
 
 - 本次分享PDF文件: [《 Weex + Ui 》](http://p.tb.cn/rmsportal_7819_Weex_20_2B_20UI_20_20_20Weex_20Conf_20_E9_A3_9E_E7_8C_AA_20_E4_BE_91_E5_A4_95.pdf)
 - 官网地址：<https://alibaba.github.io/weex-ui>
 - Github地址：<https://github.com/alibaba/weex-ui>
 - 云相册直播地址：<http://v.alltuu.com/album?id=1004641019>
-
-Please feel free to use and contribute to the development.
