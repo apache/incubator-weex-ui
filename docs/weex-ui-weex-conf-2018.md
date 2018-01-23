@@ -36,7 +36,7 @@ Weex 其实很好的解决了上述的一些问题，包括在飞猪、手淘、
 
 接下来我们可以从下面这个展示来看Weex和H5业务的一个展示、数据对比，详细可看此[录制视频>>>](https://gw.alipayobjects.com/os/rmsportal/FptvGkFpdBXRPtuNGMdk.mp4)
 
-<video width="800" controls autoplay muted><source src="https://gw.alipayobjects.com/os/rmsportal/FptvGkFpdBXRPtuNGMdk.mp4" type="video/mp4"></video>
+<video width="800" controls  muted><source src="https://gw.alipayobjects.com/os/rmsportal/FptvGkFpdBXRPtuNGMdk.mp4" type="video/mp4"></video>
 
 这是一个业务逻辑复杂的页面，包括筛选、排序、日历选择、收藏、长列表、业务逻辑也很复杂的页面，重构成Weex以后，我们**首屏可用时间降级68%**、**Bundle大小直接减少了73%**，由于体验变好变快、让我们**页面转化率居然提升了14.5%**。
 
@@ -82,7 +82,7 @@ Weex 其实很好的解决了上述的一些问题，包括在飞猪、手淘、
 #### Weex 不适合复杂场景 ？
 大家可以看下如下这几个场景的[视频展示>>>](https://gw.alipayobjects.com/os/rmsportal/SZwliPeMLRmyCyVvLYIp.mp4)
 
-<video width="800" controls autoplay muted><source src="https://gw.alipayobjects.com/os/rmsportal/SZwliPeMLRmyCyVvLYIp.mp4" type="video/mp4"></video>
+<video width="800" controls  muted><source src="https://gw.alipayobjects.com/os/rmsportal/SZwliPeMLRmyCyVvLYIp.mp4" type="video/mp4"></video>
 
 大家可能会觉得Weex不适合复杂的场景，其实也不一定，通过很多方式是可以做到复杂场景的支持，包括**双11**超长列表滚动，30多屏数据，快速滚动很顺滑。
 
@@ -146,7 +146,7 @@ Weex 其实很好的解决了上述的一些问题，包括在飞猪、手淘、
 6、自动测试Weex Ui，包括打开组件、点击交互逻辑
 7、自动各个页面运行截图，并将测试情况邮件给测试方
 
-<video width="800" controls autoplay muted><source src="http://p.tb.cn/rmsportal_7819_2026c3a73abfb162-1.mov" type="video/mp4"></video>
+<video width="800" controls  muted><source src="http://p.tb.cn/rmsportal_7819_2026c3a73abfb162-1.mov" type="video/mp4"></video>
 
 #### Weex 无障碍优化
 Weex 其实也是支持无障碍的，也即让盲人在最短的时间内通过最快的方式找到自己想要的信息。
