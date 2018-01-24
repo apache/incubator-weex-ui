@@ -18,7 +18,6 @@
   <wxc-tab-bar :tab-titles="tabTitles"
                :tab-styles="tabStyles"
                title-type="icon"
-               :tab-page-height="tabPageHeight"
                @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
     <!-- 第一个页面内容-->
     <div class="item-container" :style="contentStyle"><text>首页</text></div>
