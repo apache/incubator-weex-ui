@@ -38,6 +38,7 @@
                         :key="index"
                         :ext-id="index"
                         :class="['slider',`slider${index}`]"
+                        url="https://h5.m.taobao.com/trip/weex-ui/demo/index.native-min.js"
                         @wxcPanItemPan="wxcPanItemPan"
                         @wxcPanItemClick="wxcPanItemClick"
                         :slot="`card${index}_${autoSliderId}`"

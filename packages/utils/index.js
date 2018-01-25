@@ -70,7 +70,7 @@ const Utils = {
     return parsedUrl.toString();
   },
   goToH5Page (jumpUrl, animated = false, callback = null) {
-    const Navigator = weex.requireModule('navigator')
+    const Navigator = weex.requireModule('navigator');
     const jumpUrlObj = new Utils.UrlParser(jumpUrl, true);
     const url = Utils.appendProtocol(jumpUrlObj.toString());
     Navigator.push({
