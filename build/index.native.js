@@ -9874,6 +9874,9 @@ exports.default = {
       this.$refs['search-input'].blur();
     },
     onFocus: function onFocus() {
+      if (this.isDisabled) {
+        return;
+      }
       this.showCancel = true;
       this.detectShowClose();
       this.$emit('wxcSearchbarInputOnFocus', { value: this.value });
@@ -11622,6 +11625,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 
 var dom = weex.requireModule('dom');
 var animation = weex.requireModule('animation');
@@ -12401,7 +12405,8 @@ module.exports = {
   },
   "tab-page-wrap": {
     "width": "750",
-    "flex": 1
+    "flex": 1,
+    "overflow": "hidden"
   },
   "tab-container": {
     "flex": 1,
