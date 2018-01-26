@@ -15,6 +15,7 @@ export const STYLE_MAP = {
     borderColor: '#EE9900',
     borderWidth: '1px'
   },
+  sbc:{},
   mymap: {
     backgroundColor: '#FFFFFF',
     borderColor: '#EE9900',
