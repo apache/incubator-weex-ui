@@ -2,7 +2,7 @@
 
 ## 0.3.13
 - [!] Fix the `slot` bug about [`wxc-tab-bar`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-bar/README.md).
-- [!] [wxc-indexlist](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-indexlist/README.md) supports fully custom style.
+- [!] [wxc-indexlist](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-indexlist/README.md) supports fully custom style.  [issue 132](https://github.com/alibaba/weex-ui/issues/132)
 - [+] Add a post about [`Weex + Ui - Weex Conf 2018`](https://alibaba.github.io/weex-ui/#/cn/weex-ui-weex-conf-2018)`, Welcome to [translate](https://github.com/alibaba/weex-ui/blob/master/docs/weex-ui-weex-conf-2018.md) it.
 
 ## 0.3.12
