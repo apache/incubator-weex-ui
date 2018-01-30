@@ -11,6 +11,12 @@
 
 > A rich interaction, lightweight, high performance UI library based on [Weex](https://github.com/apache/incubator-weex).
 
+## Docs
+
+[English](https://alibaba.github.io/weex-ui/#/)
+
+[中文文档](https://alibaba.github.io/weex-ui/#/cn/)
+
 ## Demo
 <img src="https://img.alicdn.com/tfs/TB1O2ulhgoQMeJjy0FoXXcShVXa-1282-986.jpg" width=540/>
 
