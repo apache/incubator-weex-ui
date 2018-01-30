@@ -10,6 +10,12 @@
 
 > 一个基于 [Weex](https://github.com/apache/incubator-weex) 的富交互、轻量级、高性能的 UI 组件库
 
+## 文档
+
+[中文文档](https://alibaba.github.io/weex-ui/#/cn/)
+
+[English document](https://alibaba.github.io/weex-ui/#/)
+
 ## 预览
 <img src="https://img.alicdn.com/tfs/TB1O2ulhgoQMeJjy0FoXXcShVXa-1282-986.jpg" width=540/>
 
