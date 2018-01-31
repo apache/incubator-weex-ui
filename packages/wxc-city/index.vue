@@ -20,7 +20,7 @@
                    :height="listHeight"
                    :show-index="showIndex"
                    :only-show-list="onlyShowList"
-                   :city-location-config="cityLocationConfig"
+                   :city-location-config="currentCityLocationConfig"
                    @wxcIndexlistItemClicked="onItemClick"></wxc-indexlist>
 
     <wxc-result type="noGoods"
@@ -33,7 +33,8 @@
 
 <script>
   const animation = weex.requireModule('animation');
-
+  import defaultSourceData from './default-data';
+  import * as Util from './util';
   import Utils from '../utils';
   import wxcTab from './tab.vue';
   import WxcSearchbar from '../wxc-searchbar'
@@ -47,27 +48,23 @@
         type: Object,
         default: () => ({})
       },
-      normalList: {
-        type: Array,
-        default: () => ([])
+      sourceData: {
+        type: Object,
+        default: defaultSourceData
+      },
+      cityStyleType:{
+        type: Object,
+        default: 'list'
+      },
+      currentLocation:{
+        type: Object,
+        default: '定位中'
       },
       cityHeight: {
         type: Number,
         default: 0
       },
       showTab: {
-        type: Boolean,
-        default: false
-      },
-      hotListConfig: {
-        type: Object,
-        default: () => ({})
-      },
-      cityLocationConfig: {
-        type: Object,
-        default: () => ({})
-      },
-      onlyShowList: {
         type: Boolean,
         default: false
       },
@@ -78,6 +75,8 @@
     },
     data: () => ({
       tId: null,
+      saveDefaultSourceData:{},
+      onlyShowList: false,
       result: {
         noGoods: {
           pic: 'https://img.alicdn.com/tfs/TB1SpPHkf2H8KJjy0FcXXaDlFXa-200-200.png',
@@ -86,7 +85,29 @@
         }
       }
     }),
+    created () {
+      this.saveDefaultSourceData = this.sourceData
+    },
     computed: {
+      currentCityLocationConfig() {
+        return {
+          type: this.cityStyleType,
+          title: '定位',
+          list: [
+            { name: this.currentLocation, isLocation: true }
+          ]
+        }
+      },
+      normalList () {
+        return Util.getCities(this.sourceData.cities)
+      },
+      hotListConfig () {
+        return {
+          type: this.cityStyleType,
+          title: '热门',
+          list: Util.getCities((this.sourceData.hotCity))
+        }
+      },
       showError () {
         const { normalList, hotListConfig } = this;
         return (normalList && normalList.length < 1) && (hotListConfig && hotListConfig.list && hotListConfig.list.length < 1)
@@ -99,7 +120,6 @@
         if (cityHeight && !isNaN(cityHeight) && cityHeight > 0) {
           pageHeight = cityHeight;
         }
-
         // searchInput 84
         const tabHeight = this.showTab ? 90 : 0;
         return pageHeight - 84 - tabHeight;
@@ -129,6 +149,19 @@
       },
       onInput (e) {
         clearTimeout(this.tId);
+        const { cities } = this.sourceData;
+        const { value } = e;
+        if (value !== '' && cities && cities.length > 0) {
+          const queryData = Util.query(cities, String(value).trim());
+          this.sourceData = {
+            cities: queryData,
+            hotCity: []
+          };
+          this.onlyShowList = true;
+        } else {
+          this.sourceData = this.saveDefaultSourceData;
+          this.onlyShowList = false;
+        }
         this.tId = setTimeout(() => {
           this.$emit('wxcCityOnInput', {
             value: e.value

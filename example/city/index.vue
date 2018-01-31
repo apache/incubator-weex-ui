@@ -19,10 +19,9 @@
       </div>
     </scroller>
     <wxc-city ref="wxcCity"
-              :normal-list="normalList"
-              :only-show-list="onlyShowList"
-              :hot-list-config="hotListConfig"
-              :city-location-config="cityLocationConfig"
+              :currentLocation="location"
+              :cityStyleType="cityStyleType"
+              :sourceData="sourceData"
               @wxcCityItemSelected="citySelect"
               @wxcCityOnInput="onInput"></wxc-city>
   </div>
@@ -39,70 +38,28 @@
     data: () => ({
       currentCity: '',
       sourceData,
-      hotCityType: 'list',
-      locationCityType: 'list',
-      onlyShowList: false,
+      cityStyleType:'list',
       location: '定位中'
     }),
-    created () {
-      this.defaultSourceData = sourceData;
-    },
     mounted () {
       // 模拟定位
       setTimeout(() => {
         this.location = '杭州';
       }, 500);
     },
-    computed: {
-      // 城市数据
-      normalList () {
-        return Util.getCities(this.sourceData.cities)
-      },
-      hotListConfig () {
-        return {
-          type: this.hotCityType,
-          title: '热门',
-          list: Util.getCities(this.sourceData.hotCity)
-        }
-      },
-      cityLocationConfig () {
-        return {
-          type: this.locationCityType,
-          title: '定位',
-          list: [
-            { name: this.location, isLocation: true }
-          ]
-        }
-      }
-    },
     methods: {
       showListCity () {
-        this.hotCityType = 'list';
-        this.locationCityType = 'list';
+        this.cityStyleType = 'list'
         this.$refs['wxcCity'].show();
       },
       showGroupCity () {
-        this.hotCityType = 'group';
-        this.locationCityType = 'group';
+        this.cityStyleType = 'group'
         this.$refs['wxcCity'].show();
       },
       citySelect (e) {
         this.currentCity = e.item;
       },
       onInput (e) {
-        const { cities } = this.defaultSourceData;
-        const { value } = e;
-        if (value !== '' && cities && cities.length > 0) {
-          const queryData = Util.query(cities, String(value).trim());
-          this.sourceData = {
-            cities: queryData,
-            hotCity: []
-          };
-          this.onlyShowList = true;
-        } else {
-          this.sourceData = this.defaultSourceData;
-          this.onlyShowList = false;
-        }
       }
     }
   };
