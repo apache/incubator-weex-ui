@@ -14,10 +14,10 @@
   <div class="wxc-demo">
     <scroller class="scroller">
       <div class="btn" @click="showListCity">
-        <text class="btn-txt">城市选择</text>
+        <text class="btn-txt">City choice</text>
       </div>
       <div class="panel">
-        <text v-if="currentCity" class="text">当前城市: {{currentCity}}</text>
+        <text v-if="currentCity" class="text">Current city: {{currentCity}}</text>
       </div>
     </scroller>
     <wxc-city ref="wxcCity"
@@ -29,7 +29,7 @@
   </div>
 </template>
 <script>
-   // 若无特殊干掉data.js 直接使用默认的即可
+   // Delete the data source configuration and use the default data source
   import sourceData from './data';
   import { WxcCity } from '../../index';
   export default {
@@ -38,12 +38,12 @@
       currentCity: '',
       sourceData,
       cityStyleType:'list',
-      location: '定位中'
+      location: 'Positioning'
     }),
     mounted () {
-      // 模拟定位
+      // Analog positioning
       setTimeout(() => {
-        this.location = '杭州';
+        this.location = 'Hangzhou';
       }, 500);
     },
     methods: {
