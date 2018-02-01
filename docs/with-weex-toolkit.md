@@ -13,7 +13,7 @@ npm --version
 5.3.0
 ```
 
-### Make sure [weex-toolkit](https://github.com/weexteam/weex-toolkit) is latest
+### Make sure [weex-toolkit](https://github.com/weexteam/weex-toolkit) is the latest
 
 > npm install -g weex-toolkit@latest
 

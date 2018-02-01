@@ -13,10 +13,9 @@
 > A rich interaction, lightweight, high performance UI library based on [Weex](https://github.com/apache/incubator-weex).
 
 ## Docs
-
-[English](https://alibaba.github.io/weex-ui/#/)
-
-[中文文档](https://alibaba.github.io/weex-ui/#/cn/)
+- [**English**](https://alibaba.github.io/weex-ui/#/)
+- [中文文档](https://alibaba.github.io/weex-ui/#/cn/)
+- [Weex + Ui - Weex Conf 2018](https://alibaba.github.io/weex-ui/#/docs/weex-ui-weex-conf-2018)
 
 ## Demo
 <img src="https://img.alicdn.com/tfs/TB1O2ulhgoQMeJjy0FoXXcShVXa-1282-986.jpg" width=540/>
@@ -68,47 +67,11 @@ npm i weex-ui -S
 </script>
 ```
 
-### Used together (Recommend)
+#### Before use
 
-```javascript
-import { WxcComponent1, WxcComponent2 } from "weex-ui"
-```
-
-In order not to pack all the components, you can use [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component) import specified component.
+In order not to pack all the components, you need use [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component) import specified component.  At the same time, if you do not install babel-preset-stage-0, you also need to install it.
 
 ```shell
-npm i babel-plugin-component -D
-```
-
-```json
-// add a plugins setting to .babelrc
-{
-  "plugins": [
-    [
-      "component",
-      {
-        "libraryName": "weex-ui",
-        "libDir": "packages",
-        "style": false
-      }
-    ]
-  ]
-}
-```
-
-### Used separately
-
-```javascript
-import WxcComponent1 from "weex-ui/packages/wxc-component1"
-import WxcComponent2 from "weex-ui/packages/wxc-component2"
-```
-
-### Weex-toolkit
-
-If you use [weex-toolkit](https://github.com/weexteam/weex-toolkit) to develop a Weex project, Please add 'state-0' and 'babel-plugin-component' to .babelrc.
-
-```shell
-weex update weexpack
 npm i babel-preset-stage-0 babel-plugin-component  -D
 ```
 
@@ -121,57 +84,19 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
       {
         "libraryName": "weex-ui",
         "libDir": "packages",
-        "style": false
+         "style": false
       }
     ]
   ]
 }
 ```
 
-More details can be found in [How to use with weex-toolkit](/docs/with-weex-toolkit.md) and [weex-ui-demo](https://github.com/tw93/weex-ui-demo).
-
-### More
+#### More
+- More details can be found in [**How to use with weex-toolkit**](/docs/with-weex-toolkit.md) and [weex-ui-demo](https://github.com/tw93/weex-ui-demo).
 - If `webpack.config.js`  babel-loader has a exclude for node_modules, Please turn on for week-ui `exclude: /node_modules(?!(\/|\\).*(weex).*)/`.
 - You can find more examples [here](https://github.com/alibaba/weex-ui/tree/master/example). Write once and support iOS / Android / Html5 right now!
-
-## Document
-|Name|Category|Description|
-|:--|:--|:--|
-|[wxc-button](packages/wxc-button/)|Layout|Basic button|
-|[wxc-cell](packages/wxc-cell/)|Layout|Cell layout element|
-|[wxc-ep-slider](packages/wxc-ep-slider/) * |Layout|Cool slider neighbor|
-|[wxc-lightbox](packages/wxc-lightbox/)|Layout|Picture list full screen display|
-|[wxc-overlay](packages/wxc-overlay/)|Layout|Basic monlayer element|
-|[wxc-popup](packages/wxc-popup/)|Layout|Popup box|
-|[wxc-result](packages/wxc-result/)|Layout|General results page|
-|[wxc-slide-nav](packages/wxc-slide-nav/)|Layout|Increases view windows|
-|[wxc-minibar](packages/wxc-minibar/)|Navigator|Top navigation|
-|[wxc-tab-bar](packages/wxc-tab-bar/)|Navigator|Tab bar switching component|
-|[wxc-tab-page](packages/wxc-tab-page/) * |Navigator|Single page Tab switching component|
-|[wxc-checkbox](packages/wxc-checkbox/)|Data Entry|Checkbox list|
-|[wxc-countdown](packages/wxc-countdown/)|Data Entry|Countdown component|
-|[wxc-grid-select](packages/wxc-grid-select/)|Data Entry|Grid selection component|
-|[wxc-radio](packages/wxc-radio/)|Data Entry|Radio list|
-|[wxc-slider-bar](packages/wxc-slider-bar/) * |Data Entry|Sliding select data|
-|[wxc-stepper](packages/wxc-stepper/)|Data Entry|Quantity changer|
-|[wxc-searchbar](packages/wxc-searchbar/)|Data Entry|Search bar component|
-|[wxc-city](packages/wxc-city/)|Data Display|General city selection|
-|[wxc-icon](packages/wxc-icon/)|Data Display|Common iconFont summary |
-|[wxc-indexlist](packages/wxc-indexlist/)|Data Display|Index list component|
-|[wxc-page-calendar](packages/wxc-page-calendar/)|Data Display|Full page calendar|
-|[wxc-rich-text](packages/wxc-rich-text/)|Data Display|Dynamic template|
-|[wxc-simple-flow](packages/wxc-simple-flow/)|Data Display|Simple flow chart|
-|[wxc-tag](packages/wxc-tag/)|Data Display|Various forms of tag|
-|[wxc-dialog](packages/wxc-dialog/)|Feedback|Second confirmation window|
-|[wxc-loading](packages/wxc-loading/)|Feedback|Content load reminder|
-|[wxc-mask](packages/wxc-mask/)|Feedback|Intermediate popup panel|
-|[wxc-noticebar](packages/wxc-noticebar/)|Feedback|Message prompt bar component|
-|[wxc-progress](packages/wxc-progress/)|Feedback|Progress bar|
-|[wxc-lottery-rain](packages/wxc-lottery-rain/)|Game|Cat-cat game|
-|[utils](packages/utils/)|Service|Common function|
-
-- `*` These rich interaction components are based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).   
-- It's recommended to use the [Octotree extension](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc?hl=en-US) for better documentation search experience.
+- If you have a problem, you can get help by looking for [FAQ](https://alibaba.github.io/weex-ui/#/faq) and [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=).
+- In order to get the latest features and better experience, please focus on the [ChangeLog](https://github.com/alibaba/weex-ui/releases) and **often update `weex-ui` to the latest**.
 
 ## Development
 

@@ -3,6 +3,9 @@
 #### wxc-ep-slider、wxc-slider-bar 不能正常滑动
 - 目前 Weex Ui 中这两个组件依赖于一个创新交互特性 [expressionBinding](https://github.com/alibaba/weex/issues/1730)，暂时只支持有业务在阿里系 App 中的 ISV 开发同学使用,不过此特性正在开源中，具体进度可以关注此 [issue](https://github.com/alibaba/weex-ui/issues/6)。
 
+#### Module not found: Error: Can't resolve 'weex-ui/packages/wxc-button/style.css'
+- 此错误应该babel配置babel-plugin-component时候缺少style配置，详细可见 [Weex-toolkit](https://alibaba.github.io/weex-ui/#/cn/?id=weex-toolkit)
+
 #### Uncaught SyntaxError: Unexpected token export；
 - 此错误一般出现在使用老的 weex-toolkit 工具开发的页面。
 - 可以参考[此文档](https://alibaba.github.io/weex-ui/#/cn/with-weex-toolkit)进行相关依赖升级。
@@ -82,6 +85,18 @@
 
 #### Weex Ui 现在支持横屏吗 ？
 - 很抱歉，目前由于 Weex 本身还不支持横屏，所以 Weex Ui 现在也还没有横屏模式，等到 Weex 支持后，这边会立马跟上的。
+- 你可以修改底层代码等到横屏时候发送消息，再在 Weex 代码中这样处理
+
+  ```
+  function getHWidth (w) {
+    return deviceWidth / w * 750
+  }
+  const meta = weex.requireModule('meta')
+  // 配置 viewport 的宽度为
+  meta.setViewport({
+    width: getHWidth(w) // w为设计稿宽度
+  })
+  ```
 
 -----
 更多问题可以通过 [issue 列表](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=)查找，假如有新问题，可以给我们提 [issue](https://github.com/alibaba/weex-ui/issues/new)。
