@@ -73,7 +73,7 @@
 | **`input-config`** | `Object` | `N` | `{}` | 城市选择输入框配置, 注1|
 | **`sourceData`** | `Dictionary` | `N` | `注：常规城市列表数据源` | 城市列表数组配置，注2 |
 | **`cityStyleType`** | `String` | `N` | `list` | 城市列表样式的配置，注3 |
-| **`currentLocation`** | `String` | `Y` | `{}` | 定位城市配置，注4 |
+| **`currentLocation`** | `String` | `Y` | `` | 定位城市配置，注4 |
 | **`show-index`** | `Boolean` | `N` | `true` | 是否显示右侧索引项|
 | **`show-tab`** | `Boolean` | `N` | `false` | 是否需要显示国内、国外TAB|
 | **`city-height`** | `Number` | `N` | `0` | 自定义城市高度，**非特殊业务不要设置！**|
@@ -88,15 +88,16 @@
       }
     ```
 - 注2：城市列表数组配置，详细可见[data.js](https://github.com/alibaba/weex-ui/blob/master/example/city/data.js),整体详细如下：
+
   ```
-{
-  hotCity: [
-    { cityName: '北京', pinYin: 'beijing', py: 'bj' }
-  ],
-  cities: [
-    { cityName: '北京', pinYin: 'beijing', py: 'bj' }
-  ]
-}
+    {
+        hotCity: [
+            { cityName: '北京', pinYin: 'beijing', py: 'bj' }
+        ],
+        cities: [
+            { cityName: '北京', pinYin: 'beijing', py: 'bj' }
+        ]
+    }
   ```
 - 注3：城市列表样式的配置，支持`group`和`list`形式
 - 注4：定位城市列表配置，如：杭州

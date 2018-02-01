@@ -73,7 +73,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | **`input-config`** | `Object` | `N` | `{}` | Search Input configuration (*1)|
 | **`sourceData`** | `Dictionary` | `N` | `Default China City data` | City data configuration (*2) |
 | **`cityStyleType`** | `String` | `N` | `list` | Style configuration (*3) |
-| **`currentLocation`** | `String` | `Y` | `{}` | Location of the city configuration (*4) |
+| **`currentLocation`** | `String` | `Y` | `无` | Location of the city configuration (*4) |
 | **`show-index`** | `Boolean` | `N` | `true` | Whether the right index item is displayed|
 | **`city-height`** | `Number` | `N` | `0` | Custom City height, **non special business do not set up!**|
 
@@ -88,16 +88,17 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
       }
     ```
   - *2：City data configuration，Detailed as CityList can be see in [data.js](https://github.com/alibaba/weex-ui/blob/master/example/city/data.js)
-    ```example
-  {
-    hotCity: [
-      { cityName: '北京', pinYin: 'beijing', py: 'bj' }
-    ],
-    cities: [
-      { cityName: '北京', pinYin: 'beijing', py: 'bj' }
-    ]
-  }
-    ```
+ 
+  ```example
+    {
+        hotCity: [
+            { cityName: '北京', pinYin: 'beijing', py: 'bj' }
+        ],
+        cities: [
+            { cityName: '北京', pinYin: 'beijing', py: 'bj' }
+        ]
+    }
+  ```
   - *3：Style configuration，type：`group`，`list`
   - *4：Location of the city configuration，example：Hangzhou
 
