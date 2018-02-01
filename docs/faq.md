@@ -3,6 +3,10 @@
 #### wxc-ep-slider、wxc-slider-bar Can't slide
 - The two components in Weex Ui now depend on an innovative interaction feature called [expressionBinding](https://github.com/alibaba/weex/issues/1730), Can only be used in Ali app for the time being, But this feature is in the open source process，You can find more [here](https://github.com/alibaba/weex-ui/issues/6).
 
+#### Module not found: Error: Can't resolve 'weex-ui/packages/wxc-button/style.css'
+- This error should be the `babel-plugin-component` lack of style configuration, You can refer to [Weex-toolkit](https://alibaba.github.io/weex-ui/#/?id=weex-toolkit) to fix it.
+
+
 #### Uncaught SyntaxError: Unexpected token export；
 - This error typically occurs on the page developed using old weex-toolkit.
 - You can refer to [this document](https://alibaba.github.io/weex-ui/#/with-weex-toolkit) to fix it.
@@ -78,6 +82,19 @@
  ```
 #### Does Weex Ui support the horizontal screen ？
 - I'm sorry,Now Weex doesn't support horizontal screen, so Weex Ui doesn't have any horizontal screen mode yet. When Weex supports it, it will follow immediately.
+- You can send a message to weex at the horizontal screen, Then handle this in your code.
+
+  ```
+  function getHWidth (w) {
+    return deviceWidth / w * 750
+  }
+  const meta = weex.requireModule('meta')
+  // set viewport width
+  meta.setViewport({
+    width: getHWidth(w) // W is the width of the design draft
+  })
+  ```
+
 
 ---- 
 More questions can be found from the [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=), If you find a new bug, Just file a  [issue](https://github.com/alibaba/weex-ui/issues/new).
