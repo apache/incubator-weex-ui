@@ -31,7 +31,7 @@
 <script>
    // 若无特殊干掉data.js 直接使用默认的即可
   import sourceData from './data';
-  import { WxcCity } from '../../index';
+  import { WxcCity } from 'weex-ui';
   export default {
     components: { WxcCity },
     data: () => ({
