@@ -87,7 +87,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
         placeholder: 'Search'
       }
     ```
-  - *2：City data configuration，Detailed as CityList can be see in [data.js](https://github.com/alibaba/weex-ui/blob/master/example/city/data.js)
+- *2：City data configuration，Detailed as CityList can be see in [data.js](https://github.com/alibaba/weex-ui/blob/master/example/city/data.js)
  
   ```example
     {
@@ -99,8 +99,8 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
         ]
     }
   ```
-  - *3：Style configuration，type：`group`，`list`
-  - *4：Location of the city configuration，example：Hangzhou
+- *3：Style configuration，type：`group`，`list`
+- *4：Location of the city configuration，example：Hangzhou
 
 
 ### Event
