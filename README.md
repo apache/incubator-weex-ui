@@ -69,7 +69,7 @@ npm i weex-ui -S
 
 #### Before use
 
-In order not to pack all the components, you need use [babel-plugin-component](https://www.npmjs.com/package/babel-plugin-component) import specified component.  At the same time, if you do not install babel-preset-stage-0, you also need to install it.
+In order not to pack all the components, you need use [`babel-plugin-component`](https://www.npmjs.com/package/babel-plugin-component) import specified component.  At the same time, if you do not install `babel-preset-stage-0`, you also need to install it.
 
 ```shell
 npm i babel-preset-stage-0 babel-plugin-component  -D
@@ -92,8 +92,8 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 ```
 
 #### More
+- If babel-loader in `webpack.config.js` has a exclude for node_modules, Please turn on for week-ui as `exclude: /node_modules(?!(\/|\\).*(weex).*)/`.
 - More details can be found in [**How to use with weex-toolkit**](/docs/with-weex-toolkit.md) and [weex-ui-demo](https://github.com/tw93/weex-ui-demo).
-- If `webpack.config.js`  babel-loader has a exclude for node_modules, Please turn on for week-ui `exclude: /node_modules(?!(\/|\\).*(weex).*)/`.
 - You can find more examples [here](https://github.com/alibaba/weex-ui/tree/master/example). Write once and support iOS / Android / Html5 right now!
 - If you have a problem, you can get help by looking for [FAQ](https://alibaba.github.io/weex-ui/#/faq) and [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=).
 - In order to get the latest features and better experience, please focus on the [ChangeLog](https://github.com/alibaba/weex-ui/releases) and **often update `weex-ui` to the latest**.
