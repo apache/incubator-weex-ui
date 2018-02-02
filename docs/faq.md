@@ -80,7 +80,9 @@
     ]
   }
  ```
+
 #### Does Weex Ui support the horizontal screen ？
+
 - I'm sorry,Now Weex doesn't support horizontal screen, so Weex Ui doesn't have any horizontal screen mode yet. When Weex supports it, it will follow immediately.
 - You can send a message to weex at the horizontal screen, Then handle this in your code.
 

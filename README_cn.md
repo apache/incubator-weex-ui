@@ -11,14 +11,16 @@
 > 一个基于 [Weex](https://github.com/apache/incubator-weex) 的富交互、轻量级、高性能的 UI 组件库
 
 ## 文档
-- **[主页](https://alibaba.github.io/weex-ui/#/cn/)**
-- [English](https://alibaba.github.io/weex-ui/#/)
-- [Weex + Ui - Weex Conf 2018](https://alibaba.github.io/weex-ui/#/docs/weex-ui-weex-conf-2018) 
+
+* **[主页](https://alibaba.github.io/weex-ui/#/cn/)**
+* [English](https://alibaba.github.io/weex-ui/#/)
+* [Weex + Ui - Weex Conf 2018](https://alibaba.github.io/weex-ui/#/docs/weex-ui-weex-conf-2018)
 
 ## 预览
+
 <img src="https://img.alicdn.com/tfs/TB1O2ulhgoQMeJjy0FoXXcShVXa-1282-986.jpg" width=540/>
 
-*你可以通过飞猪、淘宝、天猫、Weex Playground 或者浏览器扫码[体验](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js)* 
+_你可以通过飞猪、淘宝、天猫、Weex Playground 或者浏览器扫码[体验](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js)_
 
 ## 安装
 
@@ -74,25 +76,26 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 
 ```json
 {
-  "presets": ["es2015", "stage-0"],
-  "plugins": [
-    [
-      "component",
-      {
-        "libraryName": "weex-ui",
-        "libDir": "packages",
-         "style": false
-      }
+    "presets": ["es2015", "stage-0"],
+    "plugins": [
+        [
+            "component",
+            {
+                "libraryName": "weex-ui",
+                "libDir": "packages",
+                "style": false
+            }
+        ]
     ]
-  ]
 }
 ```
 
 ### 更多
-- 如果 `webpack.config.js`中 babel-loader 有对 node_modules 进行 exclude 处理，请修改成这样 `exclude: /node_modules(?!(\/|\\).*(weex).*)/`。
-- 更多使用可见：[在 weex-toolkit 创建的项目中使用 Weex Ui](/docs/with-weex-toolkit_cn.md) 和 [weex-ui-demo](https://github.com/tw93/weex-ui-demo)。
-- 为了获取最新特性, 请常查看 [升级日志](https://github.com/alibaba/weex-ui/releases) 并更新组件到最新版本.
-- 如果碰到了问题，可以查找 [常见问题](https://alibaba.github.io/weex-ui/#/cn/faq) 和 [issue 列表](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=) 来看是否为已解决问题。
+
+* 如果 `webpack.config.js`中 babel-loader 有对 node_modules 进行 exclude 处理，请修改成这样 `exclude: /node_modules(?!(\/|\\).*(weex).*)/`
+* 更多使用可见：[在 weex-toolkit 创建的项目中使用 Weex Ui](/docs/with-weex-toolkit_cn.md) 和 [weex-ui-demo](https://github.com/tw93/weex-ui-demo)
+* 为了获取最新特性, 请常查看 [升级日志](https://github.com/alibaba/weex-ui/releases) 并更新组件到最新版本
+* 很多常见问题可以从 [FAQ](https://alibaba.github.io/weex-ui/#/cn/faq) 和 [issue 列表](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=) 获得答案，假如发现了新 Bug，可以给我们提一个[issue](https://github.com/alibaba/weex-ui/issues/new)
 
 ## 调试
 
@@ -101,18 +104,19 @@ npm i
 npm run start
 ```
 
-一旦它编译完成后，将会自动打开一个浏览器，你可以将浏览器切换到开发者模式，这时候在console中你可以看到一个预览二维码，直接使用你的 Weex App 扫码就可以看到 Demo 效果。
+一旦它编译完成后，将会自动打开一个浏览器，你可以将浏览器切换到开发者模式，这时候在 console 中你可以看到一个预览二维码，直接使用你的 Weex App 扫码就可以看到 Demo 效果。
 
 ## 支持
-- 在你的公司或个人项目中使用 Weex Ui。
-- 通过 Star Weex Ui 来表示你对它的喜爱。
-- 如果你有任何想法或建议来改善 Weex Ui，欢迎提交 [PR](./CONTRIBUTING.md)。
-- 假如使用过程中碰到了问题或者不明白某个地方为什么要这样处理？ 可以[新建一个 issue](https://github.com/alibaba/weex-ui/issues/new) 来咨询。
-- <details>
-    <summary>加入钉钉聊天群一起讨论 Weex 技术。</summary>
-    <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
-  </details>
+
+* 在你的公司或个人项目中使用 Weex Ui
+* 如果你觉得 Weex Ui 还不错，可以通过 Star 来表示你的喜欢
+* 如果你有任何想法或建议来改善 Weex Ui，欢迎提交 [PR](./CONTRIBUTING.md)
+* <details>
+  <summary>加入钉钉聊天群一起讨论 Weex 技术</summary>
+  <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
+</details>
 
 ## 协议
-- 遵循 [MIT 协议](http://opensource.org/licenses/MIT)
-- 请自由地享受和参与开源
+
+* 遵循 [MIT 协议](http://opensource.org/licenses/MIT)
+* 请自由地享受和参与开源
