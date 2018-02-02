@@ -95,7 +95,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 
 - If babel-loader in `webpack.config.js` has a exclude for node_modules, please turn on for week-ui as `exclude: /node_modules(?!(\/|\\).*(weex).*)/`.
 - In order to get the latest features, please focus on the [ChangeLog](https://github.com/alibaba/weex-ui/releases) and often update `weex-ui` to the latest.
-- Many questions can be found from [FAQ](https://alibaba.github.io/weex-ui/#/faq) and [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=), If you find a new bug, Just file a  [issue](https://github.com/alibaba/weex-ui/issues/new).
+- Many questions can be found from [faq](https://alibaba.github.io/weex-ui/#/faq) and [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=), if you find a new bug, just file a  [issue](https://github.com/alibaba/weex-ui/issues/new).
 
 ## Development
 
