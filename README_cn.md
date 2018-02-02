@@ -14,7 +14,6 @@
 
 * **[主页](https://alibaba.github.io/weex-ui/#/cn/)**
 * [English](https://alibaba.github.io/weex-ui/#/)
-* [Weex + Ui - Weex Conf 2018](https://alibaba.github.io/weex-ui/#/docs/weex-ui-weex-conf-2018)
 
 ## 预览
 
@@ -96,6 +95,7 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 * 更多使用可见：[在 weex-toolkit 创建的项目中使用 Weex Ui](/docs/with-weex-toolkit_cn.md) 和 [weex-ui-demo](https://github.com/tw93/weex-ui-demo)
 * 为了获取最新特性, 请常查看 [升级日志](https://github.com/alibaba/weex-ui/releases) 并更新组件到最新版本
 * 很多常见问题可以从 [faq](https://alibaba.github.io/weex-ui/#/cn/faq) 和 [issue 列表](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=) 获得答案，假如发现了新 Bug，可以给我们提一个[issue](https://github.com/alibaba/weex-ui/issues/new)
+* 更多的 Weex 建设经验可以从 [Weex + Ui - Weex Conf 2018](https://alibaba.github.io/weex-ui/#/docs/weex-ui-weex-conf-2018) 这篇文章了解，欢迎翻译~
 
 ## 调试
 
