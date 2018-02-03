@@ -1,5 +1,13 @@
 # 升级日志
 
+## 0.4.0
+
+* [+] 更强大的 [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md)组件，使用简单化，默认城市配置，不需传入很多参数，**但是涉及参数变动**
+* [!] 优化 Github 中 Readme 中英文档的显示
+* [+] 新增一个中文版本的 [Changelog](https://github.com/alibaba/weex-ui/blob/master/CHANGELOG_cn.md)
+* [+] 从群里收集，新增更多的常见问题
+* [+] 合并外部贡献者的代码提交
+
 ## 0.3.13
 
 * [!] 修复 [`wxc-tab-bar`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-bar/README.md) slot bug

@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.4.0
+
+* [+] Stronger about [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md)，it's easier to use, no need to configure a lot of parameters.
+* [!] Optimization of GitHub Readme.
+* [+] Add a Chinese version of [Changelog](https://github.com/alibaba/weex-ui/blob/master/CHANGELOG_cn.md)
+* [+] Add more FQA.
+* [+] Merge pull request from committer.
+
 ## 0.3.13
 
 * [!] Fix the `slot` bug about [`wxc-tab-bar`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-bar/README.md).
