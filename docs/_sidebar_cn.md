@@ -44,7 +44,7 @@
 - 服务
    - [utils 功能函数](cn/packages/utils/) 
    
-- [**在 weex-toolkit 项目中使用**](cn/with-weex-toolkit)
+- [**搭配 weex-toolkit 使用 Weex Ui**](cn/with-weex-toolkit)
 - [**常见问题**](cn/faq)
 - [**CHANGELOG**](cn/CHANGELOG)
 - [**开发者问卷**](https://render.alipay.com/p/f/weex-ui/questionnaire.html)
