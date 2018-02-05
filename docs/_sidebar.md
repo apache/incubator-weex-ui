@@ -44,6 +44,6 @@
 - Service
    - [utils](packages/utils/) 
    
-- [**How to use with weex-toolkit**](docs/with-weex-toolkit)
+- [**Use Weex Ui with weex-toolkit**](docs/with-weex-toolkit)
 - [**FAQ**](docs/faq)
 - [**CHANGELOG**](CHANGELOG)
