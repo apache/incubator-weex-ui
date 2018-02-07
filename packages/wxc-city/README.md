@@ -73,6 +73,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | **`currentLocation`** | `String` | `Y` | `` | Location of the city configuration (*4) |
 | **`show-index`** | `Boolean` | `N` | `true` | Whether the right index item is displayed|
 | **`city-height`** | `Number` | `N` | `0` | Custom City height, **non special business do not set up!**|
+| **`animation-type`** | `String` | `N` | `push` | City show anmimation `push/model`|
 
 
 - *1：Search Input configuration：
