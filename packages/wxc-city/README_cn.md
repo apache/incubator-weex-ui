@@ -77,6 +77,7 @@
 | **`show-index`** | `Boolean` | `N` | `true` | 是否显示右侧索引项|
 | **`show-tab`** | `Boolean` | `N` | `false` | 是否需要显示国内、国外TAB|
 | **`city-height`** | `Number` | `N` | `0` | 自定义城市高度，**非特殊业务不要设置！**|
+| **`animation-type`** | `String` | `N` | `push` | 城市出现动画 `push/model`|
 
 - 注1：输入框配置，采用deep copy merge，可以设置输入框的如下：
 
