@@ -12,14 +12,15 @@
 
 ## Docs
 
-- [**Home Page**](https://alibaba.github.io/weex-ui/)
-- [中文文档](https://alibaba.github.io/weex-ui/#/cn/)
+* [**Home Page**](https://alibaba.github.io/weex-ui/)
+* [中文文档](https://alibaba.github.io/weex-ui/#/cn/)
+* [Use Weex Ui with weex-toolkit](https://alibaba.github.io/weex-ui/#/docs/with-weex-toolkit)
 
 ## Demo
 
 <img src="https://img.alicdn.com/tfs/TB1O2ulhgoQMeJjy0FoXXcShVXa-1282-986.jpg" width=540/>
 
-*Try [**it**](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js) with Fliggy、Taobao、Tmall、Weex Playground or any browsers now!*
+_Try [**it**](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js) with Fliggy、Taobao、Tmall、Weex Playground or any browsers now!_
 
 ## Installation
 
@@ -76,26 +77,26 @@ npm i babel-preset-stage-0 babel-plugin-component  -D
 
 ```json
 {
-  "presets": ["es2015", "stage-0"],
-  "plugins": [
-    [
-      "component",
-      {
-        "libraryName": "weex-ui",
-        "libDir": "packages",
-         "style": false
-      }
+    "presets": ["es2015", "stage-0"],
+    "plugins": [
+        [
+            "component",
+            {
+                "libraryName": "weex-ui",
+                "libDir": "packages",
+                "style": false
+            }
+        ]
     ]
-  ]
 }
 ```
 
 ### More
 
-- If babel-loader in `webpack.config.js` has a exclude for node_modules, please turn on for week-ui as `exclude: /node_modules(?!(\/|\\).*(weex).*)/`.
-- In order to get the latest features, please focus on the [ChangeLog](https://github.com/alibaba/weex-ui/releases) and often update `weex-ui` to the latest.
-- Many questions can be found from [faq](https://alibaba.github.io/weex-ui/#/faq) and [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=), if you find a new bug, just file a  [issue](https://github.com/alibaba/weex-ui/issues/new).
-- More experience in Weex construction can be learned from [Weex + Ui - Weex Conf 2018](https://alibaba.github.io/weex-ui/#/docs/weex-ui-weex-conf-2018) ,welcome to translate it.
+* If babel-loader in `webpack.config.js` has a exclude for node_modules, please turn on for week-ui as `exclude: /node_modules(?!(\/|\\).*(weex).*)/`.
+* In order to get the latest features, please focus on the [ChangeLog](https://github.com/alibaba/weex-ui/releases) and often update `weex-ui` to the latest.
+* Many questions can be found from [faq](https://alibaba.github.io/weex-ui/#/faq) and [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=), if you find a new bug, just file a [issue](https://github.com/alibaba/weex-ui/issues/new).
+* More experience in Weex construction can be learned from [Weex + Ui - Weex Conf 2018](https://alibaba.github.io/weex-ui/#/docs/weex-ui-weex-conf-2018) ,welcome to translate it.
 
 ## Development
 
@@ -108,15 +109,15 @@ Once it has been compiled, a browser window will be opened automatically. You ca
 
 ## Support
 
-- Use Weex Ui in your daily work.
-- **Star it** if you like.
-- If you have any ideas or suggestions to improve Weex Ui, welcome to submit a [PR](./CONTRIBUTING.md).
-- <details>
-    <summary>Join our chat at dingtalk.</summary>
-    <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
-  </details>
+* Use Weex Ui in your daily work.
+* **Star it** if you like.
+* If you have any ideas or suggestions to improve Weex Ui, welcome to submit a [PR](./CONTRIBUTING.md).
+* <details>
+  <summary>Join our chat at dingtalk.</summary>
+  <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
+</details>
 
 ## License
 
-- The [MIT License](http://opensource.org/licenses/MIT)
-- Please feel free to use and contribute to the development.
+* The [MIT License](http://opensource.org/licenses/MIT)
+* Please feel free to use and contribute to the development.
