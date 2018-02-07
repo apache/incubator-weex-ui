@@ -125,7 +125,7 @@
 ```
 
 ### 注2：自定义底部导航块
-- 当使用slot的方式配置头部导航的时候，需要确保原有简单配置已经不能满足现有需求情况下再使用，可以传入参数`:title-use-slot="true"`,同时在wxc-tab-bar组件内部传入如下slot对应节点即可
+- 当使用slot的方式配置底部导航的时候，需要确保原有简单配置已经不能满足现有需求情况下再使用，可以传入参数`:title-use-slot="true"`,同时在wxc-tab-bar组件内部传入如下slot对应节点即可
 - 可以通过遍历到方式来生成，同时根据wxcTabBarCurrentTabSelected来确定当前的选择页，自己管理颜色即可。
 ```
 <div slot="tab-title-0"><text>111</text></div>

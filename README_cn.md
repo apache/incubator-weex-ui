@@ -14,6 +14,7 @@
 
 * **[主页](https://alibaba.github.io/weex-ui/#/cn/)**
 * [English](https://alibaba.github.io/weex-ui/#/)
+* [搭配 weex-toolkit 使用 Weex Ui](https://alibaba.github.io/weex-ui/#/cn/with-weex-toolkit)
 
 ## 预览
 

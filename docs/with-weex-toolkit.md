@@ -1,4 +1,4 @@
-## Using Weex Ui in project that created by weex-toolkit
+## Use Weex Ui with weex-toolkit
 
 ### Before installing
 
