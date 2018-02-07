@@ -6,19 +6,37 @@
     <scroller class="scroller">
       <title title="wxc-city" class="title"></title>
       <category title="使用案例"></category>
-      <div class="btn" @click="showListCity">
-        <text class="btn-txt">列 城市选择</text>
+      <div class="btn" @click="showListCityPush">
+      <text class="btn-txt">列 城市选择(push)</text>
+    </div>
+
+      <div class="btn btn-margin yellow" @click="showGroupCityPush">
+        <text class="btn-txt">组 城市选择(push)</text>
       </div>
 
-      <div class="btn btn-margin yellow" @click="showGroupCity">
-        <text class="btn-txt">组 城市选择</text>
+      <div class="btn" @click="showListCityModel">
+        <text class="btn-txt">列 城市选择(model)</text>
+      </div>
+
+      <div class="btn btn-margin yellow" @click="showGroupCityModel">
+        <text class="btn-txt">组 城市选择(model)</text>
       </div>
 
       <div class="panel">
         <text v-if="currentCity" class="text">当前城市: {{currentCity}}</text>
       </div>
     </scroller>
-    <wxc-city ref="wxcCity"
+    <!-- push方式演示 -->
+    <wxc-city ref="wxcCityPush"
+              :animationType="animationTypePush"
+              :currentLocation="location"
+              :cityStyleType="cityStyleType"
+              :sourceData="sourceData"
+              @wxcCityItemSelected="citySelect"
+              @wxcCityOnInput="onInput"></wxc-city>
+    <!-- model方式演示 -->
+    <wxc-city ref="wxcCityModel"
+              :animationType="animationTypeModel"
               :currentLocation="location"
               :cityStyleType="cityStyleType"
               :sourceData="sourceData"
@@ -39,7 +57,9 @@
       currentCity: '',
       sourceData,
       cityStyleType:'list',
-      location: '定位中'
+      location: '定位中',
+      animationTypePush:'push', // 默认使用push方式，若使用push模式此参数可以不传
+      animationTypeModel:'model'
     }),
     mounted () {
       // 模拟定位
@@ -48,13 +68,27 @@
       }, 500);
     },
     methods: {
-      showListCity () {
+      showListCityPush () {
         this.cityStyleType = 'list'
-        this.$refs['wxcCity'].show();
+        // 默认使用push方式，若使用push模式此参数可以不传
+        this.animationTypePush = 'push'
+        this.$refs['wxcCityPush'].show();
       },
-      showGroupCity () {
+      showGroupCityPush () {
         this.cityStyleType = 'group'
-        this.$refs['wxcCity'].show();
+        // 默认使用push方式，若使用push模式此参数可以不传
+        this.animationTypePush = 'push'
+        this.$refs['wxcCityPush'].show();
+      },
+      showListCityModel () {
+        this.cityStyleType = 'list'
+        this.animationTypePush = 'model'
+        this.$refs['wxcCityModel'].show();
+      },
+      showGroupCityModel () {
+        this.cityStyleType = 'group'
+        this.animationTypeModel = 'model'
+        this.$refs['wxcCityModel'].show();
       },
       citySelect (e) {
         this.currentCity = e.item;
@@ -83,7 +117,7 @@
     width: 600px;
     height: 80px;
     margin-left: 75px;
-    margin-top: 300px;
+    margin-top:100px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
