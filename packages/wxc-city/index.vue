@@ -3,7 +3,7 @@
 <!--A City -->
 
 <template>
-  <div class="wxc-city" ref="city">
+  <div class="wxc-city" ref="city" :style="cityExtendStyle">
     <wxc-searchbar ref="wxc-searchbar"
                    v-bind="mergeInputConfig"
                    @wxcSearchbarInputOnInput="onInput"
@@ -44,6 +44,10 @@
   export default {
     components: { wxcTab, WxcSearchbar, WxcResult, WxcIndexlist },
     props: {
+      animationType: {
+        type: Object,
+        default: 'push'
+      },
       inputConfig: {
         type: Object,
         default: () => ({})
@@ -89,6 +93,14 @@
       this.saveDefaultSourceData = this.sourceData
     },
     computed: {
+      cityExtendStyle () {
+        if(this.animationType==='push') {
+          return {left:'750px',top:'0px',height:this.deviceHeight()+'px'}
+        } else if (this.animationType==='model') {
+          return {top:this.deviceHeight()+'px',left:'0px',height:this.deviceHeight()+'px'}
+        }
+        return {}
+      },
       currentCityLocationConfig() {
         return {
           type: this.cityStyleType,
@@ -134,6 +146,9 @@
       }
     },
     methods: {
+      deviceHeight() {
+        return 750/weex.config.env.deviceWidth*weex.config.env.deviceHeight
+      },
       onTabSwitch (e) {
         this.$emit('wxcTabSwitch', e);
       },
@@ -182,9 +197,18 @@
         inputRef && inputRef.autoBlur();
       },
       show (status = true, callback = null) {
+
+        if(this.animationType==='push') {
+          this.cityAnimation(`translateX(${status ? -750 : 750}px)`,status,callback)
+        } else if (this.animationType==='model') {
+          this.cityAnimation(`translateY(${status ? -this.deviceHeight() : this.deviceHeight()}px)`,status,callback)
+        }
+
+      },
+      cityAnimation(transform, status, callback) {
         animation.transition(this.$refs.city, {
           styles: {
-            transform: `translateX(${status ? -750 : 750}px)`
+            transform: transform
           },
           duration: status ? 250 : 300, // ms
           timingFunction: status ? 'ease-in' : 'ease-out',
@@ -201,10 +225,6 @@
   .wxc-city {
     position: fixed;
     width: 750px;
-    top: 0;
-    left: 750px;
-    right: 0;
-    bottom: 0;
     background-color: #F2F3F4;
   }
 </style>
