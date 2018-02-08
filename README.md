@@ -1,3 +1,5 @@
+English | [简体中文](README_cn.md)
+
 # Weex Ui
 
 [![Build Status](https://img.shields.io/travis/alibaba/weex-ui.svg?style=flat-square)](https://travis-ci.org/alibaba/weex-ui)
