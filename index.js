@@ -25,6 +25,7 @@ import WxcLotteryRain from './packages/wxc-lottery-rain';
 import WxcNoticebar from './packages/wxc-noticebar';
 import WxcOverlay from './packages/wxc-overlay';
 import WxcPageCalendar from './packages/wxc-page-calendar';
+import WxcPopover from './packages/wxc-popover';
 import WxcPopup from './packages/wxc-popup';
 import WxcProgress from './packages/wxc-progress';
 import WxcRadio from './packages/wxc-radio';
@@ -63,6 +64,7 @@ export {
   WxcNoticebar,
   WxcOverlay,
   WxcPageCalendar,
+  WxcPopover,
   WxcPopup,
   WxcProgress,
   WxcRadio,

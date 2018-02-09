@@ -15,3 +15,5 @@ mods/.sass-cache/
 lerna-debug.log
 build/example
 build/*.map
+
+npm-debug*
