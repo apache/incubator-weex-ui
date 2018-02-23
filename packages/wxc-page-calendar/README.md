@@ -24,6 +24,7 @@
     </div>
 
     <wxc-page-calendar :date-range="dateRange"
+                       :animationType="animationType"
                        :selected-date="selectedDate"
                        :selected-note="selectedNote"
                        :is-range="isRange"
@@ -41,6 +42,7 @@
       WxcPageCalendar
     },
     data: () => ({
+      animationType: 'push',
       currentDate: '',
       selectedDate: ['2017-06-23', '2017-06-30'],
       isRange: true,
@@ -99,7 +101,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | desc-list | `Array` |`N`| `[{}]` | desc info |
 | show-header | `Boolean` |`N`| `false` | whether show minibar in native |
 | minibar-cfg | `Object` |`N`| `{}` | [minibar config](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-calendar/index.vue#L65)|
-
+| animationType | `String` | `N` | `push` | Support model or push type|
 ### Event
 
 ```

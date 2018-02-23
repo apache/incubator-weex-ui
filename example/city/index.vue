@@ -9,19 +9,15 @@
       <div class="btn" @click="showListCityPush">
       <text class="btn-txt">列 城市选择(push)</text>
     </div>
-
       <div class="btn btn-margin yellow" @click="showGroupCityPush">
         <text class="btn-txt">组 城市选择(push)</text>
       </div>
-
       <div class="btn" @click="showListCityModel">
         <text class="btn-txt">列 城市选择(model)</text>
       </div>
-
       <div class="btn btn-margin yellow" @click="showGroupCityModel">
         <text class="btn-txt">组 城市选择(model)</text>
       </div>
-
       <div class="panel">
         <text v-if="currentCity" class="text">当前城市: {{currentCity}}</text>
       </div>
