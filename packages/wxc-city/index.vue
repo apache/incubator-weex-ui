@@ -32,7 +32,6 @@
 </template>
 
 <script>
-  const animation = weex.requireModule('animation');
   import defaultSourceData from './default-data';
   import * as Util from './util';
   import Utils from '../utils';
@@ -94,12 +93,7 @@
     },
     computed: {
       cityExtendStyle () {
-        if(this.animationType==='push') {
-          return {left:'750px',top:'0px',height:this.deviceHeight()+'px'}
-        } else if (this.animationType==='model') {
-          return {top:this.deviceHeight()+'px',left:'0px',height:this.deviceHeight()+'px'}
-        }
-        return {}
+        return Utils.uiStyle.pageTransitionAnimationStyle(this.animationType)
       },
       currentCityLocationConfig() {
         return {
@@ -146,9 +140,6 @@
       }
     },
     methods: {
-      deviceHeight() {
-        return 750/weex.config.env.deviceWidth*weex.config.env.deviceHeight
-      },
       onTabSwitch (e) {
         this.$emit('wxcTabSwitch', e);
       },
@@ -197,25 +188,13 @@
         inputRef && inputRef.autoBlur();
       },
       show (status = true, callback = null) {
-
+        var ref = this.$refs.city
         if(this.animationType==='push') {
-          this.cityAnimation(`translateX(${status ? -750 : 750}px)`,status,callback)
+          Utils.animation.pageTransitionAnimation(ref,`translateX(${status ? -750 : 750}px)`,status,callback)
         } else if (this.animationType==='model') {
-          this.cityAnimation(`translateY(${status ? -this.deviceHeight() : this.deviceHeight()}px)`,status,callback)
+          Utils.animation.pageTransitionAnimation(ref,`translateY(${status ? -Utils.env.getScreenHeight() : Utils.env.getScreenHeight()}px)`,status,callback)
         }
 
-      },
-      cityAnimation(transform, status, callback) {
-        animation.transition(this.$refs.city, {
-          styles: {
-            transform: transform
-          },
-          duration: status ? 250 : 300, // ms
-          timingFunction: status ? 'ease-in' : 'ease-out',
-          delay: 0 // ms
-        }, function () {
-          callback && callback();
-        });
       }
     }
   };
