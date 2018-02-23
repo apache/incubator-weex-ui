@@ -14,31 +14,28 @@
   <div class="wxc-demo">
     <scroller class="scroller">
       <div class="btn" @click="showListCity">
-        <text class="btn-txt">City choice</text>
+        <text class="btn-txt">City Select</text>
       </div>
       <div class="panel">
-        <text v-if="currentCity" class="text">Current city: {{currentCity}}</text>
+        <text v-if="currentCity" class="text">Current City: {{currentCity}}</text>
       </div>
     </scroller>
     <wxc-city ref="wxcCity"
               :animationType="animationType"
               :currentLocation="location"
               :cityStyleType="cityStyleType"
-              :sourceData="sourceData"
               @wxcCityItemSelected="citySelect"
               @wxcCityOnInput="onInput"></wxc-city>
   </div>
 </template>
 <script>
-   // Delete the data source configuration and use the default data source
-  import sourceData from './data';
-  import { WxcCity } from '../../index';
+   // Delete the data source configuration and use the default data.
+  import { WxcCity } from 'weex-ui';
   export default {
     components: { WxcCity },
     data: () => ({
       animationType: 'push',
       currentCity: '',
-      sourceData,
       cityStyleType:'list',
       location: 'Positioning'
     }),
@@ -73,7 +70,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`input-config`** | `Object` | `N` | `{}` | Search Input configuration (*1)|
-| **`sourceData`** | `Dictionary` | `N` | `Default China City data` | City data configuration (*2) |
+| **`sourceData`** | `Object` | `N` | `Default China City data` | City data configuration (*2) |
 | **`cityStyleType`** | `String` | `N` | `list` | Style configuration (*3) |
 | **`currentLocation`** | `String` | `Y` | `` | Location of the city configuration (*4) |
 | **`show-index`** | `Boolean` | `N` | `true` | Whether the right index item is displayed|

@@ -14,7 +14,9 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const os = require('os');
 const HappyPack = require('happypack');
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
-HappyPack.SERIALIZABLE_OPTIONS = HappyPack.SERIALIZABLE_OPTIONS.concat(['postcss']);
+HappyPack.SERIALIZABLE_OPTIONS = HappyPack.SERIALIZABLE_OPTIONS.concat([
+  'postcss'
+]);
 
 console.log('Building..., Please wait a moment.');
 
@@ -22,7 +24,7 @@ const getEntry = dir => {
   const foundScripts = glob.sync(`${dir}/*/index.js`, {});
   // 生成 entry 映射表
   const ret = {};
-  foundScripts.forEach(function (scriptPath) {
+  foundScripts.forEach(function(scriptPath) {
     if (!/\.entry\.js$/.test(scriptPath)) {
       ret[scriptPath.replace(/^(.*)\.js$/, '$1')] = './' + scriptPath;
     }
@@ -33,21 +35,24 @@ const getEntry = dir => {
 const getCopyConfig = () => {
   const foundScripts = glob.sync('example/*/', {});
   const ret = [];
-  foundScripts.forEach(function (scriptPath) {
+  foundScripts.forEach(scriptPath => {
     if (!/(_mods|_public)/.test(scriptPath)) {
       ret.push({
         from: 'example/_public/index.html',
         to: scriptPath + 'index.html'
-      })
+      });
     }
   });
   return ret;
 };
 
 const example = getEntry('example');
-const entry = Object.assign({
-  'index': './index.js'
-}, example);
+const entry = Object.assign(
+  {
+    index: './index.js'
+  },
+  example
+);
 
 const plugins = [
   new CleanWebpackPlugin(['build'], {
@@ -55,12 +60,11 @@ const plugins = [
   }),
   new webpack.optimize.CommonsChunkPlugin({
     async: 'shared-module',
-    minChunks: (module, count) => (
-      count >= 2
-    )
+    minChunks: (module, count) => count >= 2
   }),
   new HappyPack({
     id: 'babel',
+    cache: false,
     verbose: true,
     loaders: ['babel-loader?cacheDirectory=true'],
     threadPool: happyThreadPool
@@ -68,6 +72,7 @@ const plugins = [
   new HappyPack({
     id: 'css',
     verbose: true,
+    cache: false,
     loaders: ['postcss-loader'],
     threadPool: happyThreadPool
   }),
@@ -75,7 +80,7 @@ const plugins = [
     'process.env': {
       NODE_ENV: JSON.stringify('production')
     },
-    'global': '{}'
+    global: '{}'
   }),
   new webpack.BannerPlugin({
     banner: '// { "framework": "Vue" }\n',
@@ -106,30 +111,31 @@ const getBaseConfig = () => ({
     reasons: false
   },
   module: {
-    rules: [{
-      test: /\.js$/,
-      use: 'happypack/loader?id=babel',
-      exclude: /node_modules/
-    }, {
-      test: /\.vue(\?[^?]+)?$/,
-      use: []
-    }, {
-      test: /\.css$/,
-      use: 'happypack/loader?id=css'
-    }]
+    rules: [
+      {
+        test: /\.js$/,
+        use: 'happypack/loader?id=babel',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.vue(\?[^?]+)?$/,
+        use: []
+      },
+      {
+        test: /\.css$/,
+        use: 'happypack/loader?id=css'
+      }
+    ]
   },
   plugins,
   resolve: {
     extensions: ['.js'],
-    modules: [
-      'node_modules'
-    ]
+    modules: ['node_modules']
   }
 });
 
 const webCfg = getBaseConfig();
 webCfg.output.filename = '[name].web.js';
-
 webCfg.module.rules[1].use.push({
   loader: 'vue-loader',
   options: {
@@ -140,7 +146,7 @@ webCfg.module.rules[1].use.push({
     compilerModules: [
       {
         postTransformNode: el => {
-          require('weex-vue-precompiler')()(el)
+          require('weex-vue-precompiler')()(el);
         }
       }
     ]
@@ -151,9 +157,6 @@ const nativeCfg = getBaseConfig();
 nativeCfg.output.filename = '[name].native.js';
 nativeCfg.module.rules[1].use.push('weex-loader');
 
-const exportConfig = [
-  webCfg,
-  nativeCfg
-];
+const exportConfig = [webCfg, nativeCfg];
 
 module.exports = exportConfig;
