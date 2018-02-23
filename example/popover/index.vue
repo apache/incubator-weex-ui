@@ -14,6 +14,10 @@
                        @wxcMinibarRightButtonClicked="minibarRightButtonClick"
                        right-text="..."></wxc-minibar>
           <wxc-popover ref="wxc-popover"
+                       :buttons="btns"
+                       :position="popoverPosition"
+                       :arrowPosition="popoverArrowPosition"
+                       @wxcPopoverButtonClicked="popoverButtonClicked"
           ></wxc-popover>
         </div>
 
@@ -51,12 +55,31 @@
 
   const modal = weex.requireModule('modal');
   import { setTitle } from '../_mods/set-nav';
-  import { RETURN_ICON } from './type';
+  import { RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
 
   export default {
     components: { Title, Category, WxcMinibar, WxcPopover },
     data: () => ({
-      leftButton: RETURN_ICON
+      leftButton: RETURN_ICON,
+      btns:[
+        {
+         icon: SCAN_ICON,
+         text:'Scan',
+         key:'key-scan'
+        },
+        {
+          icon: QRCODE_ICON,
+          text:'My Qrcode',
+          key:'key-qrcode'
+        },
+        {
+          icon: QUESTION_ICON,
+          text:'Help',
+          key:'key-help'
+        },
+      ],
+      popoverPosition:{x:-14,y:380},
+      popoverArrowPosition:{pos:'top',x:-15}
     }),
     created () {
       setTitle('Popover')
@@ -64,6 +87,10 @@
     methods: {
       minibarRightButtonClick () {
         this.$refs['wxc-popover'].wxcPopoverShow();
+      },
+      popoverButtonClicked (obj) {
+        modal.toast({ 'message': `key:${obj.key}, index:${obj.index}`, 'duration': 1 });
+
       }
     }
   };
