@@ -3,6 +3,10 @@
 #### wxc-ep-slider、wxc-slider-bar Can't slide
 - The two components in Weex Ui now depend on an innovative interaction feature called [expressionBinding](https://github.com/alibaba/weex/issues/1730), Can only be used in Ali app for the time being, But this feature is in the open source process，You can find more [here](https://github.com/alibaba/weex-ui/issues/6).
 
+#### Module not found: Error: Can't resolve 'weex-ui/packages/wxc-button/style.css'
+- This error should be the `babel-plugin-component` lack of style configuration, You can refer to [Weex-toolkit](https://alibaba.github.io/weex-ui/#/?id=weex-toolkit) to fix it.
+
+
 #### Uncaught SyntaxError: Unexpected token export；
 - This error typically occurs on the page developed using old weex-toolkit.
 - You can refer to [this document](https://alibaba.github.io/weex-ui/#/with-weex-toolkit) to fix it.
@@ -11,7 +15,7 @@
 - You can refer to [this document](https://alibaba.github.io/weex-ui/#/with-weex-toolkit) to fix it.
 - If you are using a Windows system, you may still have this problem when you upgrade, you check the babel config about `webpack.config.js`, modify `exclude` like this:
 
-   ```
+   ```js
     rules: [{
          test: /\.js$/,
          use: [{
@@ -27,11 +31,27 @@
 #### GIF images have no animation on Android
 - This is supported by the underlying image library, More you can refer to [Weex 踩坑之 Gif 加载](https://zhoukekestar.github.io/notes/2017/07/17/weex-gif.html).
 
+#### Does Weex Ui support the horizontal screen ？
+
+- I'm sorry,Now Weex doesn't support horizontal screen, so Weex Ui doesn't have any horizontal screen mode yet. When Weex supports it, it will follow immediately.
+- You can send a message to weex at the horizontal screen, Then handle this in your code.
+
+  ```js
+  function getHWidth (w) {
+    return deviceWidth / w * 750
+  }
+  const meta = weex.requireModule('meta')
+  // set viewport width
+  meta.setViewport({
+    width: getHWidth(w) // W is the width of the design draft
+  })
+  ```
+  
 #### Can Weex Ui be used in vue project ?
 - Weex Ui can write once and support iOS / Android / Html5 right now!
 - But if you want to use it in a pure vue project, you can replace it with this one, but not recommended：
 
-    ```
+    ```js
      import { WxcComponent1, WxcComponent2 } from "weex-ui/build/index.web.js"
     ```
 
@@ -39,7 +59,7 @@
 - Yes, but you need modify some config
 - Add a `exclude` in `build/webpack.base.weex.conf.js` Like this:
 
-  ```
+  ```js
   module: {
       rules: [
         {
@@ -61,7 +81,7 @@
   
   Edit the `.babelrc` like this
   
-  ```
+  ```json
   {
     "presets": ["es2015", "stage-0"],
     "plugins": [
@@ -76,8 +96,6 @@
     ]
   }
  ```
-#### Does Weex Ui support the horizontal screen ？
-- I'm sorry,Now Weex doesn't support horizontal screen, so Weex Ui doesn't have any horizontal screen mode yet. When Weex supports it, it will follow immediately.
 
 ---- 
 More questions can be found from the [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=), If you find a new bug, Just file a  [issue](https://github.com/alibaba/weex-ui/issues/new).

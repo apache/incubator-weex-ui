@@ -1,4 +1,4 @@
-## 在 weex-toolkit 创建的项目中使用
+## 搭配 weex-toolkit 使用 Weex Ui
 
 ### 安装前
 

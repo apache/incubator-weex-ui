@@ -32,7 +32,7 @@
 <script>
    // 若无特殊干掉data.js 直接使用默认的即可
   import sourceData from './data';
-  import { WxcCity } from '../../index';
+  import { WxcCity } from 'weex-ui';
   export default {
     components: { WxcCity },
     data: () => ({
@@ -80,6 +80,7 @@
 | **`show-tab`** | `Boolean` | `N` | `false` | 是否需要显示国内、国外TAB|
 | **`city-height`** | `Number` | `N` | `0` | 自定义城市高度，**非特殊业务不要设置！**|
 | **`animationType`** | `String` | `N` | `push` | 自定义转场动画类型目前支持model和push|
+
 - 注1：输入框配置，采用deep copy merge，可以设置输入框的如下：
 
     ```

@@ -35,7 +35,6 @@
               :animationType="animationTypeModel"
               :currentLocation="location"
               :cityStyleType="cityStyleType"
-              :sourceData="sourceData"
               @wxcCityItemSelected="citySelect"
               @wxcCityOnInput="onInput"></wxc-city>
   </div>
