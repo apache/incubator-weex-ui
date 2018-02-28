@@ -13,7 +13,8 @@
   },
   "rules": {
     "semi": "off",
-    "no-control-regex": "off"
+    "no-control-regex": "off",
+    "vue/html-self-closing": "off"
   },
   "extends": "vue"
 }
