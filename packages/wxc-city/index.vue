@@ -3,7 +3,7 @@
 <!--A City -->
 
 <template>
-  <div class="wxc-city" ref="city">
+  <div class="wxc-city" ref="city" :style="cityExtendStyle">
     <wxc-searchbar ref="wxc-searchbar"
                    v-bind="mergeInputConfig"
                    @wxcSearchbarInputOnInput="onInput"
@@ -32,7 +32,6 @@
 </template>
 
 <script>
-  const animation = weex.requireModule('animation');
   import defaultSourceData from './default-data';
   import * as Util from './util';
   import Utils from '../utils';
@@ -44,6 +43,10 @@
   export default {
     components: { wxcTab, WxcSearchbar, WxcResult, WxcIndexlist },
     props: {
+      animationType: {
+        type: Object,
+        default: 'push'
+      },
       inputConfig: {
         type: Object,
         default: () => ({})
@@ -89,6 +92,9 @@
       this.saveDefaultSourceData = this.sourceData
     },
     computed: {
+      cityExtendStyle () {
+        return Utils.uiStyle.pageTransitionAnimationStyle(this.animationType)
+      },
       currentCityLocationConfig() {
         return {
           type: this.cityStyleType,
@@ -182,16 +188,13 @@
         inputRef && inputRef.autoBlur();
       },
       show (status = true, callback = null) {
-        animation.transition(this.$refs.city, {
-          styles: {
-            transform: `translateX(${status ? -750 : 750}px)`
-          },
-          duration: status ? 250 : 300, // ms
-          timingFunction: status ? 'ease-in' : 'ease-out',
-          delay: 0 // ms
-        }, function () {
-          callback && callback();
-        });
+        var ref = this.$refs.city
+        if(this.animationType==='push') {
+          Utils.animation.pageTransitionAnimation(ref,`translateX(${status ? -750 : 750}px)`,status,callback)
+        } else if (this.animationType==='model') {
+          Utils.animation.pageTransitionAnimation(ref,`translateY(${status ? -Utils.env.getScreenHeight() : Utils.env.getScreenHeight()}px)`,status,callback)
+        }
+
       }
     }
   };
@@ -201,10 +204,6 @@
   .wxc-city {
     position: fixed;
     width: 750px;
-    top: 0;
-    left: 750px;
-    right: 0;
-    bottom: 0;
     background-color: #F2F3F4;
   }
 </style>
