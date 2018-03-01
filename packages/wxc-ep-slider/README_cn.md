@@ -1,6 +1,6 @@
 # wxc-ep-slider 
 
-!> 这个富交互体验组件依赖于 Weex [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)
+!> 这个富交互体验组件依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)
 
  > Weex EP 效果的 slider 组件
 
