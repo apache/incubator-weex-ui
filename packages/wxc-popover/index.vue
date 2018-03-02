@@ -4,11 +4,6 @@
 
 <template>
   <div>
-    <!--<wxc-overlay-->
-      <!--:show="show"-->
-      <!--:hasAnimation="false"-->
-      <!--opacity="0.1"-->
-      <!--@wxcOverlayBodyClicked="wxcOverlayBodyClicked"></wxc-overlay>-->
     <div class="g-cover"
          v-if="show"
          @touchend="show = false"
