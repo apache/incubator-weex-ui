@@ -1,3 +1,93 @@
 # wxc-popover
 
  > After clicking on a control or an area, a Popover menu appears for doing more. 
+
+### Rule
+
+- often used to expand the bubble button group.
+- pop the bubble in the specified coordinate position and click the mask layer to close.
+- support top, bottom, left and right directions.
+- customizable bubble and arrow location.
+
+## Code Example
+
+```vue
+
+<template>
+  <div class="wxc-demo">
+    <wxc-minibar @wxcMinibarRightButtonClicked="minibarRightButtonClick"
+                 right-text="..."></wxc-minibar>
+    <wxc-popover ref="wxc-popover"
+                 :buttons="btns"
+                 :position="popoverPosition"
+                 :arrowPosition="popoverArrowPosition"
+                 @wxcPopoverButtonClicked="popoverButtonClicked"></wxc-popover>
+  </div>
+</template>
+
+<script>
+  import { WxcMinibar, WxcPopover} from '../../index';
+
+  const modal = weex.requireModule('modal');
+
+  import { RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
+
+  export default {
+    components: { WxcMinibar, WxcPopover },
+    data: () => ({
+      leftButton: RETURN_ICON,
+      btns:[
+        {
+         icon: SCAN_ICON,
+         text:'Scan',
+         key:'key-scan'
+        },
+        {
+          icon: QRCODE_ICON,
+          text:'My Qrcode',
+          key:'key-qrcode'
+        },
+        {
+          icon: QUESTION_ICON,
+          text:'Help',
+          key:'key-help'
+        },
+      ],
+      popoverPosition:{x:-14,y:380},
+      popoverArrowPosition:{pos:'top',x:-15}
+    }),
+    methods: {
+      minibarRightButtonClick () {
+        this.$refs['wxc-popover'].wxcPopoverShow();
+      },
+      popoverButtonClicked (obj) {
+        modal.toast({ 'message': `key:${obj.key}, index:${obj.index}`, 'duration': 1 });
+      }
+    }
+  };
+</script>
+```
+
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/popover/index.vue)
+
+### API
+
+| Prop | Type | Required | Default | Description |
+|-------------|------------|--------|-----|-----|
+| buttons | `Array` |`Y`|`[]` | buttons data,  |
+| position | `Object` |`Y`|`{x:0,y:0}` | Bubble position, x>0 meaning the distance to the left, x<0 to right, and y is the same. |
+| arrowPosition | `Object` |`Y`|`{pos:'top',x:0,y:0}` | Bubble arrow position，pos could be'top|bottom|left|right'  |
+| coverColor | `String` |`N`|`rgba(0,0,0,0.4)`| Mask layer color, e.g `rgba(0,0,0,0.4)`，`rgb(0,0,0)`，`#000` |
+
+### Manual Show
+
+```
+<!-- <wxc-popup ref="wxc-popover"></wxc-popup> -->
+this.$refs['wxc-popover'].wxcPopoverShow();
+```
+
+### Event
+
+```
+// `@wxcPopoverButtonClicked` return an object with `key` and `index`
+```
