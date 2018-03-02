@@ -111,18 +111,17 @@ Once it has been compiled, a browser window will be opened automatically. You ca
 
 * Use Weex Ui in your daily work.
 * **Star it** if you like.
-* If you have any ideas or suggestions to improve Weex Ui, welcome to submit a [PR](./CONTRIBUTING.md).
 * <details>
-  <summary>Join our chat at dingtalk.</summary>
-  <img alt="Join the chat at dingtalk to help solve weex problems" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
+  <summary>Join the chat at dingtalk to help solve weex problems.</summary>
+  <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
 </details>
 
 ## Contribution
-Please make sure to read the [Contributing Guide](https://github.com/alibaba/weex-ui/blob/master/CONTRIBUTING.md) before making a pull request.
+Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our [Contributing Guide](https://github.com/alibaba/weex-ui/blob/master/CONTRIBUTING.md) before making a pull request.
 
 Thank you to all the people who already contributed to Weex Ui!
 
-<a href="https://github.com/alibaba/weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg?width=540"/></a>
+<a href="https://github.com/alibaba/weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg?width=800"/></a>
 
 ## License
 
