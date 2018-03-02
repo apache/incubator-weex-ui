@@ -1,7 +1,7 @@
 /**
- * Created by Tw93 on 2016/10/29.
+ * Created by zwwill on 2018/03/02.
  */
 export const RETURN_ICON = 'https://gw.alicdn.com/tfs/TB1cAYsbv2H8KJjy0FcXXaDlFXa-30-53.png';
-export const SCAN_ICON = 'http://cdn.zwwill.com/weexui/icon/scan.png';
-export const QRCODE_ICON = 'http://cdn.zwwill.com/weexui/icon/qr_code.png';
-export const QUESTION_ICON = 'http://cdn.zwwill.com/weexui/icon/question.png';
+export const SCAN_ICON = 'https://gw.alicdn.com/tfs/TB1Vm3abuuSBuNjy1XcXXcYjFXa-64-64.png';
+export const QRCODE_ICON = 'https://gw.alicdn.com/tfs/TB1U93abuuSBuNjy1XcXXcYjFXa-64-64.png';
+export const QUESTION_ICON = 'https://gw.alicdn.com/tfs/TB1MWDTbwmTBuNjy1XbXXaMrVXa-64-64.png';
