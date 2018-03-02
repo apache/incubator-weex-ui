@@ -21,6 +21,7 @@
       </div>
     </scroller>
     <wxc-city ref="wxcCity"
+              :animationType="animationType"
               :currentLocation="location"
               :cityStyleType="cityStyleType"
               @wxcCityItemSelected="citySelect"
@@ -33,6 +34,7 @@
   export default {
     components: { WxcCity },
     data: () => ({
+      animationType: 'push',
       currentCity: '',
       cityStyleType:'list',
       location: 'Positioning'
@@ -73,7 +75,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | **`currentLocation`** | `String` | `Y` | `` | Location of the city configuration (*4) |
 | **`show-index`** | `Boolean` | `N` | `true` | Whether the right index item is displayed|
 | **`city-height`** | `Number` | `N` | `0` | Custom City height, **non special business do not set up!**|
-
+| **`animationType`** | `String` | `N` | `push` | Support model or push type|
 
 - *1：Search Input configuration：
 

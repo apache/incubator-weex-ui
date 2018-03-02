@@ -1,11 +1,15 @@
 {
   "name": "weex-ui",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A rich interaction, lightweight, high performance UI library based on Weex",
   "main": "index.js",
   "lib": "vue",
   "type": "weex",
   "repository": "https://github.com/alibaba/weex-ui",
+  "homepage": "https://alibaba.github.io/weex-ui/",
+  "bugs": {
+    "url": "https://github.com/alibaba/weex-ui/issues"
+  },
   "scripts": {
     "build": "webpack --progress",
     "watch": "webpack --progress --watch",
@@ -66,9 +70,10 @@
     "weex-loader": "^0.6.0-beta.3",
     "weex-vue-loader": "^0.5.0-beta.3",
     "weex-vue-precompiler": "^0.1.17",
-    "weex-vue-render": "^1.0.4"
+    "weex-vue-render": "^1.0.17"
   },
   "dependencies": {
-    "url-parse": "^1.1.9"
+    "url-parse": "^1.1.9",
+    "weex-bindingx": "0.0.12"
   }
 }

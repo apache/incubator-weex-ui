@@ -26,9 +26,8 @@
                v-if="titleType === 'icon' && !titleUseSlot"
                :style="{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}"></image>
 
-        <text class="icon-font"
-              v-if="titleType === 'iconFont' && v.codePoint && !titleUseSlot"
-              :style="{fontFamily: 'wxcIconFont',fontSize: tabStyles.iconFontSize+'px', color: currentPage == index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{v.codePoint}}</text>
+        <text v-if="titleType === 'iconFont' && v.codePoint && !titleUseSlot"
+              :style="{fontFamily: 'wxcIconFont',fontSize: tabStyles.iconFontSize+'px', marginBottom:tabStyles.iconFontMarginBottom ? (tabStyles.iconFontMarginBottom +'px') : '8px', color: currentPage == index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{v.codePoint}}</text>
         <text
           v-if="!titleUseSlot"
           :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
@@ -114,9 +113,6 @@
     color: #ffffff;
   }
 
-  .icon-font {
-    margin-bottom: 8px;
-  }
 </style>
 
 <script>
