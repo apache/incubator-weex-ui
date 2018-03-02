@@ -50,7 +50,7 @@
 <script>
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
-  import { WxcMinibar, WxcPopover} from '../../index';
+  import { WxcMinibar, WxcPopover } from '../../index';
 
   const modal = weex.requireModule('modal');
   import { setTitle } from '../_mods/set-nav';
@@ -60,25 +60,25 @@
     components: { Title, Category, WxcMinibar, WxcPopover },
     data: () => ({
       leftButton: RETURN_ICON,
-      btns:[
+      btns: [
         {
-         icon: SCAN_ICON,
-         text:'Scan',
-         key:'key-scan'
+          icon: SCAN_ICON,
+          text: 'Scan',
+          key: 'key-scan'
         },
         {
           icon: QRCODE_ICON,
-          text:'My Qrcode',
-          key:'key-qrcode'
+          text: 'My Qrcode',
+          key: 'key-qrcode'
         },
         {
           icon: QUESTION_ICON,
-          text:'Help',
-          key:'key-help'
+          text: 'Help',
+          key: 'key-help'
         },
       ],
-      popoverPosition:{x:-14,y:380},
-      popoverArrowPosition:{pos:'top',x:-15}
+      popoverPosition: { x: -14, y: 380 },
+      popoverArrowPosition: { pos: 'top', x: -15 }
     }),
     created () {
       setTitle('Popover')

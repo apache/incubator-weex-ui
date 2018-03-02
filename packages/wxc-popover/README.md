@@ -4,15 +4,14 @@
 
 ### Rule
 
-- often used to expand the bubble button group.
-- pop the bubble in the specified coordinate position and click the mask layer to close.
-- support top, bottom, left and right directions.
-- customizable bubble and arrow location.
+- Often used to expand the bubble button group.
+- Pop the bubble in the specified coordinate position and click the mask layer to close.
+- Support top, bottom, left and right directions.
+- Customizable bubble and arrow location.
 
 ## Code Example
 
 ```vue
-
 <template>
   <div class="wxc-demo">
     <wxc-minibar @wxcMinibarRightButtonClicked="minibarRightButtonClick"
@@ -26,10 +25,11 @@
 </template>
 
 <script>
-  import { WxcMinibar, WxcPopover} from '../../index';
+  import { WxcMinibar, WxcPopover} from 'weex-ui';
 
   const modal = weex.requireModule('modal');
 
+  // https://github.com/alibaba/weex-ui/blob/master/example/popover/type.js
   import { RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
 
   export default {
