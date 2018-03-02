@@ -1,5 +1,8 @@
 # 升级日志
 
+## 0.4.1
+* [+] [wxc-loading](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) 支持设置蒙层
+
 ## 0.4.0
 
 * [+] 更强大的 [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md)组件，使用简单化，默认城市配置，不需传入很多参数，**但是涉及参数变动**
