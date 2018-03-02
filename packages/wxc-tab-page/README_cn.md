@@ -2,7 +2,7 @@
 
 > Weex tab 页面滑动切换组件
 
-!> 随手滑动的效果依赖于 [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)。
+!> 随手滑动的效果依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)。
 
 ### 规则
 - 允许对头部进行配置，支持 ExpressionBinding 手势跟随效果，H5 支持降级效果滑动切换
@@ -170,6 +170,7 @@
       textPaddingLeft: 10,
       textPaddingRight: 10,
       iconFontSize: 50,
+      iconFontMarginBottom: 8,
       iconFontColor: '#333333',
       activeIconFontColor: 'red',
       iconFontUrl: '//at.alicdn.com/t/font_501019_mauqv15evc1pp66r.ttf'
