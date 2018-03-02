@@ -24,10 +24,11 @@
 </template>
 
 <script>
-  import { WxcMinibar, WxcPopover} from '../../index';
+  import { WxcMinibar, WxcPopover} from 'weex-ui';
 
   const modal = weex.requireModule('modal');
 
+  // https://github.com/alibaba/weex-ui/blob/master/example/popover/type.js
   import { RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
 
   export default {
