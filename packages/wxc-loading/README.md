@@ -39,7 +39,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | show | `Bool` |`Y`| `false` | whether to show the loading|
 | loading-text | `String` |`N`| `-` | loading text behind the indicator |
 | **interval** | `Number` |`N`| `0` | display delayed for fast Internet speed|
-| type | `String` | `N`|`default` | loading image `default`/`fliggy`|
+| type | `String` | `N`|`default` | loading image `default`/`trip`|
 | need-mask | `Bool` | `N`|`false` | whether to need a covered mask |
 | mask-style | `Object` | `N`|`{}` | mask style |
 

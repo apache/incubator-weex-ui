@@ -40,7 +40,7 @@
 | show | `Bool` |`Y`| `false` | 是否显示|
 | loading-text | `String` |`N`| `-` | 配置文案的显示 |
 | **interval** | `Number` |`N`| `0` | 延迟毫秒数显示，用于体验优化|
-| type | `String` | `N`|`default` |图案类别`default`/`fliggy`|
+| type | `String` | `N`|`default` |图案类别`default`/`trip`|
 | need-mask | `Bool` | `N`|`false` | 加载时候是都需要一个蒙层防止用于误点 |
 | mask-style | `Object` | `N`|`{}` | 蒙层样式覆盖 |
 
