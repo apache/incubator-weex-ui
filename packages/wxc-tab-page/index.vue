@@ -25,9 +25,8 @@
                v-if="titleType === 'icon' && !titleUseSlot"
                :style="{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}"></image>
 
-        <text class="icon-font"
-              v-if="titleType === 'iconFont' && v.codePoint && !titleUseSlot"
-              :style="{fontFamily: 'wxcIconFont',fontSize: tabStyles.iconFontSize+'px', color: currentPage == index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{v.codePoint}}</text>
+        <text v-if="titleType === 'iconFont' && v.codePoint && !titleUseSlot"
+              :style="{fontFamily: 'wxcIconFont',marginBottom:tabStyles.iconFontMarginBottom ? (tabStyles.iconFontMarginBottom +'px') : '8px',fontSize: tabStyles.iconFontSize+'px', color: currentPage === index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{v.codePoint}}</text>
 
         <text
           v-if="!titleUseSlot"
@@ -89,11 +88,6 @@
   .tab-text {
     lines: 1;
     text-overflow: ellipsis;
-  }
-
-  .icon-font {
-    margin-bottom: 8px;
-    font-family: wxcIconFont;
   }
 
 </style>
