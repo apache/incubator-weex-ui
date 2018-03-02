@@ -4,7 +4,7 @@
 <template>
   <div class="wxc-demo">
     <scroller class="scroller">
-      <title title="wxc-minibar"></title>
+      <title title="wxc-popover"></title>
       <category title="使用案例"></category>
       <div>
 
@@ -43,7 +43,6 @@
   .demo {
     width: 750px;
     height: 180px;
-    align-items: flex-start;
     padding-top: 60px;
   }
 </style>
@@ -90,7 +89,6 @@
       },
       popoverButtonClicked (obj) {
         modal.toast({ 'message': `key:${obj.key}, index:${obj.index}`, 'duration': 1 });
-
       }
     }
   };
