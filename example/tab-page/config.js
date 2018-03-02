@@ -97,6 +97,7 @@ export default {
     textPaddingRight: 10,
     iconFontSize: 50,
     iconFontColor: '#333333',
+    iconFontMarginBottom: 8,
     activeIconFontColor: 'red',
     iconFontUrl: '//at.alicdn.com/t/font_501019_mauqv15evc1pp66r.ttf'
   }
