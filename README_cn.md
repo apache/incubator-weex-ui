@@ -107,15 +107,22 @@ npm run start
 
 一旦它编译完成后，将会自动打开一个浏览器，你可以将浏览器切换到开发者模式，这时候在 console 中你可以看到一个预览二维码，直接使用你的 Weex App 扫码就可以看到 Demo 效果。
 
+
 ## 支持
 
 * 在你的公司或个人项目中使用 Weex Ui
 * 如果你觉得 Weex Ui 还不错，可以通过 Star 来表示你的喜欢
-* 如果你有任何想法或建议来改善 Weex Ui，欢迎提交 [PR](./CONTRIBUTING.md)
 * <details>
-  <summary>加入钉钉聊天群一起讨论 Weex 技术</summary>
+  <summary>加入钉钉聊天群帮忙解答 Weex 技术问题</summary>
   <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
 </details>
+
+## 贡献
+确保在提交代码前已经阅读 [Contributing Guide](https://github.com/alibaba/weex-ui/blob/master/CONTRIBUTING.md)。
+
+欢迎大家一起来促进 Weex Ui 更好的发展！
+
+<a href="https://github.com/alibaba/weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg?width=540"/></a>
 
 ## 协议
 
