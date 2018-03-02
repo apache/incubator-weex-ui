@@ -1,8 +1,9 @@
 # Change Log
 
 ## 0.4.1
-* [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md)、[wxc-page-calendar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-calendar/README.md) supports for `model` animation.
-* [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-page/README.md)、[wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-bar/README.md) support to set margin between iconFont and text.
+* [+] New component: [`wxc-popover`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md). 🎉🎉
+* [+] [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md)、[wxc-page-calendar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-calendar/README.md) supports for `model` animation.
+* [+] [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-page/README.md)、[wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-bar/README.md) support to set margin between iconFont and text.
 * [+] [wxc-loading](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) supports to set mask for preventing incorrect clicking.
 * [+] [wxc-simple-flow](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-simple-flow/README.md) supports to set multi-line title.
 
