@@ -3,10 +3,10 @@
 <!--A loading indicator. Custom text supported. -->
 
 <template>
-  <div :hack-show="needShow">
-    <div class="wxc-loading"
-         :style="{ top: topPosition +'px'}"
-         v-if="showLoading">
+  <div :class="[showLoading && needMask && 'loading-need-mask']"
+       @click="maskClicked"
+       :style="maskStyle">
+    <div class="wxc-loading" :style="{ top: topPosition +'px'}" v-if="showLoading">
       <div :class="['loading-box',loading.class]" :aria-hidden="true">
         <image :src="loading.url"
                class="loading-trip-image"
@@ -20,6 +20,15 @@
 </template>
 
 <style scoped>
+
+  .loading-need-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
   .wxc-loading {
     position: fixed;
     left: 287px;
@@ -78,16 +87,28 @@
       interval: {
         type: [Number, String],
         default: 0
+      },
+      needMask: {
+        type: Boolean,
+        default: false
+      },
+      maskStyle: {
+        type: Object,
+        default: () => ({
+          backgroundColor: 'rgba(0,0,0,0.2)'
+        })
       }
     },
     data: () => ({
       showLoading: false,
       tid: 0
     }),
+    watch: {
+      show () {
+        this.setShow();
+      }
+    },
     computed: {
-      showText () {
-        return this.loadingText;
-      },
       loading () {
         let loading = {};
         switch (this.type) {
@@ -107,13 +128,15 @@
       },
       topPosition () {
         return (Utils.env.getPageHeight() - 200) / 2;
-      },
-      needShow () {
-        this.setShow();
-        return this.show;
       }
     },
+    created () {
+      this.setShow();
+    },
     methods: {
+      maskClicked () {
+          this.needMask && (this.$emit('wxcLoadingMaskClicked', {}));
+      },
       setShow () {
         const { interval, show, showLoading } = this;
         const stInterval = parseInt(interval);
