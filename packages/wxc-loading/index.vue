@@ -27,6 +27,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .wxc-loading {
@@ -94,9 +95,7 @@
       },
       maskStyle: {
         type: Object,
-        default: () => ({
-          backgroundColor: 'rgba(0,0,0,0.2)'
-        })
+        default: () => ({})
       }
     },
     data: () => ({
@@ -135,7 +134,7 @@
     },
     methods: {
       maskClicked () {
-          this.needMask && (this.$emit('wxcLoadingMaskClicked', {}));
+        this.needMask && (this.$emit('wxcLoadingMaskClicked', {}));
       },
       setShow () {
         const { interval, show, showLoading } = this;
