@@ -2,7 +2,7 @@
 
 > Tab page make it easy to switch between different views
 
-!> The effect of sliding with hand is based on [expressionBinding](https://github.com/alibaba/weex/issues/1730) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).
+!> The effect of sliding with hand is based on [BindingX](https://alibaba.github.io/bindingx/) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).
  
 ### Rule
 - Allow configuration of the head, support `ExpressionBinding` gesture to follow the effect, H5 support downgrade slide switch.
