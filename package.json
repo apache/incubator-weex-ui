@@ -5,27 +5,14 @@
   "main": "index.js",
   "lib": "vue",
   "type": "weex",
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "repository": "https://github.com/alibaba/weex-ui",
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> [+] update docs
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alibaba/weex-ui.git"
   },
-<<<<<<< HEAD
->>>>>>> [+] update docs
-=======
->>>>>>> [+] update docs
   "homepage": "https://alibaba.github.io/weex-ui/",
   "bugs": {
     "url": "https://github.com/alibaba/weex-ui/issues"
   },
->>>>>>> [+] update homepage
   "scripts": {
     "build": "webpack --progress",
     "watch": "webpack --progress --watch",
@@ -40,7 +27,16 @@
     "Ul Components",
     "UI library"
   ],
-  "author": "Tw93",
+  "author": [
+    {
+      "name": "拔赤",
+      "email": "lijing00333@163.com"
+    },
+    {
+      "name": "Tw93",
+      "email": "tw93@qq.com"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "anywhere": "^1.4.0",
