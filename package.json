@@ -39,7 +39,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "anywhere": "^1.4.0",
+    "anywhere": "^1.5.0",
     "autoprefixer": "^7.2.2",
     "babel-core": "^6.26.0",
     "babel-eslint": "~8.0.1",
