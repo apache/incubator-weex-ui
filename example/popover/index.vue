@@ -21,6 +21,17 @@
           ></wxc-popover>
         </div>
 
+        <div class="demo demo2">
+          <wxc-button text="向上弹出"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-popover ref="wxc-popover2"
+                       :buttons="btns2"
+                       :position="popoverPosition2"
+                       :arrowPosition="popoverArrowPosition2"
+                       @wxcPopoverButtonClicked="popoverButtonClicked"
+          ></wxc-popover>
+        </div>
+
       </div>
     </scroller>
   </div>
@@ -45,19 +56,22 @@
     height: 180px;
     padding-top: 60px;
   }
+  .demo2{
+    margin: 20px;
+  }
 </style>
 
 <script>
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
-  import { WxcMinibar, WxcPopover } from '../../index';
+  import { WxcMinibar,WxcButton, WxcPopover } from '../../index';
 
   const modal = weex.requireModule('modal');
   import { setTitle } from '../_mods/set-nav';
   import { RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
 
   export default {
-    components: { Title, Category, WxcMinibar, WxcPopover },
+    components: { Title, Category, WxcMinibar, WxcButton, WxcPopover },
     data: () => ({
       leftButton: RETURN_ICON,
       btns: [
@@ -75,10 +89,27 @@
           icon: QUESTION_ICON,
           text: 'Help',
           key: 'key-help'
-        },
+        }
       ],
-      popoverPosition: { x: -14, y: 380 },
-      popoverArrowPosition: { pos: 'top', x: -15 }
+      popoverPosition: { x: -4, y: 360 },
+      popoverArrowPosition: { pos: 'top', x: -26 },
+      btns2:[
+
+        {
+          text: 'Popover Select 1',
+          key: 's1'
+        },
+        {
+          text: 'Popover Select 2',
+          key: 's2'
+        },
+        {
+          text: 'Popover Select 3',
+          key: 's3'
+        }
+      ],
+      popoverPosition2: { x: 200, y: 210 },
+      popoverArrowPosition2: { pos: 'bottom', x: 160 },
     }),
     created () {
       setTitle('Popover')
@@ -89,6 +120,9 @@
       },
       popoverButtonClicked (obj) {
         modal.toast({ 'message': `key:${obj.key}, index:${obj.index}`, 'duration': 1 });
+      },
+      wxcButtonClicked(){
+        this.$refs['wxc-popover2'].wxcPopoverShow();
       }
     }
   };
