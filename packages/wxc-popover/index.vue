@@ -9,15 +9,15 @@
         @touchend="show = false"
         :style="coverStyle"></div>
     <div ref="wxc-popover"
-        class="wxc-popover"
-        v-if="show && buttons"
-        :style="contentStyle">
+         class="g-popover"
+         v-if="show && buttons"
+         :style="contentStyle">
       <div class="u-popover-arrow" :style="arrowStyle"></div>
       <div class="u-popover-inner">
-        <div :class="['i-btn',i==0?'i-btn-noborder':'']"
-              v-for="(item,i) in buttons"
-              :key="i"
-              @click="wxcButtonClicked(i,item.key)">
+        <div :class="['i-btn',i==buttons.length-1?'i-btn-noborder':'']"
+             v-for="(item,i) in buttons"
+             :key="i"
+             @click="wxcButtonClicked(i,item.key)">
           <image :src="item.icon"
                  v-if="item.icon"
                  class="btn-icon"></image>
@@ -59,17 +59,27 @@ export default {
         style = {};
       switch (pos) {
         case 'top':
-          style.top = '-8px';
+          style.top = '6px';
         case 'bottom':
-          !style.top && (style.bottom = '-8px');
+          !style.top && (style.bottom = '6px');
           style.transform = 'scaleX(0.8) rotate(45deg)';
+          if(x>=0 && x<22){
+            x = 22;
+          }else if(x<0 && x>-22){
+            x =-22;
+          }
           x < 0 ? (style.right = `${-x}px`) : (style.left = `${x}px`);
           break;
         case 'left':
-          style.left = '-8px';
+          style.left = '6px';
         case 'right':
-          !style.left && (style.right = '-8px');
+          !style.left && (style.right = '6px');
           style.transform = 'scaleY(0.8) rotate(45deg)';
+          if(y>=0 && y<22){
+            y = 22;
+          }else if(y<0 && y>-22){
+            y =-22;
+          }
           y < 0 ? (style.bottom = `${-y}px`) : (style.top = `${y}px`);
           break;
         default:
@@ -102,11 +112,9 @@ export default {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
-.wxc-popover {
+.g-popover {
   position: fixed;
-  background-color: #fff;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.21);
-  border-radius: 6px;
+  padding:15px;
 }
 .u-popover-arrow {
   position: absolute;
@@ -130,12 +138,11 @@ export default {
   margin-right: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #ddd;
+  border-bottom-width: 1px;
+  border-bottom-color: #ddd;
 }
 .i-btn-noborder {
-  border-top-color: #fff;
+  border-bottom-color: #fff;
 }
 .btn-icon {
   width: 32px;
