@@ -56,15 +56,17 @@
     height: 180px;
     padding-top: 60px;
   }
-  .demo2{
-    margin: 20px;
+
+  .demo2 {
+    margin-top: 200px;
+    margin-left: 20px;
   }
 </style>
 
 <script>
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
-  import { WxcMinibar,WxcButton, WxcPopover } from '../../index';
+  import { WxcMinibar, WxcButton, WxcPopover } from '../../index';
 
   const modal = weex.requireModule('modal');
   import { setTitle } from '../_mods/set-nav';
@@ -93,7 +95,7 @@
       ],
       popoverPosition: { x: -4, y: 360 },
       popoverArrowPosition: { pos: 'top', x: -26 },
-      btns2:[
+      btns2: [
 
         {
           text: 'Popover Select 1',
@@ -108,7 +110,7 @@
           key: 's3'
         }
       ],
-      popoverPosition2: { x: 200, y: 210 },
+      popoverPosition2: { x: 200, y: 390 },
       popoverArrowPosition2: { pos: 'bottom', x: 160 },
     }),
     created () {
@@ -121,7 +123,7 @@
       popoverButtonClicked (obj) {
         modal.toast({ 'message': `key:${obj.key}, index:${obj.index}`, 'duration': 1 });
       },
-      wxcButtonClicked(){
+      wxcButtonClicked () {
         this.$refs['wxc-popover2'].wxcPopoverShow();
       }
     }
