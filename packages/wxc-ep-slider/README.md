@@ -1,6 +1,6 @@
 # wxc-ep-slider 
 
- > ExpressionBinding Slider
+ > Binding Slider
 
 !> These rich interaction components are based on [BindingX](https://alibaba.github.io/bindingx/) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6). 
 
@@ -103,12 +103,6 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | interval | `Number` | `N`|`1200` |interval of auto-play|
 
 ### More
-
-```
-// destruction may occur when sliding under the ios list, you need rebind it
-// <wxc-ep-slider ref="wxc-ep-slider"></wxc-ep-slider
-this.$refs['wxc-ep-slider'].rebind();
-```
 
 ### Manually setting page
 

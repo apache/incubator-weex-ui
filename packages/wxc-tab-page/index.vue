@@ -17,34 +17,31 @@
            :key="index"
            :ref="'wxc-tab-title-'+index"
            @click="setPage(index,v.url)"
-           :style="{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage == index ? tabStyles.activeBgColor : tabStyles.bgColor }"
+           :style="{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage === index ? tabStyles.activeBgColor : tabStyles.bgColor }"
            :accessible="true"
            :aria-label="`${v.title?v.title:'标签'+index}`">
 
-        <image :src="currentPage == index ? v.activeIcon : v.icon"
+        <image :src="currentPage === index ? v.activeIcon : v.icon"
                v-if="titleType === 'icon' && !titleUseSlot"
                :style="{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}"></image>
 
-        <text v-if="titleType === 'iconFont' && v.codePoint && !titleUseSlot"
-              :style="{fontFamily: 'wxcIconFont',marginBottom:tabStyles.iconFontMarginBottom ? (tabStyles.iconFontMarginBottom +'px') : '8px',fontSize: tabStyles.iconFontSize+'px', color: currentPage === index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{v.codePoint}}</text>
+        <text class="icon-font"
+              v-if="titleType === 'iconFont' && v.codePoint && !titleUseSlot"
+              :style="{fontFamily: 'wxcIconFont',fontSize: tabStyles.iconFontSize+'px', color: currentPage === index ? tabStyles.activeIconFontColor : tabStyles.iconFontColor}">{{v.codePoint}}</text>
 
         <text
           v-if="!titleUseSlot"
-          :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
+          :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage === index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage === index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
           class="tab-text">{{v.title}}</text>
         <div class="border-bottom"
              v-if="tabStyles.hasActiveBottom && !titleUseSlot"
-             :style="{ width: tabStyles.activeBottomWidth+'px', left: (tabStyles.width-tabStyles.activeBottomWidth)/2+'px', height: tabStyles.activeBottomHeight+'px', backgroundColor: currentPage == index ? tabStyles.activeBottomColor : 'transparent' }"></div>
+             :style="{ width: tabStyles.activeBottomWidth+'px', left: (tabStyles.width-tabStyles.activeBottomWidth)/2+'px', height: tabStyles.activeBottomHeight+'px', backgroundColor: currentPage === index ? tabStyles.activeBottomColor : 'transparent' }"></div>
         <slot :name="`tab-title-${index}`" v-if="titleUseSlot"></slot>
       </div>
     </scroller>
     <div class="tab-page-wrap"
          ref="tab-page-wrap"
-         @panstart="_onTouchStart"
-         @panmove="_onTouchMove"
-         @panend="_onTouchEnd"
-         :prevent-move-event="true"
-         @horizontalpan="startHandler"
+         @touchstart="startHandler"
          :style="{ height: (tabPageHeight-tabStyles.height)+'px' }">
       <div ref="tab-container"
            class="tab-container">
@@ -96,13 +93,9 @@
   const dom = weex.requireModule('dom');
   const animation = weex.requireModule('animation');
   const swipeBack = weex.requireModule('swipeBack');
-  const expressionBinding = weex.requireModule('expressionBinding');
 
   import Utils from '../utils';
-
-  const supportsEB = Utils.env.supportsEB();
-  const supportsEBForIos = Utils.env.supportsEBForIos();
-  const isIos = Utils.env.isIOS();
+  import Binding from 'weex-bindingx';
 
   export default {
     props: {
@@ -156,10 +149,6 @@
         type: Boolean,
         default: true
       },
-      needSlider: {
-        type: Boolean,
-        default: true
-      },
       duration: {
         type: [Number, String],
         default: 300
@@ -196,14 +185,12 @@
       if (swipeBack && swipeBack.forbidSwipeBack) {
         swipeBack.forbidSwipeBack(true);
       }
-      if (supportsEBForIos && this.needSlider && this.isTabView) {
-        setTimeout(() => {
-          const tabPageEl = this.$refs['tab-page-wrap'];
-          if (tabPageEl && tabPageEl.ref) {
-            expressionBinding.enableBinding(tabPageEl.ref, 'pan');
-            this.bindExp(tabPageEl);
-          }
-        }, 20);
+      if (Utils.env.supportsEBForIos()  && this.isTabView) {
+        const tabPageEl = this.$refs['tab-page-wrap'];
+        Binding.prepare && Binding.prepare({
+          anchor: tabPageEl.ref,
+          eventType: 'pan'
+        });
       }
     },
     methods: {
@@ -222,11 +209,8 @@
         this.setPage(page);
       },
       startHandler (e) {
-        if (supportsEBForIos && e.state === 'start' && this.isTabView && this.needSlider) {
-          // list下拉和到最下面问题修复
-          setTimeout(() => {
-            this.bindExp(this.$refs['tab-page-wrap']);
-          }, 0)
+        if (Utils.env.supportsEBForIos() && this.isTabView) {
+          this.bindExp(this.$refs['tab-page-wrap']);
         }
       },
       bindExp (element) {
@@ -234,13 +218,19 @@
           const tabElement = this.$refs['tab-container'];
           const { currentPage, panDist } = this;
           const dist = currentPage * 750;
+
           // x-dist
-          const args = [{
+          const props = [{
             element: tabElement.ref,
             property: 'transform.translateX',
-            expression: `{\"type\":\"-\",\"children\":[{\"type\":\"Identifier\",\"value\":\"x\"},{\"type\":\"NumericLiteral\",\"value\":${dist}}]}`
+            expression: `x-${dist}`
           }];
-          expressionBinding.createBinding(element.ref, 'pan', '', args, e => {
+
+          Binding.bind({
+            anchor: element.ref,
+            eventType: 'pan',
+            props
+          }, (e) => {
             const { deltaX, state } = e;
             if (state === 'end') {
               if (deltaX < -panDist) {
@@ -283,17 +273,8 @@
 
         this.isMoving = false;
         this.currentPage = page;
-
-        if (isIos) {
-          // 高版本ios 手淘上面会有不固定情况，hack一下
-          setTimeout(() => {
-            this._animateTransformX(page, animated);
-            this.$emit('wxcTabPageCurrentTabSelected', { page });
-          }, 10);
-        } else {
-          this._animateTransformX(page, animated);
-          this.$emit('wxcTabPageCurrentTabSelected', { page });
-        }
+        this._animateTransformX(page, animated);
+        this.$emit('wxcTabPageCurrentTabSelected', { page });
       },
       jumpOut (url) {
         url && Utils.goToH5Page(url)
@@ -312,44 +293,6 @@
           delay: 0
         }, () => {
         });
-      },
-      _onTouchStart (e) {
-        if (supportsEB || !this.isTabView || !this.needSlider) {
-          return;
-        }
-        this.startPosX = this._getTouchXPos(e);
-        this.startPosY = this._getTouchYPos(e);
-        this.deltaX = 0;
-        this.startTime = new Date().getTime();
-      },
-      _onTouchMove (e) {
-        if (supportsEB || !this.isTabView || !this.needSlider) {
-          return;
-        }
-        this.deltaX = this._getTouchXPos(e) - this.startPosX;
-        this.deltaY = Math.abs(this._getTouchYPos(e) - this.startPosY + 1);
-        if (this.judge === 'INITIAL' && Math.abs(this.deltaX) / this.deltaY > 1.73) {
-          this.judge = 'SLIDE_ING';
-        }
-      },
-      _onTouchEnd () {
-        if (supportsEB || !this.isTabView || !this.needSlider) {
-          return;
-        }
-        if (this.judge === 'SLIDE_ING') {
-          if (this.deltaX < -50) {
-            this.next();
-          } else if (this.deltaX > 50) {
-            this.prev();
-          }
-        }
-        this.judge = 'INITIAL';
-      },
-      _getTouchXPos (e) {
-        return e.changedTouches[0]['pageX'];
-      },
-      _getTouchYPos (e) {
-        return e.changedTouches[0]['pageY'];
       }
     }
   };

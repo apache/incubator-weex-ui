@@ -4,12 +4,11 @@
 <template>
   <div :style="containerS">
     <div :ref="`sliderCtn_${sliderId}`"
-         :prevent-move-event="true"
          :style="{width:cardWidth+'px',height:cardS.height+'px',transform: `translateX(-${currentIndex * (cardS.width + cardS.spacing)}px)`}"
-         @panstart="onTouchStart"
-         @panmove="onTouchMove"
-         @panend="onTouchEnd"
-         @horizontalpan="onEpTouchStart">
+         @panstart="onPanStart"
+         @panmove="onPanMove"
+         @panend="onPanEnd"
+         @horizontalpan="onEpPanStart">
       <div class="slider"
            v-for="(v,index) in cardList"
            :ref="`card${index}_${sliderId}`"
@@ -29,9 +28,10 @@
 
 <script>
   const swipeBack = weex.requireModule('swipeBack');
-  const expressionBinding = weex.requireModule('expressionBinding');
   const animation = weex.requireModule('animation');
   import Utils from '../utils';
+  import Binding from 'weex-bindingx';
+
   export default {
     props: {
       sliderId: {
@@ -104,17 +104,20 @@
       if (swipeBack && swipeBack.forbidSwipeBack) {
         swipeBack.forbidSwipeBack(true);
       }
+
       setTimeout(() => {
         const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
         if (Utils.env.supportsEB() && sliderCtn && sliderCtn.ref) {
-          expressionBinding.enableBinding(sliderCtn.ref, 'pan');
-          this.bindExp(sliderCtn);
+          Binding.prepare && Binding.prepare({
+            anchor: sliderCtn.ref,
+            eventType: 'pan'
+          });
         }
       }, 20);
       this.checkNeedAutoPlay();
     },
     methods: {
-      onTouchStart (e) {
+      onPanStart (e) {
         if (Utils.env.supportsEB()) {
           return;
         }
@@ -122,7 +125,7 @@
         this.startX = e.changedTouches[0].clientX;
         this.startTime = Date.now();
       },
-      onTouchMove (e) {
+      onPanMove (e) {
         if (Utils.env.supportsEB()) {
           return;
         }
@@ -180,30 +183,7 @@
           });
         }
       },
-      onTouchEnd (e) {
-        if (Utils.env.supportsEB()) {
-          return;
-        }
-        this.moving = true;
-        const moveX = e.changedTouches[0].clientX - this.startX;
-        const originIndex = this.currentIndex;
-        const cardLength = this.cardLength;
-        let selectIndex = originIndex;
-        const panOffset = (this.panOffset || this.cardS.width / 2);
-
-        if (moveX < -panOffset) {
-          if (this.loop || selectIndex !== cardLength - 1) {
-            selectIndex++;
-          }
-        } else if (moveX > panOffset) {
-          if (this.loop || selectIndex !== 0) {
-            selectIndex--;
-          }
-        }
-        this.slideTo(originIndex, selectIndex);
-        setTimeout(() => { this.checkNeedAutoPlay() }, 3000);
-      },
-      onEpTouchStart (e) {
+      onEpPanStart (e) {
         if (Utils.env.supportsEB() && e.state === 'start') {
           this.clearAutoPlay();
           setTimeout(() => {
@@ -212,26 +192,37 @@
           }, 0)
         }
       },
-      panEnd (e) {
-        if (e.state === 'end' || e.state === 'cancel' || e.state === 'exit') {
-          this.moving = true;
-          const moveX = e.deltaX;
-          const originIndex = this.currentIndex;
-          let selectIndex = originIndex;
-          const duration = Date.now() - this.startTime;
-          const panOffset = this.panOffset || (this.cardS.width / 2);
-          if (moveX < -panOffset || (this.enableSwipe && moveX < -10 && duration < 200)) {
-            if (selectIndex !== this.cardLength - 1) {
-              selectIndex++;
-            }
-          } else if (moveX > panOffset || (this.enableSwipe && moveX > 10 && duration < 500)) {
-            if (selectIndex !== 0) {
-              selectIndex--;
-            }
-          }
-          this.slideTo(originIndex, selectIndex);
-          setTimeout(() => { this.checkNeedAutoPlay() }, 3000);
+      onPanEnd(e){
+        if (Utils.env.supportsEB()) {
+          return;
         }
+        this.panEnd(e);
+      },
+      panEnd (e) {
+        this.moving = true;
+        let moveX = e.deltaX;
+
+        if (Utils.env.isWeb()) {
+          moveX = e.changedTouches[0].clientX - this.startX;
+        }
+
+        const originIndex = this.currentIndex;
+        let selectIndex = originIndex;
+        const duration = Date.now() - this.startTime;
+        const panOffset = this.panOffset || (this.cardS.width / 2);
+
+        if (moveX < -panOffset || (moveX < -10 && duration < 200)) {
+          if (selectIndex !== this.cardLength - 1) {
+            selectIndex++;
+          }
+        } else if (moveX > panOffset || (moveX > 10 && duration < 500)) {
+          if (selectIndex !== 0) {
+            selectIndex--;
+          }
+        }
+
+        this.slideTo(originIndex, selectIndex);
+        setTimeout(() => { this.checkNeedAutoPlay() }, 3000);
       },
       slideTo (originIndex, selectIndex) {
         let currentCardScale = 1;
@@ -309,87 +300,72 @@
           let rightCard = null;
           let leftCard = null;
           const currentCardLeft = this.currentIndex * (this.cardS.width + this.cardS.spacing);
+
           // 卡片容器
-          // x - currentCardLeft
-          const sliderCtnExpOri = `x - ${currentCardLeft}`;
-          const sliderCtnExp = `{\"type\":\"-\",\"children\":[{\"type\":\"Identifier\",\"value\":\"x\"},{\"type\":\"NumericLiteral\",\"value\":${currentCardLeft}}]}`;
+          const sliderCtnExp = `x - ${currentCardLeft}`;
           const args = [
             {
               element: sliderCtn.ref,
               property: 'transform.translateX',
               expression: sliderCtnExp,
-              'ori_expression': sliderCtnExpOri
             }
           ];
 
           if (this.cardS.scale !== 1) {
-            // 当前显示的卡片
-            // 1-abs(x)/588*${1-this.cardS.scale}
-            const currentCardExpOri = `1-abs(x)/${this.cardS.width}*${1 - this.cardS.scale}`;
-            const currentCardExp = `{\"type\":\"-\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":1},{\"type\":\"*\",\"children\":[{\"type\":\"/\",\"children\":[{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"abs\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"Identifier\",\"value\":\"x\"}]}]},{\"type\":\"NumericLiteral\",\"value\":${this.cardS.width}}]},{\"type\":\"NumericLiteral\",\"value\":${1 - this.cardS.scale}}]}]}`;
+
+            const currentCardExp = `1-abs(x)/${this.cardS.width}*${1 - this.cardS.scale}`;
+            const leftCardExp = `1-abs(x-${this.cardS.width})/${this.cardS.width}*${1 - this.cardS.scale}`;
+            const rightCardExp = `1-abs(${this.cardS.width}+x)/${this.cardS.width}*${1 - this.cardS.scale}`;
+
             args.push({
               element: currentCard.ref,
               property: 'transform.scale',
-              expression: currentCardExp,
-              'ori_expression': currentCardExpOri
+              expression: currentCardExp
             });
 
             if (index === 0 && this.$refs[`card${index + 1}_${this.sliderId}`]) {
-              // 右边卡片
+
               rightCard = this.$refs[`card${index + 1}_${this.sliderId}`][0];
-              // 1-abs(588+x)/588*${1-this.cardS.scale}
-              const rightCardExpOri = `{sx: 1-abs(${this.cardS.width}+x)/${this.cardS.width}*${1 - this.cardS.scale}, sy: 1-abs(${this.cardS.width}+x)/${this.cardS.width}*${1 - this.cardS.scale}}`;
-              const rightCardExp = `{\"type\":\"-\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":1},{\"type\":\"*\",\"children\":[{\"type\":\"/\",\"children\":[{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"abs\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"+\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":${this.cardS.width}},{\"type\":\"Identifier\",\"value\":\"x\"}]}]}]},{\"type\":\"NumericLiteral\",\"value\":${this.cardS.width}}]},{\"type\":\"NumericLiteral\",\"value\":${1 - this.cardS.scale}}]}]}`;
               args.push({
                 element: rightCard.ref,
                 property: 'transform.scale',
-                expression: rightCardExp,
-                'ori_expression': rightCardExpOri
+                expression: rightCardExp
               });
             } else if (index === this.cardLength - 1 && this.$refs[`card${index - 1}_${this.sliderId}`]) {
-              // 左边的卡片
               leftCard = this.$refs[`card${index - 1}_${this.sliderId}`][0];
-              // 1-abs(x-${this.cardS.width})/${this.cardS.width}*${1-this.cardS.scale}
-              const leftCardExpOri = `{sx: 1-abs(x-${this.cardS.width})/${this.cardS.width}*${1 - this.cardS.scale}, sy: 1-abs(x-${this.cardS.width})/${this.cardS.width}*${1 - this.cardS.scale}}`;
-              const leftCardExp = `{\"type\":\"-\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":1},{\"type\":\"*\",\"children\":[{\"type\":\"/\",\"children\":[{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"abs\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"-\",\"children\":[{\"type\":\"Identifier\",\"value\":\"x\"},{\"type\":\"NumericLiteral\",\"value\":${this.cardS.width}}]}]}]},{\"type\":\"NumericLiteral\",\"value\":${this.cardS.width}}]},{\"type\":\"NumericLiteral\",\"value\":${1 - this.cardS.scale}}]}]}`;
               args.push({
                 element: leftCard.ref,
                 property: 'transform.scale',
-                expression: leftCardExp,
-                'ori_expression': leftCardExpOri
+                expression: leftCardExp
               });
             } else if (this.$refs[`card${index - 1}_${this.sliderId}`]) {
               // 左边卡片
               leftCard = this.$refs[`card${index - 1}_${this.sliderId}`][0];
-              // 1-abs(x-${this.cardS.width})/${this.cardS.width}*${1-this.cardS.scale}
-              const leftCardExpOri = `{sx: 1-abs(x-${this.cardS.width})/${this.cardS.width}*${1 - this.cardS.scale}, sy: 1-abs(x-${this.cardS.width})/${this.cardS.width}*${1 - this.cardS.scale}}`;
-              const leftCardExp = `{\"type\":\"-\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":1},{\"type\":\"*\",\"children\":[{\"type\":\"/\",\"children\":[{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"abs\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"-\",\"children\":[{\"type\":\"Identifier\",\"value\":\"x\"},{\"type\":\"NumericLiteral\",\"value\":${this.cardS.width}}]}]}]},{\"type\":\"NumericLiteral\",\"value\":${this.cardS.width}}]},{\"type\":\"NumericLiteral\",\"value\":${1 - this.cardS.scale}}]}]}`;
-
               args.push({
                 element: leftCard.ref,
                 property: 'transform.scale',
-                expression: leftCardExp,
-                'ori_expression': leftCardExpOri
+                expression: leftCardExp
               });
-
               // 右边卡片
               rightCard = this.$refs[`card${index + 1}_${this.sliderId}`][0];
-              // 1-abs(${this.cardS.width}+x)/${this.cardS.width}*${1-this.cardS.scale}
-              const rightCardExpOri = `{sx: 1-abs(${this.cardS.width}+x)/${this.cardS.width}*${1 - this.cardS.scale}, sy: 1-abs(${this.cardS.width}+x)/${this.cardS.width}*${1 - this.cardS.scale}}`;
-              const rightCardExp = `{\"type\":\"-\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":1},{\"type\":\"*\",\"children\":[{\"type\":\"/\",\"children\":[{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"abs\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"+\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":${this.cardS.width}},{\"type\":\"Identifier\",\"value\":\"x\"}]}]}]},{\"type\":\"NumericLiteral\",\"value\":${this.cardS.width}}]},{\"type\":\"NumericLiteral\",\"value\":${1 - this.cardS.scale}}]}]}`;
               args.push({
                 element: rightCard.ref,
                 property: 'transform.scale',
-                expression: rightCardExp,
-                'ori_expression': rightCardExpOri
+                expression: rightCardExp
               });
             }
           }
-          expressionBinding.createBinding(element.ref, 'pan', '', args, (e) => {
-            if (!this.moving) {
+
+          Binding.bind({
+            anchor: element.ref,
+            eventType: 'pan',
+            props: args
+          }, (e) => {
+            if (!this.moving && (e.state === 'end' || e.state === 'cancel' || e.state === 'exit')) {
               this.panEnd(e);
             }
           });
+
         }
       },
       checkNeedAutoPlay () {
@@ -402,14 +378,6 @@
       },
       clearAutoPlay () {
         this.autoPlayTimer && clearInterval(this.autoPlayTimer);
-      },
-      // ios下当放在list中，cell被回收后，再次出现的时候需要重新为容器绑定下pan事情
-      rebind () {
-        const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
-        if (sliderCtn && sliderCtn.ref) {
-          expressionBinding.disableBinding(sliderCtn.ref, 'pan');
-          expressionBinding.enableBinding(sliderCtn.ref, 'pan');
-        }
       },
       manualSetPage (selectIndex) {
         this.clearAutoPlay();
