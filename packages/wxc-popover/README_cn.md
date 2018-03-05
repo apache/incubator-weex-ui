@@ -8,6 +8,9 @@
 - 支持上、下、左、右四个方向
 - 可自定义气泡和箭头具体位置
 
+## Demo
+<img src="https://img.alicdn.com/tfs/TB1SnzOb_tYBeNjy1XdXXXXyVXa-562-1000.gif" width="240"/>
+
 ## 使用方法
 
 ```vue
