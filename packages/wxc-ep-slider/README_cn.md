@@ -2,7 +2,7 @@
 
 !> 这个富交互体验组件依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)
 
- > Weex EP 效果的 slider 组件
+ > Weex Binding 效果的 slider 组件
 
 ### 规则
 - 用于丰富 slide，包括商品橱窗，图片列表等 
@@ -98,19 +98,12 @@
 | slider-id | `Number` |`Y`| `1` | slider的id，避免页面多个ep-slider导致获取错误|
 | card-length | `Number` |`Y`| `1` |  slider中item的数量|
 | select-index | `Number` |`N`| `0` | 默认突出item的index|
-| enable-swipe | `Boolean` | `N`|`true` | 是否需要滑动效果|
 | container-s | `Object` |`Y`| `{position: 'relative',width: 750,height: 352,overflow: 'hidden'}` |  包裹容器的样式|
 | card-s | `Object` | `Y`|`{width: 360,height: 300,spacing: 0,scale: 0.75}` | item容器的样式|
 | auto-play | `Boolean` | `N`|`false` |是否需要自动播放|
 | interval | `Number` | `N`|`1200` |自动播放时候的间隔|
 
 ### API说明
-
-```
-//ios下当放在list中，cell被回收后，导致下次appear的时候，手势失效了，需要再手动调用api，重新绑定下pan事件
-// 直接在wxc-ep-slider组件上面绑定ref="wxc-ep-slider"
-this.$refs['wxc-ep-slider'].rebind();
-```
 
 ### 主动触发设置
 

@@ -2,10 +2,10 @@
 
 > Weex tab 页面滑动切换组件
 
-!> 随手滑动的效果依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)。
+!> 随手滑动的效果依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App [是否支持](https://github.com/alibaba/weex-ui/issues/6)。
 
 ### 规则
-- 允许对头部进行配置，支持 ExpressionBinding 手势跟随效果，H5 支持降级效果滑动切换
+- 允许对头部进行配置，支持 Binding 手势跟随效果
 - 常用于 Tab 切换页面，目前支持**icon、text、iconFont**形式的顶栏,详细可见[config.js](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
 - **Android 由于[此约束](http://weex-project.io/cn/references/gesture.html#约束)，需在子元素上绑定对应事件，可通过`wxc-pan-item`解决此问题**
 - 支持**居中形式 Tab**，将 tabStyles 中的 leftOffset 配置合适的值即可
@@ -22,8 +22,6 @@
                 :tab-titles="tabTitles"
                 :tab-styles="tabStyles"
                 title-type="icon"
-                :needSlider="needSlider"
-                :is-tab-view="isTabView"
                 :tab-page-height="tabPageHeight"
                 @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
     <list v-for="(v,index) in tabList"
@@ -88,10 +86,7 @@
       tabTitles: Config.tabTitles,
       tabStyles: Config.tabStyles,
       tabList: [],
-      needSlider: true,
       demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-      supportSlide: true,
-      isTabView: true,
       tabPageHeight: 1334
     }),
     created () {
@@ -131,7 +126,6 @@
 | tab-styles | `Array` |`N`| `[]` | 顶部 [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
 | tab-page-height | `Number` |`N`| `1334` | Tab page 页面的高度 |
 | is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时 tab 配置 url 参数即可跳出|
-| need-slider | `Boolean` |`N`| `true` | 是否需要滑动功能|
 | pan-dist | `Number` |`N`| `200` | 滚动多少切换上下一屏幕|
 | duration | `Number` |`N`| `300` | 页面切换动画的时间 |
 | timing-function | `String` |`N`| `-` | 页面切换动画函数 |
@@ -210,14 +204,12 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| ext-id | `Number、String` |`Y`| `0` | 滑动元素的id索引|
 | url | `String` |`N`| `-` | url跳转链接，自己处理可以不传|
 
 #### 使用
 ```
 // 组件使用
 <wxc-pan-item 
-    :ext-id="1" 
     :url="url" 
     @wxcPanItemClicked="wxcPanItemClicked"
     @wxcPanItemPan="wxcPanItemPan">

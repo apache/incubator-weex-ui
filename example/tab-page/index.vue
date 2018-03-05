@@ -21,8 +21,7 @@
             :key="key"
             :accessible="true"
             aria-label="卡片测试｜四川成都出发到九寨沟牟尼沟 温泉3天2晚纯玩跟团旅游,价格219元">
-        <wxc-pan-item :ext-id="'1-' + (v) + '-' + (key)"
-                      url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
+        <wxc-pan-item url="https://h5.m.taobao.com/trip/ticket/detail/index.html?scenicId=2675"
                       @wxcPanItemPan="wxcPanItemPan">
           <wxc-item image="https://gw.alicdn.com/i1/2935198750/TB26GMgeOC9MuFjSZFoXXbUzFXa_!!2935198750.jpg"
                     :image-text="tabTitles[index].title"
@@ -30,7 +29,7 @@
                     :desc="desc"
                     :tags="tags"
                     price="666"
-                    price-desc="月售58笔｜999+条评论"></wxc-item>
+                    price-desc="月售58笔｜999+条评论"/>
         </wxc-pan-item>
       </cell>
     </list>
