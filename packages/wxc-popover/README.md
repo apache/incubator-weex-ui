@@ -9,6 +9,9 @@
 - Support top, bottom, left and right directions.
 - Customizable bubble and arrow location.
 
+## Demo
+<img src="https://img.alicdn.com/tfs/TB1SnzOb_tYBeNjy1XdXXXXyVXa-562-1000.gif" width="240"/>
+
 ## Code Example
 
 ```vue
