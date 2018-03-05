@@ -5,7 +5,7 @@
 !> The effect of sliding with hand is based on [BindingX](https://alibaba.github.io/bindingx/) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).
  
 ### Rule
-- Allow configuration of the head, support `ExpressionBinding` gesture to follow the effect, H5 support downgrade slide switch.
+- Allow configuration of the head, support `Binding` gesture to follow the effect.
 - Commonly used in Tab switch pages, currently supports **icon 、text and iconFont** form the top bar, You can see in [here](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
 - If the child element has click event, **because of the [reason](http://weex-project.io/cn/references/gesture.html#约束) in android**, You now need to bind the expression event in child element, Weex Ui has provided [wxc-pan-cell](https://github.com/alibaba/weex-ui/tree/master/packages/wxc-pan-item) to solve this issue，you can see more in [here](https://github.com/alibaba/weex-ui/tree/master/example/tab-page).
 - Support the **tab center style**, You need set `leftOffset` in `tabStyles` with the correct value.
@@ -22,8 +22,6 @@
                 :tab-titles="tabTitles"
                 :tab-styles="tabStyles"
                 title-type="icon"
-                :needSlider="needSlider"
-                :is-tab-view="isTabView"
                 :tab-page-height="tabPageHeight"
                 @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
     <list v-for="(v,index) in tabList"
@@ -88,10 +86,7 @@
       tabTitles: Config.tabTitles,
       tabStyles: Config.tabStyles,
       tabList: [],
-      needSlider: true,
       demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-      supportSlide: true,
-      isTabView: true,
       tabPageHeight: 1334
     }),
     created () {
@@ -132,7 +127,6 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | tab-styles | `Array` |`N`| `[]` | [style config](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
 | tab-page-height | `Number` |`N`| `1334` | Tab page height |
 | is-tab-view | `Boolean` |`N`| `true` |if set `false`,add tab-titles config with `url` can be jumped out|
-| need-slider | `Boolean` |`N`| `true` | whether needs slider|
 | pan-dist | `Number` |`N`| `200` | how many scrolls to switch to the next screen|
 | duration | `Number` |`N`| `300` | page slider function of time |
 | timing-function | `String` |`N`| `-` | page slider function of animation |
@@ -212,14 +206,12 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| ext-id | `Number、String` |`Y`| `0` | slider item id|
 | url | `String` |`N`| `-` | jump link, own processing can not be passed |
 
 #### Code Example
 ```
 // how to use
 <wxc-pan-item 
-    :ext-id="1" 
     :url="url" 
     @wxcPanItemClicked="wxcPanItemClicked"
     @wxcPanItemPan="wxcPanItemPan">
