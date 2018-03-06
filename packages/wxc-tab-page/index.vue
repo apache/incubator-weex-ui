@@ -41,7 +41,7 @@
     </scroller>
     <div class="tab-page-wrap"
          ref="tab-page-wrap"
-         @touchstart="startHandler"
+         @horizontalpan="startHandler"
          :style="{ height: (tabPageHeight-tabStyles.height)+'px' }">
       <div ref="tab-container"
            class="tab-container">
@@ -164,13 +164,11 @@
     },
     data: () => ({
       currentPage: 0,
+      gesToken: 0,
       isMoving: false,
       startTime: 0,
       deltaX: 0,
-      translateX: 0,
-      startPosX: 0,
-      startPosY: 0,
-      judge: 'INITIAL'
+      translateX: 0
     }),
     created () {
       const { titleType, tabStyles } = this;
@@ -185,7 +183,7 @@
       if (swipeBack && swipeBack.forbidSwipeBack) {
         swipeBack.forbidSwipeBack(true);
       }
-      if (Utils.env.supportsEBForIos()  && this.isTabView) {
+      if (Utils.env.supportsEBForIos() && this.isTabView) {
         const tabPageEl = this.$refs['tab-page-wrap'];
         Binding.prepare && Binding.prepare({
           anchor: tabPageEl.ref,
@@ -208,13 +206,24 @@
         }
         this.setPage(page);
       },
-      startHandler (e) {
+      startHandler () {
         if (Utils.env.supportsEBForIos() && this.isTabView) {
           this.bindExp(this.$refs['tab-page-wrap']);
         }
+
       },
       bindExp (element) {
-        if (!this.isMoving && element && element.ref) {
+        if (element && element.ref) {
+
+          if (this.isMoving && this.gesToken !== 0) {
+            Binding.unbind({
+              eventType: 'pan',
+              token: this.gesToken
+            })
+            this.gesToken = 0;
+            return;
+          }
+
           const tabElement = this.$refs['tab-container'];
           const { currentPage, panDist } = this;
           const dist = currentPage * 750;
@@ -226,7 +235,7 @@
             expression: `x-${dist}`
           }];
 
-          Binding.bind({
+          const gesTokenObj = Binding.bind({
             anchor: element.ref,
             eventType: 'pan',
             props
@@ -242,6 +251,7 @@
               }
             }
           });
+          this.gesToken = gesTokenObj.token;
         }
       },
       setPage (page, url = null, animated = true) {
