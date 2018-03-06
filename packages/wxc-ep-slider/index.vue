@@ -82,7 +82,8 @@
       }
     },
     data: () => ({
-      moving: false,
+      isMoving: false,
+      gesToken: 0,
       startX: 0,
       startTime: 0,
       currentIndex: 0,
@@ -192,14 +193,14 @@
           }, 0)
         }
       },
-      onPanEnd(e){
+      onPanEnd (e) {
         if (Utils.env.supportsEB()) {
           return;
         }
         this.panEnd(e);
       },
       panEnd (e) {
-        this.moving = true;
+        this.isMoving = true;
         let moveX = e.deltaX;
 
         if (Utils.env.isWeb()) {
@@ -248,7 +249,7 @@
         });
 
         const leftCard = this.$refs[`card${this.loopedIndex(originIndex - 1, this.cardLength)}_${this.sliderId}`][0];
-        if (this.moving && leftCard && originIndex !== 0) {
+        if (this.isMoving && leftCard && originIndex !== 0) {
           animation.transition(leftCard, {
             styles: {
               transform: `scale(${leftCardScale})`
@@ -278,7 +279,7 @@
           timingFunction: 'ease',
           duration
         }, () => {
-          this.moving = false;
+          this.isMoving = false;
           if (originIndex !== selectIndex) {
             this.currentIndex = selectIndex;
           }
@@ -292,7 +293,17 @@
         return index % total;
       },
       bindExp (element) {
-        if (element && element.ref && !this.moving) {
+        if (element && element.ref) {
+
+          if (this.isMoving && this.gesToken !== 0) {
+            Binding.unbind({
+              eventType: 'pan',
+              token: this.gesToken
+            })
+            this.gesToken = 0;
+            return;
+          }
+
           this.startTime = Date.now();
           const index = this.loopedIndex(this.currentIndex, this.cardLength);
           const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
@@ -356,16 +367,17 @@
             }
           }
 
-          Binding.bind({
+          const gesTokenObj = Binding.bind({
             anchor: element.ref,
             eventType: 'pan',
             props: args
           }, (e) => {
-            if (!this.moving && (e.state === 'end' || e.state === 'cancel' || e.state === 'exit')) {
+            if (!this.isMoving && (e.state === 'end' || e.state === 'cancel' || e.state === 'exit')) {
               this.panEnd(e);
             }
           });
 
+          this.gesToken = gesTokenObj.token;
         }
       },
       checkNeedAutoPlay () {
