@@ -21,7 +21,7 @@ HappyPack.SERIALIZABLE_OPTIONS = HappyPack.SERIALIZABLE_OPTIONS.concat([
 console.log('Building..., Please wait a moment.');
 
 const getEntry = dir => {
-  const foundScripts = glob.sync(`${dir}/*/index.js`, {});
+  const foundScripts = glob.sync(`${dir}/slider-bar/index.js`, {});
   // 生成 entry 映射表
   const ret = {};
   foundScripts.forEach(function(scriptPath) {
@@ -48,9 +48,9 @@ const getCopyConfig = () => {
 
 const example = getEntry('example');
 const entry = Object.assign(
-  {
-    index: './index.js'
-  },
+  // {
+  //   index: './index.js'
+  // },
   example
 );
 
