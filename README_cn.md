@@ -119,7 +119,6 @@ npm run start
 
 ## 贡献
 
-<a href="https://github.com/alibaba/weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg?width=800"/></a>
 想解 Bug，贡献代码或者提高文档可读性？有这个想法非常好，在提交 pull request 前记得阅读一下 [Contributing Guide](https://github.com/alibaba/weex-ui/blob/master/CONTRIBUTING.md)。
 
 感谢给 Weex Ui 贡献代码的你们！
