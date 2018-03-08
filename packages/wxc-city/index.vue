@@ -44,7 +44,7 @@
     components: { wxcTab, WxcSearchbar, WxcResult, WxcIndexlist },
     props: {
       animationType: {
-        type: Object,
+        type: String,
         default: 'push'
       },
       inputConfig: {
@@ -53,14 +53,14 @@
       },
       sourceData: {
         type: Object,
-        default: defaultSourceData
+        default: () =>defaultSourceData
       },
       cityStyleType:{
-        type: Object,
+        type: String,
         default: 'list'
       },
       currentLocation:{
-        type: Object,
+        type: String,
         default: '定位中'
       },
       cityHeight: {
