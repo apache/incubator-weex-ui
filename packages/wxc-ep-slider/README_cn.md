@@ -113,6 +113,14 @@
 this.$refs['wxc-ep-slider'].manualSetPage(1); 
 ```
 
+### Rebind
+
+```
+//ios下当放在list中，cell被回收后，导致下次appear的时候，手势失效了，需要再手动调用api，重新绑定下pan事件,同时注意 setTimeout 一下
+// 直接在wxc-ep-slider组件上面绑定ref="wxc-ep-slider"
+this.$refs['wxc-ep-slider'].rebind();
+```
+
 ### 事件回调
 
 ```
