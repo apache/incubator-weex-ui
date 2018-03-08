@@ -111,6 +111,13 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 this.$refs['wxc-ep-slider'].manualSetPage(1); 
 ```
 
+### Rebind
+
+```
+// <wxc-ep-slider ref="wxc-ep-slider"></wxc-ep-slider
+this.$refs['wxc-ep-slider'].rebind(); 
+```
+
 ### Event
 
 ```

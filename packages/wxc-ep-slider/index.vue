@@ -391,6 +391,17 @@
       clearAutoPlay () {
         this.autoPlayTimer && clearInterval(this.autoPlayTimer);
       },
+      rebind () {
+        const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
+        if (sliderCtn && sliderCtn.ref) {
+          Binding.unbind({
+            eventType: 'pan',
+            token: this.gesToken
+          });
+          this.gesToken = 0;
+          this.bindExp(sliderCtn);
+        }
+      },
       manualSetPage (selectIndex) {
         this.clearAutoPlay();
         const step = this.currentIndex < selectIndex ? 1 : -1;
