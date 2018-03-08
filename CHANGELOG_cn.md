@@ -2,6 +2,7 @@
 
 ## 0.5.0
 * [+] [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-page/README.md)、[wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md)、[wxc-slider-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-slider-bar/README.md) 支持[Bindingx](https://alibaba.github.io/bindingx/) 🎉🎉
+* [-] 移除 [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md) 中的 rebind() 调用
 * [!] 修复 [`wxc-city`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) 组件 props 参数问题
 * [+] 给 [wxc-popover](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md) 增加更多 demo 同时兼容适配 Android
 
