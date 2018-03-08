@@ -7,6 +7,7 @@
 
 `weex-ui >= 0.3.10`
 
+
 ## 使用方法
 
 ```vue
@@ -73,7 +74,7 @@
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`input-config`** | `Object` | `N` | `{}` | 城市选择输入框配置, 注1|
-| **`sourceData`** | `Dictionary` | `N` | `注：常规城市列表数据源` | 城市列表数组配置，注2 |
+| **`sourceData`** | `Object` | `N` | `注：不传此参数，默认使用常规城市列表数据源` | 城市列表数组配置，注2 |
 | **`cityStyleType`** | `String` | `N` | `list` | 城市列表样式的配置，注3 |
 | **`currentLocation`** | `String` | `Y` | `` | 定位城市配置，注4 |
 | **`show-index`** | `Boolean` | `N` | `true` | 是否显示右侧索引项|
