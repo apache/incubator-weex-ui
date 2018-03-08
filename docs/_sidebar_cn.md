@@ -5,6 +5,7 @@
     - [wxc-ep-slider 神奇滑动](cn/packages/wxc-ep-slider/)
     - [wxc-lightbox 幻灯片](cn/packages/wxc-lightbox/)
     - [wxc-overlay 蒙层](cn/packages/wxc-overlay/)
+    - [wxc-popover 气泡菜单](cn/packages/wxc-popup/)
     - [wxc-popup 弹层](cn/packages/wxc-popup/)
     - [wxc-result 结果页](cn/packages/wxc-result/)
     - [wxc-slide-nav 视窗增大](cn/packages/wxc-slide-nav/)

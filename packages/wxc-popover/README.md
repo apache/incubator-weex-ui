@@ -9,8 +9,10 @@
 - Support top, bottom, left and right directions.
 - Customizable bubble and arrow location.
 
-## Demo
-<img src="https://img.alicdn.com/tfs/TB1SnzOb_tYBeNjy1XdXXXXyVXa-562-1000.gif" width="240"/>
+## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/popover/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Fpopover%2Findex.weex.js)
+
+<img src="https://img.alicdn.com/tfs/TB1SnzOb_tYBeNjy1XdXXXXyVXa-562-1000.gif" width="240"/> &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB19m1fcrGYBuNjy0FoXXciBFXa-200-200.png" width="160"/>
+
 
 ## Code Example
 

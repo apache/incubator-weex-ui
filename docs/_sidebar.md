@@ -5,6 +5,7 @@
     - [wxc-ep-slider](packages/wxc-ep-slider/)
     - [wxc-lightbox](packages/wxc-lightbox/)
     - [wxc-overlay](packages/wxc-overlay/)
+    - [wxc-popover](packages/wxc-popover/)
     - [wxc-popup](packages/wxc-popup/)
     - [wxc-result](packages/wxc-result/)
     - [wxc-slide-nav](packages/wxc-slide-nav/)
