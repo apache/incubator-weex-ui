@@ -40,7 +40,7 @@
                         :class="['slider',`slider${index}`]"
                         url="https://h5.m.taobao.com/trip/weex-ui/demo/index.native-min.js"
                         @wxcPanItemPan="wxcPanItemPan"
-                        @wxcPanItemClick="wxcPanItemClick"
+                        @wxcPanItemClicked="wxcPanItemClicked"
                         :slot="`card${index}_${autoSliderId}`"
                         :accessible="true"
                         :aria-label="`这里是第${index + 1}个滑块`">
@@ -158,7 +158,7 @@
           this.$refs['wxc-ep-slider'].bindExp(e.element)
         }
       },
-      wxcPanItemClick (e) {
+      wxcPanItemClicked (e) {
         modal.toast({
           message: e.extId,
           duration: 1
