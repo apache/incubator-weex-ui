@@ -8,6 +8,8 @@
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=)
 [![Package Quality](http://npm.packagequality.com/shield/weex-ui.svg?style=flat-square)](http://packagequality.com/#?package=weex-ui)
 [![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://img.shields.io/gitter/room/alibaba/weex-ui.svg?style=flat-square)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+[![Backers on Open Collective](https://opencollective.com/weex-ui/backers/badge.svg)](#backers) 
+[![Sponsors on Open Collective](https://opencollective.com/weex-ui/sponsors/badge.svg)](#sponsors) 
 
 > A rich interaction, lightweight, high performance UI library based on [Weex](https://github.com/apache/incubator-weex).
 
@@ -122,7 +124,32 @@ Want to file a bug, contribute some code, or improve documentation? Excellent! R
 
 Thank you to all the people who already contributed to Weex Ui!
 
-<a href="https://github.com/alibaba/weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg?width=800"/></a>
+<a href="https://github.com/alibaba/weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg?width=800&button=false"/></a>
+
+
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/weex-ui#backer)]
+
+<a href="https://opencollective.com/weex-ui#backers" target="_blank"><img src="https://opencollective.com/weex-ui/backers.svg?width=890"></a>
+
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/weex-ui#sponsor)]
+
+<a href="https://opencollective.com/weex-ui/sponsor/0/website" target="_blank"><img src="https://opencollective.com/weex-ui/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/weex-ui/sponsor/1/website" target="_blank"><img src="https://opencollective.com/weex-ui/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/weex-ui/sponsor/2/website" target="_blank"><img src="https://opencollective.com/weex-ui/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/weex-ui/sponsor/3/website" target="_blank"><img src="https://opencollective.com/weex-ui/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/weex-ui/sponsor/4/website" target="_blank"><img src="https://opencollective.com/weex-ui/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/weex-ui/sponsor/5/website" target="_blank"><img src="https://opencollective.com/weex-ui/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/weex-ui/sponsor/6/website" target="_blank"><img src="https://opencollective.com/weex-ui/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/weex-ui/sponsor/7/website" target="_blank"><img src="https://opencollective.com/weex-ui/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/weex-ui/sponsor/8/website" target="_blank"><img src="https://opencollective.com/weex-ui/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/weex-ui/sponsor/9/website" target="_blank"><img src="https://opencollective.com/weex-ui/sponsor/9/avatar.svg"></a>
+
+
 
 ## License
 
