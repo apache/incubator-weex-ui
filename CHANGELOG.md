@@ -3,6 +3,7 @@
 ## 0.5.2
 * [!] Using `rebind()` to be compatible older version about [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md).
 * [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) allow translation of "cancel" button label
+* [!] Fix the `overlay-can-close` bug about [`wxc-mask`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-mask/README.md).
 
 ## 0.5.0
 * [+] [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-page/README.md)、[wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md)、[wxc-slider-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-slider-bar/README.md) support [Bindingx](https://alibaba.github.io/bindingx/). 🎉🎉
