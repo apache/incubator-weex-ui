@@ -1,7 +1,7 @@
 # 升级日志
 ## 0.5.2
 * [!] 重新使用 `rebind()` 用在适配 [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md) 在 iOS Binding 老版本上面 list 滑动注销 Bug 
-* [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) []允许配置 "cancel" 按钮文案
+* [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) 允许配置 取消 按钮文案
 * [!][`wxc-mask`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-mask/README.md) 支持控制蒙层不可以自动关闭
 
 
