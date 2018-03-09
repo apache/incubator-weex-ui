@@ -17,7 +17,8 @@
     "build": "webpack --progress",
     "watch": "webpack --progress --watch",
     "serve": "anywhere -d build/example/ -p 8888",
-    "start": "npm run build && (npm run serve & npm run watch)"
+    "start": "npm run build && (npm run serve & npm run watch)",
+    "postinstall": "opencollective postinstall"
   },
   "keywords": [
     "Weex Ui",
@@ -72,7 +73,12 @@
     "weex-vue-render": "^1.0.17"
   },
   "dependencies": {
+    "opencollective": "^1.0.3",
     "url-parse": "^1.1.9",
     "weex-bindingx": "0.0.12"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/weex-ui"
   }
 }
