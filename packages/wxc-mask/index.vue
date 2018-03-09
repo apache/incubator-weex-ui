@@ -8,6 +8,7 @@
     <wxc-overlay :show="show && hasOverlay"
                  v-if="show"
                  v-bind="mergeOverlayCfg"
+                 :can-auto-close="overlayCanClose"
                  @wxcOverlayBodyClicking="wxcOverlayBodyClicking"
                  @wxcOverlayBodyClicked="wxcOverlayBodyClicked"></wxc-overlay>
     <div ref="wxc-mask"
