@@ -12,6 +12,14 @@
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1W4ddbCCWBuNjy0FhXXb6EVXa-256-256.png" width="66" height="66"/></td>
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1U4_vcuuSBuNjy1XcXXcYjFXa-512-512.png" width="66" height="66"/></td>
     </tr>
+    <tr style="border: 0;background:#fff">
+        <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB19FfJcTtYBeNjy1XdXXXXyVXa-630-630.png" width="66" height="66" style="border-radius:8px"/></td>
+        <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1UapDcSCWBuNjy0FhXXb6EVXa-1024-1024.png" width="66" height="66"/></td>
+        <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1VIkNcTtYBeNjy1XdXXXXyVXa-300-300.png" width="66" height="66"/></td>
+        <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1q9GtcMmTBuNjy1XbXXaMrVXa-630-630.png" width="66" height="66"/></td>
+        <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1UmqCcHGYBuNjy0FoXXciBFXa-246-246.jpg" width="66" height="66" style="border-radius:8px"/></td>
+        <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1nYK9cNGYBuNjy0FnXXX5lpXa-630-630.png" width="66" height="66" style="border-radius:8px"/></td>
+    </tr>
 </table>
 
 
