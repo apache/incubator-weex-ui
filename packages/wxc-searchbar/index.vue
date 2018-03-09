@@ -31,7 +31,7 @@
              :src="closeIcon"></image>
       <text :class="['search-bar-button','search-bar-button-'+theme]"
             v-if="needShowCancel"
-            @click="cancelClicked">取消 </text>
+            @click="cancelClicked">{{cancelLabel}}</text>
     </div>
     <div :class="['wxc-search-bar','wxc-search-bar-'+theme]"
          v-if="mod==='hasDep'">
@@ -223,6 +223,10 @@
       placeholder: {
         type: String,
         default: '搜索'
+      },
+      cancelLabel: {
+        type: String,
+        default: '取消 '
       },
       depName: {
         type: String,
