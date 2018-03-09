@@ -1,8 +1,12 @@
 # Change Log
 
+## 0.5.2
+* [!] Using `rebind()` to be compatible older version about [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md).
+* [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) allow translation of "cancel" button label
+
 ## 0.5.0
 * [+] [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-page/README.md)、[wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md)、[wxc-slider-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-slider-bar/README.md) support [Bindingx](https://alibaba.github.io/bindingx/). 🎉🎉
-* [-] Remove `rebind()` from [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md).
+* [-] Remove `rebind()` about [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md).
 * [!] Fix the `props` bug about [`wxc-city`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md).
 * [+] Compatible with android and add more demo for [wxc-popover](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md).
 

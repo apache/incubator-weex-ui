@@ -83,6 +83,7 @@
 | mod | `String` |`N`| `default` | 搜索框样式 `default(默认)`/`hasDep(带出发地)` |
 | placeholder | `String` |`N`| `搜索` | input placeholder|
 | input-type | `String` |`N`| `text` | `text，password，url，email，tel`|
+| cancel-label | `String` |`N`| `取消 ` |右侧按钮文案|
 | autofocus | `Boolean` |`N`| `false` | 是否在页面加载时控件自动获得输入焦点 |
 | default-value | `String` |`N`| `-` | 默认值 |
 | disabled | `Boolean` |`N`| `false` | 是否禁用 |
