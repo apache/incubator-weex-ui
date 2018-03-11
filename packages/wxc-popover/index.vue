@@ -35,10 +35,29 @@ const isWeb = typeof window === 'object' && platform.toLowerCase() === 'web';
 
 export default {
   props: {
-    buttons: Array,
-    position: Object,
-    arrowPosition: Object,
-    coverColor: String
+    buttons: {
+      type: Array,
+      default: []
+    },
+    position: {
+      type: Object,
+      default: () => ({
+        x: 0,
+        y: 0
+      })
+    },
+    arrowPosition: {
+      type: Object,
+      default:  () => ({
+        pos: 'top',
+        x: 0,
+        y: 0
+      })
+    },
+    coverColor: {
+      type: String,
+      default: 'rgba(0, 0, 0, 0.4)'
+    }
   },
   data: () => ({
     show: false
@@ -90,14 +109,43 @@ export default {
   },
   methods: {
     wxcPopoverShow() {
+
       this.show = true;
-    },
-    wxcOverlayBodyClicked() {
-      this.show = false;
+
+      const popoverEl = this.$refs['wxc-popover'];
+      console.log(popoverEl)
+      if (!popoverEl) {
+        return;
+      }
+      animation.transition(popoverEl, {
+        styles: {
+          opacity: 0.2,
+          transform: 'translateX(0)'
+        },
+        duration: 500,
+        delay: 0
+      }, () => {
+        this.show = false;
+      });
+
     },
     wxcButtonClicked(index, key) {
       this.$emit('wxcPopoverButtonClicked', { key, index });
-      this.show = false;
+
+
+      const popoverEl = this.$refs['wxc-popover'];
+      if (!popoverEl) {
+        return;
+      }
+      animation.transition(popoverEl, {
+        styles: {
+          opacity: 0.2
+        },
+        duration: 500,
+        delay: 0
+      }, () => {
+        this.show = false;
+      });
     }
   }
 };
