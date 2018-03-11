@@ -13,7 +13,7 @@
                        background-color="#F2F3F4"
                        @wxcMinibarRightButtonClicked="minibarRightButtonClick"
                        right-text="..."></wxc-minibar>
-          <wxc-popover ref="wxc-popover"
+          <wxc-popover ref="wxc-popover1"
                        :buttons="btns"
                        :position="popoverPosition"
                        :arrowPosition="popoverArrowPosition"
@@ -118,7 +118,7 @@
     },
     methods: {
       minibarRightButtonClick () {
-        this.$refs['wxc-popover'].wxcPopoverShow();
+        this.$refs['wxc-popover1'].wxcPopoverShow();
       },
       popoverButtonClicked (obj) {
         modal.toast({ 'message': `key:${obj.key}, index:${obj.index}`, 'duration': 1 });
