@@ -5,9 +5,10 @@
 <template>
   <div>
     <div class="g-cover"
-        v-if="show"
-        @touchend="show = false"
-        :style="coverStyle"></div>
+         ref="wxc-cover"
+         v-if="show"
+         @touchend="hideAction"
+         :style="coverStyle"></div>
     <div ref="wxc-popover"
          class="g-popover"
          v-if="show && buttons"
@@ -108,6 +109,12 @@ export default {
     }
   },
   methods: {
+    isShow(){
+
+      const popoverEl = this.$refs['wxc-popover'];
+      console.log(popoverEl)
+      return this.show;
+    },
     wxcPopoverShow() {
 
       this.show = true;
@@ -131,20 +138,51 @@ export default {
     },
     wxcButtonClicked(index, key) {
       this.$emit('wxcPopoverButtonClicked', { key, index });
+      this.hideAction();
 
-
+    },
+    hideAction(){
       const popoverEl = this.$refs['wxc-popover'];
       if (!popoverEl) {
         return;
       }
+      let _translates=['scale(0)'],
+          _k = 1,
+          _l = this.buttons.length/2*80+20;
+      switch (this.arrowPosition.pos){
+        case "top":
+          _k = -1;
+        case "bottom":
+          _translates[1] = `translateY(${_k*_l}px)`;
+          break;
+        case "left":
+          _k = -1;
+        case "right":
+          _translates[1] = `translateX(${_k*_l}px)`;
+          break;
+      }
       animation.transition(popoverEl, {
         styles: {
-          opacity: 0.2
+          opacity: 0,
+          transform: _translates.join(',')
         },
-        duration: 500,
+        duration: 300,
         delay: 0
       }, () => {
         this.show = false;
+      });
+
+      const coverEl = this.$refs['wxc-cover'];
+      if (!coverEl) {
+        return;
+      }
+      animation.transition(coverEl, {
+        styles: {
+          opacity: 0
+        },
+        duration: 200,
+        delay: 0
+      }, () => {
       });
     }
   }
