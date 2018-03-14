@@ -1,4 +1,7 @@
 # 升级日志
+## 0.5.3
+- [!] [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) 支持不显示定位城市，直接传入`currentLocation`为空即可
+
 ## 0.5.2
 * [!] 重新使用 `rebind()` 用在适配 [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md) 在 iOS Binding 老版本上面 list 滑动注销 Bug 
 * [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) 允许配置 取消 按钮文案
