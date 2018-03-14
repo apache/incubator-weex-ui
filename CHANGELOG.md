@@ -1,4 +1,6 @@
 # Change Log
+## 0.5.3
+- [!] [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) support not to display the location, direct incoming `currentLocation` is empty.
 
 ## 0.5.2
 * [!] Using `rebind()` to be compatible older version about [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md).
