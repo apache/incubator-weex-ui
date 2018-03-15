@@ -6,6 +6,7 @@
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB16oCjX4GYBuNjy0FnXXX5lpXa-300-300.png" width="66" /></td>
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB194hfnsrI8KJjy0FhXXbfnpXa-200-200.png" width="66" /></td>
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1JMw3XMmTBuNjy1XbXXaMrVXa-512-512.jpg" width="66"  style="border-radius:8px"/></td>
+        <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1CjajX1uSBuNjy1XcXXcYjFXa-740-737.png" width="66"  style="border-radius:8px"/></td>
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1a7.HcrGYBuNjy0FoXXciBFXa-240-240.png" width="66"  style="border-radius:8px"/></td>
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB17epRnv6H8KJjy0FjXXaXepXa-200-200.png" width="66"  style="border-radius:8px"/></td>
         <td style="border: 0;"><img src="http://zos.alipayobjects.com/rmsportal/rIOptOAgLVcgQDTPTOTV.png" width="66" /></td>
