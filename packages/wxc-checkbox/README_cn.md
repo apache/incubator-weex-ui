@@ -59,7 +59,6 @@
 
 更多详细情况可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/checkbox/index.vue)
 
-
 ### 可配置参数
 #### Checkbox
 | Prop | Type | Required | Default | Description |
@@ -69,6 +68,8 @@
 | checked | `Boolean` | `N` | `false` | checkbox是否选中 |
 | disabled | `Boolean` | `N` | `false` | checkbox是否不可选 |
 | config | `Object` | `N` | `{}` | 覆盖颜色和 icon|
+| has-top-border | `Boolean` | `N` | `false` |是否显示上边|
+| has-bottom-border | `Boolean` | `N` | `true` |是否显示下边|
 
 - 事件回调
 ```
