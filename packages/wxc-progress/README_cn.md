@@ -28,6 +28,7 @@
       <wxc-progress :value=70
                     bar-color='#9B7B56'
                     :bar-height=16
+                    :bar-radius=16
                     :bar-width=640></wxc-progress>
     </div>
     <div class="btn" @click="uploadFile">
@@ -85,3 +86,4 @@
 | bar-height | `Number` |`N`| `8` | 高度 |
 | bar-width | `Number` |`N`| `600` | 长度 |
 | bar-color | `String` |`N`| `#FFC900` | 颜色 |
+| bar-radius | `Number` |`N`| `0` | 圆角 |

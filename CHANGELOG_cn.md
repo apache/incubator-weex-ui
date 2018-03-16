@@ -2,6 +2,7 @@
 ## 0.5.3
 - [!] [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) 支持不显示定位城市，直接传入`currentLocation`为空即可
 - [+] [wxc-checkbox](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-checkbox/README.md) 新增 `has-top-border`/`has-bottom-border` 参数用于控制是否展示上线border线
+- [+] [wxc-progress](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-progress/README.md) 新增 `bar-radius` 参数用于控制进度条的圆角
 
 ## 0.5.2
 * [!] 重新使用 `rebind()` 用在适配 [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md) 在 iOS Binding 老版本上面 list 滑动注销 Bug 
