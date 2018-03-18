@@ -5,9 +5,10 @@
 <template>
   <div>
     <div class="g-cover"
-        v-if="show"
-        @touchend="show = false"
-        :style="coverStyle"></div>
+         ref="wxc-cover"
+         v-if="show"
+         @touchend="hideAction"
+         :style="coverStyle"></div>
     <div ref="wxc-popover"
          class="g-popover"
          v-if="show && buttons"
@@ -32,26 +33,96 @@
 const animation = weex.requireModule('animation');
 const { platform } = weex.config.env;
 const isWeb = typeof window === 'object' && platform.toLowerCase() === 'web';
+const isIos = platform.toLowerCase() === 'ios';
+const isAndroid = platform.toLowerCase() === 'android';
 
 export default {
   props: {
-    buttons: Array,
-    position: Object,
-    arrowPosition: Object,
-    coverColor: String
+    buttons: {
+      type: Array,
+      default: []
+    },
+    position: {
+      type: Object,
+      default: () => ({
+        x: 0,
+        y: 0
+      })
+    },
+    arrowPosition: {
+      type: Object,
+      default:  () => ({
+        pos: 'top',
+        x: 0,
+        y: 0
+      })
+    },
+    coverColor: {
+      type: String,
+      default: 'rgba(0, 0, 0, 0.4)'
+    },
+    hasAnimation: {
+      type: Boolean,
+      default: true
+    }
   },
   data: () => ({
-    show: false
+    show: false,
+    showIn: false,
+    isIos
   }),
   computed: {
     coverStyle() {
-      return this.coverColor ? { backgroundColor: this.coverColor } : '';
+      return this.coverColor ? { backgroundColor: this.coverColor, opacity:this.hasAnimation||!this.showIn?'0':'1'} : '';
+    },
+    transformOrigin() {
+      let {x=0, y=0, pos='top'} = this.arrowPosition,
+          _origins = [];
+      switch(pos){
+        case 'top':
+        case 'bottom':
+        _origins = [x<0?'right':'left',pos];
+          break;
+        case 'left':
+        case 'right':
+        _origins = [pos,y<0?'bottom':'top'];
+          break;
+      }
+      return _origins.join(' ');
+    },
+    contentTransform() {
+      let {x=0, y=0, pos='top'} = this.arrowPosition,
+          _translates=['scale(0)'];
+          if(x>=0 && x<22){
+            x = 22;
+          }else if(x<0 && x>-22){
+            x =-22;
+          }
+          if(y>=0 && y<22){
+            y = 22;
+          }else if(y<0 && y>-22){
+            y =-22;
+          }
+      switch(pos){
+        case 'top':
+        case 'bottom':
+          _translates[1] = `translateX(${x<0?(x-15):(x+15)}px)`;
+          break;
+        case 'left':
+        case 'right':
+          _translates[1] = `translateY(${y<0?(y-15):(y+15)}px)`
+          break;
+      }
+      return _translates.join(' ');
     },
     contentStyle() {
       let { x = 0, y = 0 } = this.position,
         style = {};
       x < 0 ? (style.right = `${-x}px`) : (style.left = `${x}px`);
       y < 0 ? (style.bottom = `${-y}px`) : (style.top = `${y}px`);
+      style.opacity = this.hasAnimation||!this.showIn?'0':'1';
+      style.transform = this.hasAnimation||!this.showIn?this.contentTransform:'scale(1)';
+      style.transformOrigin = this.transformOrigin;
       return style;
     },
     arrowStyle() {
@@ -90,20 +161,128 @@ export default {
   },
   methods: {
     wxcPopoverShow() {
+      if(!!this.animationLock){
+        return;
+      }
       this.show = true;
+      if(this.hasAnimation){
+        setTimeout(()=>this.wxcPopoverAnimationShow(),isIos?40:0)
+      }else{
+        setTimeout(()=>this.showIn=true,40);
+      }
     },
-    wxcOverlayBodyClicked() {
-      this.show = false;
+    /**
+    * smooth in
+    **/
+    wxcPopoverAnimationShow(){
+      const popoverEl = this.$refs['wxc-popover'];
+      const coverEl = this.$refs['wxc-cover'];
+      if (!coverEl || !popoverEl) {
+        return;
+      }
+      this.setAnimationLock();
+      let a1End = false,a2End = false;
+      animation.transition(popoverEl, {
+        styles: {
+          opacity: 1,
+          transform: "scale(1)",
+          transformOrigin: this.transformOrigin
+        },
+        delay:0,
+        duration: 250,
+        timingFunction: 'ease-out'
+      }, (e) => {
+        a1End = true;
+        if(a1End && a2End){
+          this.animationLock = false
+        }
+      });
+
+      animation.transition(coverEl, {
+        styles: {
+          opacity: 1
+        },
+        delay:0,
+        duration: 250,
+        timingFunction: 'ease-in'
+      }, (e) => {
+        a2End = true;
+        if(a1End && a2End){
+          this.animationLock = false
+        }
+      });
     },
     wxcButtonClicked(index, key) {
+      if(!!this.animationLock){
+        return;
+      }
       this.$emit('wxcPopoverButtonClicked', { key, index });
-      this.show = false;
+      this.hideAction();
+    },
+    /**
+    * 隐藏操作
+    */
+    hideAction(){
+      if(!!this.animationLock){
+        return;
+      }
+      if(this.hasAnimation){
+        this.setAnimationLock()
+        const popoverEl = this.$refs['wxc-popover'];
+        const coverEl = this.$refs['wxc-cover'];
+        if (!popoverEl || !coverEl) {
+          return;
+        }
+        let a1End = false,a2End = false;
+        animation.transition(popoverEl, {
+          styles: {
+            opacity: 0,
+            transform: this.contentTransform,
+            transformOrigin: this.transformOrigin
+          },
+          duration: 250
+        }, () => {
+          a1End = true;
+          if(a1End && a2End){
+            this.show = false;
+            this.showIn = false;
+            this.animationLock = false
+          }
+        });
+        animation.transition(coverEl, {
+          styles: {
+            opacity: 0
+          },
+          duration: 250
+        }, () => {
+          a2End = true;
+          if(a1End && a2End){
+            this.show = false;
+            this.showIn = false;
+            this.animationLock = false
+          }
+        });
+      }else {
+        this.show = false;
+        this.showIn = false;
+      }
+    },
+    /**
+    * 设置动画锁
+    */
+    setAnimationLock(ms=300){
+      this.animationLock = true;
+      // setTimeout(()=>this.animationLock = false,ms)
     }
+
   }
 };
 </script>
 
 <style scoped>
+.hide{
+  opacity: 0;
+}
 .g-cover {
   position: fixed;
   top: 0;
@@ -122,7 +301,6 @@ export default {
   width: 30px;
   height: 30px;
   background-color: #fff;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.21);
 }
 .u-popover-inner {
   display: block;
