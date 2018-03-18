@@ -1,4 +1,8 @@
 # Change Log
+## 0.5.3
+- [!] [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) support not to display the location, direct incoming `currentLocation` is empty.
+- [+] [wxc-checkbox](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-checkbox/README.md) add `has-top-border`/`has-bottom-border` for whether show top-border or bottom-border.
+- [+] [wxc-progress](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-progress/README.md) add `bar-radius` for setting border-radius. 
 
 ## 0.5.2
 * [!] Using `rebind()` to be compatible older version about [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md).

@@ -28,6 +28,7 @@
       <wxc-progress :value=70
                     bar-color='#9B7B56'
                     :bar-height=16
+                    :bar-radius=16
                     :bar-width=640></wxc-progress>
     </div>
     <div class="btn" @click="uploadFile">
@@ -84,4 +85,4 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | value | `Number` |`Y`| `0` | percent `(0-100)` |
 | bar-height | `Number` |`N`| `8` | progress bar height |
 | bar-width | `Number` |`N`| `600` | progress bar width |
-| bar-color | `String` |`N`| `#FFC900` | progress bar color |
+| bar-radius | `number` |`n`| `0` | progress bar radius |

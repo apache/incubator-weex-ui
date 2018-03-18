@@ -3,6 +3,7 @@
 
 <template>
   <wxc-cell :has-top-border="hasTopBorder"
+            :has-bottom-border="hasBottomBorder"
             @wxcCellClicked="wxcCellClicked"
             :accessible="true"
             :aria-label="`${title},状态为${checked ? '已选中' : '未选中'},${disabled ? '不可更改' : '点击可切换'}`">
@@ -36,6 +37,10 @@
       hasTopBorder: {
         type: Boolean,
         default: false
+      },
+      hasBottomBorder: {
+        type: Boolean,
+        default: true
       },
       title: {
         type: String,
