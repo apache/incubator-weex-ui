@@ -21,9 +21,35 @@
           ></wxc-popover>
         </div>
 
+        <div class="demo demo3">
+          <wxc-button text="向右弹出|无动画"
+                      :btnStyle="btn3Style"
+                      type="normal"
+                      @wxcButtonClicked="wxcButtonClicked('wxc-popover3')"></wxc-button>
+          <wxc-popover ref="wxc-popover3"
+                       :buttons="btns3"
+                       :position="popoverPosition3"
+                       :hasAnimation="false"
+                       :arrowPosition="popoverArrowPosition3"
+                       @wxcPopoverButtonClicked="popoverButtonClicked"
+          ></wxc-popover>
+
+          <wxc-button text="向左弹出"
+                      :btnStyle="btn4Style"
+                      type="highlight"
+                      @wxcButtonClicked="wxcButtonClicked('wxc-popover4')"></wxc-button>
+          <wxc-popover ref="wxc-popover4"
+                       :buttons="btns4"
+                       :position="popoverPosition4"
+                       :arrowPosition="popoverArrowPosition4"
+                       @wxcPopoverButtonClicked="popoverButtonClicked"
+          ></wxc-popover>
+
+        </div>
+
         <div class="demo demo2">
           <wxc-button text="向上弹出"
-                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+                      @wxcButtonClicked="wxcButtonClicked('wxc-popover2')"></wxc-button>
           <wxc-popover ref="wxc-popover2"
                        :buttons="btns2"
                        :position="popoverPosition2"
@@ -46,19 +72,18 @@
     right: 0;
     background-color: #FFFFFF;
   }
-
-  .scroller {
-    flex: 1;
-  }
-
   .demo {
     width: 750px;
-    height: 180px;
     padding-top: 60px;
   }
 
   .demo2 {
-    margin-top: 200px;
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+  .demo3 {
+    position: relative;
+    margin-top: 50px;
     margin-left: 20px;
   }
 </style>
@@ -70,7 +95,7 @@
 
   const modal = weex.requireModule('modal');
   import { setTitle } from '../_mods/set-nav';
-  import { RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
+  import {WEEXUI_ICON, RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
 
   export default {
     components: { Title, Category, WxcMinibar, WxcButton, WxcPopover },
@@ -110,8 +135,33 @@
           key: 's3'
         }
       ],
-      popoverPosition2: { x: 200, y: 390 },
+      popoverPosition2: { x: 200, y: 520 },
       popoverArrowPosition2: { pos: 'bottom', x: 160 },
+      btns3: [
+        { icon: WEEXUI_ICON, text: 'Item 1', key: 's1'},
+        { icon: WEEXUI_ICON, text: 'Item 2', key: 's2'},
+        { icon: WEEXUI_ICON, text: 'Item 3', key: 's3'}
+      ],
+      popoverPosition3: { x: 325, y: 550 },
+      popoverArrowPosition3: { pos: 'left', y: 0 },
+      btns4: [
+        { icon: WEEXUI_ICON, text: 'Item 1', key: 's1'},
+        { icon: WEEXUI_ICON, text: 'Item 2', key: 's2'},
+        { icon: WEEXUI_ICON, text: 'Item 3', key: 's3'}
+      ],
+      popoverPosition4: { x: 175, y: 380 },
+      popoverArrowPosition4: { pos: 'right', y: -50 },
+      btn3Style:{
+        height: '200px',
+        width: '300px'
+      },
+      btn4Style:{
+        position: 'absolute',
+        right: '40px',
+        top: '60px',
+        height: '200px',
+        width: '300px'
+      }
     }),
     created () {
       setTitle('Popover')
@@ -123,8 +173,8 @@
       popoverButtonClicked (obj) {
         modal.toast({ 'message': `key:${obj.key}, index:${obj.index}`, 'duration': 1 });
       },
-      wxcButtonClicked () {
-        this.$refs['wxc-popover2'].wxcPopoverShow();
+      wxcButtonClicked (ref='wxc-popover2') {
+        this.$refs[ref].wxcPopoverShow();
       }
     }
   };
