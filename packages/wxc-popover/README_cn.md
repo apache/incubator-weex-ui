@@ -79,7 +79,7 @@
 |-------------|------------|--------|-----|-----|
 | buttons | `Array` |`Y`|`[]` | 气泡按钮数据列表，如 `[{icon: 'http://cdn.zwwill.com/weexui/icon/scan.png',text:'Help',key:'key-help'}]` |
 | position | `Object` |`Y`|`{x:0,y:0}` | 气泡位置，x>0 为左边距，x<0 为右边距，y同理 |
-| arrowPosition | `Object` |`Y`|`{pos:'top',x:0,y:0}` | 气泡箭头位置，pos 为'top|bottom|left|right'，配合x，y定位箭头位置  |
+| arrowPosition | `Object` |`Y`|`{pos:'top',x:0,y:0}` | 气泡箭头位置，pos 为'top,bottom,left,right'，配合x，y定位箭头位置  |
 | coverColor | `String` |`N`|`rgba(0,0,0,0.4)`| 遮罩层颜色，如 `rgba(0,0,0,0.4)`，`rgb(0,0,0)`，`#000` |
 
 ### 调用显示
