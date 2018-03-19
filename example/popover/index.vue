@@ -13,12 +13,6 @@
                        background-color="#F2F3F4"
                        @wxcMinibarRightButtonClicked="minibarRightButtonClick"
                        right-text="..."></wxc-minibar>
-          <wxc-popover ref="wxc-popover1"
-                       :buttons="btns"
-                       :position="popoverPosition"
-                       :arrowPosition="popoverArrowPosition"
-                       @wxcPopoverButtonClicked="popoverButtonClicked"
-          ></wxc-popover>
         </div>
 
         <div class="demo demo3">
@@ -26,38 +20,51 @@
                       :btnStyle="btn3Style"
                       type="normal"
                       @wxcButtonClicked="wxcButtonClicked('wxc-popover3')"></wxc-button>
-          <wxc-popover ref="wxc-popover3"
-                       :buttons="btns3"
-                       :position="popoverPosition3"
-                       :hasAnimation="false"
-                       :arrowPosition="popoverArrowPosition3"
-                       @wxcPopoverButtonClicked="popoverButtonClicked"
-          ></wxc-popover>
 
           <wxc-button text="向左弹出"
                       :btnStyle="btn4Style"
                       type="highlight"
                       @wxcButtonClicked="wxcButtonClicked('wxc-popover4')"></wxc-button>
-          <wxc-popover ref="wxc-popover4"
-                       :buttons="btns4"
-                       :position="popoverPosition4"
-                       :arrowPosition="popoverArrowPosition4"
-                       @wxcPopoverButtonClicked="popoverButtonClicked"
-          ></wxc-popover>
 
         </div>
 
         <div class="demo demo2">
           <wxc-button text="向上弹出"
                       @wxcButtonClicked="wxcButtonClicked('wxc-popover2')"></wxc-button>
-          <wxc-popover ref="wxc-popover2"
-                       :buttons="btns2"
-                       :position="popoverPosition2"
-                       :arrowPosition="popoverArrowPosition2"
-                       @wxcPopoverButtonClicked="popoverButtonClicked"
-          ></wxc-popover>
         </div>
 
+        <!-- demo 1 pop -->
+        <wxc-popover ref="wxc-popover1"
+                     :buttons="btns"
+                     :position="popoverPosition"
+                     :arrowPosition="popoverArrowPosition"
+                     @wxcPopoverButtonClicked="popoverButtonClicked"
+        ></wxc-popover>
+
+        <!-- demo 2 pop -->
+        <wxc-popover ref="wxc-popover2"
+                     :buttons="btns2"
+                     :position="popoverPosition2"
+                     :arrowPosition="popoverArrowPosition2"
+                     @wxcPopoverButtonClicked="popoverButtonClicked"
+        ></wxc-popover>
+
+        <!-- demo 3 pop -->
+        <wxc-popover ref="wxc-popover3"
+                     :buttons="btns3"
+                     :position="popoverPosition3"
+                     :hasAnimation="false"
+                     :arrowPosition="popoverArrowPosition3"
+                     @wxcPopoverButtonClicked="popoverButtonClicked"
+        ></wxc-popover>
+
+        <!-- demo 4 pop -->
+        <wxc-popover ref="wxc-popover4"
+                     :buttons="btns4"
+                     :position="popoverPosition4"
+                     :arrowPosition="popoverArrowPosition4"
+                     @wxcPopoverButtonClicked="popoverButtonClicked"
+        ></wxc-popover>
       </div>
     </scroller>
   </div>

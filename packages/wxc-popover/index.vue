@@ -3,7 +3,7 @@
 <!--A popover box with customized contents.-->
 
 <template>
-  <div>
+  <div class="wrapper">
     <div class="g-cover"
          ref="wxc-cover"
          v-if="show"
@@ -31,11 +31,6 @@
 
 <script>
 const animation = weex.requireModule('animation');
-const { platform } = weex.config.env;
-const isWeb = typeof window === 'object' && platform.toLowerCase() === 'web';
-const isIos = platform.toLowerCase() === 'ios';
-const isAndroid = platform.toLowerCase() === 'android';
-
 export default {
   props: {
     buttons: {
@@ -68,8 +63,7 @@ export default {
   },
   data: () => ({
     show: false,
-    showIn: false,
-    isIos
+    showIn: false
   }),
   computed: {
     coverStyle() {
@@ -166,7 +160,7 @@ export default {
       }
       this.show = true;
       if(this.hasAnimation){
-        setTimeout(()=>this.wxcPopoverAnimationShow(),isIos?40:0)
+        setTimeout(()=>this.wxcPopoverAnimationShow(),40)
       }else{
         setTimeout(()=>this.showIn=true,40);
       }
@@ -270,9 +264,8 @@ export default {
     /**
     * 设置动画锁
     */
-    setAnimationLock(ms=300){
+    setAnimationLock(){
       this.animationLock = true;
-      // setTimeout(()=>this.animationLock = false,ms)
     }
 
   }
@@ -280,8 +273,8 @@ export default {
 </script>
 
 <style scoped>
-.hide{
-  opacity: 0;
+.wrapper{
+  z-index: 999;
 }
 .g-cover {
   position: fixed;
@@ -290,10 +283,12 @@ export default {
   left: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 .g-popover {
   position: fixed;
   padding:15px;
+  z-index: 10;
 }
 .u-popover-arrow {
   position: absolute;
