@@ -188,8 +188,7 @@
           width: `${this.length}px`,
           height: `${this.height}px`,
           flexDirection: 'row',
-          backgroundColor: this.invalidColor,
-          overflow: 'hidden'
+          backgroundColor: this.invalidColor
         };
       },
       valueBarStyle () {

@@ -98,7 +98,7 @@
 | slider-id | `Number` |`Y`| `1` | slider的id，避免页面多个ep-slider导致获取错误|
 | card-length | `Number` |`Y`| `1` |  slider中item的数量|
 | select-index | `Number` |`N`| `0` | 默认突出item的index|
-| container-s | `Object` |`Y`| `{position: 'relative',width: 750,height: 352,overflow: 'hidden'}` |  包裹容器的样式|
+| container-s | `Object` |`Y`| `{position: 'relative',width: 750,height: 352}` |  包裹容器的样式|
 | card-s | `Object` | `Y`|`{width: 360,height: 300,spacing: 0,scale: 0.75}` | item容器的样式|
 | auto-play | `Boolean` | `N`|`false` |是否需要自动播放|
 | interval | `Number` | `N`|`1200` |自动播放时候的间隔|
