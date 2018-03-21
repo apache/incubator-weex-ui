@@ -1,7 +1,7 @@
 ## FAQ
 
 #### wxc-ep-slider、wxc-slider-bar Can't slide
-- The two components in Weex Ui now depend on an innovative interaction feature called [BindingX](https://alibaba.github.io/bindingx/), And this feature is already open source, please refer to github for import.
+- The two components in Weex Ui now depend on an innovative interaction feature called [BindingX](https://alibaba.github.io/bindingx/), And this feature is already open source, please refer to github [to import](https://github.com/alibaba/bindingx#installation).
 
 #### Module not found: Error: Can't resolve 'weex-ui/packages/wxc-button/style.css'
 - This error should be the `babel-plugin-component` lack of style configuration, You can refer to [Weex-toolkit](https://alibaba.github.io/weex-ui/#/?id=weex-toolkit) to fix it.
