@@ -48,9 +48,9 @@ const getCopyConfig = () => {
 
 const example = getEntry('example');
 const entry = Object.assign(
-  {
-    index: './index.js'
-  },
+  // {
+  //   index: './index.js'
+  // },
   example
 );
 
@@ -64,7 +64,6 @@ const plugins = [
   }),
   new HappyPack({
     id: 'babel',
-    cache: false,
     verbose: true,
     loaders: ['babel-loader?cacheDirectory=true'],
     threadPool: happyThreadPool

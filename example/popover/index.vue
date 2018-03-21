@@ -89,7 +89,6 @@
     margin-left: 20px;
   }
   .demo3 {
-    position: relative;
     margin-top: 50px;
     margin-left: 20px;
   }

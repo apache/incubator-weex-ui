@@ -295,15 +295,13 @@ export default {
   border-radius: 4px;
   width: 30px;
   height: 30px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .u-popover-inner {
-  display: block;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 .i-btn {
-  display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -312,10 +310,10 @@ export default {
   padding-left: 20px;
   padding-right: 20px;
   border-bottom-width: 1px;
-  border-bottom-color: #ddd;
+  border-bottom-color: #dddddd;
 }
 .i-btn-noborder {
-  border-bottom-color: #fff;
+  border-bottom-color: #ffffff;
 }
 .btn-icon {
   width: 32px;
@@ -327,7 +325,6 @@ export default {
   height: 80px;
   font-size: 30px;
   line-height: 80px;
-  text-align: left;
 }
 .text-align-center {
   text-align: center;

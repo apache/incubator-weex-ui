@@ -35,7 +35,6 @@
     text-align: center;
     color: #000000;
     font-size: 28px;
-    font-weight: normal;
   }
 
   .text-selected {
