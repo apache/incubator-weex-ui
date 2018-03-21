@@ -59,8 +59,7 @@
         default: () => ({
           position: 'relative',
           width: 750,
-          height: 352,
-          overflow: 'hidden'
+          height: 352
         })
       },
       cardS: {
