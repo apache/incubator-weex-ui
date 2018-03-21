@@ -132,7 +132,6 @@
 
   .text-title {
     lines: 2;
-    overflow:hidden;
     line-height: 30px;
     text-overflow: ellipsis;
     text-align: center;

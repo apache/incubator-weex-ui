@@ -93,7 +93,6 @@
 
   .search-bar-input-yellow {
     background-color: #fff6d6;
-    placeholder-color: #666666;
   }
 
   .search-bar-ICON {

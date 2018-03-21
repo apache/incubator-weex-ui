@@ -556,7 +556,6 @@
     border-radius: 28px;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
     position: absolute;
     left: 0;
     bottom: 0;
