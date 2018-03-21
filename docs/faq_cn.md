@@ -1,7 +1,7 @@
 ## 常见问题
 
 #### wxc-ep-slider、wxc-slider-bar 不能正常滑动
-- 目前 Weex Ui 中这两个组件依赖于一个创新交互特性 [BindingX](https://alibaba.github.io/bindingx/)，目前已经开源，请参考仓库进行引入。
+- 目前 Weex Ui 中这两个组件依赖于一个创新交互特性 [BindingX](https://alibaba.github.io/bindingx/)，目前已经开源，Native 请参考仓库进行 [引入](https://github.com/alibaba/bindingx#installation)。
 
 #### Module not found: Error: Can't resolve 'weex-ui/packages/wxc-button/style.css'
 - 此错误应该babel配置babel-plugin-component时候缺少style配置，详细可见 [Weex-toolkit](https://alibaba.github.io/weex-ui/#/cn/?id=weex-toolkit)
