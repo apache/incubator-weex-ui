@@ -65,6 +65,7 @@
   .tab-page-wrap {
     width: 750px;
     flex: 1;
+    overflow: hidden;
   }
 
   .tab-container {
