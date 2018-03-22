@@ -122,7 +122,7 @@
 <script>
   const modal = weex.requireModule('modal');
 
-  import { WxcEpSlider, WxcPanItem, Utils } from '../../index';
+  import { WxcEpSlider, WxcPanItem, BindEnv } from '../../index';
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
   import { setTitle } from '../_mods/set-nav';
@@ -153,7 +153,7 @@
         this.$refs['wxc-ep-slider'].manualSetPage(1);
       },
       wxcPanItemPan (e) {
-        if (Utils.env.supportsEBForAndroid()) {
+        if (BindEnv.supportsEBForAndroid()) {
           this.$refs['wxc-ep-slider'].clearAutoPlay();
           this.$refs['wxc-ep-slider'].bindExp(e.element)
         }

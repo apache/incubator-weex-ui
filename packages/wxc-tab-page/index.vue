@@ -94,6 +94,7 @@
   const swipeBack = weex.requireModule('swipeBack');
 
   import Utils from '../utils';
+  import BindEnv from '../utils/bind-env';
   import Binding from 'weex-bindingx';
 
   export default {
@@ -182,7 +183,7 @@
       if (swipeBack && swipeBack.forbidSwipeBack) {
         swipeBack.forbidSwipeBack(true);
       }
-      if (Utils.env.supportsEBForIos() && this.isTabView) {
+      if (BindEnv.supportsEBForIos() && this.isTabView) {
         const tabPageEl = this.$refs['tab-page-wrap'];
         Binding.prepare && Binding.prepare({
           anchor: tabPageEl.ref,
@@ -206,10 +207,9 @@
         this.setPage(page);
       },
       startHandler () {
-        if (Utils.env.supportsEBForIos() && this.isTabView) {
+        if (BindEnv.supportsEBForIos() && this.isTabView) {
           this.bindExp(this.$refs['tab-page-wrap']);
         }
-
       },
       bindExp (element) {
         if (element && element.ref) {

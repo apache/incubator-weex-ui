@@ -30,6 +30,7 @@
   const swipeBack = weex.requireModule('swipeBack');
   const animation = weex.requireModule('animation');
   import Utils from '../utils';
+  import BindEnv from '../utils/bind-env';
   import Binding from 'weex-bindingx';
 
   export default {
@@ -107,7 +108,7 @@
 
       setTimeout(() => {
         const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
-        if (Utils.env.supportsEB() && sliderCtn && sliderCtn.ref) {
+        if (BindEnv.supportsEB() && sliderCtn && sliderCtn.ref) {
           Binding.prepare && Binding.prepare({
             anchor: sliderCtn.ref,
             eventType: 'pan'
@@ -118,7 +119,7 @@
     },
     methods: {
       onPanStart (e) {
-        if (Utils.env.supportsEB()) {
+        if (BindEnv.supportsEB()) {
           return;
         }
         this.clearAutoPlay();
@@ -126,7 +127,7 @@
         this.startTime = Date.now();
       },
       onPanMove (e) {
-        if (Utils.env.supportsEB()) {
+        if (BindEnv.supportsEB()) {
           return;
         }
         const moveX = e.changedTouches[0].clientX - this.startX;
@@ -184,7 +185,7 @@
         }
       },
       onEpPanStart (e) {
-        if (Utils.env.supportsEB() && e.state === 'start') {
+        if (BindEnv.supportsEB() && e.state === 'start') {
           this.clearAutoPlay();
           setTimeout(() => {
             const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
@@ -193,7 +194,7 @@
         }
       },
       onPanEnd (e) {
-        if (Utils.env.supportsEB()) {
+        if (BindEnv.supportsEB()) {
           return;
         }
         this.panEnd(e);
