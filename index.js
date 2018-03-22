@@ -4,6 +4,7 @@
  */
 
 import Utils from './packages/utils';
+import BindEnv from './packages/utils/bind-env';
 import WxcButton from './packages/wxc-button';
 import WxcCell from './packages/wxc-cell';
 import WxcCity from './packages/wxc-city';
@@ -43,6 +44,7 @@ import WxcTag from './packages/wxc-tag';
 
 export {
   Utils,
+  BindEnv,
   WxcButton,
   WxcCell,
   WxcCity,

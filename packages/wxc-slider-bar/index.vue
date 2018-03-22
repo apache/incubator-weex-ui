@@ -47,11 +47,11 @@
 
 <script>
   import Utils from '../utils';
+  import BindEnv from '../utils/bind-env';
   import Binding from 'weex-bindingx';
 
   const animation = weex.requireModule('animation');
   const dom = weex.requireModule('dom');
-  const modal = weex.requireModule('modal');
 
   export default {
     data: () => ({
@@ -147,7 +147,7 @@
       }
 
       // 是否支持expresstionBinding
-      if (Utils.env.supportsEB() && Binding.prepare) {
+      if (BindEnv.supportsEB() && Binding.prepare) {
         this.block1 && Binding.prepare({
           anchor: this.block1.ref,
           eventType: 'pan'

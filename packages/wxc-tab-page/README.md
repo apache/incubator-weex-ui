@@ -75,7 +75,7 @@
 </style>
 <script>
   const dom = weex.requireModule('dom');
-  import { WxcTabPage, WxcPanItem, Utils } from 'weex-ui';
+  import { WxcTabPage, WxcPanItem, Utils, BindEnv } from 'weex-ui';
 
   // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js
   import Config from './config'
@@ -106,7 +106,7 @@
         }
       },
       wxcPanItemPan (e) {
-        if (Utils.env.supportsEBForAndroid()) {
+        if (BindEnv.supportsEBForAndroid()) {
           this.$refs['wxc-tab-page'].bindExp(e.element);
         }
       }
@@ -219,11 +219,11 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
     </pan-item>
   
 // Import
-import { WxcPanItem } from 'weex-ui';
+import { WxcPanItem, BindEnv } from 'weex-ui';
 
 //Callback
 wxcPanItemPan (e) {
-    if (Utils.env.supportsEBForAndroid()) {
+    if (BindEnv.supportsEBForAndroid()) {
       this.$refs['wxc-tab-page'].bindExp(e.element);
     }
  }

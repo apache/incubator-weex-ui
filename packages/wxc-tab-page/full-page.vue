@@ -94,8 +94,9 @@
   const expressionBinding = weex.requireModule('expressionBinding');
 
   import Utils from '../utils';
+  import BindEnv from '../utils/bind-env';
 
-  const supportsEBForIos = Utils.env.supportsEBForIos();
+  const supportsEBForIos = BindEnv.supportsEBForIos();
   const isIos = Utils.env.isIOS();
 
   export default {
