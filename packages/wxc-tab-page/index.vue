@@ -73,6 +73,7 @@
 
   .tab-page-wrap {
     width: 750px;
+    overflow: hidden;
   }
 
   .tab-container {
@@ -95,7 +96,7 @@
 
   import Utils from '../utils';
   import BindEnv from '../utils/bind-env';
-  import Binding from 'weex-bindingx';
+  import Binding from 'weex-bindingx/lib/index.weex.js';
 
   export default {
     props: {

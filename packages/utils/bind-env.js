@@ -2,8 +2,8 @@
  * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 18/03/22
  */
-import Binding from 'weex-bindingx';
-import Utils from "./index";
+import Binding from 'weex-bindingx/lib/index.weex.js';
+import Utils from './index';
 
 const BindEnv = {
   supportsEB () {

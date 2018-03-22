@@ -31,7 +31,7 @@
   const animation = weex.requireModule('animation');
   import Utils from '../utils';
   import BindEnv from '../utils/bind-env';
-  import Binding from 'weex-bindingx';
+  import Binding from 'weex-bindingx/lib/index.weex.js';
 
   export default {
     props: {

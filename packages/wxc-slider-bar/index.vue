@@ -48,7 +48,7 @@
 <script>
   import Utils from '../utils';
   import BindEnv from '../utils/bind-env';
-  import Binding from 'weex-bindingx';
+  import Binding from 'weex-bindingx/lib/index.weex.js';
 
   const animation = weex.requireModule('animation');
   const dom = weex.requireModule('dom');
@@ -547,6 +547,7 @@
 
   .value-bar {
     height: 4px;
+    overflow: hidden;
   }
 
   .slide-block {
