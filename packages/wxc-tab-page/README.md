@@ -2,7 +2,7 @@
 
 > Tab page make it easy to switch between different views
 
-!> The effect of sliding with hand is based on [BindingX](https://alibaba.github.io/bindingx/) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6).
+!> The effect of sliding with hand is based on [BindingX](https://alibaba.github.io/bindingx/) feature. Make sure your app [install it](https://github.com/alibaba/bindingx#installation).
  
 ### Rule
 - Allow configuration of the head, support `Binding` gesture to follow the effect.
@@ -201,6 +201,8 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 
 
 ## wxc-pan-item
+
+!>In `weex-ui` V0.6.0 version above, in order to reduce packaging size, `Binding related judgments` are transferred from `Utils.env` to `BindEnv`.
 
 #### API
 
