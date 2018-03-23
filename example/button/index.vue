@@ -19,13 +19,13 @@
         <wxc-button text="确定"
                     type="highlight"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">primary</text>
+        <text class="button-text">blueWarning</text>
         <wxc-button text="确定"
-                    type="primary"
+                    type="blueWarning"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">primaryDisabled</text>
+        <text class="button-text">blueWarningDisabled</text>
         <wxc-button text="确定"
-                    type="primary"
+                    type="blueWarning"
                     :disabled="true"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
         <text class="button-text">warning</text>
