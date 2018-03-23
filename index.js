@@ -29,6 +29,7 @@ import WxcPopover from './packages/wxc-popover';
 import WxcPopup from './packages/wxc-popup';
 import WxcProgress from './packages/wxc-progress';
 import WxcRadio from './packages/wxc-radio';
+import WxcRefresher from './packages/wxc-refresher';
 import WxcResult from './packages/wxc-result';
 import WxcRichText from './packages/wxc-rich-text';
 import WxcSpecialRichText from './packages/wxc-special-rich-text';
@@ -68,6 +69,7 @@ export {
   WxcPopup,
   WxcProgress,
   WxcRadio,
+  WxcRefresher,
   WxcResult,
   WxcRichText,
   WxcSpecialRichText,
