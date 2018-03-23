@@ -39,7 +39,7 @@ export default {
         ...btnStyle
       };
       if (disabled) {
-          if (type=='primary' || type=='warning') {
+          if (type=='blueWarning' || type=='warning') {
               return {
                 ...mrBtnStyle,
                 opacity:0.2,

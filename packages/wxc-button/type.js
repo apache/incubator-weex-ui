@@ -15,7 +15,7 @@ export const STYLE_MAP = {
     borderColor: '#EE9900',
     borderWidth: '1px'
   },
-  primary: {
+  blueWarning: {
     backgroundColor: '#0F8DE8'
   },
   warning: {
