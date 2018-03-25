@@ -38,13 +38,24 @@ export default {
         ...STYLE_MAP[type],
         ...btnStyle
       };
-      return disabled
-        ? {
-            ...mrBtnStyle,
-            backgroundColor: 'rgba(0, 0, 0, 0.1)',
-            borderWidth: 0
+      if (disabled) {
+          if (type=='blueWarning' || type=='warning') {
+              return {
+                ...mrBtnStyle,
+                opacity:0.2,
+                borderWidth: 0
+              }
+          } else {
+              return {
+                ...mrBtnStyle,
+                backgroundColor: 'rgba(0, 0, 0, 0.1)',
+                borderWidth: 0
+              }
           }
-        : mrBtnStyle;
+      }
+
+
+      return mrBtnStyle;
     },
     mrTextStyle() {
       const { type, disabled, textStyle } = this;

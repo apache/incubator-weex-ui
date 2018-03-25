@@ -14,6 +14,12 @@ export const STYLE_MAP = {
     backgroundColor: '#FFFFFF',
     borderColor: '#EE9900',
     borderWidth: '1px'
+  },
+  blueWarning: {
+    backgroundColor: '#0F8DE8'
+  },
+  warning: {
+    backgroundColor: '#D64848'
   }
 };
 
@@ -29,5 +35,11 @@ export const TEXT_STYLE_MAP = {
   },
   highlight: {
     color: '#EE9900'
+  },
+  primary: {
+    color: '#FFFFFF'
+  },
+  warning: {
+    color: '#FFFFFF'
   }
 };
