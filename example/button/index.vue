@@ -5,7 +5,7 @@
   <div class="wxc-demo">
     <scroller class="scroller">
       <title title="wxc-button"></title>
-      <category title="五种基本样式"></category>
+      <category title="类型样式"></category>
       <div class="button-list">
         <text class="button-text">normal</text>
         <wxc-button text="确定"
@@ -45,6 +45,57 @@
         <wxc-button text="确定"
                     type="yellow"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+      </div>
+      <category title="尺寸"></category>
+      <div>
+        <text class="button-size-text">大尺寸</text>
+        <div class="size">
+          <wxc-button text="确定"
+                      type="blueWarning"
+                      size="big"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      type="blueWarning"
+                      size="big"
+                      :disabled="true"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+
+        </div>
+        <text class="button-size-text">中尺寸</text>
+        <div class="size">
+          <wxc-button text="确定"
+                      type="normal"
+                      size="medium"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      :disabled="true"
+                      size="medium"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      type="highlight"
+                      size="medium"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+        </div>
+        <text class="button-size-text">小尺寸</text>
+        <div class="size">
+          <wxc-button text="确定"
+                      type="warning"
+                      size="small"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      type="warning"
+                      size="small"
+                      :disabled="true"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      type="red"
+                      size="small"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      type="yellow"
+                      size="small"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+        </div>
       </div>
       <category title="自定义样式"></category>
       <wxc-cell :has-top-border="false" title="按钮的文字">
@@ -141,6 +192,13 @@
     width: 500px;
     text-align: right;
     font-size: 28px;
+  }
+  .size {
+    flex-direction: row;
+    justify-content:space-around;
+  }
+  .button-size-text {
+    padding-left: 12px;
   }
 </style>
 

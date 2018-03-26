@@ -12,13 +12,17 @@
 </template>
 
 <script>
-import { STYLE_MAP, TEXT_STYLE_MAP } from './type';
+import { STYLE_MAP, TEXT_STYLE_MAP, BUTTON_STYLE_MAP, TEXT_FONTSIZE_STYLE_MAP } from './type';
 
 export default {
   props: {
     text: {
       type: String,
       default: '确认'
+    },
+    size: {
+      type: String,
+      default: 'none'
     },
     type: {
       type: String,
@@ -33,10 +37,11 @@ export default {
   },
   computed: {
     mrBtnStyle() {
-      const { type, disabled, btnStyle } = this;
+      const { type, disabled, btnStyle, size } = this;
       const mrBtnStyle = {
         ...STYLE_MAP[type],
-        ...btnStyle
+        ...btnStyle,
+        ...BUTTON_STYLE_MAP[size]
       };
       if (disabled) {
           if (type=='blueWarning' || type=='warning') {
@@ -58,8 +63,8 @@ export default {
       return mrBtnStyle;
     },
     mrTextStyle() {
-      const { type, disabled, textStyle } = this;
-      const mrTextStyle = { ...TEXT_STYLE_MAP[type], ...textStyle };
+      const { type, disabled, textStyle,size } = this;
+      const mrTextStyle = { ...TEXT_STYLE_MAP[type], ...textStyle, ...TEXT_FONTSIZE_STYLE_MAP[size] };
       return disabled ? { ...mrTextStyle, color: '#FFFFFF' } : mrTextStyle;
     }
   },
