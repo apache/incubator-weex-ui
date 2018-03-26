@@ -44,7 +44,7 @@
   import Utils from '../utils';
 
   const isWeb = Utils.env.isWeb();
-  
+
   const dom = weex.requireModule('dom');
 
   import WxcMinibar from '../wxc-minibar'
@@ -54,7 +54,7 @@
     props: {
       selectedDate: Array,
       animationType: {
-        type: Object,
+        type: String,
         default: 'push'
       },
       dateRange: {
