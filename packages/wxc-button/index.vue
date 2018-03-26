@@ -43,24 +43,16 @@ export default {
         ...btnStyle,
         ...BUTTON_STYLE_MAP[size]
       };
-      if (disabled) {
-          if (type=='blueWarning' || type=='warning') {
-              return {
-                ...mrBtnStyle,
-                opacity:0.2,
-                borderWidth: 0
-              }
-          } else {
-              return {
-                ...mrBtnStyle,
-                backgroundColor: 'rgba(0, 0, 0, 0.1)',
-                borderWidth: 0
-              }
-          }
+      if (type=='white') {
+          var disableStyle = { backgroundColor: 'rgba(0, 0, 0, 0.1)' }
+      } else {
+        var disableStyle = { opacity:0.2 }
       }
-
-
-      return mrBtnStyle;
+      return disabled?{
+        ...mrBtnStyle,
+        ...disableStyle,
+            borderWidth: 0
+        }:mrBtnStyle;
     },
     mrTextStyle() {
       const { type, disabled, textStyle,size } = this;
