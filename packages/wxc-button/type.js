@@ -28,7 +28,7 @@ export const TEXT_STYLE_MAP = {
 };
 
 export const BUTTON_STYLE_MAP = {
-  bigBig: {
+  full: {
     width: '702px',
     height: '88px'
   },
@@ -47,7 +47,7 @@ export const BUTTON_STYLE_MAP = {
 }
 
 export const TEXT_FONTSIZE_STYLE_MAP = {
-  bigBig: {
+  full: {
     fontSize: '36px'
   },
   big: {
