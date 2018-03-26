@@ -43,3 +43,37 @@ export const TEXT_STYLE_MAP = {
     color: '#FFFFFF'
   }
 };
+
+export const BUTTON_STYLE_MAP = {
+  bigBig: {
+    width: '702px',
+    height: '88px'
+  },
+  big: {
+    width: '339px',
+    height: '70px'
+  },
+  medium: {
+    width: '218px',
+    height: '60px'
+  },
+  small: {
+    width: '157px',
+    height: '44px'
+  }
+}
+
+export const TEXT_FONTSIZE_STYLE_MAP = {
+  bigBig: {
+    fontSize: '36px'
+  },
+  big: {
+    fontSize: '32px'
+  },
+  medium: {
+    fontSize: '28px'
+  },
+  small: {
+    fontSize: '24px'
+  }
+};
