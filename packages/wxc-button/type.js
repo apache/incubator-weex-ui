@@ -5,21 +5,13 @@ export const STYLE_MAP = {
   yellow: {
     backgroundColor: '#FFC900'
   },
-  normal: {
+  white: {
     backgroundColor: '#FFFFFF',
     borderColor: '#A5A5A5',
     borderWidth: '1px'
   },
-  highlight: {
-    backgroundColor: '#FFFFFF',
-    borderColor: '#EE9900',
-    borderWidth: '1px'
-  },
-  blueWarning: {
+  blue: {
     backgroundColor: '#0F8DE8'
-  },
-  warning: {
-    backgroundColor: '#D64848'
   }
 };
 
@@ -30,17 +22,8 @@ export const TEXT_STYLE_MAP = {
   fliggy: {
     color: '#3D3D3D'
   },
-  normal: {
+  white: {
     color: '#3D3D3D'
-  },
-  highlight: {
-    color: '#EE9900'
-  },
-  primary: {
-    color: '#FFFFFF'
-  },
-  warning: {
-    color: '#FFFFFF'
   }
 };
 
