@@ -6,14 +6,14 @@
     <title title="wxc-refresher"></title>
     <category title="使用案例"></category>
     <list class="scroller" ref="scroller">
-      <wxc-refresher scrollerRef="scroller"
-                     mainText="下拉即可刷新(自定义)"
-                     pullingText="释放即可刷新(自定义)"
-                     refreshingText="加载中(自定义)"
+      <wxc-refresher scroller-ref="scroller"
+                     main-text="下拉即可刷新(自定义)"
+                     pulling-text="释放即可刷新(自定义)"
+                     refreshing-text="加载中(自定义)"
                      :maxTime="3000"
-                     :textWidth="240"
+                     :text-width="240"
                      @wxcTimeout="onTimeout"></wxc-refresher>
-      <cell class="cell" v-for="num in lists">
+      <cell class="cell" v-for="(num,key) in lists" :key="key">
         <div class="panel">
           <text class="text">{{num}}</text>
         </div>
@@ -25,10 +25,11 @@
 <script>
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
+  import { setTitle } from '../_mods/set-nav';
+
   import { WxcRefresher } from '../../index';
 
   const modal = weex.requireModule('modal');
-  import { setTitle } from '../_mods/set-nav';
 
   export default {
     components: { Title, Category, WxcRefresher },
@@ -36,11 +37,11 @@
       lists: ['下拉刷新', 'Drop Down', '↓', '↓', '↓', '↓', '↓', '↓']
     }),
     created () {
-      setTitle('Refresher')
+      setTitle('Refresher');
     },
     methods: {
       onTimeout () {
-        modal.toast({message:'刷新超时，可定义超时时间',duration:0});
+        modal.toast({ message: '刷新超时，可定义超时时间', duration: 0 });
       }
     }
   };
@@ -48,14 +49,14 @@
 
 <style scoped>
   .wxc-demo {
-    position: relative;
-    display: flex;
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     background-color: #FFFFFF;
   }
+
   .panel {
     width: 600px;
     height: 250px;
@@ -69,9 +70,14 @@
     border-color: #DDDDDD;
     background-color: #F5F5F5;
   }
+
   .text {
     font-size: 50px;
     text-align: center;
     color: #41B883;
+  }
+
+  .scroller{
+    flex: 1;
   }
 </style>
