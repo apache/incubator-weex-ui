@@ -1,8 +1,8 @@
 <!-- CopyRight (C) 2017-2022 WeexUI Group Holding Limited. -->
 <!-- Created by git@zwwill on 18/02/08. -->
 <template>
-  <refresh ref="wxc-scroller"
-           class="u-refresh"
+  <refresh ref="wxc-refresher"
+           class="wxc-refresher"
            @refresh="onrefresh"
            @pullingdown="onPullingdown"
            :display="refreshing ? 'show' : 'hide'">
@@ -18,85 +18,15 @@
     <text class="u-txt" :style="{width:`${textWidth}px`}" lines="1">{{refresherText}}</text>
   </refresh>
 </template>
-<style scoped>
-
-  .u-refresh{
-    height: 140px;
-    width: 750px;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    padding-top: 50px;
-  }
-  .cycle-container{
-    position: relative;
-    width: 60px;
-    height: 60px;
-  }
-  .u-cover{
-    position: absolute;
-    width: 30px;
-    height: 60px;
-    top: 0;
-    background-color: #fff;
-    overflow: hidden;
-    right: 0;
-  }
-  .c1{
-    z-index: 1;
-  }
-  .c2{
-    z-index: 2;
-    transform-origin: left center;
-    transform: rotateZ(0deg);
-  }
-  .u-cover-cycle{
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    right: 0;
-    top: 0;
-    box-sizing: border-box;
-    border-width: 2px;
-    border-color: #666;
-    border-style: solid;
-    border-radius: 100%;
-    opacity: 0;
-  }
-  .cover1{
-    opacity: 1;
-  }
-  .indicator{
-    margin-right: 20px;
-    height: 60px;
-    width: 60px;
-    color: #666;
-  }
-  .arrow-down{
-    position: relative;
-    top: 15px;
-    left: -45px;
-    width: 30px;
-    height: 30px;
-  }
-  .u-txt{
-    font-size: 24px;
-    line-height: 40px;
-    color: #999;
-    margin-top: 10px;
-    margin-left: 10px;
-    height: 40px;
-    lines: 1;
-  }
-</style>
 <script>
   const animation = weex.requireModule('animation')
   const modal = weex.requireModule('modal')
-  const { platform } = weex.config.env;
-  const isAndroid = platform.toLowerCase() === 'android';
-  const isIos = platform.toLowerCase() === 'ios';
+
   import bindingx from 'weex-bindingx';
+  import Utils from '../utils';
+
   const ICON_ARROW_DOWN = 'https://img.alicdn.com/tfs/TB1A8faeTtYBeNjy1XdXXXXyVXa-48-48.png';
+
   export default {
     props: {
       scrollerRef: String,
@@ -123,7 +53,8 @@
     },
     data () {
       return {
-        isAndroid,
+        isAndroid:Utils.env.isAndroid(),
+        isIOS:Utils.env.isIOS(),
         ICON_ARROW_DOWN,
         refreshing: false,
         couldUnlash: false
@@ -171,8 +102,8 @@
        * 下拉事件
        */
       onPullingdown (event) {
-        let pd = event.pullingDistance * (!!isIos?-1:1);
-        pd>(!!isAndroid?200:140)? (this.couldUnlash = true) : (this.couldUnlash = false);
+        let pd = event.pullingDistance * (!!this.isIOS?-1:1);
+        pd>(!!this.isAndroid?200:140)? (this.couldUnlash = true) : (this.couldUnlash = false);
         if(this.refreshing && pd<20){
           clearTimeout(this.timeoutSto);
           this.refreshing = false;
@@ -183,7 +114,7 @@
        * 注册 bindingx
        */
       animationBinding(){
-        if(isAndroid) return;
+        if(this.isAndroid) return;
         setTimeout(() => {
           let scroller = this.$parent.$refs[this.scrollerRef].ref,
               cover2 = this.$refs['cover2'].ref,
@@ -215,9 +146,8 @@
        * 旋转动作
        */
       cycleGoRound(){
-        if(isAndroid) return;
+        if(this.isAndroid) return;
         let cycle = this.$refs['cycle'].ref;
-        // isAndroid && this.androidStyleShow(true);
         this.arrowShow(false);
         if(!cycle || !bindingx || !bindingx.isSupportBinding){
           return;
@@ -288,8 +218,78 @@
           this.roundingToken = 0;
         }
         this.arrowShow(true);
-        // isAndroid && this.androidStyleShow(false);
       }
     }
   }
 </script>
+<style scoped>
+
+  .wxc-refresher{
+    height: 140px;
+    width: 750px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  .cycle-container{
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+  .u-cover{
+    position: absolute;
+    width: 30px;
+    height: 60px;
+    top: 0;
+    background-color: #fff;
+    overflow: hidden;
+    right: 0;
+  }
+  .c1{
+    z-index: 1;
+  }
+  .c2{
+    z-index: 2;
+    transform-origin: left center;
+    transform: rotateZ(0deg);
+  }
+  .u-cover-cycle{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-color: #666;
+    border-style: solid;
+    border-radius: 100%;
+    opacity: 0;
+  }
+  .cover1{
+    opacity: 1;
+  }
+  .indicator{
+    margin-right: 20px;
+    height: 60px;
+    width: 60px;
+    color: #666;
+  }
+  .arrow-down{
+    position: relative;
+    top: 15px;
+    left: -45px;
+    width: 30px;
+    height: 30px;
+  }
+  .u-txt{
+    font-size: 24px;
+    line-height: 40px;
+    color: #999;
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 40px;
+    lines: 1;
+  }
+</style>
