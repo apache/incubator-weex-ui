@@ -15,12 +15,12 @@
 <template>
   <div class="wxc-demo">
     <list class="scroller" ref="scroller">
-      <wxc-refresher scrollerRef="scroller"
-                     mainText="下拉即可刷新(自定义)"
-                     pullingText="释放即可刷新(自定义)"
-                     refreshingText="加载中(自定义)"
-                     :maxTime="3000"
-                     :textWidth="240"
+      <wxc-refresher scroller-ref="scroller"
+                     main-text="下拉即可刷新(自定义)"
+                     pulling-text="释放即可刷新(自定义)"
+                     refreshing-text="加载中(自定义)"
+                     :max-time="3000"
+                     :text-width="240"
                      @wxcTimeout="onTimeout"></wxc-refresher>
       <cell>
         <!-- cell list -->
@@ -59,7 +59,7 @@ Further more, [demo](https://github.com/alibaba/weex-ui/blob/master/example/refr
 ### Canceling Refreshing
 
 ```
-<!-- <wxc-popup ref="wxc-refresher"></wxc-popup> -->
+<!-- <wxc-refresher ref="wxc-refresher"></wxc-popup> -->
 this.$refs['wxc-refresher'].wxcCancel();
 ```
 
