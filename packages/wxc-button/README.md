@@ -4,7 +4,9 @@
 
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/button/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Fbutton%2Findex.weex.js)
 
-<img src="https://img.alicdn.com/tfs/TB1aMRGhgvD8KJjy0FlXXagBFXa-562-1000.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1b0tMhf6H8KJjy0FjXXaXepXa-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/lGbrTEnxmgxmNdgHJhbA.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1b0tMhf6H8KJjy0FjXXaXepXa-200-200.png" width="160"/>
+
+!>In `weex-ui` V0.6.0 version above, `type` Api  has been modified, and `size` Api is added.
 
 ## Code Example
 
@@ -33,11 +35,12 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 ### API
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| **`text`** | `string` | `Y` | `-` | the text of button |
-| **`type`** | `enum` | `N` | `red` | can be set to  `normal`/ `highlight`/`red`/`yellow` |
-| **`disabled`** | `bool` | `N` | `false` | set disabled（*1） |
-| **`btnStyle`** | `object` | `N` | `{}` | custom style about button（*2） |
-| **`textStyle`** | `object` | `N` | `{}` | custom style about text （*3） |
+| **`text`** | `String` | `Y` | `-` | the text of button |
+| **`type`** | `String` | `N` | `red` | can be set to  `white`/`red`/`yellow`/`blue` |
+| **`size`** | `String` | `N` | `full` | 类型：`full`/`big`/`middle`/`small` |
+| **`disabled`** | `Boolean` | `N` | `false` | set disabled（*1） |
+| **`btnStyle`** | `Object` | `N` | `{}` | custom style about button（*2） |
+| **`textStyle`** | `Object` | `N` | `{}` | custom style about text （*3） |
 
 - *1：`disabled` will override the default style.
 - *2：Detailed style can be referenced [here](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)

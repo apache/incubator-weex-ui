@@ -22,8 +22,9 @@
 </template>
 
 <script>
-  import Binding from 'weex-bindingx';
+  import Binding from 'weex-bindingx/lib/index.weex.js';
   import Utils from '../utils';
+  import BindEnv from '../utils/bind-env';
 
   export default {
     props: {
@@ -35,7 +36,7 @@
     data: () => ({
       isPanning: false,
       appearMap: [],
-      supportAndroid: Utils.env.supportsEBForAndroid()
+      supportAndroid: BindEnv.supportsEBForAndroid()
     }),
     mounted () {
       setTimeout(() => {

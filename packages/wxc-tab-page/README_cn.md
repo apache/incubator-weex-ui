@@ -2,7 +2,7 @@
 
 > Weex tab 页面滑动切换组件
 
-!> 随手滑动的效果依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App [是否支持](https://github.com/alibaba/weex-ui/issues/6)。
+!> 随手滑动的效果依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App [是否安装](https://github.com/alibaba/bindingx#installation)。
 
 ### 规则
 - 允许对头部进行配置，支持 Binding 手势跟随效果
@@ -10,7 +10,6 @@
 - **Android 由于[此约束](http://weex-project.io/cn/references/gesture.html#约束)，需在子元素上绑定对应事件，可通过`wxc-pan-item`解决此问题**
 - 支持**居中形式 Tab**，将 tabStyles 中的 leftOffset 配置合适的值即可
  
-
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/tab-page/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Ftab-page%2Findex.weex.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/drLGhWpwwSbMTjMCWomE.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1sjw3aMMPMeJjy1XdXXasrXXa-750-1334.jpg" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1rGKAcxSYBuNjSspjXXX73VXa-200-200.png" width="160"/>
 
@@ -64,7 +63,7 @@
   .cell {
     background-color: #ffffff;
   }
-  
+
   .content{
     width:750px;
     height:300px;
@@ -75,7 +74,7 @@
 </style>
 <script>
   const dom = weex.requireModule('dom');
-  import { WxcTabPage, WxcPanItem, Utils } from 'weex-ui';
+  import { WxcTabPage, WxcPanItem, Utils, BindEnv } from 'weex-ui';
 
   // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js
   import Config from './config'
@@ -106,7 +105,7 @@
         }
       },
       wxcPanItemPan (e) {
-        if (Utils.env.supportsEBForAndroid()) {
+        if (BindEnv.supportsEBForAndroid()) {
           this.$refs['wxc-tab-page'].bindExp(e.element);
         }
       }
@@ -114,8 +113,8 @@
   };
 </script>
 ```
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/index.vue)
 
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/index.vue)
 
 ### 可配置参数
 
@@ -196,9 +195,9 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected"
 ```
 
-
-
 ## wxc-pan-item 的使用
+
+!> 在 `weex-ui` V0.6.0 版本以上，为了减少打包体积，Binding 相关判断由 `Utils.env` 转移到 `BindEnv`
 
 #### 参数
 
@@ -217,11 +216,11 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
     </pan-item>
   
 // 引用
-import { WxcPanItem } from 'weex-ui';
+import { WxcPanItem, BindEnv } from 'weex-ui';
 
 //回调
 wxcPanItemPan (e) {
-    if (Utils.env.supportsEBForAndroid()) {
+    if (BindEnv.supportsEBForAndroid()) {
       this.$refs['wxc-tab-page'].bindExp(e.element);
     }
  }

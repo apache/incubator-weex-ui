@@ -10,7 +10,7 @@
 
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/popover/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Fpopover%2Findex.weex.js)
 
-<img src="https://img.alicdn.com/tfs/TB1SnzOb_tYBeNjy1XdXXXXyVXa-562-1000.gif" width="240"/> &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB19m1fcrGYBuNjy0FoXXciBFXa-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/KneBnrpzaJFfbdsDbMli.gif" width="240"/> &nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB19m1fcrGYBuNjy0FoXXciBFXa-200-200.png" width="160"/>
 
 ## 使用方法
 
@@ -81,6 +81,7 @@
 | position | `Object` |`Y`|`{x:0,y:0}` | 气泡位置，x>0 为左边距，x<0 为右边距，y同理 |
 | arrowPosition | `Object` |`Y`|`{pos:'top',x:0,y:0}` | 气泡箭头位置，pos 为'top,bottom,left,right'，配合x，y定位箭头位置  |
 | coverColor | `String` |`N`|`rgba(0,0,0,0.4)`| 遮罩层颜色，如 `rgba(0,0,0,0.4)`，`rgb(0,0,0)`，`#000` |
+| hasAnimation | `Boolean` |`N`| `true` | 是否开启展开动画  |
 
 ### 调用显示
 

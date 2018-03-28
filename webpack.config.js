@@ -64,7 +64,6 @@ const plugins = [
   }),
   new HappyPack({
     id: 'babel',
-    cache: false,
     verbose: true,
     loaders: ['babel-loader?cacheDirectory=true'],
     threadPool: happyThreadPool
