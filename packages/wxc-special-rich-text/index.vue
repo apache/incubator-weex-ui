@@ -31,6 +31,10 @@
 </template>
 
 <style scoped>
+  .wxc-special-rich-text {
+    position: relative;
+  }
+
   .tag-div {
     position: absolute;
     top: 0;
@@ -45,6 +49,7 @@
     color: #3d3d3d;
     lines: 2;
     text-overflow: ellipsis;
+    overflow: hidden;
   }
 
   .black {
@@ -96,10 +101,11 @@
     data: () => ({
       iconWidth: 90,
       iconHeight: 24,
+      needHack
     }),
     computed: {
       newList () {
-        const { configList, iconHeight, iconWidth } = this;
+        const { configList, iconHeight, iconWidth, needHack } = this;
         if (Utils.isNonEmptyArray(configList) && configList.length === 2) {
           let r1 = configList[0];
           let r2 = configList[1];
@@ -166,10 +172,13 @@
             num = this.countString(r1.value);
           }
 
-          const tagMoreBlank = ((!isPad && num < 7) ? '  ' : '') + (needHack ? '  ' : '');
+          const tagMoreBlank = ((!isPad && num < 7) ? '  ' : '') + (needHack ? '  ' : '') + (isPad && num < 3) ? '    ' : '';
           const iconMoreBlank = num > 2 ? (needHack ? '     ' : '   ') : ' ';
           if (r1.type === 'tag') {
             blank = new Array(num).join('  ') + tagMoreBlank;
+            if (!isPad && num > 6 && !needHack) {
+              blank = blank.substring(parseInt(num / 2));
+            }
           } else if (r1.type === 'icon') {
             blank = new Array(num).join('  ') + iconMoreBlank;
           }
