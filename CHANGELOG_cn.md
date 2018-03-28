@@ -1,4 +1,15 @@
 # 升级日志
+
+## 0.6.0
+- [+] [wxc-button](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/README.md) 组件支持更多 `type`，去除 `normal`/ `highlight`，新增 type 类型 `white`、`blue`，同时新增按钮 `size` 设置，升级后使用需要注意
+- [!] 解决 bindingx 打包体积过大问题，Binding 相关判断由 `Utils.env` 转移到 `BindEnv`，升级需注意 [issue 191](https://github.com/alibaba/weex-ui/issues/191)
+- [+] 新 Binding 组件: [`wxc-refresh`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-refresh/README.md)，目前处于 beta 阶段，欢迎提建议
+- [-] 移除高版本 weex-vue-loader 中对组件默认样式的提示 [issue 198](https://github.com/alibaba/weex-ui/issues/189)
+- [+] [wxc-popover](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md) 组件支持动画 [pr 184](https://github.com/alibaba/weex-ui/pull/184/files)
+- [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) 支持设置 `bar-style` 样式覆盖主题颜色
+- [!] [wxc-rich-text](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-rich-text/README.md)  对 `wxc-special-rich-text` iPad、Android 兼容性增强
+- [+] 常见问题/bindingx 相关组件文档更新
+
 ## 0.5.3
 - [!] [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) 支持不显示定位城市，直接传入`currentLocation`为空即可
 - [+] [wxc-checkbox](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-checkbox/README.md) 新增 `has-top-border`/`has-bottom-border` 参数用于控制是否展示上线border线

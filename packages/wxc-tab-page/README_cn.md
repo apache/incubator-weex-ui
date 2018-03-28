@@ -197,7 +197,7 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 
 ## wxc-pan-item 的使用
 
-!> 在 `weex-ui` V0.6.0 版本以上，为了减少打包体积，Binding 相关判断由 `Utils.env `转移到 BindEnv
+!> 在 `weex-ui` V0.6.0 版本以上，为了减少打包体积，Binding 相关判断由 `Utils.env` 转移到 `BindEnv`
 
 #### 参数
 
