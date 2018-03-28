@@ -5,28 +5,97 @@
   <div class="wxc-demo">
     <scroller class="scroller">
       <title title="wxc-button"></title>
-      <category title="五种基本样式"></category>
+      <category title="类型样式"></category>
       <div class="button-list">
-        <text class="button-text">normal</text>
+        <text class="button-text">white</text>
         <wxc-button text="确定"
-                    type="normal"
+                    type="white"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">highlight</text>
+        <text class="button-text">white && disabled</text>
         <wxc-button text="确定"
-                    type="highlight"
+                    type="white"
+                    :disabled="true"
+                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+        <text class="button-text">blue</text>
+        <wxc-button text="确定"
+                    type="blue"
+                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+        <text class="button-text">blue && disabled</text>
+        <wxc-button text="确定"
+                    type="blue"
+                    :disabled="true"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
         <text class="button-text">red</text>
         <wxc-button text="确定"
                     type="red"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+        <text class="button-text">red && disabled</text>
+        <wxc-button text="确定"
+                    type="red"
+                    :disabled="true"
+                    @wxcButtonClicked="wxcButtonClicked"></wxc-button>
         <text class="button-text">yellow</text>
         <wxc-button text="确定"
                     type="yellow"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">disabled</text>
+        <text class="button-text">yellow && disabled</text>
         <wxc-button text="确定"
+                    type="yellow"
                     :disabled="true"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+      </div>
+      <category title="尺寸"></category>
+      <div>
+        <text class="button-size-text">big</text>
+        <div class="size">
+          <wxc-button text="确定"
+                      type="white"
+                      size="big"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      type="white"
+                      size="big"
+                      :disabled="true"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+
+        </div>
+        <text class="button-size-text">medium</text>
+        <div class="size">
+          <wxc-button text="确定"
+                      type="blue"
+                      size="medium"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      type="blue"
+                      :disabled="true"
+                      size="medium"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      type="red"
+                      size="medium"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+        </div>
+        <text class="button-size-text">small</text>
+        <div class="size">
+          <wxc-button text="确定"
+                      type="red"
+                      size="small"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      type="red"
+                      size="small"
+                      :disabled="true"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      type="yellow"
+                      size="small"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+          <wxc-button text="确定"
+                      type="yellow"
+                      :disabled="true"
+                      size="small"
+                      @wxcButtonClicked="wxcButtonClicked"></wxc-button>
+        </div>
       </div>
       <category title="自定义样式"></category>
       <wxc-cell :has-top-border="false" title="按钮的文字">
@@ -123,6 +192,17 @@
     width: 500px;
     text-align: right;
     font-size: 28px;
+  }
+
+  .size {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .button-size-text {
+    margin-left: 24px;
+    margin-bottom: 24px;
+    margin-top: 40px;
   }
 </style>
 

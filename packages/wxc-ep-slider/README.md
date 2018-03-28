@@ -2,7 +2,7 @@
 
  > Binding Slider
 
-!> These rich interaction components are based on [BindingX](https://alibaba.github.io/bindingx/) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6). 
+!> These rich interaction components are based on [BindingX](https://alibaba.github.io/bindingx/) feature. Make sure your app [install it](https://github.com/alibaba/bindingx#installation).
 
 ### Rule
 - Used to enrich slide, including merchandise window, picture list, etc.
@@ -97,7 +97,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | slider-id | `Number` |`Y`| `1` | slider id|
 | card-length | `Number` |`Y`| `1` |  count of slider items|
 | select-index | `Number` |`N`| `0` | default card |
-| container-s | `Object` |`Y`| `{position: 'relative',width: 750,height: 352,overflow: 'hidden'}` | container style|
+| container-s | `Object` |`Y`| `{position: 'relative',width: 750,height: 352}` | container style|
 | card-s | `Object` | `Y`|`{width: 360,height: 300,spacing: 0,scale: 0.75}` | card style|
 | auto-play | `Boolean` | `N`|`false` |whether is auto-play|
 | interval | `Number` | `N`|`1200` |interval of auto-play|

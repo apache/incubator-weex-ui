@@ -21,10 +21,7 @@
 <script>
   export default {
     props: {
-      iconSrc: {
-        type: String,
-        default: ''
-      },
+      iconSrc: String,
       iconStyle: {
         type: Object,
         default: () => ({

@@ -4,7 +4,6 @@
  */
 
 import UrlParser from 'url-parse';
-import Binding from 'weex-bindingx';
 
 const Utils = {
   UrlParser: UrlParser,
@@ -126,26 +125,6 @@ const Utils = {
     isAliWeex () {
       return Utils.env.isTmall() || Utils.env.isTrip() || Utils.env.isTaobao();
     },
-    supportsEB () {
-      return Binding.isSupportBinding && !Utils.env.isWeb();
-    },
-
-    /**
-     * 判断Android容器是否支持是否支持expressionBinding(处理方式很不一致)
-     * @returns {boolean}
-     */
-    supportsEBForAndroid () {
-      return (Utils.env.isAndroid()) && Utils.env.supportsEB();
-    },
-
-    /**
-     * 判断IOS容器是否支持是否支持expressionBinding
-     * @returns {boolean}
-     */
-    supportsEBForIos () {
-      return (Utils.env.isIOS()) && Utils.env.supportsEB();
-    },
-
     /**
      * 获取weex屏幕真实的设置高度，需要减去导航栏高度
      * @returns {Number}

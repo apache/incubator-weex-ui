@@ -47,11 +47,11 @@
 
 <script>
   import Utils from '../utils';
-  import Binding from 'weex-bindingx';
+  import BindEnv from '../utils/bind-env';
+  import Binding from 'weex-bindingx/lib/index.weex.js';
 
   const animation = weex.requireModule('animation');
   const dom = weex.requireModule('dom');
-  const modal = weex.requireModule('modal');
 
   export default {
     data: () => ({
@@ -147,7 +147,7 @@
       }
 
       // 是否支持expresstionBinding
-      if (Utils.env.supportsEB() && Binding.prepare) {
+      if (BindEnv.supportsEB() && Binding.prepare) {
         this.block1 && Binding.prepare({
           anchor: this.block1.ref,
           eventType: 'pan'
@@ -188,8 +188,7 @@
           width: `${this.length}px`,
           height: `${this.height}px`,
           flexDirection: 'row',
-          backgroundColor: this.invalidColor,
-          overflow: 'hidden'
+          backgroundColor: this.invalidColor
         };
       },
       valueBarStyle () {
@@ -548,6 +547,7 @@
 
   .value-bar {
     height: 4px;
+    overflow: hidden;
   }
 
   .slide-block {
@@ -557,7 +557,6 @@
     border-radius: 28px;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
     position: absolute;
     left: 0;
     bottom: 0;

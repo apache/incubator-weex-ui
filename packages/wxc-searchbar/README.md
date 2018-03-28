@@ -89,6 +89,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | always-show-cancel | `Boolean` |`N`| `false` | whether to show cancel button |
 | dep-name | `String` |`N`| `杭州` | dep name when `mode="hasDep"` |
 | theme | `String` |`N`| `gray` |  search bar theme `gray`/`yellow` |
+| bar-style | `Object` |`N`| `{}` | Use when theme is not satisfied |
 
 
 ### Event

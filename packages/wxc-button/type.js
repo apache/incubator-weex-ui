@@ -5,15 +5,13 @@ export const STYLE_MAP = {
   yellow: {
     backgroundColor: '#FFC900'
   },
-  normal: {
+  white: {
     backgroundColor: '#FFFFFF',
     borderColor: '#A5A5A5',
     borderWidth: '1px'
   },
-  highlight: {
-    backgroundColor: '#FFFFFF',
-    borderColor: '#EE9900',
-    borderWidth: '1px'
+  blue: {
+    backgroundColor: '#0F8DE8'
   }
 };
 
@@ -24,10 +22,41 @@ export const TEXT_STYLE_MAP = {
   fliggy: {
     color: '#3D3D3D'
   },
-  normal: {
+  white: {
     color: '#3D3D3D'
+  }
+};
+
+export const BUTTON_STYLE_MAP = {
+  full: {
+    width: '702px',
+    height: '88px'
   },
-  highlight: {
-    color: '#EE9900'
+  big: {
+    width: '339px',
+    height: '70px'
+  },
+  medium: {
+    width: '218px',
+    height: '60px'
+  },
+  small: {
+    width: '157px',
+    height: '44px'
+  }
+}
+
+export const TEXT_FONTSIZE_STYLE_MAP = {
+  full: {
+    fontSize: '36px'
+  },
+  big: {
+    fontSize: '32px'
+  },
+  medium: {
+    fontSize: '28px'
+  },
+  small: {
+    fontSize: '24px'
   }
 };

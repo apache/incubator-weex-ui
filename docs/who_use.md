@@ -20,8 +20,8 @@
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1q9GtcMmTBuNjy1XbXXaMrVXa-630-630.png" width="66" /></td>
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1UmqCcHGYBuNjy0FoXXciBFXa-246-246.jpg" width="66"  style="border-radius:8px"/></td>
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1nYK9cNGYBuNjy0FnXXX5lpXa-630-630.png" width="66"  style="border-radius:8px"/></td>
+        <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1FnQ7fAyWBuNjy0FpXXassXXa-246-246.png" width="66"  style="border-radius:8px" alt="本木医疗"/></td>
     </tr>
 </table>
-
 
 [Welcome to add your App !](https://github.com/alibaba/weex-ui/edit/master/docs/who_use.md)

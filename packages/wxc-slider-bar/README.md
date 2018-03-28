@@ -2,7 +2,7 @@
 
 > A slider component for displaying current value and intervals in range.
 
-!> These rich interaction components are based on [BindingX](https://alibaba.github.io/bindingx/) feature. Make sure your app [support it](https://github.com/alibaba/weex-ui/issues/6). 
+!> These rich interaction components are based on [BindingX](https://alibaba.github.io/bindingx/) feature. Make sure your app [install it](https://github.com/alibaba/bindingx#installation). 
 
 ### Rule
 - To input a value in a range.

@@ -5,6 +5,7 @@
 <template>
   <div>
     <div :class="['wxc-search-bar','wxc-search-bar-'+theme]"
+         :style="barStyle"
          v-if="mod==='default'">
       <input @blur="onBlur"
              @focus="onFocus"
@@ -21,7 +22,7 @@
       <div v-if="disabled"
            @click="inputDisabledClicked"
            class="disabled-input"></div>
-      <image class="search-bar-ICON"
+      <image class="search-bar-icon"
              :aria-hidden="true"
              :src="inputIcon"></image>
       <image class="search-bar-close"
@@ -34,6 +35,7 @@
             @click="cancelClicked">{{cancelLabel}}</text>
     </div>
     <div :class="['wxc-search-bar','wxc-search-bar-'+theme]"
+         :style="barStyle"
          v-if="mod==='hasDep'">
       <input @blur="onBlur"
              @focus="onFocus"
@@ -55,7 +57,7 @@
                :aria-hidden="true"
                class="dep-arrow"></image>
       </div>
-      <image class="search-bar-ICON ICON-has-dep"
+      <image class="search-bar-icon icon-has-dep"
              :aria-hidden="true"
              :src="inputIcon"></image>
     </div>
@@ -93,10 +95,9 @@
 
   .search-bar-input-yellow {
     background-color: #fff6d6;
-    placeholder-color: #666666;
   }
 
-  .search-bar-ICON {
+  .search-bar-icon {
     position: absolute;
     width: 30px;
     height: 30px;
@@ -169,7 +170,7 @@
     height: 24px;
   }
 
-  .ICON-has-dep {
+  .icon-has-dep {
     left: 214px;
   }
 
@@ -215,6 +216,10 @@
       theme: {
         type: String,
         default: 'gray'
+      },
+      barStyle: {
+        type: Object,
+        default: () => {}
       },
       defaultValue: {
         type: String,

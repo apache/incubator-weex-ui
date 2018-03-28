@@ -1,6 +1,6 @@
 # wxc-ep-slider 
 
-!> 这个富交互体验组件依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)
+!> 这个富交互体验组件依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App [是否安装](https://github.com/alibaba/bindingx#installation)
 
  > Weex Binding 效果的 slider 组件
 
@@ -98,7 +98,7 @@
 | slider-id | `Number` |`Y`| `1` | slider的id，避免页面多个ep-slider导致获取错误|
 | card-length | `Number` |`Y`| `1` |  slider中item的数量|
 | select-index | `Number` |`N`| `0` | 默认突出item的index|
-| container-s | `Object` |`Y`| `{position: 'relative',width: 750,height: 352,overflow: 'hidden'}` |  包裹容器的样式|
+| container-s | `Object` |`Y`| `{position: 'relative',width: 750,height: 352}` |  包裹容器的样式|
 | card-s | `Object` | `Y`|`{width: 360,height: 300,spacing: 0,scale: 0.75}` | item容器的样式|
 | auto-play | `Boolean` | `N`|`false` |是否需要自动播放|
 | interval | `Number` | `N`|`1200` |自动播放时候的间隔|

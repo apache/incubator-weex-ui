@@ -60,7 +60,7 @@
 <script>
   const dom = weex.requireModule('dom');
 
-  import { WxcTabPage, WxcPanItem, Utils } from '../../index';
+  import { WxcTabPage, WxcPanItem, Utils, BindEnv } from '../../index';
   import WxcItem from './wxc-item.vue';
 
   import Config from './config'
@@ -106,7 +106,7 @@
         }
       },
       wxcPanItemPan (e) {
-        if (Utils.env.supportsEBForAndroid()) {
+        if (BindEnv.supportsEBForAndroid()) {
           this.$refs['wxc-tab-page'].bindExp(e.element);
         }
       }
