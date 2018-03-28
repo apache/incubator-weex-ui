@@ -75,6 +75,11 @@
       isString () {
         return Utils.isString(this.configList);
       }
+    },
+    methods: {
+      wxcRichTextLinkClick(e) {
+        this.$emit('wxcRichTextLinkClick', e);
+      }
     }
   };
 </script>
