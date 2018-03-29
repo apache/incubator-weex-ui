@@ -21,7 +21,7 @@ HappyPack.SERIALIZABLE_OPTIONS = HappyPack.SERIALIZABLE_OPTIONS.concat([
 console.log('Building..., Please wait a moment.');
 
 const getEntry = dir => {
-  const foundScripts = glob.sync(`${dir}/*/index.js`, {});
+  const foundScripts = glob.sync(`${dir}/searchbar/index.js`, {});
   // 生成 entry 映射表
   const ret = {};
   foundScripts.forEach(function(scriptPath) {
@@ -129,7 +129,10 @@ const getBaseConfig = () => ({
   plugins,
   resolve: {
     extensions: ['.js'],
-    modules: ['node_modules']
+    modules: ['node_modules'],
+    alias: {
+      'weex-ui': path.resolve(__dirname, '')
+    }
   }
 });
 

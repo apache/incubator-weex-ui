@@ -1,3 +1,17 @@
 {
-  "presets": [ "es2015", "stage-0" ]
+  "presets": [ "es2015", "stage-0" ],
+  "plugins": [
+    [
+      "weexcomponent",
+      {
+        "style": false,
+        "libraryName": "weex-ui",
+        "libDir": "packages",
+        "themeDir": "lib/theme",
+        "themeConfig": {
+          "name": "default"
+        }
+      }
+    ]
+  ]
 }

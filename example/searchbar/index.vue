@@ -29,18 +29,16 @@
                        @wxcSearchbarInputDisabledClicked="wxcSearchbarInputDisabledClicked"></wxc-searchbar>
       </div>
 
-      <text class="hint">一直显示取消按钮,同时theme="yellow"</text>
+      <text class="hint">一直显示取消按钮</text>
       <div class="demo demo1">
         <wxc-searchbar :always-show-cancel="showCancel"
-                       theme="yellow"
                        @searchbarCancelClick="searchbarCancelClick"></wxc-searchbar>
       </div>
 
-      <text class="hint">带有目的地模式的输入框、theme="yellow"</text>
+      <text class="hint">带有目的地模式的输入框</text>
       <div class="demo demo1">
         <wxc-searchbar class="searchbar"
                        placeholder="搜索目的地"
-                       theme="yellow"
                        mod="hasDep"
                        dep-name="杭州出发"
                        @wxcSearchbarDepChooseClicked="wxcSearchbarDepChooseClicked"
