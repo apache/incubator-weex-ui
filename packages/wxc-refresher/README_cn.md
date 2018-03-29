@@ -14,12 +14,14 @@
 <template>
   <div class="wxc-demo">
     <list class="scroller" ref="scroller">
-      <wxc-refresher scroller-ref="scroller"
+      <wxc-refresher ref="wxcRefresher"
+                     scroller-ref="scroller"
                      main-text="下拉即可刷新(自定义)"
                      pulling-text="释放即可刷新(自定义)"
                      refreshing-text="加载中(自定义)"
-                     :max-time="3000"
+                     :max-time="5000"
                      :text-width="240"
+                     @wxcRefresh="onRefresh"
                      @wxcTimeout="onTimeout"></wxc-refresher>
       <cell>
         <!-- cell list -->
@@ -36,6 +38,9 @@
     methods: {
       onTimeout () {
         modal.toast({message:'刷新超时，可定义超时时间',duration:0});
+      },
+      onRefresh () {
+        modal.toast({message:'刷新中...',duration:0});
       }
     }
   };
@@ -48,21 +53,32 @@
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| scrollerRef | `String` |`true`| - | 使用binding动画的必须传入外层list容器的ref |
-| maxTime | `Number` |`false`|`0` | 超时时间 |
-| mainText | `String` |`false`|`下拉即可刷新...` | 初始文案 |
-| pullingText | `String` |`false`|`释放即可刷新...` | 可释放文案 |
-| refreshingText | `String` |`false`|`加载中...` | 加载中文案 |
-| textWidth | `Number` |`false`|`200` | 文案宽度 |
+| scroller-ref | `String` |`true`| - | 使用binding动画的必须传入外层list容器的ref |
+| max-time | `Number` |`false`|`0` | 超时时间 |
+| main-text | `String` |`false`|`下拉即可刷新...` | 初始文案 |
+| pulling-text | `String` |`false`|`释放即可刷新...` | 可释放文案 |
+| refreshing-text | `String` |`false`|`加载中...` | 加载中文案 |
+| text-width | `Number` |`false`|`200` | 文案宽度 |
 
-### 调用显示
+### 取消loading
 
 ```
-在wxc-refresher上面绑定ref，然后调用this.$refs['wxc-refresher'].wxcCancel();即可结束refreshing动画
+在wxc-refresher上面绑定ref，然后调用this.$refs.wxcRefresher.wxcCancel();即可结束refreshing动画
 ```
 
 ### 事件回调
 
 ```
+// 刷新回调，使用方式同官网 http://weex.apache.org/cn/references/components/refresh.html#refresh
+@wxcRefresh="onRefresh"
+```
+
+```
+// 超时回调
 @wxcTimeout="onTimeout"
+```
+
+```
+// 拖拽回调，使用方式同官网 http://weex.apache.org/cn/references/components/refresh.html#pullingdown-v0-6-1
+@wxcPullingDown="onPullingDown"
 ```

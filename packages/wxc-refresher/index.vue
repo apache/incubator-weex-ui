@@ -1,8 +1,7 @@
 <!-- CopyRight (C) 2017-2022 WeexUI Group Holding Limited. -->
 <!-- Created by git@zwwill on 18/02/08. -->
 <template>
-  <refresh ref="wxc-refresher"
-           class="wxc-refresher"
+  <refresh class="wxc-refresher"
            @refresh="onRefresh"
            @pullingdown="onPullingDown"
            :display="refreshing ? 'show' : 'hide'">
@@ -83,10 +82,11 @@
     },
     methods: {
       onRefresh (event) {
+        this.$emit('wxcRefresh', event);
         this.refreshing = true;
         this.newStyleFlag && this.cycleGoRound();
         if (this.maxTime <= 0) return;
-        clearTimeout(this.timeoutSto);
+        this.timeoutSto && clearTimeout(this.timeoutSto);
         this.timeoutSto = setTimeout(() => {
           this.$emit('wxcTimeout');
           this.wxcCancel();
@@ -97,16 +97,18 @@
        */
       wxcCancel () {
         this.refreshing = false;
+        this.timeoutSto && clearTimeout(this.timeoutSto);
         this.roundingDestroy();
       },
       /**
        * 下拉事件
        */
       onPullingDown (event) {
+        this.$emit('wxcPullingDown',event);
         let pd = event.pullingDistance * (Utils.env.isIOS() ? -1 : 1);
         pd > (Utils.env.isAndroid() ? 200 : 140) ? (this.couldUnLash = true) : (this.couldUnLash = false);
         if (this.refreshing && pd < 20) {
-          clearTimeout(this.timeoutSto);
+          this.timeoutSto && clearTimeout(this.timeoutSto);
           this.refreshing = false;
           this.roundingDestroy();
         }
