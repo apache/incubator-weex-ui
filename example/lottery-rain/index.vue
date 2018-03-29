@@ -15,7 +15,7 @@
 </style>
 
 <script>
-  import { WxcLotteryRain } from '../../index'
+  import { WxcLotteryRain } from 'weex-ui'
   import { setTitle } from '../_mods/set-nav';
 
   export default {

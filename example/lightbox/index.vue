@@ -82,7 +82,7 @@
 <script>
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
-  import { WxcLightbox } from '../../index';
+  import { WxcLightbox } from 'weex-ui';
 
   import { setTitle } from '../_mods/set-nav';
 

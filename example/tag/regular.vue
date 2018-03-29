@@ -21,7 +21,7 @@
 </style>
 
 <script>
-  import { WxcTag } from '../../index';
+  import { WxcTag } from 'weex-ui';
   import Data from './data'
   export default {
     components: { WxcTag },

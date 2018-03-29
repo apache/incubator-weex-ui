@@ -22,7 +22,7 @@
   }
 </style>
 <script>
-  import { WxcTabBar, Utils } from '../../index';
+  import { WxcTabBar, Utils } from 'weex-ui';
   import Config from './config'
   import { setTitle } from '../_mods/set-nav';
 

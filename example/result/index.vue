@@ -25,7 +25,7 @@
 <script>
   const modal = weex.requireModule('modal');
 
-  import { WxcResult } from '../../index';
+  import { WxcResult } from 'weex-ui';
 
   import { setTitle } from '../_mods/set-nav';
 

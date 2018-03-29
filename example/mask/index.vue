@@ -101,7 +101,7 @@
 
 </style>
 <script>
-  import { WxcMask } from '../../index';
+  import { WxcMask } from 'weex-ui';
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
 

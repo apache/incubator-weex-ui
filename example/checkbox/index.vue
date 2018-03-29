@@ -54,7 +54,7 @@
 <script>
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
-  import { WxcCheckbox, WxcCheckboxList } from '../../index'
+  import { WxcCheckbox, WxcCheckboxList } from 'weex-ui'
   import { setTitle } from '../_mods/set-nav';
 
   export default {

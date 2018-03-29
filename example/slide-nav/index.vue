@@ -102,7 +102,7 @@
 </style>
 
 <script>
-  import { WxcSlideNav } from '../../index';
+  import { WxcSlideNav } from 'weex-ui';
   import { setTitle } from '../_mods/set-nav';
 
   let isWeb = typeof window === 'object' && weex.config.env.platform.toLowerCase() === 'web';

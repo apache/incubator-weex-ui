@@ -114,7 +114,7 @@
 <script>
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
-  import { WxcPageCalendar } from '../../index';
+  import { WxcPageCalendar } from 'weex-ui';
 
   const modal = weex.requireModule('modal');
 

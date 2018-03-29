@@ -107,7 +107,7 @@
 <script>
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
-  import { WxcProgress } from '../../index'
+  import { WxcProgress } from 'weex-ui'
   import { setTitle } from '../_mods/set-nav';
 
   export default {

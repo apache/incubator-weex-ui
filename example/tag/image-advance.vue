@@ -30,7 +30,7 @@
 </style>
 
 <script>
-  import { WxcTag, WxcCell } from '../../index';
+  import { WxcTag, WxcCell } from 'weex-ui';
 
   export default {
     components: { WxcTag, WxcCell },

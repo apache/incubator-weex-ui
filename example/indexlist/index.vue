@@ -21,7 +21,7 @@
 
 <script>
   const modal = weex.requireModule('modal');
-  import { WxcIndexlist } from '../../index';
+  import { WxcIndexlist } from 'weex-ui';
   import { dataList } from './data.js';
   import { setTitle } from '../_mods/set-nav';
 

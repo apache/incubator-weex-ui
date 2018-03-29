@@ -74,7 +74,7 @@
 <script>
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
-  import { WxcLoading, WxcPartLoading, WxcCell } from '../../index';
+  import { WxcLoading, WxcPartLoading, WxcCell } from 'weex-ui';
 
   import { setTitle } from '../_mods/set-nav';
 
