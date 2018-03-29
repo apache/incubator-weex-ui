@@ -4,8 +4,8 @@
 
 <template>
   <div>
-    <div :class="['wxc-search-bar','wxc-search-bar-'+theme]"
-         :style="barStyle"
+    <div class="wxc-search-bar"
+         :style="Object.assign({backgroundColor: STYLE.backgroundColor}, barStyle)"
          v-if="mod==='default'">
       <input @blur="onBlur"
              @focus="onFocus"
@@ -17,8 +17,8 @@
              ref="search-input"
              :type="inputType"
              :placeholder="placeholder"
-             :style="{ width: needShowCancel ? '624px' : '710px' }"
-             :class="['search-bar-input','search-bar-input-'+theme]"/>
+             :style="{ backgroundColor: STYLE.inputBackground, width: needShowCancel ? '624px' : '710px' }"
+             class="search-bar-input"/>
       <div v-if="disabled"
            @click="inputDisabledClicked"
            class="disabled-input"></div>
@@ -30,12 +30,13 @@
              :aria-hidden="true"
              @click="closeClicked"
              :src="closeIcon"></image>
-      <text :class="['search-bar-button','search-bar-button-'+theme]"
+      <text class="search-bar-button"
+            :style="{backgroundColor: STYLE.backgroundColor}"
             v-if="needShowCancel"
             @click="cancelClicked">{{cancelLabel}}</text>
     </div>
-    <div :class="['wxc-search-bar','wxc-search-bar-'+theme]"
-         :style="barStyle"
+    <div class="wxc-search-bar"
+         :style="Object.assign({backgroundColor: STYLE.backgroundColor}, barStyle)"
          v-if="mod==='hasDep'">
       <input @blur="onBlur"
              @focus="onFocus"
@@ -46,11 +47,12 @@
              :value="value"
              :type="inputType"
              :placeholder="placeholder"
-             :class="['search-bar-input','input-has-dep','search-bar-input-'+theme]"/>
+             :style="{ backgroundColor: STYLE.inputBackground }"
+             class="search-bar-input input-has-dep"/>
       <div v-if="disabled"
            @click="inputDisabledClicked"
            class="disabled-input has-dep-disabled"></div>
-      <div :class="['bar-dep','.bar-dep-'+theme]"
+      <div class="bar-dep"
            @click="depClicked">
         <text class="dep-text">{{depName}}</text>
         <image :src="arrowIcon"
@@ -74,10 +76,6 @@
     flex-direction: row;
   }
 
-  .wxc-search-bar-yellow {
-    background-color: #ffc900;
-  }
-
   .search-bar-input {
     position: absolute;
     top: 10px;
@@ -91,10 +89,6 @@
     line-height: 64px;
     background-color: #E5E5E5;
     border-radius: 6px;
-  }
-
-  .search-bar-input-yellow {
-    background-color: #fff6d6;
   }
 
   .search-bar-icon {
@@ -127,10 +121,6 @@
     top: 9px;
   }
 
-  .search-bar-button-yellow {
-    background-color: #FFC900;
-  }
-
   .input-has-dep {
     padding-left: 240px;
     width: 710px;
@@ -148,10 +138,6 @@
     top: 22px;
     border-right-style: solid;
     border-right-width: 1px;
-    border-right-color: #C7C7C7;
-  }
-
-  .bar-dep-yellow {
     border-right-color: #C7C7C7;
   }
 
@@ -190,6 +176,7 @@
 
 <script>
   import { INPUT_ICON, ARROW_ICON, CLOSE_ICON } from './type';
+  import STYLE from 'weex-ui/lib/theme/default/searchbar.js';
 
   export default {
     props: {
@@ -212,10 +199,6 @@
       autofocus: {
         type: Boolean,
         default: false
-      },
-      theme: {
-        type: String,
-        default: 'gray'
       },
       barStyle: {
         type: Object,
@@ -244,6 +227,7 @@
       }
     },
     data: () => ({
+      STYLE: {},
       inputIcon: INPUT_ICON,
       closeIcon: CLOSE_ICON,
       arrowIcon: ARROW_ICON,
@@ -257,6 +241,7 @@
         this.showCancel = false;
         this.showClose = false;
       }
+      this.STYLE = STYLE
     },
     methods: {
       onBlur () {
