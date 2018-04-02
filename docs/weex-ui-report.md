@@ -55,7 +55,7 @@ Weex Ui 的定位为 **一套轻量、富交互、高性能的 Weex 上层  Ui �
 ### 最后
 **Weex Ui 的发展离不开社区的贡献，从开源以后也是慢慢除去阿里的特色，向社区化发展。**
 
-感谢每一个为 Weex Ui 提出建议和代码贡献的同学，尤其感谢社区[@zwwill](https://github.com/chuangbo)、[@GJJDD](https://github.com/GJJDD)、[@Yanjiie](https://github.com/Yanjiie)、[@zweipix](https://github.com/zweipix) 等同学的付出。
+感谢每一个为 Weex Ui 提出建议和代码贡献的同学，尤其感谢社区[@zwwill](https://github.com/zwwill)、[@GJJDD](https://github.com/GJJDD)、[@Yanjiie](https://github.com/Yanjiie)、[@zweipix](https://github.com/zweipix) 等同学的付出。
 
 希望未来能有更多的同学加入到 Weex Ui 的开发中来，让大家可以快乐地使用 Weex Ui 提高效率早下班，同时促进他更好的发展。
 
