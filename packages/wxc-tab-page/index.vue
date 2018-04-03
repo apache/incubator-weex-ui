@@ -146,6 +146,10 @@
         type: [String, Number],
         default: 1334
       },
+      needSlider: {
+        type: Boolean,
+        default: true
+      },
       isTabView: {
         type: Boolean,
         default: true
@@ -184,7 +188,7 @@
       if (swipeBack && swipeBack.forbidSwipeBack) {
         swipeBack.forbidSwipeBack(true);
       }
-      if (BindEnv.supportsEBForIos() && this.isTabView) {
+      if (BindEnv.supportsEBForIos() && this.isTabView && this.needSlider) {
         const tabPageEl = this.$refs['tab-page-wrap'];
         Binding.prepare && Binding.prepare({
           anchor: tabPageEl.ref,
@@ -208,7 +212,7 @@
         this.setPage(page);
       },
       startHandler () {
-        if (BindEnv.supportsEBForIos() && this.isTabView) {
+        if (BindEnv.supportsEBForIos() && this.isTabView && this.needSlider) {
           this.bindExp(this.$refs['tab-page-wrap']);
         }
       },
