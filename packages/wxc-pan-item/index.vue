@@ -31,7 +31,11 @@
       url: {
         type: String,
         default: ''
-      }
+      },
+      needSlider: {
+        type: Boolean,
+        default: true
+      },
     },
     data: () => ({
       isPanning: false,
@@ -40,7 +44,7 @@
     }),
     mounted () {
       setTimeout(() => {
-        if (this.supportAndroid) {
+        if (this.supportAndroid && this.needSlider) {
           const element = this.$refs['wxc-pan-item'];
           Binding.prepare && Binding.prepare({
             anchor: element.ref,
@@ -59,7 +63,7 @@
       },
 
       dispatchPan (e) {
-        if (this.supportAndroid) {
+        if (this.supportAndroid && this.needSlider) {
           if (e.state === 'start') {
             this.isPanning = true;
             const element = this.$refs['wxc-pan-item'];
