@@ -227,7 +227,7 @@
       }
     },
     data: () => ({
-      STYLE: {},
+      STYLE: Object.assign({}, STYLE),
       inputIcon: INPUT_ICON,
       closeIcon: CLOSE_ICON,
       arrowIcon: ARROW_ICON,
@@ -241,7 +241,6 @@
         this.showCancel = false;
         this.showClose = false;
       }
-      this.STYLE = STYLE
     },
     methods: {
       onBlur () {

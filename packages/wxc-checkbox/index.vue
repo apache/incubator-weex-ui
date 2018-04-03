@@ -30,6 +30,7 @@
 <script>
   import WxcCell from '../wxc-cell';
   import { CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED } from './type'
+  import STYLE from 'weex-ui/lib/theme/default/index.js';
 
   export default {
     components: { WxcCell },
@@ -64,8 +65,8 @@
       }
     },
     data: () => ({
+      STYLE: Object.assign({}, STYLE),
       icon: [CHECKED, UNCHECKED, CHECKED_DISABLED, UNCHECKED_DISABLED],
-      color: '#3D3D3D',
       innerChecked: false
     }),
     computed: {
@@ -84,8 +85,8 @@
       },
       textColor () {
         const { innerChecked, disabled, config } = this;
-        const checkedColor = config.checkedColor ? config.checkedColor : '#EE9900';
-        return innerChecked && !disabled ? checkedColor : '#3D3D3D';
+        const checkedColor = config.checkedColor ? config.checkedColor : this.STYLE.primaryColor;
+        return innerChecked && !disabled ? checkedColor : this.STYLE.fontColorDark;
       }
     },
     watch: {

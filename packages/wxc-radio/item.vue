@@ -31,6 +31,7 @@
 <script>
   import WxcCell from '../wxc-cell';
   import { CHECKED, DISABLED } from './type.js'
+  import STYLE from 'weex-ui/lib/theme/default/index.js';
 
   export default {
     components: { WxcCell },
@@ -61,6 +62,7 @@
       }
     },
     data: () => ({
+      STYLE: Object.assign({}, STYLE),
       icon: [CHECKED, DISABLED]
     }),
     computed: {
@@ -73,13 +75,13 @@
       },
       backgroundColor () {
         const { disabled } = this;
-        return disabled ? '#F2F3F4' : '#FFFFFF';
+        return disabled ? STYLE.grayColor : '#FFFFFF';
       },
       color () {
-        const { disabled, checked, config } = this;
-        let checkedColor = '#EE9900';
+        const { disabled, checked, config, STYLE } = this;
+        let checkedColor = STYLE.primaryColor;
         config.checkedColor && (checkedColor = config.checkedColor);
-        return checked && !disabled ? checkedColor : '#3D3D3D';
+        return checked && !disabled ? checkedColor : STYLE.fontColorDark;
       }
     },
     methods: {

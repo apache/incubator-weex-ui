@@ -8,6 +8,9 @@
       <category title="使用案例"></category>
       <div>
         <div class="demo">
+          <wxc-minibar title="主题色"></wxc-minibar>
+        </div>
+        <div class="demo">
           <wxc-minibar title="Minibar" background-color="#F2F3F4"></wxc-minibar>
         </div>
         <div class="demo">

@@ -16,6 +16,8 @@
 </style>
 
 <script>
+  import STYLE from 'weex-ui/lib/theme/default/index.js';
+
   const DOM = weex.requireModule('dom');
   const Animation = weex.requireModule('animation');
   const OFFSET_ACCURACY = 10;
