@@ -42,7 +42,7 @@
 <script>
   import sourceData from './data';
   import * as Util from '../../packages/wxc-city/util';
-  import { WxcCity } from '../../index';
+  import { WxcCity } from 'weex-ui';
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
 

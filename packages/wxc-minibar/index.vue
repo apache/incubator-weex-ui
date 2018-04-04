@@ -38,7 +38,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #009ff0;
   }
 
   .left {
@@ -77,11 +76,13 @@
 
 <script>
   const Navigator = weex.requireModule('navigator');
+  import STYLE from 'weex-ui/lib/theme/default/index.js';
+
   export default {
     props: {
       backgroundColor: {
         type: String,
-        default: '#FFC900'
+        default: STYLE.primaryColor
       },
       leftButton: {
         type: String,
@@ -89,7 +90,7 @@
       },
       textColor: {
         type: String,
-        default: '#3D3D3D'
+        default: STYLE.fontColorDark
       },
       rightButton: {
         type: String,

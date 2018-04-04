@@ -8,6 +8,9 @@
       <category title="使用案例"></category>
       <div>
         <div class="demo">
+          <wxc-minibar title="主题色"></wxc-minibar>
+        </div>
+        <div class="demo">
           <wxc-minibar title="Minibar" background-color="#F2F3F4"></wxc-minibar>
         </div>
         <div class="demo">
@@ -74,7 +77,7 @@
 <script>
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
-  import { WxcMinibar } from '../../index';
+  import { WxcMinibar } from 'weex-ui';
 
   const modal = weex.requireModule('modal');
   import { setTitle } from '../_mods/set-nav';

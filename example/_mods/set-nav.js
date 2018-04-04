@@ -6,7 +6,7 @@
 
 const navigationBar = weex.requireModule('navigationBar');
 const navigator = weex.requireModule('navigator');
-import { Utils } from '../../index';
+import { Utils } from 'weex-ui';
 
 export function setTitle (title) {
   if (navigationBar && navigationBar.setTitle) {

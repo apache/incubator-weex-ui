@@ -27,7 +27,7 @@
   import Category from '../_mods/category.vue';
   import { setTitle } from '../_mods/set-nav';
 
-  import { WxcRefresher } from '../../index';
+  import { WxcRefresher } from 'weex-ui';
 
   const modal = weex.requireModule('modal');
 

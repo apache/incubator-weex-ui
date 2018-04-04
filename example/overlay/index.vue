@@ -68,7 +68,7 @@
   const modal = weex.requireModule('modal');
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
-  import { WxcOverlay } from '../../index';
+  import { WxcOverlay } from 'weex-ui';
   import { setTitle } from '../_mods/set-nav';
 
   export default {

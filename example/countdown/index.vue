@@ -148,7 +148,7 @@
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
 
-  import { WxcCountdown } from '../../index'
+  import { WxcCountdown } from 'weex-ui'
 
   export default {
     components: { Title, Category, WxcCountdown },

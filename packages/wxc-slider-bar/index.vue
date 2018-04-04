@@ -49,6 +49,7 @@
   import Utils from '../utils';
   import BindEnv from '../utils/bind-env';
   import Binding from 'weex-bindingx/lib/index.weex.js';
+  import STYLE from 'weex-ui/lib/theme/default/index.js';
 
   const animation = weex.requireModule('animation');
   const dom = weex.requireModule('dom');
@@ -117,7 +118,7 @@
       },
       validColor: {
         type: String,
-        default: '#EE9900'
+        default: STYLE.primaryColor
       },
       disabledColor: {
         type: String,

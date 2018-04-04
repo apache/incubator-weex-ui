@@ -5,7 +5,7 @@
 <template>
   <div>
     <div class="wxc-search-bar"
-         :style="Object.assign({backgroundColor: STYLE.backgroundColor}, barStyle)"
+         :style="Object.assign({backgroundColor: STYLE.primaryColor}, barStyle)"
          v-if="mod==='default'">
       <input @blur="onBlur"
              @focus="onFocus"
@@ -17,7 +17,7 @@
              ref="search-input"
              :type="inputType"
              :placeholder="placeholder"
-             :style="{ backgroundColor: STYLE.inputBackground, width: needShowCancel ? '624px' : '710px' }"
+             :style="{ backgroundColor: STYLE.weakColor, width: needShowCancel ? '624px' : '710px' }"
              class="search-bar-input"/>
       <div v-if="disabled"
            @click="inputDisabledClicked"
@@ -31,12 +31,12 @@
              @click="closeClicked"
              :src="closeIcon"></image>
       <text class="search-bar-button"
-            :style="{backgroundColor: STYLE.backgroundColor}"
+            :style="{backgroundColor: STYLE.primaryColor}"
             v-if="needShowCancel"
             @click="cancelClicked">{{cancelLabel}}</text>
     </div>
     <div class="wxc-search-bar"
-         :style="Object.assign({backgroundColor: STYLE.backgroundColor}, barStyle)"
+         :style="Object.assign({backgroundColor: STYLE.primaryColor}, barStyle)"
          v-if="mod==='hasDep'">
       <input @blur="onBlur"
              @focus="onFocus"
@@ -47,7 +47,7 @@
              :value="value"
              :type="inputType"
              :placeholder="placeholder"
-             :style="{ backgroundColor: STYLE.inputBackground }"
+             :style="{ backgroundColor: STYLE.weakColor }"
              class="search-bar-input input-has-dep"/>
       <div v-if="disabled"
            @click="inputDisabledClicked"
@@ -176,7 +176,7 @@
 
 <script>
   import { INPUT_ICON, ARROW_ICON, CLOSE_ICON } from './type';
-  import STYLE from 'weex-ui/lib/theme/default/searchbar.js';
+  import STYLE from 'weex-ui/lib/theme/default/index.js';
 
   export default {
     props: {
@@ -227,7 +227,7 @@
       }
     },
     data: () => ({
-      STYLE: {},
+      STYLE: Object.assign({}, STYLE),
       inputIcon: INPUT_ICON,
       closeIcon: CLOSE_ICON,
       arrowIcon: ARROW_ICON,
@@ -241,7 +241,6 @@
         this.showCancel = false;
         this.showClose = false;
       }
-      this.STYLE = STYLE
     },
     methods: {
       onBlur () {

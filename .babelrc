@@ -5,9 +5,9 @@
       "weexcomponent",
       {
         "style": false,
+        "jsTheme": true,
         "libraryName": "weex-ui",
         "libDir": "packages",
-        "themeDir": "lib/theme",
         "themeConfig": {
           "name": "default"
         }
