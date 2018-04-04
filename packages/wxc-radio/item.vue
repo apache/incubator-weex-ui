@@ -31,7 +31,7 @@
 <script>
   import WxcCell from '../wxc-cell';
   import { CHECKED, DISABLED } from './type.js'
-  import STYLE from 'weex-ui/lib/theme/default/index.js';
+  import STYLE from 'weex-ui/lib/theme/default/wxc-radio.js';
 
   export default {
     components: { WxcCell },
@@ -63,7 +63,7 @@
     },
     data: () => ({
       STYLE: Object.assign({}, STYLE),
-      icon: [CHECKED, DISABLED]
+      icon: [STYLE.CHECKED, STYLE.DISABLED]
     }),
     computed: {
       radioIcon () {
@@ -81,7 +81,7 @@
         const { disabled, checked, config, STYLE } = this;
         let checkedColor = STYLE.primaryColor;
         config.checkedColor && (checkedColor = config.checkedColor);
-        return checked && !disabled ? checkedColor : STYLE.fontColorDark;
+        return checked ? (!disabled ? checkedColor : STYLE.disabledColor) : STYLE.fontColorDark;
       }
     },
     methods: {

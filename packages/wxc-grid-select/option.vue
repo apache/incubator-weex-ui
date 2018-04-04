@@ -14,6 +14,8 @@
 </template>
 
 <script>
+  import STYLE from 'weex-ui/lib/theme/default/wxc-grid-select.js';
+
   export default {
     props: {
       index: {
@@ -46,22 +48,22 @@
       // 默认 x
       icon: {
         type: String,
-        default: 'https://gw.alicdn.com/tfs/TB1IAByhgMPMeJjy1XdXXasrXXa-38-34.png'
+        default: STYLE.CHECKED_ICON
       },
       // 正常状态文字色值
       color: {
         type: String,
-        default: '#3d3d3d'
+        default: STYLE.fontColorDark
       },
       // 选中状态文字色值
       checkedColor: {
         type: String,
-        default: '#3d3d3d'
+        default: STYLE.fontColorDark
       },
       // 不可选状态文字色值
       disabledColor: {
         type: String,
-        default: '#9b9b9b'
+        default: STYLE.disabledColor
       },
       // 正常状态边框色值
       borderColor: {
@@ -71,7 +73,7 @@
       // 选中状态边框色值
       checkedBorderColor: {
         type: String,
-        default: '#ffb200'
+        default: STYLE.primaryColor
       },
       // 不可选状态边框色值
       disabledBorderColor: {
@@ -81,7 +83,7 @@
       // 正常状态背景色值
       backgroundColor: {
         type: String,
-        default: '#f6f6f6'
+        default: STYLE.grayColor
       },
       // 选中状态背景色值
       checkedBackgroundColor: {
@@ -91,7 +93,7 @@
       // 不可选状态背景色值
       disabledBackgroundColor: {
         type: String,
-        default: '#f6f6f6'
+        default: STYLE.weakColor
       }
     },
     computed: {

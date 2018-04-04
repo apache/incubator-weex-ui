@@ -26,6 +26,7 @@
              :key="`${index}-${rowIndex}`"
              :ref="cell.ref"
              :class="['row-item', cell.cellClass]"
+             :style="Object.assign({}, cell.cellStyle)"
              :accessible="true"
              :aria-label="`${cell.text?cell.text:''},${cell.note?cell.note:''},${cell.ext?cell.ext:''}`"
              @click="onClickDate(cell)">
@@ -42,6 +43,7 @@
 <script>
   import * as Format from './format';
   import Utils from '../utils';
+  import STYLE from 'weex-ui/lib/theme/default/index.js';
 
   const isWeb = Utils.env.isWeb();
 
@@ -66,8 +68,8 @@
         type: Object,
         default: () => ({
           'title': '选择日期',
-          'background-color': '#FFC900',
-          'text-color': '#3D3D3D'
+          'background-color': STYLE.primaryColor,
+          'text-color': STYLE.fontColorDark
         })
       },
       showHeader: {
@@ -325,7 +327,6 @@
 
   .item-row-selected {
     color: #ffffff;
-    background-color: #FFC900;
     text-align: center;
   }
 

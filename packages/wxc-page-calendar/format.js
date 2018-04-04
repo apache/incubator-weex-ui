@@ -3,6 +3,8 @@
  * Created by Tw93 on 2017/07/29.
  */
 
+import STYLE from 'weex-ui/lib/theme/default/index.js';
+
 // 国际节日
 export const GLOBAL_HOLIDAY = {
   '01-01': '元旦',
@@ -183,6 +185,7 @@ export function getWeekRows (y, m, today, dateRange, departDate, arriveDate, sel
         let cls = [];
         let ref = '';
         const cellClass = [];
+        const cellStyle = {};
         const isInRange = _isInRange(dateRange, date);
         let disabled = false;
         const global = _fixNum(m) + '-' + _fixNum(d);
@@ -256,10 +259,12 @@ export function getWeekRows (y, m, today, dateRange, departDate, arriveDate, sel
           }
           cls.push('item-text-selected');
           cellClass.push('item-row-selected');
+          cellStyle.backgroundColor = STYLE.lightColor;
         }
 
         if (departDate && arriveDate && _isInSelectRange([departDate, arriveDate], date)) {
           cellClass.push('calendar-day-include');
+          cellStyle.backgroundColor = STYLE.weakColor;
         }
 
         cell = {
@@ -267,6 +272,7 @@ export function getWeekRows (y, m, today, dateRange, departDate, arriveDate, sel
           ref,
           cls: _unique(cls).join(' '),
           cellClass: _unique(cellClass).join(' '),
+          cellStyle,
           note: note,
           date: date,
           ext: ext,
