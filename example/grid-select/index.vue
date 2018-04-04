@@ -103,7 +103,8 @@
           'title': '北京'
         },
         {
-          'title': '广州'
+          'title': '不可选',
+          'disabled': true
         },
         {
           'title': '深圳'
