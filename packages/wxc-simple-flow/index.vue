@@ -65,7 +65,6 @@
     bottom: 0;
     left: 38px;
     width: 2px;
-    background-color: #FFC300;
   }
 
   .first-one-title-line {
@@ -86,10 +85,8 @@
     left: 32px;
     width: 14px;
     height: 14px;
-    background-color: #FFF0BD;
     border-style: solid;
     border-width: 2px;
-    border-color: #EE9900;
     border-radius: 100px;
   }
 
@@ -98,19 +95,13 @@
     left: 26px;
     width: 26px;
     height: 26px;
-    background-color: #EE9900;
     border-style: solid;
     border-width: 6px;
-    border-color: #FFE78D;
   }
 
   .text-title {
     font-size: 30px;
     color: #3d3d3d;
-  }
-
-  .text-highlight-title {
-    color: #EE9900;
   }
 
   .text-desc,
@@ -125,6 +116,8 @@
 </style>
 
 <script>
+  import STYLE from 'weex-ui/lib/theme/default/index.js';
+
   export default {
     props: {
       list: {
@@ -133,7 +126,14 @@
       },
       themeColor: {
         type: Object,
-        default: () => ({})
+        default: () => ({
+          lineColor: STYLE.primaryColor,
+          pointInnerColor: STYLE.lightColor,
+          pointBorderColor: STYLE.highlightColor,
+          highlightTitleColor: STYLE.primaryColor,
+          highlightPointInnerColor: STYLE.highlightColor,
+          highlightPointBorderColor: STYLE.lightColor
+        })
       }
     },
     computed: {
