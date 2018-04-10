@@ -105,7 +105,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | has-vertical-indent | `Bool` | `N`| `true` |  whether has vertical indent|
 | has-margin | `Bool` |`N`| `false` | whether has vertical margin |
 | cell-style | `Object` |`N`| `{}` | Custom cell style |
-
+| extra-content | `String` |`N`| `-` | extra content |
 
 ### Slot
 1. `<slot name="label"></slot>`：label slot
