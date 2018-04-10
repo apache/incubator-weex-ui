@@ -32,7 +32,7 @@ Weex Ui 的定位为 **一套轻量、富交互、高性能的 Weex 上层  Ui �
 - Issus 168，Pull Request 数为45，共 11 个 Contributors，累计发布 30 个版本
 - 国内公司使用不完全统计
 
- <img src="https://img.alicdn.com/tfs/TB1Rz9dhCtYBeNjSspaXXaOOFXa-1576-318.png" width="500"/>
+ <img src="https://img.alicdn.com/tfs/TB12DmskFuWBuNjSspnXXX1NVXa-1940-384.png" width="500"/>
  
 - 给 Weex Ui 贡献代码的同学
 
