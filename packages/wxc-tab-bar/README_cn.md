@@ -82,7 +82,7 @@
 | tab-styles | `Array` |`N`| `[]` |  底部 Tab [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
 | is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时 tab 配置 url 参数即可跳出 |
 | duration | `Number` |`N`| `300` | 页面切换动画的时间 |
-| title-use-slot | `Boolean` |`N`| `false` | 使用 slot 配置头部导航 (注2)|
+| title-use-slot | `Boolean` |`N`| `false` | 使用 slot 配置底部导航 (注2)|
 | timing-function | `String` |`N`| `-` | 页面切换动画函数 |
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|
 
