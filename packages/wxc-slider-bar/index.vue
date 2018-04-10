@@ -543,6 +543,7 @@
     height: 56px;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 
   .value-bar {
