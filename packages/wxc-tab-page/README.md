@@ -4,6 +4,8 @@
 
 !> The effect of sliding with hand is based on [BindingX](https://alibaba.github.io/bindingx/) feature. Make sure your app [install it](https://github.com/alibaba/bindingx#installation).
  
+ !> The 0.6.1  version add the new immersive full screen effect tabPage named `wxc-full-page`,the following documents can be seen in detail.
+
 ### Rule
 - Allow configuration of the head, support `Binding` gesture to follow the effect.
 - Commonly used in Tab switch pages, currently supports **icon 、text and iconFont** form the top bar, You can see in [here](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
@@ -12,7 +14,7 @@
  
 
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/tab-page/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Ftab-page%2Findex.weex.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/drLGhWpwwSbMTjMCWomE.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1sjw3aMMPMeJjy1XdXXasrXXa-750-1334.jpg" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1rGKAcxSYBuNjSspjXXX73VXa-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/drLGhWpwwSbMTjMCWomE.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://gw.alipayobjects.com/zos/rmsportal/WWwmdByyfODYLycoDmZP.gif" width="200"/>;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1sjw3aMMPMeJjy1XdXXasrXXa-750-1334.jpg" width="200"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1rGKAcxSYBuNjSspjXXX73VXa-200-200.png" width="160"/>
 
 ## Code Example
 
@@ -132,6 +134,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | timing-function | `String` |`N`| `-` | page slider function of animation |
 | title-use-slot | `Boolean` |`N`| `false` | configure title using `slot` (*2)|
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |page background color|
+| need-slider | `Boolean` |`N`| `true` |whether to slide with gestures|
 
 ### *1: Using iconFont
 - After Weex Ui version about `0.3.8`, we can use `iconFont` to represent our title image, you can use like this:
@@ -198,6 +201,10 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected"
 ```
 
+## Immersive full screen `WxcFullPage` components
+1. Import：` import { WxcFullPage} from 'weex-ui';`
+2. Params are consistent with `wxcTabPage`,more you can see [【demo/full-page】](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/full-page/)
+3. It is recommended to hide the head navigation bar for use，also can use[wxc-slide-nav](https://alibaba.github.io/weex-ui/#/packages/wxc-slide-nav/)
 
 
 ## wxc-pan-item
