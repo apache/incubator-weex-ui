@@ -33,7 +33,7 @@ const getEntry = dir => {
 };
 
 const getCopyConfig = () => {
-  const foundScripts = glob.sync('example/*/', {});
+  const foundScripts = glob.sync('example/slider-bar/', {});
   const ret = [];
   foundScripts.forEach(scriptPath => {
     if (!/(_mods|_public)/.test(scriptPath)) {
