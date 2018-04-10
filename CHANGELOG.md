@@ -8,7 +8,7 @@
 - [+] [wxc-popover](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md) support animation.  [pr 184](https://github.com/alibaba/weex-ui/pull/184/files)
 - [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) support setting `bar-style` style to cover theme color.
 - [!] [wxc-rich-text](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-rich-text/README.md) enhanced compatibility with iPad and Android.
-- [+] Document update for Faq and Binding
+- [+] Document update for Faq and Binding.
 
 
 ## 0.5.3

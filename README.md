@@ -21,7 +21,7 @@
 
 <img src="https://img.alicdn.com/tfs/TB1O2ulhgoQMeJjy0FoXXcShVXa-1282-986.jpg" width=540/>
 
-_Try [**it**](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js) with Fliggy、Taobao、Tmall、Weex Playground or any browsers now!_
+Try [**it**](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js) with Fliggy、Taobao、Tmall、Weex Playground or any browsers now!
 
 ## Installation
 
