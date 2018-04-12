@@ -18,12 +18,12 @@
         <div class="demo demo3">
           <wxc-button text="向右弹出|无动画"
                       :btnStyle="btn3Style"
-                      type="normal"
+                      type="white"
                       @wxcButtonClicked="wxcButtonClicked('wxc-popover3')"></wxc-button>
 
           <wxc-button text="向左弹出"
                       :btnStyle="btn4Style"
-                      type="highlight"
+                      type="white"
                       @wxcButtonClicked="wxcButtonClicked('wxc-popover4')"></wxc-button>
 
         </div>
