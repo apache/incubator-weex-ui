@@ -103,7 +103,7 @@
 | has-vertical-indent | `Bool` | `N`| `true` |  是否有垂直间距 |
 | has-margin | `Bool` |`N`| `false` | cell之间是否有margin |
 | cell-style | `Object` |`N`| `{}` | 自定义cell的样式 |
-| extra-content | `String` |`N`| `-` | 额外内容 |
+| extraContent | `String` |`N`| `{}` | 额外的内容 |
 
 
 ### Slot
