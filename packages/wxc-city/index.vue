@@ -53,16 +53,13 @@
       },
       sourceData: {
         type: Object,
-        default: () =>defaultSourceData
+        default: () => defaultSourceData
       },
-      cityStyleType:{
+      cityStyleType: {
         type: String,
         default: 'list'
       },
-      currentLocation:{
-        type: String,
-        default: '定位中'
-      },
+      currentLocation: String,
       cityHeight: {
         type: Number,
         default: 0
@@ -78,7 +75,7 @@
     },
     data: () => ({
       tId: null,
-      saveDefaultSourceData:{},
+      saveDefaultSourceData: {},
       onlyShowList: false,
       result: {
         noGoods: {
@@ -95,13 +92,17 @@
       cityExtendStyle () {
         return Utils.uiStyle.pageTransitionAnimationStyle(this.animationType)
       },
-      currentCityLocationConfig() {
-        return {
-          type: this.cityStyleType,
-          title: '定位',
-          list: [
-            { name: this.currentLocation, isLocation: true }
-          ]
+      currentCityLocationConfig () {
+        if (this.currentLocation) {
+          return {
+            type: this.cityStyleType,
+            title: '定位',
+            list: [
+              { name: this.currentLocation, isLocation: true }
+            ]
+          }
+        } else {
+          return {};
         }
       },
       normalList () {
@@ -188,13 +189,12 @@
         inputRef && inputRef.autoBlur();
       },
       show (status = true, callback = null) {
-        var ref = this.$refs.city
-        if(this.animationType==='push') {
-          Utils.animation.pageTransitionAnimation(ref,`translateX(${status ? -750 : 750}px)`,status,callback)
-        } else if (this.animationType==='model') {
-          Utils.animation.pageTransitionAnimation(ref,`translateY(${status ? -Utils.env.getScreenHeight() : Utils.env.getScreenHeight()}px)`,status,callback)
+        const ref = this.$refs.city
+        if (this.animationType === 'push') {
+          Utils.animation.pageTransitionAnimation(ref, `translateX(${status ? -750 : 750}px)`, status, callback)
+        } else if (this.animationType === 'model') {
+          Utils.animation.pageTransitionAnimation(ref, `translateY(${status ? -Utils.env.getScreenHeight() : Utils.env.getScreenHeight()}px)`, status, callback)
         }
-
       }
     }
   };

@@ -1,8 +1,52 @@
 # 升级日志
 
+## 0.6.1
+- [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 新增沉浸式全屏效果的页面切换组件 `wxc-full-page`,详细使用见组件文档
+- [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 新增参数`need-slider` 控制是否需要手势滑动
+- [!] 解决 `import {BindEnv} from 'weex-ui'` 的使用问题
+- [!] [wxc-cell](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-cell/) 功能增强，支持配置额外内容
+- [!] 修复 [`wxc-slider-bar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) 在 Web 端和 iOS 端样式显示
+- [+] [`wxc-refresher`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-refresher/) 放出 refresh 和 pullingdown 事件回调
+
+
+## 0.6.0
+- [+] [wxc-button](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/README.md) 组件支持更多 `type`，去除 `normal`/ `highlight`，新增 type 类型 `white`、`blue`，同时新增按钮 `size` 设置，升级后使用需要注意
+- [!] 解决 bindingx 打包体积过大问题，Binding 相关判断由 `Utils.env` 转移到 `BindEnv`，升级需注意 [issue 191](https://github.com/alibaba/weex-ui/issues/191)
+- [+] 新 Binding 组件: [`wxc-refresh`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-refresh/README.md)，目前处于 beta 阶段，欢迎提建议
+- [-] 移除高版本 weex-vue-loader 中对组件默认样式的提示 [issue 198](https://github.com/alibaba/weex-ui/issues/189)
+- [+] [wxc-popover](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md) 组件支持动画 [pr 184](https://github.com/alibaba/weex-ui/pull/184/files)
+- [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) 支持设置 `bar-style` 样式覆盖主题颜色
+- [!] [wxc-rich-text](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-rich-text/README.md)  对 `wxc-special-rich-text` iPad、Android 兼容性增强
+- [+] 常见问题/bindingx 相关组件文档更新
+
+## 0.5.3
+- [!] [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) 支持不显示定位城市，直接传入`currentLocation`为空即可
+- [+] [wxc-checkbox](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-checkbox/README.md) 新增 `has-top-border`/`has-bottom-border` 参数用于控制是否展示上线border线
+- [+] [wxc-progress](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-progress/README.md) 新增 `bar-radius` 参数用于控制进度条的圆角
+
+## 0.5.2
+* [!] 重新使用 `rebind()` 用在适配 [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md) 在 iOS Binding 老版本上面 list 滑动注销 Bug 
+* [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) 允许配置 取消 按钮文案
+* [!][`wxc-mask`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-mask/README.md) 支持控制蒙层不可以自动关闭
+
+
+## 0.5.0
+* [+] [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-page/README.md)、[wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md)、[wxc-slider-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-slider-bar/README.md) 支持[Bindingx](https://alibaba.github.io/bindingx/) 🎉🎉
+* [-] 移除 [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md) 中的 rebind() 调用
+* [!] 修复 [`wxc-city`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) 组件 props 参数问题
+* [+] 给 [wxc-popover](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md) 增加更多 demo 同时兼容适配 Android
+
+## 0.4.1
+* [+] 新组件: [`wxc-popover`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md). 🎉🎉
+* [+] [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md)、[wxc-page-calendar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-calendar/README.md) 支持 model 形式动画
+* [+] [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-page/README.md)、[wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-bar/README.md) 支持设置 iconFont 到 text 之间的 margin
+* [+] [wxc-loading](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) 支持设置防误触蒙层
+* [+] [wxc-simple-flow](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-simple-flow/README.md) 支持设置多行标题
+ 
+ 
 ## 0.4.0
 
-* [+] 更强大的 [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md)组件，使用简单化，默认城市配置，不需传入很多参数，**但是涉及参数变动**
+* [+] 更强大的 [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) 组件，使用简单化，默认城市配置，不需传入很多参数，**但是涉及参数变动**
 * [!] 优化 Github 中 Readme 中英文档的显示
 * [+] 新增一个中文版本的 [Changelog](https://github.com/alibaba/weex-ui/blob/master/CHANGELOG_cn.md)
 * [+] 从群里收集，新增更多的常见问题

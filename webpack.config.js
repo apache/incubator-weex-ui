@@ -33,7 +33,7 @@ const getEntry = dir => {
 };
 
 const getCopyConfig = () => {
-  const foundScripts = glob.sync('example/*/', {});
+  const foundScripts = glob.sync('example/tab-page/', {});
   const ret = [];
   foundScripts.forEach(scriptPath => {
     if (!/(_mods|_public)/.test(scriptPath)) {
@@ -64,7 +64,6 @@ const plugins = [
   }),
   new HappyPack({
     id: 'babel',
-    cache: false,
     verbose: true,
     loaders: ['babel-loader?cacheDirectory=true'],
     threadPool: happyThreadPool

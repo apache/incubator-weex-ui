@@ -69,6 +69,8 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | checked | `Boolean` | `N` | `false` | whether is checked |
 | disabled | `Boolean` | `N` | `false` | whether is been disabled |
 | config | `Object` | `N` | `{}` | overwrite color and icon|
+| has-top-border | `Boolean` | `N` | `false` | whether show top-border|
+| has-bottom-border | `Boolean` | `N` | `true` | whether show bottom-border|
 
 - Event
 ```

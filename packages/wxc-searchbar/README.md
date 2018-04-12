@@ -81,6 +81,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 |-------------|------------|--------|-----|-----|
 | mod | `String` |`N`| `default` | search bar mode `default`/`hasDep` |
 | placeholder | `String` |`N`| `搜索` | input placeholder|
+| cancel-label | `String` |`N`| `取消 ` | cancel button label|
 | input-type | `String` |`N`| `text` | `text，password，url，email，tel`|
 | autofocus | `Boolean` |`N`| `false` | input auto focus |
 | default-value | `String` |`N`| `-` | default value |
@@ -88,6 +89,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | always-show-cancel | `Boolean` |`N`| `false` | whether to show cancel button |
 | dep-name | `String` |`N`| `杭州` | dep name when `mode="hasDep"` |
 | theme | `String` |`N`| `gray` |  search bar theme `gray`/`yellow` |
+| bar-style | `Object` |`N`| `{}` | Use when theme is not satisfied |
 
 
 ### Event

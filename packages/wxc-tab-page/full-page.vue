@@ -1,5 +1,6 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
 <!-- Created by Tw93 on 17/07/28. -->
+<!-- Updated by Tw93 on 18/04/10. -->
 
 <template>
   <div class="wxc-tab-page"
@@ -25,7 +26,6 @@
            :key="index"
            :ref="'wxc-tab-title-'+index"
            @click="setPage(index,v.url)"
-           :data-spm-click="`gostr=/tbtrip;locaid=d${v.dataSpm!==undefined ? v.dataSpm : '996' + index}`"
            :style="{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage == index ? tabStyles.activeBgColor : tabStyles.bgColor }"
            :accessible="true"
            :aria-label="`${v.title?v.title:'标签'+index}`">
@@ -73,7 +73,6 @@
 
   .tab-page-wrap {
     width: 750px;
-    overflow: hidden;
   }
 
   .tab-container {
@@ -95,8 +94,9 @@
   const expressionBinding = weex.requireModule('expressionBinding');
 
   import Utils from '../utils';
+  import BindEnv from '../utils/bind-env';
+  import Binding from 'weex-bindingx/lib/index.weex.js';
 
-  const supportsEBForIos = Utils.env.supportsEBForIos();
   const isIos = Utils.env.isIOS();
 
   export default {
@@ -157,11 +157,12 @@
       if (swipeBack && swipeBack.forbidSwipeBack) {
         swipeBack.forbidSwipeBack(true);
       }
-      if (supportsEBForIos && this.needSlider) {
-        setTimeout(() => {
-          const tabPageEl = this.$refs['tab-page-wrap'];
-          tabPageEl && tabPageEl.ref && this.bindExp(tabPageEl);
-        }, 20);
+      if (BindEnv.supportsEBForIos() && this.needSlider) {
+        const tabPageEl = this.$refs['tab-page-wrap'];
+        Binding.prepare && Binding.prepare({
+          anchor: tabPageEl.ref,
+          eventType: 'pan'
+        });
       }
     },
     methods: {
@@ -180,26 +181,39 @@
         this.setPage(page);
       },
       startHandler (e) {
-        if (supportsEBForIos && e.state === 'start' && this.needSlider) {
-          // list下拉和到最下面问题修复
-          setTimeout(() => {
-            this.bindExp(this.$refs['tab-page-wrap']);
-          }, 0)
+        if (BindEnv.supportsEBForIos() && this.isTabView && this.needSlider) {
+          this.bindExp(this.$refs['tab-page-wrap']);
         }
       },
       bindExp (element) {
-        if (!this.isMoving && element && element.ref) {
+        if (element && element.ref) {
+
+          if (this.isMoving && this.gesToken !== 0) {
+            Binding.unbind({
+              eventType: 'pan',
+              token: this.gesToken
+            })
+            this.gesToken = 0;
+            return;
+          }
+
           const tabElement = this.$refs['tab-container'];
-          const { currentPage, panDist, tabTitles } = this;
+          const { currentPage, panDist } = this;
           const dist = currentPage * 750;
+
           // x-dist
-          const args = [{
+
+          const props = [{
             element: tabElement.ref,
             property: 'transform.translateX',
-            expression: `{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"min\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":0},{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"max\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":${-(tabTitles.length - 1) * 750}},{\"type\":\"-\",\"children\":[{\"type\":\"Identifier\",\"value\":\"x\"},{\"type\":\"NumericLiteral\",\"value\":${dist}}]}]}]}]}]}`
+            expression:  `{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"min\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":0},{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"max\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":${-(tabTitles.length - 1) * 750}},{\"type\":\"-\",\"children\":[{\"type\":\"Identifier\",\"value\":\"x\"},{\"type\":\"NumericLiteral\",\"value\":${dist}}]}]}]}]}]}`
           }];
-          expressionBinding.enableBinding(element.ref, 'pan');
-          expressionBinding.createBinding(element.ref, 'pan', '', args, e => {
+
+          const gesTokenObj = Binding.bind({
+            anchor: element.ref,
+            eventType: 'pan',
+            props
+          }, (e) => {
             const { deltaX, state } = e;
             if (state === 'end') {
               if (deltaX < -panDist) {
@@ -211,6 +225,7 @@
               }
             }
           });
+          this.gesToken = gesTokenObj.token;
         }
       },
       setPage (page) {
@@ -233,15 +248,7 @@
         page <= 1 && previousPage > page && dom.scrollToElement(currentTabEl, {
           offset: -width * page
         });
-
-        if (isIos) {
-          // 高版本ios 手淘上面会有不固定情况，hack一下
-          setTimeout(() => {
-            this._animateTransformX(page);
-          }, 10);
-        } else {
-          this._animateTransformX(page);
-        }
+        this._animateTransformX(page);
         this.isMoving = false;
         this.currentPage = page;
         this.$emit('wxcTabPageCurrentTabSelected', { page });

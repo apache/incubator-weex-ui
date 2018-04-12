@@ -32,12 +32,12 @@ Also you can copy the `name` from [demo](https://h5.m.taobao.com/trip/wx-detecti
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`name`** | `string` | `Y` | `-` | icon name (*1)|
-| **`type`** | `String` | `N` | `small` | icon size `xs`/`small`/`medium`/`large`|
+| **`size`** | `String` | `N` | `small` | icon size `xs`/`small`/`medium`/`large`|
 | **`icon-style`** | `Object` | `N` | `{}` |style override (*2)|
 
 - *1：icon name list：`['less', 'more_unfold', 'back', 'more', 'add', 'subtract', 'close', 'cry', 'search', 'delete', 'help', 'refresh', 'success', 'warning', 'wrong', 'clock', 'scanning', 'filter', 'map', 'play']`
 
-- *2：When type is not satisfied, or needs a custom style type to pass into the `style` overlay, for example:
+- *2：When size is not satisfied, or needs a custom style size to pass into the `style` overlay, for example:
 
     ```
      style={color:red,fontSize:'60px'}

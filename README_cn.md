@@ -1,11 +1,12 @@
 # Weex Ui
 
 [![Build Status](https://img.shields.io/travis/alibaba/weex-ui.svg?style=flat-square)](https://travis-ci.org/alibaba/weex-ui)
-[![GitHub last commit](https://img.shields.io/github/last-commit/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/commits/dev)
 [![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/weex-ui)
 [![NPM downloads](https://img.shields.io/npm/dm/weex-ui.svg?style=flat-square)](https://npmjs.org/package/weex-ui)
 [![NPM all downloads](https://img.shields.io/npm/dt/weex-ui.svg?style=flat-square)](https://npmjs.org/package/weex-ui)
+[![GitHub last commit](https://img.shields.io/github/last-commit/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/commits/dev)
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=)
+[![Package Quality](http://npm.packagequality.com/shield/weex-ui.svg?style=flat-square)](http://packagequality.com/#?package=weex-ui)
 [![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://img.shields.io/gitter/room/alibaba/weex-ui.svg?style=flat-square)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 > 一个基于 [Weex](https://github.com/apache/incubator-weex) 的富交互、轻量级、高性能的 UI 组件库
@@ -20,7 +21,7 @@
 
 <img src="https://img.alicdn.com/tfs/TB1O2ulhgoQMeJjy0FoXXcShVXa-1282-986.jpg" width=540/>
 
-_你可以通过飞猪、淘宝、天猫、Weex Playground 或者浏览器扫码[体验](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js)_
+你可以通过飞猪、淘宝、天猫、Weex Playground 或者浏览器扫码[体验](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js)
 
 ## 安装
 
@@ -107,15 +108,23 @@ npm run start
 
 一旦它编译完成后，将会自动打开一个浏览器，你可以将浏览器切换到开发者模式，这时候在 console 中你可以看到一个预览二维码，直接使用你的 Weex App 扫码就可以看到 Demo 效果。
 
+
 ## 支持
 
 * 在你的公司或个人项目中使用 Weex Ui
 * 如果你觉得 Weex Ui 还不错，可以通过 Star 来表示你的喜欢
-* 如果你有任何想法或建议来改善 Weex Ui，欢迎提交 [PR](./CONTRIBUTING.md)
 * <details>
-  <summary>加入钉钉聊天群一起讨论 Weex 技术</summary>
+  <summary>加入钉钉聊天群帮忙解答 Weex 技术问题</summary>
   <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
 </details>
+
+## 贡献
+
+想解 Bug，贡献代码或者提高文档可读性？有这个想法非常好，在提交 pull request 前记得阅读一下 [Contributing Guide](https://github.com/alibaba/weex-ui/blob/master/CONTRIBUTING.md)。
+
+感谢给 Weex Ui 贡献代码的你们！
+
+<a href="https://github.com/alibaba/weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg"/></a>
 
 ## 协议
 
