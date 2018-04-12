@@ -1,5 +1,14 @@
 # 升级日志
 
+## 0.6.1
+- [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 新增沉浸式全屏效果的页面切换组件 `wxc-full-page`,详细使用见组件文档
+- [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 新增参数`need-slider` 控制是否需要手势滑动
+- [!] 解决 `import {BindEnv} from 'weex-ui'` 的使用问题
+- [!] [wxc-cell](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-cell/) 功能增强，支持配置额外内容
+- [!] 修复 [`wxc-slider-bar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) 在 Web 端和 iOS 端样式显示
+- [+] [`wxc-refresher`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-refresher/) 放出 refresh 和 pullingdown 事件回调
+
+
 ## 0.6.0
 - [+] [wxc-button](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/README.md) 组件支持更多 `type`，去除 `normal`/ `highlight`，新增 type 类型 `white`、`blue`，同时新增按钮 `size` 设置，升级后使用需要注意
 - [!] 解决 bindingx 打包体积过大问题，Binding 相关判断由 `Utils.env` 转移到 `BindEnv`，升级需注意 [issue 191](https://github.com/alibaba/weex-ui/issues/191)

@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.6.1
+- [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) add `wxc-full-page` of immersion full screen effect, more you can see the component document.
+- [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) add a param about `need-slider`.
+- [!] Fixed the bug about `import {BindEnv} from 'weex-ui'`.
+- [!] [wxc-cell](https://alibaba.github.io/weex-ui/#/packages/wxc-cell/)  supports setting extra content.
+- [!] Fixed the show about [`wxc-slider-bar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) in web and iOS
+- [+] [`wxc-refresher`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-refresher/) supports refresh and pullingdown event.
+
 ## 0.6.0
 - [+] [wxc-button](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/README.md) supports more `type` settings, remove `normal`/ `highlight`，add new `type` ahout `white` and `blue`，new button `size` settings, pay attention to the upgrade.
 - [!] Solve the problem of too big packaging bundle of bindingx，`Binding related judgments` are transferred from `Utils.env` to `BindEnv`，pay attention to the upgrade. [issue 191](https://github.com/alibaba/weex-ui/issues/191)
@@ -8,7 +16,7 @@
 - [+] [wxc-popover](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md) support animation.  [pr 184](https://github.com/alibaba/weex-ui/pull/184/files)
 - [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) support setting `bar-style` style to cover theme color.
 - [!] [wxc-rich-text](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-rich-text/README.md) enhanced compatibility with iPad and Android.
-- [+] Document update for Faq and Binding
+- [+] Document update for Faq and Binding.
 
 
 ## 0.5.3

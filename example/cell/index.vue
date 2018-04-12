@@ -5,35 +5,88 @@
   <div class="wxc-demo">
     <scroller class="container">
       <title title="wxc-cell"></title>
-      <category title="列表list展示"></category>
+      <category title="Basic Style"></category>
       <div class="demo">
-        <wxc-cell label="标题"
-                  title="Weex Ui"
+        <wxc-cell label="Title"
+                  @wxcCellClicked="wxcCellClicked"
+                  :has-margin="false"
+                  extraContent="extra content"></wxc-cell>
+      </div>
+      <category title="Subtitle"></category>
+      <div class="demo">
+        <wxc-cell title="Title"
+                  desc="subtitle"
+                  :has-arrow="true"
+                  @wxcCellClicked="wxcCellClicked"
+                  :has-top-border="true"></wxc-cell>
+        <wxc-cell title="Listltem (Android)"
+                  desc="There may have water ripple effect of material if you set the click event."
+                  :has-arrow="true"
+                  @wxcCellClicked="wxcCellClicked"
+                  :has-top-border="true"></wxc-cell>
+      </div>
+      <category title="Customized Right Side（Empty Content / Text）"></category>
+      <div class="demo">
+        <wxc-cell label="Title"
+                  @wxcCellClicked="wxcCellClicked"
+                  :has-margin="false"></wxc-cell>
+        <wxc-cell label="Title"
+                  :has-arrow="true"
+                  @wxcCellClicked="wxcCellClicked"
+                  :has-top-border="false"></wxc-cell>
+        <wxc-cell title="Title"
+                  :has-arrow="true"
+                  @wxcCellClicked="wxcCellClicked"
+                  :has-top-border="true"
+                  extraContent="extra content"></wxc-cell>
+      </div>
+      <category title="Align Vertical Center"></category>
+      <div class="demo">
+        <wxc-cell title="Title"
+                  desc="subtitle"
+                  @wxcCellClicked="wxcCellClicked"
+                  :has-top-border="true"
+                  extraContent="extra content"></wxc-cell>
+      </div>
+      <category title="Text Wrapping"></category>
+      <div class="demo">
+        <wxc-cell desc="Multiple line，long text will wrap；Long Text Long Text Long Text Long Text Long Text Long Text"
+                  @wxcCellClicked="wxcCellClicked"
+                  :has-top-border="true"></wxc-cell>
+        <wxc-cell desc="Multiple line，long text will wrap；Long Text Long Text Long Text Long Text Long Text Long Text"
+                  @wxcCellClicked="wxcCellClicked"
+                  :has-top-border="true"
+                  extraContent="extra content"></wxc-cell>
+      </div>
+      <category title="Text content"></category>
+      <div class="demo">
+        <wxc-cell label="title"
+                  title="content title"
                   @wxcCellClicked="wxcCellClicked"
                   :has-margin="false"></wxc-cell>
 
-        <wxc-cell label="标题"
-                  title="带链接"
+        <wxc-cell label="title"
+                  title="link"
                   :has-arrow="true"
                   :link="link"
                   @wxcCellClicked="wxcCellClicked"
                   :has-top-border="false"></wxc-cell>
 
-        <wxc-cell label="标题"
-                  title="Weex Ui"
+        <wxc-cell label="title"
+                  title="content title"
                   :has-arrow="true"
                   @wxcCellClicked="wxcCellClicked"
                   :has-top-border="false"></wxc-cell>
 
-        <wxc-cell title="Weex Ui"
+        <wxc-cell title="content title"
                   :has-arrow="true"
                   @wxcCellClicked="wxcCellClicked"
                   :has-top-border="false"></wxc-cell>
       </div>
-      <category title="高级使用" class="category"></category>
+      <category title="Custom cell" class="category"></category>
       <div class="demo">
-        <wxc-cell title="标题内容"
-                  desc="描述信息"
+        <wxc-cell title="title content"
+                  desc="desc"
                   :has-arrow="true"
                   @wxcCellClicked="wxcCellClicked"
                   :has-top-border="true"></wxc-cell>
@@ -44,7 +97,7 @@
                   :has-top-border="false"
                   :auto-accessible="false">
           <text :style="{color:color}"
-                slot="title">自定义标题</text>
+                slot="title">custom title content</text>
           <switch slot="value"
                   @change="color= color==='#000' ? '#FFC900' : '#000'"></switch>
         </wxc-cell>
@@ -56,7 +109,8 @@
                  slot="label"
                  src="https://img.alicdn.com/tfs/TB1eLvjSXXXXXaiXXXXXXXXXXXX-144-166.jpg"></image>
           <text class="red"
-                slot="title">自定义标题、样式还可以加图片</text>
+                slot="title">A custom title, style can also be added to the picture
+          </text>
         </wxc-cell>
       </div>
     </scroller>
