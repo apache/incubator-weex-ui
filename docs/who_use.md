@@ -14,6 +14,7 @@
     </tr>
     <tr style="border: 0;background:#fff">
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1U4_vcuuSBuNjy1XcXXcYjFXa-512-512.png" width="66" /></td>
+        <td style="border: 0;"><img src="https://gw.alicdn.com/tfs/TB1dq38XQyWBuNjy0FpXXassXXa-144-144.png" width="66" /></td>
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1TFzKk1uSBuNjSsplXXbe8pXa-300-300.png" width="66"/></td>
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB19FfJcTtYBeNjy1XdXXXXyVXa-630-630.png" width="66" style="border-radius:8px"/></td>
         <td style="border: 0;"><img src="https://img.alicdn.com/tfs/TB1UapDcSCWBuNjy0FhXXb6EVXa-1024-1024.png" width="66" /></td>
