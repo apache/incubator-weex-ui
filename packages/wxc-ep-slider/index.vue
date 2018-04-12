@@ -94,7 +94,7 @@
         return new Array(this.cardLength + 1).join().split('');
       },
       cardWidth () {
-        return (this.cardLength - 1) * this.cardS.width + this.containerS.width + 235 + 'px';
+        return (this.cardLength - 1) * this.cardS.width + this.containerS.width + 235;
       }
     },
     created () {

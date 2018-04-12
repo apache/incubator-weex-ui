@@ -15,12 +15,14 @@
 <template>
   <div class="wxc-demo">
     <list class="scroller" ref="scroller">
-      <wxc-refresher scroller-ref="scroller"
+      <wxc-refresher ref="wxcRefresher"
+                     scroller-ref="scroller"
                      main-text="下拉即可刷新(自定义)"
                      pulling-text="释放即可刷新(自定义)"
                      refreshing-text="加载中(自定义)"
-                     :max-time="3000"
+                     :max-time="5000"
                      :text-width="240"
+                     @wxcRefresh="onRefresh"
                      @wxcTimeout="onTimeout"></wxc-refresher>
       <cell>
         <!-- cell list -->
@@ -37,6 +39,9 @@
     methods: {
       onTimeout () {
         modal.toast({message:'timeout',duration:0});
+      },
+      onRefresh () {
+        modal.toast({message:'refreshing...',duration:0});
       }
     }
   };
@@ -49,22 +54,34 @@ Further more, [demo](https://github.com/alibaba/weex-ui/blob/master/example/refr
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| scrollerRef | `String` |`true`| - | binding animation require passing in the ref of the outer list container |
-| maxTime | `Number` |`false`|`0` | timeout |
-| mainText | `String` |`false`|`下拉即可刷新...` | initial text |
-| pullingText | `String` |`false`|`释放即可刷新...` | pulling text |
-| refreshingText | `String` |`false`|`加载中...` | refreshing text |
-| textWidth | `Number` |`false`|`200` | text container width |
+| scroller-ref | `String` |`true`| - | binding animation require passing in the ref of the outer list container |
+| max-time | `Number` |`false`|`0` | timeout |
+| main-text | `String` |`false`|`下拉即可刷新...` | initial text |
+| pulling-text | `String` |`false`|`释放即可刷新...` | pulling text |
+| refreshing-text | `String` |`false`|`加载中...` | refreshing text |
+| text-width | `Number` |`false`|`200` | text container width |
 
 ### Canceling Refreshing
 
 ```
-<!-- <wxc-refresher ref="wxc-refresher"></wxc-popup> -->
-this.$refs['wxc-refresher'].wxcCancel();
+<!-- <wxc-refresher ref="wxcRefresher"></wxc-popup> -->
+this.$refs.wxcRefresher.wxcCancel();
 ```
 
 ### Event
 
+
 ```
+// refresh callback, refer to http://weex.apache.org/cn/references/components/refresh.html#refresh
+@wxcRefresh="onRefresh"
+```
+
+```
+// timeout callback
 @wxcTimeout="onTimeout"
+```
+
+```
+// pulling callback, refer to http://weex.apache.org/cn/references/components/refresh.html#pullingdown-v0-6-1
+@wxcPullingDown="onPullingDown"
 ```

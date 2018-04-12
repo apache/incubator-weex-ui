@@ -22,16 +22,18 @@
     </div>
     <slot name="value"></slot>
     <slot></slot>
+    <text class="extra-content-text" v-if="extraContent">{{extraContent}}</text>
     <image :src="arrowIcon"
            class="cell-arrow-icon"
            :aria-hidden="true"
            v-if="hasArrow"></image>
+
   </div>
 </template>
 
 <style scoped>
   .wxc-cell {
-    height: 100px;
+    /*height: 100px;*/
     flex-direction: row;
     align-items: center;
     padding-left: 24px;
@@ -90,6 +92,12 @@
     font-size: 24px;
     line-height: 30px;
     margin-top: 4px;
+    margin-right: 30px;
+  }
+  .extra-content-text {
+    font-size: 28px;
+    color: #999999;
+    margin-right: 4px;
   }
 </style>
 
@@ -103,6 +111,10 @@
         default: ''
       },
       title: {
+        type: String,
+        default: ''
+      },
+      extraContent: {
         type: String,
         default: ''
       },

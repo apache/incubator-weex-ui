@@ -4,6 +4,10 @@
 
 !> 随手滑动的效果依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App [是否安装](https://github.com/alibaba/bindingx#installation)。
 
+
+!> 0.6.1 版本新增 **沉浸式全屏的 FullPage** 效果的 tabPage，详细可见下面文档。
+
+
 ### 规则
 - 允许对头部进行配置，支持 Binding 手势跟随效果
 - 常用于 Tab 切换页面，目前支持**icon、text、iconFont**形式的顶栏,详细可见[config.js](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
@@ -11,7 +15,7 @@
 - 支持**居中形式 Tab**，将 tabStyles 中的 leftOffset 配置合适的值即可
  
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/tab-page/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Ftab-page%2Findex.weex.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/drLGhWpwwSbMTjMCWomE.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1sjw3aMMPMeJjy1XdXXasrXXa-750-1334.jpg" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1rGKAcxSYBuNjSspjXXX73VXa-200-200.png" width="160"/>
+<img src="https://gw.alipayobjects.com/zos/rmsportal/drLGhWpwwSbMTjMCWomE.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://gw.alipayobjects.com/zos/rmsportal/WWwmdByyfODYLycoDmZP.gif" width="200"/>;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1sjw3aMMPMeJjy1XdXXasrXXa-750-1334.jpg" width="200"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1rGKAcxSYBuNjSspjXXX73VXa-200-200.png" width="160"/>
 
 ## 使用方法
 
@@ -130,6 +134,7 @@
 | timing-function | `String` |`N`| `-` | 页面切换动画函数 |
 | title-use-slot | `Boolean` |`N`| `false` | 使用 slot 配置头部导航 (注2)|
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|
+| need-slider | `Boolean` |`N`| `true` |设置是否可以手势滑动|
 
 ### 注1：使用 iconFont
 
@@ -194,6 +199,11 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 ```
 @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected"
 ```
+
+## 沉浸式全屏的 FullPage 的使用
+1. 引入：` import { WxcFullPage} from 'weex-ui';`
+2. 参数形式和 wxcTabPage 保持一致，详细可见 [【demo】](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/full-page/)
+3. 建议隐藏头部导航栏使用，同时可以结合 [wxc-slide-nav](https://alibaba.github.io/weex-ui/#/packages/wxc-slide-nav/) 使用
 
 ## wxc-pan-item 的使用
 
