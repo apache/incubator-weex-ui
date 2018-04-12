@@ -13,5 +13,6 @@ mods/.sass-cache/
 !.gitignore
 !.editorconfig
 lerna-debug.log
-build/example
-build/*.map
+build
+
+npm-debug*

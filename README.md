@@ -1,11 +1,12 @@
 # Weex Ui
 
 [![Build Status](https://img.shields.io/travis/alibaba/weex-ui.svg?style=flat-square)](https://travis-ci.org/alibaba/weex-ui)
-[![GitHub last commit](https://img.shields.io/github/last-commit/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/commits/dev)
 [![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/weex-ui?_blank)
 [![NPM downloads](https://img.shields.io/npm/dm/weex-ui.svg?style=flat-square)](https://npmjs.org/package/weex-ui)
 [![NPM all downloads](https://img.shields.io/npm/dt/weex-ui.svg?style=flat-square)](https://npmjs.org/package/weex-ui)
+[![GitHub last commit](https://img.shields.io/github/last-commit/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/commits/dev)
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=)
+[![Package Quality](http://npm.packagequality.com/shield/weex-ui.svg?style=flat-square)](http://packagequality.com/#?package=weex-ui)
 [![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://img.shields.io/gitter/room/alibaba/weex-ui.svg?style=flat-square)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 > A rich interaction, lightweight, high performance UI library based on [Weex](https://github.com/apache/incubator-weex).
@@ -20,7 +21,7 @@
 
 <img src="https://img.alicdn.com/tfs/TB1O2ulhgoQMeJjy0FoXXcShVXa-1282-986.jpg" width=540/>
 
-_Try [**it**](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js) with Fliggy、Taobao、Tmall、Weex Playground or any browsers now!_
+Try [**it**](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js) with Fliggy、Taobao、Tmall、Weex Playground or any browsers now!
 
 ## Installation
 
@@ -111,11 +112,17 @@ Once it has been compiled, a browser window will be opened automatically. You ca
 
 * Use Weex Ui in your daily work.
 * **Star it** if you like.
-* If you have any ideas or suggestions to improve Weex Ui, welcome to submit a [PR](./CONTRIBUTING.md).
 * <details>
-  <summary>Join our chat at dingtalk.</summary>
+  <summary>Join the chat at dingtalk to help solve weex problems.</summary>
   <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
 </details>
+
+## Contribution
+Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our [Contributing Guide](https://github.com/alibaba/weex-ui/blob/master/CONTRIBUTING.md) before making a pull request.
+
+Thank you to all the people who already contributed to Weex Ui!
+
+<a href="https://github.com/alibaba/weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg"/></a>
 
 ## License
 

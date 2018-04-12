@@ -31,11 +31,11 @@
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`name`** | `string` | `Y` | `-` | icon 的名称 (注1)|
-| **`type`** | `String` | `N` | `small` | icon的尺寸 `xs`/`small`/`medium`/`large`|
+| **`size`** | `String` | `N` | `small` | icon的尺寸 `xs`/`small`/`medium`/`large`|
 | **`icon-style`** | `Object` | `N` | `{}` |样式覆盖 (注2)|
 
 - 注1：icon的名称详细如下：`['less', 'more_unfold', 'back', 'more', 'add', 'subtract', 'close', 'cry', 'search', 'delete', 'help', 'refresh', 'success', 'warning', 'wrong', 'clock', 'scanning', 'filter', 'map', 'play']`
-- 注2：当type不能满足时候，或者需要自定义样式类型可以传入`style`覆盖，例如：
+- 注2：当 size 不能满足时候，或者需要自定义样式类型可以传入`style`覆盖，例如：
 
     ```
      style={color:red,fontSize:'60px'}

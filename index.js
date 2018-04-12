@@ -4,6 +4,7 @@
  */
 
 import Utils from './packages/utils';
+import BindEnv from './packages/utils/bind-env';
 import WxcButton from './packages/wxc-button';
 import WxcCell from './packages/wxc-cell';
 import WxcCity from './packages/wxc-city';
@@ -25,9 +26,11 @@ import WxcLotteryRain from './packages/wxc-lottery-rain';
 import WxcNoticebar from './packages/wxc-noticebar';
 import WxcOverlay from './packages/wxc-overlay';
 import WxcPageCalendar from './packages/wxc-page-calendar';
+import WxcPopover from './packages/wxc-popover';
 import WxcPopup from './packages/wxc-popup';
 import WxcProgress from './packages/wxc-progress';
 import WxcRadio from './packages/wxc-radio';
+import WxcRefresher from './packages/wxc-refresher';
 import WxcResult from './packages/wxc-result';
 import WxcRichText from './packages/wxc-rich-text';
 import WxcSpecialRichText from './packages/wxc-special-rich-text';
@@ -37,11 +40,13 @@ import WxcSlideNav from './packages/wxc-slide-nav';
 import WxcSliderBar from './packages/wxc-slider-bar';
 import WxcStepper from './packages/wxc-stepper';
 import WxcTabPage from './packages/wxc-tab-page';
+import WxcFullPage from './packages/wxc-full-page';
 import WxcTabBar from './packages/wxc-tab-bar';
 import WxcTag from './packages/wxc-tag';
 
 export {
   Utils,
+  BindEnv,
   WxcButton,
   WxcCell,
   WxcCity,
@@ -63,9 +68,11 @@ export {
   WxcNoticebar,
   WxcOverlay,
   WxcPageCalendar,
+  WxcPopover,
   WxcPopup,
   WxcProgress,
   WxcRadio,
+  WxcRefresher,
   WxcResult,
   WxcRichText,
   WxcSpecialRichText,
@@ -75,6 +82,7 @@ export {
   WxcSliderBar,
   WxcStepper,
   WxcTabPage,
+  WxcFullPage,
   WxcTabBar,
   WxcTag
 };

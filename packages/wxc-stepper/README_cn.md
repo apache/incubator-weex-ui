@@ -24,7 +24,7 @@
                    step="2"
                    max="10"
                    min="2"
-                   @stepperValueChange="stepperValueChange"></wxc-stepper>
+                   @wxcStepperValueChanged="stepperValueChange"></wxc-stepper>
     </div>
     <div class="demo">
       <text class="text">禁用</text>

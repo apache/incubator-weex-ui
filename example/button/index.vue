@@ -11,7 +11,7 @@
         <wxc-button text="确定"
                     type="white"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">whiteDisabled</text>
+        <text class="button-text">white && disabled</text>
         <wxc-button text="确定"
                     type="white"
                     :disabled="true"
@@ -20,7 +20,7 @@
         <wxc-button text="确定"
                     type="blue"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">blueDisabled</text>
+        <text class="button-text">blue && disabled</text>
         <wxc-button text="确定"
                     type="blue"
                     :disabled="true"
@@ -29,7 +29,7 @@
         <wxc-button text="确定"
                     type="red"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">redDisabled</text>
+        <text class="button-text">red && disabled</text>
         <wxc-button text="确定"
                     type="red"
                     :disabled="true"
@@ -38,7 +38,7 @@
         <wxc-button text="确定"
                     type="yellow"
                     @wxcButtonClicked="wxcButtonClicked"></wxc-button>
-        <text class="button-text">yellowDisabled</text>
+        <text class="button-text">yellow && disabled</text>
         <wxc-button text="确定"
                     type="yellow"
                     :disabled="true"
@@ -46,7 +46,7 @@
       </div>
       <category title="尺寸"></category>
       <div>
-        <text class="button-size-text">大尺寸</text>
+        <text class="button-size-text">big</text>
         <div class="size">
           <wxc-button text="确定"
                       type="white"
@@ -59,7 +59,7 @@
                       @wxcButtonClicked="wxcButtonClicked"></wxc-button>
 
         </div>
-        <text class="button-size-text">中尺寸</text>
+        <text class="button-size-text">medium</text>
         <div class="size">
           <wxc-button text="确定"
                       type="blue"
@@ -75,7 +75,7 @@
                       size="medium"
                       @wxcButtonClicked="wxcButtonClicked"></wxc-button>
         </div>
-        <text class="button-size-text">小尺寸</text>
+        <text class="button-size-text">small</text>
         <div class="size">
           <wxc-button text="确定"
                       type="red"
@@ -193,12 +193,16 @@
     text-align: right;
     font-size: 28px;
   }
+
   .size {
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
   }
+
   .button-size-text {
-    padding-left: 12px;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    margin-top: 40px;
   }
 </style>
 

@@ -20,6 +20,7 @@
         <wxc-progress :value=70
                       bar-color='#9B7B56'
                       :bar-height=16
+                      :bar-radius="16"
                       :bar-width=640></wxc-progress>
       </div>
       <div class="btn"

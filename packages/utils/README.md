@@ -2,8 +2,10 @@
 
 > Util function services
 
+!>In `weex-ui` V0.6.0 version above, in order to reduce packaging size, `Binding related judgments` are transferred from `Utils.env` to `BindEnv`.
+
 ## Rule
-<img src="https://img.alicdn.com/tfs/TB19FRki8fH8KJjy1XbXXbLdXXa-2420-1254.png" width="860"/>
+<img src="https://img.alicdn.com/tfs/TB1KhdgfTtYBeNjy1XdXXXXyVXa-2932-940.png" width="860"/>
 
 ## Code Example
 
@@ -11,7 +13,9 @@
 <script>
   import { Utils } from 'weex-ui';
   // Utils.env.getPageHeight();
+  // 如果想使用 bind 相关判断
+  // import { BindEnv } from 'weex-ui';
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/packages/utils/index.js)
+More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/packages/utils)

@@ -1,5 +1,47 @@
 # Change Log
 
+## 0.6.1
+- [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) add `wxc-full-page` of immersion full screen effect, more you can see the component document.
+- [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) add a param about `need-slider`.
+- [!] Fixed the bug about `import {BindEnv} from 'weex-ui'`.
+- [!] [wxc-cell](https://alibaba.github.io/weex-ui/#/packages/wxc-cell/)  supports setting extra content.
+- [!] Fixed the show about [`wxc-slider-bar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) in web and iOS
+- [+] [`wxc-refresher`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-refresher/) supports refresh and pullingdown event.
+
+## 0.6.0
+- [+] [wxc-button](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/README.md) supports more `type` settings, remove `normal`/ `highlight`，add new `type` ahout `white` and `blue`，new button `size` settings, pay attention to the upgrade.
+- [!] Solve the problem of too big packaging bundle of bindingx，`Binding related judgments` are transferred from `Utils.env` to `BindEnv`，pay attention to the upgrade. [issue 191](https://github.com/alibaba/weex-ui/issues/191)
+- [+] New Binding component: [`wxc-refresh`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-refresh/README.md), at the present stage of beta, suggestions are welcome.
+- [-] Remove the hints for `default style of the component` in weex-vue-loader high version.  [issue 198](https://github.com/alibaba/weex-ui/issues/189)
+- [+] [wxc-popover](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md) support animation.  [pr 184](https://github.com/alibaba/weex-ui/pull/184/files)
+- [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) support setting `bar-style` style to cover theme color.
+- [!] [wxc-rich-text](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-rich-text/README.md) enhanced compatibility with iPad and Android.
+- [+] Document update for Faq and Binding.
+
+
+## 0.5.3
+- [!] [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) support not to display the location, direct incoming `currentLocation` is empty.
+- [+] [wxc-checkbox](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-checkbox/README.md) add `has-top-border`/`has-bottom-border` for whether show top-border or bottom-border.
+- [+] [wxc-progress](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-progress/README.md) add `bar-radius` for setting border-radius. 
+
+## 0.5.2
+* [!] Using `rebind()` to be compatible older version about [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md).
+* [+] [wxc-searchbar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-searchbar/README.md) allow translation of "cancel" button label
+* [!] Fix the `overlay-can-close` bug about [`wxc-mask`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-mask/README.md).
+
+## 0.5.0
+* [+] [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-page/README.md)、[wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md)、[wxc-slider-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-slider-bar/README.md) support [Bindingx](https://alibaba.github.io/bindingx/). 🎉🎉
+* [-] Remove `rebind()` about [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md).
+* [!] Fix the `props` bug about [`wxc-city`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md).
+* [+] Compatible with android and add more demo for [wxc-popover](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md).
+
+## 0.4.1
+* [+] New component: [`wxc-popover`](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-popover/README.md). 🎉🎉
+* [+] [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md)、[wxc-page-calendar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-calendar/README.md) supports for `model` animation.
+* [+] [wxc-tab-page](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-page/README.md)、[wxc-tab-bar](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-tab-bar/README.md) support to set margin between iconFont and text.
+* [+] [wxc-loading](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) supports to set mask for preventing incorrect clicking.
+* [+] [wxc-simple-flow](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-simple-flow/README.md) supports to set multi-line title.
+
 ## 0.4.0
 
 * [+] Stronger about [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md)，it's easier to use, no need to configure a lot of parameters.

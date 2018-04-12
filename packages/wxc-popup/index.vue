@@ -115,9 +115,6 @@
         this.appearPopup(this.show, 150);
         return this.height;
       },
-      transformValue () {
-        return this.getTransform(this.pos, this.width, this.height, true);
-      },
       padStyle () {
         const { pos, width, height, popupColor } = this;
         let style = {

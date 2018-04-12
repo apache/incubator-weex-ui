@@ -1,15 +1,15 @@
 # wxc-ep-slider 
 
-!> 这个富交互体验组件依赖于 Weex [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)
+!> 这个富交互体验组件依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App [是否安装](https://github.com/alibaba/bindingx#installation)
 
- > Weex EP 效果的 slider 组件
+ > Weex Binding 效果的 slider 组件
 
 ### 规则
 - 用于丰富 slide，包括商品橱窗，图片列表等 
 - **假如子组件有点击事件，在 Android 由于 [此约束](http://weex-project.io/cn/references/gesture.html#约束)，目前需要在子元素里面绑定对应事件，Weex Ui 提供了 [wxc-pan-cell](https://github.com/alibaba/weex-ui/tree/master/packages/wxc-pan-item) 包裹器来解决此情况，具体可参考 [demo](https://github.com/alibaba/weex-ui/tree/master/example/ep-slider)**
 
-## [Demo](https://h5.m.taobao.com/trip/wxc-ep-slider/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-ep-slider%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/lWWUuRBxjMdLCaJGVHsp.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1Ky4QSpXXXXbRapXXXXXXXXXX-200-200.png" width="160"/>
+## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/ep-slider/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Fep-slider%2Findex.weex.js)
+<img src="https://gw.alipayobjects.com/zos/rmsportal/lWWUuRBxjMdLCaJGVHsp.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<https://img.alicdn.com/tfs/TB1dzqbcuuSBuNjSsplXXbe8pXa-200-200.png" width="160"/>
 
 ## 使用方法
 
@@ -98,19 +98,12 @@
 | slider-id | `Number` |`Y`| `1` | slider的id，避免页面多个ep-slider导致获取错误|
 | card-length | `Number` |`Y`| `1` |  slider中item的数量|
 | select-index | `Number` |`N`| `0` | 默认突出item的index|
-| enable-swipe | `Boolean` | `N`|`true` | 是否需要滑动效果|
-| container-s | `Object` |`Y`| `{position: 'relative',width: 750,height: 352,overflow: 'hidden'}` |  包裹容器的样式|
+| container-s | `Object` |`Y`| `{position: 'relative',width: 750,height: 352}` |  包裹容器的样式|
 | card-s | `Object` | `Y`|`{width: 360,height: 300,spacing: 0,scale: 0.75}` | item容器的样式|
 | auto-play | `Boolean` | `N`|`false` |是否需要自动播放|
 | interval | `Number` | `N`|`1200` |自动播放时候的间隔|
 
 ### API说明
-
-```
-//ios下当放在list中，cell被回收后，导致下次appear的时候，手势失效了，需要再手动调用api，重新绑定下pan事件
-// 直接在wxc-ep-slider组件上面绑定ref="wxc-ep-slider"
-this.$refs['wxc-ep-slider'].rebind();
-```
 
 ### 主动触发设置
 
@@ -118,6 +111,14 @@ this.$refs['wxc-ep-slider'].rebind();
 // 直接在wxc-ep-slider组件上面绑定ref="wxc-ep-slider",然后调用即可
 // 譬如设置第二张
 this.$refs['wxc-ep-slider'].manualSetPage(1); 
+```
+
+### Rebind
+
+```
+//ios下当放在list中，cell被回收后，导致下次appear的时候，手势失效了，需要再手动调用api，重新绑定下pan事件,同时注意 setTimeout 一下
+// 直接在wxc-ep-slider组件上面绑定ref="wxc-ep-slider"
+this.$refs['wxc-ep-slider'].rebind();
 ```
 
 ### 事件回调

@@ -83,13 +83,14 @@
 | mod | `String` |`N`| `default` | 搜索框样式 `default(默认)`/`hasDep(带出发地)` |
 | placeholder | `String` |`N`| `搜索` | input placeholder|
 | input-type | `String` |`N`| `text` | `text，password，url，email，tel`|
+| cancel-label | `String` |`N`| `取消 ` |右侧按钮文案|
 | autofocus | `Boolean` |`N`| `false` | 是否在页面加载时控件自动获得输入焦点 |
 | default-value | `String` |`N`| `-` | 默认值 |
 | disabled | `Boolean` |`N`| `false` | 是否禁用 |
 | always-show-cancel | `Boolean` |`N`| `false` | 是否一直显示取消按钮 |
 | dep-name | `String` |`N`| `杭州` | `mode="hasDep"`时需要设置出发地名称 |
-| theme | `String` |`N`| `gray` |  `输入框的色值主题`gray`/`yellow` |
-
+| theme | `String` |`N`| `gray` |  输入框的色值主题 `gray`/`yellow` |
+| bar-style | `Object` |`N`| `{}` | 当`theme`配置不满足时候使用`bar-style`样式进行覆盖 |
 
 ### 事件回调
 

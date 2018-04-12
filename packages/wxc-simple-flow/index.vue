@@ -44,10 +44,6 @@
     background-color: #ffffff;
   }
 
-  .title {
-    height: 40px;
-  }
-
   .content {
     padding-top: 9px;
     padding-bottom: 42px;

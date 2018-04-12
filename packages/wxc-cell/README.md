@@ -107,7 +107,6 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | cell-style | `Object` |`N`| `{}` | Custom cell style |
 | extraContent | `String` |`N`| `{}` | Extra content |
 
-
 ### Slot
 1. `<slot name="label"></slot>`：label slot
 2. `<slot name="title"></slot>`：title slot

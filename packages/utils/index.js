@@ -125,29 +125,6 @@ const Utils = {
     isAliWeex () {
       return Utils.env.isTmall() || Utils.env.isTrip() || Utils.env.isTaobao();
     },
-    supportsEB () {
-      const weexVersion = weex.config.env.weexVersion || '0';
-      const isHighWeex = Utils.compareVersion(weexVersion, '0.10.1.4') && (Utils.env.isIOS() || Utils.env.isAndroid());
-      const expressionBinding = weex.requireModule('expressionBinding');
-      return expressionBinding && expressionBinding.enableBinding && isHighWeex;
-    },
-
-    /**
-     * 判断Android容器是否支持是否支持expressionBinding(处理方式很不一致)
-     * @returns {boolean}
-     */
-    supportsEBForAndroid () {
-      return (Utils.env.isAndroid()) && Utils.env.supportsEB();
-    },
-
-    /**
-     * 判断IOS容器是否支持是否支持expressionBinding
-     * @returns {boolean}
-     */
-    supportsEBForIos () {
-      return (Utils.env.isIOS()) && Utils.env.supportsEB();
-    },
-
     /**
      * 获取weex屏幕真实的设置高度，需要减去导航栏高度
      * @returns {Number}
@@ -267,9 +244,17 @@ const Utils = {
      */
     pageTransitionAnimationStyle (animationType) {
       if (animationType === 'push') {
-        return { left: '750px', top: '0px', height: (weex.config.env.deviceHeight / weex.config.env.deviceWidth * 750) + 'px' }
+        return {
+          left: '750px',
+          top: '0px',
+          height: (weex.config.env.deviceHeight / weex.config.env.deviceWidth * 750) + 'px'
+        }
       } else if (animationType === 'model') {
-        return { top: (weex.config.env.deviceHeight / weex.config.env.deviceWidth * 750) + 'px', left: '0px', height: (weex.config.env.deviceHeight / weex.config.env.deviceWidth * 750) + 'px' }
+        return {
+          top: (weex.config.env.deviceHeight / weex.config.env.deviceWidth * 750) + 'px',
+          left: '0px',
+          height: (weex.config.env.deviceHeight / weex.config.env.deviceWidth * 750) + 'px'
+        }
       }
       return {}
     }

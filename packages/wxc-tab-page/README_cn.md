@@ -2,17 +2,20 @@
 
 > Weex tab 页面滑动切换组件
 
-!> 随手滑动的效果依赖于 [expressionBinding](https://github.com/alibaba/weex/issues/1730) 特性，使用前请确定你的App[是否支持](https://github.com/alibaba/weex-ui/issues/6)。
+!> 随手滑动的效果依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App [是否安装](https://github.com/alibaba/bindingx#installation)。
+
+
+!> 0.6.1 版本新增 **沉浸式全屏的 FullPage** 效果的 tabPage，详细可见下面文档。
+
 
 ### 规则
-- 允许对头部进行配置，支持 ExpressionBinding 手势跟随效果，H5 支持降级效果滑动切换
+- 允许对头部进行配置，支持 Binding 手势跟随效果
 - 常用于 Tab 切换页面，目前支持**icon、text、iconFont**形式的顶栏,详细可见[config.js](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
 - **Android 由于[此约束](http://weex-project.io/cn/references/gesture.html#约束)，需在子元素上绑定对应事件，可通过`wxc-pan-item`解决此问题**
 - 支持**居中形式 Tab**，将 tabStyles 中的 leftOffset 配置合适的值即可
  
-
-## [Demo](https://h5.m.taobao.com/trip/wxc-tab-page/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwxc-tab-page%2Fdemo%2Findex.native-min.js)
-<img src="https://gw.alipayobjects.com/zos/rmsportal/drLGhWpwwSbMTjMCWomE.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1sjw3aMMPMeJjy1XdXXasrXXa-750-1334.jpg" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1M7ywSpXXXXXuXXXXXXXXXXXX-200-200.png" width="160"/>
+## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/tab-page/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Ftab-page%2Findex.weex.js)
+<img src="https://gw.alipayobjects.com/zos/rmsportal/drLGhWpwwSbMTjMCWomE.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://gw.alipayobjects.com/zos/rmsportal/WWwmdByyfODYLycoDmZP.gif" width="200"/>;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://gtms02.alicdn.com/tfs/TB1sjw3aMMPMeJjy1XdXXasrXXa-750-1334.jpg" width="200"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.alicdn.com/tfs/TB1rGKAcxSYBuNjSspjXXX73VXa-200-200.png" width="160"/>
 
 ## 使用方法
 
@@ -22,8 +25,6 @@
                 :tab-titles="tabTitles"
                 :tab-styles="tabStyles"
                 title-type="icon"
-                :needSlider="needSlider"
-                :is-tab-view="isTabView"
                 :tab-page-height="tabPageHeight"
                 @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
     <list v-for="(v,index) in tabList"
@@ -66,7 +67,7 @@
   .cell {
     background-color: #ffffff;
   }
-  
+
   .content{
     width:750px;
     height:300px;
@@ -77,7 +78,7 @@
 </style>
 <script>
   const dom = weex.requireModule('dom');
-  import { WxcTabPage, WxcPanItem, Utils } from 'weex-ui';
+  import { WxcTabPage, WxcPanItem, Utils, BindEnv } from 'weex-ui';
 
   // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js
   import Config from './config'
@@ -88,10 +89,7 @@
       tabTitles: Config.tabTitles,
       tabStyles: Config.tabStyles,
       tabList: [],
-      needSlider: true,
       demoList: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-      supportSlide: true,
-      isTabView: true,
       tabPageHeight: 1334
     }),
     created () {
@@ -111,7 +109,7 @@
         }
       },
       wxcPanItemPan (e) {
-        if (Utils.env.supportsEBForAndroid()) {
+        if (BindEnv.supportsEBForAndroid()) {
           this.$refs['wxc-tab-page'].bindExp(e.element);
         }
       }
@@ -119,8 +117,8 @@
   };
 </script>
 ```
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/index.vue)
 
+更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/index.vue)
 
 ### 可配置参数
 
@@ -131,12 +129,12 @@
 | tab-styles | `Array` |`N`| `[]` | 顶部 [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
 | tab-page-height | `Number` |`N`| `1334` | Tab page 页面的高度 |
 | is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时 tab 配置 url 参数即可跳出|
-| need-slider | `Boolean` |`N`| `true` | 是否需要滑动功能|
 | pan-dist | `Number` |`N`| `200` | 滚动多少切换上下一屏幕|
 | duration | `Number` |`N`| `300` | 页面切换动画的时间 |
 | timing-function | `String` |`N`| `-` | 页面切换动画函数 |
 | title-use-slot | `Boolean` |`N`| `false` | 使用 slot 配置头部导航 (注2)|
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|
+| need-slider | `Boolean` |`N`| `true` |设置是否可以手势滑动|
 
 ### 注1：使用 iconFont
 
@@ -170,6 +168,7 @@
       textPaddingLeft: 10,
       textPaddingRight: 10,
       iconFontSize: 50,
+      iconFontMarginBottom: 8,
       iconFontColor: '#333333',
       activeIconFontColor: 'red',
       iconFontUrl: '//at.alicdn.com/t/font_501019_mauqv15evc1pp66r.ttf'
@@ -201,22 +200,25 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected"
 ```
 
-
+## 沉浸式全屏的 FullPage 的使用
+1. 引入：` import { WxcFullPage} from 'weex-ui';`
+2. 参数形式和 wxcTabPage 保持一致，详细可见 [【demo】](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/full-page/)
+3. 建议隐藏头部导航栏使用，同时可以结合 [wxc-slide-nav](https://alibaba.github.io/weex-ui/#/packages/wxc-slide-nav/) 使用
 
 ## wxc-pan-item 的使用
+
+!> 在 `weex-ui` V0.6.0 版本以上，为了减少打包体积，Binding 相关判断由 `Utils.env` 转移到 `BindEnv`
 
 #### 参数
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| ext-id | `Number、String` |`Y`| `0` | 滑动元素的id索引|
 | url | `String` |`N`| `-` | url跳转链接，自己处理可以不传|
 
 #### 使用
 ```
 // 组件使用
 <wxc-pan-item 
-    :ext-id="1" 
     :url="url" 
     @wxcPanItemClicked="wxcPanItemClicked"
     @wxcPanItemPan="wxcPanItemPan">
@@ -224,11 +226,11 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
     </pan-item>
   
 // 引用
-import { WxcPanItem } from 'weex-ui';
+import { WxcPanItem, BindEnv } from 'weex-ui';
 
 //回调
 wxcPanItemPan (e) {
-    if (Utils.env.supportsEBForAndroid()) {
+    if (BindEnv.supportsEBForAndroid()) {
       this.$refs['wxc-tab-page'].bindExp(e.element);
     }
  }
