@@ -77,6 +77,7 @@
 | show | `Bool` |`Y`| `false` |  是否显示 |
 | width | `Number` |`Y`| `702` | 面板的宽度  |
 | height | `Number` |`Y`| `800` | 面板的高度  |
+| top | `Number` |`N`| `0` | 面板的 top 值，为 0 时垂直居中面板  |
 | has-animation | `Bool` |`N`| `true` | 面板弹出是否动画 |
 | show-close | `Bool` | `N`|`false` |  是否显示关闭按钮 |
 | has-overlay | `Bool` |`N`| `true` |  是否有蒙层 |
