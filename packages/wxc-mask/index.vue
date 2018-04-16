@@ -76,6 +76,10 @@
         type: [String, Number],
         default: 702
       },
+      top: {
+        type: Number,
+        default: 0
+      },
       show: {
         type: Boolean,
         default: false
@@ -136,7 +140,7 @@
         }
       },
       maskStyle () {
-        const { width, height, showClose, hasAnimation, opened } = this;
+        const { width, height, showClose, hasAnimation, opened, top } = this;
         const newHeight = showClose ? height - 0 + 100 : height;
         const { deviceHeight, deviceWidth, platform } = weex.config.env;
         const _deviceHeight = deviceHeight || 1334;
@@ -147,7 +151,7 @@
           width: width + 'px',
           height: newHeight + 'px',
           left: (750 - width) / 2 + 'px',
-          top: (pageHeight - height) / 2 + 'px',
+          top: (top || (pageHeight - height) / 2) + 'px',
           opacity: hasAnimation && !opened ? 0 : 1
         }
       },
