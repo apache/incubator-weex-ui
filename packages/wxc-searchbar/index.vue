@@ -5,7 +5,7 @@
 <template>
   <div>
     <div :class="['wxc-search-bar','wxc-search-bar-'+theme]"
-         :style="barStyle"
+         :style="mrBarStyle"
          v-if="mod==='default'">
       <input @blur="onBlur"
              @focus="onFocus"
@@ -31,11 +31,12 @@
              @click="closeClicked"
              :src="closeIcon"></image>
       <text :class="['search-bar-button','search-bar-button-'+theme]"
+            :style="buttonStyle"
             v-if="needShowCancel"
             @click="cancelClicked">{{cancelLabel}}</text>
     </div>
     <div :class="['wxc-search-bar','wxc-search-bar-'+theme]"
-         :style="barStyle"
+         :style="mrBarStyle"
          v-if="mod==='hasDep'">
       <input @blur="onBlur"
              @focus="onFocus"
@@ -241,6 +242,21 @@
     computed: {
       needShowCancel () {
         return this.alwaysShowCancel || this.showCancel;
+      },
+      mrBarStyle () {
+        const { barStyle } = this;
+        if (barStyle) {
+          if (barStyle.backgroundColor) {
+            this.buttonStyle = {backgroundColor:barStyle.backgroundColor}
+          }
+          const mrBtnStyle = {
+            ...barStyle,
+          };
+          return mrBtnStyle
+        } else {
+          return {}
+        }
+
       }
     },
     data: () => ({
@@ -249,7 +265,8 @@
       arrowIcon: ARROW_ICON,
       showCancel: false,
       showClose: false,
-      value: ''
+      value: '',
+      buttonStyle:{}
     }),
     created () {
       this.defaultValue && (this.value = this.defaultValue);
