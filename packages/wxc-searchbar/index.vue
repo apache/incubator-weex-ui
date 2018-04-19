@@ -31,6 +31,7 @@
              @click="closeClicked"
              :src="closeIcon"></image>
       <text :class="['search-bar-button','search-bar-button-'+theme]"
+            :style="buttonStyle"
             v-if="needShowCancel"
             @click="cancelClicked">{{cancelLabel}}</text>
     </div>
@@ -241,6 +242,13 @@
     computed: {
       needShowCancel () {
         return this.alwaysShowCancel || this.showCancel;
+      },
+      buttonStyle () {
+        const { barStyle } = this;
+        if (barStyle.backgroundColor) {
+            return {backgroundColor:barStyle.backgroundColor}
+        }
+        return {}
       }
     },
     data: () => ({
@@ -250,6 +258,7 @@
       showCancel: false,
       showClose: false,
       value: ''
+
     }),
     created () {
       this.defaultValue && (this.value = this.defaultValue);
