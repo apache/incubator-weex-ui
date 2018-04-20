@@ -122,7 +122,8 @@
 <script>
   const modal = weex.requireModule('modal');
 
-  import { WxcEpSlider, WxcPanItem, BindEnv } from 'weex-ui';
+  import { WxcEpSlider, WxcPanItem } from 'weex-ui';
+  import BindEnv from '../../packages/utils/bind-env';
   import Title from '../_mods/title.vue';
   import Category from '../_mods/category.vue';
   import { setTitle } from '../_mods/set-nav';
