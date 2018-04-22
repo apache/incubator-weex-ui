@@ -229,7 +229,7 @@
         let currentCardScale = 1;
         let rightCardScale = this.cardS.scale;
         let leftCardScale = this.cardS.scale;
-        const duration = (selectIndex === 0 && originIndex === this.cardLength - 1) ? 0.00001 : 300;
+        const duration = (selectIndex === 0 && originIndex === this.cardLength - 1 && this.cardLength !== 2) ? 0.00001 : 300;
         this.$emit('wxcEpSliderCurrentIndexSelected', { currentIndex: selectIndex });
         if (originIndex < selectIndex) {
           currentCardScale = this.cardS.scale;
