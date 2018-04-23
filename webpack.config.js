@@ -33,7 +33,7 @@ const getEntry = dir => {
 };
 
 const getCopyConfig = () => {
-  const foundScripts = glob.sync('example/*/', {});
+  const foundScripts = glob.sync('example/tab-page/', {});
   const ret = [];
   foundScripts.forEach(scriptPath => {
     if (!/(_mods|_public)/.test(scriptPath)) {

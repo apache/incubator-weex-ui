@@ -5,6 +5,7 @@
 import Binding from 'weex-bindingx/lib/index.weex.js';
 import Utils from './index';
 
+console.log(1111)
 const BindEnv = {
   supportsEB () {
     return Binding.isSupportBinding && !Utils.env.isWeb();

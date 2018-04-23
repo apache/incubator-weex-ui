@@ -75,6 +75,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | show | `Bool` |`Y`| `false` |  whether to show |
 | width | `Number` |`Y`| `702` | mask width  |
 | height | `Number` |`Y`| `800` | mask height  |
+| top | `Number` |`N`| `0` | mask top, will centered in vertical direction when equal to 0  |
 | has-animation | `Bool` |`N`| `true` | mask pops up whether to animate |
 | show-close | `Bool` | `N`|`false` |  whether to show close icon |
 | has-overlay | `Bool` |`N`| `true` |  whether has a overlay  |
