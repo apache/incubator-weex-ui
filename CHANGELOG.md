@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.6.2
+- [+] [`utils`](https://alibaba.github.io/weex-ui/#/packages/utils/) more powerful， add `objToParams`、`paramsToObj`、`getPageHeight`、`getScreenHeight` new functions, More you can see [utils/index.js](https://github.com/alibaba/weex-ui/blob/master/packages/utils/index.js).
+- [!] Fixed the bug about [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/packages/wxc-ep-slider/) when only two sliders  [pull/248].(https://github.com/alibaba/weex-ui/pull/248)
+- [!] Fixed the bug about [`wxc-searchbar`](https://alibaba.github.io/weex-ui/#/packages/wxc-searchbar/) when setting up custom styles and background conflicts at the same time  [issues/242](https://github.com/alibaba/weex-ui/issues/242)/[pull/245](https://github.com/alibaba/weex-ui/pull/245)
+- [+] [`wxc-mask`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-mask/) Supports `top` param to control height at the top of the distance.  [issues/240](https://github.com/alibaba/weex-ui/issues/240)/[pull/241](https://github.com/alibaba/weex-ui/pull/241)\
+- [!] Fixed the demo bug about [`wxc-popover`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popover/)  [pull/236](https://github.com/alibaba/weex-ui/pull/236)
+
 ## 0.6.1
 - [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) add `wxc-full-page` of immersion full screen effect, more you can see the component document.
 - [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) add a param about `need-slider`.

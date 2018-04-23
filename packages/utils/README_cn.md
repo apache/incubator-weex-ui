@@ -5,7 +5,7 @@
 !> 在 `weex-ui` V0.6.0 版本以上，为了减少打包体积，Binding 相关判断由 `Utils.env ` 转移到 `BindEnv`
 
 ## 规则
-<img src="https://img.alicdn.com/tfs/TB1KhdgfTtYBeNjy1XdXXXXyVXa-2932-940.png" width="860"/>
+<img src="https://img.alicdn.com/tfs/TB1t2Y7nN9YBuNjy0FfXXXIsVXa-2952-1096.png" width="860"/>
 
 ## 使用方法
 
@@ -17,4 +17,4 @@
   // import { BindEnv } from 'weex-ui';
 </script>
 ```
-更详细代码可以参考 [utils](https://github.com/alibaba/weex-ui/blob/master/packages/utils)
+更详细代码和文档可以参考 [utils](https://github.com/alibaba/weex-ui/blob/master/packages/utils)

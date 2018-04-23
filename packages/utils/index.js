@@ -189,6 +189,13 @@ const Utils = {
     }
     return groups;
   },
+  /*
+   * 截断字符串
+   * @param str 传入字符串
+   * @param len 截断长度
+   * @param hasDot 末尾是否...
+   * @returns {String}
+   */
   truncateString (str, len, hasDot = true) {
     let newLength = 0;
     let newStr = '';
@@ -212,6 +219,35 @@ const Utils = {
       newStr += '...';
     }
     return newStr;
+  },
+  /*
+   * 转换 obj 为 url params参数
+   * @param obj 传入字符串
+   * @returns {String}
+   */
+  objToParams (obj) {
+    let str = "";
+    for (let key in obj) {
+      if (str !== "") {
+        str += "&";
+      }
+      str += key + "=" + encodeURIComponent(obj[key]);
+    }
+    return str;
+  },
+  /*
+   * 转换 url params参数为obj
+   * @param str 传入url参数字符串
+   * @returns {Object}
+   */
+  paramsToObj (str) {
+    let obj = {};
+    try {
+      obj = JSON.parse('{"' + decodeURI(str).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}')
+    } catch (e) {
+      console.log(e);
+    }
+    return obj;
   },
   animation: {
     /**
