@@ -44,6 +44,7 @@
    
 - 服务
    - [utils 功能函数](cn/packages/utils/) 
+   - [Theme 主题配色](cn/theme) 
  
 - [**Weex + Ui - Weex Conf 2018**](cn/weex-ui-weex-conf-2018)  
 - [**搭配 weex-toolkit 使用 Weex Ui**](cn/with-weex-toolkit)

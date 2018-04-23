@@ -60,7 +60,8 @@
 <script>
   const dom = weex.requireModule('dom');
 
-  import { WxcTabPage, WxcPanItem, Utils, BindEnv } from 'weex-ui';
+  import { WxcTabPage, WxcPanItem, Utils } from 'weex-ui';
+  import BindEnv from '../../packages/utils/bind-env';
   import WxcItem from './wxc-item.vue';
 
   import Config from './config'
