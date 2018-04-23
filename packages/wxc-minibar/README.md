@@ -58,7 +58,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | text-color | `String` |`N`| `#333333` | text color |
 | background-color | `String` |`N`| `#ffffff` | title bar background color |
 | use-default-return | `Boolean` |`N`| `true` | Whether to use the default return |
-| show | `Boolean` | `true` |`N`| whether to show |
+| show | `Boolean` | `N`|`true` | whether to show |
 
 ### Slot
 When the above configurations are not satisfied, You can customize this component by using slot.   `weex-ui>=0.3.9`
