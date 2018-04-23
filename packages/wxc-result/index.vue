@@ -109,7 +109,7 @@
         const { type, customSet } = this;
         const allTypes = Utils.isEmptyObject(customSet) ? TYPES : Utils.mergeDeep(TYPES, customSet);
         let types = allTypes['errorPage'];
-        if (['errorPage', 'noGoods', 'noNetwork', 'errorLocation'].indexOf(type) > -1) {
+        if (Object.keys(allTypes).indexOf(type) > -1) {
           types = allTypes[type];
         }
         return types;
