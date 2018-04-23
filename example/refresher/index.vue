@@ -6,12 +6,14 @@
     <title title="wxc-refresher"></title>
     <category title="使用案例"></category>
     <list class="scroller" ref="scroller">
-      <wxc-refresher scroller-ref="scroller"
+      <wxc-refresher ref="wxc-refresher"
+                     scroller-ref="scroller"
                      main-text="下拉即可刷新(自定义)"
                      pulling-text="释放即可刷新(自定义)"
                      refreshing-text="加载中(自定义)"
-                     :maxTime="3000"
+                     :max-time="5000"
                      :text-width="240"
+                     @wxcRefresh="onRefresh"
                      @wxcTimeout="onTimeout"></wxc-refresher>
       <cell class="cell" v-for="(num,key) in lists" :key="key">
         <div class="panel">
@@ -34,15 +36,26 @@
   export default {
     components: { Title, Category, WxcRefresher },
     data: () => ({
-      lists: ['下拉刷新', 'Drop Down', '↓', '↓', '↓', '↓', '↓', '↓']
+      lists: ['下拉刷新', 'Drop Down', '↓', '↓', '↓', '↓', '↓', '↓'],
+      refreshTime: 3000 
     }),
     created () {
       setTitle('Refresher');
     },
     methods: {
       onTimeout () {
-        modal.toast({ message: '刷新超时，可定义超时时间', duration: 0 });
-      }
+        this.sto && clearTimeout(this.sto);
+        modal.toast({ message: '刷新超时，可定义超时时间', duration: 1 });
+      },
+      onRefresh (e) {
+        this.sto = setTimeout(()=>{ this.refreshSucc() }, this.refreshTime)
+        modal.toast({ message: '刷新中...', duration: .5 });
+        this.refreshTime = this.refreshTime === 3000 ? 10000 : 3000;
+      },
+      refreshSucc () {
+        this.$refs['wxc-refresher'].wxcCancel();
+        modal.toast({ message: '刷新成功', duration: .5 });
+      },
     }
   };
 </script>
