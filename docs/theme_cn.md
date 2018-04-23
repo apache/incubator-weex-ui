@@ -81,7 +81,7 @@ Weex Ui 内置了 4 套不同主题配色，默认配色为 `黄色`。
 ## 内置配色
 <img src="http://p1nq9peby.bkt.clouddn.com/theme.png" style="box-shadow: 0 5px 10px 0 #d9dce3; border-radius: 4px;" />
 
-## 更多支持
+## FAQ
 
 主题配色功能目前还在不断完善中，如果你在使用中有任何问题或更好的建议欢迎 [提交 Issue 或 PR](https://github.com/alibaba/weex-ui/issues/new)；
 

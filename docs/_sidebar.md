@@ -43,6 +43,7 @@
    
 - Service
    - [utils](packages/utils/) 
+   - [Theme](docs/theme) 
    
 - [**Weex + Ui - Weex Conf 2018**](docs/weex-ui-weex-conf-2018)
 - [**Use Weex Ui with weex-toolkit**](docs/with-weex-toolkit)
