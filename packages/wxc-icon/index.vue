@@ -37,7 +37,7 @@
     beforeCreate () {
       dom.addRule('fontFace', {
         'fontFamily': "weexUiIconFont",
-        'src': "url('//at.alicdn.com/t/font_520368_r89ekv69euahsemi.ttf')"
+        'src': "url('https://at.alicdn.com/t/font_520368_r89ekv69euahsemi.ttf')"
       });
     },
     computed: {
