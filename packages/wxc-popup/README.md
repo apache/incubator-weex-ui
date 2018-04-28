@@ -61,7 +61,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | height | `String` |`N`| `840` | popup height(go up or down)  |
 | width | `String` |`N`| `750` | popup width(go right or left )  |
 | popup-color | `String` |`N`| `#FFFFFF` | background color |
-| stand-out | `Number` |`N`| `0` | Bottom stand out offset |
+| stand-out | `Number` |`N`| `0` | stand out offset |
 | animation | `Object` |`N`| `{timingFunction: 'ease-in'}` | animation timing function |
 | overlay-cfg | `Object` |`N`| `{}` | [wxc-overlay config](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md)|
 
