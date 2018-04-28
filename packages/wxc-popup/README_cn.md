@@ -65,7 +65,7 @@
 | height | `String` |`N`| `840` | 弹出层的高度(向上向下时候设置)  |
 | width | `String` |`N`| `750` | 弹出层的宽度(向左向右时候设置)  |
 | popup-color | `String` |`N`| `#FFFFFF` | 弹出层的颜色 |
-| stand-out | `Number` |`N`| `0` | 底部突出高度 |
+| stand-out | `Number` |`N`| `0` | 突出边框高度 |
 | animation | `Object` |`N`| `{timingFunction: 'ease-in'}` | 自定义面板动画 |
 | overlay-cfg | `Object` |`N`| `{}` | [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md)配置参数|
 
