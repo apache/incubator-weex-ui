@@ -3,71 +3,72 @@
  * Created by Tw93 on 17/09/25
  */
 
-import Utils from './packages/utils';
-import BindEnv from './packages/utils/bind-env';
-import WxcButton from './packages/wxc-button';
-import WxcCell from './packages/wxc-cell';
-import WxcCity from './packages/wxc-city';
-import WxcCheckbox from './packages/wxc-checkbox';
-import WxcCheckboxList from './packages/wxc-checkbox-list';
-import WxcCountdown from './packages/wxc-countdown';
-import WxcDialog from './packages/wxc-dialog';
-import WxcEpSlider from './packages/wxc-ep-slider';
-import WxcPanItem from './packages/wxc-pan-item';
-import WxcGridSelect from './packages/wxc-grid-select';
-import WxcIcon from './packages/wxc-icon';
-import WxcIndexlist from './packages/wxc-indexlist';
-import WxcLightbox from './packages/wxc-lightbox';
-import WxcLoading from './packages/wxc-loading';
-import WxcPartLoading from './packages/wxc-part-loading';
-import WxcMask from './packages/wxc-mask';
-import WxcMinibar from './packages/wxc-minibar';
-import WxcLotteryRain from './packages/wxc-lottery-rain';
-import WxcNoticebar from './packages/wxc-noticebar';
-import WxcOverlay from './packages/wxc-overlay';
-import WxcPageCalendar from './packages/wxc-page-calendar';
-import WxcPopover from './packages/wxc-popover';
-import WxcPopup from './packages/wxc-popup';
-import WxcProgress from './packages/wxc-progress';
-import WxcRadio from './packages/wxc-radio';
-import WxcRefresher from './packages/wxc-refresher';
-import WxcResult from './packages/wxc-result';
-import WxcRichText from './packages/wxc-rich-text';
-import WxcSpecialRichText from './packages/wxc-special-rich-text';
-import WxcSearchbar from './packages/wxc-searchbar';
-import WxcSimpleFlow from './packages/wxc-simple-flow';
-import WxcSlideNav from './packages/wxc-slide-nav';
-import WxcSliderBar from './packages/wxc-slider-bar';
-import WxcStepper from './packages/wxc-stepper';
-import WxcTabPage from './packages/wxc-tab-page';
-import WxcFullPage from './packages/wxc-full-page';
-import WxcTabBar from './packages/wxc-tab-bar';
-import WxcTag from './packages/wxc-tag';
+import BindEnv from './package/bind-env';
+import Utils from './package/utils';
+import WxcButton from './package/wxc-button';
+import WxcCell from './package/wxc-cell';
+import WxcCheckbox from './package/wxc-checkbox';
+import WxcCheckboxList from './package/wxc-checkbox-list';
+import WxcCity from './package/wxc-city';
+import WxcCountdown from './package/wxc-countdown';
+import WxcDialog from './package/wxc-dialog';
+import WxcEpSlider from './package/wxc-ep-slider';
+import WxcFullPage from './package/wxc-full-page';
+import WxcGridSelect from './package/wxc-grid-select';
+import WxcIcon from './package/wxc-icon';
+import WxcIndexlist from './package/wxc-indexlist';
+import WxcLightbox from './package/wxc-lightbox';
+import WxcLoading from './package/wxc-loading';
+import WxcLotteryRain from './package/wxc-lottery-rain';
+import WxcMask from './package/wxc-mask';
+import WxcMinibar from './package/wxc-minibar';
+import WxcNoticebar from './package/wxc-noticebar';
+import WxcOverlay from './package/wxc-overlay';
+import WxcPageCalendar from './package/wxc-page-calendar';
+import WxcPanItem from './package/wxc-pan-item';
+import WxcPartLoading from './package/wxc-part-loading';
+import WxcPopover from './package/wxc-popover';
+import WxcPopup from './package/wxc-popup';
+import WxcProgress from './package/wxc-progress';
+import WxcRadio from './package/wxc-radio';
+import WxcRefresher from './package/wxc-refresher';
+import WxcResult from './package/wxc-result';
+import WxcRichText from './package/wxc-rich-text';
+import WxcSearchbar from './package/wxc-searchbar';
+import WxcSimpleFlow from './package/wxc-simple-flow';
+import WxcSlideNav from './package/wxc-slide-nav';
+import WxcSliderBar from './package/wxc-slider-bar';
+import WxcSpecialRichText from './package/wxc-special-rich-text';
+import WxcStepper from './package/wxc-stepper';
+import WxcTabBar from './package/wxc-tab-bar';
+import WxcTabPage from './package/wxc-tab-page';
+import WxcTag from './package/wxc-tag';
 
 export {
-  Utils,
   BindEnv,
+  Utils,
   WxcButton,
   WxcCell,
-  WxcCity,
   WxcCheckbox,
   WxcCheckboxList,
+  WxcCity,
   WxcCountdown,
   WxcDialog,
   WxcEpSlider,
-  WxcPanItem,
+  WxcFullPage,
   WxcGridSelect,
   WxcIcon,
   WxcIndexlist,
   WxcLightbox,
   WxcLoading,
-  WxcPartLoading,
+  WxcLotteryRain,
   WxcMask,
   WxcMinibar,
-  WxcLotteryRain,
   WxcNoticebar,
   WxcOverlay,
   WxcPageCalendar,
+  WxcPanItem,
+  WxcPartLoading,
   WxcPopover,
   WxcPopup,
   WxcProgress,
@@ -75,14 +76,13 @@ export {
   WxcRefresher,
   WxcResult,
   WxcRichText,
-  WxcSpecialRichText,
   WxcSearchbar,
   WxcSimpleFlow,
   WxcSlideNav,
   WxcSliderBar,
+  WxcSpecialRichText,
   WxcStepper,
-  WxcTabPage,
-  WxcFullPage,
   WxcTabBar,
+  WxcTabPage,
   WxcTag
 };
