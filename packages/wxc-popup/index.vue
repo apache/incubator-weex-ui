@@ -116,28 +116,28 @@
         return this.height;
       },
       padStyle () {
-        const { pos, width, height, popupColor } = this;
+        const { pos, width, height, popupColor, standOut } = this;
         let style = {
           width: `${width}px`,
           backgroundColor: popupColor
         };
         pos === 'top' && (style = {
           ...style,
-          top: `${-height}px`,
+          top: `${-height + standOut}px`,
           height: `${height}px`
         });
         pos === 'bottom' && (style = {
           ...style,
-          bottom: `${-height}px`,
+          bottom: `${-height + standOut}px`,
           height: `${height}px`
         });
         pos === 'left' && (style = {
           ...style,
-          left: `${-width}px`
+          left: `${-width + standOut}px`
         });
         pos === 'right' && (style = {
           ...style,
-          right: `${-width}px`
+          right: `${-width + standOut}px`
         });
         return style;
       }
@@ -176,11 +176,8 @@
       },
       getTransform (pos, width, height, bool) {
         let _size = pos === 'top' || pos === 'bottom' ? height : width;
-        let _transform;
-        if (isWeb) {
-          _size -= this.standOut;
-        }
         bool && (_size = 0);
+        let _transform;
         switch (pos) {
           case 'top':
             _transform = `translateY(${_size}px)`;
