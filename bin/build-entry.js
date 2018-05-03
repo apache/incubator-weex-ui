@@ -9,7 +9,7 @@ function indexEntry() {
  */
 `
   const Components = fs.readdirSync(path.resolve(__dirname, '../packages'));
-  const importList = Components.map(name => `import ${uppercamelize(name)} from './package/${name}';`)
+  const importList = Components.map(name => `import ${uppercamelize(name)} from './packages/${name}';`)
   const exportList = Components.map(name => `${uppercamelize(name)}`);
   const content = 
   `${tips}
