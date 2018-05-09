@@ -172,7 +172,7 @@
             num = this.countString(r1.value);
           }
 
-          const tagMoreBlank = ((!isPad && num < 7) ? '  ' : '') + (needHack ? '  ' : '') + (isPad && num < 3) ? '    ' : '';
+          const tagMoreBlank = ((!isPad && num < 7) ? '  ' : '') + (needHack ? '  ' : '') + ((isPad && num < 3) ? '    ' : '');
           const iconMoreBlank = num > 2 ? (needHack ? '     ' : '   ') : ' ';
           if (r1.type === 'tag') {
             blank = new Array(num).join('  ') + tagMoreBlank;
