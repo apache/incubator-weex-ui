@@ -1,5 +1,14 @@
 # 升级日志
 
+## 0.6.3
+- [!] 修复 [`wxc-minibar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-minibar/) 设置右侧 slot 时候回调无效问题 [issue/263](https://github.com/alibaba/weex-ui/issues/263)
+- [+] [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) 支持设置右滑加载更多设置，通过配置 `pull-more` slot 即可
+- [!] 修复 [wxc-icon](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-icon/) 在某些容器请求字体文件出错问题  [issues/253](https://github.com/alibaba/weex-ui/issues/253)
+- [+] [wxc-popup](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popup/) 支持设置原有位置突出的 `stand-out`  [issue/251](https://github.com/alibaba/weex-ui/issues/251)
+- [+] 支持在构建过程中自动生成入口 `index.js` [pull/259](https://github.com/alibaba/weex-ui/pull/259)
+- [!] 修复 [wxc-searchbar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-searchbar/) barStyle 字段默认值返回 `undefined` 值  [pull/255](https://github.com/alibaba/weex-ui/pull/255)
+- [+] [wxc-result](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-result/) 支持获取新增的错误类型展示 [pull/252](https://github.com/alibaba/weex-ui/pull/252)
+
 ## 0.6.2
 - [+] [`utils`](https://alibaba.github.io/weex-ui/#/cn/packages/utils/) 功能增强，新增`objToParams`、`paramsToObj`、`getPageHeight`、`getScreenHeight`等功能，详细可见 [utils/index.js](https://github.com/alibaba/weex-ui/blob/master/packages/utils/index.js)
 - [!] 修复 [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) 只有两个 slider 时候的滑动 bug  [pull/248](https://github.com/alibaba/weex-ui/pull/248)

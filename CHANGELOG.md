@@ -1,5 +1,14 @@
 # Change Log
 
+## 0.6.3
+- [!] Fixed the bug about [`wxc-minibar`](https://alibaba.github.io/weex-ui/#/packages/wxc-minibar/) when setting right slot.  [issue/263](https://github.com/alibaba/weex-ui/issues/263)
+- [+] [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/packages/wxc-ep-slider/) supports pull more  by setting `pull-more` slot.
+- [!] Fixed the bug about [wxc-icon](https://alibaba.github.io/weex-ui/#/packages/wxc-icon/) when requesting font source.   [issues/253](https://github.com/alibaba/weex-ui/issues/253)
+- [+] [wxc-popup](https://alibaba.github.io/weex-ui/#/packages/wxc-popup/) supports setting `stand-out`.  [issue/251](https://github.com/alibaba/weex-ui/issues/251)
+- [+] supports to auto generate entry `index.js`. [pull/259](https://github.com/alibaba/weex-ui/pull/259)
+- [!] Fixed the bug about [wxc-searchbar](https://alibaba.github.io/weex-ui/#/packages/wxc-searchbar/) barStyle return default value is `undefined`.  [pull/255](https://github.com/alibaba/weex-ui/pull/255)
+- [+] [wxc-result](https://alibaba.github.io/weex-ui/#/packages/wxc-result/) supports to add customer result type.  [pull/252](https://github.com/alibaba/weex-ui/pull/252)
+
 ## 0.6.2
 - [+] [`utils`](https://alibaba.github.io/weex-ui/#/packages/utils/) more powerful， add `objToParams`、`paramsToObj`、`getPageHeight`、`getScreenHeight` new functions, More you can see [utils/index.js](https://github.com/alibaba/weex-ui/blob/master/packages/utils/index.js).
 - [!] Fixed the bug about [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/packages/wxc-ep-slider/) when only two sliders  [pull/248].(https://github.com/alibaba/weex-ui/pull/248)
