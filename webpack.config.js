@@ -24,7 +24,7 @@ const getEntry = dir => {
   const foundScripts = glob.sync(`${dir}/*/index.js`, {});
   // 生成 entry 映射表
   const ret = {};
-  foundScripts.forEach(function(scriptPath) {
+  foundScripts.forEach(scriptPath => {
     if (!/\.entry\.js$/.test(scriptPath)) {
       ret[scriptPath.replace(/^(.*)\.js$/, '$1')] = './' + scriptPath;
     }

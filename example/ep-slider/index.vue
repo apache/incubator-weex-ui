@@ -11,6 +11,7 @@
                        :card-length='cardLength'
                        :card-s="cardSize"
                        :select-index="2"
+                       @wxcEpSliderPullMore="pullMore"
                        @wxcEpSliderCurrentIndexSelected="wxcEpSliderCurrentIndexSelected">
 
           <!--自动生成demo-->
@@ -21,6 +22,9 @@
                :accessible="true"
                :aria-label="`这里是第${index + 1}个滑块`">
             <text class="text">这里是第{{index + 1}}个滑块</text>
+          </div>
+          <div class="more-slider" slot="pull-more" :style="{left: `${cardLength * (cardSize.width + cardSize.spacing)+60}px`,marginLeft:`${(750 - cardSize.width) / 2}px`}">
+            <text>加载更多</text>
           </div>
         </wxc-ep-slider>
       </div>
@@ -117,6 +121,11 @@
   .slider4 {
     background-color: #546e7a;
   }
+  .more-slider{
+    width: 100px;
+    height: 300px;
+    background-color: #ffc302;
+  }
 </style>
 
 <script>
@@ -152,6 +161,12 @@
       onClick () {
         // 手动切换到第2张
         this.$refs['wxc-ep-slider'].manualSetPage(1);
+      },
+      pullMore () {
+        modal.toast({
+          message: 'pull more',
+          duration: 1
+        })
       },
       wxcPanItemPan (e) {
         if (BindEnv.supportsEBForAndroid()) {

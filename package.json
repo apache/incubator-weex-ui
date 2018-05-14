@@ -1,6 +1,6 @@
 {
   "name": "weex-ui",
-  "version": "0.6.1",
+  "version": "0.6.3",
   "description": "A rich interaction, lightweight, high performance UI library based on Weex",
   "main": "index.js",
   "lib": "vue",
@@ -14,7 +14,8 @@
     "url": "https://github.com/alibaba/weex-ui/issues"
   },
   "scripts": {
-    "build": "webpack --progress",
+    "build": "npm run build:entry && webpack --progress",
+    "build:entry": "node bin/build-entry.js",
     "watch": "webpack --progress --watch",
     "serve": "anywhere -d build/example/ -p 3333",
     "start": "npm run build && (npm run serve & npm run watch)"
@@ -63,6 +64,7 @@
     "postcss-plugin-px2rem": "^0.7.0",
     "postcss-plugin-weex": "^0.1.6",
     "postcss-px2rem": "^0.3.0",
+    "uppercamelcase": "^3.0.0",
     "vue": "^2.5.3",
     "vue-loader": "^12.2.2",
     "vue-template-compiler": "^2.5.3",

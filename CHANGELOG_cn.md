@@ -1,5 +1,22 @@
 # 升级日志
 
+## 0.6.3
+- [!] 修复 [`wxc-minibar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-minibar/) 设置右侧 slot 时候回调无效问题 [issue/263](https://github.com/alibaba/weex-ui/issues/263)
+- [+] [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) 支持设置右滑加载更多设置，通过配置 `pull-more` slot 即可
+- [!] 修复 [wxc-icon](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-icon/) 在某些容器请求字体文件出错问题  [issues/253](https://github.com/alibaba/weex-ui/issues/253)
+- [+] [wxc-popup](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popup/) 支持设置原有位置突出的 `stand-out`  [issue/251](https://github.com/alibaba/weex-ui/issues/251)
+- [+] 支持在构建过程中自动生成入口 `index.js` [pull/259](https://github.com/alibaba/weex-ui/pull/259)
+- [!] 修复 [wxc-searchbar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-searchbar/) barStyle 字段默认值返回 `undefined` 值  [pull/255](https://github.com/alibaba/weex-ui/pull/255)
+- [+] [wxc-result](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-result/) 支持获取新增的错误类型展示 [pull/252](https://github.com/alibaba/weex-ui/pull/252)
+
+## 0.6.2
+- [+] [`utils`](https://alibaba.github.io/weex-ui/#/cn/packages/utils/) 功能增强，新增`objToParams`、`paramsToObj`、`getPageHeight`、`getScreenHeight`等功能，详细可见 [utils/index.js](https://github.com/alibaba/weex-ui/blob/master/packages/utils/index.js)
+- [!] 修复 [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) 只有两个 slider 时候的滑动 bug  [pull/248](https://github.com/alibaba/weex-ui/pull/248)
+- [!] 修复 [`wxc-searchbar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-searchbar/) 同时设置自定义样式和主题时候的背景冲突 [issues/242](https://github.com/alibaba/weex-ui/issues/242)/[pull/245](https://github.com/alibaba/weex-ui/pull/245)
+- [+] [`wxc-mask`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-mask/) 支持传入 `top` 参数控制距离顶部的高度  [issues/240](https://github.com/alibaba/weex-ui/issues/240)/[pull/241](https://github.com/alibaba/weex-ui/pull/241)
+- [!] [`wxc-popover`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popover/) demo 问题修复 [pull/236](https://github.com/alibaba/weex-ui/pull/236)
+
+
 ## 0.6.1
 - [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 新增沉浸式全屏效果的页面切换组件 `wxc-full-page`,详细使用见组件文档
 - [+] [`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 新增参数`need-slider` 控制是否需要手势滑动

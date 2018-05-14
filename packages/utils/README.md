@@ -5,7 +5,7 @@
 !>In `weex-ui` V0.6.0 version above, in order to reduce packaging size, `Binding related judgments` are transferred from `Utils.env` to `BindEnv`.
 
 ## Rule
-<img src="https://img.alicdn.com/tfs/TB1KhdgfTtYBeNjy1XdXXXXyVXa-2932-940.png" width="860"/>
+<img src="https://img.alicdn.com/tfs/TB1t2Y7nN9YBuNjy0FfXXXIsVXa-2952-1096.png" width="860"/>
 
 ## Code Example
 

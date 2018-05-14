@@ -202,7 +202,7 @@
       },
       barStyle: {
         type: Object,
-        default: () => {}
+        default: () => ({})
       },
       defaultValue: {
         type: String,

@@ -119,18 +119,15 @@
     },
     methods: {
       leftButtonClicked () {
-        const self = this;
-        if (self.useDefaultReturn) {
+        if (this.useDefaultReturn) {
           Navigator.pop({}, e => {
           });
         }
-        self.$emit('wxcMinibarLeftButtonClicked', {});
+        this.$emit('wxcMinibarLeftButtonClicked', {});
       },
       rightButtonClicked () {
-        const self = this;
-        if (self.rightText || self.rightButton) {
-          self.$emit('wxcMinibarRightButtonClicked', {});
-        }
+        const hasRightContent = this.rightText || this.rightButton || (this.$slots && this.$slots.right);
+        hasRightContent && this.$emit('wxcMinibarRightButtonClicked', {});
       }
     }
   };

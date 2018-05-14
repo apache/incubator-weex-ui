@@ -15,6 +15,7 @@
            :style="{transform: `scale(${index===currentIndex ? 1 : cardS.scale})`,left: `${index * (cardS.width+cardS.spacing)}px`,marginLeft:`${(containerS.width - cardS.width) / 2}px`,width: cardS.width+'px', height: cardS.height+'px'}">
         <slot :name="`card${index}_${sliderId}`"></slot>
       </div>
+      <slot name="pull-more"></slot>
     </div>
   </div>
 </template>
@@ -211,6 +212,12 @@
         let selectIndex = originIndex;
         const duration = Date.now() - this.startTime;
         const panOffset = this.panOffset || (this.cardS.width / 2);
+        const isPullMore = (selectIndex === this.cardLength - 1 && (moveX < -68 || (moveX < -10 && duration < 200)));
+
+        if(isPullMore){
+            this.$emit('wxcEpSliderPullMore', { currentIndex: selectIndex });
+            console.log(this.$slots)
+        }
 
         if (moveX < -panOffset || (moveX < -10 && duration < 200)) {
           if (selectIndex !== this.cardLength - 1) {
