@@ -14,7 +14,7 @@
     <option
       v-for="(item, index) in cHackList"
       v-bind="Object.assign({}, customStyles, item)"
-      :key="index"
+      :key="id + index"
       :style="{opacity: 0, marginTop: dList.length >= cols ? lineSpacing : null}"></option>
   </div>
 </template>
@@ -25,6 +25,11 @@
   export default {
     components: { Option },
     props: {
+      // 标识, 当界面展示多个grid, 防止v-for :key重复
+      id: {
+        type: String,
+        default: 'one'
+      },
       // 列数
       cols: {
         type: Number,
