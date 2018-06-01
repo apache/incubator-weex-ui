@@ -71,7 +71,6 @@ const plugins = [
   new HappyPack({
     id: 'css',
     verbose: true,
-    cache: false,
     loaders: ['postcss-loader'],
     threadPool: happyThreadPool
   }),
