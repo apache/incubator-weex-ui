@@ -216,7 +216,6 @@
 
         if(isPullMore){
             this.$emit('wxcEpSliderPullMore', { currentIndex: selectIndex });
-            console.log(this.$slots)
         }
 
         if (moveX < -panOffset || (moveX < -10 && duration < 200)) {

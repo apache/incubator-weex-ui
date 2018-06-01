@@ -16,11 +16,14 @@ export const STYLE_MAP = {
 };
 
 export const TEXT_STYLE_MAP = {
-  taobao: {
+  red: {
     color: '#FFFFFF'
   },
-  fliggy: {
-    color: '#3D3D3D'
+  yellow: {
+    color: '#FFFFFF'
+  },
+  blue: {
+    color: '#FFFFFF'
   },
   white: {
     color: '#3D3D3D'
