@@ -117,14 +117,14 @@
         disabled: true
       }
     }),
-    created () {
+    created() {
       setTitle('SliderBar');
       this.barValue = this.sliderBarCfg1.value || this.sliderBarCfg1.defaultValue;
       this.minValue = this.sliderBarCfg2.value[0] || this.sliderBarCfg1.defaultValue[0];
       this.maxValue = this.sliderBarCfg2.value[1] || this.sliderBarCfg1.defaultValue[1];
     },
     methods: {
-      updateValue (value) {
+      updateValue(value) {
         if (typeof value === 'number') {
           this.barValue = value;
         } else if (value.length && value.length === 2) {
