@@ -1,4 +1,4 @@
-- [**Weex Ui 半年开源之路**](docs/weex-ui-report)
+- [**Weex Ui 半年开源之路**](cn/weex-ui-report)
 - 布局
     - [wxc-button 按钮](cn/packages/wxc-button/)
     - [wxc-cell 单元格](cn/packages/wxc-cell/)
