@@ -558,6 +558,11 @@
     overflow: hidden;
   }
 
+
+  .range-bar{
+    overflow: hidden;
+  }
+
   .value-bar {
     height: 4px;
     overflow: hidden;
