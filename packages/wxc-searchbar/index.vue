@@ -1,6 +1,6 @@
 <!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
 <!-- Created by Tw93 on 16/10/25. -->
-<!--A sSearch bar for city Search-->
+<!--A Search bar for city Search-->
 
 <template>
   <div>
@@ -11,6 +11,7 @@
              @focus="onFocus"
              @input="onInput"
              @return="onSubmit"
+             :return-key-type="returnKeyType"
              :autofocus="autofocus"
              :disabled="disabled"
              :value="value"
@@ -18,7 +19,7 @@
              :type="inputType"
              :placeholder="placeholder"
              :style="{ width: needShowCancel ? '624px' : '710px' }"
-             :class="['search-bar-input','search-bar-input-'+theme]"/>
+             :class="['search-bar-input','search-bar-input-'+theme]" />
       <div v-if="disabled"
            @click="inputDisabledClicked"
            class="disabled-input"></div>
@@ -44,10 +45,11 @@
              @return="onSubmit"
              :disabled="disabled"
              :autofocus="autofocus"
+             :return-key-type="returnKeyType"
              :value="value"
              :type="inputType"
              :placeholder="placeholder"
-             :class="['search-bar-input','input-has-dep','search-bar-input-'+theme]"/>
+             :class="['search-bar-input','input-has-dep','search-bar-input-'+theme]" />
       <div v-if="disabled"
            @click="inputDisabledClicked"
            class="disabled-input has-dep-disabled"></div>
@@ -206,6 +208,10 @@
         type: String,
         default: 'text'
       },
+      returnKeyType: {
+        type: String,
+        default: 'default'
+      },
       mod: {
         type: String,
         default: 'default'
@@ -240,13 +246,13 @@
       }
     },
     computed: {
-      needShowCancel () {
+      needShowCancel() {
         return this.alwaysShowCancel || this.showCancel;
       },
-      buttonStyle () {
+      buttonStyle() {
         const { barStyle } = this;
         if (barStyle.backgroundColor) {
-            return {backgroundColor:barStyle.backgroundColor}
+          return { backgroundColor: barStyle.backgroundColor }
         }
         return {}
       }
@@ -260,7 +266,7 @@
       value: ''
 
     }),
-    created () {
+    created() {
       this.defaultValue && (this.value = this.defaultValue);
       if (this.disabled) {
         this.showCancel = false;
@@ -268,7 +274,7 @@
       }
     },
     methods: {
-      onBlur () {
+      onBlur() {
         const self = this;
         setTimeout(() => {
           self.showCancel = false;
@@ -276,10 +282,10 @@
           self.$emit('wxcSearchbarInputOnBlur', { value: self.value });
         }, 10);
       },
-      autoBlur () {
+      autoBlur() {
         this.$refs['search-input'].blur();
       },
-      onFocus () {
+      onFocus() {
         if (this.isDisabled) {
           return;
         }
@@ -287,41 +293,41 @@
         this.detectShowClose();
         this.$emit('wxcSearchbarInputOnFocus', { value: this.value });
       },
-      closeClicked () {
+      closeClicked() {
         this.value = '';
         this.showCancel && (this.showCancel = false);
         this.showClose && (this.showClose = false);
         this.$emit('wxcSearchbarCloseClicked', { value: this.value });
         this.$emit('wxcSearchbarInputOnInput', { value: this.value });
       },
-      onInput (e) {
+      onInput(e) {
         this.value = e.value;
         this.showCancel = true;
         this.detectShowClose();
         this.$emit('wxcSearchbarInputOnInput', { value: this.value });
       },
-      onSubmit (e) {
+      onSubmit(e) {
         this.onBlur();
         this.value = e.value;
         this.showCancel = true;
         this.detectShowClose();
         this.$emit('wxcSearchbarInputReturned', { value: this.value });
       },
-      cancelClicked () {
+      cancelClicked() {
         this.showCancel && (this.showCancel = false);
         this.showClose && (this.showClose = false);
         this.$emit('wxcSearchbarCancelClicked', { value: this.value });
       },
-      detectShowClose () {
+      detectShowClose() {
         this.showClose = (this.value.length > 0) && this.showCancel;
       },
-      depClicked () {
+      depClicked() {
         this.$emit('wxcSearchbarDepChooseClicked', {});
       },
-      inputDisabledClicked () {
+      inputDisabledClicked() {
         this.$emit('wxcSearchbarInputDisabledClicked', {});
       },
-      setValue (value) {
+      setValue(value) {
         this.value = value;
       }
     }
