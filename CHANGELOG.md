@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.6.4
+- [+] [`wxc-searchbar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-searchbar/) supports the type of setting the keyboard return key.  [issues/287](https://github.com/alibaba/weex-ui/issues/287)
+- [!] Fixed the [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) bug about position. [issues/282](https://github.com/alibaba/weex-ui/issues/282)
+- [+] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) supports dynamic modification of data and style in real time display.
+- [!] Fixed the bug about [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) when set the `type`. [issues/268](https://github.com/alibaba/weex-ui/issues/268)
+- [+] Fixed the bug about [wxc-grid-select](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-grid-select/) when using more than one. 
+- [!] Fixed the bug about [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) when slide to last one. [issues/277](https://github.com/alibaba/weex-ui/issues/277)
+
 ## 0.6.3
 - [!] Fixed the bug about [`wxc-minibar`](https://alibaba.github.io/weex-ui/#/packages/wxc-minibar/) when setting right slot.  [issue/263](https://github.com/alibaba/weex-ui/issues/263)
 - [+] [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/packages/wxc-ep-slider/) supports pull more  by setting `pull-more` slot.

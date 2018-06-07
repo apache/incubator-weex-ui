@@ -83,6 +83,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | placeholder | `String` |`N`| `搜索` | input placeholder|
 | cancel-label | `String` |`N`| `取消 ` | cancel button label|
 | input-type | `String` |`N`| `text` | `text，password，url，email，tel`|
+| return-key-type | `String` |`N`| `default` |the keybord returen key type support `default/go/next/search/send/done`|
 | autofocus | `Boolean` |`N`| `false` | input auto focus |
 | default-value | `String` |`N`| `-` | default value |
 | disabled | `Boolean` |`N`| `false` | whether is been disabled|
