@@ -1,5 +1,13 @@
 # 升级日志
 
+## 0.6.4
+- [+] [`wxc-searchbar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-searchbar/) 支持设置键盘返回键的类型  [issues/287](https://github.com/alibaba/weex-ui/issues/287)
+- [!] 修复 [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) 浮动定位问题 [issues/282](https://github.com/alibaba/weex-ui/issues/282)
+- [+] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) 支持动态修改数据并样式实时展示
+- [!] 修复 [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) type 使用的 bug 问题
+- [+] 修复 [wxc-grid-select](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-grid-select/) 多个时候会存在 key 重复的问题
+- [!] 修复 [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) 最后一个可能卡顿问题 [issues/277](https://github.com/alibaba/weex-ui/issues/277)
+
 ## 0.6.3
 - [!] 修复 [`wxc-minibar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-minibar/) 设置右侧 slot 时候回调无效问题 [issue/263](https://github.com/alibaba/weex-ui/issues/263)
 - [+] [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) 支持设置右滑加载更多设置，通过配置 `pull-more` slot 即可

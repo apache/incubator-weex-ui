@@ -66,7 +66,7 @@
       DPR: 1,
       timeout: 100,
       isAndroid: Utils.env.isAndroid()
-  }),
+    }),
     props: {
       length: {
         type: Number,
@@ -124,7 +124,18 @@
         default: '#AAA'
       }
     },
-    created () {
+    watch: {
+      value(e) {
+        if (!this.range) {
+          this.diffX1 = this._getDiffX(e || this.defaultValue);
+        } else {
+          this.diffX1 = this._getDiffX(e[0] || this.defaultValue[0]);
+          this.diffX2 = this._getDiffX(e[1] || this.defaultValue[1]);
+          this.barWidth = this.diffX2 - this.diffX1;
+        }
+      }
+    },
+    created() {
       if (Utils.env.isWeb()) {
         this.env = 'web';
         this.DPR = window.devicePixelRatio ? window.devicePixelRatio : 1;
@@ -132,7 +143,7 @@
         this.DPR = weex.config.env.scale;
       }
     },
-    mounted () {
+    mounted() {
       this.block1 = this.$refs['slide-block-1'];        // 左侧滑块
       this.block2 = this.$refs['slide-block-2'];        // 右侧滑块
       this.valueBar = this.$refs['value-bar'];          // 黄色值条
@@ -177,13 +188,13 @@
     },
 
     computed: {
-      containerStyle () {
+      containerStyle() {
         return {
           width: `${this.length + 56}px`,
           height: '56px'
         };
       },
-      rangeBarStyle () {
+      rangeBarStyle() {
         return {
           width: `${this.length}px`,
           height: `${this.height}px`,
@@ -191,7 +202,7 @@
           backgroundColor: this.invalidColor
         };
       },
-      valueBarStyle () {
+      valueBarStyle() {
         let left = 0;
         let width = 0;
 
@@ -210,13 +221,13 @@
           backgroundColor: this.disabled ? this.disabledColor : this.validColor
         };
       },
-      blockStyle1 () {
+      blockStyle1() {
         let left = this.diffX1;
         return {
           transform: `translateX(${left}px)`
         };
       },
-      blockStyle2 () {
+      blockStyle2() {
         return {
           transform: `translateX(${this.diffX2}px)`
         }
@@ -225,9 +236,9 @@
     methods: {
 
       // 更新单选值或最小值
-      weexHandler1 (e) {
+      weexHandler1(e) {
         const self = this;
-        switch(e.state) {
+        switch (e.state) {
           case 'start':
             self.bindBlock1();
             break;
@@ -245,15 +256,16 @@
             break;
           case 'end':
             break;
-          default: break;
+          default:
+            break;
         }
       },
 
       // 更新最大值
-      weexHandler2 (e) {
+      weexHandler2(e) {
         const self = this;
 
-        switch(e.state) {
+        switch (e.state) {
           case 'start':
             self.bindBlock2();
             break;
@@ -290,7 +302,7 @@
         }, this.timeout);
       },
 
-      weexStartHandler2 () {
+      weexStartHandler2() {
         if (!this.isAndroid) {
           return;
         }
@@ -305,7 +317,7 @@
       },
 
       // 清除定时器
-      weexEndHandler () {
+      weexEndHandler() {
         if (!this.isAndroid) {
           return;
         }
@@ -313,7 +325,7 @@
         this.secondInterval && clearInterval(this.secondInterval);
       },
 
-      webStartHandler (e) {
+      webStartHandler(e) {
         if (this.env === 'weex') {
           return;
         }
@@ -322,7 +334,7 @@
         this.startDiffX2 = this.diffX2;
       },
 
-      webMoveHandler1 (e) {
+      webMoveHandler1(e) {
         if (this.env === 'weex' || this.disabled) {
           return;
         }
@@ -351,7 +363,7 @@
         }
       },
 
-      webMoveHandler2 (e) {
+      webMoveHandler2(e) {
         if (this.env === 'weex' || this.disabled) {
           return;
         }
@@ -377,7 +389,7 @@
         }
       },
 
-      bindBlock1 () {
+      bindBlock1() {
         const self = this;
 
         // 如果禁用，不行进行表达式绑定
@@ -453,7 +465,7 @@
         }
       },
 
-      bindBlock2 () {
+      bindBlock2() {
         const self = this;
 
         // 如果禁用，不行进行表达式绑定
@@ -498,7 +510,7 @@
       },
 
       // 获取diffx1 diffx2 取值范围
-      getRange () {
+      getRange() {
         if (!this.range) {
           return {
             rangeX1: [0, this.length]
@@ -512,7 +524,7 @@
       },
 
       // 限制取值范围
-      _restrictValue (range, value) {
+      _restrictValue(range, value) {
         if (range && range.length && range.length === 2) {
           if (value < range[0]) {
             return range[0];
@@ -526,12 +538,12 @@
       },
 
       // 根据x方向偏移量计算value
-      _getValue (diffX) {
+      _getValue(diffX) {
         return Math.round((diffX / this.length) * (this.max - this.min) + this.min);
       },
 
       // 根据value和length计算x方向偏移值
-      _getDiffX (value) {
+      _getDiffX(value) {
         return ((value - this.min) / (this.max - this.min)) * this.length;
       }
     }
@@ -543,6 +555,11 @@
     height: 56px;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+  }
+
+
+  .range-bar{
     overflow: hidden;
   }
 
