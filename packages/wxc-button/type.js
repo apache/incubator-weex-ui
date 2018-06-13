@@ -12,6 +12,9 @@ export const STYLE_MAP = {
   },
   blue: {
     backgroundColor: '#0F8DE8'
+  },
+  green: {
+    backgroundColor: '#19be6b'
   }
 };
 
@@ -27,6 +30,9 @@ export const TEXT_STYLE_MAP = {
   },
   white: {
     color: '#3D3D3D'
+  },
+  green: {
+    color: '#FFFFFF'
   }
 };
 
