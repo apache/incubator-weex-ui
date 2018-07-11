@@ -36,6 +36,7 @@
   }
 </script>
 ```
+更多 Demo 详细可以查看 [这里](https://github.com/alibaba/weex-ui/blob/master/example/slider-bar/index.vue)
 
 ### 可配置参数
 
@@ -53,3 +54,11 @@
 | invalidColor | `String` |`N`| `#E0E0E0`| 无效颜色 |
 | validColor   | `String` |`N`| `#EE9900`| 有效颜色 |
 | disabledColor| `String` |`N`| `#AAA`   | 禁用颜色 |
+
+
+### 事件
+
+- 滑动时候的值更新
+```
+@updateValue="updateValue"
+```

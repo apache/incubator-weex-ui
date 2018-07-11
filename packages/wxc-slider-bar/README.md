@@ -54,3 +54,11 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | invalidColor | `String` |`N`| `#E0E0E0`| invalid color |
 | validColor   | `String` |`N`| `#EE9900`| valid color |
 | disabledColor| `String` |`N`| `#AAA`   | disabled color |
+
+
+
+### Event
+
+```
+@updateValue="updateValue"
+```
