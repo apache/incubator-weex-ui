@@ -33,11 +33,12 @@
         default: false
       },
       btnStyle: Object,
-      textStyle: Object
+      textStyle: Object,
+      disabledStyle: Object
     },
     computed: {
       mrBtnStyle () {
-        const { type, disabled, btnStyle, size } = this;
+        const { type, disabled, btnStyle, size, disabledStyle } = this;
 
         const mrBtnStyle = {
           ...STYLE_MAP[type],
@@ -45,14 +46,15 @@
           ...BUTTON_STYLE_MAP[size]
         };
 
-        let disableStyle = { opacity: 0.2 };
+        let disabledInStyle = { opacity: 0.2 };
         if (type === 'white') {
-          disableStyle = { backgroundColor: 'rgba(0, 0, 0, 0.1)' };
+          disabledInStyle = { backgroundColor: 'rgba(0, 0, 0, 0.1)' };
         }
 
         return disabled ? {
           ...mrBtnStyle,
-          ...disableStyle,
+          ...disabledInStyle,
+          ...disabledStyle,
           borderWidth: 0
         } : mrBtnStyle;
       },

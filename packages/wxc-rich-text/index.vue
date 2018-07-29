@@ -16,7 +16,8 @@
                             :link-href="v.href"
                             :link-style="v.style"
                             :has-text-margin="hasTextMargin"
-                            :link-theme="v.theme"></wxc-rich-text-link>
+                            :link-theme="v.theme"
+                            @wxcRichTextLinkClick="linkClick"></wxc-rich-text-link>
 
         <wxc-rich-text-icon v-if="v.type=='icon' && v.src"
                             :icon-src="v.src"
@@ -58,7 +59,7 @@
     props: {
       configList: {
         type: [Array, String],
-        default: function () {
+        default: function() {
           return []
         }
       },
@@ -69,11 +70,16 @@
     },
     data: () => ({}),
     computed: {
-      isNotEmptyArray () {
+      isNotEmptyArray() {
         return Utils.isNonEmptyArray(this.configList);
       },
-      isString () {
+      isString() {
         return Utils.isString(this.configList);
+      }
+    },
+    methods: {
+      linkClick(e) {
+        this.$emit('wxcRichTextLinkClick', e);
       }
     }
   };
