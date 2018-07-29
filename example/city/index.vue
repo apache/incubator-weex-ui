@@ -28,6 +28,7 @@
               :currentLocation="location"
               :cityStyleType="cityStyleType"
               :sourceData="sourceData"
+              :showNavHeader="true"
               @wxcCityItemSelected="citySelect"
               @wxcCityOnInput="onInput"></wxc-city>
     <!-- model方式演示 -->
@@ -35,6 +36,7 @@
               :animationType="animationTypeModel"
               :currentLocation="location"
               :cityStyleType="cityStyleType"
+              :showNavHeader="true"
               @wxcCityItemSelected="citySelect"
               @wxcCityOnInput="onInput"></wxc-city>
   </div>

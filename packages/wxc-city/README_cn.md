@@ -74,10 +74,11 @@
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`input-config`** | `Object` | `N` | `{}` | 城市选择输入框配置, 注1|
-| **`sourceData`** | `Object` | `N` | `注：不传此参数，默认使用常规城市列表数据源` | 城市列表数组配置，注2 |
-| **`cityStyleType`** | `String` | `N` | `list` | 城市列表样式的配置，注3 |
-| **`currentLocation`** | `String` | `Y` | `` | 定位城市配置，注4 |
+| **`source-data`** | `Object` | `N` | `注：不传此参数，默认使用常规城市列表数据源` | 城市列表数组配置，注2 |
+| **`city-style-type`** | `String` | `N` | `list` | 城市列表样式的配置，注3 |
+| **`current-location`** | `String` | `Y` | `` | 定位城市配置，注4 |
 | **`show-index`** | `Boolean` | `N` | `true` | 是否显示右侧索引项|
+| **`show-nav-header`** | `Boolean` | `N` | `true` |是否显示分栏顶部|
 | **`show-tab`** | `Boolean` | `N` | `false` | 是否需要显示国内、国外TAB|
 | **`city-height`** | `Number` | `N` | `0` | 自定义城市高度，**非特殊业务不要设置！**|
 | **`animationType`** | `String` | `N` | `push` | 自定义转场动画类型目前支持model和push|

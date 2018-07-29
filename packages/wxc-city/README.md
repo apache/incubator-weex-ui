@@ -70,12 +70,13 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`input-config`** | `Object` | `N` | `{}` | Search Input configuration (*1)|
-| **`sourceData`** | `Object` | `N` | `Default China City data` | City data configuration (*2) |
-| **`cityStyleType`** | `String` | `N` | `list` | Style configuration (*3) |
-| **`currentLocation`** | `String` | `Y` | `` | Location of the city configuration (*4) |
-| **`show-index`** | `Boolean` | `N` | `true` | Whether the right index item is displayed|
+| **`source-data`** | `Object` | `N` | `Default China City data` | City data configuration (*2) |
+| **`city-style-type`** | `String` | `N` | `list` | Style configuration (*3) |
+| **`current-location`** | `String` | `Y` | `` | Location of the city configuration (*4) |
+| **`show-index`** | `Boolean` | `N` | `true` | Whether the right index item is show|
+| **`show-nav-header`** | `Boolean` | `N` | `true` | Whether the nav index is show|
 | **`city-height`** | `Number` | `N` | `0` | Custom City height, **non special business do not set up!**|
-| **`animationType`** | `String` | `N` | `push` | Support model or push type|
+| **`animation-type`** | `String` | `N` | `push` | Support model or push type|
 
 - *1：Search Input configuration：
 
