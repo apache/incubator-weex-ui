@@ -82,6 +82,7 @@
 | arrowPosition | `Object` |`Y`|`{pos:'top',x:0,y:0}` | 气泡箭头位置，pos 为'top,bottom,left,right'，配合x，y定位箭头位置  |
 | coverColor | `String` |`N`|`rgba(0,0,0,0.4)`| 遮罩层颜色，如 `rgba(0,0,0,0.4)`，`rgb(0,0,0)`，`#000` |
 | hasAnimation | `Boolean` |`N`| `true` | 是否开启展开动画  |
+| textStyle | `Object` |`N`| `{}` | 文字样式覆盖 |
 
 ### 调用显示
 

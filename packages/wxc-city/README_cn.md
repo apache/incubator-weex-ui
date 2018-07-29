@@ -119,3 +119,7 @@
 // 城市输入框输入回调
 @wxcCityOnInput="cityInputChange"
 ```
+
+### 异步数据问题
+
+假如城市数据，需要请求后再显示，可以使用`this.$refs.wxcCity.saveDefaultSourceData = {...myData};`方式来更新

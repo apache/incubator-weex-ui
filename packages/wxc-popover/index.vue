@@ -15,14 +15,14 @@
          :style="contentStyle">
       <div class="u-popover-arrow" :style="arrowStyle"></div>
       <div class="u-popover-inner">
-        <div :class="['i-btn',i==buttons.length-1?'i-btn-noborder':'']"
+        <div :class="['i-btn',i === buttons.length-1 ? 'i-btn-noborder' : '']"
              v-for="(item,i) in buttons"
              :key="i"
              @click="wxcButtonClicked(i,item.key)">
           <image :src="item.icon"
                  v-if="item.icon"
                  class="btn-icon"></image>
-          <text class="btn-text">{{item.text}}</text>
+          <text class="btn-text" :style="textStyle">{{item.text}}</text>
         </div>
       </div>
     </div>
@@ -59,7 +59,8 @@ export default {
     hasAnimation: {
       type: Boolean,
       default: true
-    }
+    },
+    textStyle: Object
   },
   data: () => ({
     show: false,
