@@ -84,6 +84,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | arrowPosition | `Object` |`Y`|`{pos:'top',x:0,y:0}` | Bubble arrow position，pos could be'top,bottom,left,right'  |
 | coverColor | `String` |`N`|`rgba(0,0,0,0.4)`| Mask layer color, e.g `rgba(0,0,0,0.4)`，`rgb(0,0,0)`，`#000` |
 | hasAnimation | `Boolean` |`N`| `true` | whether to animate  |
+| textStyle | `Object` |`N`| `{}` | Popover text style |
 
 ### Manual Show
 

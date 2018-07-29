@@ -6,7 +6,7 @@ Try to search for your [issue](https://github.com/alibaba/weex-ui/issues?utf8=%E
 在开 issue 的时候，请抱着一种『一起合作来解决这个问题』的心态，同时请尽可能描述清楚，这样效率才会高。
 
 Remember to delete the above statement before committing.
-同时建议使用英语进行描述，这样国外的开发者也可以看懂，提交之前，记得将上述说明删除。
+同时建议使用英语进行描述，这样国外的开发者也可以看懂，提交之前，**记得将上述说明删除!!**。
 
 ##### 1.Your development environment（weex、weex-toolkit、system and more).    
  - 

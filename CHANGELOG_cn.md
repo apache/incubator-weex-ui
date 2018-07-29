@@ -1,5 +1,13 @@
 # 升级日志
 
+## 0.6.5
+- [+] [`wxc-button`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 支持设置 disabled 样式进行覆盖
+- [!] 修复 [`wxc-rich-text`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-rich-text/) link 不支持点击回调问题  [issue/298](https://github.com/alibaba/weex-ui/issues/298)
+- [+] [wxc-city](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-city/) 新增`show-nav-header` 来控制是否显示栏目头部  [issue/294](https://github.com/alibaba/weex-ui/issues/294)
+- [+] [wxc-tab-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-bar/) 在 isTabView 为 false 时候也支持设置高亮 [issue/292](https://github.com/alibaba/weex-ui/issues/292)
+- [+] [wxc-popover](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popover/) 支持文字部分样式覆盖 [issue/289](https://github.com/alibaba/weex-ui/issues/289)
+
+
 ## 0.6.4
 - [+] [`wxc-searchbar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-searchbar/) 支持设置键盘返回键的类型  [issues/287](https://github.com/alibaba/weex-ui/issues/287)
 - [!] 修复 [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) 浮动定位问题 [issues/282](https://github.com/alibaba/weex-ui/issues/282)
