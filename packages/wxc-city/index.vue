@@ -19,7 +19,7 @@
                    :nav-style="{ top: '24px'}"
                    :height="listHeight"
                    :show-index="showIndex"
-                   :only-show-list="onlyShowList"
+                   :only-show-list="!showNavHeader || onlyShowList"
                    :city-location-config="currentCityLocationConfig"
                    @wxcIndexlistItemClicked="onItemClick"></wxc-indexlist>
 
@@ -71,7 +71,11 @@
       showIndex: {
         type: Boolean,
         default: true
-      }
+      },
+      showNavHeader: {
+        type: Boolean,
+        default: true
+      },
     },
     data: () => ({
       tId: null,
