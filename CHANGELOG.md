@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.6.5
+- [+] [`wxc-button`](https://alibaba.github.io/weex-ui/#/packages/wxc-button/) supports to set the disabled style for replace
+- [!] Fixed the link click callback for [`wxc-rich-text`](https://alibaba.github.io/weex-ui/#/packages/wxc-rich-text/)  [issue/298](https://github.com/alibaba/weex-ui/issues/298)
+- [+] [wxc-city](https://alibaba.github.io/weex-ui/#/packages/wxc-city/) supports show or hidden nav header by `show-nav-header` param. [issue/294](https://github.com/alibaba/weex-ui/issues/294)
+- [+] [wxc-tab-bar](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-bar/) supports set selected when is not tabView. [issue/292](https://github.com/alibaba/weex-ui/issues/292)
+- [+] [wxc-popover](https://alibaba.github.io/weex-ui/#/packages/wxc-popover/) supports to replace text style. [issue/289](https://github.com/alibaba/weex-ui/issues/289)
+
 ## 0.6.4
 - [+] [`wxc-searchbar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-searchbar/) supports the type of setting the keyboard return key.  [issues/287](https://github.com/alibaba/weex-ui/issues/287)
 - [!] Fixed the [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) bug about position. [issues/282](https://github.com/alibaba/weex-ui/issues/282)
