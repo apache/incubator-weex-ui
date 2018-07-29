@@ -202,6 +202,9 @@
       },
       setPage (page, url = null, animated = true) {
         if (!this.isTabView) {
+          this.currentPage = page;
+          this._animateTransformX(page, animated);
+          this.$emit('wxcTabBarCurrentTabSelected', { page });
           this.jumpOut(url);
           return;
         }

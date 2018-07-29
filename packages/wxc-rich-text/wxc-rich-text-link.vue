@@ -44,9 +44,8 @@
     }),
     methods: {
       onLinkClick (e) {
-        const self = this;
-        Utils.goToH5Page(self.linkHref);
-        self.$emit('wxcRichTextLinkClick', { element: e, href: self.linkHref });
+        this.$emit('wxcRichTextLinkClick', { element: e, href: this.linkHref });
+        Utils.goToH5Page(this.linkHref);
       }
     }
   };
