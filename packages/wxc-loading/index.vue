@@ -31,7 +31,7 @@
   }
 
   .wxc-loading {
-    position: fixed;
+    position: absolute;
     left: 287px;
     top: 500px;
     z-index: 9999;
