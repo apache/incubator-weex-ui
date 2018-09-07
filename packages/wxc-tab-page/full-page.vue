@@ -35,7 +35,7 @@
                :style="{ width: tabStyles.iconWidth + 'px', height:tabStyles.iconHeight+'px'}"></image>
 
         <text
-          :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
+          :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage == index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage == index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:(tabStyles.textPaddingLeft?tabStyles.textPaddingLeft:10)+'px', paddingRight:(tabStyles.textPaddingRight?tabStyles.textPaddingRight:10)+'px'}"
           class="tab-text">{{v.title}}</text>
 
         <div class="border-bottom"
@@ -152,7 +152,7 @@
       isMoving: false,
       deltaX: 0
     }),
-    mounted () {
+    mounted() {
       // ios 下面禁止左滑出去
       if (swipeBack && swipeBack.forbidSwipeBack) {
         swipeBack.forbidSwipeBack(true);
@@ -166,26 +166,26 @@
       }
     },
     methods: {
-      next () {
+      next() {
         let page = this.currentPage;
         if (page < this.tabTitles.length - 1) {
           page++;
         }
         this.setPage(page);
       },
-      prev () {
+      prev() {
         let page = this.currentPage;
         if (page > 0) {
           page--;
         }
         this.setPage(page);
       },
-      startHandler (e) {
+      startHandler(e) {
         if (BindEnv.supportsEBForIos() && this.isTabView && this.needSlider) {
           this.bindExp(this.$refs['tab-page-wrap']);
         }
       },
-      bindExp (element) {
+      bindExp(element) {
         if (element && element.ref) {
 
           if (this.isMoving && this.gesToken !== 0) {
@@ -206,7 +206,7 @@
           const props = [{
             element: tabElement.ref,
             property: 'transform.translateX',
-            expression:  `{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"min\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":0},{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"max\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":${-(tabTitles.length - 1) * 750}},{\"type\":\"-\",\"children\":[{\"type\":\"Identifier\",\"value\":\"x\"},{\"type\":\"NumericLiteral\",\"value\":${dist}}]}]}]}]}]}`
+            expression: `{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"min\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":0},{\"type\":\"CallExpression\",\"children\":[{\"type\":\"Identifier\",\"value\":\"max\"},{\"type\":\"Arguments\",\"children\":[{\"type\":\"NumericLiteral\",\"value\":${-(tabTitles.length - 1) * 750}},{\"type\":\"-\",\"children\":[{\"type\":\"Identifier\",\"value\":\"x\"},{\"type\":\"NumericLiteral\",\"value\":${dist}}]}]}]}]}]}`
           }];
 
           const gesTokenObj = Binding.bind({
@@ -228,7 +228,7 @@
           this.gesToken = gesTokenObj.token;
         }
       },
-      setPage (page) {
+      setPage(page) {
         if (this.isMoving === true) {
           return;
         }
@@ -253,7 +253,7 @@
         this.currentPage = page;
         this.$emit('wxcTabPageCurrentTabSelected', { page });
       },
-      _animateTransformX (page) {
+      _animateTransformX(page) {
         const { duration, timingFunction } = this;
         const containerEl = this.$refs[`tab-container`];
         const dist = page * 750;
