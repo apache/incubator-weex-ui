@@ -10,7 +10,7 @@
               :show-scrollbar="false"
               scroll-direction="horizontal"
               :data-spm="spmC"
-              :style="{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height)+'px',paddingLeft:tabStyles.leftOffset+'px' }">
+              :style="{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height)+'px',paddingLeft:(tabStyles.leftOffset?tabStyles.leftOffset:0)+'px' }">
 
       <div class="title-item"
            v-for="(v,index) in tabTitles"
@@ -31,7 +31,7 @@
 
         <text
           v-if="!titleUseSlot"
-          :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage === index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage === index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:tabStyles.textPaddingLeft+'px', paddingRight:tabStyles.textPaddingRight+'px'}"
+          :style="{ fontSize: tabStyles.fontSize+'px', fontWeight: (currentPage === index && tabStyles.isActiveTitleBold)? 'bold' : 'normal', color: currentPage === index ? tabStyles.activeTitleColor : tabStyles.titleColor, paddingLeft:(tabStyles.textPaddingLeft?tabStyles.textPaddingLeft:10)+'px', paddingRight:(tabStyles.textPaddingRight?tabStyles.textPaddingRight:10)+'px'}"
           class="tab-text">{{v.title}}</text>
         <div class="border-bottom"
              v-if="tabStyles.hasActiveBottom && !titleUseSlot"
@@ -175,7 +175,7 @@
       deltaX: 0,
       translateX: 0
     }),
-    created () {
+    created() {
       const { titleType, tabStyles } = this;
       if (titleType === 'iconFont' && tabStyles.iconFontUrl) {
         dom.addRule('fontFace', {
@@ -184,7 +184,7 @@
         });
       }
     },
-    mounted () {
+    mounted() {
       if (swipeBack && swipeBack.forbidSwipeBack) {
         swipeBack.forbidSwipeBack(true);
       }
@@ -197,26 +197,26 @@
       }
     },
     methods: {
-      next () {
+      next() {
         let page = this.currentPage;
         if (page < this.tabTitles.length - 1) {
           page++;
         }
         this.setPage(page);
       },
-      prev () {
+      prev() {
         let page = this.currentPage;
         if (page > 0) {
           page--;
         }
         this.setPage(page);
       },
-      startHandler () {
+      startHandler() {
         if (BindEnv.supportsEBForIos() && this.isTabView && this.needSlider) {
           this.bindExp(this.$refs['tab-page-wrap']);
         }
       },
-      bindExp (element) {
+      bindExp(element) {
         if (element && element.ref) {
 
           if (this.isMoving && this.gesToken !== 0) {
@@ -258,7 +258,7 @@
           this.gesToken = gesTokenObj.token;
         }
       },
-      setPage (page, url = null, animated = true) {
+      setPage(page, url = null, animated = true) {
         if (!this.isTabView) {
           this.jumpOut(url);
           return;
@@ -290,10 +290,10 @@
         this._animateTransformX(page, animated);
         this.$emit('wxcTabPageCurrentTabSelected', { page });
       },
-      jumpOut (url) {
+      jumpOut(url) {
         url && Utils.goToH5Page(url)
       },
-      _animateTransformX (page, animated) {
+      _animateTransformX(page, animated) {
         const { duration, timingFunction } = this;
         const computedDur = animated ? duration : 0.00001;
         const containerEl = this.$refs[`tab-container`];
