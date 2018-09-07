@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.6.6
+- [!] Fixed the padding undefined bug for [wxc-tab-page](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/)   [issue/320](https://github.com/alibaba/weex-ui/issues/320)
+- [!] Fixed the standOut Value bug for [wxc-popup](https://alibaba.github.io/weex-ui/#/packages/wxc-popup/)     [issue/319](https://github.com/alibaba/weex-ui/issues/319)
+
 ## 0.6.5
 - [+] [`wxc-button`](https://alibaba.github.io/weex-ui/#/packages/wxc-button/) supports to set the disabled style for replace
 - [!] Fixed the link click callback for [`wxc-rich-text`](https://alibaba.github.io/weex-ui/#/packages/wxc-rich-text/)  [issue/298](https://github.com/alibaba/weex-ui/issues/298)

@@ -1,5 +1,9 @@
 # 升级日志
 
+## 0.6.6
+- [!] 修复 [wxc-tab-page](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) 中 Padding 不存在时候的报错  [issue/320](https://github.com/alibaba/weex-ui/issues/320)
+- [!] 修复 [wxc-popup](https://alibaba.github.io/weex-ui/#/packages/wxc-popup/) 组件传入的standOut值为字符串 bug    [issue/319](https://github.com/alibaba/weex-ui/issues/319)
+
 ## 0.6.5
 - [+] [`wxc-button`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 支持设置 disabled 样式进行覆盖
 - [!] 修复 [`wxc-rich-text`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-rich-text/) link 不支持点击回调问题  [issue/298](https://github.com/alibaba/weex-ui/issues/298)
