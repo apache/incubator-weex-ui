@@ -105,57 +105,58 @@
       isOverShow: true
     }),
     computed: {
-      isNeedShow () {
+      isNeedShow() {
         setTimeout(() => {
           this.appearPopup(this.show);
         }, 50);
         return this.show;
       },
-      _height () {
+      _height() {
         this.appearPopup(this.show, 150);
         return this.height;
       },
-      padStyle () {
+      padStyle() {
         const { pos, width, height, popupColor, standOut } = this;
+        const stand = parseInt(standOut, 10);
         let style = {
           width: `${width}px`,
           backgroundColor: popupColor
         };
         pos === 'top' && (style = {
           ...style,
-          top: `${-height + standOut}px`,
+          top: `${-height + stand}px`,
           height: `${height}px`
         });
         pos === 'bottom' && (style = {
           ...style,
-          bottom: `${-height + standOut}px`,
+          bottom: `${-height + stand}px`,
           height: `${height}px`
         });
         pos === 'left' && (style = {
           ...style,
-          left: `${-width + standOut}px`
+          left: `${-width + stand}px`
         });
         pos === 'right' && (style = {
           ...style,
-          right: `${-width + standOut}px`
+          right: `${-width + stand}px`
         });
         return style;
       }
     },
     methods: {
-      handleTouchEnd (e) {
+      handleTouchEnd(e) {
         // 在支付宝上面有点击穿透问题
         const { platform } = weex.config.env;
         platform === 'Web' && e.preventDefault && e.preventDefault();
       },
-      hide () {
+      hide() {
         this.appearPopup(false);
         this.$refs.overlay.appearOverlay(false);
       },
-      wxcOverlayBodyClicking () {
+      wxcOverlayBodyClicking() {
         this.isShow && this.appearPopup(false);
       },
-      appearPopup (bool, duration = 300) {
+      appearPopup(bool, duration = 300) {
         this.isShow = bool;
         const popupEl = this.$refs['wxc-popup'];
         if (!popupEl) {
@@ -174,7 +175,7 @@
           }
         });
       },
-      getTransform (pos, width, height, bool) {
+      getTransform(pos, width, height, bool) {
         let _size = pos === 'top' || pos === 'bottom' ? height : width;
         bool && (_size = 0);
         let _transform;
