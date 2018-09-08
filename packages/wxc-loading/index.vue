@@ -3,7 +3,7 @@
 <!--A loading indicator. Custom text supported. -->
 
 <template>
-  <div :class="[showLoading && needMask && 'loading-need-mask']"
+  <div :class="['loading-container',showLoading && needMask && 'loading-need-mask']"
        @click="maskClicked"
        :style="maskStyle">
     <div class="wxc-loading" :style="{ top: topPosition +'px'}" v-if="showLoading">
@@ -20,7 +20,10 @@
 </template>
 
 <style scoped>
-
+	.loading-container{
+		position: relative;
+	}
+	
   .loading-need-mask {
     position: absolute;
     top: 0;
@@ -31,7 +34,7 @@
   }
 
   .wxc-loading {
-    position: fixed;
+    position: absolute;
     left: 287px;
     top: 500px;
     z-index: 9999;
