@@ -73,7 +73,7 @@ In order not to pack all the components, you need use [`babel-plugin-component`]
 At the same time, if you don't install `babel-preset-stage-0`, also need to install it.
 
 ```shell
-npm i babel-preset-stage-0 babel-plugin-component  -D
+npm i babel-preset-stage-0 babel-plugin-component -D
 ```
 
 ```json
