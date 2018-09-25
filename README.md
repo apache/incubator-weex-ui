@@ -9,7 +9,7 @@
 [![Package Quality](http://npm.packagequality.com/shield/weex-ui.svg?style=flat-square)](http://packagequality.com/#?package=weex-ui)
 [![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://img.shields.io/gitter/room/alibaba/weex-ui.svg?style=flat-square)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
-> A rich interaction, lightweight, high performance UI library based on [Weex](https://github.com/apache/incubator-weex).
+> A rich interactive, lightweight, high performance UI library based on [Weex](https://github.com/apache/incubator-weex).
 
 ## Docs
 
@@ -69,8 +69,8 @@ npm i weex-ui -S
 
 ### Before use
 
-In order not to pack all the components, you need use [`babel-plugin-component`](https://www.npmjs.com/package/babel-plugin-component) to import specified component.
-At the same time, if you don't install `babel-preset-stage-0`, also need to install it.
+In order to not pack all the components, you need to use [`babel-plugin-component`](https://www.npmjs.com/package/babel-plugin-component) to import the specified component.
+At the same time, if you haven't installed `babel-preset-stage-0`, its necessary to install it.
 
 ```shell
 npm i babel-preset-stage-0 babel-plugin-component -D
