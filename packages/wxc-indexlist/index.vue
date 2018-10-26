@@ -97,6 +97,10 @@
         type: Boolean,
         default: true
       },
+      needAnimation: {
+        type: Boolean,
+        default: true
+      },
       hotListConfig: {
         type: Object,
         default: () => ({})
@@ -179,7 +183,8 @@
       go2Key (key) {
         const keyEl = this.$refs['index-item-title-' + key][0];
         keyEl && dom.scrollToElement(keyEl, {
-          offset: 0
+          offset: 0,
+          animated: this.needAnimation
         });
         this.popKey = key;
         this.popKeyShow = true;

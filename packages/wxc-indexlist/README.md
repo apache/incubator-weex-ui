@@ -64,6 +64,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | show-index | `Boolean` |`N`| `true` |  whether to show index nav | 
 | only-show-list | `Boolean` | `N`|`false` |  whether to only show list *4) |
 | nav-style | `Object` |`N`| `{}` |  index sidebar custom style |
+| need-animation | `Boolean` |`N`| `true` | whether to need index nav animation|
 
 - *1：The configuration items of the normal list, Detailed data format: [demo/data.js#L16](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L16)
 - *2：Some index list need in front of the normal list shows a list of popular form ,Support `group`,`list` type, Detailed data format: [demo/data.js#L2](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L2): 
