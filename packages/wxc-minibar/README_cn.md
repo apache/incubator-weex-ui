@@ -59,6 +59,7 @@
 | background-color | `String` |`N`| `#ffffff` | 背景颜色 |
 | use-default-return | `Boolean` |`N`| `true` | 是否使用默认的返回 |
 | show | `Boolean` | `N` |`true`| 是否显示 |
+| bar-style | `Object` | `N`|`{}` | 覆盖修改原有的样式 |
 
 ### Slot
 当以上配置都不满足时候，你可以使用 slot 来自定义设置你的组件。   `weex-ui >= 0.3.9`
