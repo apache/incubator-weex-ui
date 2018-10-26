@@ -3,7 +3,7 @@
 <!--A top navigation bar.-->
 
 <template>
-  <div class="wxc-minibar" :style="{ backgroundColor: backgroundColor }" v-if="show">
+  <div class="wxc-minibar" :style="newBarStyle" v-if="show">
     <div class="left" @click="leftButtonClicked" aria-label="返回" :accessible="true">
       <slot name="left">
         <image :src="leftButton"
@@ -114,6 +114,18 @@
       show: {
         type: Boolean,
         default: true
+      },
+      barStyle: {
+        type: Object
+      }
+    },
+    computed: {
+      newBarStyle () {
+        const { backgroundColor, barStyle } = this;
+        return {
+          backgroundColor,
+          ...barStyle
+        }
       }
     },
     methods: {
