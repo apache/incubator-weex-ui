@@ -122,6 +122,9 @@
       this.barValue = this.sliderBarCfg1.value || this.sliderBarCfg1.defaultValue;
       this.minValue = this.sliderBarCfg2.value[0] || this.sliderBarCfg1.defaultValue[0];
       this.maxValue = this.sliderBarCfg2.value[1] || this.sliderBarCfg1.defaultValue[1];
+      setTimeout(()=>{
+        Vue.set(this.sliderBarCfg1,'disabled',true)
+      },4000)
     },
     methods: {
       updateValue(value) {

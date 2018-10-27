@@ -394,6 +394,11 @@
 
         // 如果禁用，不行进行表达式绑定
         if (self.disabled) {
+          Binding.unbind({
+            token: this.gesToken1,
+            eventType: 'pan',
+          })
+          this.gesToken1 = 0;
           return;
         }
 
@@ -421,7 +426,7 @@
             expression: `min(0, max(x + ${startLeft}, -${blockMax1}))`
           }];
 
-          Binding.bind({
+          const gesTokenObj = Binding.bind({
             anchor: self.block1.ref,
             eventType: 'pan',
             props
@@ -433,6 +438,7 @@
               self.bindBlock1();
             }
           });
+          this.gesToken1 = gesTokenObj.token;
         } else {
 
           // 选范围
@@ -450,7 +456,7 @@
             expression: `min(${barMax1}, max(0, ${self.barWidth} - x))`
           }];
 
-          Binding.bind({
+          const gesTokenObj = Binding.bind({
             anchor: self.block1.ref,
             eventType: 'pan',
             props
@@ -462,6 +468,7 @@
               self.bindBlock1();
             }
           });
+          this.gesToken1 = gesTokenObj.token;
         }
       },
 
@@ -470,6 +477,11 @@
 
         // 如果禁用，不行进行表达式绑定
         if (self.disabled) {
+          Binding.unbind({
+            token: this.gesToken2,
+            eventType: 'pan',
+          });
+          this.gesToken2 = 0;
           return;
         }
 
@@ -495,7 +507,7 @@
           expression: `min(${barMax2}, max(0, x + ${self.barWidth}))`
         }];
 
-        Binding.bind({
+        const gesTokenObj = Binding.bind({
           anchor: self.block2.ref,
           eventType: 'pan',
           props
@@ -507,6 +519,7 @@
             self.bindBlock2();
           }
         });
+        this.gesToken2 = gesTokenObj.token;
       },
 
       // 获取diffx1 diffx2 取值范围
