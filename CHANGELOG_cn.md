@@ -1,5 +1,16 @@
 # 升级日志
 
+## 0.6.7
+- [!] Loading 位置属性修改，防止多个时候的重叠 [pull/323](https://github.com/alibaba/weex-ui/pull/323)
+- [!] 文档英语语法修正 [pull/329](https://github.com/alibaba/weex-ui/pull/329)、[pull/330](https://github.com/alibaba/weex-ui/pull/330)
+- [+] [utils](https://alibaba.github.io/weex-ui/#/packages/utils/) 中新增 iPhoneXS Max/ iPhoneXR 判断方法 [pull/337](https://github.com/alibaba/weex-ui/pull/337)
+- [!] 升级 npm querystringify、url-parse 对应版本号 [pull/329](https://github.com/alibaba/weex-ui/pull/329)
+- [+] [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 新增绿色主题 [pull/291](https://github.com/alibaba/weex-ui/pull/291)
+- [+] [wxc-indexlist](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-indexlist/) 新增 `need-animation` 参数来 disable 锚点动画 [issue/341](https://github.com/alibaba/weex-ui/issues/341)
+- [!] 修复 [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) Android 下拖动滑块后禁用仍然可以拖动滑块 [issue/331](https://github.com/alibaba/weex-ui/issues/331)
+- [+] [wxc-minibar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-minibar/) 新增 bar-style 可用来自定义参数   [pull/326](https://github.com/alibaba/weex-ui/issues/326)
+
+
 ## 0.6.6
 - [!] 修复 [wxc-tab-page](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) 中 Padding 不存在时候的报错  [issue/320](https://github.com/alibaba/weex-ui/issues/320)
 - [!] 修复 [wxc-popup](https://alibaba.github.io/weex-ui/#/packages/wxc-popup/) 组件传入的standOut值为字符串 bug    [issue/319](https://github.com/alibaba/weex-ui/issues/319)

@@ -36,7 +36,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`text`** | `String` | `Y` | `-` | the text of button |
-| **`type`** | `String` | `N` | `red` | can be set to `white`/`red`/`yellow`/`blue` |
+| **`type`** | `String` | `N` | `red` | can be set to `white`/`red`/`yellow`/`blue`/`green` |
 | **`size`** | `String` | `N` | `full` | can be set to `full`/`big`/`medium`/`small` |
 | **`disabled`** | `Boolean` | `N` | `false` | set disabled（*1） |
 | **`btnStyle`** | `Object` | `N` | `{}` | custom style about button（*2） |
