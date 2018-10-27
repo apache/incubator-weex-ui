@@ -113,10 +113,9 @@ Once it has been compiled, a browser window will be opened automatically. You ca
 
 * Use Weex Ui in your daily work.
 * **Star it** if you like.
-* <details>
-  <summary>Join the chat at dingtalk to help solve weex problems.</summary>
+* Join the chat at dingtalk to help solve weex problems.
+  
   <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
-</details>
 
 ## Contribution
 Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our [Contributing Guide](https://github.com/alibaba/weex-ui/blob/master/CONTRIBUTING.md) before making a pull request.
