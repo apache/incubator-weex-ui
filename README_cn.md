@@ -1,5 +1,7 @@
 # Weex Ui
 
+[English](README.md) | [中文](README_cn.md)
+
 [![Build Status](https://img.shields.io/travis/alibaba/weex-ui.svg?style=flat-square)](https://travis-ci.org/alibaba/weex-ui)
 [![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/weex-ui)
 [![NPM downloads](https://img.shields.io/npm/dm/weex-ui.svg?style=flat-square)](https://npmjs.org/package/weex-ui)
@@ -116,7 +118,7 @@ npm run start
 * 如果你觉得 Weex Ui 还不错，可以通过 Star 来表示你的喜欢
 * 加入钉钉聊天群帮忙解答 Weex 技术问题
 
-   <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
+   <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB120fOlXzqK1RjSZFvXXcB7VXa-864-980.png" width="200"/>
 
 ## 贡献
 
