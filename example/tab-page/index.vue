@@ -11,6 +11,9 @@
                 :tab-page-height="tabPageHeight"
                 :spm-c="4307989"
                 @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
+
+    <text slot="rightIcon" class="other">其他</text>
+
     <list v-for="(v,index) in tabList"
           :key="index"
           class="item-container"
@@ -55,6 +58,11 @@
 
   .cell {
     background-color: #ffffff;
+  }
+
+  .other {
+    height: 120px;
+    line-height: 120px;
   }
 </style>
 <script>
