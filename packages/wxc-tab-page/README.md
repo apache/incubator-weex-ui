@@ -135,6 +135,8 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | title-use-slot | `Boolean` |`N`| `false` | configure title using `slot` (*2)|
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |page background color|
 | need-slider | `Boolean` |`N`| `true` |whether to slide with gestures|
+| click-animation | `Boolean` |`N`| `true` |have to use animation when you click the tab bar|
+
 
 ### *1: Using iconFont
 - After Weex Ui version about `0.3.8`, we can use `iconFont` to represent our title image, you can use like this:
