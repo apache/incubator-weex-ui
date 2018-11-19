@@ -135,6 +135,8 @@
 | title-use-slot | `Boolean` |`N`| `false` | 使用 slot 配置头部导航 (注2)|
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|
 | need-slider | `Boolean` |`N`| `true` |设置是否可以手势滑动|
+| click-animation | `Boolean` |`N`| `true` |点击tab的时候是否使用动画|
+
 
 ### 注1：使用 iconFont
 
