@@ -10,14 +10,25 @@
               :show-scrollbar="false"
               scroll-direction="horizontal"
               :data-spm="spmC"
-              :style="{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height)+'px',paddingLeft:(tabStyles.leftOffset?tabStyles.leftOffset:0)+'px' }">
+              :style="{
+                backgroundColor: tabStyles.bgColor,
+                height: (tabStyles.height)+'px',
+                paddingLeft:(tabStyles.leftOffset?tabStyles.leftOffset:0)+'px',
+                paddingRight: tabStyles.rightOffset
+              }">
 
       <div class="title-item"
            v-for="(v,index) in tabTitles"
            :key="index"
            :ref="'wxc-tab-title-'+index"
-           @click="setPage(index,v.url)"
-           :style="{ width: tabStyles.width +'px', height: tabStyles.height +'px', backgroundColor: currentPage === index ? tabStyles.activeBgColor : tabStyles.bgColor }"
+           @click="setPage(index,v.url, clickAnimation)"
+           :style="{
+             width: tabStyles.width +'px',
+             height: tabStyles.height +'px',
+             backgroundColor: currentPage === index ? tabStyles.activeBgColor : tabStyles.bgColor,
+             borderBottomWidth: tabStyles.normalBottomHeight,
+             borderBottomColor: tabStyles.normalBottomColor
+           }"
            :accessible="true"
            :aria-label="`${v.title?v.title:'标签'+index}`">
 
@@ -38,6 +49,18 @@
              :style="{ width: tabStyles.activeBottomWidth+'px', left: (tabStyles.width-tabStyles.activeBottomWidth)/2+'px', height: tabStyles.activeBottomHeight+'px', backgroundColor: currentPage === index ? tabStyles.activeBottomColor : 'transparent' }"></div>
         <slot :name="`tab-title-${index}`" v-if="titleUseSlot"></slot>
       </div>
+
+      <div v-if="tabStyles.hasRightIcon"
+           class="rightIcon"
+           :style="{
+            top: rightIconStyle.top,
+            right: rightIconStyle.right,
+            paddingLeft: rightIconStyle.paddingLeft,
+            paddingRight: rightIconStyle.paddingRight
+           }">
+        <slot name="rightIcon"></slot>
+      </div>
+
     </scroller>
     <div class="tab-page-wrap"
          ref="tab-page-wrap"
@@ -85,6 +108,12 @@
   .tab-text {
     lines: 1;
     text-overflow: ellipsis;
+  }
+
+  .rightIcon {
+    position: fixed;
+    background-color: #ffffff;
+    box-shadow: -50px 0 20px #ffffff;
   }
 
 </style>
@@ -135,7 +164,11 @@
           activeBottomHeight: 6,
           textPaddingLeft: 10,
           textPaddingRight: 10,
-          leftOffset: 0
+          leftOffset: 0,
+          rightOffset: 0,
+          normalBottomColor: '#F2F2F2',
+          normalBottomHeight: 0,
+          hasRightIcon: false
         })
       },
       titleType: {
@@ -165,6 +198,19 @@
       wrapBgColor: {
         type: String,
         default: '#f2f3f4'
+      },
+      clickAnimation: {
+        type: Boolean,
+        default: true
+      },
+      rightIconStyle: {
+        type: Object,
+        default: () => ({
+          top: 0,
+          right: 0,
+          paddingLeft: 20,
+          paddingRight: 20
+        })
       }
     },
     data: () => ({
