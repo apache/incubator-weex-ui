@@ -69,6 +69,8 @@
 | width | `Number` |`Y`| `750` | 全屏显示图片宽度 |
 | show-indicator | `Bool` |`N`| `true` |全屏后是否显示索引...|
 | indicator-color | `Object` |`N`| `{}` |索引样式配置（注 1）|
+| index | `Number` |`N`| `0` | 当前初始打开选择哪一页 |
+| interval | `Number` |`N`| `3000` | 设置自动播放时候的间隔时间 |
 
 注 1 中样式：
 ```

@@ -67,6 +67,8 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | width | `Number` |`Y`| `750` | light box width |
 | show-indicator | `Bool` |`N`| `true` |whether to show indicator|
 | indicator-color | `Object` |`N`| `{}` | indicator style（*1）|
+| index | `Number` |`N`| `0` | the index of current shown slider|
+| interval | `Number` |`N`| `3000` | time interval for each page displayed in slider|
 
 *1 default style: 
 ```

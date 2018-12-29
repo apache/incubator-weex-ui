@@ -126,7 +126,7 @@
 |-------------|------------|--------|-----|-----|
 | tab-titles | `Array` |`Y`| `[]` | 顶部 [显示配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L7)|
 | title-type | `String` |`N`| `icon` | 顶部类型 `icon`/`text`/`iconFont` (注1)|
-| tab-styles | `Array` |`N`| `[]` | 顶部 [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
+| tab-styles | `Object` |`N`| `{}` | 顶部 [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
 | tab-page-height | `Number` |`N`| `1334` | Tab page 页面的高度 |
 | is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时 tab 配置 url 参数即可跳出|
 | pan-dist | `Number` |`N`| `200` | 滚动多少切换上下一屏幕|
@@ -135,6 +135,9 @@
 | title-use-slot | `Boolean` |`N`| `false` | 使用 slot 配置头部导航 (注2)|
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|
 | need-slider | `Boolean` |`N`| `true` |设置是否可以手势滑动|
+| click-animation | `Boolean` |`N`| `true` | 点击tab的时候是否使用动画 |
+| right-icon-style | `Object` |`N`| `{}` | rightIcon的样式 |
+
 
 ### 注1：使用 iconFont
 
