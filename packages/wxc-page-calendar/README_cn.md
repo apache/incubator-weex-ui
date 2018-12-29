@@ -102,7 +102,9 @@
 | desc-list | `Array` |`N`| `[{}]` | 附加信息 |
 | show-header | `Boolean` |`N`| `false` | 是否在 Native 下显示导航栏 |
 | minibar-cfg | `Object` |`N`| `{}` | 导航栏 [配置](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-calendar/index.vue#L65)，降级版本默认显示 |
-| animationType | `String` | `N` | `push` | 自定义转场动画类型目前支持model和push|
+| animation-type | `String` | `N` | `push` | 自定义转场动画类型目前支持model和push|
+| selected-cell-style | `Object` | `N` | `{}` |覆盖选中日期的 cell 样式|
+| selected-text-style | `Object` | `N` | `{}` |覆盖选中日期的 text 样式|
 ### 事件回调
 
 ```
