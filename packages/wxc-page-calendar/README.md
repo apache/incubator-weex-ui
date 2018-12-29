@@ -101,7 +101,9 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | desc-list | `Array` |`N`| `[{}]` | desc info |
 | show-header | `Boolean` |`N`| `false` | whether show minibar in native |
 | minibar-cfg | `Object` |`N`| `{}` | [minibar config](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-calendar/index.vue#L65)|
-| animationType | `String` | `N` | `push` | Support model or push type|
+| animation-type | `String` | `N` | `push` | Support model or push type|
+| selected-cell-style | `Object` | `N` | `{}` |Cover the selected cell style|
+| selected-text-style | `Object` | `N` | `{}` |Cover the selected text style|
 ### Event
 
 ```

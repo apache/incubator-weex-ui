@@ -37,8 +37,10 @@
                          :selected-date="selectedDate"
                          :selected-note="selectedNote"
                          :is-range="isRange"
-                         :needDestroy="false"
+                         :need-destroy="false"
                          :minibar-cfg="minibarCfg"
+                         :selected-cell-style="selectedCellStyle"
+                         :selected-text-style="selectedTextStyle"
                          :desc-list="descList"
                          @wxcPageCalendarBackClicked="wxcPageCalendarBackClicked"
                          @wxcPageCalendarDateSelected="wxcPageCalendarDateSelected"
@@ -143,7 +145,13 @@
         { date: '2017-12-28', value: '￥341' },
         { date: '2017-12-29', value: '￥230' },
         { date: '2017-12-06', value: '￥2000', emphasize: true }
-      ]
+      ],
+      selectedCellStyle:{
+        backgroundColor:'red'
+      },
+      selectedTextStyle:{
+        color:'#ffffff'
+      }
     }),
     created () {
       setTitle('PageCalendar');
