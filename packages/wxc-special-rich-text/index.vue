@@ -176,9 +176,6 @@
           const iconMoreBlank = num > 2 ? (needHack ? '     ' : '   ') : ' ';
           if (r1.type === 'tag') {
             blank = new Array(num).join('  ') + tagMoreBlank;
-            if (!isPad && num > 6 && !needHack) {
-              blank = blank.substring(parseInt(num / 2));
-            }
           } else if (r1.type === 'icon') {
             blank = new Array(num).join('  ') + iconMoreBlank;
           }
