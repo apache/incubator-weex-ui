@@ -126,7 +126,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 |-------------|------------|--------|-----|-----|
 | tab-titles | `Array` |`Y`| `[]` | Tab list [config](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L7)|
 | title-type | `String` |`N`| `icon` | title type `icon`/`text`/`iconFont`(*1)|
-| tab-styles | `Array` |`N`| `[]` | [style config](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
+| tab-styles | `Object` |`N`| `{}` | [style config](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
 | tab-page-height | `Number` |`N`| `1334` | Tab page height |
 | is-tab-view | `Boolean` |`N`| `true` |if set `false`,add tab-titles config with `url` can be jumped out|
 | pan-dist | `Number` |`N`| `200` | how many scrolls to switch to the next screen|
@@ -135,6 +135,9 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | title-use-slot | `Boolean` |`N`| `false` | configure title using `slot` (*2)|
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |page background color|
 | need-slider | `Boolean` |`N`| `true` |whether to slide with gestures|
+| click-animation | `Boolean` |`N`| `{}` |have to use animation when you click the tab bar|
+| right-icon-style | `Object` |`N`| `{}` | right icon styles |
+
 
 ### *1: Using iconFont
 - After Weex Ui version about `0.3.8`, we can use `iconFont` to represent our title image, you can use like this:

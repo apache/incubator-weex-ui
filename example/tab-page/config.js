@@ -61,7 +61,11 @@ export default {
     activeBottomHeight: 6,
     activeBottomWidth: 120,
     textPaddingLeft: 10,
-    textPaddingRight: 10
+    textPaddingRight: 10,
+    normalBottomColor: 'rgba(0,0,0,0.4)',
+    normalBottomHeight: 1,
+    hasRightIcon: true,
+    rightOffset: 100
   },
   // 使用 iconfont 模式的tab title配置
   tabIconFontTitles: [
