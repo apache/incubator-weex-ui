@@ -9,7 +9,6 @@
                 :needSlider="needSlider"
                 :is-tab-view="isTabView"
                 :tab-page-height="tabPageHeight"
-                :spm-c="4307989"
                 @wxcTabPageCurrentTabSelected="wxcTabPageCurrentTabSelected">
 
     <text slot="rightIcon" class="other">其他</text>
@@ -66,8 +65,6 @@
   }
 </style>
 <script>
-  const dom = weex.requireModule('dom');
-
   import { WxcTabPage, WxcPanItem, Utils, BindEnv } from '../../index';
   import WxcItem from './wxc-item.vue';
 
