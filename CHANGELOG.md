@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.6.8
+- [+] [wxc-tab-page](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) supports more settings about tab-item, More can see [here]((https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/))
+- [+] [wxc-lightbox](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) add  params about `index` and `interval`
+- [!] [wxc-rich-text](https://alibaba.github.io/weex-ui/#/packages/wxc-rich-text/)  remove the old hack about wxc-special-rich-text
+
 ## 0.6.7
 - [!] Modifying the location attribute of loading [pull/323](https://github.com/alibaba/weex-ui/pull/323)
 - [!] English document grammar correction [pull/329](https://github.com/alibaba/weex-ui/pull/329)、[pull/330](https://github.com/alibaba/weex-ui/pull/330)

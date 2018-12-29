@@ -1,5 +1,11 @@
 # 升级日志
 
+## 0.6.8
+- [+] [wxc-tab-page](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 支持 tab-item 更多的参数设置，详细可见[文档]((https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/))
+- [+] [wxc-lightbox](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 支持设置 index 和 interval
+- [!] [wxc-rich-text](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-rich-text/)  中 wxc-special-rich-text 移除之前兼容 ios 的老逻辑
+
+
 ## 0.6.7
 - [!] Loading 位置属性修改，防止多个时候的重叠 [pull/323](https://github.com/alibaba/weex-ui/pull/323)
 - [!] 文档英语语法修正 [pull/329](https://github.com/alibaba/weex-ui/pull/329)、[pull/330](https://github.com/alibaba/weex-ui/pull/330)
