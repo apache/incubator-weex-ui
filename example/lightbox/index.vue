@@ -22,6 +22,7 @@
       <wxc-lightbox
         ref="wxc-lightbox"
         height="800"
+        :index="1"
         :image-list="imageList"
         @wxcLightboxOverlayClicked="lightboxOverlayClick"
         :show="show">
