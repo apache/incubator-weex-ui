@@ -12,6 +12,8 @@
             @wxcMaskSetHidden="maskOverlayClick">
     <slider auto-play="false"
             v-if="show"
+            :index="index"
+            :interval="interval"
             :style="{ height: height  + 'px'}">
       <div v-for="(v,index) in imageList"
            :style="{ height: height  + 'px'}"
@@ -65,6 +67,14 @@
           'item-selected-color': '#ffc300',
           'item-size': '20px'
         })
+      },
+      index: {
+        type: [Number, String],
+        default: 0
+      },
+      interval:{
+        type: [Number, String],
+        default: 3000
       }
     },
     computed: {
