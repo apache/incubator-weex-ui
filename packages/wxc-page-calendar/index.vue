@@ -26,12 +26,16 @@
              :key="`${index}-${rowIndex}`"
              :ref="cell.ref"
              :class="['row-item', cell.cellClass]"
+             :style="cell.isSelected ? selectedCellStyle:{}"
              :accessible="true"
              :aria-label="`${cell.text?cell.text:''},${cell.note?cell.note:''},${cell.ext?cell.ext:''}`"
              @click="onClickDate(cell)">
-          <text :class="['calendar-note', cell.cls]">{{cell.note}}</text>
-          <text :class="['calendar-day', cell.cls]">{{cell.text}}</text>
-          <text :class="['calendar-ext', cell.cls]">{{cell.ext}}</text>
+          <text :class="['calendar-note', cell.cls]"
+                :style="cell.isSelected ? selectedTextStyle:{}">{{cell.note}}</text>
+          <text :class="['calendar-day', cell.cls]"
+                :style="cell.isSelected ? selectedTextStyle:{}">{{cell.text}}</text>
+          <text :class="['calendar-ext', cell.cls]"
+                :style="cell.isSelected ? selectedTextStyle:{}">{{cell.ext}}</text>
         </div>
       </cell>
       <cell class="iphone-x" v-if="isIPhoneX"></cell>
@@ -89,7 +93,15 @@
       descList: {
         type: Array,
         default: () => ([])
-      }
+      },
+      selectedCellStyle: {
+        type: Object,
+        default: () => ({})
+      },
+      selectedTextStyle: {
+        type: Object,
+        default: () => ({})
+      },
     },
     data: () => ({
       isShow: false,
@@ -199,10 +211,10 @@
       },
       _animate (status, callback = null) {
         var ref = this.$refs.pageCalendar
-        if(this.animationType==='push') {
-          Utils.animation.pageTransitionAnimation(ref,`translateX(${status ? -750 : 750}px)`,status,callback)
-        } else if (this.animationType==='model') {
-          Utils.animation.pageTransitionAnimation(ref,`translateY(${status ? -Utils.env.getScreenHeight() : Utils.env.getScreenHeight()}px)`,status,callback)
+        if (this.animationType === 'push') {
+          Utils.animation.pageTransitionAnimation(ref, `translateX(${status ? -750 : 750}px)`, status, callback)
+        } else if (this.animationType === 'model') {
+          Utils.animation.pageTransitionAnimation(ref, `translateY(${status ? -Utils.env.getScreenHeight() : Utils.env.getScreenHeight()}px)`, status, callback)
         }
       },
       show () {

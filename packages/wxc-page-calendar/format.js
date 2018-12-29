@@ -188,9 +188,10 @@ export function getWeekRows (y, m, today, dateRange, departDate, arriveDate, sel
         const global = _fixNum(m) + '-' + _fixNum(d);
         let note = '';
         let ext = '';
+        let isSelected = false;
 
         if (descList && descList.length > 0) {
-          const nowDesc = descList.filter(item => item.date == date);
+          const nowDesc = descList.filter(item => item.date === date);
           if (nowDesc && nowDesc.length > 0) {
             ext = nowDesc[0].value;
             if (nowDesc[0].emphasize) {
@@ -254,6 +255,7 @@ export function getWeekRows (y, m, today, dateRange, departDate, arriveDate, sel
           if (departDate === arriveDate && selectedNote.length >= 3) {
             note = selectedNote[2];
           }
+          isSelected = true;
           cls.push('item-text-selected');
           cellClass.push('item-row-selected');
         }
@@ -263,6 +265,7 @@ export function getWeekRows (y, m, today, dateRange, departDate, arriveDate, sel
         }
 
         cell = {
+          isSelected,
           isEmpty: false,
           ref,
           cls: _unique(cls).join(' '),
