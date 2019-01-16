@@ -1,4 +1,4 @@
-- [**Weex Ui 半年开源之路**](docs/weex-ui-report)
+- [**Use Weex Ui with weex-toolkit**](docs/with-weex-toolkit)
 - Layout
     - [wxc-button](packages/wxc-button/)
     - [wxc-cell](packages/wxc-cell/)
@@ -44,9 +44,8 @@
    
 - Service
    - [utils](packages/utils/) 
-   
+- [**Weex Ui 半年开源之路**](docs/weex-ui-report)  
 - [**Weex + Ui - Weex Conf 2018**](docs/weex-ui-weex-conf-2018)
-- [**Use Weex Ui with weex-toolkit**](docs/with-weex-toolkit)
 - [**FAQ**](docs/faq)
 - [**CHANGELOG**](CHANGELOG)
 - [Who is using Weex Ui?](docs/who_use.md)

@@ -1,9 +1,12 @@
 # Weex Ui
 
+[English](README.md) | [中文](README_cn.md)
+
 [![Build Status](https://img.shields.io/travis/alibaba/weex-ui.svg?style=flat-square)](https://travis-ci.org/alibaba/weex-ui)
 [![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/weex-ui)
 [![NPM downloads](https://img.shields.io/npm/dm/weex-ui.svg?style=flat-square)](https://npmjs.org/package/weex-ui)
 [![NPM all downloads](https://img.shields.io/npm/dt/weex-ui.svg?style=flat-square)](https://npmjs.org/package/weex-ui)
+[![CNPM all downloads](http://npm.taobao.org/badge/d/weex-ui.svg?style=flat-square)](https://npm.taobao.org/package/weex-ui)
 [![GitHub last commit](https://img.shields.io/github/last-commit/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/commits/dev)
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=)
 [![Package Quality](http://npm.packagequality.com/shield/weex-ui.svg?style=flat-square)](http://packagequality.com/#?package=weex-ui)
@@ -113,10 +116,9 @@ npm run start
 
 * 在你的公司或个人项目中使用 Weex Ui
 * 如果你觉得 Weex Ui 还不错，可以通过 Star 来表示你的喜欢
-* <details>
-  <summary>加入钉钉聊天群帮忙解答 Weex 技术问题</summary>
-  <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1DSvMg2DH8KJjy1XcXXcpdXXa-750-850.jpg" width="240"/>
-</details>
+* 加入钉钉聊天群帮忙解答 Weex 技术问题
+
+   <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB120fOlXzqK1RjSZFvXXcB7VXa-864-980.png" width="200"/>
 
 ## 贡献
 

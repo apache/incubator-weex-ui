@@ -13,7 +13,7 @@
 - [+] [wxc-button](https://alibaba.github.io/weex-ui/#/packages/wxc-button/) add a green theme [pull/291](https://github.com/alibaba/weex-ui/pull/291)
 - [+] [wxc-indexlist](https://alibaba.github.io/weex-ui/#/packages/wxc-indexlist/) add a  `need-animation` param to disable the index animation [issue/341](https://github.com/alibaba/weex-ui/issues/341)
 - [!] Fixed the bug about [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) When drag can still be dragged after Android dragging the slider. [issue/331](https://github.com/alibaba/weex-ui/issues/331)
-- [+] [wxc-minibar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-minibar/) add bar-style param to cover style  [pull/326](https://github.com/alibaba/weex-ui/issues/326)
+- [+] [wxc-minibar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-minibar/) add bar-style param to cover style  [issue/326](https://github.com/alibaba/weex-ui/issues/326)
 
 ## 0.6.6
 - [!] Fixed the padding undefined bug for [wxc-tab-page](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/)   [issue/320](https://github.com/alibaba/weex-ui/issues/320)

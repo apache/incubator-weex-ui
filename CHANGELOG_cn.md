@@ -14,7 +14,7 @@
 - [+] [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 新增绿色主题 [pull/291](https://github.com/alibaba/weex-ui/pull/291)
 - [+] [wxc-indexlist](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-indexlist/) 新增 `need-animation` 参数来 disable 锚点动画 [issue/341](https://github.com/alibaba/weex-ui/issues/341)
 - [!] 修复 [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) Android 下拖动滑块后禁用仍然可以拖动滑块 [issue/331](https://github.com/alibaba/weex-ui/issues/331)
-- [+] [wxc-minibar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-minibar/) 新增 bar-style 可用来自定义参数   [pull/326](https://github.com/alibaba/weex-ui/issues/326)
+- [+] [wxc-minibar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-minibar/) 新增 bar-style 可用来自定义参数   [issue/326](https://github.com/alibaba/weex-ui/issues/326)
 
 
 ## 0.6.6
