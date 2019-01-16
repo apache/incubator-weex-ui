@@ -23,7 +23,7 @@
 	.loading-container{
 		position: relative;
 	}
-	
+
   .loading-need-mask {
     position: absolute;
     top: 0;
@@ -34,7 +34,7 @@
   }
 
   .wxc-loading {
-    position: absolute;
+    position: fixed;
     left: 287px;
     top: 500px;
     z-index: 9999;
