@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.6.9
+- [!] Fixed the bug about [wxc-loading](https://alibaba.github.io/weex-ui/#/packages/wxc-loading/) When `need-mask` is false.
+- [-] Remove the special treatment for weex-toolkit in [with-weex-toolkit](https://alibaba.github.io/weex-ui/#/docs/with-weex-toolkit).
+
 ## 0.6.8
 - [+] [wxc-tab-page](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) supports more settings about tab-item, More can see [here]((https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/))
 - [+] [wxc-lightbox](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) add  params about `index` and `interval`

@@ -44,13 +44,6 @@ install weex-ui
 
 >npm i weex-ui@latest -S
 
-If you are using the latest version of weex-toolkit, you will find that. babelrc has a `@babel/preset-env', you need to implement the following solution:
-
-```
-npm install babel-loader@7 babel-core@6 -D
-npm uninstall @babel/core @babel/preset-env 
-``` 
-
 Please add 'babel-preset-stage-0' and 'babel-plugin-component' to .babelrc
 
 > npm i babel-plugin-component babel-preset-stage-0  -D

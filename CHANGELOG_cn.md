@@ -1,5 +1,9 @@
 # 升级日志
 
+## 0.6.9
+- [!] 修复 [wxc-loading](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-loading/) 组件的 Bug，当 need-mask 为 false 时候
+- [-] 移除文档 [with-weex-toolkit](https://alibaba.github.io/weex-ui/#/cn/with-weex-toolkit) 中对最新版本的 weex-toolkit 特殊的处理
+
 ## 0.6.8
 - [+] [wxc-tab-page](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 支持 tab-item 更多的参数设置，详细可见[文档]((https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/))
 - [+] [wxc-lightbox](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 支持设置 index 和 interval
