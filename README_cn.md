@@ -118,7 +118,7 @@ npm run start
 * 如果你觉得 Weex Ui 还不错，可以通过 Star 来表示你的喜欢
 * 加入钉钉聊天群帮忙解答 Weex 技术问题
 
-   <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB120fOlXzqK1RjSZFvXXcB7VXa-864-980.png" width="200"/>
+   <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB10zSeCQvoK1RjSZFNXXcxMVXa-750-990.png" width="200"/>
 
 ## 贡献
 
