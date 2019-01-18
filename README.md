@@ -116,7 +116,7 @@ Once it has been compiled, a browser window will be opened automatically. You ca
 * **Star it** if you like.
 * Join the chat at dingtalk to help solve weex problems.
   
-  <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB120fOlXzqK1RjSZFvXXcB7VXa-864-980.png" width="200"/>
+  <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB10zSeCQvoK1RjSZFNXXcxMVXa-750-990.png" width="200"/>
 
 ## Contribution
 Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our [Contributing Guide](https://github.com/alibaba/weex-ui/blob/master/CONTRIBUTING.md) before making a pull request.
