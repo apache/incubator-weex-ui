@@ -58,19 +58,12 @@
     },
     computed: {
       themeStyle () {
-        let style = {};
-        const textStyle = this.textStyle;
-        if (textStyle && textStyle.fontSize) {
+        let style = { ...this.textStyle };
+        if (style && (style.fontSize || style['font-size'])) {
           style = {
             ...style,
-            fontSize: `${textStyle.fontSize}px`,
-            height: `${textStyle.fontSize * 1.2}px`
-          }
-        }
-        if (textStyle && textStyle.color) {
-          style = {
-            ...style,
-            color: textStyle.color
+            fontSize: `${style.fontSize || style['font-size']}px`,
+            height: `${(style.fontSize || style['font-size']) * 1.2}px`
           }
         }
         return style;
