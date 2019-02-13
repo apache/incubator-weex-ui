@@ -32,7 +32,7 @@ Also you can copy the `name` from [demo](https://h5.m.taobao.com/trip/wx-detecti
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`name`** | `string` | `Y` | `-` | icon name (*1)|
-| **`size`** | `String` | `N` | `small` | icon size `xs`/`small`/`medium`/`large`|
+| **`size`** | `String` | `N` | `small` | icon size `xs`/`small`/`medium`/`big`|
 | **`icon-style`** | `Object` | `N` | `{}` |style override (*2)|
 
 - *1：icon name list：`['less', 'more_unfold', 'back', 'more', 'add', 'subtract', 'close', 'cry', 'search', 'delete', 'help', 'refresh', 'success', 'warning', 'wrong', 'clock', 'scanning', 'filter', 'map', 'play']`
