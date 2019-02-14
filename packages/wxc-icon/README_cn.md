@@ -31,7 +31,7 @@
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
 | **`name`** | `string` | `Y` | `-` | icon 的名称 (注1)|
-| **`size`** | `String` | `N` | `small` | icon的尺寸 `xs`/`small`/`medium`/`large`|
+| **`size`** | `String` | `N` | `small` | icon的尺寸 `xs`/`small`/`medium`/`big`|
 | **`icon-style`** | `Object` | `N` | `{}` |样式覆盖 (注2)|
 
 - 注1：icon的名称详细如下：`['less', 'more_unfold', 'back', 'more', 'add', 'subtract', 'close', 'cry', 'search', 'delete', 'help', 'refresh', 'success', 'warning', 'wrong', 'clock', 'scanning', 'filter', 'map', 'play']`
