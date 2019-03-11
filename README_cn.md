@@ -118,7 +118,9 @@ npm run start
 * 如果你觉得 Weex Ui 还不错，可以通过 Star 来表示你的喜欢
 * 加入钉钉聊天群帮忙解答 Weex 技术问题
 
-   <img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB120fOlXzqK1RjSZFvXXcB7VXa-864-980.png" width="200"/>
+  |Weex Ui 钉钉群|Weex 钉钉群|BindingX 钉钉群|
+  |:--:|:--:|:--:|
+  |<img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB15.yALAvoK1RjSZFDXXXY3pXa-750-990.png" width="180"/>|<img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1tpS2LxnaK1RjSZFtXXbC2VXa-606-799.png" width="180"/>|<img alt="Join the chat at dingtalk" src="https://img.alicdn.com/tfs/TB1lf1CLCzqK1RjSZFpXXakSXXa-1125-1485.png" width="180"/>|
 
 ## 贡献
 
