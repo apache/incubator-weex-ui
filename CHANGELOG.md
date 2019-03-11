@@ -2,7 +2,7 @@
 
 ## 0.6.10
 
--[!] Fixed the `lines` bug about [wxc-popover](https://alibaba.github.io/weex-ui/#/packages/wxc-popover/) when in web.  [issue/384](https://github.com/alibaba/weex-ui/issues/384)
+- [!] Fixed the `lines` bug about [wxc-popover](https://alibaba.github.io/weex-ui/#/packages/wxc-popover/) when in web.  [issue/384](https://github.com/alibaba/weex-ui/issues/384)
 - [!] Fixed the `sourceData` warning about [wxc-city](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-city/) when searching. [issue/382](https://github.com/alibaba/weex-ui/issues/382)
 - [!] Fixed the `btnStyle` style cannot cover about [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/). [issue/390](https://github.com/alibaba/weex-ui/issues/390)
 - [+] Add Weex and Bindingx DingTalk Group.
