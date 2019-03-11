@@ -60,7 +60,10 @@ export default {
       type: Boolean,
       default: true
     },
-    textStyle: Object
+    textStyle: {
+      type: Object,
+      default: () => ({})
+    }
   },
   data: () => ({
     show: false,
@@ -218,8 +221,8 @@ export default {
       this.hideAction();
     },
     /**
-    * 隐藏操作
-    */
+       * 隐藏操作
+       */
     hideAction () {
       if (this.animationLock) {
         return;
@@ -267,8 +270,8 @@ export default {
       }
     },
     /**
-    * 设置动画锁
-    */
+       * 设置动画锁
+       */
     setAnimationLock () {
       this.animationLock = true;
     }
