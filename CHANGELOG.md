@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.6.10
+
+-[!] Fixed the `lines` bug about [wxc-popover](https://alibaba.github.io/weex-ui/#/packages/wxc-popover/) when in web.  [issue/384](https://github.com/alibaba/weex-ui/issues/384)
+- [!] Fixed the `sourceData` warning about [wxc-city](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-city/) when searching. [issue/382](https://github.com/alibaba/weex-ui/issues/382)
+- [!] Fixed the `btnStyle` style cannot cover about [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/). [issue/390](https://github.com/alibaba/weex-ui/issues/390)
+- [+] Add Weex and Bindingx DingTalk Group.
+
 ## 0.6.9
 - [!] Fixed the bug about [wxc-loading](https://alibaba.github.io/weex-ui/#/packages/wxc-loading/) When `need-mask` is false.
 - [-] Remove the special treatment for weex-toolkit in [with-weex-toolkit](https://alibaba.github.io/weex-ui/#/docs/with-weex-toolkit).
@@ -35,7 +42,7 @@
 - [!] Fixed the [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) bug about position. [issues/282](https://github.com/alibaba/weex-ui/issues/282)
 - [+] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) supports dynamic modification of data and style in real time display.
 - [!] Fixed the bug about [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) when set the `type`. [issues/268](https://github.com/alibaba/weex-ui/issues/268)
-- [+] Fixed the bug about [wxc-grid-select](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-grid-select/) when using more than one. 
+- [+] Fixed the bug about [wxc-grid-select](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-grid-select/) when using more than one.
 - [!] Fixed the bug about [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) when slide to last one. [issues/277](https://github.com/alibaba/weex-ui/issues/277)
 
 ## 0.6.3
@@ -76,7 +83,7 @@
 ## 0.5.3
 - [!] [wxc-city](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-city/README.md) support not to display the location, direct incoming `currentLocation` is empty.
 - [+] [wxc-checkbox](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-checkbox/README.md) add `has-top-border`/`has-bottom-border` for whether show top-border or bottom-border.
-- [+] [wxc-progress](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-progress/README.md) add `bar-radius` for setting border-radius. 
+- [+] [wxc-progress](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-progress/README.md) add `bar-radius` for setting border-radius.
 
 ## 0.5.2
 * [!] Using `rebind()` to be compatible older version about [wxc-ep-slider](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-ep-slider/README.md).

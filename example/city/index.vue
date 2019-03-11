@@ -53,10 +53,10 @@
     data: () => ({
       currentCity: '',
       sourceData,
-      cityStyleType:'list',
+      cityStyleType: 'list',
       location: '定位中',
-      animationTypePush:'push', // 默认使用push方式，若使用push模式此参数可以不传
-      animationTypeModel:'model'
+      animationTypePush: 'push', // 默认使用push方式，若使用push模式此参数可以不传
+      animationTypeModel: 'model'
     }),
     mounted () {
       // 模拟定位

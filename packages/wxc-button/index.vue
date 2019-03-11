@@ -42,8 +42,8 @@
 
         const mrBtnStyle = {
           ...STYLE_MAP[type],
-          ...btnStyle,
-          ...BUTTON_STYLE_MAP[size]
+          ...BUTTON_STYLE_MAP[size],
+          ...btnStyle
         };
 
         let disabledInStyle = { opacity: 0.2 };
