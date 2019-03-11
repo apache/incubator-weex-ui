@@ -5,6 +5,6 @@
     <div style="overflow:hidden; width:0; height:0;position:absolute; top:-800px;">
     <img src="https://img.alicdn.com/tfs/TB1kCs_er_I8KJjy1XaXXbsxpXa-419-495.png" width="400"/>
     </div>
-  <img src="https://img.alicdn.com/tfs/TB1_AGyLrvpK1RjSZPiXXbmwXXa-1270-616.png" class="community-img" id="J_community_image" />
+  <img src="https://img.alicdn.com/tfs/TB1fjeQLpzqK1RjSZFvXXcB7VXa-1368-596.png" class="community-img" id="J_community_image" />
 
 
