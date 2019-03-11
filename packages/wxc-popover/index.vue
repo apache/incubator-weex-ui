@@ -7,11 +7,11 @@
     <div class="g-cover"
          ref="wxc-cover"
          v-if="show"
-         @touchend="hideAction"
+         @click="hideAction"
          :style="coverStyle"></div>
     <div ref="wxc-popover"
          class="g-popover"
-         v-if="show && buttons"
+         v-if="show && buttons.length"
          :style="contentStyle">
       <div class="u-popover-arrow" :style="arrowStyle"></div>
       <div class="u-popover-inner">
@@ -46,7 +46,7 @@ export default {
     },
     arrowPosition: {
       type: Object,
-      default:  () => ({
+      default: () => ({
         pos: 'top',
         x: 0,
         y: 0
@@ -60,91 +60,96 @@ export default {
       type: Boolean,
       default: true
     },
-    textStyle: Object
+    textStyle: {
+      type: Object,
+      default: () => ({})
+    }
   },
   data: () => ({
     show: false,
     showIn: false
   }),
   computed: {
-    coverStyle() {
-      return this.coverColor ? { backgroundColor: this.coverColor, opacity:this.hasAnimation||!this.showIn?'0':'1'} : '';
+    coverStyle () {
+      return this.coverColor ? { backgroundColor: this.coverColor, opacity: this.hasAnimation || !this.showIn ? '0' : '1' } : '';
     },
-    transformOrigin() {
-      let {x=0, y=0, pos='top'} = this.arrowPosition,
-          _origins = [];
-      switch(pos){
+    transformOrigin () {
+      const { x = 0, y = 0, pos = 'top' } = this.arrowPosition;
+      let _origins = [];
+      switch (pos) {
         case 'top':
         case 'bottom':
-        _origins = [x<0?'right':'left',pos];
+          _origins = [x < 0 ? 'right' : 'left', pos];
           break;
         case 'left':
         case 'right':
-        _origins = [pos,y<0?'bottom':'top'];
+          _origins = [pos, y < 0 ? 'bottom' : 'top'];
           break;
       }
       return _origins.join(' ');
     },
-    contentTransform() {
-      let {x=0, y=0, pos='top'} = this.arrowPosition,
-          _translates=['scale(0)'];
-          if(x>=0 && x<22){
-            x = 22;
-          }else if(x<0 && x>-22){
-            x =-22;
-          }
-          if(y>=0 && y<22){
-            y = 22;
-          }else if(y<0 && y>-22){
-            y =-22;
-          }
-      switch(pos){
+    contentTransform () {
+      const { pos = 'top' } = this.arrowPosition;
+      let { x = 0, y = 0 } = this.arrowPosition;
+      const _translates = ['scale(0)'];
+      if (x >= 0 && x < 22) {
+        x = 22;
+      } else if (x < 0 && x > -22) {
+        x = -22;
+      }
+      if (y >= 0 && y < 22) {
+        y = 22;
+      } else if (y < 0 && y > -22) {
+        y = -22;
+      }
+      switch (pos) {
         case 'top':
         case 'bottom':
-          _translates[1] = `translateX(${x<0?(x-15):(x+15)}px)`;
+          _translates[1] = `translateX(${x < 0 ? (x - 15) : (x + 15)}px)`;
           break;
         case 'left':
         case 'right':
-          _translates[1] = `translateY(${y<0?(y-15):(y+15)}px)`
+          _translates[1] = `translateY(${y < 0 ? (y - 15) : (y + 15)}px)`
           break;
       }
       return _translates.join(' ');
     },
-    contentStyle() {
-      let { x = 0, y = 0 } = this.position,
-        style = {};
+    contentStyle () {
+      const { x = 0, y = 0 } = this.position;
+      const style = {};
       x < 0 ? (style.right = `${-x}px`) : (style.left = `${x}px`);
       y < 0 ? (style.bottom = `${-y}px`) : (style.top = `${y}px`);
-      style.opacity = this.hasAnimation||!this.showIn?'0':'1';
-      style.transform = this.hasAnimation||!this.showIn?this.contentTransform:'scale(1)';
+      style.opacity = this.hasAnimation || !this.showIn ? '0' : '1';
+      style.transform = this.hasAnimation || !this.showIn ? this.contentTransform : 'scale(1)';
       style.transformOrigin = this.transformOrigin;
       return style;
     },
-    arrowStyle() {
-      let { pos = 'top', x = 0, y = 0 } = this.arrowPosition,
-        style = {};
+    arrowStyle () {
+      let { x = 0, y = 0 } = this.arrowPosition;
+      const { pos = 'top' } = this.arrowPosition;
+      const style = {};
       switch (pos) {
         case 'top':
           style.top = '6px';
-        case 'bottom':
+        case 'bottom': //eslint-disable-line
           !style.top && (style.bottom = '6px');
           style.transform = 'scaleX(0.8) rotate(45deg)';
-          if(x>=0 && x<22){
+          if (x >= 0 && x < 22) {
             x = 22;
-          }else if(x<0 && x>-22){
-            x =-22;
+          } else if (x < 0 && x > -22) {
+            x = -22;
           }
           x < 0 ? (style.right = `${-x}px`) : (style.left = `${x}px`);
           break;
         case 'left':
           style.left = '6px';
-        case 'right':
+        case 'right': //eslint-disable-line
           !style.left && (style.right = '6px');
           style.transform = 'scaleY(0.8) rotate(45deg)';
-          if(y>=0 && y<22){
+          if (y >= 0 && y < 22) {
             y = 22;
-          }else if(y<0 && y>-22){
-            y =-22;
+          } else if (y < 0 && y > -22) {
+            y = -22;
           }
           y < 0 ? (style.bottom = `${-y}px`) : (style.top = `${y}px`);
           break;
@@ -155,40 +160,41 @@ export default {
     }
   },
   methods: {
-    wxcPopoverShow() {
-      if(!!this.animationLock){
+    wxcPopoverShow () {
+      if (this.animationLock) {
         return;
       }
       this.show = true;
-      if(this.hasAnimation){
-        setTimeout(()=>this.wxcPopoverAnimationShow(),40)
-      }else{
-        setTimeout(()=>this.showIn=true,40);
+      if (this.hasAnimation) {
+        setTimeout(() => this.wxcPopoverAnimationShow(), 40)
+      } else {
+        setTimeout(() => (this.showIn = true), 40);
       }
     },
     /**
     * smooth in
     **/
-    wxcPopoverAnimationShow(){
+    wxcPopoverAnimationShow () {
       const popoverEl = this.$refs['wxc-popover'];
       const coverEl = this.$refs['wxc-cover'];
       if (!coverEl || !popoverEl) {
         return;
       }
       this.setAnimationLock();
-      let a1End = false,a2End = false;
+      let a1End = false;
+      let a2End = false;
       animation.transition(popoverEl, {
         styles: {
           opacity: 1,
-          transform: "scale(1)",
+          transform: 'scale(1)',
           transformOrigin: this.transformOrigin
         },
-        delay:0,
+        delay: 0,
         duration: 250,
         timingFunction: 'ease-out'
       }, (e) => {
         a1End = true;
-        if(a1End && a2End){
+        if (a1End && a2End) {
           this.animationLock = false
         }
       });
@@ -197,38 +203,39 @@ export default {
         styles: {
           opacity: 1
         },
-        delay:0,
+        delay: 0,
         duration: 250,
         timingFunction: 'ease-in'
       }, (e) => {
         a2End = true;
-        if(a1End && a2End){
+        if (a1End && a2End) {
           this.animationLock = false
         }
       });
     },
-    wxcButtonClicked(index, key) {
-      if(!!this.animationLock){
+    wxcButtonClicked (index, key) {
+      if (this.animationLock) {
         return;
       }
       this.$emit('wxcPopoverButtonClicked', { key, index });
       this.hideAction();
     },
     /**
-    * 隐藏操作
-    */
-    hideAction(){
-      if(!!this.animationLock){
+       * 隐藏操作
+       */
+    hideAction () {
+      if (this.animationLock) {
         return;
       }
-      if(this.hasAnimation){
+      if (this.hasAnimation) {
         this.setAnimationLock()
         const popoverEl = this.$refs['wxc-popover'];
         const coverEl = this.$refs['wxc-cover'];
         if (!popoverEl || !coverEl) {
           return;
         }
-        let a1End = false,a2End = false;
+        let a1End = false;
+        let a2End = false;
         animation.transition(popoverEl, {
           styles: {
             opacity: 0,
@@ -238,7 +245,7 @@ export default {
           duration: 250
         }, () => {
           a1End = true;
-          if(a1End && a2End){
+          if (a1End && a2End) {
             this.show = false;
             this.showIn = false;
             this.animationLock = false
@@ -251,21 +258,21 @@ export default {
           duration: 250
         }, () => {
           a2End = true;
-          if(a1End && a2End){
+          if (a1End && a2End) {
             this.show = false;
             this.showIn = false;
             this.animationLock = false
           }
         });
-      }else {
+      } else {
         this.show = false;
         this.showIn = false;
       }
     },
     /**
-    * 设置动画锁
-    */
-    setAnimationLock(){
+       * 设置动画锁
+       */
+    setAnimationLock () {
       this.animationLock = true;
     }
 

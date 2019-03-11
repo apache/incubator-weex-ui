@@ -75,11 +75,12 @@
       showNavHeader: {
         type: Boolean,
         default: true
-      },
+      }
     },
     data: () => ({
       tId: null,
       saveDefaultSourceData: {},
+      cityData: {},
       onlyShowList: false,
       result: {
         noGoods: {
@@ -90,6 +91,7 @@
       }
     }),
     created () {
+      this.cityData = this.sourceData
       this.saveDefaultSourceData = this.sourceData
     },
     computed: {
@@ -110,13 +112,13 @@
         }
       },
       normalList () {
-        return Util.getCities(this.sourceData.cities)
+        return Util.getCities(this.cityData.cities)
       },
       hotListConfig () {
         return {
           type: this.cityStyleType,
           title: '热门',
-          list: Util.getCities((this.sourceData.hotCity))
+          list: Util.getCities((this.cityData.hotCity))
         }
       },
       showError () {
@@ -160,17 +162,17 @@
       },
       onInput (e) {
         clearTimeout(this.tId);
-        const { cities } = this.sourceData;
+        const { cities } = this.cityData;
         const { value } = e;
         if (value !== '' && cities && cities.length > 0) {
           const queryData = Util.query(cities, String(value).trim());
-          this.sourceData = {
+          this.cityData = {
             cities: queryData,
             hotCity: []
           };
           this.onlyShowList = true;
         } else {
-          this.sourceData = this.saveDefaultSourceData;
+          this.cityData = this.saveDefaultSourceData;
           this.onlyShowList = false;
         }
         this.tId = setTimeout(() => {
