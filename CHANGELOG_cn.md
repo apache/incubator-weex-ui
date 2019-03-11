@@ -2,7 +2,7 @@
 
 ## 0.6.10
 
--[!] 修复 [wxc-popover](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popover/) 在 Web 环境报 `lines` 的错误 [issue/384](https://github.com/alibaba/weex-ui/issues/384)
+- [!] 修复 [wxc-popover](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popover/) 在 Web 环境报 `lines` 的错误 [issue/384](https://github.com/alibaba/weex-ui/issues/384)
 - [!] 修复[wxc-city](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-city/) 搜索时候 sourceData 的 warning 问题 [issue/382](https://github.com/alibaba/weex-ui/issues/390)
 - [!]修复[wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 组件 btnStyle 在有 size 设置时候不可覆盖的问题 [issue/382](https://github.com/alibaba/weex-ui/issues/390)
 - [+] 新增 Weex 和 Bindingx 官方钉钉群
