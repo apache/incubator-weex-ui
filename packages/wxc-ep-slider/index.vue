@@ -214,8 +214,8 @@
         const panOffset = this.panOffset || (this.cardS.width / 2);
         const isPullMore = (selectIndex === this.cardLength - 1 && (moveX < -68 || (moveX < -10 && duration < 200)));
 
-        if(isPullMore){
-            this.$emit('wxcEpSliderPullMore', { currentIndex: selectIndex });
+        if (isPullMore) {
+          this.$emit('wxcEpSliderPullMore', { currentIndex: selectIndex });
         }
 
         if (moveX < -panOffset || (moveX < -10 && duration < 200)) {
@@ -296,11 +296,10 @@
         if (index < 0) {
           index = index + (1 - index / total) * total;
         }
-        return index % total;
+        return parseInt(index % total);
       },
       bindExp (element) {
         if (element && element.ref) {
-
           if (this.isMoving && this.gesToken !== 0) {
             Binding.unbind({
               eventType: 'pan',
@@ -324,12 +323,11 @@
             {
               element: sliderCtn.ref,
               property: 'transform.translateX',
-              expression: sliderCtnExp,
+              expression: sliderCtnExp
             }
           ];
 
           if (this.cardS.scale !== 1) {
-
             const currentCardExp = `1-abs(x)/${this.cardS.width}*${1 - this.cardS.scale}`;
             const leftCardExp = `1-abs(x-${this.cardS.width})/${this.cardS.width}*${1 - this.cardS.scale}`;
             const rightCardExp = `1-abs(${this.cardS.width}+x)/${this.cardS.width}*${1 - this.cardS.scale}`;
@@ -341,7 +339,6 @@
             });
 
             if (index === 0 && this.$refs[`card${index + 1}_${this.sliderId}`]) {
-
               rightCard = this.$refs[`card${index + 1}_${this.sliderId}`][0];
               args.push({
                 element: rightCard.ref,
