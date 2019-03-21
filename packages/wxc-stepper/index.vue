@@ -46,6 +46,7 @@
     color: #3d3d3d;
     font-size: 30px;
     line-height: 56px;
+    height: 56px;
     width: 86px;
   }
 
