@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.6.11
+- [!] Fixed the shake when change disabled about [wxc-button](https://alibaba.github.io/weex-ui/#/packages/wxc-button/).
+- [!] Fixed the line-height bug about [wxc-stepper](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-stepper/).
+- [!] Fixed the loopedIndex bug about [wxc-ep-slider](https://alibaba.github.io/weex-ui/#/packages/wxc-ep-slider/).
+
 ## 0.6.10
 
 -[!] Fixed the `lines` bug about [wxc-popover](https://alibaba.github.io/weex-ui/#/packages/wxc-popover/) when in web.  [issue/384](https://github.com/alibaba/weex-ui/issues/384)
