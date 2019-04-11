@@ -53,7 +53,6 @@
 
 <script>
   const animation = weex.requireModule('animation');
-  const { platform } = weex.config.env;
   import WxcOverlay from '../wxc-overlay';
 
   export default {
