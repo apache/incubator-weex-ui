@@ -54,7 +54,6 @@
 <script>
   const animation = weex.requireModule('animation');
   const { platform } = weex.config.env;
-  const isWeb = typeof (window) === 'object' && platform.toLowerCase() === 'web';
   import WxcOverlay from '../wxc-overlay';
 
   export default {
