@@ -110,7 +110,7 @@ const Utils = {
         && ((parseInt(window.screen.width, 10) === 375) && (parseInt(window.screen.height, 10) === 812)
         || (parseInt(window.screen.width, 10) === 414) && (parseInt(window.screen.height, 10) === 896));
       }
-      return Utils.env.isIOS() && (deviceHeight === 2436 || deviceHeight === 2688 || deviceHeight == 1792);
+      return Utils.env.isIOS() && (deviceHeight === 2436 || deviceHeight === 2688 || deviceHeight === 1792 || deviceHeight === 1624);
     },
     isAndroid () {
       const { platform } = weex.config.env;
