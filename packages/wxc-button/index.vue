@@ -22,7 +22,7 @@
       },
       size: {
         type: String,
-        default: 'none'
+        default: 'full'
       },
       type: {
         type: String,
@@ -75,8 +75,6 @@
 
 <style scoped>
   .wxc-btn {
-    width: 702px;
-    height: 88px;
     align-items: center;
     justify-content: center;
     border-radius: 12px;
@@ -86,7 +84,6 @@
   .btn-text {
     text-overflow: ellipsis;
     lines: 1;
-    font-size: 36px;
     color: #ffffff;
   }
 </style>
