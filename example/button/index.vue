@@ -63,6 +63,7 @@
         <div class="size">
           <wxc-button text="确定"
                       type="blue"
+                      :disabled="disabled"
                       size="medium"
                       @wxcButtonClicked="wxcButtonClicked"></wxc-button>
           <wxc-button text="确定"
@@ -103,7 +104,7 @@
                slot="value"
                placeholder="文字"
                :value="text"
-               @input="text=$event.value"/>
+               @input="text=$event.value" />
       </wxc-cell>
       <wxc-cell :has-top-border="false" title="是否禁用">
         <switch :checked="disabled"
@@ -116,35 +117,35 @@
                slot="value"
                placeholder="自定义样式实现, 默认宽度702px"
                :value="width"
-               @input="width=$event.value"/>
+               @input="width=$event.value" />
       </wxc-cell>
       <wxc-cell :has-top-border="false" title="按钮高度">
         <input class="input"
                slot="value"
                placeholder="自定义样式实现, 默认高度88px"
                :value="height"
-               @input="height=$event.value"/>
+               @input="height=$event.value" />
       </wxc-cell>
       <wxc-cell :has-top-border="false" title="背景颜色">
         <input class="input"
                slot="value"
                placeholder="自定义样式实现"
                :value="backgroundColor"
-               @input="backgroundColor=$event.value"/>
+               @input="backgroundColor=$event.value" />
       </wxc-cell>
       <wxc-cell :has-top-border="false" title="边框颜色">
         <input class="input"
                slot="value"
                placeholder="自定义样式实现"
                :value="borderColor"
-               @input="borderColor=$event.value"/>
+               @input="borderColor=$event.value" />
       </wxc-cell>
       <wxc-cell :has-top-border="false" title="边框圆角">
         <input class="input"
                slot="value"
                placeholder="自定义样式实现,默认12px"
                :value="borderRadius"
-               @input="borderRadius=$event.value"/>
+               @input="borderRadius=$event.value" />
       </wxc-cell>
       <div class="demo">
         <wxc-button :text="text"
@@ -225,7 +226,14 @@
       borderColor: '#FF5000',
       borderRadius: '12px',
       fontSize: '36px',
-      color: '#FFFFFF'
+      color: '#FFFFFF',
+      btnLoginStyle: {
+        width: '620px',
+        height: '94px',
+        // fontSize: '100px',//不起作用（bug）
+        borderRadius: '94px',
+        backgroundColor: '#008D92'// 3B444D
+      }
     }),
     computed: {
       btnStyle () {

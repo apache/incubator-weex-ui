@@ -1,5 +1,10 @@
 # 升级日志
 
+## 0.6.11
+- [!] 修复 [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 动态修改 disabled 时候抖动问题
+- [!] 修复 [wxc-stepper](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-stepper/) line-height 对其问题
+- [!] 修复 [wxc-ep-slider](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) loopedIndex 取余问题
+
 ## 0.6.10
 
 - [!] 修复 [wxc-popover](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popover/) 在 Web 环境报 `lines` 的错误 [issue/384](https://github.com/alibaba/weex-ui/issues/384)
