@@ -63,7 +63,7 @@ export default {
     textPaddingLeft: 10,
     textPaddingRight: 10,
     normalBottomColor: 'rgba(0,0,0,0.4)',
-    normalBottomHeight: 1,
+    normalBottomHeight: 2,
     hasRightIcon: true,
     rightOffset: 100
   },
