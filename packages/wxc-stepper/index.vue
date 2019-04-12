@@ -160,8 +160,14 @@
         this.correctInputValue(e.value);
       },
       correctInputValue (v) {
+        const lastValue = this.value;
         if (/^[1-9]\d{0,}$/.test(v) && parseInt(v, 10) >= this.min && parseInt(v, 10) <= this.max) {
           this.value = parseInt(v, 10);
+        } else {
+          this.value = '';
+          setTimeout(() => {
+            this.value = lastValue;
+          }, 1);
         }
         this.$emit('wxcStepperValueChanged', { value: this.value });
       },
