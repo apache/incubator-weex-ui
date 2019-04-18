@@ -14,17 +14,20 @@
 
 ```vue
 <template>
-   <wxc-loading :show="isShow" type="trip"></wxc-loading>
-   <wxc-part-loading :show="isShow"></wxc-part-loading>
+    <div>
+        <wxc-loading :show="isShow" type="trip"></wxc-loading>
+        <wxc-part-loading :show="isShow"></wxc-part-loading>
+    </div>
 </template>
 <script>
     import { WxcLoading, WxcPartLoading } from 'weex-ui';
-      components: { WxcLoading, WxcPartLoading },
-      data () {
-        return {
-          isShow: true
-        };
-      }
+    export default {
+        components: { WxcLoading, WxcPartLoading },
+        data () {
+            return {
+                isShow: true
+            };
+        }
     };
 </script>
 ```
