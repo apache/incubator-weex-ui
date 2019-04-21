@@ -29,7 +29,6 @@ import WxcPanItem from './packages/wxc-pan-item';
 import WxcPartLoading from './packages/wxc-part-loading';
 import WxcPopover from './packages/wxc-popover';
 import WxcPopup from './packages/wxc-popup';
-import WxcAutoPopup from './packages/wxc-auto-popup';
 import WxcProgress from './packages/wxc-progress';
 import WxcRadio from './packages/wxc-radio';
 import WxcRefresher from './packages/wxc-refresher';
@@ -72,7 +71,6 @@ export {
   WxcPartLoading,
   WxcPopover,
   WxcPopup,
-  WxcAutoPopup,
   WxcProgress,
   WxcRadio,
   WxcRefresher,
