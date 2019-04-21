@@ -13,8 +13,6 @@
     </div>
     <div ref="wxc-popup"
          v-if="show"
-         :height="_height"
-         :hack="isNeedShow"
          @click="()=>{}"
          :class="['wxc-popup', pos]"
          :style="padStyle">
@@ -26,17 +24,18 @@
 <style scoped>
   .wxc-popup {
     position: fixed;
-    width: 750px;
   }
 
   .top {
     left: 0;
     right: 0;
+     width: 750px;
   }
 
   .bottom {
     left: 0;
     right: 0;
+     width: 750px;
   }
 
   .left {
@@ -53,6 +52,7 @@
 
 <script>
   const animation = weex.requireModule('animation');
+  const dom = weex.requireModule('dom');
   const { platform } = weex.config.env;
   const isWeb = typeof (window) === 'object' && platform.toLowerCase() === 'web';
   import WxcOverlay from '../wxc-overlay';
@@ -81,17 +81,9 @@
           opacity: 0.6
         })
       },
-      height: {
-        type: [Number, String],
-        default: 840
-      },
       standOut: {
         type: [Number, String],
         default: 0
-      },
-      width: {
-        type: [Number, String],
-        default: 750
       },
       animation: {
         type: Object,
@@ -102,61 +94,90 @@
     },
     data: () => ({
       haveOverlay: true,
-      isOverShow: true
+      isOverShow: true,
+      initFlag: false,
+      height: 0,
+      width: 0,
+      inAnimation: false
     }),
+    watch: {
+      show: {
+        immediate: true,
+        handler: function (val) {
+          if (this.inAnimation) { return }
+          if (!this.initFlag && !val) { return }
+          if (val && !this.initFlag) {
+            setTimeout(() => {
+              dom.getComponentRect(this.$refs['wxc-popup'], (option) => {
+                if (option.result) {
+                  if (this.pos === 'top' || this.pos === 'bottom') {
+                    this.height = option.size.height;
+                  } else {
+                    this.width = option.size.width;
+                  }
+                  setTimeout(() => {
+                    this.appearPopup(val);
+                    this.initFlag = true;
+                  }, 30);
+                }
+              });
+            }, 30)
+          } else {
+            setTimeout(() => {
+              this.appearPopup(val);
+            }, 30);
+          }
+        }
+      }
+    },
     computed: {
-      isNeedShow() {
-        setTimeout(() => {
-          this.appearPopup(this.show);
-        }, 50);
-        return this.show;
-      },
-      _height() {
-        this.appearPopup(this.show, 150);
-        return this.height;
-      },
-      padStyle() {
-        const { pos, width, height, popupColor, standOut } = this;
+      padStyle () {
+        const { pos, width, height, popupColor, standOut, initFlag } = this;
         const stand = parseInt(standOut, 10);
         let style = {
-          width: `${width}px`,
           backgroundColor: popupColor
         };
         pos === 'top' && (style = {
           ...style,
           top: `${-height + stand}px`,
-          height: `${height}px`
+          opacity: initFlag
         });
         pos === 'bottom' && (style = {
           ...style,
           bottom: `${-height + stand}px`,
-          height: `${height}px`
+          opacity: initFlag
         });
         pos === 'left' && (style = {
           ...style,
-          left: `${-width + stand}px`
+          left: `${-width + stand}px`,
+          opacity: initFlag
         });
         pos === 'right' && (style = {
           ...style,
-          right: `${-width + stand}px`
+          right: `${-width + stand}px`,
+          opacity: initFlag
         });
         return style;
       }
     },
     methods: {
-      handleTouchEnd(e) {
+      changeSize () {
+        this.initFlag = false;
+      },
+      handleTouchEnd (e) {
         // 在支付宝上面有点击穿透问题
         const { platform } = weex.config.env;
         platform === 'Web' && e.preventDefault && e.preventDefault();
       },
-      hide() {
+      hide () {
         this.appearPopup(false);
         this.$refs.overlay.appearOverlay(false);
       },
-      wxcOverlayBodyClicking() {
+      wxcOverlayBodyClicking () {
         this.isShow && this.appearPopup(false);
       },
-      appearPopup(bool, duration = 300) {
+      appearPopup (bool, duration = 300) {
+        this.inAnimation = true
         this.isShow = bool;
         const popupEl = this.$refs['wxc-popup'];
         if (!popupEl) {
@@ -172,10 +193,13 @@
         }, () => {
           if (!bool) {
             this.$emit('wxcPopupOverlayClicked', { pos: this.pos });
+            setTimeout(() => {
+              this.inAnimation = false
+            }, 30)
           }
         });
       },
-      getTransform(pos, width, height, bool) {
+      getTransform (pos, width, height, bool) {
         let _size = pos === 'top' || pos === 'bottom' ? height : width;
         bool && (_size = 0);
         let _transform;

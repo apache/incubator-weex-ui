@@ -34,27 +34,34 @@
       <wxc-popup :show="isTopShow"
                  pos="top"
                  :animation="{timingFunction:'ease-out'}"
-                 @wxcPopupOverlayClicked="popupOverlayTopClick"></wxc-popup>
+                 @wxcPopupOverlayClicked="popupOverlayTopClick">
+                 <div class="demo-top"></div>
+                 </wxc-popup>
 
       <wxc-popup :have-overlay="isTrue"
                  popup-color="rgb(92, 184, 92)"
                  :show="isBottomShow"
                  @wxcPopupOverlayClicked="popupOverlayBottomClick"
-                 pos="bottom"
-                 height="400">
+                 pos="bottom">
         <div class="demo-content">
           <image src="https://img.alicdn.com/tfs/TB1ojYvOXXXXXaOXFXXXXXXXXXX-180-41.png"
                  class="demo-image"></image>
-          <text>与 Web App、HTML5 App 或 hybrid App 不同，您可以使用 Weex 构建一个真正的原生应用。更贴心的是你的代码只需使用 HTML、CSS、JavaScript 可以构建原生应用，上手非常简单。</text>
+          <text>与 Web App、HTML5 App 或 hybrid App 不同，您可以使用 Weex 构建一个真正的原生应用。更贴心的是你的代码只需使用 HTML、CSS、JavaScript 可以构建原生应用，上手非常简单。这是增加的文字，好多好多的文字，真的很多！！！</text>
         </div>
       </wxc-popup>
 
-      <wxc-popup width="500"
-                 :show="isLeftShow"
-                 @wxcPopupOverlayClicked="popupOverlayLeftClick"
-                 pos="left"></wxc-popup>
+      <wxc-popup
+          :show="isLeftShow"
+          @wxcPopupOverlayClicked="popupOverlayLeftClick"
+          pos="left">
+              <div class="demo-left">
+                <image src="https://img.alicdn.com/tfs/TB1ojYvOXXXXXaOXFXXXXXXXXXX-180-41.png"
+                 class="demo-image"></image>
+                <text>与 Web App、HTML5 App 或 hybrid App 不同，您可以使用 Weex 构建一个真正的原生应用。更贴心的是你的代码只需使用 HTML、CSS、JavaScript 可以构建原生应用，上手非常简单。这是增加的文字，好多好多的文字，真的很多！！！</text>
+              </div>
+              </wxc-popup>
 
-      <wxc-popup width="400"
+      <wxc-popup
                  :show="isRightShow"
                  pos="right"
                  ref="wxcPopup"
@@ -68,8 +75,13 @@
 
       <wxc-popup :height="height"
                  :show="isAutoShow"
+                 ref="popupChange"
                  pos="bottom"
-                 @wxcPopupOverlayClicked="popupOverlayAutoClick"></wxc-popup>
+                 @wxcPopupOverlayClicked="popupOverlayAutoClick">
+            <div class="change">
+                 <text>{{'与 Web App、HTML5 App 或 hybrid App 不同，您可以使用 Weex 构建一个真正的原生应用。更贴心的是你的代码只需使用 HTML、CSS、JavaScript 可以构建原生应用，上手非常简单。' + (change? '这是增加的文字，好多好多的文字，真的很多！！！这是增加的文字，好多好多的文字，真的很多！！！' : '')}}</text>
+                </div>
+                 </wxc-popup>
     </scroller>
   </div>
 </template>
@@ -104,7 +116,6 @@
   .hide-auto {
     width: 300px;
     margin-left: 50px;
-    position: absolute;
     bottom: 2px;
   }
 
@@ -137,6 +148,14 @@
     margin-top: 40px;
   }
 
+  .demo-top{
+    height: 400px;
+  }
+
+  .demo-left{
+    width: 440px;
+  }
+
   .demo-content {
     padding-right: 40px;
     padding-left: 40px;
@@ -147,6 +166,10 @@
     height: 41px;
     margin-bottom: 40px;
     margin-top: 40px;
+  }
+
+  .change{
+    padding: 20px;
   }
 
 </style>
@@ -166,7 +189,7 @@
       isRightShow: false,
       isAutoShow: false,
       isTrue: true,
-      height: 400
+      change: false
     }),
     created () {
       setTitle('Popup');
@@ -202,8 +225,8 @@
       },
 
       openAutoPopup () {
-        const height = this.height;
-        this.height = height === 400 ? 800 : 400;
+        this.change = !this.change;
+        this.$refs['popupChange'].changeSize();
         this.isAutoShow = true;
       },
       onHideClick () {
