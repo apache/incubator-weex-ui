@@ -19,7 +19,7 @@
     <wxc-rich-text :config-list="configList"
                    @wxcRichTextLinkClick="wxcRichTextLinkClick"></wxc-rich-text>
      <div class="special-rich">
-       <wxc-special-rich-text :config-list="specialConfigList"></wxc-special-rich-text>
+       <wxc-special-rich-text @wxcSpecialRichTextClick="wxcSpecialRichTextClick" :config-list="specialConfigList"></wxc-special-rich-text>
      </div>
   </div>
   
@@ -76,6 +76,9 @@
             borderColor: '#FFC900',
             backgroundColor: '#FFC900',
             borderRadius: 14,
+          },
+          tagDivStyle: {
+            left: '50px'
           }
         },
         {
@@ -89,7 +92,8 @@
       ],
     }),
     methods: {
-      wxcRichTextLinkClick () {}
+      wxcRichTextLinkClick () {},
+      wxcSpecialRichTextClick () {}
     }
   };
 </script>
@@ -110,6 +114,7 @@
 
 ```
 @wxcRichTextLinkClick="wxcRichTextLinkClick"
+@wxcSpecialRichTextClick="wxcSpecialRichTextClick"
 ```
 
 
