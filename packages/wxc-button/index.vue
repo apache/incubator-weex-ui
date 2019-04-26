@@ -81,6 +81,10 @@
     opacity: 1;
   }
 
+  .wxc-btn:active {
+    opacity: .8;
+  }
+
   .btn-text {
     text-overflow: ellipsis;
     lines: 1;
