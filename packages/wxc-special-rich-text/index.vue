@@ -3,9 +3,9 @@
 <!-- just hack for babel-plugin-component !!!-->
 
 <template>
-  <div class="wxc-special-rich-text">
+  <div class="wxc-special-rich-text" @click="$emit('wxcSpecialRichTextClick')">
     <div class="tag-div"
-         :style="{top:top+'px'}">
+         :style="Object.assign({top:top+'px'}, newList[0].tagDivStyle)">
       <image class="wxc-image"
              v-if="newList[0] && newList[0].type === 'icon' && newList[0].src"
              :src="newList[0].src"
