@@ -44,19 +44,19 @@
         type: Number,
         default: 0
       },
-      bgdColor: {
+      backgroundColor: {
         type: String,
         default: '#f2f3f4'
       }
     },
     computed: {
       runWayStyle () {
-        const { barWidth, barHeight, barRadius, bgdColor } = this;
+        const { barWidth, barHeight, barRadius, backgroundColor } = this;
         return {
           width: barWidth + 'px',
           height: barHeight + 'px',
           borderRadius: barRadius + 'px',
-          backgroundColor: bgdColor
+          backgroundColor
         }
       },
       progressStyle () {
