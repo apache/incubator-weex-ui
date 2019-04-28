@@ -84,5 +84,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 |-------------|------------|--------|-----|-----|
 | value | `Number` |`Y`| `0` | percent `(0-100)` |
 | bar-height | `Number` |`N`| `8` | progress bar height |
+| bar-color | `String` |`N`| `#FFC900` | progress bar color |
 | bar-width | `Number` |`N`| `600` | progress bar width |
 | bar-radius | `number` |`n`| `0` | progress bar radius |
+| background-color | `String` |`N`| `#f2f3f4` | overall background color |
