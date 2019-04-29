@@ -1,3 +1,7 @@
+<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!-- Created by wjun94 on 19/04/29. -->
+<!--nested scrolling.-->
+
 <template>
   <scroller ref="wxcNestedListDom"
       @loadmore="onLoadmore" 
@@ -13,7 +17,7 @@
       shouldStopPropagationInitResult="false" 
       shouldStopPropagationInterval="1000000" 
       @stoppropagation="Env.platform === 'iOS' ? false : true" 
-      show-scrollbar=false 
+      :show-scrollbar="isShowScrollbar"
       :scrollable="true" >
     <slot></slot>
   </scroller>
@@ -35,6 +39,10 @@ export default {
       default: false
     },
     isPagingEnabled: {
+      type: Boolean,
+      default: false
+    },
+    isShowScrollbar: {
       type: Boolean,
       default: false
     }

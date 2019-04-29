@@ -1,14 +1,3 @@
-# wxc-nested-list
-
-## 效果
-
-<img src="http://cdn.emas-poc.com/material/weex/4dml3-hnzk7.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://cdn.emas-poc.com/material/weex/weex-ui-z-1.jpg" width="160"/>
-
-## 使用方法
-
-!> 建议weex_sdk更新到0.20+。
-
-```vue
 <template>
   <list>
     <header>
@@ -37,7 +26,7 @@
 </template>
 
 <script>
-import { WxcNestedList } from 'weex-ui'
+import { WxcNestedList } from '../../index';
 const modal = weex.requireModule("modal");
 
 export default {
@@ -90,27 +79,3 @@ export default {
   color: #41b883;
 }
 </style>
-```
-
-更详细代码可以参考 [这里](https://github.com/alibaba/weex-ui/blob/master/example/nested-list/index.vue)
-
-### 可配置参数
-| Prop | Type | Required | Default | Description |
-| ---- |:----:|:---:|:-------:| :----------:|
-| **`styles`** | `Object` | `N` | `-` | 设置样式 |
-| **`isLevel`** | `Boolean` | `N` | `false` | 是否水平滑动 |
-| **`isResetLoadMore`** | `Boolean` | `N` | `false` | 是否强制刷新 |
-| **`isPagingEnabled`** | `Boolean` | `N` | `false` | 是否按分页模式 |
-
-### 事件回调
-
-```
-// 滚动到底部触发	@onLoadmore='onLoadmore'
-// 单击	@onListClick='onListClick'
-// 将在触摸到触摸面上时触发	@onTouchstart='onTouchstart'
-返回e
-// 将在触摸点在触摸面移动时被触发	@onTouchmove='onTouchmove'
-返回e
-// 将在从触摸面离开时被触发	@onTouchend='onTouchend'
-返回e
-```
