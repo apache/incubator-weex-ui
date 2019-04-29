@@ -8,6 +8,7 @@
             mask-bg-color="transparent"
             overlay-opacity="0.8"
             :show="show"
+            :opacity='opacity'
             :show-close="false"
             @wxcMaskSetHidden="maskOverlayClick">
     <slider auto-play="false"
@@ -75,7 +76,11 @@
       interval:{
         type: [Number, String],
         default: 3000
-      }
+      },
+      opacity: {
+        type: [Number, String],
+        default: 0.6
+      },
     },
     computed: {
       indicatorStyle () {

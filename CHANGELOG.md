@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.6.12
+- [!] Fixed set transparency issues [wxc-lightbox](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-lightbox/).
+- [!] Fixed set transparency issues [wxc-mask](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-mask/).
+- [!] Fixed cannot click, the component cannot modify the internal style [wxc-special-rich-text](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-rich-text/).
+- [!] Fixed click no highlighting question [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/).
+
 ## 0.6.11
 - [!] Fixed the shake when change disabled about [wxc-button](https://alibaba.github.io/weex-ui/#/packages/wxc-button/).
 - [!] Fixed the line-height bug about [wxc-stepper](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-stepper/).
