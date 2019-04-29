@@ -85,7 +85,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | duration | `String` |`N`| `300` |  animation duration time |
 | timing-function | `String` |`N`| `ease-in` |  animation timing function |
 | overlay-cfg | `Object` |`N`| `{}` | [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md) configs |
-
+| opacity | `Number` |`N`| `0.6` | set background transparency |
 
 ### Event
 

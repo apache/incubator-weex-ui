@@ -87,6 +87,7 @@
 | duration | `String` |`N`| `300` |  弹层出现时间 |
 | timing-function | `String` |`N`| `ease-in` |  弹层出现动画方式 |
 | overlay-cfg | `Object` |`N`| `{}` |  蒙层配置参数 [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md) |
+| opacity | `Number` |`N`| `0.6` | 设置背景透明度 |
 
 
 ### 事件回调
