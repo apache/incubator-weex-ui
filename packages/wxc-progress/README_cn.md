@@ -87,3 +87,4 @@
 | bar-width | `Number` |`N`| `600` | 长度 |
 | bar-color | `String` |`N`| `#FFC900` | 颜色 |
 | bar-radius | `Number` |`N`| `0` | 圆角 |
+| background-color | `String` |`N`| `#f2f3f4` | 整体背景色 |
