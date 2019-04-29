@@ -1,5 +1,11 @@
 # 升级日志
 
+## 0.6.12
+- [!] 修复 [wxc-lightbox](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-lightbox/) 设置透明度问题
+- [!] 修复 [wxc-mask](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-mask/) 设置透明度问题
+- [!] 修复 [wxc-special-rich-text](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-rich-text/) 不能单击，组件不能修改内部样式的问题
+- [!] 修复 [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 单击没有高亮显示问题
+
 ## 0.6.11
 - [!] 修复 [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 动态修改 disabled 时候抖动问题
 - [!] 修复 [wxc-stepper](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-stepper/) line-height 对其问题
