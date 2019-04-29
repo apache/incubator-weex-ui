@@ -19,12 +19,14 @@
 
 <style scoped>
   .radio {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
   }
 
   .title-text {
     font-size: 30px;
+    height: 40px;
+    line-height: 40px;
   }
 </style>
 
