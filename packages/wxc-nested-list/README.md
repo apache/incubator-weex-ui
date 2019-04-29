@@ -101,6 +101,7 @@ more detailed code can refer to [here](https://github.com/alibaba/weex-ui/blob/m
 | **`isLevel`** | `Boolean` | `N` | `false` | whether to slide horizontally |
 | **`isResetLoadMore`** | `Boolean` | `N` | `false` | whether to force a refresh |
 | **`isPagingEnabled`** | `Boolean` | `N` | `false` | whether to press the pagination mode |
+| **`isShowScrollbar`** | `Boolean` | `N` | `false` | whether to display the scroll bar |
 
 ### Event
 

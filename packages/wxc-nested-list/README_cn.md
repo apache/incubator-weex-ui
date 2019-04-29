@@ -101,6 +101,7 @@ export default {
 | **`isLevel`** | `Boolean` | `N` | `false` | 是否水平滑动 |
 | **`isResetLoadMore`** | `Boolean` | `N` | `false` | 是否强制刷新 |
 | **`isPagingEnabled`** | `Boolean` | `N` | `false` | 是否按分页模式 |
+| **`isShowScrollbar`** | `Boolean` | `N` | `false` | 是否显示滚动条 |
 
 ### 事件回调
 
