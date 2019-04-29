@@ -71,6 +71,7 @@
 | indicator-color | `Object` |`N`| `{}` |索引样式配置（注 1）|
 | index | `Number` |`N`| `0` | 当前初始打开选择哪一页 |
 | interval | `Number` |`N`| `3000` | 设置自动播放时候的间隔时间 |
+| opacity | `Number` |`N`| `0.6` |  设置透明度 |
 
 注 1 中样式：
 ```

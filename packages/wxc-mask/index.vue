@@ -9,6 +9,7 @@
                  v-if="show"
                  v-bind="mergeOverlayCfg"
                  :can-auto-close="overlayCanClose"
+                 :opacity='opacity'
                  @wxcOverlayBodyClicking="wxcOverlayBodyClicking"
                  @wxcOverlayBodyClicked="wxcOverlayBodyClicked"></wxc-overlay>
     <div ref="wxc-mask"
@@ -125,7 +126,11 @@
       maskBgColor: {
         type: String,
         default: '#ffffff'
-      }
+      },
+      opacity: {
+        type: [Number, String],
+        default: 0.6
+      },
     },
     data: () => ({
       closeIcon: 'https://gw.alicdn.com/tfs/TB1qDJUpwMPMeJjy1XdXXasrXXa-64-64.png',
