@@ -2,7 +2,7 @@
 <!-- Created by Tw93 on 17/07/28. -->
 
 <template>
-  <div class="wxc-btn"
+  <div :class="['wxc-btn', isHighlight && !disabled && 'wxc-btn-highlight']"
        :style="mrBtnStyle"
        @click="onClicked"
        :accessible="true"
@@ -29,6 +29,10 @@
         default: 'red'
       },
       disabled: {
+        type: Boolean,
+        default: false
+      },
+      isHighlight: {
         type: Boolean,
         default: false
       },
@@ -81,7 +85,7 @@
     opacity: 1;
   }
 
-  .wxc-btn:active {
+  .wxc-btn-highlight:active {
     opacity: .8;
   }
 
