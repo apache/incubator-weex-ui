@@ -13,17 +13,17 @@
 ```vue
 <template>
 <div>
-    <WxcSkid @onNodeClick='onTest' :data='data'/>
+    <WxcSwipeAction @onNodeClick='onTest' :data='data'/>
 </div>
 </template>
 
 <script>
-import { WxcSkid } from 'weex-ui';
+import { WxcSwipeAction } from 'weex-ui';
 const modal = weex.requireModule("modal");
 
 export default {
   components: {
-    WxcSkid
+    WxcSwipeAction
   },
   data() {
     return {

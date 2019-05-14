@@ -36,11 +36,11 @@ import WxcResult from './packages/wxc-result';
 import WxcRichText from './packages/wxc-rich-text';
 import WxcSearchbar from './packages/wxc-searchbar';
 import WxcSimpleFlow from './packages/wxc-simple-flow';
-import WxcSkid from './packages/wxc-skid';
 import WxcSlideNav from './packages/wxc-slide-nav';
 import WxcSliderBar from './packages/wxc-slider-bar';
 import WxcSpecialRichText from './packages/wxc-special-rich-text';
 import WxcStepper from './packages/wxc-stepper';
+import WxcSwipeAction from './packages/wxc-swipe-action';
 import WxcTabBar from './packages/wxc-tab-bar';
 import WxcTabPage from './packages/wxc-tab-page';
 import WxcTag from './packages/wxc-tag';
@@ -79,11 +79,11 @@ export {
   WxcRichText,
   WxcSearchbar,
   WxcSimpleFlow,
-  WxcSkid,
   WxcSlideNav,
   WxcSliderBar,
   WxcSpecialRichText,
   WxcStepper,
+  WxcSwipeAction,
   WxcTabBar,
   WxcTabPage,
   WxcTag
