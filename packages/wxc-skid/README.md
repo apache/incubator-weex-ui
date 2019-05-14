@@ -6,6 +6,9 @@
 - Only one row can be swiped at a time
 - Hide operations by clicking on the right button or by clicking on the list.
 
+## [Demo]
+<img src="http://cdn.emas-poc.com/material/weex/3ofe2-af5lt1.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;
+
 ## Code Example
 ```vue
 <template>
@@ -100,7 +103,7 @@ export default {
 |-------------|------------|--------|-----|-----|
 |data|Array|Y|[]|list|
 
-### API
+### Data API
 |Prop|Description|Type|Default|
 |-------------|------------|--------|-----|
 |title|content|String|null|
