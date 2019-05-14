@@ -1,7 +1,7 @@
 # 升级日志
 
 ## 0.6.13
-- [+] 添加wxc-skid侧滑组件
+- [+] 添加wxc-swipe-action侧滑组件
 - [!] 修复[wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 设置display样式问题，添加isHighlight属性控制button是否高亮显示
 
 ## 0.6.12

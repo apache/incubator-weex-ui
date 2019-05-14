@@ -1,7 +1,7 @@
 # Change Log
 
 ## 0.6.13
-- [+] add wxc-skid
+- [+] add wxc-swipe-action
 - [!] [!] Fix [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) displaying style problem, add isHighlight attribute to control whether button is highlighted or not.
 
 ## 0.6.12
