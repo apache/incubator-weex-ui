@@ -1,19 +1,31 @@
 <template>
 <div>
+  <scroller class="wxc-demo">
+    <title title="wxc-swipe-action"></title>
+    <category title="使用案例"></category>
     <WxcSwipeAction @onNodeClick='onTest' :data='data'/>
+  </scroller>
 </div>
 </template>
 
 <script>
-import WxcSwipeAction from '../../index';
+import { WxcSwipeAction } from "../../index";
 const modal = weex.requireModule("modal");
+import Title from "../_mods/title.vue";
+import Category from "../_mods/category.vue";
+import { setTitle } from '../_mods/set-nav';
 
 export default {
+  components: {
+    Title,
+    Category,
+    WxcSwipeAction
+  },
   data() {
     return {
       data: [
         {
-          title: "标题1",
+          title: "点击右边按钮隐藏",
           autoClose: true,
           right: [
             {
@@ -38,22 +50,7 @@ export default {
           ]
         },
         {
-          title: "标题23",
-          right: [
-            {
-              text: "删除",
-              onPress: () => {
-                modal.toast({
-                  message: "删除",
-                  duration: 0.3
-                });
-              },
-              style: { backgroundColor: "#F4333C", color: "white" }
-            }
-          ]
-        },
-        {
-          title: "标题3",
+          title: "默认效果",
           right: [
             {
               text: "删除",
@@ -70,8 +67,8 @@ export default {
       ]
     };
   },
-  components: {
-    WxcSwipeAction
+  created() {
+    setTitle("SwipeAction");
   },
   methods: {
     onTest(node, i) {
