@@ -6,6 +6,9 @@
 - 一次只可滑动一行列表
 - 点击右边按钮或点击列表可隐藏操作。
 
+## [Demo]
+<img src="http://cdn.emas-poc.com/material/weex/3ofe2-af5lt1.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;
+
 ## 使用方法
 ```vue
 <template>
@@ -100,7 +103,7 @@ export default {
 |-------------|------------|--------|-----|-----|
 |data|Array|Y|[]|列表数据|
 
-### API
+### Data API
 |属性|说明|类型|默认值|
 |-------------|------------|--------|-----|
 |title|标题|String|null|
