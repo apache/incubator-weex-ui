@@ -1,99 +1,13 @@
 <template>
 <div class="container">
-  <div ref="skid" v-for="(item, i) of data" :key="'skid-' + i" class="wxc-skid" @touchstart="(e) => onPanStart(e, item, i)">
-    <text @click="onNodeClick(item, i)" class="box-center border">{{item.title}}</text>
+  <div ref="skid" v-for="(item, i) of data" @click="onNodeClick(item, i)" :key="'skid-' + i" class="wxc-skid" @touchstart="(e) => onPanStart(e, item, i)" @touchend="(e) => onPanEnd(e, item, i)">
+    <text :class="['box-center', 'border', i + 1 === data.length && 'box-center-last']">{{item.title}}</text>
     <div class="box-right">
       <text class="child" @click="child.onPress" v-for="(child, childIdx) of item.right" :style="child.style || {}" :key="'child-' + childIdx">{{child.text}}</text>
     </div>
   </div>
 </div>
 </template>
-
-<script>
-import Binding from "weex-bindingx/lib/index.weex.js";
-const animation = weex.requireModule("animation");
-var modal = weex.requireModule("modal");
-
-export default {
-  props: {
-    data: {
-      type: Array,
-      default: []
-    },
-  },
-  data() {
-    return {
-      x: 0,
-      saveIdx: null
-      // y: 0
-    };
-  },
-  created() {},
-  methods: {
-    special(dom, styles) {
-      animation.transition(dom, {
-        styles,
-        duration: 200, //ms
-        timingFunction: "ease",
-        delay: 100 //ms
-      });
-    },
-    onNodeClick(node) {
-      if (this.x < 0) {
-        this.x = 0;
-        this.special(this.$refs.skid[this.saveIdx], {
-          transform: `translate(0, 0)`
-        });
-      } else {
-        this.$emit('onNodeClick', node)
-      }
-    },
-    onPanStart: function(e, node, i) {
-      var el = this.$refs.skid[i];
-      const len = node.right.length;
-      const { saveIdx } = this;
-      if (saveIdx !== i) {
-        this.special(this.$refs.skid[saveIdx], {
-          transform: `translate(0, 0)`
-        });
-        this.x = 0;
-      }
-      this.saveIdx = i;
-      Binding.bind(
-        {
-          anchor: el.ref,
-          eventType: "pan",
-          props: [
-            {
-              element: el.ref,
-              property: "transform.translateX",
-              expression: `x+${this.x}`
-            }
-          ]
-        },
-        e => {
-          const { state, deltaX } = e;
-          if (state === "end") {
-            this.x += deltaX;
-            const distance = -100 * len;
-            if (this.x < distance / 2) {
-              this.special(el, {
-                transform: `translate(${distance}px, 0)`
-              });
-              this.x = distance;
-            } else {
-              this.special(el, {
-                transform: `translate(0, 0)`
-              });
-              this.x = 0;
-            }
-          }
-        }
-      );
-    }
-  }
-};
-</script>
 
 <style>
 .container {
@@ -105,8 +19,7 @@ export default {
 }
 .wxc-skid {
   flex-direction: row;
-  padding-left: 15px;
-  width: 750px;
+  width: 950px;
   height: 90px;
   background-color: white;
 }
@@ -116,10 +29,20 @@ export default {
   line-height: 90px;
 }
 .box-center {
-  width: 750px;
+  width: 735px;
   line-height: 90px;
   background-color: white;
+  margin-left: 15px !important;
+  margin-left: 15px;
 }
+.box-center-last {
+  width: 750px;
+  margin-left: 0 !important;
+  padding-left: 15px !important;
+  margin-left: 0;
+  padding-left: 15px;
+}
+
 .child {
   width: 100px;
   text-align: center;
@@ -128,3 +51,106 @@ export default {
   line-height: 90px;
 }
 </style>
+
+<script>
+import Binding from "weex-bindingx/lib/index.weex.js";
+const animation = weex.requireModule("animation");
+import Utils from "../utils";
+var modal = weex.requireModule("modal");
+
+export default {
+  props: {
+    data: {
+      type: Array,
+      default: []
+    }
+  },
+  data() {
+    return {
+      mobileX: 0,
+      webStarX: 0,
+      saveIdx: null
+    };
+  },
+  methods: {
+    special(dom, styles) {
+      animation.transition(dom, {
+        styles,
+        duration: 200, //ms
+        timingFunction: "ease",
+        delay: 100 //ms
+      });
+    },
+    onNodeClick(node) {
+      if (this.mobileX < 0) {
+        this.mobileX = 0;
+        this.special(this.$refs.skid[this.saveIdx], {
+          transform: `translate(0, 0)`
+        });
+      } else {
+        this.$emit("onNodeClick", node);
+      }
+    },
+
+    onPanEnd(e, node, i) {
+      if (Utils.env.isWeb()) {
+        const webEndX = e.changedTouches[0].pageX;
+        this.movingDistance(webEndX - this.webStarX, node, this.$refs.skid[i])
+      }
+    },
+    onPanStart: function(e, node, i) {
+      const { saveIdx } = this;
+      if (saveIdx !== i && saveIdx !== null) {
+        this.special(this.$refs.skid[saveIdx], {
+          transform: `translate(0, 0)`
+        });
+        this.mobileX = 0;
+      }
+      this.saveIdx = i;
+      !Utils.env.isWeb() ? this.mobile(e, node, i) : this.web(e, node, i);
+      e.stopPropagation();
+    },
+    web(e, node, i) {
+      this.webStarX = e.changedTouches[0].pageX;
+    },
+    mobile(e, node, i) {
+      var el = this.$refs["skid"][i];
+      Binding.bind(
+        {
+          anchor: el.ref,
+          eventType: "pan",
+          props: [
+            {
+              element: el.ref,
+              property: "transform.translateX",
+              expression: `x+${this.mobileX}`
+            }
+          ]
+        },
+        e => {
+          const { state, deltaX } = e;
+          if (state === "end") {
+            this.mobileX += deltaX;
+            this.movingDistance(this.mobileX, node, el)
+          }
+        }
+      );
+    },
+    movingDistance(scope, node, el) {
+      const len = node.right ? node.right.length : 0;
+      const distance = len * -100;
+      if (scope < -30) {
+        this.special(el, {
+          transform: `translate(${distance}px, 0)`
+        });
+        this.mobileX = distance;
+      } else {
+        this.special(el, {
+          transform: `translate(0, 0)`
+        });
+        this.mobileX = 0;
+      }
+    }
+  }
+};
+</script>
