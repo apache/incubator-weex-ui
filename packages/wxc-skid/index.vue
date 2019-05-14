@@ -1,9 +1,9 @@
 <template>
 <div class="container">
-  <div ref="skid" v-for="(item, i) of data" @click="onNodeClick(item, i)" :key="'skid-' + i" class="wxc-skid" @touchstart="(e) => onPanStart(e, item, i)" @touchend="(e) => onPanEnd(e, item, i)">
-    <text :class="['box-center', 'border', i + 1 === data.length && 'box-center-last']">{{item.title}}</text>
+  <div ref="skid" v-for="(item, i) of data" @click="onNodeClick(item, i)" :key="'skid-' + i" class="wxc-skid" :style="{width: (750 + item.right.length * 100) + 'px'}" @touchstart="(e) => !isAndroid && onPanStart(e, item, i)" @horizontalpan="(e) => isAndroid && onPanStart(e, item, i)" @touchend="(e) => onPanEnd(e, item, i)">
+    <text :class="['box-center', 'border', 'text', i + 1 === data.length && 'box-center-last']">{{item.title}}</text>
     <div class="box-right">
-      <text class="child" @click="child.onPress" v-for="(child, childIdx) of item.right" :style="child.style || {}" :key="'child-' + childIdx">{{child.text}}</text>
+      <text class="child text" @click="onRightNode(child, i)" v-for="(child, childIdx) of item.right" :style="child.style || {}" :key="'child-' + childIdx">{{child.text}}</text>
     </div>
   </div>
 </div>
@@ -19,7 +19,6 @@
 }
 .wxc-skid {
   flex-direction: row;
-  width: 950px;
   height: 90px;
   background-color: white;
 }
@@ -50,13 +49,15 @@
   background-color: #ddd;
   line-height: 90px;
 }
+.text {
+  font-size: 30px;
+}
 </style>
 
 <script>
 import Binding from "weex-bindingx/lib/index.weex.js";
 const animation = weex.requireModule("animation");
 import Utils from "../utils";
-var modal = weex.requireModule("modal");
 
 export default {
   props: {
@@ -69,7 +70,8 @@ export default {
     return {
       mobileX: 0,
       webStarX: 0,
-      saveIdx: null
+      saveIdx: null,
+      isAndroid: Utils.env.isAndroid()
     };
   },
   methods: {
@@ -81,21 +83,31 @@ export default {
         delay: 100 //ms
       });
     },
-    onNodeClick(node) {
+    onRightNode(node, i) {
+      node.onPress();
+      this.special(this.$refs.skid[i], {
+        transform: `translate(0, 0)`
+      });
+    },
+    onNodeClick(node, i) {
       if (this.mobileX < 0) {
         this.mobileX = 0;
         this.special(this.$refs.skid[this.saveIdx], {
           transform: `translate(0, 0)`
         });
+        this.isAndroid &&
+          this.special(this.$refs.skid[i], {
+            transform: `translate(0, 0)`
+          });
       } else {
-        this.$emit("onNodeClick", node);
+        this.$emit("onNodeClick", node, i);
       }
     },
 
     onPanEnd(e, node, i) {
       if (Utils.env.isWeb()) {
         const webEndX = e.changedTouches[0].pageX;
-        this.movingDistance(webEndX - this.webStarX, node, this.$refs.skid[i])
+        this.movingDistance(webEndX - this.webStarX, node, this.$refs.skid[i]);
       }
     },
     onPanStart: function(e, node, i) {
@@ -123,7 +135,7 @@ export default {
             {
               element: el.ref,
               property: "transform.translateX",
-              expression: `x+${this.mobileX}`
+              expression: `x+${this.isAndroid ? 0 : this.mobileX}`
             }
           ]
         },
@@ -131,7 +143,7 @@ export default {
           const { state, deltaX } = e;
           if (state === "end") {
             this.mobileX += deltaX;
-            this.movingDistance(this.mobileX, node, el)
+            this.movingDistance(this.mobileX, node, el);
           }
         }
       );
