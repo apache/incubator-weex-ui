@@ -1,9 +1,12 @@
+<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!-- Created by wjun94 on 19/05/14. -->
+
 <template>
 <div class="container">
   <div ref="skid" v-for="(item, i) of data" @click="onNodeClick(item, i)" :key="'skid-' + i" class="wxc-skid" :style="{width: (750 + item.right.length * 100) + 'px'}" @touchstart="(e) => !isAndroid && onPanStart(e, item, i)" @horizontalpan="(e) => isAndroid && onPanStart(e, item, i)" @touchend="(e) => onPanEnd(e, item, i)">
     <text :class="['box-center', 'border', 'text', i + 1 === data.length && 'box-center-last']">{{item.title}}</text>
     <div class="box-right">
-      <text class="child text" @click="onRightNode(child, i)" v-for="(child, childIdx) of item.right" :style="child.style || {}" :key="'child-' + childIdx">{{child.text}}</text>
+      <text class="child text" @click="onRightNode(item, child, i)" v-for="(child, childIdx) of item.right" :style="child.style || {}" :key="'child-' + childIdx">{{child.text}}</text>
     </div>
   </div>
 </div>
@@ -83,11 +86,12 @@ export default {
         delay: 100 //ms
       });
     },
-    onRightNode(node, i) {
+    onRightNode(pNode, node, i) {
       node.onPress();
-      this.special(this.$refs.skid[i], {
-        transform: `translate(0, 0)`
-      });
+      if (pNode.autoClose)
+        this.special(this.$refs.skid[i], {
+          transform: `translate(0, 0)`
+        });
     },
     onNodeClick(node, i) {
       if (this.mobileX < 0) {
