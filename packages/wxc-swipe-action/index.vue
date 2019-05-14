@@ -15,6 +15,8 @@
 <style>
 .container {
   background-color: #ddd;
+  border-top-width: 1px;
+  border-top-color: #ddd;
 }
 .border {
   border-bottom-width: 1px;
