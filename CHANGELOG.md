@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.6.13
+- [+] add wxc-swipe-action
+- [!] [!] Fix [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) displaying style problem, add isHighlight attribute to control whether button is highlighted or not.
+
 ## 0.6.12
 - [!] Fixed set transparency issues [wxc-lightbox](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-lightbox/).
 - [!] Fixed set transparency issues [wxc-mask](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-mask/).
