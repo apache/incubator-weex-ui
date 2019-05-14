@@ -1,4 +1,4 @@
-# wxc-skid
+# wxc-swipe-action
 
 !> These rich interaction components are based on [BindingX](https://alibaba.github.io/bindingx/) feature. Make sure your app [install it](https://github.com/alibaba/bindingx#installation).
 
