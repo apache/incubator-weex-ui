@@ -7,7 +7,7 @@
 - Hide operations by clicking on the right button or by clicking on the list.
 
 ## [Demo]
-<img src="http://cdn.emas-poc.com/material/weex/3ofe2-af5lt1.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="http://cdn.emas-poc.com/material/weex/82xh6-9dnxz2.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## Code Example
 ```vue

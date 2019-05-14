@@ -7,7 +7,7 @@
 - 点击右边按钮或点击列表可隐藏操作。
 
 ## [Demo]
-<img src="http://cdn.emas-poc.com/material/weex/3ofe2-af5lt1.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="http://cdn.emas-poc.com/material/weex/82xh6-9dnxz2.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;
 
 ## 使用方法
 ```vue
