@@ -1,4 +1,4 @@
-# wxc-skid
+# wxc-swipe-action
 
 !> 这个富交互体验组件依赖于 [BindingX](https://alibaba.github.io/bindingx/) 特性，使用前请确定你的App [是否安装](https://github.com/alibaba/bindingx#installation)
 
