@@ -1,9 +1,9 @@
 # Change Log
 
 ## 0.6.13
-- [!] fixed[wxc-overlay](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-dialog/)problem on[wxc-tab-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-bar/)
-- [+] add wxc-swipe-action
-- [!] [!] Fix [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) displaying style problem, add isHighlight attribute to control whether button is highlighted or not.
+- [!] Fixed[wxc-overlay](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-dialog/)problem on[wxc-tab-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-bar/)
+- [+] add a new componet named wxc-swipe-action
+- [!] Fix [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) displaying style problem, add isHighlight attribute to control whether button is highlighted or not.
 
 ## 0.6.12
 - [!] Fixed set transparency issues [wxc-lightbox](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-lightbox/).
