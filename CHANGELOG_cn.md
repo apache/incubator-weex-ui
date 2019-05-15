@@ -1,6 +1,7 @@
 # 升级日志
 
 ## 0.6.13
+- [!] 修复[wxc-overlay](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-dialog/)在[wxc-tab-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-bar/)上使用问题
 - [+] 添加wxc-swipe-action侧滑组件
 - [!] 修复[wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 设置display样式问题，添加isHighlight属性控制button是否高亮显示
 
