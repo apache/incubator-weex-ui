@@ -9,6 +9,7 @@
     - [wxc-popup](packages/wxc-popup/)
     - [wxc-result](packages/wxc-result/)
     - [wxc-slide-nav](packages/wxc-slide-nav/)
+    - [wxc-swipe-action](packages/wxc-swipe-action/)
 
 - Navigator
     - [wxc-minibar](packages/wxc-minibar/)

@@ -38,6 +38,7 @@
 | **`type`** | `String` | `N` | `red` | 类型：`white`/`red`/`yellow`/`blue`/`green` |
 | **`size`** | `String` | `N` | `full` | 类型：`full`/`big`/`medium`/`small` |
 | **`disabled`** | `Boolean` | `N` | `false` | 是否 disabled（注1） |
+| **`isHighlight`** | `Boolean` | `N` | `false` | 是否高亮显示 |
 | **`btnStyle`** | `Object` | `N` | `{}` | 按钮的样式对象（注2） |
 | **`textStyle`** | `Object` | `N` | `{}` | 文字的样式对象（注3） |
 

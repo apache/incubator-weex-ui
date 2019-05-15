@@ -1,0 +1,26 @@
+{
+  "name": "wxc-simple-flow",
+  "version": "0.1.0",
+  "description": "Weex侧滑列表",
+  "main": "index.js",
+  "type": "weex",
+  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-simple-flow",
+  "keywords": [
+    "Weex",
+    "Vue",
+    "WeexComponent",
+    "DataDisplay",
+    "SimpleFlow",
+    "WeexUi"
+  ],
+  "weex": {
+    "plugins": {},
+    "market": {
+      "thumbnail": "https://img.alicdn.com/tfs/TB12jLwSpXXXXcVaXXXXXXXXXXX-750-1334.png"
+    }
+  },
+  "author": "wjun94",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
