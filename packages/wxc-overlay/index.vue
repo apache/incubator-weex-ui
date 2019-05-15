@@ -9,7 +9,7 @@
          v-if="show"
          :hack="shouldShow"
          @click="overlayClicked"
-         :style="Object.assign({left: left + 'px'} ,overlayStyle)">
+         :style="overlayStyle">
     </div>
   </div>
 </template>
@@ -26,6 +26,8 @@
 
 <script>
   const animation = weex.requireModule('animation');
+  import Utils from '../utils';
+
   export default {
     props: {
       show: {
@@ -61,7 +63,8 @@
       overlayStyle () {
         return {
           opacity: this.hasAnimation ? 0 : 1,
-          backgroundColor: `rgba(0, 0, 0,${this.opacity})`
+          backgroundColor: `rgba(0, 0, 0,${this.opacity})`,
+          left: Utils.env.isWeb() ? this.left + 'px' : 0
         }
       },
       shouldShow () {
