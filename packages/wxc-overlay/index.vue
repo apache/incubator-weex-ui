@@ -18,7 +18,6 @@
   .wxc-overlay {
     width: 750px;
     position: fixed;
-    left: 0;
     top: 0;
     bottom: 0;
     right: 0;
@@ -27,11 +26,17 @@
 
 <script>
   const animation = weex.requireModule('animation');
+  import Utils from '../utils';
+
   export default {
     props: {
       show: {
         type: Boolean,
         default: true
+      },
+      left: {
+        default: Number,
+        default: 0
       },
       hasAnimation: {
         type: Boolean,
@@ -58,7 +63,8 @@
       overlayStyle () {
         return {
           opacity: this.hasAnimation ? 0 : 1,
-          backgroundColor: `rgba(0, 0, 0,${this.opacity})`
+          backgroundColor: `rgba(0, 0, 0,${this.opacity})`,
+          left: Utils.env.isWeb() ? this.left + 'px' : 0
         }
       },
       shouldShow () {
