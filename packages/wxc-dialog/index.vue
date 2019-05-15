@@ -4,8 +4,8 @@
 
 <template>
   <div class="container">
-    <wxc-overlay v-if="show" :show="true" :hasAnimation="false"></wxc-overlay>
-    <div class="dialog-box" v-if="show" :style="{top:top+'px'}">
+    <wxc-overlay :left='left' v-if="show" :show="true" :hasAnimation="false"></wxc-overlay>
+    <div class="dialog-box" v-if="show" :style="{top:top+'px', left: ((isWeb ? left : 0) + 96) + 'px'}">
       <div class="dialog-content">
         <slot name="title">
           <text class="content-title">{{title}}</text>
@@ -118,6 +118,7 @@
 <script>
   import WxcOverlay from '../wxc-overlay'
   import { CHECKED, UN_CHECKED } from './type';
+  import Utils from '../utils';
 
   export default {
     components: { WxcOverlay },
@@ -169,11 +170,16 @@
       isChecked: {
         type: Boolean,
         default: false
+      },
+      left: {
+        type: Number,
+        default: 0
       }
     },
     data: () => ({
       noPromptIcon: UN_CHECKED,
-      pageHeight: 1334
+      pageHeight: 1334,
+      isWeb: Utils.env.isWeb()
     }),
     created () {
       const { env: { deviceHeight, deviceWidth } } = weex.config;

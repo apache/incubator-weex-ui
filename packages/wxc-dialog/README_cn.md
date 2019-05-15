@@ -73,6 +73,7 @@
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
 | title | `String` | `Y` | `-` | 标题 |
+| left | `Number` |`N`| `0` | 向左移动距离  |
 | content | `String` | `N` | `-`| 内容说明描述 |
 | top | `Number` | `N` |`400` |  弹层距离顶部的高度 |
 | single | `Boolean` | `N` |`false` |  是否只有一个按钮（显示确认） |
