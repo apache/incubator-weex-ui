@@ -9,7 +9,7 @@
          v-if="show"
          :hack="shouldShow"
          @click="overlayClicked"
-         :style="overlayStyle">
+         :style="Object.assign({left: left + 'px'} ,overlayStyle)">
     </div>
   </div>
 </template>
@@ -18,7 +18,6 @@
   .wxc-overlay {
     width: 750px;
     position: fixed;
-    left: 0;
     top: 0;
     bottom: 0;
     right: 0;
@@ -32,6 +31,10 @@
       show: {
         type: Boolean,
         default: true
+      },
+      left: {
+        default: Number,
+        default: 0
       },
       hasAnimation: {
         type: Boolean,
