@@ -20,8 +20,10 @@ HappyPack.SERIALIZABLE_OPTIONS = HappyPack.SERIALIZABLE_OPTIONS.concat([
 
 console.log('Building..., Please wait a moment.');
 
+const mkdir = '*'
+
 const getEntry = dir => {
-  const foundScripts = glob.sync(`${dir}/*/index.js`, {});
+  const foundScripts = glob.sync(`${dir}/${mkdir}/index.js`, {});
   // 生成 entry 映射表
   const ret = {};
   foundScripts.forEach(scriptPath => {
@@ -33,7 +35,7 @@ const getEntry = dir => {
 };
 
 const getCopyConfig = () => {
-  const foundScripts = glob.sync('example/*/', {});
+  const foundScripts = glob.sync(`example/${mkdir}/`, {});
   const ret = [];
   foundScripts.forEach(scriptPath => {
     if (!/(_mods|_public)/.test(scriptPath)) {

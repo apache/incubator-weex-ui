@@ -14,18 +14,18 @@
 
 <style>
 .container {
-  background-color: #ddd;
+  background-color: #dddddd;
   border-top-width: 1px;
-  border-top-color: #ddd;
+  border-top-color: #dddddd;
 }
 .border {
   border-bottom-width: 1px;
-  border-bottom-color: #ddd;
+  border-bottom-color: #dddddd;
 }
 .wxc-skid {
   flex-direction: row;
   height: 90px;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 .box-right {
   flex-direction: row;
@@ -35,7 +35,7 @@
 .box-center {
   width: 735px;
   line-height: 90px;
-  background-color: white;
+  background-color: #FFFFFF;
   margin-left: 15px !important;
   margin-left: 15px;
 }
@@ -50,8 +50,8 @@
 .child {
   width: 100px;
   text-align: center;
-  color: white;
-  background-color: #ddd;
+  color: #FFFFFF;
+  background-color: #dddddd;
   line-height: 90px;
 }
 .text {
