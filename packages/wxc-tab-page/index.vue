@@ -96,7 +96,7 @@
 
   .tab-page-wrap {
     width: 750px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .tab-container {
