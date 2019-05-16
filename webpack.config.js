@@ -20,7 +20,7 @@ HappyPack.SERIALIZABLE_OPTIONS = HappyPack.SERIALIZABLE_OPTIONS.concat([
 
 console.log('Building..., Please wait a moment.');
 
-const mkdir = '*'
+const mkdir = 'refresher'
 
 const getEntry = dir => {
   const foundScripts = glob.sync(`${dir}/${mkdir}/index.js`, {});
