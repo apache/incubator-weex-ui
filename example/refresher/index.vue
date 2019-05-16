@@ -76,7 +76,7 @@
     margin-left: 75px;
     margin-top: 35px;
     margin-bottom: 35px;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     border-width: 2px;
     border-style: solid;
