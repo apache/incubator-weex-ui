@@ -102,6 +102,7 @@ export default {
 |Prop|Type|Required|Default|Description|
 |-------------|------------|--------|-----|-----|
 |data|Array|Y|[]|list|
+|height|Number|Y|[]|list height|
 
 ### Data API
 |Prop|Description|Type|Default|
