@@ -9,7 +9,7 @@
     - [wxc-popup 弹层](cn/packages/wxc-popup/)
     - [wxc-result 结果页](cn/packages/wxc-result/)
     - [wxc-slide-nav 视窗增大](cn/packages/wxc-slide-nav/)
-    - [wxc-swipe-action 滑动操作 cell](cn/packages/wxc-swipe-action/)
+    - [wxc-swipe-action 滑动操作](cn/packages/wxc-swipe-action/)
 
 
 - 导航
