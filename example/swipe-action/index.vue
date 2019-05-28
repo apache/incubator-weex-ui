@@ -6,10 +6,21 @@
   <scroller class="wxc-demo">
     <title title="wxc-swipe-action"></title>
     <category title="使用案例"></category>
-    <WxcSwipeAction @onNodeClick='onTest' :data='data'/>
+    <WxcSwipeAction @onNodeClick='onTest' :data='data'>
+      <text class="text" slot-scope="val">{{val.val.item.title}}{{val.val.index}}</text>
+    </WxcSwipeAction>
   </scroller>
 </div>
 </template>
+
+<style>
+.text {
+  line-height: 90px;
+  margin-left: 15px !important;
+  margin-left: 15px;
+}
+</style>
+
 
 <script>
 import { WxcSwipeAction } from "../../index";

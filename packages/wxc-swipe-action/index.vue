@@ -3,16 +3,19 @@
 
 <template>
 <div class="container">
-  <div ref="skid" v-for="(item, i) of data" @click="onNodeClick(item, i)" :key="'skid-' + i" class="wxc-skid" :style="{width: (750 + item.right.length * 100) + 'px'}" @touchstart="(e) => !isAndroid && onPanStart(e, item, i)" @horizontalpan="(e) => isAndroid && onPanStart(e, item, i)" @touchend="(e) => onPanEnd(e, item, i)">
-    <text :class="['box-center', 'border', 'text', i + 1 === data.length && 'box-center-last']">{{item.title}}</text>
-    <div class="box-right">
-      <text class="child text" @click="onRightNode(item, child, i)" v-for="(child, childIdx) of item.right" :style="child.style || {}" :key="'child-' + childIdx">{{child.text}}</text>
+  <div ref="skid" v-for="(item, i) of data" @click="onNodeClick(item, i)" :key="'skid-' + i" class="wxc-skid" :style="{width: (750 + item.right.length * 100) + 'px', height: height + 'px'}" @touchstart="(e) => !isAndroid && onPanStart(e, item, i)" @horizontalpan="(e) => isAndroid && onPanStart(e, item, i)" @touchend="(e) => onPanEnd(e, item, i)">
+    <div :style='styles' class="swipe-action-center border">
+      <slot :val='{item: item, index: i}'/>
+    </div>
+    <!-- <text :style="{lineHeight: height + 'px'}" :class="['box-center', 'border', 'text', i + 1 === data.length && 'box-center-last']">{{item.title}}</text> -->
+    <div class="swipe-action-right">
+      <text class="swipe-action-child swipe-action-text" @click="onRightNode(item, child, i)" v-for="(child, childIdx) of item.right" :style="Object.assign({lineHeight: height + 'px'}, child.style || {})" :key="'child-' + childIdx">{{child.text}}</text>
     </div>
   </div>
 </div>
 </template>
 
-<style>
+<style scoped>
 .container {
   background-color: #dddddd;
   border-top-width: 1px;
@@ -24,15 +27,18 @@
 }
 .wxc-skid {
   flex-direction: row;
-  height: 90px;
   background-color: #FFFFFF;
 }
-.box-right {
+.swipe-action-right {
   flex-direction: row;
   align-items: center;
-  line-height: 90px;
 }
-.box-center {
+
+.swipe-action-center {
+  width: 750px;
+}
+
+/* .box-center {
   width: 735px;
   line-height: 90px;
   background-color: #FFFFFF;
@@ -45,16 +51,16 @@
   padding-left: 15px !important;
   margin-left: 0;
   padding-left: 15px;
-}
+} */
 
-.child {
+.swipe-action-child {
   width: 100px;
   text-align: center;
   color: #FFFFFF;
   background-color: #dddddd;
   line-height: 90px;
 }
-.text {
+.swipe-action-text {
   font-size: 30px;
 }
 </style>
@@ -69,6 +75,14 @@ export default {
     data: {
       type: Array,
       default: []
+    },
+    height: {
+      type: Number,
+      default: 90
+    },
+    styles: {
+      type: Object,
+      default: {}
     }
   },
   data() {

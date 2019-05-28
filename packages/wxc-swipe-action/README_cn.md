@@ -13,7 +13,9 @@
 ```vue
 <template>
 <div>
-    <WxcSwipeAction @onNodeClick='onTest' :data='data'/>
+    <WxcSwipeAction @onNodeClick='onTest' :data='data'>
+      <text class="text" slot-scope="val">{{val.val.item.title}}{{val.val.index}}</text>
+    </WxcSwipeAction>
 </div>
 </template>
 
@@ -102,6 +104,8 @@ export default {
 |参数|类型|是否要引入|默认值|描述|
 |-------------|------------|--------|-----|-----|
 |data|Array|Y|[]|列表数据|
+|height|Number|Y|[]|列表高度|
+|styles|Object|Y|[]|div样式|
 
 ### Data API
 |属性|说明|类型|默认值|
