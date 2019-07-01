@@ -46,7 +46,13 @@
       }
     },
     watch: {
-      list (newList) {
+      list (newList, oldList) {
+        if (JSON.stringify(newList) !== JSON.stringify(oldList.map(v => {
+          const {title, value} = v
+          return {title, value}
+        }))) {
+          this.checkedIndex = -1
+        }
         this.setListChecked(newList);
       }
     },
