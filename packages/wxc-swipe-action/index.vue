@@ -132,7 +132,7 @@ export default {
     },
     onPanStart: function(e, node, i) {
       const { saveIdx } = this;
-      if (saveIdx !== i && saveIdx !== null) {
+      if (saveIdx !== i && saveIdx !== null && this.$refs.skid[saveIdx]) {
         this.special(this.$refs.skid[saveIdx], {
           transform: `translate(0, 0)`
         });
