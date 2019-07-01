@@ -54,6 +54,7 @@
 | invalidColor | `String` |`N`| `#E0E0E0`| 无效颜色 |
 | validColor   | `String` |`N`| `#EE9900`| 有效颜色 |
 | disabledColor| `String` |`N`| `#AAA`   | 禁用颜色 |
+| selectRange  | `Array` |`N`| `[0, 0]`   | 回传值 |
 
 
 ### 事件
