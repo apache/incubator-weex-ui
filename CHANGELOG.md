@@ -3,6 +3,7 @@
 ## 0.6.15
 - [!] [wxc-swipe-action](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-swipe-action/)fix delete the last data item, then click on another item to report the error.
 - [!] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) fix dynamically assign value to value, then slide back to return value
+- [!] [wxc-radio](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-radio/) fix the selected item cannot be modified when modifying the list array
 
 ## 0.6.14
 - [!] [wxc-swipe-action](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-swipe-action/) adds slot labels, extended style and height attributes
