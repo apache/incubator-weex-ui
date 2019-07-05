@@ -18,7 +18,6 @@
   .wxc-overlay {
     width: 750px;
     position: fixed;
-    top: 0;
     bottom: 0;
     right: 0;
   }
@@ -33,6 +32,10 @@
       show: {
         type: Boolean,
         default: true
+      },
+      top: {
+        type: Number,
+        default: 0
       },
       left: {
         default: Number,
@@ -64,7 +67,8 @@
         return {
           opacity: this.hasAnimation ? 0 : 1,
           backgroundColor: `rgba(0, 0, 0,${this.opacity})`,
-          left: Utils.env.isWeb() ? this.left + 'px' : 0
+          left: Utils.env.isWeb() ? this.left + 'px' : 0,
+          top: this.top
         }
       },
       shouldShow () {

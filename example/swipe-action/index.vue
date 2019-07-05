@@ -69,6 +69,7 @@ export default {
             {
               text: "删除",
               onPress: () => {
+                this.data.splice(1, 1)
                 modal.toast({
                   message: "删除",
                   duration: 0.3
