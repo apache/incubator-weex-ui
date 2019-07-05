@@ -61,13 +61,17 @@
       barWidth: 0,
       preventMoveEvent: true,
       minDist: 0,
-      selectRange: [0, 0],
+      // selectRange: [0, 0],
       blockRadius: 28,
       DPR: 1,
       timeout: 100,
       isAndroid: Utils.env.isAndroid()
     }),
     props: {
+      selectRange: {
+        type: Array,
+        default: [0, 0]
+      },
       length: {
         type: Number,
         default: 500

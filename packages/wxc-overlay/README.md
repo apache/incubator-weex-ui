@@ -51,6 +51,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | show | `Boolean` |`Y`| `false` | whether to show  |
 | opacity | `Number` |`N`| `0.6` | opacity `0-1` |
 | left | `Number` |`N`| `0` | move left distance  |
+| top | `Number` |`N`| `0` | move top distance  |
 | has-animation | `Boolean` |`N`| `true` | whether to animate |
 | can-auto-close | `Boolean` |`N`| `true` | whether to can auto close  |
 | duration | `Number` | `300` |`N`| animation duration time |

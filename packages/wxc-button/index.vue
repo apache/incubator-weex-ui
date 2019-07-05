@@ -64,7 +64,7 @@
       },
       mrTextStyle () {
         const { type, disabled, textStyle, size } = this;
-        const mrTextStyle = { ...TEXT_STYLE_MAP[type], ...textStyle, ...TEXT_FONTSIZE_STYLE_MAP[size] };
+        const mrTextStyle = { ...TEXT_STYLE_MAP[type], ...TEXT_FONTSIZE_STYLE_MAP[size], ...textStyle };
         return disabled ? { ...mrTextStyle, color: '#FFFFFF' } : mrTextStyle;
       }
     },
