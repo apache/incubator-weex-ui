@@ -67,7 +67,7 @@
           if (e.state === 'start') {
             this.isPanning = true;
             const element = this.$refs['wxc-pan-item'];
-            element && this.$emit('wxcPanItemPan', { element });
+            element && this.$emit('wxcPanItemPan', { element, extId: this.extId });
           } else if (e.state === 'end') {
             setTimeout(() => {
               this.isPanning = false;

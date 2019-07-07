@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.6.16
+- [+] [wxc-pan-item](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-pan-item/) add `extId` when  pan. [issue/441](https://github.com/alibaba/weex-ui/issues/441)
+
 ## 0.6.15
 - [!] [wxc-swipe-action](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-swipe-action/)fix delete the last data item, then click on another item to report the error.
 - [!] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) fix dynamically assign value to value, then slide back to return value
