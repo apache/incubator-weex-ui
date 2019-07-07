@@ -1,8 +1,11 @@
 # 升级日志
+## 0.6.16
+- [+] [wxc-pan-item](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-pan-item/) 滑动时候新增 `extId` 回调  [issue/441](https://github.com/alibaba/weex-ui/issues/441)
 
 ## 0.6.15
 - [!] 解决[wxc-swipe-action](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-swipe-action/)删除最后一个数据项，再点击其他项动画报错
-- [!] wxc-slider-bar组件 动态给value赋值后，再滑动返回值错乱
+- [!] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/)组件 动态给value赋值后，再滑动返回值错乱
+- [!] [wxc-radio](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-radio/)组件修改list array时无法修改选中项
 
 ## 0.6.14
 - [!] [wxc-swipe-action](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-swipe-action/)添加slot标签，扩展styles和height属性
