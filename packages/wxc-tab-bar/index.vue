@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="tab-title-list"
-         :style="{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height + (isIPhoneX ? 78 : 0))+'px',paddingBottom:isIPhoneX?'78px':'0'}">
+         :style="{ backgroundColor: tabStyles.bgColor, height: (tabStyles.height + (isIPhoneX ? tabStyles.saveHeight : 0))+'px',paddingBottom: (isIPhoneX? tabStyles.saveHeight : '0') + 'px'}">
       <div class="title-item"
            v-for="(v,index) in tabTitles"
            :key="index"
@@ -143,7 +143,8 @@
           activeBottomWidth: 120,
           activeBottomHeight: 6,
           textPaddingLeft: 10,
-          textPaddingRight: 10
+          textPaddingRight: 10,
+          saveHeight: 78
         })
       },
       titleType: {

@@ -28,16 +28,7 @@
     "Ul Components",
     "UI library"
   ],
-  "author": [
-    {
-      "name": "拔赤",
-      "email": "lijing00333@163.com"
-    },
-    {
-      "name": "Tw93",
-      "email": "tw93@qq.com"
-    }
-  ],
+  "author": "",
   "license": "MIT",
   "devDependencies": {
     "anywhere": "^1.5.0",
@@ -75,5 +66,12 @@
   "dependencies": {
     "url-parse": "^1.4.3",
     "weex-bindingx": "0.0.17"
+  },
+  "bin": {
+    "weex-ui": "build-entry.js"
+  },
+  "directories": {
+    "doc": "docs",
+    "example": "example"
   }
 }

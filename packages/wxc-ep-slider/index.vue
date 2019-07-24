@@ -12,7 +12,7 @@
       <div class="slider"
            v-for="(v,index) in cardList"
            :ref="`card${index}_${sliderId}`"
-           :style="{transform: `scale(${index===currentIndex ? 1 : cardS.scale})`,left: `${index * (cardS.width+cardS.spacing)}px`,marginLeft:`${(containerS.width - cardS.width) / 2}px`,width: cardS.width+'px', height: cardS.height+'px'}">
+           :style="{transform: `scale(${index===currentIndex ? 1 : cardS.scale})`,left: `${index * (cardS.width+cardS.spacing)}px`,marginLeft:`${marginLeft ? marginLeft : (containerS.width - cardS.width) / 2}px`,width: cardS.width+'px', height: cardS.height+'px'}">
         <slot :name="`card${index}_${sliderId}`"></slot>
       </div>
       <slot name="pull-more"></slot>
@@ -70,7 +70,8 @@
           width: 360,
           height: 300,
           spacing: 0,
-          scale: 0.75
+          scale: 0.75,
+          marginLeft: 20
         })
       },
       autoPlay: {
@@ -80,6 +81,10 @@
       interval: {
         type: [Number, String],
         default: 1200
+      },
+      marginLeft:{
+        type: [Number, String],
+        default: 0
       }
     },
     data: () => ({
