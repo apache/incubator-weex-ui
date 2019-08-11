@@ -1,6 +1,6 @@
 {
   "name": "distribute-weex-ui",
-  "version": "0.6.16",
+  "version": "0.6.21",
   "description": "A rich interaction, lightweight, high performance UI library based on Weex",
   "main": "index.js",
   "lib": "vue",

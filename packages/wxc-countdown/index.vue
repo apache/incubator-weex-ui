@@ -40,7 +40,18 @@
         <text :style="mrTimeTextStyle">{{countDownData.second}}</text>
       </div>
       <div :style="mrDotBoxStyle" v-if="tplIndexOfSeconds !== -1" :aria-hidden="true">
-        <text :style="mrDotTextStyle">{{getDot(tplIndexOfSeconds, -1)}}</text>
+        <text :style="mrDotTextStyle" v-if="tplIndexOfMicroSec !== -1">{{getDot(tplIndexOfSeconds, tplIndexOfMicroSec)}}</text>
+        <text :style="mrDotTextStyle" v-else>{{getDot(tplIndexOfSeconds, -1)}}</text>
+      </div>
+
+      <div :style="mrTimeTextStyle"
+           v-if="tplIndexOfMicroSec !== -1"
+           :accessible="true"
+           :aria-label="`${countDownData.microSec}`">
+        <text :style="mrTimeTextStyle">{{countDownData.microSec}}</text>
+      </div>
+      <div :style="mrDotBoxStyle" v-if="tplIndexOfMicroSec !== -1" :aria-hidden="true">
+        <text :style="mrDotTextStyle">{{getDot(tplIndexOfMicroSec, -1)}}</text>
       </div>
     </div>
   </div>
@@ -88,6 +99,7 @@
       tplIndexOfHours: -1,
       tplIndexOfMinutes: -1,
       tplIndexOfSeconds: -1,
+      tplIndexOfMicroSec: -1,
       TIME_WRAP_STYLE: {
         flexDirection: 'row',
         alignItems: 'center',
@@ -127,6 +139,7 @@
       this.tplIndexOfHours = this.tpl.indexOf('h');
       this.tplIndexOfMinutes = this.tpl.indexOf('m');
       this.tplIndexOfSeconds = this.tpl.indexOf('s');
+      this.tplIndexOfMicroSec = this.tpl.indexOf('v');
     },
     computed: {
       mrTimeWrapStyle () {
@@ -173,7 +186,8 @@
             day: '00',
             hour: '00',
             minute: '00',
-            second: '00'
+            second: '00',
+            microSec: this.tplIndexOfMicroSec !== -1 ? '00' : '',
           }
         }
 
@@ -181,6 +195,7 @@
         let hour = 0;
         let minute = 0;
         let second = 0;
+        let microSec = 0;
 
         if (this.tplIndexOfDays !== -1) {
           day = Math.floor(timeSpacing / (24 * 60 * 60 * 1000));
@@ -206,11 +221,17 @@
           second = Math.floor((timeSpacing - day * 24 * 60 * 60 * 1000 - hour * 60 * 60 * 1000) / 1000);
         }
 
+        if (this.tplIndexOfMicroSec !== -1) {
+          // 毫秒位，保留2位
+          microSec = Math.floor(timeSpacing / 100) % 10;
+        }
+
         return {
           day: day < 10 ? '0' + day : '' + day,
           hour: hour < 10 ? '0' + hour : '' + hour,
           minute: minute < 10 ? '0' + minute : '' + minute,
-          second: second < 10 ? '0' + second : '' + second
+          second: second < 10 ? '0' + second : '' + second,
+          microSec: microSec
         }
       }
     },
