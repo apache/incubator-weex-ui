@@ -116,7 +116,7 @@ Once it has been compiled, a browser window will be opened automatically. You ca
 * **Star it** if you like.
 * Join the chat at DingTalk to help solve weex problems.
 
- <table><tr><td><img src="https://img.alicdn.com/tfs/TB15.yALAvoK1RjSZFDXXXY3pXa-750-990.png" width="190"></td><td><img  src="https://img.alicdn.com/tfs/TB1tpS2LxnaK1RjSZFtXXbC2VXa-606-799.png" width="190"></td><td><img src="https://img.alicdn.com/tfs/TB1lf1CLCzqK1RjSZFpXXakSXXa-1125-1485.png" width="190"></td></tr></table>
+ <table><tr><td><img src="https://img.alicdn.com/tfs/TB1AEsZf7T2gK0jSZPcXXcKkpXa-750-990.jpg" width="190"></td><td><img  src="https://img.alicdn.com/tfs/TB1tpS2LxnaK1RjSZFtXXbC2VXa-606-799.png" width="190"></td><td><img src="https://img.alicdn.com/tfs/TB1lf1CLCzqK1RjSZFpXXakSXXa-1125-1485.png" width="190"></td></tr></table>
 
 
 ## Contribution
