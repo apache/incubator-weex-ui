@@ -1,6 +1,20 @@
-/**
- * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
- * Created by Tw93 on 17/11/01
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
  */
 
 import UrlParser from 'url-parse';
@@ -8,19 +22,22 @@ import UrlParser from 'url-parse';
 const Utils = {
   UrlParser: UrlParser,
   _typeof (obj) {
-    return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
+    return Object.prototype.toString
+      .call(obj)
+      .slice(8, -1)
+      .toLowerCase();
   },
   isPlainObject (obj) {
     return Utils._typeof(obj) === 'object';
   },
   isString (obj) {
-    return typeof (obj) === 'string';
+    return typeof obj === 'string';
   },
   isNonEmptyArray (obj = []) {
     return obj && obj.length > 0 && Array.isArray(obj) && typeof obj !== 'undefined';
   },
   isObject (item) {
-    return (item && typeof item === 'object' && !Array.isArray(item));
+    return item && typeof item === 'object' && !Array.isArray(item);
   },
   isEmptyObject (obj) {
     return Object.keys(obj).length === 0 && obj.constructor === Object;
@@ -58,9 +75,7 @@ const Utils = {
   },
   appendProtocol (url) {
     if (/^\/\//.test(url)) {
-      const {
-        bundleUrl
-      } = weex.config;
+      const { bundleUrl } = weex.config;
       return `http${/^https:/.test(bundleUrl) ? 's' : ''}:${url}`;
     }
     return url;
@@ -73,10 +88,13 @@ const Utils = {
     const Navigator = weex.requireModule('navigator');
     const jumpUrlObj = new Utils.UrlParser(jumpUrl, true);
     const url = Utils.appendProtocol(jumpUrlObj.toString());
-    Navigator.push({
-      url: Utils.encodeURLParams(url),
-      animated: animated.toString()
-    }, callback);
+    Navigator.push(
+      {
+        url: Utils.encodeURLParams(url),
+        animated: animated.toString()
+      },
+      callback
+    );
   },
   env: {
     isTaobao () {
@@ -93,7 +111,7 @@ const Utils = {
     },
     isWeb () {
       const { platform } = weex.config.env;
-      return typeof (window) === 'object' && platform.toLowerCase() === 'web';
+      return typeof window === 'object' && platform.toLowerCase() === 'web';
     },
     isIOS () {
       const { platform } = weex.config.env;
@@ -106,11 +124,19 @@ const Utils = {
     isIPhoneX () {
       const { deviceHeight } = weex.config.env;
       if (Utils.env.isWeb()) {
-        return typeof window !== undefined && window.screen && window.screen.width && window.screen.height 
-        && ((parseInt(window.screen.width, 10) === 375) && (parseInt(window.screen.height, 10) === 812)
-        || (parseInt(window.screen.width, 10) === 414) && (parseInt(window.screen.height, 10) === 896));
+        return (
+          typeof window !== undefined &&
+          window.screen &&
+          window.screen.width &&
+          window.screen.height &&
+          ((parseInt(window.screen.width, 10) === 375 && parseInt(window.screen.height, 10) === 812) ||
+            (parseInt(window.screen.width, 10) === 414 && parseInt(window.screen.height, 10) === 896))
+        );
       }
-      return Utils.env.isIOS() && (deviceHeight === 2436 || deviceHeight === 2688 || deviceHeight === 1792 || deviceHeight === 1624);
+      return (
+        Utils.env.isIOS() &&
+        (deviceHeight === 2436 || deviceHeight === 2688 || deviceHeight === 1792 || deviceHeight === 1624)
+      );
     },
     isAndroid () {
       const { platform } = weex.config.env;
@@ -133,8 +159,8 @@ const Utils = {
      */
     getPageHeight () {
       const { env } = weex.config;
-      const navHeight = Utils.env.isWeb() ? 0 : (Utils.env.isIPhoneX() ? 176 : 132);
-      return env.deviceHeight / env.deviceWidth * 750 - navHeight;
+      const navHeight = Utils.env.isWeb() ? 0 : Utils.env.isIPhoneX() ? 176 : 132;
+      return (env.deviceHeight / env.deviceWidth) * 750 - navHeight;
     },
     /**
      * 获取weex屏幕真实的设置高度
@@ -142,7 +168,7 @@ const Utils = {
      */
     getScreenHeight () {
       const { env } = weex.config;
-      return env.deviceHeight / env.deviceWidth * 750;
+      return (env.deviceHeight / env.deviceWidth) * 750;
     }
   },
 
@@ -183,11 +209,13 @@ const Utils = {
   arrayChunk (arr = [], size = 4) {
     let groups = [];
     if (arr && arr.length > 0) {
-      groups = arr.map((e, i) => {
-        return i % size === 0 ? arr.slice(i, i + size) : null;
-      }).filter(e => {
-        return e;
-      });
+      groups = arr
+        .map((e, i) => {
+          return i % size === 0 ? arr.slice(i, i + size) : null;
+        })
+        .filter(e => {
+          return e;
+        });
     }
     return groups;
   },
@@ -228,12 +256,12 @@ const Utils = {
    * @returns {String}
    */
   objToParams (obj) {
-    let str = "";
-    for (let key in obj) {
-      if (str !== "") {
-        str += "&";
+    let str = '';
+    for (const key in obj) {
+      if (str !== '') {
+        str += '&';
       }
-      str += key + "=" + encodeURIComponent(obj[key]);
+      str += key + '=' + encodeURIComponent(obj[key]);
     }
     return str;
   },
@@ -245,7 +273,14 @@ const Utils = {
   paramsToObj (str) {
     let obj = {};
     try {
-      obj = JSON.parse('{"' + decodeURI(str).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}')
+      obj = JSON.parse(
+        '{"' +
+          decodeURI(str)
+            .replace(/"/g, '\\"')
+            .replace(/&/g, '","')
+            .replace(/=/g, '":"') +
+          '"}'
+      );
     } catch (e) {
       console.log(e);
     }
@@ -261,16 +296,20 @@ const Utils = {
      */
     pageTransitionAnimation (ref, transform, status, callback) {
       const animation = weex.requireModule('animation');
-      animation.transition(ref, {
-        styles: {
-          transform: transform
+      animation.transition(
+        ref,
+        {
+          styles: {
+            transform: transform
+          },
+          duration: status ? 250 : 300, // ms
+          timingFunction: status ? 'ease-in' : 'ease-out',
+          delay: 0 // ms
         },
-        duration: status ? 250 : 300, // ms
-        timingFunction: status ? 'ease-in' : 'ease-out',
-        delay: 0 // ms
-      }, function () {
-        callback && callback();
-      });
+        function () {
+          callback && callback();
+        }
+      );
     }
   },
   uiStyle: {
@@ -285,16 +324,16 @@ const Utils = {
         return {
           left: '750px',
           top: '0px',
-          height: (weex.config.env.deviceHeight / weex.config.env.deviceWidth * 750) + 'px'
-        }
+          height: (weex.config.env.deviceHeight / weex.config.env.deviceWidth) * 750 + 'px'
+        };
       } else if (animationType === 'model') {
         return {
-          top: (weex.config.env.deviceHeight / weex.config.env.deviceWidth * 750) + 'px',
+          top: (weex.config.env.deviceHeight / weex.config.env.deviceWidth) * 750 + 'px',
           left: '0px',
-          height: (weex.config.env.deviceHeight / weex.config.env.deviceWidth * 750) + 'px'
-        }
+          height: (weex.config.env.deviceHeight / weex.config.env.deviceWidth) * 750 + 'px'
+        };
       }
-      return {}
+      return {};
     }
   }
 };
