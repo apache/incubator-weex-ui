@@ -130,5 +130,5 @@ npm run start
 
 ## 协议
 
-* 遵循 [MIT 协议](http://opensource.org/licenses/MIT)
+* 遵循 [Apache 协议](https://apache.org/)
 * 请自由地享受和参与开源
