@@ -14,5 +14,5 @@ mods/.sass-cache/
 !.editorconfig
 lerna-debug.log
 build
-
+.vscode/
 npm-debug*

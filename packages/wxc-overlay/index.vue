@@ -68,7 +68,7 @@
           opacity: this.hasAnimation ? 0 : 1,
           backgroundColor: `rgba(0, 0, 0,${this.opacity})`,
           left: Utils.env.isWeb() ? this.left + 'px' : 0,
-          top: this.top
+          top: this.top + 'px'
         }
       },
       shouldShow () {
