@@ -175,6 +175,10 @@ under the License.
         type: Boolean,
         default: true
       },
+      supportXBar: {
+        type: Boolean,
+        default: true
+      },
       duration: {
         type: [Number, String],
         default: 300
@@ -193,14 +197,14 @@ under the License.
       translateX: 0
     }),
     created () {
-      const { titleType, tabStyles } = this;
+      const { titleType, tabStyles, supportXBar } = this;
       if (titleType === 'iconFont' && tabStyles.iconFontUrl) {
         dom.addRule('fontFace', {
           'fontFamily': "wxcIconFont",
           'src': `url('${tabStyles.iconFontUrl}')`
         });
       }
-      this.isIPhoneX = Utils.env.isIPhoneX();
+      this.isIPhoneX = Utils.env.isIPhoneX() && supportXBar;
     },
     methods: {
       next () {

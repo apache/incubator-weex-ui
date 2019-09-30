@@ -21,13 +21,13 @@
                @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
     <!--The first page content-->
     <div class="item-container" :style="contentStyle"><text>Home</text></div>
-    
+
     <!--The second page content-->
     <div class="item-container" :style="contentStyle"><text>Hot</text></div>
-    
+
     <!-- The third page content-->
     <div class="item-container" :style="contentStyle"><text>Message</text></div>
-    
+
     <!-- The fourth page content-->
     <div class="item-container" :style="contentStyle"><text>My</text></div>
   </wxc-tab-bar>
@@ -43,8 +43,8 @@
 </style>
 <script>
   import { WxcTabBar, Utils } from 'weex-ui';
- 
-  // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js 
+
+  // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js
   import Config from './config'
 
   export default {
@@ -85,6 +85,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | duration | `Number` |`N`| `300` | page slider time of animation |
 | timing-function | `String` |`N`| `-` | page slider function of animation |
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |page background color|
+| support-x-bar | `Boolean` |`Y`| `true` |if set `false`，the iPhone X Bar will not go into effect|
 
 ### *1: Using iconFont
 - After Weex Ui version about `0.3.8`, we can use `iconFont` to represent our title image, you can use like this:

@@ -98,7 +98,7 @@ under the License.
   import Utils from '../utils';
 
   const { appName, osName, deviceWidth } = weex.config.env;
-  const needHack = ((Utils.env.isAlipay() || appName === 'UC' || appName === 'TUnionSDK') && osName !== 'iOS') || Utils.env.isAndroid();
+  const needHack = ((Utils.env.isWeb() || appName === 'UC' || appName === 'TUnionSDK') && osName !== 'iOS') || Utils.env.isAndroid();
   const isPad = osName === 'iOS' && deviceWidth > 1300;
 
   import WxcRichTextText from '../wxc-rich-text/wxc-rich-text-text.vue';
@@ -107,7 +107,7 @@ under the License.
   export default {
     components: {
       WxcRichTextText,
-      WxcRichTextTag,
+      WxcRichTextTag
     },
     props: {
       configList: {

@@ -1,4 +1,10 @@
 # 升级日志
+
+## 0.7.0
+- [-] 移除支付宝判断，防止审核问题 [issue/467](https://github.com/alibaba/weex-ui/issues/467)
+- [!] [wxc-tab-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-bar) 增加 `supportXBar` 参数可用于设置不要 iPhone X 底部 bar 的增高兼容效果
+
+
 ## 0.6.16
 - [+] [wxc-pan-item](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-pan-item/) 滑动时候新增 `extId` 回调  [issue/441](https://github.com/alibaba/weex-ui/issues/441)
 
