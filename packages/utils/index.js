@@ -142,10 +142,6 @@ const Utils = {
       const { platform } = weex.config.env;
       return platform.toLowerCase() === 'android';
     },
-    isAlipay () {
-      const { appName } = weex.config.env;
-      return appName === 'AP';
-    },
     isTmall () {
       const { appName } = weex.config.env;
       return /(tm|tmall|天猫)/i.test(appName);
