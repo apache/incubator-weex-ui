@@ -21,13 +21,13 @@
                @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
     <!-- 第一个页面内容-->
     <div class="item-container" :style="contentStyle"><text>首页</text></div>
-    
+
     <!-- 第二个页面内容-->
     <div class="item-container" :style="contentStyle"><text>特别推荐</text></div>
-    
+
     <!-- 第三个页面内容-->
     <div class="item-container" :style="contentStyle"><text>消息中心</text></div>
-    
+
     <!-- 第四个页面内容-->
     <div class="item-container" :style="contentStyle"><text>我的主页</text></div>
   </wxc-tab-bar>
@@ -43,8 +43,8 @@
 </style>
 <script>
   import { WxcTabBar, Utils } from 'weex-ui';
- 
-  // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js 
+
+  // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js
   import Config from './config'
 
   export default {
@@ -85,11 +85,12 @@
 | title-use-slot | `Boolean` |`N`| `false` | 使用 slot 配置底部导航 (注2)|
 | timing-function | `String` |`N`| `-` | 页面切换动画函数 |
 | wrap-bg-color | `String` |`N`| `#F2F3F4` |页面背景颜色|
+| support-x-bar | `Boolean` |`Y`| `true` |假如设置为 false，iPhone X 类型机器将不会有 bar 增高的兼容|
 
 ### 注1：使用 iconFont
 
 - 在 Weex Ui 0.3.8以后，我们可以使用 iconFont 来代替原有 tab title 中的图片配置，像下面这个配置即可：
- 
+
 ```
  // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L51
  // '&#xe608;' -> '\ue608'

@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.7.0
+- [-] Remove alipay util,Preventing audit issues [issue/467](https://github.com/alibaba/weex-ui/issues/467)
+- [!] [wxc-tab-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-bar) add `supportXBar` param.
+
 ## 0.6.16
 - [+] [wxc-pan-item](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-pan-item/) add `extId` when  pan. [issue/441](https://github.com/alibaba/weex-ui/issues/441)
 
