@@ -255,6 +255,13 @@
             });
             break;
           case 'end':
+            dom.getComponentRect(this.block1, option => {
+              const { left } = option.size;
+              const value = this._getValue(left - this.leftDiffX);
+              if (!this.range) {
+                this.$emit('wxcSliderBarTouchEnd', value);
+              } 
+            });
             break;
           default:
             break;
