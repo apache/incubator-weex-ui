@@ -1,6 +1,6 @@
 {
   "name": "weex-ui",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "A rich interaction, lightweight, high performance UI library based on Weex",
   "main": "index.js",
   "lib": "vue",
@@ -67,10 +67,10 @@
     "vue-loader": "^12.2.2",
     "vue-template-compiler": "^2.5.3",
     "webpack": "^2.7.0",
-    "weex-loader": "^0.6.0",
-    "weex-vue-loader": "^0.5.0",
-    "weex-vue-precompiler": "^0.1.17",
-    "weex-vue-render": "^1.0.17"
+    "weex-loader": "^0.7.12",
+    "weex-vue-loader": "^0.7.0",
+    "weex-vue-precompiler": "^0.1.26",
+    "weex-vue-render": "^1.0.36"
   },
   "dependencies": {
     "url-parse": "^1.4.3",

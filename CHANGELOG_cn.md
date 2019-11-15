@@ -1,5 +1,11 @@
 # 升级日志
 
+## 0.7.1
+- [+] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/slider-bar) 新增 `wxcSliderBarTouchEnd` 事件.
+- [!] 修复 [wxc-mask](https://alibaba.github.io/weex-ui/#/cn/packages/mask) 输入时候抖动问题
+- [!] 修复调试时候 console 不显示二维码的问题
+
+
 ## 0.7.0
 - [-] 移除支付宝判断，防止审核问题 [issue/467](https://github.com/alibaba/weex-ui/issues/467)
 - [!] [wxc-tab-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-bar) 增加 `supportXBar` 参数可用于设置不要 iPhone X 底部 bar 的增高兼容效果

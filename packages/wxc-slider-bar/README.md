@@ -31,7 +31,7 @@
         defaultValue: 50,
         disabled: false
       }
-  	});
+  	})
   }
 </script>
 ```
@@ -62,4 +62,5 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 
 ```
 @updateValue="updateValue"
+@wxcSliderBarTouchEnd="wxcSliderBarTouchEnd"
 ```
