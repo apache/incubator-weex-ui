@@ -60,6 +60,13 @@
 ### 事件
 
 - 滑动时候的值更新
+
 ```
 @updateValue="updateValue"
+```
+
+- 滑动停止时候回传指
+
+```
+@wxcSliderBarTouchEnd="wxcSliderBarTouchEnd"
 ```
