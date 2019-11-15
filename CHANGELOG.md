@@ -2,6 +2,7 @@
 
 ## 0.7.1
 - [+] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/slider-bar) add `wxcSliderBarTouchEnd` event.
+- [!] Fixed [wxc-mask](https://alibaba.github.io/weex-ui/#/cn/packages/mask) jitter bug when inputting
 
 ## 0.7.0
 - [-] Remove alipay util,Preventing audit issues [issue/467](https://github.com/alibaba/weex-ui/issues/467)
