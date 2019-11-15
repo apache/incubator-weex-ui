@@ -27,12 +27,13 @@ under the License.
         <div class="demo-container">
           <text class="label">单滑块水平选择条</text>
           <text class="value-text">取值：{{barValue}}</text>
-          <wxc-slider-bar v-bind="sliderBarCfg1" @updateValue="updateValue"></wxc-slider-bar>
+          <wxc-slider-bar v-bind="sliderBarCfg1" @updateValue="updateValue"
+                          @wxcSliderBarTouchEnd="wxcSliderBarTouchEnd"></wxc-slider-bar>
         </div>
         <div class="demo-container">
           <text class="label">双滑块范围水平选择条</text>
           <text class="value-text">取值范围：{{minValue}} --- {{maxValue}}</text>
-          <wxc-slider-bar v-bind="sliderBarCfg2" @updateValue="updateValue"></wxc-slider-bar>
+          <wxc-slider-bar v-bind="sliderBarCfg2" @updateValue="updateValue" @wxcSliderBarTouchEnd="wxcSliderBarTouchEnd"></wxc-slider-bar>
         </div>
         <div class="demo-container">
           <text class="label">单滑块水平选择条禁用</text>
@@ -91,6 +92,8 @@ under the License.
   import { WxcSliderBar } from '../../index';
   import { setTitle } from '../_mods/set-nav';
 
+  const modal = weex.requireModule("modal");
+
   export default {
     components: { Title, Category, WxcSliderBar },
     data: () => ({
@@ -148,6 +151,11 @@ under the License.
           this.minValue = value[0];
           this.maxValue = value[1];
         }
+      },
+      wxcSliderBarTouchEnd(value) {
+        modal.toast({
+          message: `end touch: ${value}`
+        })
       }
     }
   }
