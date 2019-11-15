@@ -55,7 +55,7 @@ under the License.
         default: 0
       },
       left: {
-        default: Number,
+        type: Number,
         default: 0
       },
       hasAnimation: {
