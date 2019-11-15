@@ -59,10 +59,6 @@ under the License.
 
   .wxc-mask {
     position: fixed;
-    top: 300px;
-    left: 60px;
-    width: 702px;
-    height: 800px;
   }
 
   .mask-bottom {
