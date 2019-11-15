@@ -126,7 +126,7 @@ npm run start
 
 感谢给 Weex Ui 贡献代码的你们！
 
-<a href="https://github.com/alibaba/weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg?width=800&button=false"/></a>
+<a href="https://github.com/alibaba/weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg?width=890&button=false"/></a>
 
 ## 协议
 
