@@ -39,6 +39,7 @@ under the License.
       class="slide-block"
       @panstart="webStartHandler"
       @panmove="webMoveHandler1"
+      @panend="webEndHandler"
       @touchstart="weexStartHandler1"
       @touchend="weexEndHandler"
       @horizontalpan="weexHandler1"
@@ -52,6 +53,7 @@ under the License.
       class="slide-block"
       @panstart="webStartHandler"
       @panmove="webMoveHandler2"
+      @panend="webEndHandler"
       @touchstart="weexStartHandler2"
       @touchend="weexEndHandler"
       @horizontalpan="weexHandler2"
@@ -255,7 +257,25 @@ under the License.
       }
     },
     methods: {
-
+      getBlock1Value(callback) {
+        dom.getComponentRect(this.block1, option => {
+          const { left } = option.size;
+          const value = this._getValue(left - this.leftDiffX);
+          if (!this.range) {
+            callback && callback(value)
+          } else {
+            this.selectRange[0] = value;
+            callback && callback(this.selectRange)
+          }
+        });
+      },
+      getBlock2Value(callback) {
+        dom.getComponentRect(this.block2, option => {
+          const { left } = option.size;
+          this.selectRange[1] = this._getValue(left - this.leftDiffX);
+          callback && callback(this.selectRange)
+        });
+      },
       // 更新单选值或最小值
       weexHandler1(e) {
         const self = this;
@@ -264,18 +284,10 @@ under the License.
             self.bindBlock1();
             break;
           case 'move':
-            dom.getComponentRect(this.block1, option => {
-              const { left } = option.size;
-              const value = this._getValue(left - this.leftDiffX);
-              if (!this.range) {
-                this.$emit('updateValue', value);
-              } else {
-                this.selectRange[0] = value;
-                this.$emit('updateValue', this.selectRange);
-              }
-            });
+            this.getBlock1Value((value) => this.$emit('updateValue', value))
             break;
           case 'end':
+            this.getBlock1Value((value) => this.$emit('wxcSliderBarTouchEnd', value))
             break;
           default:
             break;
@@ -291,13 +303,10 @@ under the License.
             self.bindBlock2();
             break;
           case 'move':
-            dom.getComponentRect(this.block2, option => {
-              const { left } = option.size;
-              this.selectRange[1] = this._getValue(left - this.leftDiffX);
-              this.$emit('updateValue', this.selectRange);
-            });
+            self.getBlock2Value(value => this.$emit('updateValue', value));
             break;
           case 'end':
+            self.getBlock2Value(value => this.$emit('wxcSliderBarTouchEnd', value));
             break;
           default:
             break;
@@ -310,16 +319,7 @@ under the License.
           return;
         }
         this.firstInterval = setInterval(() => {
-          dom.getComponentRect(this.block1, option => {
-            const { left } = option.size;
-            const value = this._getValue(left - this.leftDiffX);
-            if (!this.range) {
-              this.$emit('updateValue', value);
-            } else {
-              this.selectRange[0] = value;
-              this.$emit('updateValue', this.selectRange);
-            }
-          });
+          this.getBlock1Value(value => this.$emit('updateValue', value))
         }, this.timeout);
       },
 
@@ -329,11 +329,7 @@ under the License.
         }
         // 由于android端不支持 horizontalpan 的move事件，使用setInterval hack方案
         this.secondInterval = setInterval(() => {
-          dom.getComponentRect(this.block2, option => {
-            const { left } = option.size;
-            this.selectRange[1] = this._getValue(left - this.leftDiffX);
-            this.$emit('updateValue', this.selectRange);
-          });
+          this.getBlock2Value((value) => this.$emit('updateValue', value))
         }, this.timeout);
       },
 
@@ -344,6 +340,11 @@ under the License.
         }
         this.firstInterval && clearInterval(this.firstInterval);
         this.secondInterval && clearInterval(this.secondInterval);
+        if (this.range) {
+          this.getBlock2Value(value => this.$emit('updateValue', value))
+        } else {
+          this.getBlock1Value(value => this.$emit('updateValue', value))
+        }
       },
 
       webStartHandler(e) {
@@ -384,6 +385,17 @@ under the License.
         }
       },
 
+      webEndHandler(e) {
+        if (this.env === 'weex' || this.disabled) {
+          return;
+        }
+        if (!this.range) {
+          this.$emit('wxcSliderBarTouchEnd', this._getValue(this.diffX1));
+        } else {
+          this.selectRange[1] = this._getValue(this.diffX2);
+          this.$emit('wxcSliderBarTouchEnd', this.selectRange);
+        }
+      },
       webMoveHandler2(e) {
         if (this.env === 'weex' || this.disabled) {
           return;
@@ -409,7 +421,6 @@ under the License.
           }
         }
       },
-
       bindBlock1() {
         const self = this;
 
@@ -568,7 +579,6 @@ under the License.
             return value;
           }
         }
-        return;
       },
 
       // 根据x方向偏移量计算value
@@ -593,7 +603,7 @@ under the License.
   }
 
 
-  .range-bar{
+  .range-bar {
     overflow: hidden;
   }
 
