@@ -276,6 +276,16 @@ under the License.
             });
             break;
           case 'end':
+            dom.getComponentRect(this.block1, option => {
+              const { left } = option.size;
+              const value = this._getValue(left - this.leftDiffX);
+              if (!this.range) {
+                this.$emit('wxcSliderBarTouchEnd', value);
+              } else {
+                this.selectRange[0] = value;
+                this.$emit('wxcSliderBarTouchEnd', this.selectRange);
+              }
+            });
             break;
           default:
             break;
@@ -298,6 +308,11 @@ under the License.
             });
             break;
           case 'end':
+            dom.getComponentRect(this.block2, option => {
+              const { left } = option.size;
+              this.selectRange[1] = this._getValue(left - this.leftDiffX);
+              this.$emit('wxcSliderBarTouchEnd', this.selectRange);
+            });
             break;
           default:
             break;
