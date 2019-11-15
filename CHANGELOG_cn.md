@@ -3,6 +3,7 @@
 ## 0.7.1
 - [+] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/slider-bar) 新增 `wxcSliderBarTouchEnd` 事件.
 - [!] 修复 [wxc-mask](https://alibaba.github.io/weex-ui/#/cn/packages/mask) 输入时候抖动问题
+- [!] 修复调试时候 console 不显示二维码的问题
 
 
 ## 0.7.0
