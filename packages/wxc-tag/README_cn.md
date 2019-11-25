@@ -24,8 +24,8 @@
 </script>
 ```
 
-- 更多数据格式可以参考 [demo/data.js](https://github.com/alibaba/weex-ui/blob/master/example/tag/data.js)
-- 更多详细情况可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/tag/index.vue)
+- 更多数据格式可以参考 [demo/data.js](https://github.com/apache/incubator-weex-ui/blob/master/example/tag/data.js)
+- 更多详细情况可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/tag/index.vue)
 
 
 ### 可配置参数

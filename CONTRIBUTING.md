@@ -1,6 +1,6 @@
 ## How to contribute to Weex Ui
 
-**Welcome to create [pull requests](https://github.com/alibaba/weex-ui/compare/) for bugfix, new component, doc, example, suggestion and anything.**
+**Welcome to create [pull requests](https://github.com/apache/incubator-weex-ui/compare/) for bugfix, new component, doc, example, suggestion and anything.**
 
 ## Branch Management
 

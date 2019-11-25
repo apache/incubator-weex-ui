@@ -44,7 +44,7 @@
 <script>
   import { WxcTabBar, Utils } from 'weex-ui';
 
-  // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js
+  // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-bar/config.js
   import Config from './config'
 
   export default {
@@ -70,16 +70,16 @@
 </script>
 
 ```
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-bar/index.vue)
 
 
 ### 可配置参数
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| tab-titles | `Array` |`Y`| `[]` | Tab显示 [配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L7)|
+| tab-titles | `Array` |`Y`| `[]` | Tab显示 [配置](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-bar/config.js#L7)|
 | title-type | `String` |`N`| `icon` | 类型 `icon`/`text`/`iconFont`(注1)|
-| tab-styles | `Array` |`N`| `[]` |  底部 Tab [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
+| tab-styles | `Array` |`N`| `[]` |  底部 Tab [样式配置](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-bar/config.js)|
 | is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时 tab 配置 url 参数即可跳出 |
 | duration | `Number` |`N`| `300` | 页面切换动画的时间 |
 | title-use-slot | `Boolean` |`N`| `false` | 使用 slot 配置底部导航 (注2)|
@@ -92,7 +92,7 @@
 - 在 Weex Ui 0.3.8以后，我们可以使用 iconFont 来代替原有 tab title 中的图片配置，像下面这个配置即可：
 
 ```
- // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L51
+ // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-bar/config.js#L51
  // '&#xe608;' -> '\ue608'
   tabIconFontTitles: [
     {
@@ -106,7 +106,7 @@
     },
     // ....
   ],
-  // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L72
+  // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js#L72
   tabIconFontStyles: {
       bgColor: '#FFFFFF',
       titleColor: '#666666',

@@ -63,7 +63,7 @@
   };
 </script>
 ```
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/city/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/city/index.vue)
 
 
 #### API
@@ -87,7 +87,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
         placeholder: 'Search'
       }
     ```
-- *2：City data configuration，Detailed as CityList can be see in [data.js](https://github.com/alibaba/weex-ui/blob/master/example/city/data.js)
+- *2：City data configuration，Detailed as CityList can be see in [data.js](https://github.com/apache/incubator-weex-ui/blob/master/example/city/data.js)
  
   ```example
     {

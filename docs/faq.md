@@ -104,4 +104,4 @@
  ```
 
 ---- 
-More questions can be found from the [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=), If you find a new bug, Just file a  [issue](https://github.com/alibaba/weex-ui/issues/new).
+More questions can be found from the [issue list](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=), If you find a new bug, Just file a  [issue](https://github.com/apache/incubator-weex-ui/issues/new).

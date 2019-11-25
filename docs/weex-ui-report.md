@@ -4,7 +4,7 @@
 <img src="https://img.alicdn.com/tfs/TB1tkAjk5qAXuNjy1XdXXaYcVXa-200-236.png" width="100"/>
 </p>
 
-> GitHub 地址：[github.com/alibaba/weex-ui](https://github.com/alibaba/weex-ui)
+> GitHub 地址：[github.com/apache/incubator-weex-ui](https://github.com/apache/incubator-weex-ui)
 
 Weex Ui 于去年9月30日开源后，距离今天刚好半年时间，本文打算从 **起源、定位、现状、发展、展望**这5部分来给大家分享 Weex Ui 半年的开源之路。
 

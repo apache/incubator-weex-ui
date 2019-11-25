@@ -7,11 +7,11 @@
   "type": "weex",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alibaba/weex-ui.git"
+    "url": "git+https://github.com/apache/incubator-weex-ui.git"
   },
   "homepage": "https://alibaba.github.io/weex-ui/",
   "bugs": {
-    "url": "https://github.com/alibaba/weex-ui/issues"
+    "url": "https://github.com/apache/incubator-weex-ui/issues"
   },
   "scripts": {
     "build": "npm run build:entry && webpack --progress",

@@ -1,15 +1,15 @@
 # Weex Ui
 [中文](README_cn.md) | [English](README.md)
 
-[![Build Status](https://img.shields.io/travis/alibaba/weex-ui.svg?style=flat-square)](https://travis-ci.org/alibaba/weex-ui)
+[![Build Status](https://img.shields.io/travis/apache/incubator-weex-ui.svg?style=flat-square)](https://travis-ci.org/apache/incubator-weex-ui)
 [![npm](https://img.shields.io/npm/v/weex-ui.svg?maxAge=3600&style=flat-square)](https://www.npmjs.com/package/weex-ui?_blank)
 [![NPM downloads](https://img.shields.io/npm/dm/weex-ui.svg?style=flat-square)](https://npmjs.org/package/weex-ui)
 [![NPM all downloads](https://img.shields.io/npm/dt/weex-ui.svg?style=flat-square)](https://npmjs.org/package/weex-ui)
 [![CNPM all downloads](http://npm.taobao.org/badge/d/weex-ui.svg?style=flat-square)](https://npm.taobao.org/package/weex-ui)
-[![GitHub last commit](https://img.shields.io/github/last-commit/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/commits/dev)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/alibaba/weex-ui.svg?style=flat-square)](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=)
+[![GitHub last commit](https://img.shields.io/github/last-commit/apache/incubator-weex-ui.svg?style=flat-square)](https://github.com/apache/incubator-weex-ui/commits/dev)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/apache/incubator-weex-ui.svg?style=flat-square)](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=)
 [![Package Quality](http://npm.packagequality.com/shield/weex-ui.svg?style=flat-square)](http://packagequality.com/#?package=weex-ui)
-[![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://img.shields.io/gitter/room/alibaba/weex-ui.svg?style=flat-square)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+[![Join the chat at https://gitter.im/alibaba-weex-ui/chat](https://img.shields.io/gitter/room/apache/incubator-weex-ui.svg?style=flat-square)](https://gitter.im/alibaba-weex-ui/chat?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 > A rich interactive, lightweight, high performance UI library based on [Weex](https://github.com/apache/incubator-weex).
 
@@ -97,8 +97,8 @@ npm i babel-preset-stage-0 babel-plugin-component -D
 ### More
 
 * If babel-loader in `webpack.config.js` has a exclude for node_modules, please turn on for week-ui as `exclude: /node_modules(?!(\/|\\).*(weex).*)/`.
-* In order to get the latest features, please focus on the [ChangeLog](https://github.com/alibaba/weex-ui/releases) and often update `weex-ui` to the latest.
-* Many questions can be found from [faq](https://alibaba.github.io/weex-ui/#/faq) and [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=), if you find a new bug, just file a [issue](https://github.com/alibaba/weex-ui/issues/new).
+* In order to get the latest features, please focus on the [ChangeLog](https://github.com/apache/incubator-weex-ui/releases) and often update `weex-ui` to the latest.
+* Many questions can be found from [faq](https://alibaba.github.io/weex-ui/#/faq) and [issue list](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=), if you find a new bug, just file a [issue](https://github.com/apache/incubator-weex-ui/issues/new).
 * More experience in Weex construction can be learned from [Weex + Ui - Weex Conf 2018](https://alibaba.github.io/weex-ui/#/docs/weex-ui-weex-conf-2018) ,welcome to translate it.
 
 ## Development
@@ -120,11 +120,11 @@ Once it has been compiled, a browser window will be opened automatically. You ca
 
 ## Contribution
 
-Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our [Contributing Guide](https://github.com/alibaba/weex-ui/blob/master/CONTRIBUTING.md) before making a pull request.
+Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our [Contributing Guide](https://github.com/apache/incubator-weex-ui/blob/master/CONTRIBUTING.md) before making a pull request.
 
 Thank you to all the people who already contributed to Weex Ui!
 
-<a href="https://github.com/alibaba/weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg"/></a>
+<a href="https://github.com/apache/incubator-weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg"/></a>
 
 ## License
 

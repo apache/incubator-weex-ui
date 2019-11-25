@@ -30,7 +30,7 @@
 
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/button/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/button/index.vue)
 
 ### API
 | Prop | Type | Required | Default | Description |
@@ -44,8 +44,8 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | **`textStyle`** | `Object` | `N` | `{}` | custom style about text （*3） |
 
 - *1：`disabled` will override the default style.
-- *2：Detailed style can be referenced [here](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)
-- *3：Detailed style can be referenced [here](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-button/type.js)
+- *2：Detailed style can be referenced [here](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-button/type.js)
+- *3：Detailed style can be referenced [here](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-button/type.js)
 
 ### Event
 ```

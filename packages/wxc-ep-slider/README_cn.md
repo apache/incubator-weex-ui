@@ -6,7 +6,7 @@
 
 ### 规则
 - 用于丰富 slide，包括商品橱窗，图片列表等 
-- **假如子组件有点击事件，在 Android 由于 [此约束](http://weex-project.io/cn/references/gesture.html#约束)，目前需要在子元素里面绑定对应事件，Weex Ui 提供了 [wxc-pan-cell](https://github.com/alibaba/weex-ui/tree/master/packages/wxc-pan-item) 包裹器来解决此情况，具体可参考 [demo](https://github.com/alibaba/weex-ui/tree/master/example/ep-slider)**
+- **假如子组件有点击事件，在 Android 由于 [此约束](http://weex-project.io/cn/references/gesture.html#约束)，目前需要在子元素里面绑定对应事件，Weex Ui 提供了 [wxc-pan-cell](https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-pan-item) 包裹器来解决此情况，具体可参考 [demo](https://github.com/apache/incubator-weex-ui/tree/master/example/ep-slider)**
 - 支持滑到最右时候显示加载更多和事件回调，需要传入 `pull-more` slot，详细可见 demo
 
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/ep-slider/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Fep-slider%2Findex.weex.js)
@@ -90,7 +90,7 @@
 </script>
 ```
 
-更多详细情况可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/ep-slider/index.vue)
+更多详细情况可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/ep-slider/index.vue)
 
 ### 可配置参数
 
@@ -106,7 +106,7 @@
 
 ### 渲染滑到最右时候的加载更多
 ```
-// 样式需要自己根据个数和长度计算，详细参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/ep-slider/index.vue) 代码
+// 样式需要自己根据个数和长度计算，详细参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/ep-slider/index.vue) 代码
 <div class="more-slider" 
      slot="pull-more" 
      :style="{left: `${cardLength * (cardSize.width + cardSize.spacing)+60}px`,marginLeft:`${(750 - cardSize.width) / 2}px`}">

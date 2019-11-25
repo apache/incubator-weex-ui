@@ -4,7 +4,7 @@
   "description": "Weex蒙层组件，可以设置蒙层透明度,同时可以设置弹出动画",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-overlay",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-overlay",
   "keywords": [
     "Weex",
     "Vue",

@@ -104,4 +104,4 @@
  ```
     
 -----
-更多问题可以通过 [issue 列表](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=)查找，假如有新问题，可以给我们提 [issue](https://github.com/alibaba/weex-ui/issues/new)。
+更多问题可以通过 [issue 列表](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=)查找，假如有新问题，可以给我们提 [issue](https://github.com/apache/incubator-weex-ui/issues/new)。

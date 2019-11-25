@@ -8,8 +8,8 @@
 
 ### Rule
 - Allow configuration of the head, support `Binding` gesture to follow the effect.
-- Commonly used in Tab switch pages, currently supports **icon 、text and iconFont** form the top bar, You can see in [here](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
-- If the child element has click event, **because of the [reason](http://weex-project.io/cn/references/gesture.html#约束) in android**, You now need to bind the expression event in child element, Weex Ui has provided [wxc-pan-cell](https://github.com/alibaba/weex-ui/tree/master/packages/wxc-pan-item) to solve this issue，you can see more in [here](https://github.com/alibaba/weex-ui/tree/master/example/tab-page).
+- Commonly used in Tab switch pages, currently supports **icon 、text and iconFont** form the top bar, You can see in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js)
+- If the child element has click event, **because of the [reason](http://weex-project.io/cn/references/gesture.html#约束) in android**, You now need to bind the expression event in child element, Weex Ui has provided [wxc-pan-cell](https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-pan-item) to solve this issue，you can see more in [here](https://github.com/apache/incubator-weex-ui/tree/master/example/tab-page).
 - Support the **tab center style**, You need set `leftOffset` in `tabStyles` with the correct value.
  
 
@@ -79,7 +79,7 @@
   const dom = weex.requireModule('dom');
   import { WxcTabPage, WxcPanItem, Utils, BindEnv } from 'weex-ui';
 
-  // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js
+  // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js
   import Config from './config'
 
   export default {
@@ -117,16 +117,16 @@
 </script>
 
 ```
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/index.vue)
 
 
 ### API
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| tab-titles | `Array` |`Y`| `[]` | Tab list [config](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L7)|
+| tab-titles | `Array` |`Y`| `[]` | Tab list [config](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js#L7)|
 | title-type | `String` |`N`| `icon` | title type `icon`/`text`/`iconFont`(*1)|
-| tab-styles | `Object` |`N`| `{}` | [style config](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
+| tab-styles | `Object` |`N`| `{}` | [style config](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js)|
 | tab-page-height | `Number` |`N`| `1334` | Tab page height |
 | is-tab-view | `Boolean` |`N`| `true` |if set `false`,add tab-titles config with `url` can be jumped out|
 | pan-dist | `Number` |`N`| `200` | how many scrolls to switch to the next screen|
@@ -142,7 +142,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 ### *1: Using iconFont
 - After Weex Ui version about `0.3.8`, we can use `iconFont` to represent our title image, you can use like this:
 ```
- // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L67
+ // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js#L67
  // '&#xe608;' -> '\ue608'
   tabTitles: [
     {
@@ -156,7 +156,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
     },
     // .... more
   ],
-  // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L87
+  // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js#L87
   tabIconFontStyles: {
       bgColor: '#FFFFFF',
       titleColor: '#666666',
@@ -206,7 +206,7 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 
 ## Immersive full screen `WxcFullPage` components
 1. Import：` import { WxcFullPage} from 'weex-ui';`
-2. Params are consistent with `wxcTabPage`,more you can see [【demo/full-page】](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/full-page/)
+2. Params are consistent with `wxcTabPage`,more you can see [【demo/full-page】](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/full-page/)
 3. It is recommended to hide the head navigation bar for use，also can use[wxc-slide-nav](https://alibaba.github.io/weex-ui/#/packages/wxc-slide-nav/)
 
 

@@ -4,7 +4,7 @@
   "description": "Weex版本的通知栏，在导航栏下方，一般用作系统提醒、活动提醒等通知。",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-noticebar",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-noticebar",
   "keywords": [
     "Weex",
     "Vue",

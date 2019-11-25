@@ -4,5 +4,5 @@
 
 > <span style="line-height:1.8rem;font-weight:400;font-size:1.3rem">A rich interaction, lightweight, high performance UI library.<span>
 
-[Star Me](https://github.com/alibaba/weex-ui)
+[Star Me](https://github.com/apache/incubator-weex-ui)
 [Get Started](#weex-ui)

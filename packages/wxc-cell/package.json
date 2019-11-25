@@ -4,7 +4,7 @@
   "description": "一个简单的Weex表单展示组件,单元格，可用作展示列表信息、链接或者表单等",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-cell",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-cell",
   "keywords": [
     "Weex",
     "Vue",

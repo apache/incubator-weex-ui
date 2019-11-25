@@ -99,14 +99,14 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/rich-text/index.vue)
 
 
 ### API
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| config-list | `Array` |`Y`| `[]` | config list eg:[Demo](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue#L78)|
+| config-list | `Array` |`Y`| `[]` | config list eg:[Demo](https://github.com/apache/incubator-weex-ui/blob/master/example/rich-text/index.vue#L78)|
 | has-text-margin | `Boolean` |`N`| 'true' | whether has text margin|
 
 

@@ -44,7 +44,7 @@
 <script>
   import { WxcTabBar, Utils } from 'weex-ui';
 
-  // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js
+  // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-bar/config.js
   import Config from './config'
 
   export default {
@@ -70,16 +70,16 @@
 </script>
 
 ```
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-bar/index.vue)
 
 
 ### API
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| tab-titles | `Array` |`Y`| `[]` | Tab list [config](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L7)|
+| tab-titles | `Array` |`Y`| `[]` | Tab list [config](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-bar/config.js#L7)|
 | title-type | `String` |`N`| `icon` | type `icon`/`text`/`iconFont` (*1)|
-| tab-styles | `Array` |`N`| `[]` |  bottom Tab [config](https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js)|
+| tab-styles | `Array` |`N`| `[]` |  bottom Tab [config](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-bar/config.js)|
 | is-tab-view | `Boolean` |`N`| `true` |if set `false`,add tab-titles config with `url` can be jumped out |
 | title-use-slot | `Boolean` |`N`| `false` | configure title using `slot` (*2)|
 | duration | `Number` |`N`| `300` | page slider time of animation |
@@ -90,7 +90,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 ### *1: Using iconFont
 - After Weex Ui version about `0.3.8`, we can use `iconFont` to represent our title image, you can use like this:
 ```
- // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L51
+ // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-bar/config.js#L51
  // '&#xe608;' -> '\ue608'
   tabIconFontTitles: [
     {
@@ -104,7 +104,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
     },
    // .... more
   ],
-  // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L72
+  // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js#L72
   tabIconFontStyles: {
       bgColor: '#FFFFFF',
       titleColor: '#666666',

@@ -87,7 +87,7 @@
 
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/page-calendar/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/page-calendar/index.vue)
 
 
 ### Api
@@ -100,7 +100,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | selected-note | `Array` |`N`| `['开始', '到达', '往返']` | selected note |
 | desc-list | `Array` |`N`| `[{}]` | desc info |
 | show-header | `Boolean` |`N`| `false` | whether show minibar in native |
-| minibar-cfg | `Object` |`N`| `{}` | [minibar config](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-page-calendar/index.vue#L65)|
+| minibar-cfg | `Object` |`N`| `{}` | [minibar config](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-page-calendar/index.vue#L65)|
 | animation-type | `String` | `N` | `push` | Support model or push type|
 | selected-cell-style | `Object` | `N` | `{}` |Cover the selected cell style|
 | selected-text-style | `Object` | `N` | `{}` |Cover the selected text style|

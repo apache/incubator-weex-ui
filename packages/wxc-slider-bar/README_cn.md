@@ -36,7 +36,7 @@
   }
 </script>
 ```
-更多 Demo 详细可以查看 [这里](https://github.com/alibaba/weex-ui/blob/master/example/slider-bar/index.vue)
+更多 Demo 详细可以查看 [这里](https://github.com/apache/incubator-weex-ui/blob/master/example/slider-bar/index.vue)
 
 ### 可配置参数
 

@@ -36,7 +36,7 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/slider-bar/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/slider-bar/index.vue)
 
 ### API
 

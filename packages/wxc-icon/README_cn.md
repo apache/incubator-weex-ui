@@ -23,7 +23,7 @@
 </script>
 
 ```
-更详细代码可以参考 [这里](https://github.com/alibaba/weex-ui/blob/master/icon/loading/index.vue)
+更详细代码可以参考 [这里](https://github.com/apache/incubator-weex-ui/blob/master/icon/loading/index.vue)
 
 同时你可以从 [demo](https://h5.m.taobao.com/trip/wx-detection-demo/icon/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Ficon%2Findex.weex.js) 进行复制 name
 

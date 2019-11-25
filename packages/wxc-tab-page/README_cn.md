@@ -10,7 +10,7 @@
 
 ### 规则
 - 允许对头部进行配置，支持 Binding 手势跟随效果
-- 常用于 Tab 切换页面，目前支持**icon、text、iconFont**形式的顶栏,详细可见[config.js](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)
+- 常用于 Tab 切换页面，目前支持**icon、text、iconFont**形式的顶栏,详细可见[config.js](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js)
 - **Android 由于 [点击事件和滑动手势冲突约束](http://weex-project.io/cn/references/gesture.html#约束)，需在子元素上绑定对应事件，可通过`wxc-pan-item`解决此问题，同时记得在`wxcPanItemPan`回调中处理 Android 事件**
 - 支持**居中形式 Tab**，将 tabStyles 中的 leftOffset 配置合适的值即可
  
@@ -80,7 +80,7 @@
   const dom = weex.requireModule('dom');
   import { WxcTabPage, WxcPanItem, Utils, BindEnv } from 'weex-ui';
 
-  // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js
+  // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js
   import Config from './config'
 
   export default {
@@ -118,15 +118,15 @@
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/index.vue)
 
 ### 可配置参数
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
-| tab-titles | `Array` |`Y`| `[]` | 顶部 [显示配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L7)|
+| tab-titles | `Array` |`Y`| `[]` | 顶部 [显示配置](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js#L7)|
 | title-type | `String` |`N`| `icon` | 顶部类型 `icon`/`text`/`iconFont` (注1)|
-| tab-styles | `Object` |`N`| `{}` | 顶部 [样式配置](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js)|
+| tab-styles | `Object` |`N`| `{}` | 顶部 [样式配置](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js)|
 | tab-page-height | `Number` |`N`| `1334` | Tab page 页面的高度 |
 | is-tab-view | `Boolean` |`N`| `true` |当设置为`false`，同时 tab 配置 url 参数即可跳出|
 | pan-dist | `Number` |`N`| `200` | 滚动多少切换上下一屏幕|
@@ -144,7 +144,7 @@
 - 在 Weex Ui 0.3.8以后，我们可以使用 iconFont 来代替原有 tab title 中的图片配置，像下面这个配置即可：
  
 ```
- // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js#L67
+ // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-bar/config.js#L67
  // '&#xe608;' -> '\ue608'
   tabTitles: [
     {
@@ -158,7 +158,7 @@
     }
     // ....
   ],
-  // https://github.com/alibaba/weex-ui/blob/master/example/tab-page/config.js#L87
+  // https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/config.js#L87
   tabIconFontStyles: {
       bgColor: '#FFFFFF',
       titleColor: '#666666',
@@ -205,7 +205,7 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 
 ## 沉浸式全屏的 FullPage 的使用
 1. 引入：` import { WxcFullPage} from 'weex-ui';`
-2. 参数形式和 wxcTabPage 保持一致，详细可见 [【demo】](https://github.com/alibaba/weex-ui/blob/master/example/tab-page/full-page/)
+2. 参数形式和 wxcTabPage 保持一致，详细可见 [【demo】](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/full-page/)
 3. 建议隐藏头部导航栏使用，同时可以结合 [wxc-slide-nav](https://alibaba.github.io/weex-ui/#/packages/wxc-slide-nav/) 使用
 
 ## wxc-pan-item 的使用

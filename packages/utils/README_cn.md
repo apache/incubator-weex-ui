@@ -17,4 +17,4 @@
   // import { BindEnv } from 'weex-ui';
 </script>
 ```
-更详细代码和文档可以参考 [utils](https://github.com/alibaba/weex-ui/blob/master/packages/utils)
+更详细代码和文档可以参考 [utils](https://github.com/apache/incubator-weex-ui/blob/master/packages/utils)

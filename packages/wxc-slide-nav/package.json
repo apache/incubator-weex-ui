@@ -4,7 +4,7 @@
   "description": "导航滑动组件",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-slide-nav",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-slide-nav",
   "keywords": [
     "wxc-slide-nav"
   ],
