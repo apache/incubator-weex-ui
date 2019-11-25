@@ -124,7 +124,7 @@ Want to file a bug, contribute some code, or improve documentation? Excellent! R
 
 Thank you to all the people who already contributed to Weex Ui!
 
-<a href="https://github.com/apache/incubator-weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg"/></a>
+<a href="https://github.com/apache/incubator-weex-ui/graphs/contributors"><img src="https://opencollective.com/weex-ui/contributors.svg?width=890&button=false"/></a>
 
 ## License
 
