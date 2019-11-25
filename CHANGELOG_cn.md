@@ -1,5 +1,9 @@
 # 升级日志
 
+## 0.8.0
+- [!]从 alibaba/weex-ui 迁移到 [apcahe/incubator-weex-ui](https://github.com/apache/incubator-weex-ui) 
+
+
 ## 0.7.1
 - [+] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/slider-bar) 新增 `wxcSliderBarTouchEnd` 事件.
 - [!] 修复 [wxc-mask](https://alibaba.github.io/weex-ui/#/cn/packages/mask) 输入时候抖动问题

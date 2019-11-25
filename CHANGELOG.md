@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.8.0
+- [!]From alibaba/weex-ui to [apcahe/incubator-weex-ui](https://github.com/apache/incubator-weex-ui) 
+
 ## 0.7.1
 - [+] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/slider-bar) add `wxcSliderBarTouchEnd` event.
 - [!] Fixed [wxc-mask](https://alibaba.github.io/weex-ui/#/cn/packages/mask) jitter bug when inputting.
