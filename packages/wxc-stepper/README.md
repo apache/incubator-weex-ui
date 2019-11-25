@@ -60,7 +60,7 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/stepper/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/stepper/index.vue)
 
 
 ### API

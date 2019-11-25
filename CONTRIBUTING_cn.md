@@ -1,6 +1,6 @@
 ## 怎么给 Weex Ui 贡献代码
 
-**欢迎大家给 Weex Ui 提交 [pull requests](https://github.com/alibaba/weex-ui/compare/) 来修复 Bug、新增组件、完善文档案例已经任何优化建议都可以的**。
+**欢迎大家给 Weex Ui 提交 [pull requests](https://github.com/apache/incubator-weex-ui/compare/) 来修复 Bug、新增组件、完善文档案例已经任何优化建议都可以的**。
 
 ## Branch 管理
 

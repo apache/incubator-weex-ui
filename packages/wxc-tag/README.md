@@ -24,7 +24,7 @@
 </script>
 ```
 
-- More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/tag/index.vue) and [demo/data.js](https://github.com/alibaba/weex-ui/blob/master/example/tag/data.js).
+- More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/tag/index.vue) and [demo/data.js](https://github.com/apache/incubator-weex-ui/blob/master/example/tag/data.js).
 
 
 ### API

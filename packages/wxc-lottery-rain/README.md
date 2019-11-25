@@ -59,7 +59,7 @@
 
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/lottery-rain/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/lottery-rain/index.vue)
 
 
 ### API
@@ -67,7 +67,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
 | pic-list | `Array` |`Y`| `[]` | a group of cat pictures|
-| config | `Object` |`N`| `{}` |  [game config](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-lottery-rain/libs/config.js) |
+| config | `Object` |`N`| `{}` |  [game config](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-lottery-rain/libs/config.js) |
 | wrap-style | `Object` |`N`| `{}` | wrap style |
 
 ### Caught Event

@@ -25,4 +25,4 @@
     </tr>
 </table>
 
-[Welcome to add your App !](https://github.com/alibaba/weex-ui/edit/master/docs/who_use.md)
+[Welcome to add your App !](https://github.com/apache/incubator-weex-ui/edit/master/docs/who_use.md)

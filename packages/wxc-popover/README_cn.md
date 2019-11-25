@@ -32,7 +32,7 @@
 
   const modal = weex.requireModule('modal');
 
-  // https://github.com/alibaba/weex-ui/blob/master/example/popover/type.js
+  // https://github.com/apache/incubator-weex-ui/blob/master/example/popover/type.js
   import { RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
 
   export default {
@@ -71,7 +71,7 @@
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/popover/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/popover/index.vue)
 
 ### 可配置参数
 

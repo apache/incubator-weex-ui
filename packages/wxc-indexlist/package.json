@@ -4,7 +4,7 @@
   "description": " 一个Weex版本索引列表组件,可以通过索引快速定位,常用于联系人列表、城市列表的基础组件",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-indexlist",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-indexlist",
   "keywords": [
     "Weex",
     "Vue",

@@ -34,7 +34,7 @@
 
   const modal = weex.requireModule('modal');
 
-  // https://github.com/alibaba/weex-ui/blob/master/example/popover/type.js
+  // https://github.com/apache/incubator-weex-ui/blob/master/example/popover/type.js
   import { RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
 
   export default {
@@ -73,7 +73,7 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/popover/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/popover/index.vue)
 
 ### API
 

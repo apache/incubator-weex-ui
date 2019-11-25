@@ -24,7 +24,7 @@
 
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/icon/loading/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/icon/loading/index.vue)
 
 Also you can copy the `name` from [demo](https://h5.m.taobao.com/trip/wx-detection-demo/icon/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Ficon%2Findex.weex.js)
 

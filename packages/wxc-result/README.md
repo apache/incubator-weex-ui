@@ -4,7 +4,7 @@
 
 ### Rule
   - Used for error pages to reduce user anxiety.
-  - You can configure this [type.js#L5](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L5) for custom errors
+  - You can configure this [type.js#L5](https://github.com/apache/incubator-weex-ui/blob/master/example/result/type.js#L5) for custom errors
 
 
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/result/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Fresult%2Findex.weex.js)
@@ -38,7 +38,7 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/result/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/result/index.vue)
 
 
 ### API
@@ -48,7 +48,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | type | `String` |`N`| `errorPage`|`errorPage、noNetwork、noGoods、errorLocation`|
 | show | `Boolean` |`N`| `true` | whether to show |
 | padding-top | `Number` |`N`| `240` | padding top from screen |
-| custom-set | `Object` |`N`| `{}` |custom config [type.js#L4](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L4)|
+| custom-set | `Object` |`N`| `{}` |custom config [type.js#L4](https://github.com/apache/incubator-weex-ui/blob/master/example/result/type.js#L4)|
 | wrap-style | `Object` | `N`|`{}` | custom wrap style|
 
 ### Custom Config

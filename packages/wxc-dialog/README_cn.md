@@ -66,7 +66,7 @@
 
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/dialog/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/dialog/index.vue)
 
 ### 可配置参数
 

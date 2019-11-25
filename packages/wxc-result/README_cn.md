@@ -4,7 +4,7 @@
 
 ### 规则
   - 用于出错的页面，减少用户焦虑感
-  - 配置 [type.js#L5](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L5) 来定制化
+  - 配置 [type.js#L5](https://github.com/apache/incubator-weex-ui/blob/master/example/result/type.js#L5) 来定制化
 
 
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/result/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Fresult%2Findex.weex.js)
@@ -39,7 +39,7 @@
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/result/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/result/index.vue)
 
 
 ### 可配置参数
@@ -49,7 +49,7 @@
 | type | `String` |`N`| `errorPage`|`errorPage、noNetwork、noGoods、errorLocation`|
 | show | `Boolean` |`N`| `true` | 是否显示 |
 | padding-top | `Number` |`N`| `240` | 图案距离顶部高度 |
-| custom-set | `Object` |`N`| `{}` | 自定义覆盖 [type.js#L4](https://github.com/alibaba/weex-ui/blob/master/example/result/type.js#L4)|
+| custom-set | `Object` |`N`| `{}` | 自定义覆盖 [type.js#L4](https://github.com/apache/incubator-weex-ui/blob/master/example/result/type.js#L4)|
 | wrap-style | `Object` | `N`|`{}` | 外层 wrap 样式自定义 |
 
 ### 自定义配置案例

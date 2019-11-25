@@ -1,12 +1,12 @@
 ## Weex + Ui - Weex Conf 2018
 
-*Welcome to [translate](https://github.com/alibaba/weex-ui/blob/master/docs/weex-ui-weex-conf-2018.md) this article.*
+*Welcome to [translate](https://github.com/apache/incubator-weex-ui/blob/master/docs/weex-ui-weex-conf-2018.md) this article.*
 
 本文是2018年 Weex Conf 中议题《Weex + Ui》的内容文档整理，主要给大家介绍飞猪 Weex 技术体系从无到有的过程，包括 Weex Ui 组件库的开发和发展，重点分享在 Weex Ui 层建设的一些经验。
 
 文章较长，首先放上 Weex Ui 的开源地址，欢迎大家提PR，同时也可以通过 Star 来表示你的喜欢。
 
-> <https://github.com/alibaba/weex-ui>
+> <https://github.com/apache/incubator-weex-ui>
 
 ## Why Weex ?
 
@@ -102,7 +102,7 @@ Weex 其实很好的解决了上述的一些问题，包括在飞猪、手淘、
 
 #### Weex Ui 一览
 
-经过一年多的建设，我们一步一步将 [Weex Ui](https://github.com/alibaba/weex-ui) 优化，整理，最终于20170930进行了开源，通过下图可以看到 Weex Ui 是怎么来的
+经过一年多的建设，我们一步一步将 [Weex Ui](https://github.com/apache/incubator-weex-ui) 优化，整理，最终于20170930进行了开源，通过下图可以看到 Weex Ui 是怎么来的
 
 <img src="https://gw.alipayobjects.com/zos/rmsportal/HbThsElNGBLMMRbbTxyx.jpeg" width="800"/>
 
@@ -172,7 +172,7 @@ Weex 其实也是支持无障碍的，也即让盲人在最短的时间内通过
 
 同时外部开发者也急需要一套成熟组件库来提高开发效率。
 
-> <https://github.com/alibaba/weex-ui>
+> <https://github.com/apache/incubator-weex-ui>
 
 从20170930开始，我们一直在弄Weex Ui 的开源发展，包括共建 weex-toolkit 让其更好支持Weex Ui、欠缺组件的补全 + 现有组件的增强、继续扩展边界 + 轻舟解决方案 UI 库、引入更多富交互体验 + 组件的无障碍优化、简易的使用方式 + 详细的中英文档等等工作。
 
@@ -212,5 +212,5 @@ Weex 其实也是支持无障碍的，也即让盲人在最短的时间内通过
 
 - 本次分享PDF文件: [《 Weex + Ui 》](http://p.tb.cn/rmsportal_7819_Weex_20_2B_20UI_20_20_20Weex_20Conf_20_E9_A3_9E_E7_8C_AA_20_E4_BE_91_E5_A4_95.pdf)
 - 官网地址：<https://alibaba.github.io/weex-ui>
-- Github地址：<https://github.com/alibaba/weex-ui>
+- Github地址：<https://github.com/apache/incubator-weex-ui>
 - 云相册直播地址：<http://v.alltuu.com/album?id=1004641019>

@@ -4,7 +4,7 @@
   "description": "一个提供关闭按钮的Weex Mask弹窗组件，可以定制content里面的内容。",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-mask",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-mask",
   "keywords": [
     "Weex",
     "Vue",

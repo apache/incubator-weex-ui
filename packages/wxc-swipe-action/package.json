@@ -4,7 +4,7 @@
   "description": "Weex侧滑列表",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-simple-flow",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-simple-flow",
   "keywords": [
     "Weex",
     "Vue",

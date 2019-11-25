@@ -50,7 +50,7 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/popup/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/popup/index.vue)
 
 ### API
 
@@ -63,7 +63,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | popup-color | `String` |`N`| `#FFFFFF` | background color |
 | stand-out | `Number` |`N`| `0` | stand out offset |
 | animation | `Object` |`N`| `{timingFunction: 'ease-in'}` | animation timing function |
-| overlay-cfg | `Object` |`N`| `{}` | [wxc-overlay config](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md)|
+| overlay-cfg | `Object` |`N`| `{}` | [wxc-overlay config](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-overlay/README.md)|
 
 ### Event
 

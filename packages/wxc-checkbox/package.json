@@ -4,7 +4,7 @@
   "description": "Weex复选框组件，支持单个和列表checkbox的设置",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-checkbox",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-checkbox",
   "keywords": [
     "Weex",
     "Vue",

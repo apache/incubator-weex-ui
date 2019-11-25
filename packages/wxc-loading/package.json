@@ -4,7 +4,7 @@
   "description": "Weex版本的loading组件，支持设置loading类型",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-loading",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-loading",
   "keywords": [
     "Weex",
     "Vue",
