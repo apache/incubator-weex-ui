@@ -5,120 +5,120 @@
 
 
 ## 0.7.1
-- [+] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/slider-bar) 新增 `wxcSliderBarTouchEnd` 事件.
-- [!] 修复 [wxc-mask](https://alibaba.github.io/weex-ui/#/cn/packages/mask) 输入时候抖动问题
+- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/slider-bar) 新增 `wxcSliderBarTouchEnd` 事件.
+- [!] 修复 [wxc-mask](https://apache.github.io/incubator-weex-ui/#/cn/packages/mask) 输入时候抖动问题
 - [!] 修复调试时候 console 不显示二维码的问题
 
 
 ## 0.7.0
 - [-] 移除支付宝判断，防止审核问题 [issue/467](https://github.com/apache/incubator-weex-ui/issues/467)
-- [!] [wxc-tab-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-bar) 增加 `supportXBar` 参数可用于设置不要 iPhone X 底部 bar 的增高兼容效果
+- [!] [wxc-tab-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-bar) 增加 `supportXBar` 参数可用于设置不要 iPhone X 底部 bar 的增高兼容效果
 
 
 ## 0.6.16
-- [+] [wxc-pan-item](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-pan-item/) 滑动时候新增 `extId` 回调  [issue/441](https://github.com/apache/incubator-weex-ui/issues/441)
+- [+] [wxc-pan-item](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-pan-item/) 滑动时候新增 `extId` 回调  [issue/441](https://github.com/apache/incubator-weex-ui/issues/441)
 
 ## 0.6.15
-- [!] 解决[wxc-swipe-action](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-swipe-action/)删除最后一个数据项，再点击其他项动画报错
-- [!] [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/)组件 动态给value赋值后，再滑动返回值错乱
-- [!] [wxc-radio](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-radio/)组件修改list array时无法修改选中项
+- [!] 解决[wxc-swipe-action](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-swipe-action/)删除最后一个数据项，再点击其他项动画报错
+- [!] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/)组件 动态给value赋值后，再滑动返回值错乱
+- [!] [wxc-radio](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-radio/)组件修改list array时无法修改选中项
 
 ## 0.6.14
-- [!] [wxc-swipe-action](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-swipe-action/)添加slot标签，扩展styles和height属性
+- [!] [wxc-swipe-action](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-swipe-action/)添加slot标签，扩展styles和height属性
 
 ## 0.6.13
-- [!] 修复[wxc-overlay](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-dialog/)在[wxc-tab-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-bar/)上使用问题
-- [+] 添加[wxc-swipe-action](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-swipe-action/)侧滑组件
-- [!] 修复[wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 设置display样式问题，添加isHighlight属性控制button是否高亮显示
+- [!] 修复[wxc-overlay](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-dialog/)在[wxc-tab-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-bar/)上使用问题
+- [+] 添加[wxc-swipe-action](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-swipe-action/)侧滑组件
+- [!] 修复[wxc-button](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-button/) 设置display样式问题，添加isHighlight属性控制button是否高亮显示
 
 ## 0.6.12
-- [!] 修复 [wxc-lightbox](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-lightbox/) 设置透明度问题
-- [!] 修复 [wxc-mask](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-mask/) 设置透明度问题
-- [!] 修复 [wxc-special-rich-text](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-rich-text/) 不能单击，组件不能修改内部样式的问题
-- [!] 修复 [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 单击没有高亮显示问题
+- [!] 修复 [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-lightbox/) 设置透明度问题
+- [!] 修复 [wxc-mask](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-mask/) 设置透明度问题
+- [!] 修复 [wxc-special-rich-text](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-rich-text/) 不能单击，组件不能修改内部样式的问题
+- [!] 修复 [wxc-button](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-button/) 单击没有高亮显示问题
 
 ## 0.6.11
-- [!] 修复 [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 动态修改 disabled 时候抖动问题
-- [!] 修复 [wxc-stepper](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-stepper/) line-height 对其问题
-- [!] 修复 [wxc-ep-slider](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) loopedIndex 取余问题
+- [!] 修复 [wxc-button](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-button/) 动态修改 disabled 时候抖动问题
+- [!] 修复 [wxc-stepper](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-stepper/) line-height 对其问题
+- [!] 修复 [wxc-ep-slider](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-ep-slider/) loopedIndex 取余问题
 
 ## 0.6.10
 
-- [!] 修复 [wxc-popover](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popover/) 在 Web 环境报 `lines` 的错误 [issue/384](https://github.com/apache/incubator-weex-ui/issues/384)
-- [!] 修复[wxc-city](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-city/) 搜索时候 sourceData 的 warning 问题 [issue/382](https://github.com/apache/incubator-weex-ui/issues/390)
-- [!]修复[wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 组件 btnStyle 在有 size 设置时候不可覆盖的问题 [issue/382](https://github.com/apache/incubator-weex-ui/issues/390)
+- [!] 修复 [wxc-popover](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-popover/) 在 Web 环境报 `lines` 的错误 [issue/384](https://github.com/apache/incubator-weex-ui/issues/384)
+- [!] 修复[wxc-city](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-city/) 搜索时候 sourceData 的 warning 问题 [issue/382](https://github.com/apache/incubator-weex-ui/issues/390)
+- [!]修复[wxc-button](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-button/) 组件 btnStyle 在有 size 设置时候不可覆盖的问题 [issue/382](https://github.com/apache/incubator-weex-ui/issues/390)
 - [+] 新增 Weex 和 Bindingx 官方钉钉群
 
 ## 0.6.9
 
-- [!] 修复 [wxc-loading](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-loading/) 组件的 Bug，当 need-mask 为 false 时候
-- [-] 移除文档 [with-weex-toolkit](https://alibaba.github.io/weex-ui/#/cn/with-weex-toolkit) 中对最新版本的 weex-toolkit 特殊的处理
+- [!] 修复 [wxc-loading](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-loading/) 组件的 Bug，当 need-mask 为 false 时候
+- [-] 移除文档 [with-weex-toolkit](https://apache.github.io/incubator-weex-ui/#/cn/with-weex-toolkit) 中对最新版本的 weex-toolkit 特殊的处理
 
 ## 0.6.8
 
-- [+][wxc-tab-page](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 支持 tab-item 更多的参数设置，详细可见[文档](<(https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/)>)
-- [+][wxc-lightbox](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 支持设置 index 和 interval
-- [!][wxc-rich-text](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-rich-text/) 中 wxc-special-rich-text 移除之前兼容 ios 的老逻辑
+- [+][wxc-tab-page](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-page/) 支持 tab-item 更多的参数设置，详细可见[文档](<(https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-page/)>)
+- [+][wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-page/) 支持设置 index 和 interval
+- [!][wxc-rich-text](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-rich-text/) 中 wxc-special-rich-text 移除之前兼容 ios 的老逻辑
 
 ## 0.6.7
 
 - [!] Loading 位置属性修改，防止多个时候的重叠 [pull/323](https://github.com/apache/incubator-weex-ui/pull/323)
 - [!] 文档英语语法修正 [pull/329](https://github.com/apache/incubator-weex-ui/pull/329)、[pull/330](https://github.com/apache/incubator-weex-ui/pull/330)
-- [+][utils](https://alibaba.github.io/weex-ui/#/packages/utils/) 中新增 iPhoneXS Max/ iPhoneXR 判断方法 [pull/337](https://github.com/apache/incubator-weex-ui/pull/337)
+- [+][utils](https://apache.github.io/incubator-weex-ui/#/packages/utils/) 中新增 iPhoneXS Max/ iPhoneXR 判断方法 [pull/337](https://github.com/apache/incubator-weex-ui/pull/337)
 - [!] 升级 npm querystringify、url-parse 对应版本号 [pull/329](https://github.com/apache/incubator-weex-ui/pull/329)
-- [+][wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 新增绿色主题 [pull/291](https://github.com/apache/incubator-weex-ui/pull/291)
-- [+][wxc-indexlist](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-indexlist/) 新增 `need-animation` 参数来 disable 锚点动画 [issue/341](https://github.com/apache/incubator-weex-ui/issues/341)
-- [!] 修复 [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) Android 下拖动滑块后禁用仍然可以拖动滑块 [issue/331](https://github.com/apache/incubator-weex-ui/issues/331)
-- [+][wxc-minibar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-minibar/) 新增 bar-style 可用来自定义参数 [issue/326](https://github.com/apache/incubator-weex-ui/issues/326)
+- [+][wxc-button](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-button/) 新增绿色主题 [pull/291](https://github.com/apache/incubator-weex-ui/pull/291)
+- [+][wxc-indexlist](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-indexlist/) 新增 `need-animation` 参数来 disable 锚点动画 [issue/341](https://github.com/apache/incubator-weex-ui/issues/341)
+- [!] 修复 [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) Android 下拖动滑块后禁用仍然可以拖动滑块 [issue/331](https://github.com/apache/incubator-weex-ui/issues/331)
+- [+][wxc-minibar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-minibar/) 新增 bar-style 可用来自定义参数 [issue/326](https://github.com/apache/incubator-weex-ui/issues/326)
 
 ## 0.6.6
 
-- [!] 修复 [wxc-tab-page](https://alibaba.github.io/weex-ui/#/packages/wxc-tab-page/) 中 Padding 不存在时候的报错 [issue/320](https://github.com/apache/incubator-weex-ui/issues/320)
-- [!] 修复 [wxc-popup](https://alibaba.github.io/weex-ui/#/packages/wxc-popup/) 组件传入的 standOut 值为字符串 bug [issue/319](https://github.com/apache/incubator-weex-ui/issues/319)
+- [!] 修复 [wxc-tab-page](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-page/) 中 Padding 不存在时候的报错 [issue/320](https://github.com/apache/incubator-weex-ui/issues/320)
+- [!] 修复 [wxc-popup](https://apache.github.io/incubator-weex-ui/#/packages/wxc-popup/) 组件传入的 standOut 值为字符串 bug [issue/319](https://github.com/apache/incubator-weex-ui/issues/319)
 
 ## 0.6.5
 
-- [+][`wxc-button`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) 支持设置 disabled 样式进行覆盖
-- [!] 修复 [`wxc-rich-text`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-rich-text/) link 不支持点击回调问题 [issue/298](https://github.com/apache/incubator-weex-ui/issues/298)
-- [+][wxc-city](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-city/) 新增`show-nav-header` 来控制是否显示栏目头部 [issue/294](https://github.com/apache/incubator-weex-ui/issues/294)
-- [+][wxc-tab-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-bar/) 在 isTabView 为 false 时候也支持设置高亮 [issue/292](https://github.com/apache/incubator-weex-ui/issues/292)
-- [+][wxc-popover](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popover/) 支持文字部分样式覆盖 [issue/289](https://github.com/apache/incubator-weex-ui/issues/289)
+- [+][`wxc-button`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-button/) 支持设置 disabled 样式进行覆盖
+- [!] 修复 [`wxc-rich-text`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-rich-text/) link 不支持点击回调问题 [issue/298](https://github.com/apache/incubator-weex-ui/issues/298)
+- [+][wxc-city](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-city/) 新增`show-nav-header` 来控制是否显示栏目头部 [issue/294](https://github.com/apache/incubator-weex-ui/issues/294)
+- [+][wxc-tab-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-bar/) 在 isTabView 为 false 时候也支持设置高亮 [issue/292](https://github.com/apache/incubator-weex-ui/issues/292)
+- [+][wxc-popover](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-popover/) 支持文字部分样式覆盖 [issue/289](https://github.com/apache/incubator-weex-ui/issues/289)
 
 ## 0.6.4
 
-- [+][`wxc-searchbar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-searchbar/) 支持设置键盘返回键的类型 [issues/287](https://github.com/apache/incubator-weex-ui/issues/287)
-- [!] 修复 [wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) 浮动定位问题 [issues/282](https://github.com/apache/incubator-weex-ui/issues/282)
-- [+][wxc-slider-bar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) 支持动态修改数据并样式实时展示
-- [!] 修复 [wxc-button](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-button/) type 使用的 bug 问题
-- [+] 修复 [wxc-grid-select](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-grid-select/) 多个时候会存在 key 重复的问题
-- [!] 修复 [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) 最后一个可能卡顿问题 [issues/277](https://github.com/apache/incubator-weex-ui/issues/277)
+- [+][`wxc-searchbar`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-searchbar/) 支持设置键盘返回键的类型 [issues/287](https://github.com/apache/incubator-weex-ui/issues/287)
+- [!] 修复 [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) 浮动定位问题 [issues/282](https://github.com/apache/incubator-weex-ui/issues/282)
+- [+][wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) 支持动态修改数据并样式实时展示
+- [!] 修复 [wxc-button](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-button/) type 使用的 bug 问题
+- [+] 修复 [wxc-grid-select](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-grid-select/) 多个时候会存在 key 重复的问题
+- [!] 修复 [`wxc-ep-slider`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-ep-slider/) 最后一个可能卡顿问题 [issues/277](https://github.com/apache/incubator-weex-ui/issues/277)
 
 ## 0.6.3
 
-- [!] 修复 [`wxc-minibar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-minibar/) 设置右侧 slot 时候回调无效问题 [issue/263](https://github.com/apache/incubator-weex-ui/issues/263)
-- [+][`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) 支持设置右滑加载更多设置，通过配置 `pull-more` slot 即可
-- [!] 修复 [wxc-icon](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-icon/) 在某些容器请求字体文件出错问题 [issues/253](https://github.com/apache/incubator-weex-ui/issues/253)
-- [+][wxc-popup](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popup/) 支持设置原有位置突出的 `stand-out` [issue/251](https://github.com/apache/incubator-weex-ui/issues/251)
+- [!] 修复 [`wxc-minibar`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-minibar/) 设置右侧 slot 时候回调无效问题 [issue/263](https://github.com/apache/incubator-weex-ui/issues/263)
+- [+][`wxc-ep-slider`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-ep-slider/) 支持设置右滑加载更多设置，通过配置 `pull-more` slot 即可
+- [!] 修复 [wxc-icon](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-icon/) 在某些容器请求字体文件出错问题 [issues/253](https://github.com/apache/incubator-weex-ui/issues/253)
+- [+][wxc-popup](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-popup/) 支持设置原有位置突出的 `stand-out` [issue/251](https://github.com/apache/incubator-weex-ui/issues/251)
 - [+] 支持在构建过程中自动生成入口 `index.js` [pull/259](https://github.com/apache/incubator-weex-ui/pull/259)
-- [!] 修复 [wxc-searchbar](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-searchbar/) barStyle 字段默认值返回 `undefined` 值 [pull/255](https://github.com/apache/incubator-weex-ui/pull/255)
-- [+][wxc-result](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-result/) 支持获取新增的错误类型展示 [pull/252](https://github.com/apache/incubator-weex-ui/pull/252)
+- [!] 修复 [wxc-searchbar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-searchbar/) barStyle 字段默认值返回 `undefined` 值 [pull/255](https://github.com/apache/incubator-weex-ui/pull/255)
+- [+][wxc-result](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-result/) 支持获取新增的错误类型展示 [pull/252](https://github.com/apache/incubator-weex-ui/pull/252)
 
 ## 0.6.2
 
-- [+][`utils`](https://alibaba.github.io/weex-ui/#/cn/packages/utils/) 功能增强，新增`objToParams`、`paramsToObj`、`getPageHeight`、`getScreenHeight`等功能，详细可见 [utils/index.js](https://github.com/apache/incubator-weex-ui/blob/master/packages/utils/index.js)
-- [!] 修复 [`wxc-ep-slider`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-ep-slider/) 只有两个 slider 时候的滑动 bug [pull/248](https://github.com/apache/incubator-weex-ui/pull/248)
-- [!] 修复 [`wxc-searchbar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-searchbar/) 同时设置自定义样式和主题时候的背景冲突 [issues/242](https://github.com/apache/incubator-weex-ui/issues/242)/[pull/245](https://github.com/apache/incubator-weex-ui/pull/245)
-- [+][`wxc-mask`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-mask/) 支持传入 `top` 参数控制距离顶部的高度 [issues/240](https://github.com/apache/incubator-weex-ui/issues/240)/[pull/241](https://github.com/apache/incubator-weex-ui/pull/241)
-- [!][`wxc-popover`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-popover/) demo 问题修复 [pull/236](https://github.com/apache/incubator-weex-ui/pull/236)
+- [+][`utils`](https://apache.github.io/incubator-weex-ui/#/cn/packages/utils/) 功能增强，新增`objToParams`、`paramsToObj`、`getPageHeight`、`getScreenHeight`等功能，详细可见 [utils/index.js](https://github.com/apache/incubator-weex-ui/blob/master/packages/utils/index.js)
+- [!] 修复 [`wxc-ep-slider`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-ep-slider/) 只有两个 slider 时候的滑动 bug [pull/248](https://github.com/apache/incubator-weex-ui/pull/248)
+- [!] 修复 [`wxc-searchbar`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-searchbar/) 同时设置自定义样式和主题时候的背景冲突 [issues/242](https://github.com/apache/incubator-weex-ui/issues/242)/[pull/245](https://github.com/apache/incubator-weex-ui/pull/245)
+- [+][`wxc-mask`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-mask/) 支持传入 `top` 参数控制距离顶部的高度 [issues/240](https://github.com/apache/incubator-weex-ui/issues/240)/[pull/241](https://github.com/apache/incubator-weex-ui/pull/241)
+- [!][`wxc-popover`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-popover/) demo 问题修复 [pull/236](https://github.com/apache/incubator-weex-ui/pull/236)
 
 ## 0.6.1
 
-- [+][`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 新增沉浸式全屏效果的页面切换组件 `wxc-full-page`,详细使用见组件文档
-- [+][`wxc-tab-page`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-tab-page/) 新增参数`need-slider` 控制是否需要手势滑动
+- [+][`wxc-tab-page`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-page/) 新增沉浸式全屏效果的页面切换组件 `wxc-full-page`,详细使用见组件文档
+- [+][`wxc-tab-page`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-page/) 新增参数`need-slider` 控制是否需要手势滑动
 - [!] 解决 `import {BindEnv} from 'weex-ui'` 的使用问题
-- [!][wxc-cell](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-cell/) 功能增强，支持配置额外内容
-- [!] 修复 [`wxc-slider-bar`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-slider-bar/) 在 Web 端和 iOS 端样式显示
-- [+][`wxc-refresher`](https://alibaba.github.io/weex-ui/#/cn/packages/wxc-refresher/) 放出 refresh 和 pullingdown 事件回调
+- [!][wxc-cell](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-cell/) 功能增强，支持配置额外内容
+- [!] 修复 [`wxc-slider-bar`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) 在 Web 端和 iOS 端样式显示
+- [+][`wxc-refresher`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-refresher/) 放出 refresh 和 pullingdown 事件回调
 
 ## 0.6.0
 
@@ -170,7 +170,7 @@
 
 - [!] 修复 [`wxc-tab-bar`](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-tab-bar/README.md) slot bug
 - [!][wxc-indexlist](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-indexlist/README.md) 完全支持自定义样式 [issue 132](https://github.com/apache/incubator-weex-ui/issues/132)
-- [+] 新增一篇 [`Weex + Ui - Weex Conf 2018`](https://alibaba.github.io/weex-ui/#/cn/weex-ui-weex-conf-2018)文章, 欢迎来[翻译](https://github.com/apache/incubator-weex-ui/blob/master/docs/weex-ui-weex-conf-2018.md).
+- [+] 新增一篇 [`Weex + Ui - Weex Conf 2018`](https://apache.github.io/incubator-weex-ui/#/cn/weex-ui-weex-conf-2018)文章, 欢迎来[翻译](https://github.com/apache/incubator-weex-ui/blob/master/docs/weex-ui-weex-conf-2018.md).
 
 ## 0.3.12
 
@@ -200,7 +200,7 @@
 
 - [+] `wxc-minibar` 支持 slot
 - [+] 更强大的 [wxc-rich-text](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-rich-text/README.md) 组件,不再需要给一个 icon 同时传入高宽了
-- [+] 新增一个 [FQA](https://alibaba.github.io/weex-ui/#/docs/fqa)
+- [+] 新增一个 [FQA](https://apache.github.io/incubator-weex-ui/#/docs/fqa)
 
 ## 0.3.8
 
@@ -219,17 +219,17 @@
 - [+][wxc-radio](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-radio/README.md#api)、[wxc-checkbox](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-checkbox/README.md#checkboxlist) 新加一个 `config` 用来改变颜色和 icon
 - [!][wxc-result](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-result/README.md) 使用公用主题代替飞猪色彩
 - [!] wxc-button 使用 `red/yellow` 参数代替 `taobao/fliggy`
-- [+] 在官网上新增一个 [`加入社区群`](https://alibaba.github.io/weex-ui/)
+- [+] 在官网上新增一个 [`加入社区群`](https://apache.github.io/incubator-weex-ui/)
 
 ## 0.3.3
 
 - [+][wxc-tab-bar](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-page-bar/README.md) 支出 `bedge`、`dot` 设置
-- [+] 在官网中新增一个组件 [样板间](https://alibaba.github.io/weex-ui/docc/demo.html)
+- [+] 在官网中新增一个组件 [样板间](https://apache.github.io/incubator-weex-ui/docc/demo.html)
 
 ## 0.3.2
 
 - [!] 梳理所有组件的使用文档，进行纠错优化
-- [!][官网](https://alibaba.github.io/weex-ui/) 性能的一些优化
+- [!][官网](https://apache.github.io/incubator-weex-ui/) 性能的一些优化
 - [!] 修复一些组件在特定环境中使用报错 [issue 70](https://github.com/apache/incubator-weex-ui/issues/70)
 
 ## 0.3.1

@@ -15,9 +15,9 @@
 
 ## Docs
 
-* [**Home Page**](https://alibaba.github.io/weex-ui/)
-* [中文文档](https://alibaba.github.io/weex-ui/#/cn/)
-* [Use Weex Ui with weex-toolkit](https://alibaba.github.io/weex-ui/#/docs/with-weex-toolkit)
+* [**Home Page**](https://apache.github.io/incubator-weex-ui/)
+* [中文文档](https://apache.github.io/incubator-weex-ui/#/cn/)
+* [Use Weex Ui with weex-toolkit](https://apache.github.io/incubator-weex-ui/#/docs/with-weex-toolkit)
 
 ## Demo
 
@@ -98,8 +98,8 @@ npm i babel-preset-stage-0 babel-plugin-component -D
 
 * If babel-loader in `webpack.config.js` has a exclude for node_modules, please turn on for week-ui as `exclude: /node_modules(?!(\/|\\).*(weex).*)/`.
 * In order to get the latest features, please focus on the [ChangeLog](https://github.com/apache/incubator-weex-ui/releases) and often update `weex-ui` to the latest.
-* Many questions can be found from [faq](https://alibaba.github.io/weex-ui/#/faq) and [issue list](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=), if you find a new bug, just file a [issue](https://github.com/apache/incubator-weex-ui/issues/new).
-* More experience in Weex construction can be learned from [Weex + Ui - Weex Conf 2018](https://alibaba.github.io/weex-ui/#/docs/weex-ui-weex-conf-2018) ,welcome to translate it.
+* Many questions can be found from [faq](https://apache.github.io/incubator-weex-ui/#/faq) and [issue list](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=), if you find a new bug, just file a [issue](https://github.com/apache/incubator-weex-ui/issues/new).
+* More experience in Weex construction can be learned from [Weex + Ui - Weex Conf 2018](https://apache.github.io/incubator-weex-ui/#/docs/weex-ui-weex-conf-2018) ,welcome to translate it.
 
 ## Development
 

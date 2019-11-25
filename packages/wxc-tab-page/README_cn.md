@@ -206,7 +206,7 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 ## 沉浸式全屏的 FullPage 的使用
 1. 引入：` import { WxcFullPage} from 'weex-ui';`
 2. 参数形式和 wxcTabPage 保持一致，详细可见 [【demo】](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/full-page/)
-3. 建议隐藏头部导航栏使用，同时可以结合 [wxc-slide-nav](https://alibaba.github.io/weex-ui/#/packages/wxc-slide-nav/) 使用
+3. 建议隐藏头部导航栏使用，同时可以结合 [wxc-slide-nav](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slide-nav/) 使用
 
 ## wxc-pan-item 的使用
 

@@ -207,7 +207,7 @@ this.$refs['wxc-tab-page'].setPage(2,null,false);
 ## Immersive full screen `WxcFullPage` components
 1. Import：` import { WxcFullPage} from 'weex-ui';`
 2. Params are consistent with `wxcTabPage`,more you can see [【demo/full-page】](https://github.com/apache/incubator-weex-ui/blob/master/example/tab-page/full-page/)
-3. It is recommended to hide the head navigation bar for use，also can use[wxc-slide-nav](https://alibaba.github.io/weex-ui/#/packages/wxc-slide-nav/)
+3. It is recommended to hide the head navigation bar for use，also can use[wxc-slide-nav](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slide-nav/)
 
 
 ## wxc-pan-item
