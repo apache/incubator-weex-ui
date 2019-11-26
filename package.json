@@ -51,7 +51,7 @@
     "clean-webpack-plugin": "~0.1.17",
     "copy-webpack-plugin": "~4.0.1",
     "css-loader": "~0.28.7",
-    "eslint": "^4.18.2",
+    "eslint": "^3.19.0",
     "eslint-config-vue": "^2.0.2",
     "eslint-plugin-vue": "^2.1.0",
     "filemanager-webpack-plugin": "^1.0.16",
