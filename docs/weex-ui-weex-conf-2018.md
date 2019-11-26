@@ -211,6 +211,6 @@ Weex 其实也是支持无障碍的，也即让盲人在最短的时间内通过
 <img src="https://img.alicdn.com/tfs/TB1irfjlyqAXuNjy1XdXXaYcVXa-624-823.png" width="300"/>
 
 - 本次分享PDF文件: [《 Weex + Ui 》](http://p.tb.cn/rmsportal_7819_Weex_20_2B_20UI_20_20_20Weex_20Conf_20_E9_A3_9E_E7_8C_AA_20_E4_BE_91_E5_A4_95.pdf)
-- 官网地址：<https://alibaba.github.io/weex-ui>
+- 官网地址：<https://apache.github.io/incubator-weex-ui>
 - Github地址：<https://github.com/apache/incubator-weex-ui>
 - 云相册直播地址：<http://v.alltuu.com/album?id=1004641019>
