@@ -38,7 +38,7 @@
       "email": "tw93@qq.com"
     }
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "anywhere": "^1.5.0",
     "autoprefixer": "^7.2.2",
