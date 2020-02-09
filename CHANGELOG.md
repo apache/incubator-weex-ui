@@ -1,11 +1,14 @@
 # Change Log
 
+## 0.8.2
+- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-loading) add `loading-pic` param.
+
 ## 0.8.0
 - [!]From alibaba/weex-ui to [apcahe/incubator-weex-ui](https://github.com/apache/incubator-weex-ui) 
 
 ## 0.7.1
-- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/slider-bar) add `wxcSliderBarTouchEnd` event.
-- [!] Fixed [wxc-mask](https://apache.github.io/incubator-weex-ui/#/cn/packages/mask) jitter bug when inputting.
+- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar) add `wxcSliderBarTouchEnd` event.
+- [!] Fixed [wxc-mask](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-mask) jitter bug when inputting.
 - [!] Fixed the problem that the QR code does not display when debugging.
 
 ## 0.7.0

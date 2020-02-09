@@ -25,7 +25,7 @@ under the License.
        :style="maskStyle">
     <div class="wxc-loading" :style="{ top: topPosition +'px'}" v-if="showLoading">
       <div :class="['loading-box',loading.class]" :aria-hidden="true">
-        <image :src="loading.url"
+        <image :src="loadingPic || loading.url"
                class="loading-trip-image"
                resize="contain"
                quality="original"></image>
@@ -37,9 +37,9 @@ under the License.
 </template>
 
 <style scoped>
-	.loading-container{
-		position: relative;
-	}
+  .loading-container {
+    position: relative;
+  }
 
   .loading-need-mask {
     position: absolute;
@@ -98,6 +98,10 @@ under the License.
         default: false
       },
       loadingText: {
+        type: String,
+        default: ''
+      },
+      loadingPic: {
         type: String,
         default: ''
       },

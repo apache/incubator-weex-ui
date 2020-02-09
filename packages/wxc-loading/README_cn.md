@@ -46,6 +46,8 @@
 | type | `String` | `N`|`default` |图案类别`default`/`trip`|
 | need-mask | `Bool` | `N`|`false` | 加载时候是都需要一个蒙层防止用于误点 |
 | mask-style | `Object` | `N`|`{}` | 蒙层样式覆盖 |
+| loading-pic | `String` | `N`|`` | 覆盖原有图片 |
+
 
 
 ### Event

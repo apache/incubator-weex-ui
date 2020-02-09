@@ -1,12 +1,15 @@
 # 升级日志
 
+## 0.8.2
+- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-loading) 增加 `loading-pic` 参数用于覆盖原有 loading 图片.
+
 ## 0.8.0
 - [!]从 alibaba/weex-ui 迁移到 [apcahe/incubator-weex-ui](https://github.com/apache/incubator-weex-ui) 
 
 
 ## 0.7.1
-- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/slider-bar) 新增 `wxcSliderBarTouchEnd` 事件.
-- [!] 修复 [wxc-mask](https://apache.github.io/incubator-weex-ui/#/cn/packages/mask) 输入时候抖动问题
+- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar) 新增 `wxcSliderBarTouchEnd` 事件.
+- [!] 修复 [wxc-mask](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-mask) 输入时候抖动问题
 - [!] 修复调试时候 console 不显示二维码的问题
 
 
