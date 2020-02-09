@@ -145,6 +145,10 @@ under the License.
       disabledColor: {
         type: String,
         default: '#AAA'
+      },
+      blockColor: {
+        type: String,
+        default: '#ffffff'
       }
     },
     watch: {
@@ -247,12 +251,14 @@ under the License.
       blockStyle1() {
         let left = this.diffX1;
         return {
-          transform: `translateX(${left}px)`
+          transform: `translateX(${left}px)`,
+          backgroundColor: this.blockColor
         };
       },
       blockStyle2() {
         return {
-          transform: `translateX(${this.diffX2}px)`
+          transform: `translateX(${this.diffX2}px)`,
+          backgroundColor: this.blockColor
         }
       }
     },
@@ -615,7 +621,6 @@ under the License.
   .slide-block {
     width: 56px;
     height: 56px;
-    background-color: #ffffff;
     border-radius: 28px;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.1);
