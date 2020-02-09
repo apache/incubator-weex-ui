@@ -55,7 +55,7 @@
 | validColor   | `String` |`N`| `#EE9900`| 有效颜色 |
 | disabledColor| `String` |`N`| `#AAA`   | 禁用颜色 |
 | selectRange  | `Array` |`N`| `[0, 0]`   | 回传值 |
-
+| blockColor  | `String` |`N`| `#FFFFFF`   |滑块颜色|
 
 ### 事件
 

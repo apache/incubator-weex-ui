@@ -1,52 +1,53 @@
 # Change Log
 
-## 0.8.2
-- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-loading) add `loading-pic` param.
+## 0.8.3
+- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/packages/wxc-loading) add `loading-pic` param.
+- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar) add `block-color` param.
 
 ## 0.8.0
 - [!]From alibaba/weex-ui to [apcahe/incubator-weex-ui](https://github.com/apache/incubator-weex-ui) 
 
 ## 0.7.1
-- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar) add `wxcSliderBarTouchEnd` event.
-- [!] Fixed [wxc-mask](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-mask) jitter bug when inputting.
+- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar) add `wxcSliderBarTouchEnd` event.
+- [!] Fixed [wxc-mask](https://apache.github.io/incubator-weex-ui/#/packages/wxc-mask) jitter bug when inputting.
 - [!] Fixed the problem that the QR code does not display when debugging.
 
 ## 0.7.0
 - [-] Remove alipay util,Preventing audit issues [issue/467](https://github.com/apache/incubator-weex-ui/issues/467)
-- [!] [wxc-tab-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-bar) add `supportXBar` param.
+- [!] [wxc-tab-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-bar) add `supportXBar` param.
 
 ## 0.6.16
-- [+] [wxc-pan-item](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-pan-item/) add `extId` when  pan. [issue/441](https://github.com/apache/incubator-weex-ui/issues/441)
+- [+] [wxc-pan-item](https://apache.github.io/incubator-weex-ui/#/packages/wxc-pan-item/) add `extId` when  pan. [issue/441](https://github.com/apache/incubator-weex-ui/issues/441)
 
 ## 0.6.15
-- [!] [wxc-swipe-action](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-swipe-action/)fix delete the last data item, then click on another item to report the error.
-- [!] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) fix dynamically assign value to value, then slide back to return value
-- [!] [wxc-radio](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-radio/) fix the selected item cannot be modified when modifying the list array
+- [!] [wxc-swipe-action](https://apache.github.io/incubator-weex-ui/#/packages/wxc-swipe-action/)fix delete the last data item, then click on another item to report the error.
+- [!] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar/) fix dynamically assign value to value, then slide back to return value
+- [!] [wxc-radio](https://apache.github.io/incubator-weex-ui/#/packages/wxc-radio/) fix the selected item cannot be modified when modifying the list array
 
 ## 0.6.14
-- [!] [wxc-swipe-action](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-swipe-action/) adds slot labels, extended style and height attributes
+- [!] [wxc-swipe-action](https://apache.github.io/incubator-weex-ui/#/packages/wxc-swipe-action/) adds slot labels, extended style and height attributes
 
 ## 0.6.13
-- [!] Fixed[wxc-overlay](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-dialog/)problem on[wxc-tab-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-bar/)
+- [!] Fixed[wxc-overlay](https://apache.github.io/incubator-weex-ui/#/packages/wxc-dialog/)problem on[wxc-tab-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-bar/)
 - [+] add a new componet named wxc-swipe-action
-- [!] Fix [wxc-button](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-button/) displaying style problem, add isHighlight attribute to control whether button is highlighted or not.
+- [!] Fix [wxc-button](https://apache.github.io/incubator-weex-ui/#/packages/wxc-button/) displaying style problem, add isHighlight attribute to control whether button is highlighted or not.
 
 ## 0.6.12
-- [!] Fixed set transparency issues [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-lightbox/).
-- [!] Fixed set transparency issues [wxc-mask](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-mask/).
-- [!] Fixed cannot click, the component cannot modify the internal style [wxc-special-rich-text](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-rich-text/).
-- [!] Fixed click no highlighting question [wxc-button](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-button/).
+- [!] Fixed set transparency issues [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/packages/wxc-lightbox/).
+- [!] Fixed set transparency issues [wxc-mask](https://apache.github.io/incubator-weex-ui/#/packages/wxc-mask/).
+- [!] Fixed cannot click, the component cannot modify the internal style [wxc-special-rich-text](https://apache.github.io/incubator-weex-ui/#/packages/wxc-rich-text/).
+- [!] Fixed click no highlighting question [wxc-button](https://apache.github.io/incubator-weex-ui/#/packages/wxc-button/).
 
 ## 0.6.11
 - [!] Fixed the shake when change disabled about [wxc-button](https://apache.github.io/incubator-weex-ui/#/packages/wxc-button/).
-- [!] Fixed the line-height bug about [wxc-stepper](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-stepper/).
+- [!] Fixed the line-height bug about [wxc-stepper](https://apache.github.io/incubator-weex-ui/#/packages/wxc-stepper/).
 - [!] Fixed the loopedIndex bug about [wxc-ep-slider](https://apache.github.io/incubator-weex-ui/#/packages/wxc-ep-slider/).
 
 ## 0.6.10
 
 - [!] Fixed the `lines` bug about [wxc-popover](https://apache.github.io/incubator-weex-ui/#/packages/wxc-popover/) when in web.  [issue/384](https://github.com/apache/incubator-weex-ui/issues/384)
-- [!] Fixed the `sourceData` warning about [wxc-city](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-city/) when searching. [issue/382](https://github.com/apache/incubator-weex-ui/issues/382)
-- [!] Fixed the `btnStyle` style cannot cover about [wxc-button](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-button/). [issue/390](https://github.com/apache/incubator-weex-ui/issues/390)
+- [!] Fixed the `sourceData` warning about [wxc-city](https://apache.github.io/incubator-weex-ui/#/packages/wxc-city/) when searching. [issue/382](https://github.com/apache/incubator-weex-ui/issues/382)
+- [!] Fixed the `btnStyle` style cannot cover about [wxc-button](https://apache.github.io/incubator-weex-ui/#/packages/wxc-button/). [issue/390](https://github.com/apache/incubator-weex-ui/issues/390)
 - [+] Add Weex and Bindingx DingTalk Group.
 
 ## 0.6.9
@@ -54,7 +55,7 @@
 - [-] Remove the special treatment for weex-toolkit in [with-weex-toolkit](https://apache.github.io/incubator-weex-ui/#/docs/with-weex-toolkit).
 
 ## 0.6.8
-- [+] [wxc-tab-page](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-page/) supports more settings about tab-item, More can see [here]((https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-page/))
+- [+] [wxc-tab-page](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-page/) supports more settings about tab-item, More can see [here]((https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-page/))
 - [+] [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-page/) add  params about `index` and `interval`
 - [!] [wxc-rich-text](https://apache.github.io/incubator-weex-ui/#/packages/wxc-rich-text/)  remove the old hack about wxc-special-rich-text
 
@@ -65,8 +66,8 @@
 - [!] Update the npm version of querystringify and url-parse [pull/329](https://github.com/apache/incubator-weex-ui/pull/329)
 - [+] [wxc-button](https://apache.github.io/incubator-weex-ui/#/packages/wxc-button/) add a green theme [pull/291](https://github.com/apache/incubator-weex-ui/pull/291)
 - [+] [wxc-indexlist](https://apache.github.io/incubator-weex-ui/#/packages/wxc-indexlist/) add a  `need-animation` param to disable the index animation [issue/341](https://github.com/apache/incubator-weex-ui/issues/341)
-- [!] Fixed the bug about [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) When drag can still be dragged after Android dragging the slider. [issue/331](https://github.com/apache/incubator-weex-ui/issues/331)
-- [+] [wxc-minibar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-minibar/) add bar-style param to cover style  [issue/326](https://github.com/apache/incubator-weex-ui/issues/326)
+- [!] Fixed the bug about [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar/) When drag can still be dragged after Android dragging the slider. [issue/331](https://github.com/apache/incubator-weex-ui/issues/331)
+- [+] [wxc-minibar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-minibar/) add bar-style param to cover style  [issue/326](https://github.com/apache/incubator-weex-ui/issues/326)
 
 ## 0.6.6
 - [!] Fixed the padding undefined bug for [wxc-tab-page](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-page/)   [issue/320](https://github.com/apache/incubator-weex-ui/issues/320)
@@ -80,12 +81,12 @@
 - [+] [wxc-popover](https://apache.github.io/incubator-weex-ui/#/packages/wxc-popover/) supports to replace text style. [issue/289](https://github.com/apache/incubator-weex-ui/issues/289)
 
 ## 0.6.4
-- [+] [`wxc-searchbar`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-searchbar/) supports the type of setting the keyboard return key.  [issues/287](https://github.com/apache/incubator-weex-ui/issues/287)
-- [!] Fixed the [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) bug about position. [issues/282](https://github.com/apache/incubator-weex-ui/issues/282)
-- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) supports dynamic modification of data and style in real time display.
-- [!] Fixed the bug about [wxc-button](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-button/) when set the `type`. [issues/268](https://github.com/apache/incubator-weex-ui/issues/268)
-- [+] Fixed the bug about [wxc-grid-select](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-grid-select/) when using more than one.
-- [!] Fixed the bug about [`wxc-ep-slider`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-ep-slider/) when slide to last one. [issues/277](https://github.com/apache/incubator-weex-ui/issues/277)
+- [+] [`wxc-searchbar`](https://apache.github.io/incubator-weex-ui/#/packages/wxc-searchbar/) supports the type of setting the keyboard return key.  [issues/287](https://github.com/apache/incubator-weex-ui/issues/287)
+- [!] Fixed the [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar/) bug about position. [issues/282](https://github.com/apache/incubator-weex-ui/issues/282)
+- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar/) supports dynamic modification of data and style in real time display.
+- [!] Fixed the bug about [wxc-button](https://apache.github.io/incubator-weex-ui/#/packages/wxc-button/) when set the `type`. [issues/268](https://github.com/apache/incubator-weex-ui/issues/268)
+- [+] Fixed the bug about [wxc-grid-select](https://apache.github.io/incubator-weex-ui/#/packages/wxc-grid-select/) when using more than one.
+- [!] Fixed the bug about [`wxc-ep-slider`](https://apache.github.io/incubator-weex-ui/#/packages/wxc-ep-slider/) when slide to last one. [issues/277](https://github.com/apache/incubator-weex-ui/issues/277)
 
 ## 0.6.3
 - [!] Fixed the bug about [`wxc-minibar`](https://apache.github.io/incubator-weex-ui/#/packages/wxc-minibar/) when setting right slot.  [issue/263](https://github.com/apache/incubator-weex-ui/issues/263)
@@ -100,16 +101,16 @@
 - [+] [`utils`](https://apache.github.io/incubator-weex-ui/#/packages/utils/) more powerful， add `objToParams`、`paramsToObj`、`getPageHeight`、`getScreenHeight` new functions, More you can see [utils/index.js](https://github.com/apache/incubator-weex-ui/blob/master/packages/utils/index.js).
 - [!] Fixed the bug about [`wxc-ep-slider`](https://apache.github.io/incubator-weex-ui/#/packages/wxc-ep-slider/) when only two sliders  [pull/248].(https://github.com/apache/incubator-weex-ui/pull/248)
 - [!] Fixed the bug about [`wxc-searchbar`](https://apache.github.io/incubator-weex-ui/#/packages/wxc-searchbar/) when setting up custom styles and background conflicts at the same time  [issues/242](https://github.com/apache/incubator-weex-ui/issues/242)/[pull/245](https://github.com/apache/incubator-weex-ui/pull/245)
-- [+] [`wxc-mask`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-mask/) Supports `top` param to control height at the top of the distance.  [issues/240](https://github.com/apache/incubator-weex-ui/issues/240)/[pull/241](https://github.com/apache/incubator-weex-ui/pull/241)
-- [!] Fixed the demo bug about [`wxc-popover`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-popover/)  [pull/236](https://github.com/apache/incubator-weex-ui/pull/236)
+- [+] [`wxc-mask`](https://apache.github.io/incubator-weex-ui/#/packages/wxc-mask/) Supports `top` param to control height at the top of the distance.  [issues/240](https://github.com/apache/incubator-weex-ui/issues/240)/[pull/241](https://github.com/apache/incubator-weex-ui/pull/241)
+- [!] Fixed the demo bug about [`wxc-popover`](https://apache.github.io/incubator-weex-ui/#/packages/wxc-popover/)  [pull/236](https://github.com/apache/incubator-weex-ui/pull/236)
 
 ## 0.6.1
 - [+] [`wxc-tab-page`](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-page/) add `wxc-full-page` of immersion full screen effect, more you can see the component document.
 - [+] [`wxc-tab-page`](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-page/) add a param about `need-slider`.
 - [!] Fixed the bug about `import {BindEnv} from 'weex-ui'`.
 - [!] [wxc-cell](https://apache.github.io/incubator-weex-ui/#/packages/wxc-cell/)  supports setting extra content.
-- [!] Fixed the show about [`wxc-slider-bar`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) in web and iOS
-- [+] [`wxc-refresher`](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-refresher/) supports refresh and pullingdown event.
+- [!] Fixed the show about [`wxc-slider-bar`](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar/) in web and iOS
+- [+] [`wxc-refresher`](https://apache.github.io/incubator-weex-ui/#/packages/wxc-refresher/) supports refresh and pullingdown event.
 
 ## 0.6.0
 - [+] [wxc-button](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-button/README.md) supports more `type` settings, remove `normal`/ `highlight`，add new `type` ahout `white` and `blue`，new button `size` settings, pay attention to the upgrade.
@@ -157,7 +158,7 @@
 
 * [!] Fix the `slot` bug about [`wxc-tab-bar`](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-tab-bar/README.md).
 * [!][wxc-indexlist](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-indexlist/README.md) supports fully custom style. [issue 132](https://github.com/apache/incubator-weex-ui/issues/132)
-* [+] Add a post about [`Weex + Ui - Weex Conf 2018`](https://apache.github.io/incubator-weex-ui/#/cn/weex-ui-weex-conf-2018)`, Welcome to [translate](https://github.com/apache/incubator-weex-ui/blob/master/docs/weex-ui-weex-conf-2018.md) it.
+* [+] Add a post about [`Weex + Ui - Weex Conf 2018`](https://apache.github.io/incubator-weex-ui/#/weex-ui-weex-conf-2018)`, Welcome to [translate](https://github.com/apache/incubator-weex-ui/blob/master/docs/weex-ui-weex-conf-2018.md) it.
 
 ## 0.3.12
 

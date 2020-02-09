@@ -55,6 +55,7 @@ More details can be found in [here](https://github.com/apache/incubator-weex-ui/
 | validColor   | `String` |`N`| `#EE9900`| valid color |
 | disabledColor| `String` |`N`| `#AAA`   | disabled color |
 | selectRange  | `Array` |`N`| `[0, 0]`   | return value |
+| blockColor  | `String` |`N`| `#FFFFFF`   | block color |
 
 
 
