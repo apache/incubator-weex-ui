@@ -38,6 +38,7 @@ under the License.
       </div>
       <wxc-lightbox
         ref="wxc-lightbox"
+        :show-indicator="true"
         height="800"
         :index="1"
         :image-list="imageList"
