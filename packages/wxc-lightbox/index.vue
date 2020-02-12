@@ -41,6 +41,7 @@ under the License.
                :style="{ height: height + 'px', width: width  + 'px'}"></image>
       </div>
       <indicator class="indicator"
+                 v-if="showIndicator"
                  :style="indicatorStyle"></indicator>
     </slider>
   </wxc-mask>
@@ -77,6 +78,10 @@ under the License.
         type: Boolean,
         default: false
       },
+      showIndicator: {
+        type: Boolean,
+        default: true
+      },
       imageList: Array,
       indicatorColor: {
         type: Object,
@@ -90,14 +95,14 @@ under the License.
         type: [Number, String],
         default: 0
       },
-      interval:{
+      interval: {
         type: [Number, String],
         default: 3000
       },
       opacity: {
         type: [Number, String],
         default: 0.6
-      },
+      }
     },
     computed: {
       indicatorStyle () {

@@ -1,5 +1,8 @@
 # 升级日志
 
+## 0.8.4
+- [+] [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-lightbox) 增加 `show-indicator` 参数控制是否显示indicator
+
 ## 0.8.3
 - [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-loading) 增加 `loading-pic` 参数用于覆盖原有 loading 图片.
 - [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar) 增加 `block-color` 参数用于覆盖原有滑块颜色.

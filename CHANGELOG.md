@@ -1,5 +1,8 @@
 # Change Log
 
+## 0.8.4
+- [+] [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-lightbox) add `show-indicator` param to show indicator
+
 ## 0.8.3
 - [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/packages/wxc-loading) add `loading-pic` param.
 - [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar) add `block-color` param.
