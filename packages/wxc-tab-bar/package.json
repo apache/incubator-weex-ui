@@ -4,7 +4,7 @@
   "description": "Weex版本tab页面滑动组件,允许对头部进行配置，高版本的weex支持淘expressionBinding手势跟随效果，其他版本支持降级效果滑动切换。",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-tab-page",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-tab-page",
   "keywords": [
     "Weex",
     "Vue",

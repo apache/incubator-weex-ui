@@ -10,15 +10,15 @@
 - Use Base64：This depends on native image library resolution, but it is not recommended to use more than 2k Base64 in Weex, which makes the bundle too large to affect performance.
 
 #### Module not found: Error: Can't resolve 'weex-ui/packages/wxc-button/style.css'
-- This error should be the `babel-plugin-component` lack of style configuration, You can refer to [Weex-toolkit](https://alibaba.github.io/weex-ui/#/?id=weex-toolkit) to fix it.
+- This error should be the `babel-plugin-component` lack of style configuration, You can refer to [Weex-toolkit](https://apache.github.io/incubator-weex-ui/#/?id=weex-toolkit) to fix it.
 
 
 #### Uncaught SyntaxError: Unexpected token export；
 - This error typically occurs on the page developed using old weex-toolkit.
-- You can refer to [this document](https://alibaba.github.io/weex-ui/#/with-weex-toolkit) to fix it.
+- You can refer to [this document](https://apache.github.io/incubator-weex-ui/#/with-weex-toolkit) to fix it.
 
 #### ERROR in XXX from UglifyJs Unexpected token: punc (() [XXX] 
-- You can refer to [this document](https://alibaba.github.io/weex-ui/#/with-weex-toolkit) to fix it.
+- You can refer to [this document](https://apache.github.io/incubator-weex-ui/#/with-weex-toolkit) to fix it.
 - If you are using a Windows system, you may still have this problem when you upgrade, you check the babel config about `webpack.config.js`, modify `exclude` like this:
 
    ```js
@@ -104,4 +104,4 @@
  ```
 
 ---- 
-More questions can be found from the [issue list](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=), If you find a new bug, Just file a  [issue](https://github.com/alibaba/weex-ui/issues/new).
+More questions can be found from the [issue list](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=), If you find a new bug, Just file a  [issue](https://github.com/apache/incubator-weex-ui/issues/new).

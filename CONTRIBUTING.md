@@ -1,6 +1,6 @@
 ## How to contribute to Weex Ui
- 
-Welcome to create [pull requests](https://github.com/alibaba/weex-ui/compare/) for bugfix, new component, doc, example, suggestion and anything.
+
+**Welcome to create [pull requests](https://github.com/apache/incubator-weex-ui/compare/) for bugfix, new component, doc, example, suggestion and anything.**
 
 ## Branch Management
 
@@ -11,8 +11,8 @@ dev         <--- Develop/PR
 ```
 
 * `dev` branch
-  * `dev` is the developing branch.   
-  * It's **RECOMMENDED** to commit feature PR to `dev `.   
+  * `dev` is the developing branch.
+  * It's **RECOMMENDED** to commit feature PR to `dev `.
 * `master` branch
   * `master` is the release branch,we will make tag and publish version on this branch.
 

@@ -4,7 +4,7 @@
   "description": "一个weex进度条组件，表明某个任务的当前进度",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-progress",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-progress",
   "keywords": [
     "Weex",
     "Vue",

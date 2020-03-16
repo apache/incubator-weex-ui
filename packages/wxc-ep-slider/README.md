@@ -6,7 +6,7 @@
 
 ### Rule
 - Used to enrich slide, including merchandise window, picture list, etc.
-- If the child element has click event, **because of the [reason](http://weex-project.io/cn/references/gesture.html#约束) in android**, You now need to bind the expression event in child element, Weex Ui has provided [wxc-pan-cell](https://github.com/alibaba/weex-ui/tree/master/packages/wxc-pan-item) to solve this issue, you can see more in [here](https://github.com/alibaba/weex-ui/tree/master/example/ep-slider).
+- If the child element has click event, **because of the [reason](http://weex-project.io/cn/references/gesture.html#约束) in android**, You now need to bind the expression event in child element, Weex Ui has provided [wxc-pan-cell](https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-pan-item) to solve this issue, you can see more in [here](https://github.com/apache/incubator-weex-ui/tree/master/example/ep-slider).
 
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/ep-slider/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Fep-slider%2Findex.weex.js)
 <img src="https://gw.alipayobjects.com/zos/rmsportal/lWWUuRBxjMdLCaJGVHsp.gif" width="240"/>&nbsp;&nbsp;&nbsp;&nbsp;<https://img.alicdn.com/tfs/TB1dzqbcuuSBuNjSsplXXbe8pXa-200-200.png" width="160"/>
@@ -88,7 +88,7 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/ep-slider/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/ep-slider/index.vue)
 
 ### API
 

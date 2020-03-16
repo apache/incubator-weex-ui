@@ -1,17 +1,17 @@
 {
   "name": "weex-ui",
-  "version": "0.6.9",
+  "version": "0.8.4",
   "description": "A rich interaction, lightweight, high performance UI library based on Weex",
   "main": "index.js",
   "lib": "vue",
   "type": "weex",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alibaba/weex-ui.git"
+    "url": "git+https://github.com/apache/incubator-weex-ui.git"
   },
-  "homepage": "https://alibaba.github.io/weex-ui/",
+  "homepage": "https://apache.github.io/incubator-weex-ui/",
   "bugs": {
-    "url": "https://github.com/alibaba/weex-ui/issues"
+    "url": "https://github.com/apache/incubator-weex-ui/issues"
   },
   "scripts": {
     "build": "npm run build:entry && webpack --progress",
@@ -38,7 +38,7 @@
       "email": "tw93@qq.com"
     }
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "anywhere": "^1.5.0",
     "autoprefixer": "^7.2.2",
@@ -51,13 +51,12 @@
     "clean-webpack-plugin": "~0.1.17",
     "copy-webpack-plugin": "~4.0.1",
     "css-loader": "~0.28.7",
-    "eslint": "^4.11.0",
+    "eslint": "^3.19.0",
     "eslint-config-vue": "^2.0.2",
     "eslint-plugin-vue": "^2.1.0",
     "filemanager-webpack-plugin": "^1.0.16",
     "glob": "^7.1.2",
     "happypack": "^4.0.0",
-    "lerna": "^2.5.1",
     "os": "^0.1.1",
     "postcss-loader": "^2.0.10",
     "postcss-plugin-px2rem": "^0.7.0",
@@ -68,10 +67,10 @@
     "vue-loader": "^12.2.2",
     "vue-template-compiler": "^2.5.3",
     "webpack": "^2.7.0",
-    "weex-loader": "^0.6.0",
-    "weex-vue-loader": "^0.5.0",
-    "weex-vue-precompiler": "^0.1.17",
-    "weex-vue-render": "^1.0.17"
+    "weex-loader": "^0.7.12",
+    "weex-vue-loader": "^0.7.0",
+    "weex-vue-precompiler": "^0.1.26",
+    "weex-vue-render": "^1.0.36"
   },
   "dependencies": {
     "url-parse": "^1.4.3",

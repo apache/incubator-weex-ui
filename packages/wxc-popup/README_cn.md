@@ -54,7 +54,7 @@
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/popup/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/popup/index.vue)
 
 ### 可配置参数
 
@@ -67,7 +67,7 @@
 | popup-color | `String` |`N`| `#FFFFFF` | 弹出层的颜色 |
 | stand-out | `Number` |`N`| `0` | 突出边框高度 |
 | animation | `Object` |`N`| `{timingFunction: 'ease-in'}` | 自定义面板动画 |
-| overlay-cfg | `Object` |`N`| `{}` | [wxc-overlay](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-overlay/README.md)配置参数|
+| overlay-cfg | `Object` |`N`| `{}` | [wxc-overlay](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-overlay/README.md)配置参数|
 
 ### 事件回调
 

@@ -19,7 +19,7 @@
     <wxc-rich-text :config-list="configList"
                    @wxcRichTextLinkClick="wxcRichTextLinkClick"></wxc-rich-text>
      <div class="special-rich">
-       <wxc-special-rich-text :config-list="specialConfigList"></wxc-special-rich-text>
+       <wxc-special-rich-text @wxcSpecialRichTextClick="wxcSpecialRichTextClick" :config-list="specialConfigList"></wxc-special-rich-text>
      </div>
   </div>
   
@@ -76,6 +76,9 @@
             borderColor: '#FFC900',
             backgroundColor: '#FFC900',
             borderRadius: 14,
+          },
+          tagDivStyle: {
+            left: '50px'
           }
         },
         {
@@ -89,20 +92,21 @@
       ],
     }),
     methods: {
-      wxcRichTextLinkClick () {}
+      wxcRichTextLinkClick () {},
+      wxcSpecialRichTextClick () {}
     }
   };
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/rich-text/index.vue)
 
 
 ### 可配置参数
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| config-list | `Array` |`Y`| `[]` | 富文本配置 可参考 **规则图** 和 [Demo](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue#L78)|
+| config-list | `Array` |`Y`| `[]` | 富文本配置 可参考 **规则图** 和 [Demo](https://github.com/apache/incubator-weex-ui/blob/master/example/rich-text/index.vue#L78)|
 | has-text-margin | `Boolean` |`N`| 'true' | 文字相互之间是否有 margin|
 
 
@@ -110,6 +114,7 @@
 
 ```
 @wxcRichTextLinkClick="wxcRichTextLinkClick"
+@wxcSpecialRichTextClick="wxcSpecialRichTextClick"
 ```
 
 

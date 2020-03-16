@@ -1,5 +1,4 @@
 /**
- * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
  * Created by Tw93 on 17/09/25
  */
 
@@ -40,6 +39,7 @@ import WxcSlideNav from './packages/wxc-slide-nav';
 import WxcSliderBar from './packages/wxc-slider-bar';
 import WxcSpecialRichText from './packages/wxc-special-rich-text';
 import WxcStepper from './packages/wxc-stepper';
+import WxcSwipeAction from './packages/wxc-swipe-action';
 import WxcTabBar from './packages/wxc-tab-bar';
 import WxcTabPage from './packages/wxc-tab-page';
 import WxcTag from './packages/wxc-tag';
@@ -82,6 +82,7 @@ export {
   WxcSliderBar,
   WxcSpecialRichText,
   WxcStepper,
+  WxcSwipeAction,
   WxcTabBar,
   WxcTabPage,
   WxcTag

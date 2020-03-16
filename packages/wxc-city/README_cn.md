@@ -67,7 +67,7 @@
   };
 </script>
 ```
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/city/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/city/index.vue)
 注：默认示例加载的是手动配置的城市数据源参考data.js，为区分默认数据源以及手动设置的数据源特在手动配置的数据源中去掉了'北京'这个城市
 
 #### 可配置参数
@@ -92,7 +92,7 @@
         placeholder: '中文/拼音/首字母'
       }
     ```
-- 注2：城市列表数组配置，详细可见[data.js](https://github.com/alibaba/weex-ui/blob/master/example/city/data.js),整体详细如下：
+- 注2：城市列表数组配置，详细可见[data.js](https://github.com/apache/incubator-weex-ui/blob/master/example/city/data.js),整体详细如下：
 
   ```
     {

@@ -14,22 +14,25 @@
 
 ```vue
 <template>
-   <wxc-loading :show="isShow" type="trip"></wxc-loading>
-   <wxc-part-loading :show="isShow"></wxc-part-loading>
+    <div>
+        <wxc-loading :show="isShow" type="trip"></wxc-loading>
+        <wxc-part-loading :show="isShow"></wxc-part-loading>
+    </div>
 </template>
 <script>
     import { WxcLoading, WxcPartLoading } from 'weex-ui';
-      components: { WxcLoading, WxcPartLoading },
-      data () {
-        return {
-          isShow: true
-        };
-      }
+    export default {
+        components: { WxcLoading, WxcPartLoading },
+        data () {
+            return {
+                isShow: true
+            };
+        }
     };
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/loading/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/loading/index.vue)
 
 ### 可配置参数
 
@@ -43,6 +46,8 @@
 | type | `String` | `N`|`default` |图案类别`default`/`trip`|
 | need-mask | `Bool` | `N`|`false` | 加载时候是都需要一个蒙层防止用于误点 |
 | mask-style | `Object` | `N`|`{}` | 蒙层样式覆盖 |
+| loading-pic | `String` | `N`|`` | 覆盖原有图片 |
+
 
 
 ### Event

@@ -1,11 +1,28 @@
-<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
 <!-- Created by Tw93 on 17/07/28. -->
 <!-- just hack for babel-plugin-component !!!-->
 
 <template>
-  <div class="wxc-special-rich-text">
+  <div class="wxc-special-rich-text" @click="$emit('wxcSpecialRichTextClick')">
     <div class="tag-div"
-         :style="{top:top+'px'}">
+         :style="Object.assign({top:top+'px'}, newList[0].tagDivStyle)">
       <image class="wxc-image"
              v-if="newList[0] && newList[0].type === 'icon' && newList[0].src"
              :src="newList[0].src"
@@ -81,7 +98,7 @@
   import Utils from '../utils';
 
   const { appName, osName, deviceWidth } = weex.config.env;
-  const needHack = ((Utils.env.isAlipay() || appName === 'UC' || appName === 'TUnionSDK') && osName !== 'iOS') || Utils.env.isAndroid();
+  const needHack = ((Utils.env.isWeb() || appName === 'UC' || appName === 'TUnionSDK') && osName !== 'iOS') || Utils.env.isAndroid();
   const isPad = osName === 'iOS' && deviceWidth > 1300;
 
   import WxcRichTextText from '../wxc-rich-text/wxc-rich-text-text.vue';
@@ -90,7 +107,7 @@
   export default {
     components: {
       WxcRichTextText,
-      WxcRichTextTag,
+      WxcRichTextTag
     },
     props: {
       configList: {

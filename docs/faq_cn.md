@@ -9,15 +9,15 @@
 - 使用Base64：这个取决于底层图片库解析功能，但是不建议在 Weex 中使用超过 2k 的 Base64，容易让bundle体积过大，影响性能
 
 #### Module not found: Error: Can't resolve 'weex-ui/packages/wxc-button/style.css'
-- 此错误应该babel配置babel-plugin-component时候缺少style配置，详细可见 [Weex-toolkit](https://alibaba.github.io/weex-ui/#/cn/?id=weex-toolkit)
+- 此错误应该babel配置babel-plugin-component时候缺少style配置，详细可见 [Weex-toolkit](https://apache.github.io/incubator-weex-ui/#/cn/?id=weex-toolkit)
 
 #### Uncaught SyntaxError: Unexpected token export；
 - 此错误一般出现在使用老的 weex-toolkit 工具开发的页面。
-- 可以参考[此文档](https://alibaba.github.io/weex-ui/#/cn/with-weex-toolkit)进行相关依赖升级。
+- 可以参考[此文档](https://apache.github.io/incubator-weex-ui/#/cn/with-weex-toolkit)进行相关依赖升级。
 
 #### ERROR in XXX from UglifyJs Unexpected token: punc (() [XXX] 
 - 此错误为 webpack 打包过程中寻找weex-ui依赖出现的问题，目前新版本 weex-toolkit 已经修复
-- 统一可以参考[此文档](https://alibaba.github.io/weex-ui/#/cn/with-weex-toolkit)进行相关依赖升级。
+- 统一可以参考[此文档](https://apache.github.io/incubator-weex-ui/#/cn/with-weex-toolkit)进行相关依赖升级。
 - 假如是 windows 系统，升级依赖后可能还是有此问题，可以检查 `webpack.config.js` 中 babel 配置(两处),将 exclude 修改成这样:
 
    ```js
@@ -104,4 +104,4 @@
  ```
     
 -----
-更多问题可以通过 [issue 列表](https://github.com/alibaba/weex-ui/issues?utf8=%E2%9C%93&q=)查找，假如有新问题，可以给我们提 [issue](https://github.com/alibaba/weex-ui/issues/new)。
+更多问题可以通过 [issue 列表](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=)查找，假如有新问题，可以给我们提 [issue](https://github.com/apache/incubator-weex-ui/issues/new)。

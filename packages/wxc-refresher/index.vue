@@ -215,7 +215,7 @@
     height: 140px;
     width: 750px;
     flex-direction: row;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     justify-content: center;
     padding-top: 50px;
   }
@@ -252,11 +252,11 @@
     height: 60px;
     right: 0;
     top: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     border-width: 2px;
     border-color: #666666;
     border-style: solid;
-    border-radius: 100%;
+    border-radius: 30px;
     opacity: 0;
   }
 

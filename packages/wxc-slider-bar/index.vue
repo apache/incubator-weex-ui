@@ -1,4 +1,21 @@
-<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
 <!-- Created by zweipix on 2017-05-09. -->
 <!-- Updated by zweipix on 2018-03-07. -->
 
@@ -22,6 +39,7 @@
       class="slide-block"
       @panstart="webStartHandler"
       @panmove="webMoveHandler1"
+      @panend="webEndHandler"
       @touchstart="weexStartHandler1"
       @touchend="weexEndHandler"
       @horizontalpan="weexHandler1"
@@ -35,6 +53,7 @@
       class="slide-block"
       @panstart="webStartHandler"
       @panmove="webMoveHandler2"
+      @panend="webEndHandler"
       @touchstart="weexStartHandler2"
       @touchend="weexEndHandler"
       @horizontalpan="weexHandler2"
@@ -61,13 +80,17 @@
       barWidth: 0,
       preventMoveEvent: true,
       minDist: 0,
-      selectRange: [0, 0],
+      // selectRange: [0, 0],
       blockRadius: 28,
       DPR: 1,
       timeout: 100,
       isAndroid: Utils.env.isAndroid()
     }),
     props: {
+      selectRange: {
+        type: Array,
+        default: [0, 0]
+      },
       length: {
         type: Number,
         default: 500
@@ -122,6 +145,10 @@
       disabledColor: {
         type: String,
         default: '#AAA'
+      },
+      blockColor: {
+        type: String,
+        default: '#ffffff'
       }
     },
     watch: {
@@ -224,17 +251,37 @@
       blockStyle1() {
         let left = this.diffX1;
         return {
-          transform: `translateX(${left}px)`
+          transform: `translateX(${left}px)`,
+          backgroundColor: this.blockColor
         };
       },
       blockStyle2() {
         return {
-          transform: `translateX(${this.diffX2}px)`
+          transform: `translateX(${this.diffX2}px)`,
+          backgroundColor: this.blockColor
         }
       }
     },
     methods: {
-
+      getBlock1Value(callback) {
+        dom.getComponentRect(this.block1, option => {
+          const { left } = option.size;
+          const value = this._getValue(left - this.leftDiffX);
+          if (!this.range) {
+            callback && callback(value)
+          } else {
+            this.selectRange[0] = value;
+            callback && callback(this.selectRange)
+          }
+        });
+      },
+      getBlock2Value(callback) {
+        dom.getComponentRect(this.block2, option => {
+          const { left } = option.size;
+          this.selectRange[1] = this._getValue(left - this.leftDiffX);
+          callback && callback(this.selectRange)
+        });
+      },
       // 更新单选值或最小值
       weexHandler1(e) {
         const self = this;
@@ -243,18 +290,10 @@
             self.bindBlock1();
             break;
           case 'move':
-            dom.getComponentRect(this.block1, option => {
-              const { left } = option.size;
-              const value = this._getValue(left - this.leftDiffX);
-              if (!this.range) {
-                this.$emit('updateValue', value);
-              } else {
-                this.selectRange[0] = value;
-                this.$emit('updateValue', this.selectRange);
-              }
-            });
+            this.getBlock1Value((value) => this.$emit('updateValue', value))
             break;
           case 'end':
+            this.getBlock1Value((value) => this.$emit('wxcSliderBarTouchEnd', value))
             break;
           default:
             break;
@@ -270,13 +309,10 @@
             self.bindBlock2();
             break;
           case 'move':
-            dom.getComponentRect(this.block2, option => {
-              const { left } = option.size;
-              this.selectRange[1] = this._getValue(left - this.leftDiffX);
-              this.$emit('updateValue', this.selectRange);
-            });
+            self.getBlock2Value(value => this.$emit('updateValue', value));
             break;
           case 'end':
+            self.getBlock2Value(value => this.$emit('wxcSliderBarTouchEnd', value));
             break;
           default:
             break;
@@ -289,16 +325,7 @@
           return;
         }
         this.firstInterval = setInterval(() => {
-          dom.getComponentRect(this.block1, option => {
-            const { left } = option.size;
-            const value = this._getValue(left - this.leftDiffX);
-            if (!this.range) {
-              this.$emit('updateValue', value);
-            } else {
-              this.selectRange[0] = value;
-              this.$emit('updateValue', this.selectRange);
-            }
-          });
+          this.getBlock1Value(value => this.$emit('updateValue', value))
         }, this.timeout);
       },
 
@@ -308,11 +335,7 @@
         }
         // 由于android端不支持 horizontalpan 的move事件，使用setInterval hack方案
         this.secondInterval = setInterval(() => {
-          dom.getComponentRect(this.block2, option => {
-            const { left } = option.size;
-            this.selectRange[1] = this._getValue(left - this.leftDiffX);
-            this.$emit('updateValue', this.selectRange);
-          });
+          this.getBlock2Value((value) => this.$emit('updateValue', value))
         }, this.timeout);
       },
 
@@ -323,6 +346,11 @@
         }
         this.firstInterval && clearInterval(this.firstInterval);
         this.secondInterval && clearInterval(this.secondInterval);
+        if (this.range) {
+          this.getBlock2Value(value => this.$emit('updateValue', value))
+        } else {
+          this.getBlock1Value(value => this.$emit('updateValue', value))
+        }
       },
 
       webStartHandler(e) {
@@ -363,6 +391,17 @@
         }
       },
 
+      webEndHandler(e) {
+        if (this.env === 'weex' || this.disabled) {
+          return;
+        }
+        if (!this.range) {
+          this.$emit('wxcSliderBarTouchEnd', this._getValue(this.diffX1));
+        } else {
+          this.selectRange[1] = this._getValue(this.diffX2);
+          this.$emit('wxcSliderBarTouchEnd', this.selectRange);
+        }
+      },
       webMoveHandler2(e) {
         if (this.env === 'weex' || this.disabled) {
           return;
@@ -388,7 +427,6 @@
           }
         }
       },
-
       bindBlock1() {
         const self = this;
 
@@ -547,7 +585,6 @@
             return value;
           }
         }
-        return;
       },
 
       // 根据x方向偏移量计算value
@@ -572,7 +609,7 @@
   }
 
 
-  .range-bar{
+  .range-bar {
     overflow: hidden;
   }
 
@@ -584,7 +621,6 @@
   .slide-block {
     width: 56px;
     height: 56px;
-    background-color: #ffffff;
     border-radius: 28px;
     border-width: 1px;
     border-color: rgba(0, 0, 0, 0.1);

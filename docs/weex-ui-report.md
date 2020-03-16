@@ -4,7 +4,7 @@
 <img src="https://img.alicdn.com/tfs/TB1tkAjk5qAXuNjy1XdXXaYcVXa-200-236.png" width="100"/>
 </p>
 
-> GitHub 地址：[github.com/alibaba/weex-ui](https://github.com/alibaba/weex-ui)
+> GitHub 地址：[github.com/apache/incubator-weex-ui](https://github.com/apache/incubator-weex-ui)
 
 Weex Ui 于去年9月30日开源后，距离今天刚好半年时间，本文打算从 **起源、定位、现状、发展、展望**这5部分来给大家分享 Weex Ui 半年的开源之路。
 
@@ -42,7 +42,7 @@ Weex Ui 的定位为 **一套轻量、富交互、高性能的 Weex 上层  Ui �
 
   <img src="https://img.alicdn.com/tfs/TB11tdshrGYBuNjy0FoXXciBFXa-2792-1884.png" width="800"/>
 
-更多版本迭代可见 [Weex Ui 升级日志](https://alibaba.github.io/weex-ui/#/cn/CHANGELOG)
+更多版本迭代可见 [Weex Ui 升级日志](https://apache.github.io/incubator-weex-ui/#/cn/CHANGELOG)
 
 ### Weex Ui 的展望
 - 引入更多的**富交互**组件，让 Weex 应用 More Native

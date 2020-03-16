@@ -59,7 +59,7 @@
 
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/lottery-rain/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/lottery-rain/index.vue)
 
 
 ### 可配置参数
@@ -67,7 +67,7 @@
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
 | pic-list | `Array` |`Y`| `[]` | 定制化图片配置|
-| config | `Object` |`N`| `{}` | 红包雨 [相关配置](https://github.com/alibaba/weex-ui/blob/master/packages/wxc-lottery-rain/libs/config.js) |
+| config | `Object` |`N`| `{}` | 红包雨 [相关配置](https://github.com/apache/incubator-weex-ui/blob/master/packages/wxc-lottery-rain/libs/config.js) |
 | wrap-style | `Object` |`N`| `{}` | 容器样式自定义 |
 
 ### 事件回调

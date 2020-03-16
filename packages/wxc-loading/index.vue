@@ -1,4 +1,21 @@
-<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
 <!-- Created by Tw93 on 16/10/26. -->
 <!--A loading indicator. Custom text supported. -->
 
@@ -8,7 +25,7 @@
        :style="maskStyle">
     <div class="wxc-loading" :style="{ top: topPosition +'px'}" v-if="showLoading">
       <div :class="['loading-box',loading.class]" :aria-hidden="true">
-        <image :src="loading.url"
+        <image :src="loadingPic || loading.url"
                class="loading-trip-image"
                resize="contain"
                quality="original"></image>
@@ -20,9 +37,9 @@
 </template>
 
 <style scoped>
-	.loading-container{
-		position: relative;
-	}
+  .loading-container {
+    position: relative;
+  }
 
   .loading-need-mask {
     position: absolute;
@@ -81,6 +98,10 @@
         default: false
       },
       loadingText: {
+        type: String,
+        default: ''
+      },
+      loadingPic: {
         type: String,
         default: ''
       },

@@ -73,7 +73,7 @@
 
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/searchbar/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/searchbar/index.vue)
 
 
 ### 可配置参数
@@ -100,6 +100,6 @@
 ```
 
 ### Api 模式
-- 支持外部Api形式设置value，通过调用setValue，传入对应值即可,详细可见 [demo](https://github.com/alibaba/weex-ui/blob/master/example/searchbar/index.vue#L109)
+- 支持外部Api形式设置value，通过调用setValue，传入对应值即可,详细可见 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/searchbar/index.vue#L109)
 - 通过调用autoBlur可以主动blur输入框
 

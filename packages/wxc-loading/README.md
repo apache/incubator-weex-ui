@@ -28,7 +28,7 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/loading/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/loading/index.vue)
 
 ### API
 
@@ -42,6 +42,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | type | `String` | `N`|`default` | loading image `default`/`trip`|
 | need-mask | `Bool` | `N`|`false` | whether to need a covered mask |
 | mask-style | `Object` | `N`|`{}` | mask style |
+| loading-pic | `String` | `N`|`` | Overwrite original image |
 
 
 ### 事件回调

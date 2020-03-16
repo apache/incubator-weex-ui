@@ -66,7 +66,7 @@
 
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/dialog/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/dialog/index.vue)
 
 ### API
 
@@ -74,6 +74,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 |-------------|------------|--------|-----|-----|
 | title | `String` | `Y` | `-` | title (only transparent) |
 | content | `String` | `N` | `-`| content |
+| left | `Number` |`N`| `0` | move left distance  |
 | top | `Number` | `N` |`400` |  distance from the top of the screen |
 | single | `Boolean` | `N` |`false` |  whether is single button |
 | confirm-text | `String` | `N` |`确定` |  text of the primary button |

@@ -55,7 +55,7 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/lightbox/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/lightbox/index.vue)
 
 ### API
 
@@ -69,6 +69,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | indicator-color | `Object` |`N`| `{}` | indicator style（*1）|
 | index | `Number` |`N`| `0` | the index of current shown slider|
 | interval | `Number` |`N`| `3000` | time interval for each page displayed in slider|
+| opacity | `Number` |`N`| `0.6` |  set transparency |
 
 *1 default style: 
 ```

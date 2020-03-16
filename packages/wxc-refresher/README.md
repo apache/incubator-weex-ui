@@ -48,7 +48,7 @@
 </script>
 ```
 
-Further more, [demo](https://github.com/alibaba/weex-ui/blob/master/example/refresher/index.vue)
+Further more, [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/refresher/index.vue)
 
 ### API
 

@@ -1,7 +1,21 @@
-/**
- * CopyRight (C) 2017-2022 Alibaba Group Holding Limited.
- * Created by Tw93 on 2017-7-18.
- */
+/*
+* Licensed to the Apache Software Foundation (ASF) under one
+* or more contributor license agreements.  See the NOTICE file
+* distributed with this work for additional information
+* regarding copyright ownership.  The ASF licenses this file
+* to you under the Apache License, Version 2.0 (the
+* "License"); you may not use this file except in compliance
+* with the License.  You may obtain a copy of the License at
+*
+*   http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the License is distributed on an
+* "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+* KIND, either express or implied.  See the License for the
+* specific language governing permissions and limitations
+* under the License.
+*/
 
 const path = require('path');
 const pkg = require('./package.json');
@@ -14,14 +28,14 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const os = require('os');
 const HappyPack = require('happypack');
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length });
-HappyPack.SERIALIZABLE_OPTIONS = HappyPack.SERIALIZABLE_OPTIONS.concat([
-  'postcss'
-]);
+HappyPack.SERIALIZABLE_OPTIONS = HappyPack.SERIALIZABLE_OPTIONS.concat(['postcss']);
 
 console.log('Building..., Please wait a moment.');
 
+const mkdir = '*';
+
 const getEntry = dir => {
-  const foundScripts = glob.sync(`${dir}/*/index.js`, {});
+  const foundScripts = glob.sync(`${dir}/${mkdir}/index.js`, {});
   // 生成 entry 映射表
   const ret = {};
   foundScripts.forEach(scriptPath => {
@@ -33,7 +47,7 @@ const getEntry = dir => {
 };
 
 const getCopyConfig = () => {
-  const foundScripts = glob.sync('example/*/', {});
+  const foundScripts = glob.sync(`example/${mkdir}/`, {});
   const ret = [];
   foundScripts.forEach(scriptPath => {
     if (!/(_mods|_public)/.test(scriptPath)) {

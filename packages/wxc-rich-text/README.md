@@ -19,7 +19,7 @@
     <wxc-rich-text :config-list='configList'
                    @wxcRichTextLinkClick='wxcRichTextLinkClick'></wxc-rich-text>
      <div class='special-rich'>
-       <wxc-special-rich-text :config-list='specialConfigList'></wxc-special-rich-text>
+       <wxc-special-rich-text @wxcSpecialRichTextClick="wxcSpecialRichTextClick"  :config-list='specialConfigList'></wxc-special-rich-text>
      </div>
   </div>
   
@@ -76,6 +76,9 @@
             borderColor: '#FFC900',
             backgroundColor: '#FFC900',
             borderRadius: 14,
+          },
+          tagDivStyle: {
+            left: '50px'
           }
         },
         {
@@ -89,20 +92,21 @@
       ],
     }),
     methods: {
-      wxcRichTextLinkClick () {}
+      wxcRichTextLinkClick () {},
+      wxcSpecialRichTextClick () {}
     }
   };
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/rich-text/index.vue)
 
 
 ### API
 
 | Prop | Type | Required | Default | Description |
 | ---- |:----:|:---:|:-------:| :----------:|
-| config-list | `Array` |`Y`| `[]` | config list eg:[Demo](https://github.com/alibaba/weex-ui/blob/master/example/rich-text/index.vue#L78)|
+| config-list | `Array` |`Y`| `[]` | config list eg:[Demo](https://github.com/apache/incubator-weex-ui/blob/master/example/rich-text/index.vue#L78)|
 | has-text-margin | `Boolean` |`N`| 'true' | whether has text margin|
 
 
@@ -110,6 +114,7 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 
 ```
 @wxcRichTextLinkClick='wxcRichTextLinkClick'
+@wxcSpecialRichTextClick="wxcSpecialRichTextClick"
 ```
 
 

@@ -4,7 +4,7 @@
   "description": "Weex版本的popup组件，支持上下左右四个方向面板弹出。",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-popup",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-popup",
   "keywords": [
     "Weex",
     "Vue",

@@ -31,12 +31,12 @@
         defaultValue: 50,
         disabled: false
       }
-  	});
+  	})
   }
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/slider-bar/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/slider-bar/index.vue)
 
 ### API
 
@@ -54,6 +54,8 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 | invalidColor | `String` |`N`| `#E0E0E0`| invalid color |
 | validColor   | `String` |`N`| `#EE9900`| valid color |
 | disabledColor| `String` |`N`| `#AAA`   | disabled color |
+| selectRange  | `Array` |`N`| `[0, 0]`   | return value |
+| blockColor  | `String` |`N`| `#FFFFFF`   | block color |
 
 
 
@@ -61,4 +63,5 @@ More details can be found in [here](https://github.com/alibaba/weex-ui/blob/mast
 
 ```
 @updateValue="updateValue"
+@wxcSliderBarTouchEnd="wxcSliderBarTouchEnd"
 ```

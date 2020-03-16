@@ -52,7 +52,7 @@
 </script>
 ```
 
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/indexlist/index.vue)
 
 ### 可配置参数
 
@@ -66,8 +66,8 @@
 | nav-style | `Object` |`N`| `{}` |  索引侧边栏样式自定义 |
 | need-animation | `Boolean` |`N`| `true` |  索引定位时候是否需要动画 |
 
-- 注1：正常列表的配置项目，采用list的形式展示，详细可见 [demo/data.js#L16](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L16)
-- 注2：有些索引列表需要在正常列表前面展示一个`热门`列表，同时支持`group`、`list`形式，格式可见[demo/data.js#L2](https://github.com/alibaba/weex-ui/blob/master/example/indexlist/data.js#L2)，整体配置为
+- 注1：正常列表的配置项目，采用list的形式展示，详细可见 [demo/data.js#L16](https://github.com/apache/incubator-weex-ui/blob/master/example/indexlist/data.js#L16)
+- 注2：有些索引列表需要在正常列表前面展示一个`热门`列表，同时支持`group`、`list`形式，格式可见[demo/data.js#L2](https://github.com/apache/incubator-weex-ui/blob/master/example/indexlist/data.js#L2)，整体配置为
 
    ```json
    hotListConfig: {

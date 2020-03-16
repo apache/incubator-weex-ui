@@ -8,7 +8,7 @@
   <link rel="icon" href="https://img.alicdn.com/tfs/TB1kCs_er_I8KJjy1XaXXbsxpXa-419-495.png" type="image/png">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//h5.m.taobao.com/css/trip/weex-ui/index.min.css">
+  <link rel="stylesheet" href="//h5.m.taobao.com/trip/weex-ui/index.min.css">
 </head>
 
 <body>
@@ -37,16 +37,17 @@
       '/cn/faq': 'docs/faq_cn.md',
       '/cn/who_use': 'docs/who_use.md',
       '/cn/CHANGELOG': 'CHANGELOG_cn.md',
+      '/cn/CONTRIBUTING': 'CONTRIBUTING_cn.md',
       '/cn/weex-ui-weex-conf-2018': 'docs/weex-ui-weex-conf-2018',
       '/cn/weex-ui-report': 'docs/weex-ui-report'
     },
-    basePath: location.port === '3000' ? '/' : '/weex-ui/',
-    repo: 'alibaba/weex-ui',
+    basePath: location.port === '3000' ? '/' : '/incubator-weex-ui/',
+    repo: 'apache/incubator-weex-ui',
     ga: 'UA-57207999-2',
     plugins: [
       function (hook, vm) {
         hook.beforeEach(function (html) {
-          var url = 'https://github.com/alibaba/weex-ui/blob/master/' + vm.route.file;
+          var url = 'https://github.com/apache/incubator-weex-ui/blob/master/' + vm.route.file;
           var github = "<div  data-tooltip-title=\"Star it if you like\" data-tooltip-position=\"top\" class=\"tool-tip\"><iframe src=\"https://ghbtns.com/github-btn.html?user=alibaba&amp;repo=weex-ui&amp;type=watch&amp;count=true\" allowtransparency=\"true\" frameborder=\"0\" scrolling=\"0\" width=\"110\" height=\"20\" style='margin:0 10px -6px'></iframe></div>";
 
           var editHtml = '<a href='+ url +' data-tooltip-title=\"Correct this doc\" data-tooltip-position=\"top\" class=\"tool-tip\" target=\"_blank\"><img class=\"emoji\" src=\"https://img.alicdn.com/tfs/TB1ica2lcLJ8KJjy0FnXXcFDpXa-128-128.png\" alt=\"Edit\"></a>';

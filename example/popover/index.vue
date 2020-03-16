@@ -1,4 +1,21 @@
-<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
 <!-- Created by git@zwwill on 118/02/08. -->
 
 <template>
@@ -101,7 +118,7 @@
 
   const modal = weex.requireModule('modal');
   import { setTitle } from '../_mods/set-nav';
-  import {WEEXUI_ICON, RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
+  import { WEEXUI_ICON, RETURN_ICON, SCAN_ICON, QRCODE_ICON, QUESTION_ICON } from './type';
 
   export default {
     components: { Title, Category, WxcMinibar, WxcButton, WxcPopover },
@@ -144,24 +161,24 @@
       popoverPosition2: { x: 200, y: 520 },
       popoverArrowPosition2: { pos: 'bottom', x: 160 },
       btns3: [
-        { icon: WEEXUI_ICON, text: 'Item 1', key: 's1'},
-        { icon: WEEXUI_ICON, text: 'Item 2', key: 's2'},
-        { icon: WEEXUI_ICON, text: 'Item 3', key: 's3'}
+        { icon: WEEXUI_ICON, text: 'Item 1', key: 's1' },
+        { icon: WEEXUI_ICON, text: 'Item 2', key: 's2' },
+        { icon: WEEXUI_ICON, text: 'Item 3', key: 's3' }
       ],
       popoverPosition3: { x: 325, y: 550 },
       popoverArrowPosition3: { pos: 'left', y: 0 },
       btns4: [
-        { icon: WEEXUI_ICON, text: 'Item 1', key: 's1'},
-        { icon: WEEXUI_ICON, text: 'Item 2', key: 's2'},
-        { icon: WEEXUI_ICON, text: 'Item 3', key: 's3'}
+        { icon: WEEXUI_ICON, text: 'Item 1', key: 's1' },
+        { icon: WEEXUI_ICON, text: 'Item 2', key: 's2' },
+        { icon: WEEXUI_ICON, text: 'Item 3', key: 's3' }
       ],
       popoverPosition4: { x: 175, y: 380 },
       popoverArrowPosition4: { pos: 'right', y: -50 },
-      btn3Style:{
+      btn3Style: {
         height: '200px',
         width: '300px'
       },
-      btn4Style:{
+      btn4Style: {
         position: 'absolute',
         right: '40px',
         top: '60px',
@@ -179,7 +196,7 @@
       popoverButtonClicked (obj) {
         modal.toast({ 'message': `key:${obj.key}, index:${obj.index}`, 'duration': 1 });
       },
-      wxcButtonClicked (ref='wxc-popover2') {
+      wxcButtonClicked (ref = 'wxc-popover2') {
         this.$refs[ref].wxcPopoverShow();
       }
     }

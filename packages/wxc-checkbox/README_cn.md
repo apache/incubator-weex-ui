@@ -57,7 +57,7 @@
 
 ```
 
-更多详细情况可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/checkbox/index.vue)
+更多详细情况可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/checkbox/index.vue)
 
 ### 可配置参数
 #### Checkbox

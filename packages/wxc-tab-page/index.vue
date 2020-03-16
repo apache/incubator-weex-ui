@@ -1,5 +1,21 @@
-<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
-<!-- Created by Tw93 on 17/07/28. -->
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
 <!-- Updated by Tw93 on 17/11/16.-->
 
 <template>
@@ -96,7 +112,7 @@
 
   .tab-page-wrap {
     width: 750px;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
   .tab-container {
@@ -221,16 +237,16 @@
       deltaX: 0,
       translateX: 0
     }),
-    created() {
+    created () {
       const { titleType, tabStyles } = this;
       if (titleType === 'iconFont' && tabStyles.iconFontUrl) {
         dom.addRule('fontFace', {
-          'fontFamily': "wxcIconFont",
+          'fontFamily': 'wxcIconFont',
           'src': `url(${tabStyles.iconFontUrl})`
         });
       }
     },
-    mounted() {
+    mounted () {
       if (swipeBack && swipeBack.forbidSwipeBack) {
         swipeBack.forbidSwipeBack(true);
       }
@@ -243,28 +259,27 @@
       }
     },
     methods: {
-      next() {
+      next () {
         let page = this.currentPage;
         if (page < this.tabTitles.length - 1) {
           page++;
         }
         this.setPage(page);
       },
-      prev() {
+      prev () {
         let page = this.currentPage;
         if (page > 0) {
           page--;
         }
         this.setPage(page);
       },
-      startHandler() {
+      startHandler () {
         if (BindEnv.supportsEBForIos() && this.isTabView && this.needSlider) {
           this.bindExp(this.$refs['tab-page-wrap']);
         }
       },
-      bindExp(element) {
+      bindExp (element) {
         if (element && element.ref) {
-
           if (this.isMoving && this.gesToken !== 0) {
             Binding.unbind({
               eventType: 'pan',
@@ -304,7 +319,7 @@
           this.gesToken = gesTokenObj.token;
         }
       },
-      setPage(page, url = null, animated = true) {
+      setPage (page, url = null, animated = true) {
         if (!this.isTabView) {
           this.jumpOut(url);
           return;
@@ -336,10 +351,10 @@
         this._animateTransformX(page, animated);
         this.$emit('wxcTabPageCurrentTabSelected', { page });
       },
-      jumpOut(url) {
+      jumpOut (url) {
         url && Utils.goToH5Page(url)
       },
-      _animateTransformX(page, animated) {
+      _animateTransformX (page, animated) {
         const { duration, timingFunction } = this;
         const computedDur = animated ? duration : 0.00001;
         const containerEl = this.$refs[`tab-container`];

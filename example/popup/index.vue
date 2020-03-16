@@ -1,4 +1,21 @@
-<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
 <!-- Created by Tw93 on 16/10/25. -->
 
 <template>
@@ -45,7 +62,8 @@
         <div class="demo-content">
           <image src="https://img.alicdn.com/tfs/TB1ojYvOXXXXXaOXFXXXXXXXXXX-180-41.png"
                  class="demo-image"></image>
-          <text>与 Web App、HTML5 App 或 hybrid App 不同，您可以使用 Weex 构建一个真正的原生应用。更贴心的是你的代码只需使用 HTML、CSS、JavaScript 可以构建原生应用，上手非常简单。</text>
+          <text>与 Web App、HTML5 App 或 hybrid App 不同，您可以使用 Weex 构建一个真正的原生应用。更贴心的是你的代码只需使用 HTML、CSS、JavaScript
+            可以构建原生应用，上手非常简单。</text>
         </div>
       </wxc-popup>
 
@@ -58,6 +76,7 @@
                  :show="isRightShow"
                  pos="right"
                  ref="wxcPopup"
+                 :overlay-cfg="{'can-auto-close': false}"
                  @wxcPopupOverlayClicked="popupOverlayRightClick">
         <div @click="onHideClick"
              class="btn blue hide-auto">
@@ -166,47 +185,47 @@
       isRightShow: false,
       isAutoShow: false,
       isTrue: true,
-      height: 400
+      height: 400,
     }),
-    created () {
+    created() {
       setTitle('Popup');
     },
     methods: {
-      openBottomPopup () {
+      openBottomPopup() {
         this.isBottomShow = true;
       },
-      openTopPopup () {
+      openTopPopup() {
         this.isTopShow = true;
       },
-      openLeftPopup () {
+      openLeftPopup() {
         this.isLeftShow = true;
       },
-      openRightPopup () {
+      openRightPopup() {
         this.isRightShow = true;
       },
-      popupOverlayTopClick () {
+      popupOverlayTopClick() {
         this.isTopShow = false;
       },
-      popupOverlayBottomClick () {
+      popupOverlayBottomClick() {
         this.isBottomShow = false;
       },
-      popupOverlayLeftClick () {
+      popupOverlayLeftClick() {
         this.isLeftShow = false;
       },
-      popupOverlayRightClick () {
+      popupOverlayRightClick() {
         this.isRightShow = false;
       },
 
-      popupOverlayAutoClick () {
+      popupOverlayAutoClick() {
         this.isAutoShow = false;
       },
 
-      openAutoPopup () {
+      openAutoPopup() {
         const height = this.height;
         this.height = height === 400 ? 800 : 400;
         this.isAutoShow = true;
       },
-      onHideClick () {
+      onHideClick() {
         this.$refs.wxcPopup.hide();
       }
     }

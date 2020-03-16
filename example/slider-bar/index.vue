@@ -1,4 +1,21 @@
-<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
 <!-- Created by Tw93 on 16/10/28. -->
 
 <template>
@@ -10,12 +27,13 @@
         <div class="demo-container">
           <text class="label">单滑块水平选择条</text>
           <text class="value-text">取值：{{barValue}}</text>
-          <wxc-slider-bar v-bind="sliderBarCfg1" @updateValue="updateValue"></wxc-slider-bar>
+          <wxc-slider-bar v-bind="sliderBarCfg1" @updateValue="updateValue"
+                          @wxcSliderBarTouchEnd="wxcSliderBarTouchEnd"></wxc-slider-bar>
         </div>
         <div class="demo-container">
           <text class="label">双滑块范围水平选择条</text>
           <text class="value-text">取值范围：{{minValue}} --- {{maxValue}}</text>
-          <wxc-slider-bar v-bind="sliderBarCfg2" @updateValue="updateValue"></wxc-slider-bar>
+          <wxc-slider-bar v-bind="sliderBarCfg2" @updateValue="updateValue" @wxcSliderBarTouchEnd="wxcSliderBarTouchEnd"></wxc-slider-bar>
         </div>
         <div class="demo-container">
           <text class="label">单滑块水平选择条禁用</text>
@@ -74,6 +92,8 @@
   import { WxcSliderBar } from '../../index';
   import { setTitle } from '../_mods/set-nav';
 
+  const modal = weex.requireModule("modal");
+
   export default {
     components: { Title, Category, WxcSliderBar },
     data: () => ({
@@ -131,6 +151,11 @@
           this.minValue = value[0];
           this.maxValue = value[1];
         }
+      },
+      wxcSliderBarTouchEnd(value) {
+        modal.toast({
+          message: `end touch: ${value}`
+        })
       }
     }
   }

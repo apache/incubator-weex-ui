@@ -1,4 +1,21 @@
-<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
 <!-- Created by Tw93 on 17/07/28. -->
 
 <template>
@@ -8,6 +25,7 @@
             mask-bg-color="transparent"
             overlay-opacity="0.8"
             :show="show"
+            :opacity='opacity'
             :show-close="false"
             @wxcMaskSetHidden="maskOverlayClick">
     <slider auto-play="false"
@@ -23,6 +41,7 @@
                :style="{ height: height + 'px', width: width  + 'px'}"></image>
       </div>
       <indicator class="indicator"
+                 v-if="showIndicator"
                  :style="indicatorStyle"></indicator>
     </slider>
   </wxc-mask>
@@ -59,6 +78,10 @@
         type: Boolean,
         default: false
       },
+      showIndicator: {
+        type: Boolean,
+        default: true
+      },
       imageList: Array,
       indicatorColor: {
         type: Object,
@@ -72,9 +95,13 @@
         type: [Number, String],
         default: 0
       },
-      interval:{
+      interval: {
         type: [Number, String],
         default: 3000
+      },
+      opacity: {
+        type: [Number, String],
+        default: 0.6
       }
     },
     computed: {

@@ -1,11 +1,28 @@
-<!-- CopyRight (C) 2017-2022 Alibaba Group Holding Limited. -->
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
 <!-- Created by Tw93 on 16/11/07. -->
 <!--A dialog. -->
 
 <template>
   <div class="container">
-    <wxc-overlay v-if="show" :show="true" :hasAnimation="false"></wxc-overlay>
-    <div class="dialog-box" v-if="show" :style="{top:top+'px'}">
+    <wxc-overlay :left='left' v-if="show" :show="true" :hasAnimation="false"></wxc-overlay>
+    <div class="dialog-box" v-if="show" :style="{top:top+'px', left: ((isWeb ? left : 0) + 96) + 'px'}">
       <div class="dialog-content">
         <slot name="title">
           <text class="content-title">{{title}}</text>
@@ -118,6 +135,7 @@
 <script>
   import WxcOverlay from '../wxc-overlay'
   import { CHECKED, UN_CHECKED } from './type';
+  import Utils from '../utils';
 
   export default {
     components: { WxcOverlay },
@@ -169,11 +187,16 @@
       isChecked: {
         type: Boolean,
         default: false
+      },
+      left: {
+        type: Number,
+        default: 0
       }
     },
     data: () => ({
       noPromptIcon: UN_CHECKED,
-      pageHeight: 1334
+      pageHeight: 1334,
+      isWeb: Utils.env.isWeb()
     }),
     created () {
       const { env: { deviceHeight, deviceWidth } } = weex.config;

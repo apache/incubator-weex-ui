@@ -4,7 +4,7 @@
   "description": "Weex通用的错误结果页面，包括通用错误、无商品、无网络的错误情况，可配置覆盖原有",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-result",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-result",
   "keywords": [
     "Weex",
     "Vue",

@@ -41,15 +41,17 @@
 </script>
 ```
 
-More details can be found in [here](https://github.com/alibaba/weex-ui/blob/master/example/overlay/index.vue)
+More details can be found in [here](https://github.com/apache/incubator-weex-ui/blob/master/example/overlay/index.vue)
 
 
 ### API
 
 | Prop | Type | Required | Default | Description |
-|-------------|------------|--------|-----|
+|-------------|------------|--------|-----|-----|
 | show | `Boolean` |`Y`| `false` | whether to show  |
 | opacity | `Number` |`N`| `0.6` | opacity `0-1` |
+| left | `Number` |`N`| `0` | move left distance  |
+| top | `Number` |`N`| `0` | move top distance  |
 | has-animation | `Boolean` |`N`| `true` | whether to animate |
 | can-auto-close | `Boolean` |`N`| `true` | whether to can auto close  |
 | duration | `Number` | `300` |`N`| animation duration time |

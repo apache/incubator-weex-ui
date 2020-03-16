@@ -4,7 +4,7 @@
   "description": "Weex通用标签组件，支持实心标签、空心标签、特殊标签、图片标签",
   "main": "index.js",
   "type": "weex",
-  "repository": "https://github.com/alibaba/weex-ui/tree/master/packages/wxc-tag",
+  "repository": "https://github.com/apache/incubator-weex-ui/tree/master/packages/wxc-tag",
   "keywords": [
     "Weex",
     "Vue",

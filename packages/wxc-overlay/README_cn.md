@@ -40,7 +40,7 @@
   };
 </script>
 ```
-更详细代码可以参考 [demo](https://github.com/alibaba/weex-ui/blob/master/example/overlay/index.vue)
+更详细代码可以参考 [demo](https://github.com/apache/incubator-weex-ui/blob/master/example/overlay/index.vue)
 
 
 ### 可配置参数
@@ -48,6 +48,8 @@
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|
 | show | `Boolean` |`Y`| `false` | 是否开启  |
+| left | `Number` |`N`| `0` | 向左移动距离  |
+| top | `Number` |`N`| `0` | 向上移动距离  |
 | opacity | `Number` |`N`| `0.6` | 蒙层opacity度数0-1 |
 | has-animation | `Boolean` |`N`| `true` | 是否开启蒙层出现动画  |
 | can-auto-close | `Boolean` |`N`| `true` | 是否可以点击自动关闭  |
