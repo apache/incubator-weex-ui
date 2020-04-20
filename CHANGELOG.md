@@ -1,26 +1,26 @@
 # Change Log
 
 ## 0.8.4
-- [+] [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-lightbox) add `show-indicator` param to show indicator
+- [+] [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-lightbox/) add `show-indicator` param to show indicator
 
 ## 0.8.3
-- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/packages/wxc-loading) add `loading-pic` param.
-- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar) add `block-color` param.
+- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/packages/wxc-loading/) add `loading-pic` param.
+- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar/) add `block-color` param.
 
 ## 0.8.0
 - [!]From alibaba/weex-ui to [apcahe/incubator-weex-ui](https://github.com/apache/incubator-weex-ui) 
 
 ## 0.7.1
-- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar) add `wxcSliderBarTouchEnd` event.
-- [!] Fixed [wxc-mask](https://apache.github.io/incubator-weex-ui/#/packages/wxc-mask) jitter bug when inputting.
+- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar/) add `wxcSliderBarTouchEnd` event.
+- [!] Fixed [wxc-mask](https://apache.github.io/incubator-weex-ui/#/packages/wxc-mask/) jitter bug when inputting.
 - [!] Fixed the problem that the QR code does not display when debugging.
 
 ## 0.7.0
 - [-] Remove alipay util,Preventing audit issues [issue/467](https://github.com/apache/incubator-weex-ui/issues/467)
-- [!] [wxc-tab-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-bar) add `supportXBar` param.
+- [!] [wxc-tab-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-bar/) add `supportXBar` param.
 
 ## 0.6.16
-- [+] [wxc-pan-item](https://apache.github.io/incubator-weex-ui/#/packages/wxc-pan-item/) add `extId` when  pan. [issue/441](https://github.com/apache/incubator-weex-ui/issues/441)
+- [+] [wxc-pan-item](https://apache.github.io/incubator-weex-ui/#/packages/wxc-tab-page/?id=wxc-pan-item) add `extId` when  pan. [issue/441](https://github.com/apache/incubator-weex-ui/issues/441)
 
 ## 0.6.15
 - [!] [wxc-swipe-action](https://apache.github.io/incubator-weex-ui/#/packages/wxc-swipe-action/)fix delete the last data item, then click on another item to report the error.
