@@ -1,28 +1,28 @@
 # 升级日志
 
 ## 0.8.4
-- [+] [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-lightbox) 增加 `show-indicator` 参数控制是否显示indicator
+- [+] [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-lightbox/) 增加 `show-indicator` 参数控制是否显示indicator
 
 ## 0.8.3
-- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-loading) 增加 `loading-pic` 参数用于覆盖原有 loading 图片.
-- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar) 增加 `block-color` 参数用于覆盖原有滑块颜色.
+- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-loading/) 增加 `loading-pic` 参数用于覆盖原有 loading 图片.
+- [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) 增加 `block-color` 参数用于覆盖原有滑块颜色.
 
 ## 0.8.0
 - [!]从 alibaba/weex-ui 迁移到 [apcahe/incubator-weex-ui](https://github.com/apache/incubator-weex-ui) 
 
 
 ## 0.7.1
-- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar) 新增 `wxcSliderBarTouchEnd` 事件.
-- [!] 修复 [wxc-mask](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-mask) 输入时候抖动问题
+- [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) 新增 `wxcSliderBarTouchEnd` 事件.
+- [!] 修复 [wxc-mask](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-mask/) 输入时候抖动问题
 - [!] 修复调试时候 console 不显示二维码的问题
 
 
 ## 0.7.0
 - [-] 移除支付宝判断，防止审核问题 [issue/467](https://github.com/apache/incubator-weex-ui/issues/467)
-- [!] [wxc-tab-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-bar) 增加 `supportXBar` 参数可用于设置不要 iPhone X 底部 bar 的增高兼容效果
+- [!] [wxc-tab-bar](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-bar/) 增加 `supportXBar` 参数可用于设置不要 iPhone X 底部 bar 的增高兼容效果
 
 ## 0.6.16
-- [+] [wxc-pan-item](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-pan-item/) 滑动时候新增 `extId` 回调  [issue/441](https://github.com/apache/incubator-weex-ui/issues/441)
+- [+] [wxc-pan-item](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-tab-page/?id=wxc-pan-item-%E7%9A%84%E4%BD%BF%E7%94%A8) 滑动时候新增 `extId` 回调  [issue/441](https://github.com/apache/incubator-weex-ui/issues/441)
 
 ## 0.6.15
 - [!] 解决[wxc-swipe-action](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-swipe-action/)删除最后一个数据项，再点击其他项动画报错

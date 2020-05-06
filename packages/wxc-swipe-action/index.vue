@@ -19,7 +19,7 @@ under the License.
 <!-- Created by wjun94 on 19/05/14. -->
 
 <template>
-<div class="container">
+<div :style="containerStyle">
   <div ref="skid" v-for="(item, i) of data" @click="onNodeClick(item, i)" :key="'skid-' + i" class="wxc-skid" :style="{width: (750 + item.right.length * 100) + 'px', height: height + 'px'}" @touchstart="(e) => !isAndroid && onPanStart(e, item, i)" @horizontalpan="(e) => isAndroid && onPanStart(e, item, i)" @touchend="(e) => onPanEnd(e, item, i)">
     <div :style='styles' class="swipe-action-center border">
       <slot :val='{item: item, index: i}'/>
@@ -33,11 +33,6 @@ under the License.
 </template>
 
 <style scoped>
-.container {
-  background-color: #dddddd;
-  border-top-width: 1px;
-  border-top-color: #dddddd;
-}
 .border {
   border-bottom-width: 1px;
   border-bottom-color: #dddddd;
@@ -89,6 +84,14 @@ import Utils from "../utils";
 
 export default {
   props: {
+    containerStyle: {
+      type: Object,
+      default: () => ({
+        backgroundColor: '#dddddd',
+        borderTopWidth: 1,
+        borderTopColor: '#dddddd',
+      }),
+    },
     data: {
       type: Array,
       default: []
