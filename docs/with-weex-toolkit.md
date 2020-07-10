@@ -2,7 +2,7 @@
 
 ### Before installing
 
-Before installing, It`s recommended that your Node version >= 8.0, Also recommended to use [n](https://github.com/tj/n) for version management, while suggesting NPM version >= 5
+Before installing, It's recommended that your Node version >= 8.0, Also recommended to use [n](https://github.com/tj/n) for version management. We also suggest NPM version >= 5
 
 How to see
 
