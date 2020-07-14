@@ -3,7 +3,7 @@
 > Bottom tab bar
 
 ### Rule
-- For the bottom Tab slider page, currently support **icon 、text 、iconFont ** form of the bottom bar.
+- For the bottom Tab slider page, currently support **icon, text, iconFont ** form of the bottom bar.
 
 ## [Demo](https://h5.m.taobao.com/trip/wx-detection-demo/tab-bar/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fwx-detection-demo%2Ftab-bar%2Findex.weex.js)
 

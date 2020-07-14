@@ -23,7 +23,7 @@
 
 <img src="https://img.alicdn.com/tfs/TB1O2ulhgoQMeJjy0FoXXcShVXa-1282-986.jpg" width=540/>
 
-Try [**it**](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js) with Fliggy、Taobao、Tmall、Weex Playground or any browsers now!
+Try [**it**](https://h5.m.taobao.com/trip/weex-ui/index.html?_wx_tpl=https%3A%2F%2Fh5.m.taobao.com%2Ftrip%2Fweex-ui%2Fdemo%2Findex.native-min.js) with Fliggy, Taobao, Tmall, Weex Playground or any browsers now!
 
 ## Installation
 
@@ -72,7 +72,7 @@ npm i weex-ui -S
 ### Before use
 
 In order to not pack all the components, you need to use [`babel-plugin-component`](https://www.npmjs.com/package/babel-plugin-component) to import the specified component.
-At the same time, if you haven't installed `babel-preset-stage-0`, its necessary to install it.
+At the same time, if you haven't installed `babel-preset-stage-0`, it's necessary to install it.
 
 ```shell
 npm i babel-preset-stage-0 babel-plugin-component -D
@@ -96,10 +96,10 @@ npm i babel-preset-stage-0 babel-plugin-component -D
 
 ### More
 
-* If babel-loader in `webpack.config.js` has a exclude for node_modules, please turn on for week-ui as `exclude: /node_modules(?!(\/|\\).*(weex).*)/`.
+* If babel-loader in `webpack.config.js` has a exclude for node_modules, please turn on for weex-ui as `exclude: /node_modules(?!(\/|\\).*(weex).*)/`.
 * In order to get the latest features, please focus on the [ChangeLog](https://github.com/apache/incubator-weex-ui/releases) and often update `weex-ui` to the latest.
-* Many questions can be found from [faq](https://apache.github.io/incubator-weex-ui/#/faq) and [issue list](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=), if you find a new bug, just file a [issue](https://github.com/apache/incubator-weex-ui/issues/new).
-* More experience in Weex construction can be learned from [Weex + Ui - Weex Conf 2018](https://apache.github.io/incubator-weex-ui/#/docs/weex-ui-weex-conf-2018) ,welcome to translate it.
+* Many questions can be found in the [faq](https://apache.github.io/incubator-weex-ui/#/docs/faq) and [issue list](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=), if you find a new bug, just file an [issue](https://github.com/apache/incubator-weex-ui/issues/new).
+* More experience in Weex construction can be learned from [Weex + Ui - Weex Conf 2018](https://apache.github.io/incubator-weex-ui/#/docs/weex-ui-weex-conf-2018), welcome to translate it.
 
 ## Development
 
