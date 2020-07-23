@@ -1,12 +1,12 @@
 ## FAQ
 
-#### wxc-ep-slider、wxc-slider-bar Can't slide
+#### wxc-ep-slider, wxc-slider-bar Can't slide
 - The two components in Weex Ui now depend on an innovative interaction feature called [BindingX](https://alibaba.github.io/bindingx/), And this feature is already open source, please refer to github [to import](https://github.com/alibaba/bindingx#installation).
 
 
 #### Suggestions for using images in Weex.
 - Use CDN image：It is recommended to use, and to ensure that the actual size and size of the image is consistent with what you need to show.
-- Use local image：Weex’s native runtime support load image file from device’s disk, all you have to do set the file url like file:///sdcard/image_new0.png,More you can see [here](http://blog.csdn.net/codingfire/article/details/79528639), At the same time, Weex does not support the loading of image files in your project, nor does it support the direct use of local images by downgrade Web version. Therefore, it is recommended to use the CDN image link.
+- Use local image：Weex’s native runtime support load image file from device’s disk, all you have to do set the file url like file:///sdcard/image_new0.png. See more [here](http://blog.csdn.net/codingfire/article/details/79528639). At the same time, Weex does not support the loading of image files in your project, nor does it support the direct use of local images by downgrade Web version. Therefore, it is recommended to use the CDN image link.
 - Use Base64：This depends on native image library resolution, but it is not recommended to use more than 2k Base64 in Weex, which makes the bundle too large to affect performance.
 
 #### Module not found: Error: Can't resolve 'weex-ui/packages/wxc-button/style.css'
@@ -32,14 +32,14 @@
    ```
 
 #### vue.runtime.js:478 [Vue warn]: Cannot find element: #root
-- The default config of weex project create by weex-toolkit will generate entry config automatically, but this project has already used entry.js as entry config in webpack,Details of the cause are visible in [pull/21](https://github.com/zwwill/yanxuan-weex-demo/pull/21).
+- The default config of weex project created by weex-toolkit will generate entry config automatically, but this project has already used entry.js as entry config in webpack. Details of the cause are visible in [pull/21](https://github.com/zwwill/yanxuan-weex-demo/pull/21).
 
 #### GIF images have no animation on Android
 - This is supported by the underlying image library, More you can refer to [Weex 踩坑之 Gif 加载](https://zhoukekestar.github.io/notes/2017/07/17/weex-gif.html).
 
 #### Does Weex Ui support the horizontal screen ？
 
-- I'm sorry,Now Weex doesn't support horizontal screen, so Weex Ui doesn't have any horizontal screen mode yet. When Weex supports it, it will follow immediately.
+- I'm sorry, Weex currently doesn't support horizontal screen, so Weex Ui doesn't have any horizontal screen mode yet. When Weex supports it, it will follow immediately.
 - You can send a message to weex at the horizontal screen, Then handle this in your code.
 
   ```js
@@ -104,4 +104,4 @@
  ```
 
 ---- 
-More questions can be found from the [issue list](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=), If you find a new bug, Just file a  [issue](https://github.com/apache/incubator-weex-ui/issues/new).
+More questions can be found from the [issue list](https://github.com/apache/incubator-weex-ui/issues?utf8=%E2%9C%93&q=). If you find a new bug, Just file an [issue](https://github.com/apache/incubator-weex-ui/issues/new).
