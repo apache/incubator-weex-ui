@@ -193,6 +193,9 @@ under the License.
     methods: {
       closeIconClicked () {
         this.$refs.overlay.appearOverlay(false);
+        if (!this.overlayCanClose) {
+          this.appearMask(false);
+        }
       },
       wxcOverlayBodyClicking () {
         if (this.hasAnimation) {
