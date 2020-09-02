@@ -63,10 +63,12 @@ under the License.
       setTimeout(() => {
         if (this.supportAndroid && this.needSlider) {
           const element = this.$refs['wxc-pan-item'];
-          Binding.prepare && Binding.prepare({
-            anchor: element.ref,
-            eventType: 'pan'
-          });
+          if (element) {
+            Binding.prepare && Binding.prepare({
+              anchor: element.ref,
+              eventType: 'pan'
+            });
+          }
         }
       }, 300)
     },
