@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.8.5
+- [!] wxc-dialog: 文档上补充上 `show` 参数
+- [!] wxc-mask: 修正了单击“关闭”按钮和单击“覆盖”之间不一致行为的错误
+- [+] wxc-pan-item: 使用元素前添加判断
+
+
 ## 0.8.4
 - [+] [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-lightbox/) add `show-indicator` param to show indicator
 
@@ -8,7 +14,7 @@
 - [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar/) add `block-color` param.
 
 ## 0.8.0
-- [!]From alibaba/weex-ui to [apcahe/incubator-weex-ui](https://github.com/apache/incubator-weex-ui) 
+- [!]From alibaba/weex-ui to [apcahe/incubator-weex-ui](https://github.com/apache/incubator-weex-ui)
 
 ## 0.7.1
 - [+] [wxc-slider-bar](https://apache.github.io/incubator-weex-ui/#/packages/wxc-slider-bar/) add `wxcSliderBarTouchEnd` event.

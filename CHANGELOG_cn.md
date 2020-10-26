@@ -1,5 +1,10 @@
 # 升级日志
 
+## 0.8.5
+- [!] wxc-dialog: supplement missing parameters ` show` in document
+- [!] wxc-mask: fix bug that inconsistent behavior between clicking close button and clicking overlay
+- [+] wxc-pan-item: add judgment before using element
+
 ## 0.8.4
 - [+] [wxc-lightbox](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-lightbox/) 增加 `show-indicator` 参数控制是否显示indicator
 
@@ -8,7 +13,7 @@
 - [+] [wxc-loading](https://apache.github.io/incubator-weex-ui/#/cn/packages/wxc-slider-bar/) 增加 `block-color` 参数用于覆盖原有滑块颜色.
 
 ## 0.8.0
-- [!]从 alibaba/weex-ui 迁移到 [apcahe/incubator-weex-ui](https://github.com/apache/incubator-weex-ui) 
+- [!]从 alibaba/weex-ui 迁移到 [apcahe/incubator-weex-ui](https://github.com/apache/incubator-weex-ui)
 
 
 ## 0.7.1
