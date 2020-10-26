@@ -72,6 +72,7 @@
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
+| show | `Boolean` | `N` | `false` | 对话框是否可见 |
 | title | `String` | `Y` | `-` | 标题 |
 | left | `Number` |`N`| `0` | 向左移动距离  |
 | content | `String` | `N` | `-`| 内容说明描述 |

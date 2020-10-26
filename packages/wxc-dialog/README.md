@@ -72,6 +72,7 @@ More details can be found in [here](https://github.com/apache/incubator-weex-ui/
 
 | Prop | Type | Required | Default | Description |
 |-------------|------------|--------|-----|-----|
+| show | `Boolean` | `N` | `false` | Whether the dialog is show or not |
 | title | `String` | `Y` | `-` | title (only transparent) |
 | content | `String` | `N` | `-`| content |
 | left | `Number` |`N`| `0` | move left distance  |
