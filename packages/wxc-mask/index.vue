@@ -22,7 +22,8 @@ under the License.
 
 <template>
   <div class="container">
-    <wxc-overlay :show="show && hasOverlay"
+    <wxc-overlay ref="overlay"
+                 :show="show && hasOverlay"
                  v-if="show"
                  v-bind="mergeOverlayCfg"
                  :can-auto-close="overlayCanClose"
@@ -191,7 +192,10 @@ under the License.
     },
     methods: {
       closeIconClicked () {
-        this.appearMask(false);
+        this.$refs.overlay.appearOverlay(false);
+        if (!this.overlayCanClose) {
+          this.appearMask(false);
+        }
       },
       wxcOverlayBodyClicking () {
         if (this.hasAnimation) {
