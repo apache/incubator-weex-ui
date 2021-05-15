@@ -89,8 +89,8 @@ export default {
       default: () => ({
         backgroundColor: '#dddddd',
         borderTopColor: '#dddddd',
-        borderTopWidth: 1,
-      }),
+        borderTopWidth: 1
+      })
     },
     data: {
       type: Array,
@@ -150,7 +150,7 @@ export default {
         this.movingDistance(webEndX - this.webStarX, node, this.$refs.skid[i]);
       }
     },
-    onPanStart: function(e, node, i) {
+    onPanStart(e, node, i) {
       const { saveIdx } = this;
       if (saveIdx !== i && saveIdx !== null && this.$refs.skid[saveIdx]) {
         this.special(this.$refs.skid[saveIdx], {
