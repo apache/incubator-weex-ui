@@ -1,4 +1,4 @@
-# wxc-ep-slider 
+# wxc-ep-slider
 
  > Binding Slider
 
@@ -101,6 +101,7 @@ More details can be found in [here](https://github.com/apache/incubator-weex-ui/
 | card-s | `Object` | `Y`|`{width: 360,height: 300,spacing: 0,scale: 0.75}` | card style|
 | auto-play | `Boolean` | `N`|`false` |whether is auto-play|
 | interval | `Number` | `N`|`1200` |interval of auto-play|
+| enable-swipe | `Boolean` | `N`|`true` |which can swipe|
 
 ### More
 
@@ -108,14 +109,14 @@ More details can be found in [here](https://github.com/apache/incubator-weex-ui/
 
 ```
 // <wxc-ep-slider ref="wxc-ep-slider"></wxc-ep-slider
-this.$refs['wxc-ep-slider'].manualSetPage(1); 
+this.$refs['wxc-ep-slider'].manualSetPage(1);
 ```
 
 ### Rebind
 
 ```
 // <wxc-ep-slider ref="wxc-ep-slider"></wxc-ep-slider
-this.$refs['wxc-ep-slider'].rebind(); 
+this.$refs['wxc-ep-slider'].rebind();
 ```
 
 ### Event

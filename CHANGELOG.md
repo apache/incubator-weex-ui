@@ -1,9 +1,12 @@
 # Change Log
 
+## 0.8.6
+- [+] [wxc-ep-slider](https://apache.github.io/incubator-weex-ui/#/packages/wxc-ep-slider/) add `enable-swipe` param
+
 ## 0.8.5
-- [!] wxc-dialog: 文档上补充上 `show` 参数
-- [!] wxc-mask: 修正了单击“关闭”按钮和单击“覆盖”之间不一致行为的错误
-- [+] wxc-pan-item: 使用元素前添加判断
+- [!] wxc-dialog: supplement missing parameters ` show` in document
+- [!] wxc-mask: fix bug that inconsistent behavior between clicking close button and clicking overlay
+- [+] wxc-pan-item: add judgment before using element
 
 
 ## 0.8.4

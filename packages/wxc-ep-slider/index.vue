@@ -137,7 +137,7 @@ under the License.
     },
     methods: {
       onPanStart (e) {
-        if (BindEnv.supportsEB()) {
+        if (!this.enableSwipe || BindEnv.supportsEB()) {
           return;
         }
         this.clearAutoPlay();
@@ -145,7 +145,7 @@ under the License.
         this.startTime = Date.now();
       },
       onPanMove (e) {
-        if (BindEnv.supportsEB()) {
+        if (!this.enableSwipe || BindEnv.supportsEB()) {
           return;
         }
         const moveX = e.changedTouches[0].clientX - this.startX;
@@ -203,7 +203,7 @@ under the License.
         }
       },
       onEpPanStart (e) {
-        if (BindEnv.supportsEB() && e.state === 'start') {
+        if (this.enableSwipe && BindEnv.supportsEB() && e.state === 'start') {
           this.clearAutoPlay();
           setTimeout(() => {
             const sliderCtn = this.$refs[`sliderCtn_${this.sliderId}`];
@@ -212,7 +212,7 @@ under the License.
         }
       },
       onPanEnd (e) {
-        if (BindEnv.supportsEB()) {
+        if (!this.enableSwipe || BindEnv.supportsEB()) {
           return;
         }
         this.panEnd(e);
